@@ -138,15 +138,18 @@ func _check_copies(view: MainView) -> void:
 		view.session.apply_command(0, "smoke_recruit_neymar", "recruit", {"offer_id": recruit_offer["offer_id"]})
 		view._refresh()
 	var base_hp: float = float(view._unit_by_id(1).get("max_hp", 0))
-	for expected: int in [2, 3]:
-		var copy_offer = view.session._offer(0, 90 + expected, "hero", "neymar", "Neymar", 0)
-		copy_offer["offer_id"] += ":copia%d" % expected
+	for total_copies: int in [2, 3, 4]:
+		var expected: int = 2 if total_copies < 4 else 3
+		var copy_offer = view.session._offer(0, 90 + total_copies, "hero", "neymar", "Neymar", 0)
+		copy_offer["offer_id"] += ":copia%d" % total_copies
 		(view.session.teams[0]["shop"] as Array)[3] = copy_offer
 		view._refresh()
 		var offer_id: String = str(copy_offer["offer_id"])
 		var button: Button = view.shop_buttons[offer_id]
-		_check(str(button.get_meta("status", "")) == "NÍVEL %d" % expected and not button.disabled, "cópia anuncia o nível %d" % expected)
+		var expected_status: String = "CÓPIA 3/4" if total_copies == 3 else "NÍVEL %d" % expected
+		_check(str(button.get_meta("status", "")) == expected_status and not button.disabled, "oferta descreve a cópia %d corretamente" % total_copies)
 		var gold: int = int(view.state["own"]["gold"])
+		var burst_count: int = view.level_bursts.size()
 		button.pressed.emit()
 		var neymar: Dictionary = view._unit_by_id(1)
 		_check(int(neymar.get("level", 1)) == expected and int(view.state["own"]["gold"]) == gold, "cópia grátis leva Neymar ao nível %d" % expected)
@@ -158,14 +161,18 @@ func _check_copies(view: MainView) -> void:
 				entry = candidate
 		_check(not entry.is_empty() and is_equal_approx(float(entry["scale"]), [1.0, 1.2, 1.44][expected - 1]), "sprite cresce 20%% por nível (nível %d)" % expected)
 		_check(not entry.is_empty() and is_equal_approx(float(entry["display_scale"]), view.art.board_scale_for("neymar") * [1.0, 1.2, 1.44][expected - 1]), "escala base preserva crescimento de cópias (nível %d)" % expected)
-		_check(not view.level_bursts.is_empty() and view.floating.any(func(effect: Dictionary) -> bool: return str(effect["text"]) == "NÍVEL %d!" % expected), "efeito e texto de subida de nível")
+		if total_copies == 3:
+			_check(view.level_bursts.size() == burst_count, "terceira cópia guarda progresso sem anunciar evolução falsa")
+			_check(view.log_lines.any(func(line: String) -> bool: return line.contains("Cópia incorporada (3/4)")), "log da terceira cópia anuncia progresso, não evolução")
+		else:
+			_check(view.level_bursts.size() > burst_count and view.floating.any(func(effect: Dictionary) -> bool: return str(effect["text"]) == "NÍVEL %d!" % expected), "efeito e texto da evolução real")
 	_check(is_equal_approx(float(view._unit_by_id(1).get("max_hp", 0)), base_hp * 2.25), "nível 3 aplica o multiplicador de vida da Session")
 	var max_offer = view.session._offer(0, 94, "hero", "neymar", "Neymar", 0)
-	max_offer["offer_id"] += ":copia4"
+	max_offer["offer_id"] += ":copia5"
 	(view.session.teams[0]["shop"] as Array)[3] = max_offer
 	view._refresh()
 	var maxed: Button = view.shop_buttons[str(max_offer["offer_id"])]
-	_check(maxed.disabled and str(maxed.get_meta("status", "")) == "NÍVEL MÁX.", "quarta cópia aparece bloqueada no nível máximo")
+	_check(maxed.disabled and str(maxed.get_meta("status", "")) == "NÍVEL MÁX.", "quinta cópia aparece bloqueada no nível máximo")
 	await process_frame
 
 
@@ -205,7 +212,7 @@ func _check_board_display(view: MainView) -> void:
 
 func _check_visual_contracts(view: MainView) -> void:
 	_check(view.board_perimeter.size() == 62, "grade 8×8 tem somente as 62 arestas externas")
-	_check(view.specs.size() == 12 and view.specs.has("ken"), "onze heróis e a invocação têm descrição de combate")
+	_check(view.specs.size() >= 12 and view.specs.has("ken"), "onze heróis e a invocação têm descrição de combate")
 	_check_board_display(view)
 	for key: String in ["neymar", "caramelo", "obama", "zumbi", "michael", "barbie", "ken", "elon", "snoop", "lula", "bob_marley", "rapunzel"]:
 		var complete: bool = true
@@ -495,16 +502,28 @@ func _check_new_kits_match(view: MainView) -> void:
 	view._fight()
 	if not _check(view._phase() == "combat", "formação dos novos kits começa combate"):
 		return
-	var seen: Dictionary = {"ken": false, "rocket": false, "smoke": false, "zone": false, "lasso": false, "native_rocket": false, "native_smoke": false, "native_knot": false, "moving_knot": false, "replaced_zone": false, "blast_zone": false}
+	var seen: Dictionary = {"ken": false, "rocket": false, "smoke": false, "zone": false, "lasso": false, "native_rocket": false, "native_smoke": false, "native_knot": false, "moving_knot": false, "replaced_zone": false, "blast_zone": false, "mana_fill": false}
 	var knot_positions: Dictionary = {}
 	var source_zones: Dictionary = {}
 	var zones_match: bool = true
 	var lasso_samples: int = 0
 	var lasso_anchors_match: bool = true
+	var captured_mana: bool = false
 	for iteration: int in range(710):
 		view._process(0.05)
 		for unit: Dictionary in view.state.get("combat", {}).get("units", []):
 			seen["ken"] = bool(seen["ken"]) or unit.get("key", "") == "ken"
+			if unit.get("key", "") == "rapunzel" and float(unit.get("mana", 0)) > 0.0:
+				var mana: Dictionary = view._mana_bar_data(unit)
+				seen["mana_fill"] = bool(seen["mana_fill"]) or (not mana.is_empty() and float(mana["width"]) > 0.0)
+				if not captured_mana:
+					var previous_selection: int = view.selected_id
+					view._select_unit(int(unit["id"]))
+					var combat_mana_text: Label = view.card_root.get_node_or_null("ManaText") as Label
+					_check(combat_mana_text != null and combat_mana_text.text == "MANA  %d / %d" % [int(unit["mana"]), int(unit["max_mana"])], "cartão atualiza mana real em linha própria durante o combate")
+					await _capture_ui_if_requested(view, "mana_combate")
+					view._select_unit(previous_selection)
+					captured_mana = true
 		for projectile: Dictionary in view.state.get("combat", {}).get("projectiles", []):
 			var kind: String = str(projectile.get("kind", "ball"))
 			if seen.has(kind):
@@ -560,6 +579,114 @@ func _check_new_kits_match(view: MainView) -> void:
 		await process_frame
 		_check(result_rows.scroll_vertical == 0, "as seis linhas permanecem visíveis sem deslocar a tabela ou o botão")
 
+## Fixture independente: saldo elevado só para povoar a bolsa, sem testar balanceamento.
+func _check_dismiss_controls(scene: PackedScene) -> void:
+	var probe: MainView = scene.instantiate() as MainView
+	root.add_child(probe)
+	await process_frame
+	probe.set_process(false)
+	probe.audio.set_enabled(false)
+	probe._start_match()
+	_choose_gold(probe)
+	probe.session.teams[0]["gold"] = 100
+	for key: String in ["neymar", "rapunzel"]:
+		var offer: Dictionary = probe.session._offer(0, 3, "hero", key, key, 0)
+		offer["offer_id"] += ":dismiss_" + key
+		probe.session.teams[0]["shop"][3] = offer
+		if not _check(bool(probe._command("recruit", {"offer_id": offer["offer_id"]}).get("ok", false)), "recrutar fixture de dispensar: " + key):
+			probe.queue_free()
+			return
+	var rapunzel_id: int = -1
+	for unit: Dictionary in probe.state["own"]["units"]:
+		if unit.get("key", "") == "rapunzel":
+			rapunzel_id = int(unit["id"])
+	if not _check(rapunzel_id > 0, "Rapunzel disponível para fixture de reserva/mana"):
+		probe.queue_free()
+		return
+	probe._select_unit(1)
+	var gold: int = int(probe.state["own"]["gold"])
+	_check(probe.dismiss_button.visible and not probe.dismiss_button.disabled and _children_inside(probe.unit_card), "dispensar cabe no cartão e fica ativo na preparação")
+	probe.dismiss_button.pressed.emit()
+	_check(not (probe.state["own"]["owned"] as Array).has("neymar") and probe.selected_id == -1, "botão dispensa herói do campo e limpa seleção")
+	_check(int(probe.state["own"]["gold"]) == gold, "dispensar não vende por ouro")
+	var replacement: Dictionary = probe.session._offer(0, 3, "hero", "neymar", "Neymar", 0)
+	replacement["offer_id"] += ":dismiss_replacement"
+	probe.session.teams[0]["shop"][3] = replacement
+	probe._command("recruit", {"offer_id": replacement["offer_id"]})
+	probe._select_unit(rapunzel_id)
+	_check(probe._mana_bar_data(probe._selected_own()).get("maximum", 0) == 100.0, "mana de Rapunzel vem do snapshot real")
+	var mana_text: Label = probe.card_root.get_node_or_null("ManaText") as Label
+	var hp_text: RichTextLabel = probe.card_root.get_node_or_null("HpText") as RichTextLabel
+	_check(mana_text != null and hp_text != null and not hp_text.text.contains("MANA") and mana_text.position.y >= hp_text.position.y + hp_text.size.y and _children_inside(probe.unit_card), "mana tem linha própria e cartão ampliado preserva limites dos controles")
+	await _capture_ui_if_requested(probe, "dispensar_preparacao")
+	for index: int in range(2):
+		var item: Dictionary = _buy_dismiss_fixture_item(probe, index)
+		if item.is_empty():
+			probe.queue_free()
+			return
+		probe._command("equip", {"unit_id": rapunzel_id, "item_id": item["id"]})
+	probe._bench_or_deploy()
+	_check(not bool(probe._selected_own().get("active", true)) and probe.dismiss_button.visible, "dispensar também atende herói da reserva")
+	for index: int in range(8):
+		if _buy_dismiss_fixture_item(probe, 10 + index).is_empty():
+			probe.queue_free()
+			return
+	var before_bag: String = JSON.stringify(probe.state["own"]["bag"])
+	var before_equipment: String = JSON.stringify(probe.state["own"]["equipment"])
+	gold = int(probe.state["own"]["gold"])
+	probe.dismiss_button.pressed.emit()
+	_check((probe.state["own"]["owned"] as Array).has("rapunzel") and probe.selected_id == rapunzel_id, "bolsa cheia preserva herói e seleção")
+	_check(JSON.stringify(probe.state["own"]["bag"]) == before_bag and JSON.stringify(probe.state["own"]["equipment"]) == before_equipment and int(probe.state["own"]["gold"]) == gold, "falha de dispensar é atômica para bolsa/equipamento/ouro")
+	_check(probe.toast_text == "Bolsa cheia", "recusa de bolsa cheia fica visível")
+	await _capture_ui_if_requested(probe, "dispensar_bolsa_cheia")
+	for index: int in range(2):
+		var bag: Array = probe.state["own"]["bag"]
+		probe._command("equip", {"unit_id": 1, "item_id": bag[-1]["id"]})
+	probe.dismiss_button.pressed.emit()
+	_check(not (probe.state["own"]["owned"] as Array).has("rapunzel") and (probe.state["own"]["bag"] as Array).size() == 8, "com espaço, dispensar reserva devolve todos os itens")
+	_check(int(probe.state["own"]["gold"]) == gold and probe.selected_id == -1, "dispensar equipado não altera ouro e fecha o cartão")
+	probe._select_unit(1)
+	probe._fight()
+	var command_index: int = probe.command_index
+	probe._dismiss_selected()
+	_check(not probe.dismiss_button.visible and probe.command_index == command_index and (probe.state["own"]["owned"] as Array).has("neymar"), "combate oculta dispensar e não envia comando proibido")
+	probe.queue_free()
+	await process_frame
+
+
+func _buy_dismiss_fixture_item(probe: MainView, index: int) -> Dictionary:
+	var price: int = int(probe.state["item_catalog"]["charm"]["price"])
+	var offer: Dictionary = probe.session._offer(0, 0, "item", "charm", "Trevo", price)
+	offer["offer_id"] += ":dismiss_item%d" % index
+	probe.session.teams[0]["shop"][0] = offer
+	if not _check(bool(probe._command("buy_item", {"offer_id": offer["offer_id"]}).get("ok", false)), "comprar item de fixture %d" % index):
+		return {}
+	var bag: Array = probe.state["own"]["bag"]
+	return bag[-1] if not bag.is_empty() else {}
+
+
+## Captura opcional somente do viewport desta aplicação, sem ler a tela do computador.
+func _capture_ui_if_requested(view: MainView, name: String) -> void:
+	if not "--capture-ui" in OS.get_cmdline_user_args() or DisplayServer.get_name() == "headless":
+		return
+	view._prepare_frame()
+	view.queue_redraw()
+	view.units_layer.queue_redraw()
+	view.overlay_layer.queue_redraw()
+	await process_frame
+	await process_frame
+	await RenderingServer.frame_post_draw
+	var folder: String = ProjectSettings.globalize_path("res://captures")
+	var image: Image = root.get_texture().get_image()
+	var path: String = folder.path_join("tabuleiro_maior_" + name + ".png")
+	if not _check(image != null and not image.is_empty() and image.save_png(path) == OK, "capturar viewport da UI: " + name):
+		return
+	var report: FileAccess = FileAccess.open(path.get_basename() + ".json", FileAccess.WRITE)
+	if report != null:
+		report.store_string(JSON.stringify({"viewport": [1280, 720], "phase": view._phase(), "selected_unit": view._unit_by_id(view.selected_id), "income": view.state.get("own", {}).get("income", {}), "win_streak": view.state.get("own", {}).get("win_streak", 0), "front_hex_width": Board.FRONT_HEX_WIDTH}, "\t"))
+		report.close()
+
+
 func _run() -> void:
 	create_timer(20).timeout.connect(_timeout)
 	var scene: PackedScene = load("res://main.tscn") as PackedScene
@@ -613,9 +740,15 @@ func _run() -> void:
 	view._start_match() # As próximas fixtures exercitam deliberadamente o bot local.
 	_check(view._phase() == "benefit" and view.benefit_buttons.size() == 3, "nova partida mostra três benefícios")
 	_check(view.overlay.visible and view.overlay_dim.visible, "benefício aparece sobre fundo escurecido")
+	var initial_gold: int = int(view.state["own"]["gold"])
+	var gold_benefit: int = 0
+	for option: Dictionary in view.state["own"]["benefit_options"]:
+		if option.get("kind", "") == "gold":
+			gold_benefit = int(option.get("gold", 0))
+	_check(initial_gold == 20, "partida recebe as 20 moedas iniciais da Session")
 	_choose_gold(view)
 	_check(view._phase() == "preparation" and not view.overlay.visible, "benefício leva à preparação")
-	_check(int(view.state["own"]["gold"]) == 33, "visor recebe ouro inicial e benefício da Session")
+	_check(int(view.state["own"]["gold"]) == initial_gold + gold_benefit, "visor recebe ouro inicial e benefício da Session")
 	_check(view._active_count() == 0, "campo limpo aguardando recrutamento inicial")
 	_check(not bool(view._unit_by_id(5).get("active", false)), "Michael fora do campo inicialmente")
 	_check(view.state["enemy"]["units"].is_empty(), "preparação inicial sem formação secreta do bot")
@@ -637,6 +770,24 @@ func _run() -> void:
 			var cell: Vector2i = Vector2i(column, row)
 			_check(view._pick_cell(view._cell_position(cell)) == cell, "projeção/seleção " + str(cell))
 	_check(Board.cell_scale(Vector2i(0, 0)) < Board.cell_scale(Vector2i(0, 7)), "perspectiva: fundo menor que a frente")
+	_check(Board.FRONT_HEX_WIDTH == 90.0, "hexágono frontal ampliado de 76 para 90 pixels")
+	var clear_layout: bool = true
+	var reserve_separated: bool = true
+	for row: int in range(8):
+		for column: int in range(8):
+			var polygon: PackedVector2Array = Board.hex_polygon(Vector2i(column, row))
+			for point: Vector2 in polygon:
+				clear_layout = clear_layout and point.x > 226.0 and point.x < 1040.0 and point.y > 120.0 and point.y < 596.0
+			for slot: int in range(Board.BENCH_SLOTS):
+				reserve_separated = reserve_separated and Geometry2D.intersect_polygons(polygon, Board.bench_polygon(slot)).is_empty()
+	_check(clear_layout, "perímetro maior não atravessa HUD lateral nem loja")
+	_check(reserve_separated, "todos os hexágonos da reserva permanecem separados da grade")
+	_check(view.income_label.text == "PRÓXIMA +%d · SÉRIE %d" % [int(view.state["own"]["income"]["next_round_total"]), int(view.state["own"]["win_streak"])], "HUD mostra renda e sequência reais da Session")
+	_check(view._income_view({})["text"] == "RENDA —", "snapshot sem renda não ganha valor inventado")
+	_check(view._mana_bar_data({"hp": 100}).is_empty(), "unidade sem mana não ganha barra falsa")
+	_check(is_equal_approx(float(view._mana_bar_data({"mana": 25, "max_mana": 100})["width"]), 9.5), "barra de mana representa fração do estado")
+	_check(float(view._mana_bar_data({"mana": -10, "max_mana": 100})["width"]) == 0.0 and float(view._mana_bar_data({"mana": 120, "max_mana": 100})["width"]) == 38.0, "desenho de mana fica dentro dos limites da barra")
+	_check(view._preview_max_hp(view.specs["barbie"], 3, 2.25) == 1200.0 and view._preview_max_hp(view.specs["ken"], 3, 2.25) == 2300.0, "compêndio respeita HP específico por nível de Barbie e Ken")
 	for slot: int in range(Board.BENCH_SLOTS):
 		_check(Board.pick_bench(Board.bench_position(slot)) == slot and Board.pick_cell(Board.bench_position(slot)) == Board.INVALID, "reserva no chão separada do tabuleiro " + str(slot))
 	_click_cell(view, _cell_of(view, 1))
@@ -674,8 +825,10 @@ func _run() -> void:
 	_click_cell(view, obama_cell)
 	_check(_cell_of(view, 3) == obama_cell and not bool(view._unit_by_id(4).get("active", true)), "troca da reserva para o campo")
 	_click_cell(view, obama_cell)
+	var expansion_gold_before: int = int(view.state["own"]["gold"])
+	var expansion_price: int = int(view.state["test_config"]["upgrade_cost"])
 	view.capacity_button.pressed.emit()
-	_check(int(view.state["own"]["capacity"]) == 5 and int(view.state["own"]["gold"]) == 25, "capacidade e moedas vêm da Session")
+	_check(int(view.state["own"]["capacity"]) == 5 and int(view.state["own"]["gold"]) == expansion_gold_before - expansion_price, "capacidade e moedas vêm da Session")
 	view.session.teams[0]["capacity"] = 8
 	view._refresh()
 	_check(view.capacity_button.disabled and view.capacity_button.text == "CAMPO MÁX.", "capacidade máxima desativa compra")
@@ -747,11 +900,12 @@ func _run() -> void:
 	_check(not view.result_label.visible and view.overlay.get_node_or_null("ResultHeading") != null, "resultado tem apenas título do overlay visível")
 	_check(not view.state["combat"]["result"].get("units_summary", []).is_empty(), "estatísticas reais presentes")
 	var gold_end: int = int(view.state["own"]["gold"])
+	var next_income: int = int(view.state["own"]["income"]["next_round_total"])
 	view.next_button.pressed.emit()
 	_check(view.kit_effects.is_empty(), "próxima rodada limpa os clips transitórios")
 	_check(view._smoke_vfx_frames().is_empty() and view.visual_pulls.is_empty(), "próxima rodada não mantém fumaça ou puxões")
 	_check(view._phase() == "preparation" and int(view.state["round"]) == 2, "próxima rodada")
-	_check(int(view.state["own"]["gold"]) == gold_end + 9, "renda de rodada recebida")
+	_check(int(view.state["own"]["gold"]) == gold_end + next_income, "renda de rodada recebida conforme previsão autoritativa")
 	_check(not view.state["enemy"]["units"].is_empty() and int(view.state["enemy"]["previous_round"]) == 1, "somente formação inimiga anterior recebida")
 	_click_cell(view, view._cell(view.state["enemy"]["units"][0]["cell"]))
 	_check(view.unit_card.visible and not view.bench_button.visible, "formação anterior inimiga é só consulta")
@@ -781,4 +935,11 @@ func _run() -> void:
 	_check(view._phase() == "menu", "retorno ao menu")
 	_check(view.kit_effects.is_empty(), "menu limpa os clips transitórios")
 	_check(view._smoke_vfx_frames().is_empty() and view.visual_pulls.is_empty(), "menu oculta zonas e limpa puxões")
+	# A fixture abaixo instancia outra cena; esconder também o CanvasLayer original
+	# evita capturar dois lobbies/HUDs sobrepostos no mesmo viewport.
+	view.visible = false
+	view.ui.visible = false
+	await _check_dismiss_controls(scene)
+	view.visible = true
+	view.ui.visible = true
 	await _finish(view)

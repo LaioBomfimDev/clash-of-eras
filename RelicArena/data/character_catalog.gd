@@ -34,7 +34,7 @@ static func load_summon_specs() -> Dictionary:
 ## Regras do nível na partida: cópias mínimas e multiplicador de poder por nível (índice 0 = nível 1).
 static func load_level_rules() -> Dictionary:
 	var rules: Dictionary = _raw().get("match_levels", {})
-	var copies: Array[int] = [1, 2, 3]
+	var copies: Array[int] = [1, 2, 4]
 	var power: Array[float] = [1.0, 1.5, 2.25]
 	var raw_copies: Variant = rules.get("copies_for_level", [])
 	var raw_power: Variant = rules.get("power_multiplier", [])
@@ -46,7 +46,7 @@ static func load_level_rules() -> Dictionary:
 
 static func level_for_copies(copies: int, rules: Dictionary) -> int:
 	var level: int = 1
-	var thresholds: Array = rules.get("copies_for_level", [1, 2, 3])
+	var thresholds: Array = rules.get("copies_for_level", [1, 2, 4])
 	for index: int in range(thresholds.size()):
 		if copies >= int(thresholds[index]):
 			level = index + 1

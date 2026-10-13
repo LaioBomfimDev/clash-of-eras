@@ -1,11 +1,11 @@
 {
   "notice": "Todos os atributos abaixo são valores temporários de laboratório, sem balanceamento aprovado. As regras adicionais estão descritas em simulation/README.md.",
   "match_levels": {
-    "notice": "Nível na partida por cópias, escolhido pelo usuário em 2026-10-11: 2 cópias = nível 2, 3 cópias = nível 3. Multiplicadores de vida/dano/poder do kit são valores de teste (opção Moderado). Não confundir com o nível da carta fora da partida.",
+    "notice": "Decisao usuario2026-10-13:2copias=N2,4copias totais=N3. HP/dano globais sao valores de teste; Barbie/Ken tem curva propria de HP.",
     "copies_for_level": [
       1,
       2,
-      3
+      4
     ],
     "power_multiplier": [
       1.0,
@@ -129,11 +129,12 @@
       "moonwalk_pause_duration": 1.2,
       "dance_shield_amount": 120.0,
       "dance_shield_duration": 4.0,
-      "rarity": "epic"
+      "rarity": "epic",
+      "heal_teamwide": true
     },
     "barbie": {
       "display_name": "Barbie",
-      "max_hp": 900.0,
+      "max_hp": 600.0,
       "attack_damage": 32.0,
       "armor": 34.0,
       "resist": 26.0,
@@ -147,8 +148,13 @@
       "crit_chance": 0.05,
       "crit_multiplier": 1.5,
       "summon_key": "ken",
-      "guardian_damage_bonus": 0.3,
-      "rarity": "epic"
+      "guardian_damage_bonus": 0.5,
+      "rarity": "epic",
+      "max_hp_by_level": [
+        600.0,
+        900.0,
+        1200.0
+      ]
     },
     "elon": {
       "display_name": "Elon",
@@ -169,7 +175,10 @@
       "projectile_seconds_per_hex": 0.14,
       "projectile_min_seconds": 0.2,
       "splash_radius": 1,
-      "splash_ratio": 0.5,
+      "splash_ratio": 0.6,
+      "super_attack_interval": 4,
+      "super_splash_depth": 2,
+      "super_damage_multiplier": 1.5,
       "rarity": "legendary"
     },
     "snoop": {
@@ -214,7 +223,9 @@
       "crit_chance": 0.05,
       "crit_multiplier": 1.5,
       "revive_ratio": 0.4,
-      "rarity": "common"
+      "rarity": "common",
+      "extra_revive_ratio": 0.3,
+      "extra_revive_min_level": 3
     },
     "bob_marley": {
       "display_name": "Bob Marley",
@@ -232,9 +243,9 @@
       "crit_chance": 0.05,
       "crit_multiplier": 1.5,
       "aura_radius_by_level": [
-        3,
         4,
-        5
+        5,
+        6
       ],
       "aura_ally_speed_bonus": 0.3,
       "aura_enemy_slow": 0.3,
@@ -259,14 +270,16 @@
       "lasso_cooldown": 7.0,
       "lasso_stun": 1.0,
       "lasso_damage": 40.0,
-      "rarity": "legendary"
+      "rarity": "legendary",
+      "max_mana": 100.0,
+      "mana_per_attack": 25.0
     }
   },
   "summons": {
     "notice": "Invocações não entram no deck nem na loja. Ken é invocado pela Barbie (decisão do usuário, 2026-10-11); números de teste.",
     "ken": {
       "display_name": "Ken",
-      "max_hp": 650.0,
+      "max_hp": 1200.0,
       "attack_damage": 18.0,
       "armor": 30.0,
       "resist": 20.0,
@@ -276,7 +289,73 @@
       "attacks_per_second": 0.8,
       "move_interval": 0.45,
       "crit_chance": 0.0,
+      "crit_multiplier": 1.5,
+      "max_hp_by_level": [
+        1200.0,
+        1600.0,
+        2300.0
+      ]
+    },
+    "boss_dev": {
+      "display_name": "O Desenvolvedor",
+      "max_hp": 10000.0,
+      "attack_damage": 0.0,
+      "armor": 25.0,
+      "resist": 25.0,
+      "damage_type": "magic",
+      "synergy_tags": [],
+      "attack_range": 6,
+      "attacks_per_second": 0.0,
+      "move_interval": 1.0,
+      "crit_chance": 0.0,
+      "crit_multiplier": 1.5,
+      "is_boss": true,
+      "boss_red_fire_cooldown": 3.2,
+      "boss_red_fire_damage": 135.0,
+      "boss_purple_fire_cooldown": 4.5,
+      "boss_purple_fire_damage": 140.0,
+      "boss_tornado_cooldown": 7.5,
+      "boss_tornado_damage": 160.0,
+      "boss_summon_times": [
+        2.0,
+        14.0
+      ],
+      "boss_summon_keys": [
+        "slime_lodo_olho",
+        "monstro_olho_tentaculos"
+      ]
+    },
+    "slime_lodo_olho": {
+      "display_name": "Lodo Negro",
+      "max_hp": 4000.0,
+      "attack_damage": 36.0,
+      "armor": 25.0,
+      "resist": 20.0,
+      "damage_type": "physical",
+      "synergy_tags": [
+        "vanguarda"
+      ],
+      "attack_range": 1,
+      "attacks_per_second": 0.85,
+      "move_interval": 0.45,
+      "crit_chance": 0.05,
       "crit_multiplier": 1.5
+    },
+    "monstro_olho_tentaculos": {
+      "display_name": "Aberração Cósmica",
+      "max_hp": 5000.0,
+      "attack_damage": 52.0,
+      "armor": 12.0,
+      "resist": 18.0,
+      "damage_type": "magic",
+      "synergy_tags": [
+        "atiradores"
+      ],
+      "attack_range": 3,
+      "attacks_per_second": 1.1,
+      "move_interval": 0.45,
+      "crit_chance": 0.12,
+      "crit_multiplier": 1.6
     }
   }
 }

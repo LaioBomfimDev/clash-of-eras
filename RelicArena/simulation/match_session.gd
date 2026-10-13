@@ -6,8 +6,12 @@ const Core = preload("res://simulation/arena_simulation.gd")
 const Grid = preload("res://simulation/hex_grid.gd")
 const Catalog = preload("res://data/character_catalog.gd")
 const Items = preload("res://data/item_catalog.gd")
-const INITIAL_GOLD: int = 25
+const UnitState = preload("res://simulation/unit_state.gd")
+const UnitSpec = preload("res://data/unit_spec.gd")
+const INITIAL_GOLD: int = 20
 const ROUND_INCOME: int = 9
+const ROUND_INCOME_GROWTH: int = 3
+const WIN_STREAK_BONUS: int = 1
 const REROLL_COST: int = 2
 const INITIAL_CAPACITY: int = 4
 const MAX_CAPACITY: int = 8
@@ -16,7 +20,7 @@ const BAG_CAPACITY: int = 8
 const EQUIPMENT_SLOTS: int = 4
 const PREPARATION_SECONDS: float = 30.0
 const MAX_LIVES: int = 5
-## Espaços da reserva (hipótese de teste; o tamanho final da reserva continua pendente).
+## Cinco espaços de reserva, mantidos nesta revisão.
 const BENCH_CAPACITY: int = 5
 const INITIAL_KEYS: Array[String] = []
 
@@ -33,6 +37,7 @@ var _previous_round: int = 0
 var _seed: int = 20261011
 var _item_counters: Array[int] = [0, 0]
 var _bot_counter: int = 0
+var _settled_economy_rounds: Dictionary = {}
 ## Partida online (servidor): o time 1 é outro jogador humano, então o bot não prepara nada.
 var bot_enabled: bool = true
 
@@ -51,6 +56,7 @@ func reset(seed_value: int = 20261011) -> void:
 	_previous_round = 0
 	_item_counters = [0, 0]
 	_bot_counter = 0
+	_settled_economy_rounds.clear()
 	for team: int in range(2):
 		var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 		rng.seed = seed_value + team * 104729
@@ -58,7 +64,8 @@ func reset(seed_value: int = 20261011) -> void:
 		teams.append({"gold": INITIAL_GOLD, "capacity": INITIAL_CAPACITY,
 			"owned": [], "copies": _initial_copies(), "bag": [], "equipment": {}, "shop": [],
 			"shop_revision": 0, "benefit_options": [], "benefit_rounds": [],
-			"extra_life_used": false, "ready": false})
+			"extra_life_used": false, "ready": false, "win_streak": 0,
+			"pending_win_bonus": 0, "last_income_paid": 0})
 	var roster: Array[Dictionary] = []
 	for team: int in range(2):
 		for index: int in range(Catalog.KEYS.size()):
@@ -72,7 +79,7 @@ func _initial_copies() -> Dictionary:
 	return {}
 
 func _max_copies() -> int:
-	var thresholds: Array = sim.level_rules.get("copies_for_level", [1, 2, 3])
+	var thresholds: Array = sim.level_rules.get("copies_for_level", [1, 2, 4])
 	return int(thresholds[thresholds.size() - 1])
 
 func _open_preparation() -> void:
@@ -83,14 +90,18 @@ func _open_preparation() -> void:
 		teams[team]["shop_revision"] = 0
 		_refresh_shop(team)
 		teams[team]["benefit_options"] = []
-		if sim.round_index == 1 or sim.round_index == 4:
+		if sim.round_index == 1:
 			_offer_benefits(team)
 		_apply_all_equipment(team)
-	if bot_enabled:
-		_bot_prepare()
+	if sim.round_index == 4:
+		_setup_boss_round()
+	else:
+		_cleanup_boss_round()
+		if bot_enabled:
+			_bot_prepare()
 	_sync_preparation_phase()
 	_collect_core_events()
-	_emit("preparation_started", {"round": sim.round_index})
+	_emit("preparation_started", {"round": sim.round_index, "is_boss": sim.is_boss_round})
 
 func _sync_preparation_phase() -> void:
 	if sim.phase == "preparation":
@@ -117,7 +128,7 @@ func _valid_payload(operation: String, payload: Dictionary) -> bool:
 		string_field = "option_id"
 	if not string_field.is_empty() and not payload.get(string_field, null) is String:
 		return false
-	if operation in ["place", "bench", "deploy", "equip", "unequip"] and not _integer(payload.get("unit_id", null)):
+	if operation in ["place", "bench", "deploy", "equip", "unequip", "dismiss"] and not _integer(payload.get("unit_id", null)):
 		return false
 	if operation == "swap" and (not _integer(payload.get("active_id", null)) or not _integer(payload.get("bench_id", null))):
 		return false
@@ -138,12 +149,21 @@ func _integer(value: Variant) -> bool:
 static func upgrade_cost_for(capacity: int) -> int:
 	return 8 + (capacity - INITIAL_CAPACITY) * 4
 
+static func income_for_round(round_number: int) -> int:
+	return ROUND_INCOME + maxi(0, round_number - 1) * ROUND_INCOME_GROWTH
+
 func _dispatch(team: int, operation: String, payload: Dictionary) -> Dictionary:
 	if operation == "next_round":
-		if (team != 0 and bot_enabled) or phase != "round_result" or not sim.next_round():
+		if (team != 0 and bot_enabled) or phase != "round_result" or sim.phase != "finished" or sim.match_winner >= 0:
+			return _fail("wrong_phase")
+		_settle_round_economy()
+		if not sim.next_round():
 			return _fail("wrong_phase")
 		for side: int in range(2):
-			teams[side]["gold"] = int(teams[side]["gold"]) + ROUND_INCOME
+			var income: int = income_for_round(sim.round_index) + int(teams[side]["pending_win_bonus"])
+			teams[side]["gold"] = int(teams[side]["gold"]) + income
+			teams[side]["last_income_paid"] = income
+			teams[side]["pending_win_bonus"] = 0
 		_open_preparation()
 		return _ok()
 	if operation in ["equip", "buy_item"]:
@@ -188,6 +208,7 @@ func _dispatch(team: int, operation: String, payload: Dictionary) -> Dictionary:
 			return _ok({"capacity": cur_cap + 1})
 		"place", "deploy", "bench": return _position(team, operation, payload)
 		"swap": return _swap(team, payload)
+		"dismiss": return _dismiss(team, int(payload.get("unit_id", -1)))
 		"equip", "unequip": return _equipment(team, operation, payload)
 		"fuse": return _fuse(team, payload)
 	return _fail("unknown_operation")
@@ -259,19 +280,23 @@ func _recruit(team: int, offer_id: String) -> Dictionary:
 	_emit("hero_recruited", {"team": team, "unit_id": unit.id})
 	return _ok({"unit_id": unit.id, "active": unit.active, "level": 1, "copies": 1})
 
-## Cópia gratuita de um herói já possuído: junta imediatamente e sobe o nível na partida.
+## Cópia gratuita junta imediatamente; nem toda cópia alcança um novo nível.
 func _add_copy(team: int, offer: Dictionary, unit) -> Dictionary:
 	var key: String = str(offer["key"])
 	var copies: int = int((teams[team]["copies"] as Dictionary).get(key, 1))
 	if copies >= _max_copies():
 		return _fail("max_level")
+	var previous_level: int = unit.level
 	var level: int = Catalog.level_for_copies(copies + 1, sim.level_rules)
+	var level_changed: bool = level != previous_level
 	if not sim.set_unit_level(unit.id, level):
 		return _fail("wrong_phase")
 	teams[team]["copies"][key] = copies + 1
 	offer["claimed"] = true
-	_emit("hero_upgraded", {"team": team, "unit_id": unit.id, "level": level, "copies": copies + 1})
-	return _ok({"unit_id": unit.id, "active": unit.active, "level": level, "copies": copies + 1})
+	_emit("hero_upgraded", {"team": team, "unit_id": unit.id, "level": level,
+		"copies": copies + 1, "previous_level": previous_level, "level_changed": level_changed})
+	return _ok({"unit_id": unit.id, "active": unit.active, "level": level,
+		"copies": copies + 1, "previous_level": previous_level, "level_changed": level_changed})
 
 func _position(team: int, operation: String, payload: Dictionary) -> Dictionary:
 	var unit = _owned_unit(team, int(payload.get("unit_id", -1)))
@@ -308,6 +333,28 @@ func _swap(team: int, payload: Dictionary) -> Dictionary:
 		sim.set_active(active.id, true, previous)
 		return _fail("invalid_swap")
 	return _ok()
+
+func _dismiss(team: int, unit_id: int) -> Dictionary:
+	var unit = _owned_unit(team, unit_id)
+	if unit == null or unit.summoned:
+		return _fail("not_owned")
+	var equipped: Array = (teams[team]["equipment"] as Dictionary).get(unit_id, []).duplicate(true)
+	var bag: Array = (teams[team]["bag"] as Array).duplicate(true)
+	# Check capacity before touching ownership, runtime stats, level or formation.
+	if bag.size() + equipped.size() > BAG_CAPACITY:
+		return _fail("bag_full")
+	# All three core operations are valid for this existing unit in preparation.
+	if not sim.apply_equipment(unit_id, {}, []):
+		return _fail("equipment_rejected")
+	sim.set_unit_level(unit_id, 1)
+	sim.set_active(unit_id, false)
+	bag.append_array(equipped)
+	teams[team]["bag"] = bag
+	(teams[team]["owned"] as Array).erase(unit.key)
+	(teams[team]["copies"] as Dictionary).erase(unit.key)
+	(teams[team]["equipment"] as Dictionary).erase(unit_id)
+	_emit("hero_dismissed", {"team": team, "unit_id": unit_id, "returned_items": equipped.duplicate(true)})
+	return _ok({"unit_id": unit_id, "returned_items": equipped, "gold": 0})
 
 func _equipment(team: int, operation: String, payload: Dictionary) -> Dictionary:
 	var unit = _owned_unit(team, int(payload.get("unit_id", -1)))
@@ -449,7 +496,92 @@ func step(delta: float) -> void:
 		sim.step(remaining)
 		_collect_core_events()
 		if sim.phase == "finished":
+			_settle_round_economy()
 			phase = "match_over" if sim.match_winner >= 0 else "round_result"
+			if sim.is_boss_round and not bool((teams[0] as Dictionary).get("boss_resolved_r%d" % sim.round_index, false)):
+				teams[0]["boss_resolved_r%d" % sim.round_index] = true
+				_resolve_boss_rewards()
+
+func _settle_round_economy() -> void:
+	if sim.phase != "finished" or _settled_economy_rounds.has(sim.round_index):
+		return
+	_settled_economy_rounds[sim.round_index] = true
+	var winner: int = int(sim.round_result.get("winner", -1))
+	for team: int in range(2):
+		teams[team]["pending_win_bonus"] = 0
+		if not sim.is_boss_round:
+			if winner == team:
+				teams[team]["win_streak"] = int(teams[team]["win_streak"]) + 1
+				if int(teams[team]["win_streak"]) >= 2:
+					teams[team]["pending_win_bonus"] = WIN_STREAK_BONUS
+			elif winner >= 0:
+				teams[team]["win_streak"] = 0
+		_emit("round_economy_resolved", {"team": team,
+			"win_streak": teams[team]["win_streak"], "win_bonus": teams[team]["pending_win_bonus"]})
+
+var _boss_sidelined_units: Array[int] = []
+
+func _setup_boss_round() -> void:
+	sim.is_boss_round = true
+	_boss_sidelined_units.clear()
+	for unit in sim.units:
+		if unit.team == 1 and unit.active:
+			_boss_sidelined_units.append(unit.id)
+			unit.active = false
+	var boss_unit = sim.get_unit(999)
+	var boss_def = sim.summon_specs.get("boss_dev", null)
+	if boss_def != null:
+		if boss_unit == null:
+			boss_unit = UnitState.new(boss_def, 999, 1, Vector2i(4, 1))
+			sim.units.append(boss_unit)
+		else:
+			boss_unit.cell = Vector2i(4, 1)
+			boss_unit.previous_cell = Vector2i(4, 1)
+			boss_unit.hp = boss_unit.max_hp
+			boss_unit.alive = true
+			boss_unit.active = true
+	teams[1]["ready"] = true
+
+func _cleanup_boss_round() -> void:
+	sim.is_boss_round = false
+	var boss_unit = sim.get_unit(999)
+	if boss_unit != null:
+		boss_unit.active = false
+	for u_id: int in _boss_sidelined_units:
+		var u = sim.get_unit(u_id)
+		if u != null:
+			u.active = true
+	_boss_sidelined_units.clear()
+
+func _resolve_boss_rewards() -> void:
+	var winner: int = int(sim.round_result.get("winner", -1))
+	if winner == 0 and sim.is_boss_round and sim.boss_defeated():
+		var rewards: Array[Dictionary] = []
+		for drop_idx: int in range(3):
+			var roll: float = _rngs[0].randf()
+			if roll < 0.20 and sim.team_lives[0] < MAX_LIVES:
+				sim.team_lives[0] += 1
+				rewards.append({"kind": "life", "name": "Vida Extra", "description": "+1 Coração de Vida Extra!", "amount": 1})
+			elif roll < 0.60:
+				var gold_amt: int = 10
+				teams[0]["gold"] = int(teams[0]["gold"]) + gold_amt
+				rewards.append({"kind": "gold", "name": "Ouro do Criador", "description": "+%d Moedas de Ouro" % gold_amt, "amount": gold_amt})
+			else:
+				var item_key: String = Items.SHOP_KEYS[_rngs[0].randi_range(0, Items.SHOP_KEYS.size() - 1)]
+				var def: Dictionary = Items.definition(item_key)
+				if (teams[0]["bag"] as Array).size() < BAG_CAPACITY:
+					var item_obj: Dictionary = _new_item(0, item_key)
+					(teams[0]["bag"] as Array).append(item_obj)
+					rewards.append({"kind": "item", "key": item_key, "name": str(def["name"]), "description": "+1 " + str(def["name"])})
+				else:
+					var fallback_gold: int = int(def.get("price", 5))
+					teams[0]["gold"] = int(teams[0]["gold"]) + fallback_gold
+					rewards.append({"kind": "gold", "name": "Moedas de Ouro", "description": "+%d Moedas de Ouro" % fallback_gold, "amount": fallback_gold})
+		teams[0]["boss_rewards"] = rewards
+		_emit("boss_rewards_awarded", {"rewards": rewards})
+	else:
+		teams[0]["boss_rewards"] = []
+		_emit("boss_escaped", {"message": "O Boss escapou! Nenhum prêmio resgatado desta vez."})
 
 func _bot_prepare() -> void:
 	# Runs before player input; never inspects the player's current positions/items.
@@ -566,13 +698,18 @@ func snapshot_for_team(team: int) -> Dictionary:
 	for unit in sim.units:
 		if unit.team == team and (own["owned"] as Array).has(unit.key):
 			own_units.append(unit.as_dictionary())
-			if not unit.active:
+			if not unit.active and not (sim.is_boss_round and team == 1):
 				bench.append(unit.id)
 	own["units"] = own_units
 	own["bench"] = bench
 	own["synergies"] = sim.preview_synergies(team)
 	own["bag_capacity"] = BAG_CAPACITY
 	own["equipment_slots"] = EQUIPMENT_SLOTS
+	own["income"] = {"base": ROUND_INCOME, "growth": ROUND_INCOME_GROWTH,
+		"current_round_base": income_for_round(sim.round_index), "next_round": sim.round_index + 1,
+		"next_round_base": income_for_round(sim.round_index + 1), "win_bonus": int(own["pending_win_bonus"]),
+		"next_round_total": income_for_round(sim.round_index + 1) + int(own["pending_win_bonus"]),
+		"last_paid": int(own["last_income_paid"])}
 	var combat: Dictionary = {}
 	if phase in ["combat", "round_result", "match_over"]:
 		var visible: Array[Dictionary] = []
@@ -584,15 +721,34 @@ func snapshot_for_team(team: int) -> Dictionary:
 			projectiles.append(ball.as_dictionary())
 		combat = {"units": visible, "projectiles": projectiles, "zones": sim.zones.duplicate(true), "result": sim.round_result.duplicate(true),
 			"synergy_snapshot": sim.synergy_snapshot.duplicate(true)}
+	var enemy_units_preview: Array = []
+	if sim.is_boss_round or sim.round_index == 4:
+		var boss_u = sim.get_unit(999)
+		if boss_u != null:
+			enemy_units_preview = [{
+				"id": boss_u.id, "key": "boss_dev", "name": boss_u.display_name,
+				"team": 1, "cell": [boss_u.cell.x, boss_u.cell.y], "active": true, "alive": true,
+				"level": 1, "is_boss": true, "hp": boss_u.hp, "max_hp": boss_u.max_hp, "equipment": []
+			}]
+		else:
+			enemy_units_preview = [{
+				"id": 999, "key": "boss_dev", "name": "Desenvolvedor (Boss)",
+				"team": 1, "cell": [4, 1], "active": true, "alive": true,
+				"level": 1, "is_boss": true, "hp": 10000.0, "max_hp": 10000.0, "equipment": []
+			}]
+	else:
+		enemy_units_preview = (_previous_formations[1 - team] as Array).duplicate(true)
 	return {"phase": _phase_for_team(team), "prep_remaining": prep_remaining, "round": sim.round_index,
 		"lives": sim.team_lives.duplicate(), "match_winner": sim.match_winner,
 		"elapsed": sim.elapsed, "accelerated": sim.accelerated, "own": own,
-		"enemy": {"units": (_previous_formations[1 - team] as Array).duplicate(true), "previous_round": _previous_round},
+		"is_boss_round": sim.is_boss_round, "boss_rewards": (teams[team] as Dictionary).get("boss_rewards", []),
+		"enemy": {"units": enemy_units_preview, "previous_round": _previous_round},
 		"combat": combat, "recipes": Items.RECIPES.duplicate(true), "item_catalog": Items.ITEMS.duplicate(true),
-		"test_config": {"initial_gold": INITIAL_GOLD, "round_income": ROUND_INCOME, "reroll_cost": REROLL_COST,
+		"test_config": {"initial_gold": INITIAL_GOLD, "round_income": ROUND_INCOME,
+			"round_income_growth": ROUND_INCOME_GROWTH, "win_streak_bonus": WIN_STREAK_BONUS, "reroll_cost": REROLL_COST,
 			"upgrade_cost": upgrade_cost_for(int(teams[team]["capacity"])), "max_capacity": MAX_CAPACITY, "bag_capacity": BAG_CAPACITY,
 			"equipment_slots": EQUIPMENT_SLOTS, "preparation_seconds": PREPARATION_SECONDS, "bench_capacity": BENCH_CAPACITY,
-			"copies_for_level": (sim.level_rules.get("copies_for_level", [1, 2, 3]) as Array).duplicate(true),
+			"copies_for_level": (sim.level_rules.get("copies_for_level", [1, 2, 4]) as Array).duplicate(true),
 			"power_multiplier": (sim.level_rules.get("power_multiplier", [1.0, 1.5, 2.25]) as Array).duplicate(true)}}
 
 func _collect_core_events() -> void:

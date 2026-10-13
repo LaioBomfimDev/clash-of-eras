@@ -261,7 +261,13 @@ static func draw_ornate_card_frame(canvas: CanvasItem, rect: Rect2, rarity_key: 
 
 
 ## Pilha de moedas douradas com resplendor quente e moedas empilhadas em relevo
-static func draw_gold_pile(canvas: CanvasItem, center: Vector2, gold_amount: int, visual_time: float = 0.0) -> void:
+static func draw_gold_pile(canvas: CanvasItem, center: Vector2, _gold_amount: int, visual_time: float = 0.0) -> void:
+	draw_gold_pile_glow(canvas, center, visual_time)
+	draw_gold_pile_coins(canvas, center)
+	draw_gold_pile_sparks(canvas, center, visual_time)
+
+
+static func draw_gold_pile_glow(canvas: CanvasItem, center: Vector2, visual_time: float) -> void:
 	# 1. Resplendor / Aura difusa de ouro atrás da pilha
 	var pulse: float = 0.88 + 0.12 * sin(visual_time * 2.8)
 	var glow_layers: Array = [
@@ -279,6 +285,8 @@ static func draw_gold_pile(canvas: CanvasItem, center: Vector2, gold_amount: int
 			pts.append(center + Vector2(cos(a) * rad.x, sin(a) * rad.y))
 		canvas.draw_colored_polygon(pts, col)
 
+
+static func draw_gold_pile_coins(canvas: CanvasItem, center: Vector2) -> void:
 	# 2. Moedas empilhadas organicamente em camadas (monte amplo e alto)
 	var coin_defs: Array = [
 		# Pico traseiro superior (visível bem acima do pill)
@@ -356,6 +364,8 @@ static func draw_gold_pile(canvas: CanvasItem, center: Vector2, gold_amount: int
 		# Ponto de brilho especular no canto superior esquerdo
 		canvas.draw_circle(c_pos + Vector2(-rx * 0.45, -ry * 0.45), 1.1, Color(1, 1, 0.95, 0.95))
 
+
+static func draw_gold_pile_sparks(canvas: CanvasItem, center: Vector2, visual_time: float) -> void:
 	# 3. Faíscas sutis cintilantes sobre a pilha
 	var spark_offsets: Array = [
 		Vector2(-45, -24), Vector2(40, -22), Vector2(-15, -28), Vector2(10, -26), Vector2(-70, -8), Vector2(65, -10)

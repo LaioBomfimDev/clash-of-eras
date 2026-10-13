@@ -1,0 +1,44 @@
+{
+  "app": "Sprite Fusion API (Packaged for RelicArena)",
+  "name": "Clash of Eras - Notas Musicais Reggae Bob Marley 01",
+  "fps": 6,
+  "frame_ms": 167,
+  "frames": 6,
+  "loop": true,
+  "canvas": {
+    "w": 14,
+    "h": 14
+  },
+  "anchor": {
+    "kind": "origin",
+    "x": 7,
+    "y": 7
+  },
+  "clips": [
+    {
+      "name": "whole",
+      "title": "the whole effect, no sprite",
+      "depth": "front",
+      "loop": true,
+      "start_frame": 0,
+      "frames": 6,
+      "frame": {
+        "w": 14,
+        "h": 14
+      },
+      "sheets": [
+        {
+          "file": "whole.png",
+          "first_frame": 0,
+          "frames": 6,
+          "columns": 3,
+          "rows": 2
+        }
+      ],
+      "offset": {
+        "x": -7,
+        "y": -7
+      }
+    }
+  ]
+}

@@ -55,7 +55,7 @@ static func to_client_snapshot(snapshot: Dictionary, team: int) -> Dictionary:
 			var mapped_own: Array[Dictionary] = []
 			for u: Variant in own["units"]:
 				if u is Dictionary:
-					mapped_own.append(_map_unit(u))
+					mapped_own.append(_map_unit(u, false))
 			own["units"] = mapped_own
 	if out.has("enemy") and out["enemy"] is Dictionary:
 		var enemy: Dictionary = out["enemy"]
@@ -63,7 +63,7 @@ static func to_client_snapshot(snapshot: Dictionary, team: int) -> Dictionary:
 			var mapped_enemy: Array[Dictionary] = []
 			for u: Variant in enemy["units"]:
 				if u is Dictionary:
-					mapped_enemy.append(_map_unit(u))
+					mapped_enemy.append(_map_unit(u, false))
 			enemy["units"] = mapped_enemy
 	if out.has("combat") and out["combat"] is Dictionary:
 		var combat: Dictionary = out["combat"]
@@ -72,13 +72,13 @@ static func to_client_snapshot(snapshot: Dictionary, team: int) -> Dictionary:
 				var mapped_combat_units: Array[Dictionary] = []
 				for u: Variant in combat["units"]:
 					if u is Dictionary:
-						mapped_combat_units.append(_map_unit(u))
+						mapped_combat_units.append(_map_unit(u, false))
 				combat["units"] = mapped_combat_units
 			if combat.has("projectiles") and combat["projectiles"] is Array:
 				var mapped_proj: Array[Dictionary] = []
 				for p: Variant in combat["projectiles"]:
 					if p is Dictionary:
-						var p_copy: Dictionary = (p as Dictionary).duplicate(true)
+						var p_copy: Dictionary = p
 						if p_copy.has("from_cell"):
 							p_copy["from_cell"] = flip_cell_variant(p_copy["from_cell"])
 						if p_copy.has("to_cell"):
@@ -89,7 +89,7 @@ static func to_client_snapshot(snapshot: Dictionary, team: int) -> Dictionary:
 				var mapped_zones: Array[Dictionary] = []
 				for z: Variant in combat["zones"]:
 					if z is Dictionary:
-						var z_copy: Dictionary = (z as Dictionary).duplicate(true)
+						var z_copy: Dictionary = z
 						if z_copy.has("team"):
 							z_copy["team"] = flip_team(int(z_copy["team"]))
 						if z_copy.has("cell"):
@@ -101,7 +101,7 @@ static func to_client_snapshot(snapshot: Dictionary, team: int) -> Dictionary:
 				if syn.size() == 2:
 					combat["synergy_snapshot"] = [syn[1], syn[0]]
 			if combat.has("result") and combat["result"] is Dictionary and not (combat["result"] as Dictionary).is_empty():
-				combat["result"] = _map_round_result(combat["result"])
+				combat["result"] = _map_round_result(combat["result"], false)
 	return out
 
 
@@ -118,13 +118,14 @@ static func to_client_events(events: Array, team: int) -> Array[Dictionary]:
 				if ev.has(field):
 					ev[field] = flip_cell_variant(ev[field])
 			if str(ev.get("type", "")) == "round_finished":
-				ev = _map_round_result(ev)
+				ev = _map_round_result(ev, false)
 		out.append(ev)
 	return out
 
 
-static func _map_unit(unit: Dictionary) -> Dictionary:
-	var u: Dictionary = unit.duplicate(true)
+## A raiz já foi copiada em to_client_snapshot; evita recopiar cada ramo.
+static func _map_unit(unit: Dictionary, copy_input: bool = true) -> Dictionary:
+	var u: Dictionary = unit.duplicate(true) if copy_input else unit
 	if u.has("team"):
 		u["team"] = flip_team(int(u["team"]))
 	for field: String in ["cell", "moonwalk_from_cell", "moonwalk_to_cell"]:
@@ -136,8 +137,8 @@ static func _map_unit(unit: Dictionary) -> Dictionary:
 	return u
 
 
-static func _map_round_result(result: Dictionary) -> Dictionary:
-	var r: Dictionary = result.duplicate(true)
+static func _map_round_result(result: Dictionary, copy_input: bool = true) -> Dictionary:
+	var r: Dictionary = result.duplicate(true) if copy_input else result
 	if r.has("winner"):
 		r["winner"] = flip_team(int(r["winner"]))
 	if r.has("survivors") and r["survivors"] is Array and (r["survivors"] as Array).size() == 2:
@@ -150,7 +151,7 @@ static func _map_round_result(result: Dictionary) -> Dictionary:
 		var summaries: Array[Dictionary] = []
 		for item: Variant in r["units_summary"]:
 			if item is Dictionary:
-				var item_copy: Dictionary = (item as Dictionary).duplicate(true)
+				var item_copy: Dictionary = item
 				if item_copy.has("team"):
 					item_copy["team"] = flip_team(int(item_copy["team"]))
 				summaries.append(item_copy)

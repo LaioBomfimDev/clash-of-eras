@@ -4,12 +4,16 @@ extends SceneTree
 
 const OnlineServer = preload("res://net/online_server.gd")
 const Protocol = preload("res://net/online_protocol.gd")
+## Poll sockets at up to 60 Hz; combat keeps its own fixed 20 Hz simulation.
+## An uncapped headless loop spends CPU polling empty sockets on small hosts.
+const SERVER_POLL_FPS: int = 60
 
 var server: OnlineServer = OnlineServer.new()
 var running: bool = true
 
 
 func _init() -> void:
+	Engine.max_fps = SERVER_POLL_FPS
 	var port_str: String = OS.get_environment("PORT")
 	var port: int = int(port_str) if not port_str.is_empty() and int(port_str) > 0 else Protocol.DEFAULT_PORT
 	print("==================================================")

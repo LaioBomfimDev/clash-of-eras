@@ -11,7 +11,7 @@ const DEFAULT_PORT: int = 8910
 const MAX_CLIENT_MESSAGE: int = 64 * 1024
 const MAX_SERVER_MESSAGE: int = 4 * 1024 * 1024
 const ALLOWED_OPERATIONS: Array[String] = ["choose_benefit", "ready", "reroll", "buy_item", "recruit",
-	"upgrade_capacity", "place", "deploy", "bench", "swap", "equip", "unequip", "fuse", "next_round"]
+	"upgrade_capacity", "place", "deploy", "bench", "swap", "equip", "unequip", "fuse", "dismiss", "next_round"]
 ## Prefixo de item ainda não confirmado: o servidor troca pelo item comprado naquela oferta.
 const BOUGHT_PREFIX: String = "@offer:"
 

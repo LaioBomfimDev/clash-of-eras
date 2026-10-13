@@ -148,21 +148,49 @@
     },
     "elon": {
       "character_id": "8634c766-2b2f-4166-961b-1ea182b56419",
-      "art_batch": "realista_03",
+      "art_batch": "grande_04",
       "states": {
         "idle": {
           "directions": {
-            "south": "res://assets/characters/elon/realista_03/original/Idle/rotations/south.png",
-            "south-east": "res://assets/characters/elon/realista_03/original/Idle/rotations/south-east.png",
-            "east": "res://assets/characters/elon/realista_03/original/Idle/rotations/east.png",
-            "north-east": "res://assets/characters/elon/realista_03/original/Idle/rotations/north-east.png",
-            "north": "res://assets/characters/elon/realista_03/original/Idle/rotations/north.png",
-            "north-west": "res://assets/characters/elon/realista_03/original/Idle/rotations/north-west.png",
-            "west": "res://assets/characters/elon/realista_03/original/Idle/rotations/west.png",
-            "south-west": "res://assets/characters/elon/realista_03/original/Idle/rotations/south-west.png"
+            "south": "res://assets/characters/elon/grande_04/original/Idle/rotations/south.png",
+            "south-east": "res://assets/characters/elon/grande_04/original/Idle/rotations/south-east.png",
+            "east": "res://assets/characters/elon/grande_04/original/Idle/rotations/east.png",
+            "north-east": "res://assets/characters/elon/grande_04/original/Idle/rotations/north-east.png",
+            "north": "res://assets/characters/elon/grande_04/original/Idle/rotations/north.png",
+            "north-west": "res://assets/characters/elon/grande_04/original/Idle/rotations/north-west.png",
+            "west": "res://assets/characters/elon/grande_04/original/Idle/rotations/west.png",
+            "south-west": "res://assets/characters/elon/grande_04/original/Idle/rotations/south-west.png"
+          }
+        },
+        "idle_n2": {
+          "directions": {
+            "south": "res://assets/characters/elon/grande_04/niveis/nivel_2/rotations/south.png",
+            "south-east": "res://assets/characters/elon/grande_04/niveis/nivel_2/rotations/south-east.png",
+            "east": "res://assets/characters/elon/grande_04/niveis/nivel_2/rotations/east.png",
+            "north-east": "res://assets/characters/elon/grande_04/niveis/nivel_2/rotations/north-east.png",
+            "north": "res://assets/characters/elon/grande_04/niveis/nivel_2/rotations/north.png",
+            "north-west": "res://assets/characters/elon/grande_04/niveis/nivel_2/rotations/north-west.png",
+            "west": "res://assets/characters/elon/grande_04/niveis/nivel_2/rotations/west.png",
+            "south-west": "res://assets/characters/elon/grande_04/niveis/nivel_2/rotations/south-west.png"
+          }
+        },
+        "idle_n3": {
+          "directions": {
+            "south": "res://assets/characters/elon/grande_04/niveis/nivel_3/rotations/south.png",
+            "south-east": "res://assets/characters/elon/grande_04/niveis/nivel_3/rotations/south-east.png",
+            "east": "res://assets/characters/elon/grande_04/niveis/nivel_3/rotations/east.png",
+            "north-east": "res://assets/characters/elon/grande_04/niveis/nivel_3/rotations/north-east.png",
+            "north": "res://assets/characters/elon/grande_04/niveis/nivel_3/rotations/north.png",
+            "north-west": "res://assets/characters/elon/grande_04/niveis/nivel_3/rotations/north-west.png",
+            "west": "res://assets/characters/elon/grande_04/niveis/nivel_3/rotations/west.png",
+            "south-west": "res://assets/characters/elon/grande_04/niveis/nivel_3/rotations/south-west.png"
           }
         }
       },
+      "portrait_focus": [
+        64,
+        25
+      ],
       "original_animations": 0
     },
     "snoop": {

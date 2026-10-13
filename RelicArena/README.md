@@ -1,3 +1,5 @@
+**Release Web Performance01 (2026-10-13):** caches gráficos, transporte e diagnóstico revisados; conjunto cliente/servidor congelado e testado. Consulte [nota de publicação](../Guia_Godot4/RELEASE_PERFORMANCE_WEB_01.md).
+
 # Clash of Eras — protótipo local jogável
 
 **Estado revisado em 2026-10-12:** lobby/compêndio e controles da V1.5, economia da V1.6, campo vazio para recrutar, loja com sete ofertas e capacidade até oito. Corrigidos compartilhamento de regras pelo snapshot e contagem da gaveta de sinergias durante combate. [Revisão e evidências](../Guia_Godot4/revisoes/2026-10-12_1409/REVISAO.md).

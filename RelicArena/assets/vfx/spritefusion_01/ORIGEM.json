@@ -1,0 +1,123 @@
+{
+  "date": "2026-10-13",
+  "provider": "Sprite Fusion API (https://www.spritefusion.com/api/v1/generate)",
+  "request_id": "req_79cf33fd-8619-4e3d-af4e-5059dc6d6e32",
+  "operation": "generate",
+  "size": 32,
+  "prompt": "A thick brown rolled cigar with a bright orange glowing ember tip and a wisp of smoke alongside floating reggae musical notes in vibrant green, gold, and red",
+  "status": "succeeded",
+  "output_count": 12,
+  "credits": {
+    "remaining": 0
+  },
+  "outputs": [
+    {
+      "index": 0,
+      "asset_id": "1a20a102-b6b1-441d-8351-7773510ada25",
+      "asset_url": "https://media.spritefusion.com/pixel-art-assets/c4a7afdc-c68a-4cdc-9ddc-c7d0ac0e456d/1a20a102-b6b1-441d-8351-7773510ada25/image.png?v=1791868291303",
+      "width": 32,
+      "height": 32,
+      "local_file": "original/sprite_00_1a20a102-b6b1-441d-8351-7773510ada25.png",
+      "sha256": "3934BFAAB074A8A22BDACB106313C507FD0D8856573AB1981306A4BBD0FD90FD"
+    },
+    {
+      "index": 1,
+      "asset_id": "53359c15-f0f0-405c-b55d-9925eff711b4",
+      "asset_url": "https://media.spritefusion.com/pixel-art-assets/c4a7afdc-c68a-4cdc-9ddc-c7d0ac0e456d/53359c15-f0f0-405c-b55d-9925eff711b4/image.png?v=1791868292003",
+      "width": 32,
+      "height": 32,
+      "local_file": "original/sprite_01_53359c15-f0f0-405c-b55d-9925eff711b4.png",
+      "sha256": "32E7E938E023A6C78F8F118C64BD211D0A6880C6079607DD647E95920971541A"
+    },
+    {
+      "index": 2,
+      "asset_id": "ce6af63e-d217-4e15-8a6f-8e7601c0bc24",
+      "asset_url": "https://media.spritefusion.com/pixel-art-assets/c4a7afdc-c68a-4cdc-9ddc-c7d0ac0e456d/ce6af63e-d217-4e15-8a6f-8e7601c0bc24/image.png?v=1791868292379",
+      "width": 32,
+      "height": 32,
+      "local_file": "original/sprite_02_ce6af63e-d217-4e15-8a6f-8e7601c0bc24.png",
+      "sha256": "50BCED7D3B79E77EA219514875D9B33ED82EC2B570D31BD15A4446B22FF5FA59"
+    },
+    {
+      "index": 3,
+      "asset_id": "7c6a6429-9a0a-42d9-9348-850579cf7c12",
+      "asset_url": "https://media.spritefusion.com/pixel-art-assets/c4a7afdc-c68a-4cdc-9ddc-c7d0ac0e456d/7c6a6429-9a0a-42d9-9348-850579cf7c12/image.png?v=1791868292661",
+      "width": 32,
+      "height": 32,
+      "local_file": "original/sprite_03_7c6a6429-9a0a-42d9-9348-850579cf7c12.png",
+      "sha256": "45B1BB1C914FC0D01EEC22AE0383FF8C36E13CAE1FF362C01C1D0395D46B011E"
+    },
+    {
+      "index": 4,
+      "asset_id": "854f6d9f-bd13-46ff-aa07-7867549cfe3a",
+      "asset_url": "https://media.spritefusion.com/pixel-art-assets/c4a7afdc-c68a-4cdc-9ddc-c7d0ac0e456d/854f6d9f-bd13-46ff-aa07-7867549cfe3a/image.png?v=1791868293027",
+      "width": 32,
+      "height": 32,
+      "local_file": "original/sprite_04_854f6d9f-bd13-46ff-aa07-7867549cfe3a.png",
+      "sha256": "F535A68A4BA9A33D927A3E453FE2F3D7DE63BACA688CB71D57384B84E077567E"
+    },
+    {
+      "index": 5,
+      "asset_id": "faa42462-c772-4624-ac46-99126b0e9c98",
+      "asset_url": "https://media.spritefusion.com/pixel-art-assets/c4a7afdc-c68a-4cdc-9ddc-c7d0ac0e456d/faa42462-c772-4624-ac46-99126b0e9c98/image.png?v=1791868293585",
+      "width": 32,
+      "height": 32,
+      "local_file": "original/sprite_05_faa42462-c772-4624-ac46-99126b0e9c98.png",
+      "sha256": "3F8ED3D26FCA1079537176260C85569A04C02D7A5E785789BE6A403B84DF553B"
+    },
+    {
+      "index": 6,
+      "asset_id": "84168208-3f67-465b-9d88-66e8c2472ab0",
+      "asset_url": "https://media.spritefusion.com/pixel-art-assets/c4a7afdc-c68a-4cdc-9ddc-c7d0ac0e456d/84168208-3f67-465b-9d88-66e8c2472ab0/image.png?v=1791868294090",
+      "width": 32,
+      "height": 32,
+      "local_file": "original/sprite_06_84168208-3f67-465b-9d88-66e8c2472ab0.png",
+      "sha256": "567D3CAEFE015E84B138DA3EB7D79444B497DC3C5C6AA33D27B1C0AF45B725C4"
+    },
+    {
+      "index": 7,
+      "asset_id": "cefa0028-8452-4348-9f35-5ab3c2c95570",
+      "asset_url": "https://media.spritefusion.com/pixel-art-assets/c4a7afdc-c68a-4cdc-9ddc-c7d0ac0e456d/cefa0028-8452-4348-9f35-5ab3c2c95570/image.png?v=1791868294684",
+      "width": 32,
+      "height": 32,
+      "local_file": "original/sprite_07_cefa0028-8452-4348-9f35-5ab3c2c95570.png",
+      "sha256": "83B14D72EDB7E961A659C259045A9038B69E00124D4AE2F0C952C14DB2B90457"
+    },
+    {
+      "index": 8,
+      "asset_id": "aedf2983-9f08-4172-b094-f11fc8dcf8e3",
+      "asset_url": "https://media.spritefusion.com/pixel-art-assets/c4a7afdc-c68a-4cdc-9ddc-c7d0ac0e456d/aedf2983-9f08-4172-b094-f11fc8dcf8e3/image.png?v=1791868295166",
+      "width": 32,
+      "height": 32,
+      "local_file": "original/sprite_08_aedf2983-9f08-4172-b094-f11fc8dcf8e3.png",
+      "sha256": "B013EAFF75B7852EDCAD59F13168CB1296594314D5F4678DEAC3FE78F2052372"
+    },
+    {
+      "index": 9,
+      "asset_id": "e8c02661-1cd5-43b9-99b8-f59bffced249",
+      "asset_url": "https://media.spritefusion.com/pixel-art-assets/c4a7afdc-c68a-4cdc-9ddc-c7d0ac0e456d/e8c02661-1cd5-43b9-99b8-f59bffced249/image.png?v=1791868295687",
+      "width": 32,
+      "height": 32,
+      "local_file": "original/sprite_09_e8c02661-1cd5-43b9-99b8-f59bffced249.png",
+      "sha256": "659E24B0831CB9EEE8A10455DFBE89A4175ECCC24B4182D7C10E16D71623D9A4"
+    },
+    {
+      "index": 10,
+      "asset_id": "62579471-c0e9-4635-96fd-5aa47c17b367",
+      "asset_url": "https://media.spritefusion.com/pixel-art-assets/c4a7afdc-c68a-4cdc-9ddc-c7d0ac0e456d/62579471-c0e9-4635-96fd-5aa47c17b367/image.png?v=1791868296202",
+      "width": 32,
+      "height": 32,
+      "local_file": "original/sprite_10_62579471-c0e9-4635-96fd-5aa47c17b367.png",
+      "sha256": "083652C0E2BC6551F11D46D5EA4959AA97C80013A9D37E7CF345E9E4A86FA16F"
+    },
+    {
+      "index": 11,
+      "asset_id": "f8c1045d-33c8-455a-b3d8-298a76396720",
+      "asset_url": "https://media.spritefusion.com/pixel-art-assets/c4a7afdc-c68a-4cdc-9ddc-c7d0ac0e456d/f8c1045d-33c8-455a-b3d8-298a76396720/image.png?v=1791868296685",
+      "width": 32,
+      "height": 32,
+      "local_file": "original/sprite_11_f8c1045d-33c8-455a-b3d8-298a76396720.png",
+      "sha256": "029C4CC7574ADA1647E4CB7065CA5BD8E88396D327DD4E0A4987D035843DB21A"
+    }
+  ]
+}

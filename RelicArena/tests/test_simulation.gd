@@ -711,7 +711,7 @@ func _kit_unit(key: String, unit_id: int, team: int, cell: Vector2i, changes: Di
 	return unit
 
 func _test_lote_03_kits() -> void:
-	# Barbie invoca o Ken, que puxa o ataque de quem miraria a Barbie e dá +30% de dano a ela.
+	# Barbie invoca o Ken, que puxa o ataque de quem miraria a Barbie e dá +50% de dano a ela.
 	var sim: Simulation = _sandbox()
 	var barbie: UnitState = _kit_unit("barbie", 6, 0, Vector2i(3, 5), {"attack_damage": 100.0, "crit_chance": 0.0})
 	var brute: UnitState = _fixture_unit("brute", 101, 1, Vector2i(3, 4), {"attack_damage": 50.0})
@@ -725,7 +725,7 @@ func _test_lote_03_kits() -> void:
 	sim.step(0.05)
 	_check(brute.target_id == ken.id and ken.hp < ken.max_hp and barbie.hp == barbie.max_hp, "enemy that would hit Barbie hits Ken instead")
 	_near(brute.damage_dealt, 50.0 * 100.0 / 130.0, "Ken takes the redirected hit (armor 30)")
-	_near(_events(sim, "hit").filter(func(e: Dictionary) -> bool: return e["source_id"] == 6)[0]["amount"], 130.0 * 100.0 / 100.0, "Barbie deals +30% while Ken lives")
+	_near(_events(sim, "hit").filter(func(e: Dictionary) -> bool: return e["source_id"] == 6)[0]["amount"], 150.0, "Barbie deals +50% while Ken lives")
 	ken.hp = 0.0
 	ken.alive = false
 	barbie.attack_cooldown = 0.0
@@ -747,24 +747,35 @@ func _test_lote_03_kits() -> void:
 	star.apply_level(3, leveled.level_multiplier(3))
 	leveled.units = [star, _fixture_unit("foe", 101, 1, Vector2i(7, 0))]
 	leveled.start_combat()
-	_near(leveled.get_unit(86).max_hp, 650.0 * 2.25, "Ken inherits Barbie's match level")
+	_near(leveled.get_unit(86).max_hp, 2300.0, "Ken inherits Barbie's level with its own HP curve")
 
-	# Elon: foguete com explosão em área (50% nos vizinhos do alvo).
+	# Elon: 3 ataques com minifoguete (alvo direto) + 4º Super Ataque com explosão penetrante (raio 1 + 2 quadros para trás).
 	var rockets: Simulation = _sandbox()
-	var elon: UnitState = _kit_unit("elon", 7, 0, Vector2i(3, 7), {"attack_damage": 100.0, "crit_chance": 0.0})
+	var elon: UnitState = _kit_unit("elon", 7, 0, Vector2i(3, 7), {"attack_damage": 100.0, "crit_chance": 0.0, "attacks_per_second": 0.05})
 	var main: UnitState = _fixture_unit("main", 101, 1, Vector2i(3, 3))
 	var near: UnitState = _fixture_unit("near", 102, 1, Vector2i(4, 3))
-	var far: UnitState = _fixture_unit("far", 103, 1, Vector2i(7, 0))
+	var behind: UnitState = _fixture_unit("behind", 103, 1, Vector2i(3, 1))
+	var far: UnitState = _fixture_unit("far", 104, 1, Vector2i(7, 0))
 	elon.attack_cooldown = 0.0
-	rockets.units = [elon, main, near, far]
+	rockets.units = [elon, main, near, behind, far]
 	rockets.start_combat()
+	for shot: int in range(3):
+		elon.attack_cooldown = 0.0
+		rockets.step(0.05)
+		_check(rockets.projectiles.size() == 1 and rockets.projectiles[0].kind == "mini_rocket", "Elon shot %d is a mini_rocket" % (shot + 1))
+		rockets.step(0.8)
+	_near(main.hp, 700.0, "3 mini-rockets deal full direct damage to main target (1000 - 300 = 700)")
+	_near(near.hp, 1000.0, "mini-rockets deal zero splash damage to adjacent enemies")
+	_near(behind.hp, 1000.0, "mini-rockets deal zero damage to backline enemies")
+	elon.attack_cooldown = 0.0
 	rockets.step(0.05)
-	_check(rockets.projectiles.size() == 1 and rockets.projectiles[0].kind == "rocket", "Elon launches one rocket")
-	rockets.step(2.0)
-	_near(main.hp, 900.0, "rocket hits the target in full")
-	_near(near.hp, 950.0, "explosion deals 50% to adjacent enemies")
-	_near(far.hp, 1000.0, "explosion does not reach distant enemies")
-	_check(_events(rockets, "explosion").size() == 1, "one explosion per rocket")
+	_check(rockets.projectiles.size() == 1 and rockets.projectiles[0].kind == "rocket" and rockets.projectiles[0].is_super, "Elon 4th attack is a SUPER rocket")
+	rockets.step(0.8)
+	_near(main.hp, 550.0, "super rocket deals 1.5x damage to main target (700 - 150 = 550)")
+	_near(near.hp, 910.0, "super explosion deals 60% splash to adjacent neighbor (1000 - 90 = 910)")
+	_near(behind.hp, 910.0, "super explosion penetrates 2 hexes behind target into backline (1000 - 90 = 910)")
+	_near(far.hp, 1000.0, "super explosion does not reach distant enemies outside blast zone")
+	_check(_events(rockets, "explosion").size() == 1, "one super explosion emitted on 4th shot")
 
 	# Snoop: fumaça com dano contínuo, buff de velocidade a aliados e chance de errar para inimigos dentro.
 	var smoke: Simulation = _sandbox()
@@ -804,13 +815,13 @@ func _test_lote_03_kits() -> void:
 	var bob: UnitState = _kit_unit("bob_marley", 10, 0, Vector2i(3, 5))
 	var friend: UnitState = _fixture_unit("friend", 1, 0, Vector2i(3, 6), {"attacks_per_second": 1.0})
 	var enemy_near: UnitState = _fixture_unit("enemy", 101, 1, Vector2i(3, 4), {"attacks_per_second": 1.0})
-	var enemy_far: UnitState = _fixture_unit("far", 102, 1, Vector2i(3, 1), {"attacks_per_second": 1.0}) # 4 hexágonos
+	var enemy_far: UnitState = _fixture_unit("far", 102, 1, Vector2i(3, 0), {"attacks_per_second": 1.0}) # 5 hexágonos: fora de N1, dentro de N3
 	music.units = [bob, friend, enemy_near, enemy_far]
 	_near(music._attack_speed(friend), 1.3, "ally in the song radius attacks 30% faster")
 	_near(music._attack_speed(enemy_near), 0.7, "enemy in the song radius attacks 30% slower")
 	_near(music._attack_speed(enemy_far), 1.0, "enemy outside the level-1 radius is unaffected")
 	bob.apply_level(3, music.level_multiplier(3))
-	_near(music._attack_speed(enemy_far), 0.7, "level 3 widens the song radius to 5 hexes")
+	_near(music._attack_speed(enemy_far), 0.7, "level 3 song reaches a target outside the level-1 radius")
 
 	# Rapunzel: laça o inimigo mais distante, puxa para perto e atordoa ~1 s.
 	var rope: Simulation = _sandbox()
@@ -821,7 +832,8 @@ func _test_lote_03_kits() -> void:
 	rope.units = [rapunzel, close, carry]
 	rope.start_combat()
 	rope.step(2.45)
-	_check(_events(rope, "lasso").is_empty(), "lasso waits its first delay")
+	_check(_events(rope, "lasso").is_empty(), "time alone does not charge mana or cast the lasso")
+	rapunzel.mana = rapunzel.spec.max_mana # Fixture de alvo/atordoamento; carga por ataques coberta no runner balance02.
 	rope.step(0.05)
 	var lasso: Array[Dictionary] = _events(rope, "lasso")
 	_check(lasso.size() == 1 and lasso[0]["target_id"] == 102, "lasso picks the farthest enemy")
@@ -832,7 +844,10 @@ func _test_lote_03_kits() -> void:
 	rope.step(0.3)
 	_check(carry.attack_count > attacks_before, "unit acts again after the stun")
 	rope.step(6.5)
-	_check(_events(rope, "lasso").size() == 2, "lasso repeats after its cooldown")
+	_check(_events(rope, "lasso").size() == 1, "lasso does not repeat on the old timer without mana")
+	rapunzel.mana = rapunzel.spec.max_mana
+	rope.step(0.05)
+	_check(_events(rope, "lasso").size() == 2, "a second full mana charge permits another lasso")
 
 func _test_assassin_opening() -> void:
 	var sim: Simulation = _sandbox()

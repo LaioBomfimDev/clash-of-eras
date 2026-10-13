@@ -16,6 +16,10 @@ const VfxLibrary = preload("res://client/vfx_library.gd")
 const CharacterBank = preload("res://client/character_animation_bank.gd")
 const CharacterPlayer = preload("res://client/character_animation_player.gd")
 const OnlineClient = preload("res://net/online_client.gd")
+const GoldPileCache = preload("res://client/gold_pile_cache.gd")
+const ArenaRenderCache = preload("res://client/arena_render_cache.gd")
+const OrnateFrameCache = preload("res://client/ornate_frame_cache.gd")
+const ShopCardCache = preload("res://client/shop_card_cache.gd")
 const MATCH_SEED: int = 20261011
 const SCREEN: Vector2 = Vector2(1280, 720)
 const TEAM_COLORS: Array[Color] = [Color("64dcd2"), Color("ec7a74")]
@@ -34,14 +38,14 @@ const KIT_TEXT: Dictionary = {
 	"caramelo": "Caça um alvo à distância no começo da luta. Morde e causa sangramento; elimina alvos com até 10% de vida.",
 	"obama": "Tanque. A mala absorve dano e renova parte da própria proteção durante a luta.",
 	"zumbi": "Estocadas de lança. Concede +15% de crítico e velocidade à equipe. Críticos consecutivos acumulam poder progressivo (+20 de dano por acerto crítico).",
-	"michael": "Moonwalk por 3 hexágonos; ao parar, dá escudo à equipe. Mantém uma cura pequena periódica aos aliados.",
-	"barbie": "Vanguarda protetora. Entra com o Ken invocado; causa +30% de dano enquanto ele estiver vivo.",
+	"michael": "Moonwalk por 3 hexágonos; ao parar, dá escudo à equipe. Enquanto está vivo em campo, mantém uma cura periódica em toda a equipe.",
+	"barbie": "Vanguarda protetora. Entra com o Ken invocado; causa +50% de dano enquanto ele estiver vivo.",
 	"ken": "Guardião invocado pela Barbie. Atrai os golpes destinados a ela; enquanto vive, fortalece o dano dela.",
-	"elon": "Atirador espacial. Dispara minifoguetes de longo alcance com explosão em área nos hexágonos vizinhos.",
+	"elon": "Artilharia espacial. Dispara 3 minifoguetes focados e no 4º tiro um Super Foguete com explosão que penetra 2 quadros na retaguarda inimiga.",
 	"snoop": "Atirador de fumaça. Lança nuvem em grande área (raio 2) que causa dano mágico, faz inimigos errarem 30% dos ataques e acelera aliados em +25%.",
-	"lula": "Vanguarda combativa. Ao cair pela primeira vez na rodada, tem a volta por cima e revive com 40% de vida.",
-	"bob_marley": "Ritmo de paz e amor: aura de amplo alcance (raio 3/4/5). Aliados atacam +30% mais rápido; inimigos, 30% mais devagar.",
-	"rapunzel": "Apoio estratégico. Usa laço de trança dourada para puxar o inimigo mais distante e atordoá-lo."
+	"lula": "Ao cair, revive com 40% de vida. No nível 3, pode voltar uma segunda vez na rodada com 30% de vida.",
+	"bob_marley": "Ritmo de paz e amor: aura de amplo alcance (raio 4/5/6). Aliados atacam +30% mais rápido; inimigos, 30% mais devagar.",
+	"rapunzel": "Começa com 0/100 mana e ganha 25 por ataque lançado. Ao encher, puxa o inimigo mais distante e o atordoa; a mana é consumida."
 }
 
 const LOBBY_BG_PATH: String = "res://assets/ui/lobby_background.png"
@@ -82,7 +86,7 @@ const HERO_ROLES: Dictionary = {
 	"michael": "Apoio Protetor · Moonwalk e Escudos",
 	"barbie": "Vanguarda Comandante · Invoca Ken",
 	"ken": "Guardião Leal · Atrai Golpes Inimigos",
-	"elon": "Artilharia Espacial · Foguetes em Área",
+	"elon": "Artilharia Espacial · 3 Minifoguetes + Super Foguete",
 	"snoop": "Atirador Tático · Cortina de Fumaça",
 	"lula": "Vanguarda Resiliente · Volta por Cima",
 	"bob_marley": "Apoio de Ritmo · Aura de Paz e Amor",
@@ -130,6 +134,13 @@ var card_signature: String = ""
 var synergy_signature: String = ""
 var drawer_signature: String = ""
 var overlay_signature: String = ""
+var boss_result_view_mode: String = "rewards"
+
+func _boss_icon(icon_name: String) -> Texture2D:
+	var path: String = "res://assets/ui/boss_dev/" + icon_name + ".png"
+	if ResourceLoader.exists(path):
+		return load(path) as Texture2D
+	return null
 
 var ui: Control
 var heart_controls: Array[Array] = [[], []]
@@ -155,8 +166,10 @@ var phase_label: Label
 var timer_fill: ColorRect
 var lives_label: Label
 var bot_lives_label: Label
-var gold_pile_layer: Control
+var arena_render_cache: ArenaRenderCache
+var gold_pile_layer: GoldPileCache
 var gold_label: Label
+var income_label: Label
 var capacity_label: Label
 var status_panel: Panel
 var status_label: Label
@@ -167,6 +180,7 @@ var fight_button: Button
 var reroll_button: Button
 var capacity_button: Button
 var bench_button: Button
+var dismiss_button: Button
 var start_button: Button
 var next_button: Button
 var equip_button: Button
@@ -188,6 +202,16 @@ var eco_mode: bool = false
 var lobby_signature: String = ""
 var online_client: OnlineClient = OnlineClient.new()
 var is_online_match: bool = false
+## A rede pode entregar vários estados no mesmo poll; desenhamos apenas o mais recente.
+var _online_snapshot_pending: bool = false
+var performance_label: Label
+var lobby_performance_label: Label
+var show_performance_diagnostics: bool = false
+var _performance_elapsed: float = 0.0
+var _performance_last_frame_usec: int = 0
+var _performance_frame_ms: Array[float] = []
+var _performance_cpu_us: int = 0
+var _performance_metrics: Dictionary = {"fps": 0, "frame_ms": 0.0, "p95_frame_ms": 0.0, "client_cpu_ms": 0.0, "render_width": 0, "render_height": 0}
 var matchmaking_seconds_left: float = 20.0
 var opponent_title: String = "BOT LOCAL"
 var opponent_name_label: Label = null
@@ -220,6 +244,9 @@ func _save_player_name(new_name: String) -> void:
 
 var hex_polygons_outer: Dictionary = {}
 var hex_polygons_inner: Dictionary = {}
+var hex_outlines_outer: Dictionary = {}
+var hex_outlines_inner: Dictionary = {}
+var boss_vfx_textures: Dictionary = {}
 var fullscreen_button: Button = null
 var hud_fullscreen_button: Button = null
 var rotate_device_panel: Panel = null
@@ -315,10 +342,20 @@ func _ready() -> void:
 			var cell: Vector2i = Vector2i(c, r)
 			hex_polygons_outer[cell] = Board.hex_polygon(cell, 0.07)
 			hex_polygons_inner[cell] = Board.hex_polygon(cell, 0.16)
+			var outer_outline: PackedVector2Array = hex_polygons_outer[cell].duplicate()
+			outer_outline.append(outer_outline[0])
+			hex_outlines_outer[cell] = outer_outline
+			var inner_outline: PackedVector2Array = hex_polygons_inner[cell].duplicate()
+			inner_outline.append(inner_outline[0])
+			hex_outlines_inner[cell] = inner_outline
 
 	specs.merge(Catalog.load_summon_specs())
 	art.load_assets()
 	character_bank.load_assets()
+	for frame: Dictionary in character_bank.loaded_frames():
+		art.register_animation_frame(frame["texture"], frame["anchor"])
+	# A pose de conjuração também é usada pela primeira vez só no combate do Boss.
+	art.texture_for("boss_dev", "south-west", 0.0, "cast")
 	character_player.clear()
 	vfx.load_assets()
 	add_child(audio)
@@ -328,6 +365,13 @@ func _ready() -> void:
 		lobby_bg = load(LOBBY_BG_PATH) as Texture2D
 	board_perimeter = Board.perimeter_segments()
 	_load_arena_props()
+	for effect_name: String in ["explosao_fogo_roxo", "explosao_fogo_vermelho", "fogo_vermelho_projetil", "fogo_roxo_projetil", "furacao_fogo", "furacao_fogo_frame_0", "furacao_fogo_frame_1", "furacao_fogo_frame_2", "furacao_fogo_frame_3", "loot_orb_brilhante"]:
+		var effect_path: String = "res://assets/vfx/boss_dev/%s.png" % effect_name
+		boss_vfx_textures[effect_name] = load(effect_path) as Texture2D if ResourceLoader.exists(effect_path) else null
+	arena_render_cache = ArenaRenderCache.new()
+	arena_render_cache.z_index = -1
+	add_child(arena_render_cache)
+	arena_render_cache.setup(Vector2i(SCREEN), _draw_cached_arena)
 	units_layer = _layer(CanvasItem.TEXTURE_FILTER_LINEAR, _draw_units_layer)
 	var pixel_material: ShaderMaterial = ShaderMaterial.new()
 	pixel_material.shader = PIXEL_SHADER
@@ -365,7 +409,7 @@ func _setup_online_client() -> void:
 	online_client.snapshot_received.connect(func(snap: Dictionary) -> void:
 		if is_online_match:
 			state = snap
-			_refresh()
+			_online_snapshot_pending = true
 	)
 	online_client.events_received.connect(func(evs: Array[Dictionary]) -> void:
 		if is_online_match:
@@ -385,30 +429,94 @@ func _setup_online_client() -> void:
 
 
 func _process(delta: float) -> void:
+	var cpu_start: int = Time.get_ticks_usec()
 	visual_time += delta
 	toast_remaining = maxf(0.0, toast_remaining - delta)
 	if online_client != null:
 		online_client.step(delta)
 	if gold_coin_atlas != null:
 		Kit.update_coin_atlas_frame(gold_coin_atlas, visual_time, 8.0, 8)
-	if not menu_open:
-		if not is_online_match:
-			session.step(delta)
-			_consume_events()
-	_refresh()
+	if not menu_open and not is_online_match:
+		session.step(delta)
+		_consume_events()
+		_refresh(false) # _consume_events já obteve o estado local deste passo.
+	elif is_online_match and _online_snapshot_pending:
+		_online_snapshot_pending = false
+		_refresh()
+	else:
+		_refresh_status()
 	_prepare_frame()
 	_update_visuals(delta)
 	# Verificação inteligente de orientação para celular (avisa se estiver em pé)
 	var win_size: Vector2 = DisplayServer.window_get_size()
 	if rotate_device_panel != null and is_instance_valid(rotate_device_panel):
 		rotate_device_panel.visible = win_size.y > (win_size.x * 1.05) and win_size.x > 0
+	_update_arena_cache()
 	queue_redraw()
 	units_layer.queue_redraw()
 	overlay_layer.queue_redraw()
 	if gold_pile_layer != null and is_instance_valid(gold_pile_layer) and gold_pile_layer.visible:
-		gold_pile_layer.queue_redraw()
+		gold_pile_layer.advance(visual_time)
 	if is_instance_valid(hero_preview_control) and hero_preview_control.is_visible_in_tree():
 		hero_preview_control.queue_redraw()
+	_update_performance(delta, Time.get_ticks_usec() - cpu_start)
+
+
+## Relógio monotônico: o delta do engine pode ser limitado em quadros lentos.
+## CPU continua medindo só a atualização, sem desenho/GPU.
+func _update_performance(_delta: float, cpu_us: int) -> void:
+	_record_performance_sample(Time.get_ticks_usec(), cpu_us)
+
+
+func _record_performance_sample(now_usec: int, cpu_us: int) -> void:
+	if _performance_last_frame_usec == 0:
+		_performance_last_frame_usec = now_usec
+		return
+	var frame_seconds: float = maxf(float(now_usec - _performance_last_frame_usec) / 1000000.0, 0.0)
+	_performance_last_frame_usec = now_usec
+	_performance_elapsed += frame_seconds
+	_performance_cpu_us += cpu_us
+	_performance_frame_ms.append(frame_seconds * 1000.0)
+	if _performance_elapsed < 1.0:
+		return
+	var count: int = _performance_frame_ms.size()
+	_performance_frame_ms.sort()
+	var render_texture: ViewportTexture = get_viewport().get_texture()
+	_performance_metrics = {"fps": Engine.get_frames_per_second(), "frame_ms": _performance_elapsed * 1000.0 / count,
+		"p95_frame_ms": _performance_frame_ms[mini(int(count * 0.95), count - 1)],
+		"client_cpu_ms": float(_performance_cpu_us) / float(count) / 1000.0,
+		"draw_calls": int(Performance.get_monitor(Performance.RENDER_TOTAL_DRAW_CALLS_IN_FRAME)),
+		"render_primitives": int(Performance.get_monitor(Performance.RENDER_TOTAL_PRIMITIVES_IN_FRAME)),
+		"render_width": render_texture.get_width() if render_texture != null else 0,
+		"render_height": render_texture.get_height() if render_texture != null else 0}
+	var fps_text: String = "%d FPS · %.1f ms" % [int(_performance_metrics["fps"]), float(_performance_metrics["frame_ms"])]
+	var network_text: String = "BOT LOCAL"
+	var rtt_ms: float = -1.0
+	if is_online_match:
+		network_text = "REDE —"
+		if online_client.has_method("get_network_metrics"):
+			var network: Dictionary = online_client.call("get_network_metrics")
+			rtt_ms = float(network.get("rtt_ms", -1.0))
+			if rtt_ms >= 0.0:
+				network_text = "REDE %.0f ms" % rtt_ms
+	_performance_metrics["rtt_ms"] = rtt_ms
+	if OS.has_feature("web"):
+		# Somente números de desempenho; sem nome, formação ou dados da partida.
+		JavaScriptBridge.eval("window.__clashPerformance = %s;" % JSON.stringify(_performance_metrics), true)
+	var tooltip: String = "Intervalo médio: %.1f ms; p95: %.1f ms.\nCPU da atualização: %.2f ms (não inclui desenho/GPU).\nREDE mostra ida e volta ao servidor; é independente do FPS." % [float(_performance_metrics["frame_ms"]), float(_performance_metrics["p95_frame_ms"]), float(_performance_metrics["client_cpu_ms"])]
+	if is_instance_valid(performance_label):
+		performance_label.text = fps_text + "\n" + network_text
+		performance_label.tooltip_text = tooltip
+	if is_instance_valid(lobby_performance_label):
+		lobby_performance_label.text = fps_text
+		lobby_performance_label.tooltip_text = tooltip
+	_performance_elapsed = 0.0
+	_performance_cpu_us = 0
+	_performance_frame_ms.clear()
+
+
+func get_performance_metrics() -> Dictionary:
+	return _performance_metrics.duplicate()
 
 
 func _layer(filter: CanvasItem.TextureFilter, painter: Callable) -> Node2D:
@@ -499,6 +607,8 @@ func _build_top_bar() -> void:
 	hud_fullscreen_button.add_theme_font_size_override("font_size", 16)
 	hud_controls.append_array([_icon_button(ui, "ui_menu", Rect2(1228, 80, 40, 34), _open_menu, "Menu"), sound_icon_button,
 		_icon_button(ui, "ui_scroll", Rect2(1140, 80, 40, 34), _toggle_drawer.bind("log"), "Eventos do combate"), hud_fullscreen_button])
+	performance_label = _label(ui, "FPS —\nREDE —", Rect2(978, 80, 112, 36), 10, Kit.MUTED, HORIZONTAL_ALIGNMENT_CENTER)
+	hud_controls.append(performance_label)
 
 
 func _build_synergy_tracker() -> void:
@@ -543,9 +653,13 @@ func _build_bag() -> void:
 func _build_unit_card() -> void:
 	unit_card = _panel(ui, Rect2(1040, 124, 228, 352), 0.78)
 	card_root = _container(unit_card)
-	bench_button = _button(unit_card, "RESERVAR", Rect2(10, 298, 208, 42), _bench_or_deploy)
-	bench_button.add_theme_font_size_override("font_size", 14)
+	bench_button = _button(unit_card, "RESERVAR", Rect2(10, 298, 124, 42), _bench_or_deploy)
+	bench_button.add_theme_font_size_override("font_size", 12)
 	_apply_ornate_button(bench_button, "teal")
+	dismiss_button = _button(unit_card, "DISPENSAR", Rect2(142, 298, 76, 42), _dismiss_selected)
+	dismiss_button.add_theme_font_size_override("font_size", 11)
+	dismiss_button.tooltip_text = "Dispensa o herói sem receber ouro. Todos os itens voltam à bolsa; se não houver espaço, nada é removido."
+	_apply_ornate_button(dismiss_button, "gold")
 
 
 func _build_shop() -> void:
@@ -553,22 +667,24 @@ func _build_shop() -> void:
 	capacity_label = _label(capacity_pill, "", Rect2(6, 5, 110, 22), 14, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER)
 
 	# Pilha de moedas de ouro ilustrada atrás do mostrador de ouro
-	gold_pile_layer = Control.new()
+	gold_pile_layer = GoldPileCache.new()
 	gold_pile_layer.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	gold_pile_layer.position = Vector2(640, 568)
-	gold_pile_layer.draw.connect(_draw_gold_pile_layer)
+	gold_pile_layer.position = Vector2(1180, 558)
+	gold_pile_layer.scale = Vector2(0.6, 0.6)
 	ui.add_child(gold_pile_layer)
 
-	var gold_pill: Panel = _panel(ui, Rect2(584, 554, 112, 38), 0.88, 19)
+	var gold_pill: Panel = _panel(ui, Rect2(1124, 542, 112, 38), 0.88, 19)
 	gold_coin_atlas = Kit.create_animated_coin_atlas()
 	if gold_coin_atlas != null:
 		gold_coin_rect = _icon_rect(gold_pill, gold_coin_atlas, Rect2(12, 3, 32, 32))
 	else:
 		gold_coin_rect = _icon_rect(gold_pill, Kit.icon("ui_coin"), Rect2(12, 3, 32, 32))
 	gold_label = _label(gold_pill, "", Rect2(48, 4, 56, 28), 22, GOLD)
+	income_label = _label(ui, "", Rect2(1088, 577, 180, 18), 12, GOLD, HORIZONTAL_ALIGNMENT_CENTER)
+	income_label.mouse_filter = Control.MOUSE_FILTER_PASS
 
 	var shop: Panel = _panel(ui, Rect2(144, 596, 940, 116), 0.85, 10)
-	hud_controls.append_array([capacity_pill, gold_pile_layer, gold_pill, shop])
+	hud_controls.append_array([capacity_pill, gold_pile_layer, gold_pill, income_label, shop])
 
 	capacity_button = _button(shop, "ESPAÇO · 8", Rect2(8, 8, 114, 48), _command.bind("upgrade_capacity", {}))
 	capacity_button.icon = Kit.icon("ui_expand")
@@ -589,13 +705,6 @@ func _build_shop() -> void:
 	fight_button.add_theme_font_size_override("font_size", 20)
 	fight_button.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	_apply_ornate_button(fight_button, "gold")
-
-
-func _draw_gold_pile_layer() -> void:
-	if gold_pile_layer == null or not is_instance_valid(gold_pile_layer):
-		return
-	var current_gold: int = int(state.get("own", {}).get("gold", 0))
-	Kit.draw_gold_pile(gold_pile_layer, Vector2.ZERO, current_gold, visual_time)
 
 
 func _apply_ornate_button(btn: Button, theme_name: String = "teal") -> void:
@@ -619,15 +728,15 @@ func _apply_ornate_button(btn: Button, theme_name: String = "teal") -> void:
 	btn.add_theme_color_override("icon_pressed_color", Color("fef08a"))
 	btn.add_theme_color_override("icon_disabled_color", Color(0.65, 0.70, 0.75, 0.50))
 
-	var frame: Control = Control.new()
+	var frame: OrnateFrameCache = OrnateFrameCache.new()
 	frame.show_behind_parent = true
 	frame.size = btn.size
 	frame.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	btn.add_child(frame)
-	frame.draw.connect(func() -> void:
+	frame.setup(func(canvas: CanvasItem) -> void:
 		var is_h: bool = btn.is_hovered() and not btn.disabled
 		var is_p: bool = btn.button_pressed
-		Kit.draw_ornate_button_frame(frame, Rect2(Vector2.ZERO, frame.size), theme_name, is_h, btn.disabled, is_p)
+		Kit.draw_ornate_button_frame(canvas, Rect2(Vector2.ZERO, frame.size), theme_name, is_h, btn.disabled, is_p)
 	)
 	btn.mouse_entered.connect(frame.queue_redraw)
 	btn.mouse_exited.connect(frame.queue_redraw)
@@ -733,26 +842,27 @@ func _phase() -> String:
 	return "menu" if menu_open else str(state.get("phase", "benefit"))
 
 
-func _refresh() -> void:
-	if not is_online_match:
+func _refresh(synchronize_local_state: bool = true) -> void:
+	if not is_online_match and synchronize_local_state:
 		state = session.snapshot_for_team(0)
 	var phase: String = _phase()
 	var own: Dictionary = state.get("own", {})
 	var prep: bool = phase == "preparation"
 	var round_index: int = int(state.get("round", 1))
 	var config: Dictionary = state.get("test_config", {})
+	var is_boss_round: bool = bool(state.get("is_boss_round", false)) or round_index == 4
 	if is_online_match:
-		round_label.text = ("RODADA %d · ONLINE" % round_index) if phase != "menu" else "CLASH OF ERAS"
+		round_label.text = ("RODADA 4 · BOSS CRIADOR · ONLINE" if is_boss_round else ("RODADA %d · ONLINE" % round_index)) if phase != "menu" else "CLASH OF ERAS"
 	else:
-		round_label.text = ("RODADA %d" % round_index) if phase != "menu" else "PROTÓTIPO LOCAL"
+		round_label.text = ("RODADA 4 · BOSS CRIADOR" if is_boss_round else ("RODADA %d" % round_index)) if phase != "menu" else "PROTÓTIPO LOCAL"
 	if player_name_label != null and is_instance_valid(player_name_label):
 		player_name_label.text = "VOCÊ (%s)" % player_name
 	if opponent_name_label != null and is_instance_valid(opponent_name_label):
-		opponent_name_label.text = opponent_title
+		opponent_name_label.text = "DESENVOLVEDOR (BOSS)" if (is_boss_round and phase != "menu") else opponent_title
 	var elapsed: float = float(state.get("elapsed", 0.0))
 	var phase_names: Dictionary = {"menu": "CLASH OF ERAS", "benefit": "BENEFÍCIO",
-		"preparation": "PREPARAÇÃO · %ds" % ceili(float(state.get("prep_remaining", 30))),
-		"combat": "COMBATE · %ds" % maxi(0, ceili(30.0 - elapsed)) + ("  ⚡" if bool(state.get("accelerated", false)) else ""),
+		"preparation": ("PREPARAÇÃO · BOSS DEV (%ds)" % ceili(float(state.get("prep_remaining", 30)))) if is_boss_round else ("PREPARAÇÃO · %ds" % ceili(float(state.get("prep_remaining", 30)))),
+		"combat": ("BATALHA DE BOSS · %ds" % maxi(0, ceili(30.0 - elapsed))) if is_boss_round else (("COMBATE · %ds" % maxi(0, ceili(30.0 - elapsed))) + ("  ⚡" if bool(state.get("accelerated", false)) else "")),
 		"round_result": "RESULTADO", "match_over": "FIM DE PARTIDA"}
 	phase_label.text = str(phase_names.get(phase, phase))
 	var fraction: float = 1.0
@@ -773,6 +883,10 @@ func _refresh() -> void:
 	var gold: int = int(own.get("gold", 0))
 	var capacity: int = int(own.get("capacity", 4))
 	gold_label.text = str(gold)
+	var income_view: Dictionary = _income_view(own)
+	income_label.text = income_view["text"]
+	income_label.tooltip_text = income_view["tooltip"]
+	(gold_label.get_parent() as Control).tooltip_text = income_view["tooltip"]
 	capacity_label.text = "CAMPO %d/%d" % [_active_count(), capacity]
 	var reroll_cost: int = int(config.get("reroll_cost", 2))
 	var upgrade_cost: int = int(config.get("upgrade_cost", 8))
@@ -785,23 +899,11 @@ func _refresh() -> void:
 	var active_units: int = _active_count()
 	fight_button.disabled = not prep or active_units == 0
 	fight_button.text = "EM COMBATE" if phase == "combat" else ("RECRUTE" if active_units == 0 and prep else "LUTAR")
-	var hint: String = {"benefit": "Escolha um benefício para começar.",
-		"preparation": "Arraste ou toque: heróis da loja entram em campo ou na reserva; itens equipam heróis.",
-		"combat": "Combate automático · toque num herói para inspecionar.",
-		"round_result": "Veja quem causou dano, curou e protegeu.", "match_over": "Recomece para testar outra formação."}.get(phase, "")
-	if prep and active_units == 0:
-		hint = "Recrute heróis na loja abaixo para colocar seu time em campo!"
-	elif prep and _selected_own().is_empty() and selected_items.size() == 1:
-		hint = "Item marcado: toque num herói, arraste o item até ele ou use EQUIPAR."
-	elif prep and not _selected_own().is_empty():
-		hint = "Toque ou arraste até um hexágono azul, a reserva ou outro herói para trocar."
-	if toast_remaining > 0.0:
-		hint = toast_text
-	status_label.text = hint
-	status_panel.visible = not hint.is_empty() and phase not in ["menu"]
+	_refresh_status()
 	var in_match: bool = phase not in ["menu"]
 	for control: Control in hud_controls + [bag_panel, synergy_root]:
 		control.visible = in_match
+	performance_label.visible = in_match and show_performance_diagnostics
 	if lobby_root != null:
 		lobby_root.visible = not in_match
 		if not in_match:
@@ -816,6 +918,37 @@ func _refresh() -> void:
 		_on_phase_changed(phase)
 		print("CLIENT_PHASE: %s; rodada %d; vidas %s" % [phase, round_index, lives])
 		last_phase = phase
+
+
+## Mensagens expiram mesmo quando ainda não chegou outro snapshot online.
+func _refresh_status() -> void:
+	var phase: String = _phase()
+	var hint: String = {"benefit": "Escolha um benefício para começar.",
+		"preparation": "Arraste ou toque: heróis da loja entram em campo ou na reserva; itens equipam heróis.",
+		"combat": "Combate automático · toque num herói para inspecionar.",
+		"round_result": "Veja quem causou dano, curou e protegeu.", "match_over": "Recomece para testar outra formação."}.get(phase, "")
+	if phase == "preparation":
+		if _active_count() == 0:
+			hint = "Recrute heróis na loja abaixo para colocar seu time em campo!"
+		elif _selected_own().is_empty() and selected_items.size() == 1:
+			hint = "Item marcado: toque num herói, arraste o item até ele ou use EQUIPAR."
+		elif not _selected_own().is_empty():
+			hint = "Toque ou arraste até um hexágono azul, a reserva ou outro herói para trocar."
+	if toast_remaining > 0.0:
+		hint = toast_text
+	status_label.text = hint
+	status_panel.visible = not hint.is_empty() and phase != "menu"
+
+
+## Valores recebidos da Session; não reproduz a fórmula de renda no cliente.
+func _income_view(own: Dictionary) -> Dictionary:
+	var income: Dictionary = own.get("income", {})
+	if not income.has("next_round_total"):
+		return {"text": "RENDA —", "tooltip": "Renda ainda não informada pela partida."}
+	var streak: int = int(own.get("win_streak", 0))
+	var total: int = int(income["next_round_total"])
+	var tooltip: String = "Rodada %d: %d de renda + %d de bônus = %d moedas.\nVitórias seguidas: %d.\nO bônus de sequência é fixo; a rodada de Boss não gera esse bônus." % [int(income.get("next_round", 0)), int(income.get("next_round_base", 0)), int(income.get("win_bonus", 0)), total, streak]
+	return {"text": "PRÓXIMA +%d · SÉRIE %d" % [total, streak], "tooltip": tooltip}
 
 
 func _on_phase_changed(phase: String) -> void:
@@ -1233,11 +1366,14 @@ func _refresh_shop(own: Dictionary, prep: bool) -> void:
 		var unaffordable: bool = not hero and (int(own.get("gold", 0)) < int(offer.get("price", 0)) or (own.get("bag", []) as Array).size() >= int(own.get("bag_capacity", 8)))
 		var button: Button = shop_buttons[offer_id]
 		var can_act: bool = prep if hero else (prep or phase == "combat")
-		button.disabled = not can_act or bool(offer.get("claimed", false)) or maxed or unaffordable
+		var disabled: bool = not can_act or bool(offer.get("claimed", false)) or maxed or unaffordable
+		var disabled_changed: bool = button.disabled != disabled
+		button.disabled = disabled
 		button.modulate = Color(1, 1, 1, 0.55) if bool(offer.get("claimed", false)) or maxed or not can_act else Color.WHITE
-		for child: Node in button.get_children():
-			if child is Control:
-				(child as Control).queue_redraw()
+		if disabled_changed:
+			var frame: Control = button.get_meta("ornate_frame", null) as Control
+			if is_instance_valid(frame):
+				frame.queue_redraw()
 
 
 func _shop_card(offer: Dictionary, own: Dictionary, rect: Rect2) -> Button:
@@ -1249,6 +1385,8 @@ func _shop_card(offer: Dictionary, own: Dictionary, rect: Rect2) -> Button:
 	var status: String = str(int(offer.get("price", 0)))
 	if hero:
 		status = "RECRUTADO" if claimed else ("GRÁTIS" if not owned else ("NÍVEL MÁX." if copies >= _max_copies() else "NÍVEL %d" % _level_for_copies(copies + 1)))
+		if owned and not claimed and copies < _max_copies() and _level_for_copies(copies + 1) == _level_for_copies(copies):
+			status = "CÓPIA %d/%d" % [copies + 1, _max_copies()]
 	elif claimed:
 		status = "COMPRADO"
 	var button: Button = _button(shop_root, "", rect, _command.bind("recruit" if hero else "buy_item", {"offer_id": str(offer["offer_id"])}))
@@ -1270,14 +1408,15 @@ func _shop_card(offer: Dictionary, own: Dictionary, rect: Rect2) -> Button:
 	for state_name: String in ["normal", "hover", "pressed", "disabled", "focus"]:
 		button.add_theme_stylebox_override(state_name, empty_box)
 
-	var frame: Control = Control.new()
+	var frame: OrnateFrameCache = OrnateFrameCache.new()
 	frame.show_behind_parent = true
 	frame.size = rect.size
 	frame.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	button.add_child(frame)
-	frame.draw.connect(func() -> void:
+	button.set_meta("ornate_frame", frame)
+	frame.setup(func(canvas: CanvasItem) -> void:
 		var is_h: bool = button.is_hovered() and not button.disabled
-		Kit.draw_ornate_card_frame(frame, Rect2(Vector2.ZERO, frame.size), rarity_key, is_h, button.disabled)
+		Kit.draw_ornate_card_frame(canvas, Rect2(Vector2.ZERO, frame.size), rarity_key, is_h, button.disabled)
 	)
 	button.mouse_entered.connect(frame.queue_redraw)
 	button.mouse_exited.connect(frame.queue_redraw)
@@ -1298,7 +1437,7 @@ func _shop_card(offer: Dictionary, own: Dictionary, rect: Rect2) -> Button:
 		name_lbl.add_theme_color_override("font_outline_color", Color(0.02, 0.04, 0.06, 0.95))
 		name_lbl.add_theme_constant_override("outline_size", 2)
 
-		var description: String = "Personagem gratuito: entra no campo ou na reserva." if not owned else "Cópia grátis (%d/%d): junta na hora e sobe de nível — maior e mais forte." % [copies + 1, _max_copies()]
+		var description: String = "Personagem gratuito: entra no campo ou na reserva." if not owned else "Cópia grátis (%d/%d): junta na hora. %s" % [copies + 1, _max_copies(), ("Sobe para o nível %d." % _level_for_copies(copies + 1)) if _level_for_copies(copies + 1) > _level_for_copies(copies) else "Avança até a próxima evolução."]
 		button.tooltip_text = "%s\n%s" % [str(offer.get("name", "")), description]
 		var tag_lbl: Label = _label(button, "HERÓI", Rect2(6, 80, 42, 16), 10, accent, HORIZONTAL_ALIGNMENT_LEFT, false)
 		tag_lbl.add_theme_color_override("font_outline_color", Color(0.02, 0.04, 0.06, 0.95))
@@ -1337,6 +1476,7 @@ func _shop_card(offer: Dictionary, own: Dictionary, rect: Rect2) -> Button:
 			var price_lbl: Label = _label(button, status, Rect2(56, 76, 26, 18), 13, GOLD, HORIZONTAL_ALIGNMENT_LEFT, false)
 			price_lbl.add_theme_color_override("font_outline_color", Color(0.02, 0.04, 0.06, 0.95))
 			price_lbl.add_theme_constant_override("outline_size", 2)
+	ShopCardCache.attach(button, ui.theme)
 	return button
 
 
@@ -1408,17 +1548,24 @@ func _refresh_card(own: Dictionary, prep: bool) -> void:
 	var unit: Dictionary = _unit_by_id(selected_id)
 	var phase: String = _phase()
 	unit_card.visible = not unit.is_empty() and phase in ["preparation", "combat"]
+	dismiss_button.visible = not unit.is_empty() and int(unit.get("team", -1)) == 0 and phase == "preparation"
+	dismiss_button.disabled = not prep
 	if not unit_card.visible:
 		card_signature = ""
 		return
 	var team: int = int(unit.get("team", 0))
 	var own_unit: bool = team == 0
+	var mana_info: Dictionary = _mana_bar_data(unit)
+	var mana_shift: float = 18.0 if not mana_info.is_empty() else 0.0
+	unit_card.size.y = 352.0 + mana_shift
+	bench_button.position.y = 298.0 + mana_shift
+	dismiss_button.position.y = 298.0 + mana_shift
 	var equipment: Array = []
 	if own_unit:
 		equipment = (own.get("equipment", {}) as Dictionary).get(selected_id, [])
 	elif unit.has("equipment"):
 		equipment = unit.get("equipment", [])
-	var signature: String = str([unit.get("id"), unit.get("level"), unit.get("active"), unit.get("max_hp"), unit.get("attack_damage"), unit.get("armor"), unit.get("resist"), unit.get("effective_crit_chance"), unit.get("attack_speed_multiplier"), equipment, prep, phase])
+	var signature: String = str([unit.get("id"), unit.get("level"), unit.get("active"), unit.get("max_hp"), unit.get("max_mana"), unit.get("attack_damage"), unit.get("armor"), unit.get("resist"), unit.get("effective_crit_chance"), unit.get("attack_speed_multiplier"), equipment, prep, phase])
 	var hp_ratio: float = clampf(float(unit.get("hp", 0)) / maxf(1.0, float(unit.get("max_hp", 1))), 0.0, 1.0)
 	if signature == card_signature:
 		var fill: ColorRect = card_root.get_node_or_null("HpFill") as ColorRect
@@ -1443,6 +1590,9 @@ func _refresh_card(own: Dictionary, prep: bool) -> void:
 					(hp_node as RichTextLabel).text = hp_code
 				elif hp_node is Label:
 					(hp_node as Label).text = "%d / %d" % [c_hp, m_hp]
+		var mana_node: Label = card_root.get_node_or_null("ManaText") as Label
+		if mana_node != null and not mana_info.is_empty():
+			mana_node.text = "MANA  %d / %d" % [int(mana_info["value"]), int(mana_info["maximum"])]
 		return
 	card_signature = signature
 	_clear(card_root)
@@ -1537,6 +1687,15 @@ func _refresh_card(own: Dictionary, prep: bool) -> void:
 	hp_bbcode += "[/center]"
 	var hp_text: RichTextLabel = _rich_label(card_root, hp_bbcode, Rect2(10, 72, 208, 18), 12, Color.WHITE)
 	hp_text.name = "HpText"
+	if not mana_info.is_empty():
+		var mana_track: ColorRect = ColorRect.new()
+		mana_track.color = Color("121e2b")
+		mana_track.position = Vector2(10, 92)
+		mana_track.size = Vector2(208, 16)
+		mana_track.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		card_root.add_child(mana_track)
+		var mana_text: Label = _label(card_root, "MANA  %d / %d" % [int(mana_info["value"]), int(mana_info["maximum"])], Rect2(10, 91, 208, 18), 12, Color("9acbff"), HORIZONTAL_ALIGNMENT_CENTER)
+		mana_text.name = "ManaText"
 
 	var atq_text: String = "ATQ  %d" % roundi(cur_atk)
 	if item_atk_gain > 0:
@@ -1569,12 +1728,14 @@ func _refresh_card(own: Dictionary, prep: bool) -> void:
 		{"bbcode": alc_text, "rect": Rect2(108, 134, 112, 18)}
 	]
 	for stat_data: Dictionary in stat_items:
-		_rich_label(card_root, stat_data["bbcode"], stat_data["rect"], 12, Color("dfe6e3"))
-	_label(card_root, str(KIT_TEXT.get(key, "")), Rect2(10, 156, 208, 82), 12, Color("c9d8d2"), HORIZONTAL_ALIGNMENT_LEFT, true)
+		var stat_rect: Rect2 = stat_data["rect"]
+		stat_rect.position.y += mana_shift
+		_rich_label(card_root, stat_data["bbcode"], stat_rect, 12, Color("dfe6e3"))
+	_label(card_root, str(KIT_TEXT.get(key, "")), Rect2(10, 156 + mana_shift, 208, 82), 12, Color("c9d8d2"), HORIZONTAL_ALIGNMENT_LEFT, true)
 	for index: int in range(4):
 		var item: Dictionary = equipment[index] if index < equipment.size() else {}
 		var action: Callable = _command.bind("unequip", {"unit_id": selected_id, "item_id": str(item.get("id", ""))}) if (prep and own_unit) else Callable()
-		var slot: Button = _button(card_root, "", Rect2(10 + index * 54, 242, 46, 46), action)
+		var slot: Button = _button(card_root, "", Rect2(10 + index * 54, 242 + mana_shift, 46, 46), action)
 		slot.disabled = item.is_empty()
 		slot.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 		if not item.is_empty():
@@ -1590,12 +1751,14 @@ func _refresh_card(own: Dictionary, prep: bool) -> void:
 		equipment_buttons.append(slot)
 	bench_button.visible = own_unit and phase == "preparation"
 	bench_button.disabled = not prep
-	bench_button.text = "RESERVAR" if bool(unit.get("active", false)) else "COLOCAR EM CAMPO"
+	bench_button.text = "RESERVAR" if bool(unit.get("active", false)) else "EM CAMPO"
+	bench_button.tooltip_text = "Guardar na reserva" if bool(unit.get("active", false)) else "Selecione um hexágono azul livre para colocar este herói."
 
 
 func _show_menu() -> void:
 	menu_open = true
 	is_online_match = false
+	_online_snapshot_pending = false
 	opponent_title = "BOT LOCAL"
 	if online_client != null:
 		online_client.cancel_matchmaking()
@@ -1622,6 +1785,7 @@ func _start_match() -> void:
 		session.reset(MATCH_SEED)
 	menu_open = false
 	lobby_subview = "none"
+	boss_result_view_mode = "rewards"
 	if opponent_name_label != null and is_instance_valid(opponent_name_label):
 		opponent_name_label.text = opponent_title
 	selected_id = -1
@@ -1686,6 +1850,7 @@ func _fight() -> void:
 
 
 func _next_round() -> void:
+	boss_result_view_mode = "rewards"
 	_command("next_round")
 	target_hit_seq.clear()
 	for effects: Variant in [visual_ground, visual_moves, visual_attacks, visual_hits, visual_deaths, visual_pulls, shield_waves, slashes, floating, level_bursts, kit_effects, blast_zones]:
@@ -1706,9 +1871,22 @@ func _bench_or_deploy() -> void:
 		toast_remaining = 3.0
 
 
+func _dismiss_selected() -> void:
+	if _phase() != "preparation" or _selected_own().is_empty():
+		return
+	var response: Dictionary = _command("dismiss", {"unit_id": selected_id})
+	# No online, aguardar o snapshot autoritativo; envio não significa aceitação.
+	if bool(response.get("ok", false)) and not is_online_match:
+		_select_unit(-1)
+
+
 # --- Entrada: toque/clique no mundo ------------------------------------------
 
 func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_F3:
+		_toggle_performance_diagnostics()
+		get_viewport().set_input_as_handled()
+		return
 	if event is InputEventMouseMotion:
 		var motion: InputEventMouseMotion = event as InputEventMouseMotion
 		hover_cell = Board.pick_cell(motion.position)
@@ -1831,7 +2009,7 @@ func _refresh_overlay(phase: String) -> void:
 	if phase == "benefit":
 		signature += str(state.get("own", {}).get("benefit_options", []))
 	if phase in ["round_result", "match_over"]:
-		signature += str(state.get("combat", {}).get("result", {})) + ":" + str(result_view_team) + ":" + str(result_sort_column) + ":" + str(result_sort_descending)
+		signature += str(state.get("combat", {}).get("result", {})) + ":" + str(result_view_team) + ":" + str(result_sort_column) + ":" + str(result_sort_descending) + ":" + str(boss_result_view_mode)
 	if signature == overlay_signature:
 		return
 	overlay_signature = signature
@@ -1863,13 +2041,17 @@ func _refresh_overlay(phase: String) -> void:
 			_label(button, "ESCOLHER", Rect2(8, 300, 160, 24), 15, GOLD, HORIZONTAL_ALIGNMENT_CENTER)
 			benefit_buttons[option_id] = button
 	elif phase in ["round_result", "match_over"]:
-		var result: Dictionary = state.get("combat", {}).get("result", {})
-		var winner: int = int(state.get("match_winner", -1)) if phase == "match_over" else int(result.get("winner", -1))
+		var combat_res: Dictionary = state.get("combat", {}).get("result", {})
+		var is_boss: bool = bool(state.get("is_boss_round", false)) or int(state.get("round", 0)) == 4
+		var winner: int = int(combat_res.get("winner", -1)) if is_boss else (int(state.get("match_winner", -1)) if phase == "match_over" else int(combat_res.get("winner", -1)))
+		if is_boss and boss_result_view_mode == "rewards":
+			_render_boss_round_result(overlay, winner, phase)
+			return
 		var heading: String = "EMPATE" if winner < 0 else ("VOCÊ VENCEU" if winner == 0 else "BOT VENCEU")
 		result_label.text = heading + (" A PARTIDA" if phase == "match_over" else " A RODADA")
 		var heading_label: Label = _label(overlay, result_label.text, Rect2(0, 6, 600, 26), 24, GOLD if winner == 0 else (TEAM_COLORS[1] if winner == 1 else Kit.INK), HORIZONTAL_ALIGNMENT_CENTER)
 		heading_label.name = "ResultHeading"
-		var reason: String = {"elimination": "por eliminação", "survivors": "por sobreviventes", "damage": "por dano causado", "draw": "sem perda de vida"}.get(str(result.get("reason", "")), "")
+		var reason: String = {"elimination": "por eliminação", "survivors": "por sobreviventes", "damage": "por dano causado", "draw": "sem perda de vida"}.get(str(combat_res.get("reason", "")), "")
 		_label(overlay, reason, Rect2(0, 32, 600, 16), 12, Kit.MUTED, HORIZONTAL_ALIGNMENT_CENTER)
 
 		# Alternância de time para comparação do desempenho
@@ -1928,7 +2110,7 @@ func _refresh_overlay(phase: String) -> void:
 				col_btn.add_theme_color_override("font_color", TEAM_COLORS[0])
 
 		# Filtragem e ordenação dos dados das unidades
-		var summaries: Array = result.get("units_summary", [])
+		var summaries: Array = combat_res.get("units_summary", [])
 		var rows: Array = summaries.filter(func(unit: Dictionary) -> bool: return int(unit.get("team", 1)) == result_view_team and bool(unit.get("active", true)))
 		rows.sort_custom(func(a: Dictionary, b: Dictionary) -> bool:
 			var va: Variant
@@ -1993,6 +2175,110 @@ func _refresh_overlay(phase: String) -> void:
 
 		next_button = _button(overlay, "NOVA PARTIDA" if phase == "match_over" else "PRÓXIMA RODADA", Rect2(180, 374, 240, 48), _start_match if phase == "match_over" else _next_round)
 		next_button.add_theme_font_size_override("font_size", 18)
+		if is_boss:
+			var rewards_btn: Button = _button(overlay, "VER ESPÓLIOS", Rect2(20, 378, 140, 40), func() -> void:
+				boss_result_view_mode = "rewards"
+				overlay_signature = ""
+				_refresh_overlay(_phase()))
+			rewards_btn.add_theme_font_size_override("font_size", 13)
+
+
+func _render_boss_round_result(parent: Control, winner: int, current_phase: String) -> void:
+	var boss_rewards: Array = state.get("boss_rewards", [])
+	if winner == 0:
+		result_label.text = "VITÓRIA CONTRA O CRIADOR!"
+		_label(parent, "ESPÓLIOS DO DESENVOLVEDOR", Rect2(0, 10, 600, 28), 24, GOLD, HORIZONTAL_ALIGNMENT_CENTER)
+		_label(parent, "O Criador foi derrotado! Suas 3 orbes místicas liberaram os seguintes prêmios:", Rect2(0, 38, 600, 18), 13, Kit.MUTED, HORIZONTAL_ALIGNMENT_CENTER)
+		
+		var orb_tex: Texture2D = _boss_icon("loot_orb_brilhante")
+		for index: int in range(3):
+			var reward: Dictionary = boss_rewards[index] if index < boss_rewards.size() else {"kind": "gold", "amount": 3}
+			var kind: String = str(reward.get("kind", "gold"))
+			var card_x: float = 24.0 + index * 188.0
+			var card_panel: Panel = Panel.new()
+			card_panel.position = Vector2(card_x, 66)
+			card_panel.size = Vector2(176, 292)
+			var sb: StyleBoxFlat = StyleBoxFlat.new()
+			sb.bg_color = Color(0.08, 0.07, 0.12, 0.95)
+			sb.border_color = Color("c084fc") if kind == "item" else (Color("86f6a5") if kind == "life" else GOLD)
+			sb.set_border_width_all(2)
+			sb.set_corner_radius_all(8)
+			card_panel.add_theme_stylebox_override("panel", sb)
+			parent.add_child(card_panel)
+			
+			if orb_tex != null:
+				_icon_rect(card_panel, orb_tex, Rect2(64, 12, 48, 48))
+			
+			var icon_tex: Texture2D = null
+			var title_str: String = ""
+			var title_col: Color = GOLD
+			var desc_str: String = ""
+			match kind:
+				"gold":
+					icon_tex = _boss_icon("drop_ouro")
+					var amt: int = int(reward.get("amount", 3))
+					title_str = "+%d OURO" % amt
+					title_col = GOLD
+					desc_str = "Moedas reluzentes concedidas pelo Criador. Fortaleça sua economia!"
+				"item":
+					icon_tex = _boss_icon("drop_item")
+					title_str = str(reward.get("name", "ITEM MÍSTICO"))
+					title_col = Color("9ec5fe")
+					desc_str = str(reward.get("description", "Equipamento especial adicionado à sua mochila de combate!"))
+				"life":
+					icon_tex = _boss_icon("drop_vida_extra")
+					title_str = "+1 CORAÇÃO!"
+					title_col = Color("86f6a5")
+					desc_str = "Vida extra restaurada! Coração radiante adicionado à sua reserva."
+			
+			if icon_tex != null:
+				_icon_rect(card_panel, icon_tex, Rect2(66, 68, 44, 44))
+			
+			_label(card_panel, title_str, Rect2(6, 122, 164, 24), 16, title_col, HORIZONTAL_ALIGNMENT_CENTER)
+			if kind == "life":
+				_label(card_panel, "★ CHANCE RARA 20% ★", Rect2(6, 146, 164, 18), 11, Color("ffd700"), HORIZONTAL_ALIGNMENT_CENTER)
+			_label(card_panel, desc_str, Rect2(10, 168, 156, 110), 12, Kit.MUTED if kind != "life" else Color("d4fce2"), HORIZONTAL_ALIGNMENT_CENTER, true)
+		
+		next_button = _button(parent, "RESGATAR & CONTINUAR", Rect2(160, 372, 280, 46), _start_match if current_phase == "match_over" else _next_round)
+		next_button.add_theme_font_size_override("font_size", 18)
+		
+		var stats_btn: Button = _button(parent, "VER DANO", Rect2(460, 378, 120, 34), func() -> void:
+			boss_result_view_mode = "stats"
+			overlay_signature = ""
+			_refresh_overlay(_phase()))
+		stats_btn.add_theme_font_size_override("font_size", 13)
+	else:
+		result_label.text = "O DESENVOLVEDOR ESCAPOU!"
+		_label(parent, "O DESENVOLVEDOR ESCAPOU!", Rect2(0, 12, 600, 28), 24, Color("ec8790"), HORIZONTAL_ALIGNMENT_CENTER)
+		_label(parent, "O tempo de combate esgotou ou suas tropas não resistiram...", Rect2(0, 40, 600, 18), 13, Kit.MUTED, HORIZONTAL_ALIGNMENT_CENTER)
+		
+		var card: Panel = Panel.new()
+		card.position = Vector2(40, 72)
+		card.size = Vector2(520, 282)
+		var sb_loss: StyleBoxFlat = StyleBoxFlat.new()
+		sb_loss.bg_color = Color(0.08, 0.08, 0.12, 0.95)
+		sb_loss.border_color = Color(0.35, 0.85, 0.55, 0.8)
+		sb_loss.set_border_width_all(2)
+		sb_loss.set_corner_radius_all(10)
+		card.add_theme_stylebox_override("panel", sb_loss)
+		parent.add_child(card)
+		
+		var boss_tex: Texture2D = art.texture_for("boss_dev", "south", 0.0, "idle", 1)
+		if boss_tex != null:
+			_icon_rect(card, boss_tex, Rect2(20, 30, 110, 160))
+		
+		_label(card, "🛡️ NENHUMA VIDA PERDIDA!", Rect2(148, 24, 350, 28), 19, Color("86f6a5"), HORIZONTAL_ALIGNMENT_LEFT)
+		var loss_desc: String = "A Batalha contra o Desenvolvedor é um desafio especial PvE de recompensa.\n\nMesmo não vencendo a batalha, suas vidas continuam 100% preservadas e intactas!\n\nVocê apenas deixa de receber os 3 espólios deste round, mas segue firme na partida com toda a sua composição para as próximas rodadas!"
+		_label(card, loss_desc, Rect2(148, 62, 350, 190), 13, Color.WHITE, HORIZONTAL_ALIGNMENT_LEFT, true)
+		
+		next_button = _button(parent, "CONTINUAR PARTIDA", Rect2(160, 372, 280, 46), _start_match if current_phase == "match_over" else _next_round)
+		next_button.add_theme_font_size_override("font_size", 18)
+		
+		var stats_btn_loss: Button = _button(parent, "VER DANO", Rect2(460, 378, 120, 34), func() -> void:
+			boss_result_view_mode = "stats"
+			overlay_signature = ""
+			_refresh_overlay(_phase()))
+		stats_btn_loss.add_theme_font_size_override("font_size", 13)
 
 
 func _toggle_drawer(mode: String) -> void:
@@ -2056,6 +2342,12 @@ func _set_engine_fps(fps: int) -> void:
 
 func _toggle_eco_mode() -> void:
 	eco_mode = not eco_mode
+	lobby_signature = ""
+	_refresh()
+
+
+func _toggle_performance_diagnostics() -> void:
+	show_performance_diagnostics = not show_performance_diagnostics
 	lobby_signature = ""
 	_refresh()
 
@@ -2265,6 +2557,10 @@ func _start_passive_character_skills(event: Dictionary) -> void:
 		var direction: String = str(visual_directions.get(unit_id, "south"))
 		if not nearest.is_empty():
 			direction = art.direction_for(Board.facing_vector(from, Board.ground(_cell(nearest.get("cell", [])))), direction)
+		# O gesto de liderança pode virar para a plateia: não é um golpe mirado.
+		# Usa somente o clip leste existente enquanto outras vistas são produzidas.
+		if not character_bank.has_animation("zumbi", "skill", direction) and character_bank.has_animation("zumbi", "skill", "east"):
+			direction = "east"
 		character_player.play_action(unit_id, "zumbi", "skill", direction, _character_event_stamp(event, unit_id))
 		_spawn_zumbi_inspiration(unit, units, _character_event_stamp(event, unit_id))
 
@@ -2300,9 +2596,10 @@ func _process_game_event(event: Dictionary) -> void:
 	if kind in ["item_bought", "items_fused", "capacity_upgraded", "hero_recruited"]:
 		audio.play_cue("purchase")
 	elif kind == "hero_upgraded":
-		audio.play_cue("win")
+		var level_changed: bool = bool(event.get("level_changed", true))
+		audio.play_cue("win" if level_changed else "purchase")
 		var upgraded: Dictionary = _unit_by_id(int(event.get("unit_id", -1)))
-		if not upgraded.is_empty():
+		if not upgraded.is_empty() and level_changed:
 			var level: int = int(event.get("level", 2))
 			var ground_point: Vector2 = _ground_of(upgraded)
 			level_bursts.append({"ground": ground_point, "life": 1.1, "duration": 1.1, "level": level})
@@ -2335,16 +2632,55 @@ func _process_game_event(event: Dictionary) -> void:
 		shield_waves.append({"ground": visual_ground.get(int(source["id"]), Board.ground(_cell(source.get("cell", [])))), "life": 0.9, "duration": 0.9})
 		if int(source["id"]) == selected_id:
 			floating.append({"text": "ESCUDO %d" % roundi(float(event.get("amount", 0))), "position": _head_of(source) + Vector2(-30, -6), "color": GOLD, "life": 1.0, "size": 15})
+	if kind == "boss_cast" and not source.is_empty():
+		visual_attacks[int(source["id"])] = {"remaining": 0.55, "duration": 0.55, "direction": Vector2.DOWN}
+		var spell_name: String = str(event.get("spell", ""))
+		var spell_label: String = "FURACÃO DE FOGO!" if spell_name == "fire_tornado" else ("FOGO VERMELHO!" if spell_name == "red_fire" else ("FOGO ROXO!" if spell_name == "purple_fire" else "CONJURAÇÃO!"))
+		var spell_col: Color = Color("ff3322") if spell_name == "red_fire" else (Color("da70d6") if spell_name == "purple_fire" else Color("ff8e36"))
+		floating.append({"text": spell_label, "position": _head_of(source) + Vector2(-30, -20), "color": spell_col, "life": 1.2, "duration": 1.2, "size": 17, "critical": true})
+		if spell_name in ["red_fire", "purple_fire"] and event.has("from") and event.has("to"):
+			var p_from: Vector2 = Board.project(Board.ground(_cell(event["from"]))) + Vector2(0, -35)
+			var p_to: Vector2 = Board.project(Board.ground(_cell(event["to"])))
+			kit_effects.append({
+				"kind": "boss_fire_projectile",
+				"spell": spell_name,
+				"from": p_from,
+				"position": p_from,
+				"destination": p_to,
+				"life": 0.32,
+				"duration": 0.32,
+				"critical": true
+			})
+	if kind == "red_fire_explosion" and event.has("center"):
+		shake_remaining = 0.24
+		blast_zones.append({"cell": event["center"], "radius": int(event.get("radius", 1)), "life": 0.75, "duration": 0.75, "color_primary": Color(1.0, 0.18, 0.08, 0.48), "color_border": Color(1.0, 0.55, 0.2, 0.95)})
+		kit_effects.append({"kind": "red_explosion", "position": Board.project(Board.ground(_cell(event["center"]))), "life": 0.65, "duration": 0.65, "critical": false})
+	if kind == "purple_fire_explosion" and event.has("center"):
+		shake_remaining = 0.22
+		blast_zones.append({"cell": event["center"], "radius": int(event.get("radius", 1)), "life": 0.75, "duration": 0.75, "color_primary": Color(0.68, 0.2, 0.95, 0.45), "color_border": Color(0.9, 0.55, 1.0, 0.9)})
+		kit_effects.append({"kind": "purple_explosion", "position": Board.project(Board.ground(_cell(event["center"]))), "life": 0.65, "duration": 0.65, "critical": false})
+	if kind == "fire_tornado" and event.has("center"):
+		shake_remaining = 0.28
+		blast_zones.append({"cell": event["center"], "radius": int(event.get("radius", 1)), "life": 1.05, "duration": 1.05, "color_primary": Color(1.0, 0.35, 0.1, 0.45), "color_border": Color(1.0, 0.75, 0.2, 0.9)})
+		kit_effects.append({"kind": "fire_tornado", "position": Board.project(Board.ground(_cell(event["center"]))), "life": 0.95, "duration": 0.95, "critical": false})
+	if kind == "unit_displaced":
+		var victim: Dictionary = _unit_by_id(int(event.get("unit_id", -1)))
+		if not victim.is_empty():
+			floating.append({"text": "ARREMESSADO!", "position": _head_of(victim) + Vector2(-22, -8), "color": Color("ff9944"), "life": 0.9, "duration": 0.9, "size": 13})
+			visual_pulls[int(victim["id"])] = {"from": Board.ground(_cell(event.get("from", []))), "to": Board.ground(_cell(event.get("to", []))), "remaining": 0.35, "duration": 0.35}
+	if kind == "boss_summon" and event.has("cell"):
+		kit_effects.append({"kind": "boss_summon", "position": Board.project(Board.ground(_cell(event["cell"]))) + Vector2(0, -10), "life": 0.85, "duration": 0.85, "critical": false})
+		floating.append({"text": "INVOCAÇÃO!", "position": Board.project(Board.ground(_cell(event["cell"]))) + Vector2(-20, -35), "color": Color("b870ff"), "life": 1.1, "duration": 1.1, "size": 15})
 	if kind in ["hit", "execute"] and not target.is_empty() and source.get("key", "") not in ["caramelo", "zumbi"]:
 		slashes.append({"position": _head_of(target) + Vector2(0, 24), "life": 0.2, "critical": bool(event.get("critical", false)), "seed": randf() * TAU})
 		visual_hits[int(target["id"])] = 0.12
-	if kind in ["ball_hit", "rocket_hit", "splash", "smoke_hit", "lasso_hit"] and not target.is_empty():
+	if kind in ["ball_hit", "rocket_hit", "mini_rocket_hit", "splash", "smoke_hit", "lasso_hit", "purple_fire_hit", "red_fire_hit", "fire_tornado_hit"] and not target.is_empty():
 		visual_hits[int(target["id"])] = 0.12
 	if kind in ["hit", "execute"] and not target.is_empty():
 		visual_hits[int(target["id"])] = 0.12
 	if kind == "death" and not target.is_empty():
 		visual_deaths[int(target["id"])] = 0.6
-	if kind in ["hit", "ball_hit", "bleed", "execute", "heal", "rocket_hit", "splash", "smoke_hit", "smoke", "lasso_hit"] and not target.is_empty():
+	if kind in ["hit", "ball_hit", "bleed", "execute", "heal", "rocket_hit", "mini_rocket_hit", "splash", "smoke_hit", "smoke", "lasso_hit", "purple_fire_hit", "red_fire_hit", "fire_tornado_hit"] and not target.is_empty():
 		var target_id: int = int(target.get("id", -1))
 		var amount: float = float(event.get("amount", 0))
 		var critical: bool = bool(event.get("critical", false))
@@ -2428,6 +2764,12 @@ func _spawn_kit_feedback(event: Dictionary, source: Dictionary, target: Dictiona
 	elif kind == "assassin_hunt":
 		effect_kind = "hunt"
 		duration = 0.6
+	elif kind in ["mini_rocket_hit", "mini_rocket_impact"] and not target.is_empty():
+		effect_kind = "splash_burst"
+		if vfx.has_effect("estilhaco_01"):
+			library_key = "estilhaco_01"
+		target_point = Board.project(_ground_of(target))
+		scale = Board.scale_at(_ground_of(target).y) * 0.7
 	elif kind == "rocket_hit" and ROCKET_BLASTS.any(func(blast_key: String) -> bool: return vfx.has_effect(blast_key)) and not target.is_empty():
 		effect_kind = "explosion"
 		for blast_key: String in ROCKET_BLASTS:
@@ -2438,7 +2780,7 @@ func _spawn_kit_feedback(event: Dictionary, source: Dictionary, target: Dictiona
 			# As explosões novas nascem no chão do alvo e acompanham a perspectiva da área real.
 			target_point = Board.project(_ground_of(target))
 			scale = Board.scale_at(_ground_of(target).y)
-		shake_remaining = SHAKE_DURATION
+		shake_remaining = SHAKE_DURATION * 1.5 if bool(event.get("is_super", false)) else SHAKE_DURATION
 	elif kind == "splash" and vfx.has_effect("estilhaco_01") and not target.is_empty():
 		# Cada inimigo vizinho atingido pela área ganha o próprio estouro, preso ao chão dele.
 		effect_kind = "splash_burst"
@@ -2694,10 +3036,78 @@ func _draw_kit_feedback(canvas: Node2D) -> void:
 				canvas.draw_arc(point, 18.0 + progress * 24.0, 0, TAU, 20, Color(GOLD, alpha * 0.85), 2.5, true)
 			"summon":
 				canvas.draw_arc(point + Vector2(0, 20), 7.0 + progress * 20.0, 0, TAU, 20, Color(1.0, 0.65, 0.82, alpha * 0.8), 2.0, true)
+			"purple_explosion":
+				var b_rad: float = 16.0 + progress * 34.0
+				canvas.draw_arc(point, b_rad, 0, TAU, 24, Color(0.85, 0.35, 1.0, alpha * 0.9), 3.5, true)
+				canvas.draw_circle(point, maxf(4.0, (1.0 - progress) * 22.0), Color(0.65, 0.15, 0.9, alpha * 0.75))
+				var p_tex: Texture2D = boss_vfx_textures.get("explosao_fogo_roxo") as Texture2D
+				if p_tex != null:
+					var p_sz: Vector2 = p_tex.get_size() * (0.8 + progress * 1.5)
+					var p_rot: float = progress * TAU * 2.0
+					canvas.draw_set_transform(point, p_rot, Vector2.ONE)
+					canvas.draw_texture_rect(p_tex, Rect2(-p_sz * 0.5, p_sz), false, Color(1, 1, 1, alpha * 0.96))
+					canvas.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+				for spk_i: int in range(10):
+					var spk_ang: float = TAU * float(spk_i) / 10.0 + progress * 3.5
+					var spk_p: Vector2 = point + Vector2(cos(spk_ang), sin(spk_ang)) * (b_rad * 0.92)
+					canvas.draw_circle(spk_p, 2.5 * alpha, Color("ffb3ff"))
+			"red_explosion":
+				var b_rad: float = 18.0 + progress * 36.0
+				canvas.draw_arc(point, b_rad, 0, TAU, 24, Color(1.0, 0.28, 0.1, alpha * 0.95), 3.5, true)
+				canvas.draw_circle(point, maxf(4.0, (1.0 - progress) * 24.0), Color(0.95, 0.2, 0.05, alpha * 0.8))
+				var r_tex: Texture2D = boss_vfx_textures.get("explosao_fogo_vermelho") as Texture2D
+				if r_tex != null:
+					var r_sz: Vector2 = r_tex.get_size() * (0.8 + progress * 1.5)
+					var r_rot: float = -progress * TAU * 2.0
+					canvas.draw_set_transform(point, r_rot, Vector2.ONE)
+					canvas.draw_texture_rect(r_tex, Rect2(-r_sz * 0.5, r_sz), false, Color(1, 1, 1, alpha * 0.96))
+					canvas.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+				for spk_i: int in range(10):
+					var spk_ang: float = TAU * float(spk_i) / 10.0 + progress * 3.5
+					var spk_p: Vector2 = point + Vector2(cos(spk_ang), sin(spk_ang)) * (b_rad * 0.92)
+					canvas.draw_circle(spk_p, 2.5 * alpha, Color("ffcc44"))
+			"boss_fire_projectile":
+				var p_cur: Vector2 = (effect.get("from", point) as Vector2).lerp(effect.get("destination", point) as Vector2, progress)
+				var is_red: bool = str(effect.get("spell", "red_fire")) == "red_fire"
+				var proj_tex: Texture2D = boss_vfx_textures.get("fogo_vermelho_projetil" if is_red else "fogo_roxo_projetil") as Texture2D
+				var flame_col: Color = Color("ff4411") if is_red else Color("da70d6")
+				var core_col: Color = Color("ffea77") if is_red else Color("ffffff")
+				canvas.draw_line(effect.get("from", point) as Vector2, p_cur, Color(flame_col.r, flame_col.g, flame_col.b, alpha * 0.55), 3.5)
+				canvas.draw_circle(p_cur, 8.0 * (1.0 + sin(progress * PI) * 0.5), Color(flame_col.r, flame_col.g, flame_col.b, alpha * 0.65))
+				canvas.draw_circle(p_cur, 4.0, Color(core_col.r, core_col.g, core_col.b, alpha * 0.95))
+				if proj_tex != null:
+					var p_sz: Vector2 = proj_tex.get_size() * 1.3
+					var move_vec: Vector2 = (effect.get("destination", point) as Vector2) - (effect.get("from", point) as Vector2)
+					var p_rot: float = move_vec.angle()
+					canvas.draw_set_transform(p_cur, p_rot, Vector2.ONE)
+					canvas.draw_texture_rect(proj_tex, Rect2(-p_sz * 0.5, p_sz), false, Color(1, 1, 1, alpha * 0.98))
+					canvas.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+			"fire_tornado":
+				var f_idx: int = int(floor(progress * 14.0)) % 4
+				var t_tex: Texture2D = boss_vfx_textures.get("furacao_fogo_frame_%d" % f_idx) as Texture2D
+				if t_tex == null:
+					t_tex = boss_vfx_textures.get("furacao_fogo") as Texture2D
+				if t_tex != null:
+					var t_rot: float = sin(progress * TAU * 2.5) * 0.2
+					var t_sz: Vector2 = t_tex.get_size() * (1.35 + sin(progress * PI) * 0.2)
+					canvas.draw_set_transform(point + Vector2(0, -16), t_rot, Vector2.ONE)
+					canvas.draw_texture_rect(t_tex, Rect2(-t_sz * 0.5, t_sz), false, Color(1, 1, 1, alpha * 0.95))
+					canvas.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+				var sw_rad: float = 24.0 + sin(progress * PI) * 14.0
+				canvas.draw_arc(point, sw_rad, progress * TAU * 1.5, progress * TAU * 1.5 + PI * 1.4, 18, Color(1.0, 0.55, 0.1, alpha * 0.85), 3.2, true)
+				canvas.draw_arc(point, sw_rad * 0.65, -progress * TAU * 1.5, -progress * TAU * 1.5 + PI * 1.2, 14, Color(1.0, 0.8, 0.2, alpha * 0.9), 2.5, true)
+			"boss_summon":
+				var r_rad: float = 18.0 + sin(progress * PI) * 8.0
+				canvas.draw_arc(point + Vector2(0, 10), r_rad, 0, TAU, 20, Color(0.7, 0.2, 0.9, alpha * 0.85), 2.5, true)
+				for sm_i: int in range(5):
+					var sm_up: Vector2 = point + Vector2((sm_i - 2) * 8.0, 10 - progress * 40.0 - float(sm_i % 3) * 6.0)
+					canvas.draw_circle(sm_up, maxf(1.0, 3.0 * (1.0 - progress)), Color(0.5, 0.1, 0.8, alpha * 0.8))
 
 
 func _event_text(event: Dictionary) -> String:
 	var kind: String = str(event.get("type", ""))
+	if kind == "hero_upgraded" and not bool(event.get("level_changed", true)):
+		return "Cópia incorporada (%d/%d)" % [int(event.get("copies", 0)), _max_copies()]
 	if kind in ["move", "attack", "kick", "ball_expired", "unit_placed", "moonwalk_step", "heal_pulse", "heal", "ball_impact"]:
 		return ""
 	var names: Dictionary = {"preparation_started": "Preparação começou", "combat_started": "Combate começou", "hit": "Golpe",
@@ -2710,11 +3120,15 @@ func _event_text(event: Dictionary) -> String:
 		"assassin_hunt_ended": "Caramelo encerrou a caça", "briefcase_guard": "Obama renovou a proteção da mala",
 		"explosion": "Elon: explosão de foguete", "smoke_cloud": "Snoop: nuvem de fumaça", "smoke": "Snoop: dano contínuo",
 		"smoke_hit": "Snoop: tiro de fumaça", "lasso": "Rapunzel: puxão com laço", "lasso_hit": "Rapunzel: golpe de laço",
-		"revive": "Lula: volta por cima", "summon": "Barbie: invocou Ken", "miss": "Ataque errou",
-		"rocket_hit": "Foguete acertou", "splash": "Explosão atingiu", "projectile_launched": "Projétil disparado"}
+		"revive": "Lula: volta por cima", "summon": "Barbie: invocou Ken", "miss": "Ataque errou", "hero_dismissed": "Herói dispensado; itens devolvidos à bolsa",
+		"boss_cast": "Criador: conjuração mágica", "purple_fire_explosion": "Criador: explosão de fogo roxo",
+		"red_fire_explosion": "Criador: explosão de fogo vermelho",
+		"fire_tornado": "Criador: furacão de fogo", "boss_summon": "Criador: invocou monstro",
+		"unit_displaced": "Unidade arremessada", "purple_fire_hit": "Impacto de fogo roxo", "red_fire_hit": "Impacto de fogo vermelho", "fire_tornado_hit": "Dano do furacão",
+		"rocket_hit": "Super Foguete acertou", "mini_rocket_hit": "Minifoguete acertou", "super_attack": "Super Ataque disparado", "splash": "Explosão atingiu", "projectile_launched": "Projétil disparado"}
 	var text: String = str(names.get(kind, kind.replace("_", " ")))
 	var source: Dictionary = _unit_by_id(int(event.get("source_id", -1)))
-	if not source.is_empty() and kind in ["hit", "ball_hit", "execute", "death", "bleed", "explosion", "smoke_hit", "lasso_hit"]:
+	if not source.is_empty() and kind in ["hit", "ball_hit", "execute", "death", "bleed", "explosion", "smoke_hit", "lasso_hit", "mini_rocket_hit"]:
 		text = "%s · %s" % [str(source.get("name", "")), text]
 	if event.has("amount") and kind != "dance_shield":
 		text += " %d" % roundi(float(event["amount"]))
@@ -2786,9 +3200,9 @@ func _draw_lobby() -> void:
 
 
 func _refresh_lobby() -> void:
-	var signature: String = "%s_%s_%s_%d_%s_%d_%s_%s" % [
+	var signature: String = "%s_%s_%s_%d_%s_%d_%s_%s_%s" % [
 		lobby_subview, lobby_hero_synergy_filter, lobby_selected_hero_key,
-		lobby_preview_level, lobby_preview_mode, target_fps, str(eco_mode), str(audio.enabled)
+		lobby_preview_level, lobby_preview_mode, target_fps, str(eco_mode), str(audio.enabled), str(show_performance_diagnostics)
 	]
 	if signature == lobby_signature:
 		return
@@ -2815,7 +3229,7 @@ func _refresh_lobby_main() -> void:
 
 	# Pílula de Otimização & Desempenho
 	var badge_panel: Panel = _panel(lobby_root, Rect2(720, 16, 190, 38), 0.82, 19)
-	_label(badge_panel, "⚡ 60 FPS · FLUIDEZ" if OS.has_feature("web") else "⚡ %d FPS · OTIMIZADO" % target_fps, Rect2(8, 8, 174, 22), 13, Color("86eda5"), HORIZONTAL_ALIGNMENT_CENTER)
+	lobby_performance_label = _label(badge_panel, "MEDINDO FPS…", Rect2(8, 8, 174, 22), 13, Color("86eda5"), HORIZONTAL_ALIGNMENT_CENTER)
 
 	# Botão de Tela Cheia (F11 / Mobile Fullscreen)
 	fullscreen_button = _button(lobby_root, "⛶ TELA CHEIA", Rect2(924, 16, 166, 38), _toggle_fullscreen)
@@ -2832,7 +3246,7 @@ func _refresh_lobby_main() -> void:
 	# Painel Central com Dicas do Jogo & Sinergias
 	var banner: Panel = _panel(lobby_root, Rect2(36, 154, 520, 172), 0.72, 10)
 	_label(banner, "✦ SISTEMA DE COMBATE & EVOLUÇÃO ✦", Rect2(18, 14, 484, 24), 16, GOLD)
-	var tip_text: String = "• Colete cópias dos seus heróis: 2 cópias sobem para ★2; 3 cópias para ★3 LENDÁRIO (+125% dano/vida, tamanho aumentado e aura mística!).\n• Combine sinergias de Vanguarda, Atacantes, Atiradores e Apoio para virar a partida.\n• Foco e calibração em 30 FPS para estabilidade mobile e PC."
+	var tip_text: String = "• Colete cópias: 2 cópias sobem para ★2; 4 cópias para ★3. A terceira cópia avança o progresso. A raridade do herói não muda.\n• Combine Vanguarda, Atacantes, Atiradores e Apoio para virar a partida.\n• Itens e vagas usam ouro; recrutar e juntar cópias é gratuito."
 	_label(banner, tip_text, Rect2(18, 42, 484, 116), 13, Kit.INK, HORIZONTAL_ALIGNMENT_LEFT, true)
 
 	# Barra Inferior: HERÓIS
@@ -3006,6 +3420,8 @@ func _refresh_lobby_settings() -> void:
 	# 4. Áudio & Som (preserva sound_button para smoke.gd)
 	_label(modal, "ÁUDIO & EFEITOS SONOROS:", Rect2(28, 418, 600, 22), 16, GOLD)
 	sound_button = _button(modal, "SOM: LIGADO" if audio.enabled else "SOM: DESLIGADO", Rect2(28, 444, 240, 44), _toggle_sound)
+	var diagnostic_button: Button = _button(modal, "DIAGNÓSTICO: %s · F3" % ("ATIVO" if show_performance_diagnostics else "DESATIVADO"), Rect2(280, 444, 408, 44), _toggle_performance_diagnostics)
+	diagnostic_button.tooltip_text = "Mostra FPS real, intervalo entre quadros e tempo de rede durante a partida."
 
 	# Fechar
 	_button(modal, "VOLTAR AO LOBBY", Rect2(240, 516, 240, 48), func() -> void:
@@ -3187,11 +3603,12 @@ func _refresh_lobby_heroes() -> void:
 	# Estatísticas Numéricas Recalculadas Conforme o Nível
 	var mult: float = [1.0, 1.5, 2.25][clampi(lobby_preview_level, 1, 3) - 1]
 	var stats_panel: Panel = _panel(detail_panel, Rect2(276, 122, 400, 150), 0.72, 8)
-	var hp_val: int = roundi(active_spec.max_hp * mult)
+	var hp_val: int = roundi(_preview_max_hp(active_spec, lobby_preview_level, mult))
 	var atk_val: int = roundi(active_spec.attack_damage * mult)
 
 	_label(stats_panel, "VIDA (HP):", Rect2(14, 10, 120, 20), 13, Kit.MUTED)
-	_label(stats_panel, "%d" % hp_val, Rect2(110, 8, 80, 22), 17, Color("86eda5"))
+	var hp_value_label: Label = _label(stats_panel, "%d" % hp_val, Rect2(110, 8, 80, 22), 17, Color("86eda5"))
+	hp_value_label.name = "PreviewHp"
 
 	_label(stats_panel, "DANO (ATK):", Rect2(210, 10, 110, 20), 13, Kit.MUTED)
 	_label(stats_panel, "%d" % atk_val, Rect2(300, 8, 80, 22), 17, GOLD)
@@ -3222,6 +3639,13 @@ func _refresh_lobby_heroes() -> void:
 	_label(skill_box, skill_desc, Rect2(16, 40, 624, 170), 14, Kit.INK, HORIZONTAL_ALIGNMENT_LEFT, true)
 
 
+func _preview_max_hp(spec: UnitSpec, preview_level: int, multiplier: float) -> float:
+	var index: int = clampi(preview_level, 1, 3) - 1
+	if index < spec.max_hp_by_level.size():
+		return float(spec.max_hp_by_level[index])
+	return spec.max_hp * multiplier
+
+
 func _draw_preview_vfx(canvas: CanvasItem, vfx_key: String, pos: Vector2, elapsed: float, scale_mult: float = 1.0) -> void:
 	var data: Dictionary = vfx.frame_data(vfx_key, elapsed)
 	if data.is_empty():
@@ -3229,6 +3653,86 @@ func _draw_preview_vfx(canvas: CanvasItem, vfx_key: String, pos: Vector2, elapse
 	data["position"] = pos
 	data["scale"] = scale_mult
 	_draw_vfx_frame(canvas, data)
+
+
+func _draw_preview_mini_rocket(canvas: CanvasItem, pos: Vector2, visual_time: float) -> void:
+	canvas.draw_set_transform(pos, 0.0, Vector2(0.7, 0.7))
+	canvas.draw_polygon(PackedVector2Array([Vector2(-7, -2), Vector2(3, -2), Vector2(7, 0), Vector2(3, 2), Vector2(-7, 2)]),
+		PackedColorArray([Color("e8e8f2"), Color("e8e8f2"), Color("ff3b30"), Color("e8e8f2"), Color("e8e8f2")]))
+	canvas.draw_polygon(PackedVector2Array([Vector2(-7, -4), Vector2(-4, -2), Vector2(-7, -1)]), PackedColorArray([Color("1c1c24"), Color("1c1c24"), Color("1c1c24")]))
+	canvas.draw_polygon(PackedVector2Array([Vector2(-7, 1), Vector2(-4, 2), Vector2(-7, 4)]), PackedColorArray([Color("1c1c24"), Color("1c1c24"), Color("1c1c24")]))
+	var thrust_flicker: float = 0.8 + 0.4 * sin(visual_time * 32.0)
+	canvas.draw_polygon(PackedVector2Array([Vector2(-7, -1.5), Vector2(-12 * thrust_flicker, 0), Vector2(-7, 1.5)]),
+		PackedColorArray([Color(1.0, 0.8, 0.2), Color(1.0, 0.4, 0.1, 0.85), Color(1.0, 0.8, 0.2)]))
+	canvas.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+
+
+## Desenha o charutão aceso do Snoop Dogg (Sprite Fusion charutao_snoop_01 + fumaça ascendente charuto_01).
+func _draw_snoop_cigar(canvas: CanvasItem, feet_pos: Vector2, hero_scale: float, direction: String, elapsed: float, tint: Color = Color.WHITE, body_angle: float = 0.0) -> void:
+	if not vfx.has_effect("charutao_snoop_01"):
+		return
+	var flip: float = -1.0 if direction in ["west", "south-west", "north-west"] else 1.0
+	var mouth_rel: Vector2 = Vector2(2.0, -40.0)
+	match direction:
+		"east":
+			mouth_rel = Vector2(5.0, -41.0)
+		"west":
+			mouth_rel = Vector2(-5.0, -41.0)
+		"south-east", "north-east":
+			mouth_rel = Vector2(4.0, -41.0)
+		"south-west", "north-west":
+			mouth_rel = Vector2(-4.0, -41.0)
+		"north":
+			mouth_rel = Vector2(3.0, -41.0)
+	var mouth_pos: Vector2 = feet_pos + (mouth_rel * hero_scale).rotated(body_angle)
+	var cigar_scale: float = hero_scale * 0.52
+	var data: Dictionary = vfx.frame_data("charutao_snoop_01", elapsed)
+	if not data.is_empty():
+		canvas.draw_set_transform(mouth_pos.round(), body_angle, Vector2(cigar_scale * flip, cigar_scale))
+		canvas.draw_texture_rect_region(data["texture"], Rect2(data["offset"], data["size"]), data["region"], tint)
+	if vfx.has_effect("charuto_01") and tint.a > 0.6:
+		var smoke_data: Dictionary = vfx.frame_data("charuto_01", elapsed)
+		if not smoke_data.is_empty():
+			var tip_pos: Vector2 = mouth_pos + Vector2(22.0 * flip * cigar_scale, -2.0 * cigar_scale).rotated(body_angle)
+			var smoke_scale: float = cigar_scale * 0.72
+			canvas.draw_set_transform(tip_pos.round(), 0.0, Vector2(smoke_scale, smoke_scale))
+			canvas.draw_texture_rect_region(smoke_data["texture"], Rect2(smoke_data["offset"], smoke_data["size"]), smoke_data["region"], Color(tint.r, tint.g, tint.b, tint.a * 0.62))
+	canvas.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+
+
+## Desenha as notas musicais de reggae (verde, ouro e vermelho) do Bob Marley usando notas_bob_01 (Sprite Fusion).
+func _draw_bob_musical_notes(canvas: CanvasItem, bob_feet: Vector2, elapsed: float, scale_mult: float = 1.4, base_y: float = -34.0) -> void:
+	var base_offsets: Array[Vector2] = [
+		Vector2(-18.0, base_y),
+		Vector2(16.0, base_y + 4.0),
+		Vector2(-1.0, base_y - 8.0)
+	]
+	if vfx.has_effect("notas_bob_01"):
+		# 6 frames a 6 fps: 0=Verde ♪, 1=Ouro ♫, 2=Vermelho ♪, 3=Verde ♫, 4=Ouro ♪, 5=Vermelho ♫
+		for n_i: int in range(3):
+			var cycle: float = fmod(elapsed * 0.85 + float(n_i) * 0.33, 1.0)
+			var rise: float = cycle * 24.0
+			var sway: float = sin(elapsed * 4.2 + float(n_i) * 2.1) * 3.5
+			var tilt: float = sin(elapsed * 5.0 + float(n_i) * 1.9) * 0.14
+			var alpha: float = clampf(sin(cycle * PI) * 1.45, 0.25, 1.0)
+			var variant_shift: int = 3 if (int(floor(elapsed * 1.5 + float(n_i) * 0.7)) % 2 == 1) else 0
+			var frame_idx: int = n_i + variant_shift
+			var frame_time: float = (float(frame_idx) + 0.25) / 6.0
+			var data: Dictionary = vfx.frame_data("notas_bob_01", frame_time)
+			if not data.is_empty():
+				data["position"] = (bob_feet + base_offsets[n_i] + Vector2(sway, -rise)).round()
+				data["angle"] = tilt
+				data["scale"] = scale_mult
+				data["modulate"] = Color(1.0, 1.0, 1.0, alpha)
+				_draw_vfx_frame(canvas, data)
+		return
+	var music_font: Font = ThemeDB.fallback_font
+	var note_chars: Array[String] = ["♪", "♫", "♪"]
+	var note_cols: Array[Color] = [Color("2ec756"), Color("f4c430"), Color("e63946")]
+	for n_i: int in range(3):
+		var n_pos: Vector2 = bob_feet + base_offsets[n_i] + Vector2(0.0, -fmod((elapsed + float(n_i) * 0.4) * 22.0, 26.0))
+		canvas.draw_string_outline(music_font, n_pos, note_chars[n_i], HORIZONTAL_ALIGNMENT_CENTER, -1, 15, 3, Color(0, 0, 0, 0.75))
+		canvas.draw_string(music_font, n_pos, note_chars[n_i], HORIZONTAL_ALIGNMENT_CENTER, -1, 15, note_cols[n_i])
 
 
 func _draw_arena_cell(canvas: Control, hex_center: Vector2, fill_color: Color, border_color: Color) -> void:
@@ -3278,6 +3782,10 @@ func _draw_hero_preview(canvas: Control) -> void:
 			var anchor: Vector2 = art.anchor_for(tex, key)
 			var origin: Vector2 = feet - anchor * spr_scale
 			canvas.draw_texture_rect(tex, Rect2(origin.round(), tex.get_size() * spr_scale), false)
+			if key == "snoop":
+				_draw_snoop_cigar(canvas, feet, spr_scale, "south", visual_time)
+			elif key == "bob_marley":
+				_draw_bob_musical_notes(canvas, feet, visual_time, 1.55 * LEVEL_SCALE[lobby_preview_level - 1], -58.0 * LEVEL_SCALE[lobby_preview_level - 1])
 
 		# Estrelas de nível desenhadas sob os pés
 		var star_step: float = 18.0
@@ -3382,31 +3890,66 @@ func _draw_hero_preview(canvas: Control) -> void:
 
 	elif key == "elon":
 		opp_key = "zumbi"
-		hero_pos = cell_hero
+		hero_pos = cell_hero + Vector2(0, sin(visual_time * 7.0) * 3.0)
 		hero_dir = "east"
-		if t < 0.8:
-			hero_tag = "MIRA TÁTICA"
+		if t < 0.6:
+			hero_tag = "PROPULSÃO A JATO"
 			tag_col = Color("8ecae6")
-		elif t < 1.7:
-			hero_tag = "FOGUETE EM VOO 🚀"
-			tag_col = Color("ffb703")
-			var rkt_p: float = (t - 0.8) / 0.9
-			var rkt_pos: Vector2 = (cell_hero + Vector2(16, -16)).lerp(opp_pos + Vector2(0, -18), rkt_p)
-			# Foguete real do PixelLab (foguete_02)
-			_draw_preview_vfx(canvas, "foguete_02", rkt_pos, (t - 0.8), 1.3)
-		elif t < 2.9:
-			hero_tag = "MEGA EXPLOSÃO 💥"
+		elif t < 1.0:
+			hero_tag = "MINIFOGUETE 1/3 🚀"
+			tag_col = Color("ffd166")
+			var p1: float = (t - 0.6) / 0.4
+			var m1_pos: Vector2 = (cell_hero + Vector2(16, -14)).lerp(opp_pos + Vector2(0, -14), p1)
+			_draw_preview_mini_rocket(canvas, m1_pos, visual_time)
+			if p1 > 0.75:
+				opp_wobble = sin(t * 36.0) * 2.0
+				combat_msg = "MINIFOGUETE 1: -52"
+				combat_msg_col = Color("ffd166")
+		elif t < 1.4:
+			hero_tag = "MINIFOGUETE 2/3 🚀"
+			tag_col = Color("ffd166")
+			var p2: float = (t - 1.0) / 0.4
+			var m2_pos: Vector2 = (cell_hero + Vector2(16, -14)).lerp(opp_pos + Vector2(0, -14), p2)
+			_draw_preview_mini_rocket(canvas, m2_pos, visual_time)
+			if p2 > 0.75:
+				opp_wobble = sin(t * 36.0) * 2.0
+				combat_msg = "MINIFOGUETE 2: -52"
+				combat_msg_col = Color("ffd166")
+		elif t < 1.8:
+			hero_tag = "MINIFOGUETE 3/3 🚀"
+			tag_col = Color("ffd166")
+			var p3: float = (t - 1.4) / 0.4
+			var m3_pos: Vector2 = (cell_hero + Vector2(16, -14)).lerp(opp_pos + Vector2(0, -14), p3)
+			_draw_preview_mini_rocket(canvas, m3_pos, visual_time)
+			if p3 > 0.75:
+				opp_wobble = sin(t * 36.0) * 2.0
+				combat_msg = "MINIFOGUETE 3: -52"
+				combat_msg_col = Color("ffd166")
+		elif t < 3.2:
+			hero_tag = "SUPER ATAQUE: MEGA FOGUETE 💥"
 			tag_col = Color("ff4d6d")
-			# Mega explosão real do PixelLab (explosao_03) e estilhaços reais
-			_draw_preview_vfx(canvas, "explosao_03", opp_pos + Vector2(0, -14), (t - 1.7), 1.45)
-			_draw_preview_vfx(canvas, "estilhaco_01", opp_pos + Vector2(0, -8), (t - 1.7), 1.2)
-			opp_wobble = sin(t * 36.0) * 4.5
-			opp_tint = Color("ff7777")
-			combat_msg = "BOOM! -280 💥"
-			combat_msg_col = Color("ff4d6d")
+			var rkt_p: float = clampf((t - 1.8) / 0.6, 0.0, 1.0)
+			var rkt_pos: Vector2 = (cell_hero + Vector2(16, -16)).lerp(opp_pos + Vector2(0, -18), rkt_p)
+			if rkt_p < 0.95:
+				_draw_preview_vfx(canvas, "foguete_02", rkt_pos, (t - 1.8), 1.5)
+			else:
+				var blast_t: float = t - 2.4
+				_draw_preview_vfx(canvas, "explosao_03", opp_pos + Vector2(0, -14), blast_t, 1.6)
+				_draw_preview_vfx(canvas, "estilhaco_01", opp_pos + Vector2(0, -8), blast_t, 1.3)
+				# Projeção visual dos 2 quadros penetrando para trás da retaguarda
+				var back_area: PackedVector2Array = _make_ellipse(opp_pos + Vector2(28, -6), 34.0, 14.0, 20)
+				back_area.append(back_area[0])
+				canvas.draw_colored_polygon(back_area, Color(1.0, 0.35, 0.1, 0.3 * (1.0 - (t - 2.4) / 0.8)))
+				canvas.draw_polyline(back_area, Color(1.0, 0.65, 0.2, 0.6 * (1.0 - (t - 2.4) / 0.8)), 2.0, true)
+				opp_wobble = sin(t * 36.0) * 4.5
+				opp_tint = Color("ff7777")
+				combat_msg = "SUPER EXPLOSÃO! RETAGUARDA -380 💥"
+				combat_msg_col = Color("ff4d6d")
 		else:
-			hero_tag = "ALVO ELIMINADO"
+			hero_tag = "VOO ORBITAL CONCLUÍDO ✨"
 			tag_col = Color("86eda5")
+			var fly_p: float = (t - 3.2) / 1.0
+			hero_pos = cell_hero.lerp(cell_mid + Vector2(25, -12), fly_p)
 
 	elif key == "barbie":
 		opp_key = "zumbi"
@@ -3436,10 +3979,10 @@ func _draw_hero_preview(canvas: Control) -> void:
 			ken_wobble = sin(t * 30.0) * 3.0
 			ken_tint = Color("ffffaa")
 		elif t < 3.4:
-			# Enquanto Ken vive, Barbie tem +30% de Dano de Comandante
-			hero_tag = "COMANDANTE (+30% DANO)"
+			# Demonstração visual do bônus atual enquanto Ken vive.
+			hero_tag = "COMANDANTE (+50% DANO)"
 			tag_col = Color("f72585")
-			combat_msg = "+30% DANO! -195"
+			combat_msg = "+50% DANO!"
 			combat_msg_col = Color("f72585")
 			combat_msg_target = "opp"
 			opp_wobble = sin(t * 30.0) * 4.0
@@ -3607,19 +4150,8 @@ func _draw_hero_preview(canvas: Control) -> void:
 			var r_ell: PackedVector2Array = _make_ellipse(hero_pos + Vector2(0, 4), ring_r, ring_r * 0.52, 28)
 			r_ell.append(r_ell[0])
 			canvas.draw_polyline(r_ell, Color(r_col, 0.45 - float(r_i) * 0.1), 1.8, true)
-		# Notas musicais (♪ ♫) flutuando no ar sobre Bob Marley
-		var music_font: Font = ThemeDB.fallback_font
-		var note_offsets: Array[Vector2] = [
-			Vector2(-16, -26 - fmod(t * 22.0, 26.0)),
-			Vector2(14, -20 - fmod((t + 0.4) * 22.0, 26.0)),
-			Vector2(-2, -32 - fmod((t + 0.8) * 22.0, 26.0))
-		]
-		var note_chars: Array[String] = ["♪", "♫", "♪"]
-		var note_cols: Array[Color] = [Color("2ec756"), Color("f4c430"), Color("e63946")]
-		for n_i: int in range(3):
-			var n_pos: Vector2 = hero_pos + note_offsets[n_i]
-			canvas.draw_string_outline(music_font, n_pos, note_chars[n_i], HORIZONTAL_ALIGNMENT_CENTER, -1, 15, 3, Color(0, 0, 0, 0.75))
-			canvas.draw_string(music_font, n_pos, note_chars[n_i], HORIZONTAL_ALIGNMENT_CENTER, -1, 15, note_cols[n_i])
+		# Notas musicais em pixel art (notas_bob_01) flutuando sobre Bob Marley
+		_draw_bob_musical_notes(canvas, hero_pos, visual_time, 1.45 * LEVEL_SCALE[lobby_preview_level - 1], -32.0 * LEVEL_SCALE[lobby_preview_level - 1])
 		if t < 1.0:
 			hero_tag = "AURA DE PAZ E AMOR ♫"
 			tag_col = Color("f4c430")
@@ -3697,6 +4229,8 @@ func _draw_hero_preview(canvas: Control) -> void:
 			canvas.draw_texture_rect(ken_tex, Rect2(k_origin.round(), ken_tex.get_size() * k_scale), false, ken_tint)
 
 	# --- DESENHO DO HERÓI PRINCIPAL ---
+	if lobby_preview_mode == "pose" and lobby_preview_level > 1:
+		hero_pos.y += 24.0 * (LEVEL_SCALE[lobby_preview_level - 1] - 1.0)
 	var spr_scale: float = 2.2 * LEVEL_SCALE[lobby_preview_level - 1] * art.preview_factor(key)
 	var hero_shadow: PackedVector2Array = _make_ellipse(hero_pos, 16.0 * LEVEL_SCALE[lobby_preview_level - 1], 7.0, 16)
 	canvas.draw_colored_polygon(hero_shadow, Color(0, 0, 0, 0.45))
@@ -3720,6 +4254,8 @@ func _draw_hero_preview(canvas: Control) -> void:
 			art.register_animation_frame(tex, anchor)
 		var origin: Vector2 = hero_pos - anchor * spr_scale
 		canvas.draw_texture_rect(tex, Rect2(origin.round(), tex.get_size() * spr_scale), false)
+		if key == "snoop":
+			_draw_snoop_cigar(canvas, hero_pos, spr_scale, hero_dir, visual_time)
 
 	# Estrelas de Nível desenhadas na base do herói
 	var star_step: float = 14.0
@@ -3758,11 +4294,9 @@ func _draw() -> void:
 	if _phase() == "menu":
 		_draw_lobby()
 		return
-	_draw_arena()
-	_draw_board()
+	_draw_board_effects()
 	if state.is_empty():
 		return
-	_draw_bench()
 	for entry: Dictionary in frame_entries:
 		_draw_ground(entry)
 	for effect: Dictionary in shield_waves:
@@ -3796,7 +4330,14 @@ func _body_frame(unit: Dictionary, pose: Dictionary) -> Dictionary:
 	var anchor: Vector2 = art.anchor_for(texture, key) if texture != null else Vector2.ZERO
 	var height: float = art.height_for(texture) if texture != null else 46.0
 	var animation_state: String = "idle"
-	if key != "michael":
+	if key == "boss_dev":
+		var u_id: int = int(unit.get("id", -1))
+		if visual_attacks.has(u_id):
+			animation_state = "cast"
+			texture = art.texture_for(key, direction, float(pose["time"]), "cast", level)
+			anchor = art.anchor_for(texture, key) if texture != null else Vector2.ZERO
+			height = art.idle_height_for(key, level)
+	elif key != "michael":
 		var animation_unit: Dictionary = unit
 		if _phase() != "combat":
 			animation_unit = unit.duplicate()
@@ -3854,12 +4395,12 @@ func _copies(own: Dictionary, key: String) -> int:
 
 
 func _max_copies() -> int:
-	var thresholds: Array = state.get("test_config", {}).get("copies_for_level", [1, 2, 3])
+	var thresholds: Array = state.get("test_config", {}).get("copies_for_level", [1, 2, 4])
 	return int(thresholds[thresholds.size() - 1])
 
 
 func _level_for_copies(copies: int) -> int:
-	return Catalog.level_for_copies(copies, {"copies_for_level": state.get("test_config", {}).get("copies_for_level", [1, 2, 3])})
+	return Catalog.level_for_copies(copies, {"copies_for_level": state.get("test_config", {}).get("copies_for_level", [1, 2, 4])})
 
 
 ## Estrelas do nível na partida (ícone 16 × 16 tingido de bronze/prata/ouro).
@@ -3871,17 +4412,40 @@ func _stars(parent: Control, center: Vector2, level: int, size: float, compact: 
 		star.modulate = LEVEL_COLORS[clampi(level, 1, 3) - 1]
 
 
-func _draw_arena() -> void:
-	draw_rect(Rect2(Vector2.ZERO, SCREEN), Color("1a1f22"))
+func _draw_cached_arena(canvas: CanvasItem) -> void:
+	_draw_arena(canvas)
+	_draw_board_base(canvas)
+	if not state.is_empty():
+		_draw_bench(canvas)
+
+
+func _update_arena_cache() -> void:
+	var phase: String = _phase()
+	arena_render_cache.visible = phase != "menu"
+	if not arena_render_cache.visible:
+		return
+	var key: String = "calm" if phase in ["combat", "round_result", "match_over"] else phase
+	if phase == "preparation":
+		key += ":%d:%s:%d" % [selected_id, str(hover_cell), hover_bench]
+		if selected_id >= 0:
+			# Só o realce de seleção pulsa a 8Hz; corpos/VFX mantêm a cadência completa.
+			key += ":%d" % int(visual_time * 8.0)
+			for unit: Dictionary in state.get("own", {}).get("units", []):
+				key += ":%s:%s" % [unit.get("active", false), unit.get("cell", [])]
+	arena_render_cache.refresh(key)
+
+
+func _draw_arena(canvas: CanvasItem) -> void:
+	canvas.draw_rect(Rect2(Vector2.ZERO, SCREEN), Color("1a1f22"))
 	if arena != null:
-		draw_texture_rect(arena, Rect2(ARENA_OFFSET, arena.get_size() * ARENA_SCALE), false)
+		canvas.draw_texture_rect(arena, Rect2(ARENA_OFFSET, arena.get_size() * ARENA_SCALE), false)
 	# Vinheta suave: escurece arquibancadas e bordas para destacar a areia.
 	var shade: Color = Color(0.02, 0.03, 0.04, 0.5)
 	var clear: Color = Color(0.02, 0.03, 0.04, 0.0)
-	draw_polygon(PackedVector2Array([Vector2(0, 0), Vector2(1280, 0), Vector2(1280, 170), Vector2(0, 170)]), PackedColorArray([shade, shade, clear, clear]))
-	draw_polygon(PackedVector2Array([Vector2(0, 520), Vector2(1280, 520), Vector2(1280, 720), Vector2(0, 720)]), PackedColorArray([clear, clear, Color(shade, 0.65), Color(shade, 0.65)]))
-	draw_polygon(PackedVector2Array([Vector2(0, 0), Vector2(170, 0), Vector2(170, 720), Vector2(0, 720)]), PackedColorArray([Color(shade, 0.4), clear, clear, Color(shade, 0.4)]))
-	draw_polygon(PackedVector2Array([Vector2(1110, 0), Vector2(1280, 0), Vector2(1280, 720), Vector2(1110, 720)]), PackedColorArray([clear, Color(shade, 0.4), Color(shade, 0.4), clear]))
+	canvas.draw_polygon(PackedVector2Array([Vector2(0, 0), Vector2(1280, 0), Vector2(1280, 170), Vector2(0, 170)]), PackedColorArray([shade, shade, clear, clear]))
+	canvas.draw_polygon(PackedVector2Array([Vector2(0, 520), Vector2(1280, 520), Vector2(1280, 720), Vector2(0, 720)]), PackedColorArray([clear, clear, Color(shade, 0.65), Color(shade, 0.65)]))
+	canvas.draw_polygon(PackedVector2Array([Vector2(0, 0), Vector2(170, 0), Vector2(170, 720), Vector2(0, 720)]), PackedColorArray([Color(shade, 0.4), clear, clear, Color(shade, 0.4)]))
+	canvas.draw_polygon(PackedVector2Array([Vector2(1110, 0), Vector2(1280, 0), Vector2(1280, 720), Vector2(1110, 720)]), PackedColorArray([clear, Color(shade, 0.4), Color(shade, 0.4), clear]))
 	# Objetos originais do PixelLab, com os pés projetados fora das células jogáveis.
 	for prop: Dictionary in arena_props:
 		var texture: Texture2D = prop["texture"]
@@ -3889,18 +4453,18 @@ func _draw_arena() -> void:
 		var scale: float = float(prop["scale"]) * Board.scale_at(ground_point.y)
 		var size: Vector2 = texture.get_size() * scale
 		var origin: Vector2 = Board.project(ground_point) - (prop["anchor"] as Vector2) * scale
-		draw_texture_rect(texture, Rect2(origin.round(), size), false)
+		canvas.draw_texture_rect(texture, Rect2(origin.round(), size), false)
 
 
-func _draw_board() -> void:
+func _draw_board_base(canvas: CanvasItem) -> void:
 	var phase: String = _phase()
 	var prep: bool = phase == "preparation"
 	var calm: bool = phase in ["combat", "round_result", "match_over"]
 	var selected: Dictionary = _selected_own() if prep else {}
 	var occupied: Dictionary = {}
 	for segment: PackedVector2Array in board_perimeter:
-		draw_line(segment[0] + Vector2(0, 2), segment[1] + Vector2(0, 2), Color(0.19, 0.13, 0.07, 0.32), 4.0, true)
-		draw_line(segment[0], segment[1], Color(0.96, 0.85, 0.62, 0.7 if prep else 0.4), 2.0, true)
+		canvas.draw_line(segment[0] + Vector2(0, 2), segment[1] + Vector2(0, 2), Color(0.19, 0.13, 0.07, 0.32), 4.0, true)
+		canvas.draw_line(segment[0], segment[1], Color(0.96, 0.85, 0.62, 0.7 if prep else 0.4), 2.0, true)
 	if prep:
 		for unit: Dictionary in state.get("own", {}).get("units", []):
 			if bool(unit.get("active", false)):
@@ -3909,19 +4473,22 @@ func _draw_board() -> void:
 		for column: int in range(8):
 			var cell: Vector2i = Vector2i(column, row)
 			var own_half: bool = row >= 4
-			var polygon: PackedVector2Array = (hex_polygons_outer.get(cell) as PackedVector2Array).duplicate() if hex_polygons_outer.has(cell) else Board.hex_polygon(cell, 0.07)
+			var polygon: PackedVector2Array = hex_polygons_outer[cell]
 			## Tons mais escuros que a areia clara; a borda escura dá leitura, o brilho interno dá acabamento.
 			var fill: Color = Color(0.2, 0.52, 0.52, 0.1 if calm else 0.2) if own_half else Color(0.6, 0.27, 0.22, 0.08 if calm else 0.15)
 			if not selected.is_empty() and own_half and not occupied.has(cell):
 				fill = Color(0.18, 0.72, 0.66, 0.24 + 0.06 * sin(visual_time * 4.0))
 			if prep and cell == hover_cell and own_half:
 				fill = Color(fill, fill.a + 0.14)
-			draw_colored_polygon(polygon, fill)
-			polygon.append(polygon[0])
-			draw_polyline(polygon, Color(0.33, 0.22, 0.1, 0.22 if calm else 0.4), 1.6, true)
-			var inner: PackedVector2Array = (hex_polygons_inner.get(cell) as PackedVector2Array).duplicate() if hex_polygons_inner.has(cell) else Board.hex_polygon(cell, 0.16)
-			inner.append(inner[0])
-			draw_polyline(inner, Color(1.0, 0.97, 0.88, 0.1 if calm else 0.2), 1.0, true)
+			canvas.draw_colored_polygon(polygon, fill)
+			canvas.draw_polyline(hex_outlines_outer[cell], Color(0.33, 0.22, 0.1, 0.22 if calm else 0.4), 1.6, true)
+			canvas.draw_polyline(hex_outlines_inner[cell], Color(1.0, 0.97, 0.88, 0.1 if calm else 0.2), 1.0, true)
+
+
+func _draw_board_effects() -> void:
+	var phase: String = _phase()
+	var calm: bool = phase in ["combat", "round_result", "match_over"]
+	var selected: Dictionary = _selected_own() if phase == "preparation" else {}
 	if not selected.is_empty() and bool(selected.get("active", false)):
 		var outline: PackedVector2Array = Board.hex_polygon(_cell(selected.get("cell", [])), 0.04)
 		outline.append(outline[0])
@@ -3948,7 +4515,11 @@ func _draw_board() -> void:
 	if phase == "combat":
 		for blast: Dictionary in blast_zones:
 			var b_fade: float = clampf(float(blast["life"]) / maxf(float(blast["duration"]), 0.001), 0.0, 1.0)
-			_draw_cell_range(_cell(blast["cell"]), int(blast["radius"]), Color(1.0, 0.42, 0.1, 0.42 * b_fade), Color(1.0, 0.78, 0.35, 0.95 * b_fade))
+			var c_prim: Color = blast.get("color_primary", Color(1.0, 0.42, 0.1, 0.42))
+			var c_bord: Color = blast.get("color_border", Color(1.0, 0.78, 0.35, 0.95))
+			c_prim.a *= b_fade
+			c_bord.a *= b_fade
+			_draw_cell_range(_cell(blast["cell"]), int(blast["radius"]), c_prim, c_bord)
 	# Aura musical de ritmo do Bob Marley durante o combate
 	if calm:
 		for entry: Dictionary in frame_entries:
@@ -3969,16 +4540,8 @@ func _draw_board() -> void:
 					var r_ellipse: PackedVector2Array = Board.ellipse(b_ground, r_r, r_r * 0.58, 28)
 					r_ellipse.append(r_ellipse[0])
 					draw_polyline(r_ellipse, Color(r_color, 0.38 - float(r_i) * 0.08), 1.6, true)
-				var note_font: Font = ThemeDB.fallback_font
 				var bob_screen: Vector2 = Board.project(b_ground)
-				var note_y1: float = fmod(visual_time * 24.0, 30.0)
-				var note_y2: float = fmod(visual_time * 24.0 + 15.0, 30.0)
-				var n1_pos: Vector2 = bob_screen + Vector2(-15, -44 - note_y1)
-				var n2_pos: Vector2 = bob_screen + Vector2(13, -38 - note_y2)
-				draw_string_outline(note_font, n1_pos, "♪", HORIZONTAL_ALIGNMENT_CENTER, -1, 13, 3, Color(0, 0, 0, 0.7))
-				draw_string(note_font, n1_pos, "♪", HORIZONTAL_ALIGNMENT_CENTER, -1, 13, Color("2ec756", 0.9))
-				draw_string_outline(note_font, n2_pos, "♫", HORIZONTAL_ALIGNMENT_CENTER, -1, 13, 3, Color(0, 0, 0, 0.7))
-				draw_string(note_font, n2_pos, "♫", HORIZONTAL_ALIGNMENT_CENTER, -1, 13, Color("f4c430", 0.9))
+				_draw_bob_musical_notes(self, bob_screen, visual_time + float(unit.get("id", 0)) * 0.23, 1.25 * float(entry["scale"]), -44.0 * float(entry["scale"]))
 	# Marca de caça discreta, ligada ao alvo real; não implica salto ou teleporte.
 	for hunter: Dictionary in state.get("combat", {}).get("units", []):
 		if not bool(hunter.get("alive", false)) or int(hunter.get("assassin_target_id", -1)) < 0:
@@ -4002,13 +4565,13 @@ func _draw_cell_range(origin: Vector2i, radius: int, fill: Color, edge: Color) -
 			draw_polyline(polygon, edge, 1.0, true)
 
 
-func _draw_bench() -> void:
+func _draw_bench(canvas: CanvasItem) -> void:
 	var prep: bool = _phase() == "preparation"
 	var selected: Dictionary = _selected_own()
 	var font: Font = ThemeDB.fallback_font
 	var label_at: Vector2 = Board.bench_position(0) + Vector2(-96, 5)
-	draw_string_outline(font, label_at, "RESERVA", HORIZONTAL_ALIGNMENT_LEFT, -1, 14, 5, Color(0, 0, 0, 0.75))
-	draw_string(font, label_at, "RESERVA", HORIZONTAL_ALIGNMENT_LEFT, -1, 14, GOLD)
+	canvas.draw_string_outline(font, label_at, "RESERVA", HORIZONTAL_ALIGNMENT_LEFT, -1, 14, 5, Color(0, 0, 0, 0.75))
+	canvas.draw_string(font, label_at, "RESERVA", HORIZONTAL_ALIGNMENT_LEFT, -1, 14, GOLD)
 	for slot: int in range(Board.BENCH_SLOTS):
 		var polygon: PackedVector2Array = Board.bench_polygon(slot)
 		var fill: Color = Color(0.2, 0.13, 0.06, 0.22)
@@ -4016,12 +4579,12 @@ func _draw_bench() -> void:
 			fill = Color(0.18, 0.72, 0.66, 0.28)
 		if prep and slot == hover_bench:
 			fill = Color(fill, fill.a + 0.14)
-		draw_colored_polygon(polygon, fill)
+		canvas.draw_colored_polygon(polygon, fill)
 		polygon.append(polygon[0])
-		draw_polyline(polygon, Color(0.33, 0.22, 0.1, 0.45), 1.6, true)
+		canvas.draw_polyline(polygon, Color(0.33, 0.22, 0.1, 0.45), 1.6, true)
 		var center: Vector2 = Board.bench_position(slot)
-		draw_line(center + Vector2(-16, 12), center + Vector2(16, 12), Color(GOLD, 0.25), 1.0, true)
-		draw_string(font, center + Vector2(-4, 27), str(slot + 1), HORIZONTAL_ALIGNMENT_LEFT, -1, 11, Color(GOLD, 0.7))
+		canvas.draw_line(center + Vector2(-16, 12), center + Vector2(16, 12), Color(GOLD, 0.25), 1.0, true)
+		canvas.draw_string(font, center + Vector2(-4, 27), str(slot + 1), HORIZONTAL_ALIGNMENT_LEFT, -1, 11, Color(GOLD, 0.7))
 
 
 func _visual_pose(unit: Dictionary) -> Dictionary:
@@ -4060,16 +4623,72 @@ func _draw_ground(entry: Dictionary) -> void:
 	if not bool(unit.get("alive", true)) and tint.a <= 0.01:
 		draw_colored_polygon(Board.ellipse(ground_point, 0.12, 0.07, 10), Color(0.25, 0.18, 0.15, 0.35))
 		return
-	if int(entry["level"]) >= 3 and bool(unit.get("alive", true)) and not ghost:
+	var is_boss: bool = str(unit.get("key", "")) == "boss_dev" or bool(unit.get("is_boss", false))
+	if is_boss and bool(unit.get("alive", true)):
+		_draw_boss_aura_back(entry)
+	elif int(entry["level"]) >= 3 and bool(unit.get("alive", true)) and not ghost:
 		_draw_aura_back(entry)
-	draw_colored_polygon(Board.ellipse(ground_point, 0.26 * scale, 0.14 * scale, 20), Color(0, 0, 0, 0.3 * tint.a))
-	var ring: PackedVector2Array = Board.ellipse(ground_point, 0.3 * scale, 0.17 * scale, 24)
+	var ground_scale: float = scale
+	if is_boss:
+		ground_scale = scale * 1.55
+	elif str(unit.get("key", "")) in ["slime_lodo_olho", "monstro_olho_tentaculos"]:
+		ground_scale = scale * 1.3
+	draw_colored_polygon(Board.ellipse(ground_point, 0.26 * ground_scale, 0.14 * ground_scale, 20), Color(0, 0, 0, 0.3 * tint.a))
+	var ring: PackedVector2Array = Board.ellipse(ground_point, 0.3 * ground_scale, 0.17 * ground_scale, 24)
 	ring.append(ring[0])
-	draw_polyline(ring, Color(TEAM_COLORS[int(unit.get("team", 0))], (0.35 if ghost else 0.85) * tint.a), 1.6, true)
+	draw_polyline(ring, Color(TEAM_COLORS[int(unit.get("team", 0))], (0.85 if is_boss else (0.35 if ghost else 0.85)) * tint.a), 1.6, true)
 	if int(unit["id"]) == selected_id:
-		var glow: PackedVector2Array = Board.ellipse(ground_point, 0.36 * scale, 0.21 * scale, 24)
+		var glow: PackedVector2Array = Board.ellipse(ground_point, 0.36 * ground_scale, 0.21 * ground_scale, 24)
 		glow.append(glow[0])
 		draw_polyline(glow, Color(GOLD, 0.7 + 0.3 * sin(visual_time * 6.0)), 2.0, true)
+
+
+## Aura exclusiva do Boss Dev: vórtice de vácuo negro e púrpura mística ao redor dos pés e coluna de sombras.
+func _draw_boss_aura_back(entry: Dictionary) -> void:
+	var ground_point: Vector2 = entry["ground"]
+	var feet: Vector2 = entry["feet"]
+	var pulse: float = 0.5 + 0.5 * sin(visual_time * 2.8)
+	# 1. Base externa de névoa escura e púrpura profunda
+	for layer: int in range(3):
+		var r_x: float = 0.72 + float(layer) * 0.12
+		var r_y: float = 0.42 + float(layer) * 0.07
+		var a_col: Color = Color(0.18, 0.02, 0.26, (0.32 - float(layer) * 0.09) * (0.8 + 0.2 * pulse))
+		draw_colored_polygon(Board.ellipse(ground_point, r_x, r_y, 32), a_col)
+	# 2. Vórtice de escuridão negra profunda no centro dos pés
+	draw_colored_polygon(Board.ellipse(ground_point, 0.55 + 0.04 * pulse, 0.32 + 0.03 * pulse, 28), Color(0.03, 0.01, 0.05, 0.88))
+	# 3. Anel de vácuo ébano grosso com bordas escuras
+	var ring_dark: PackedVector2Array = Board.ellipse(ground_point, 0.70 * (0.96 + 0.04 * pulse), 0.41 * (0.96 + 0.04 * pulse), 36)
+	ring_dark.append(ring_dark[0])
+	draw_polyline(ring_dark, Color(0.08, 0.01, 0.12, 0.95), 3.2, true)
+	# 4. Anel interno de energia mística roxa cintilante
+	var ring_purple: PackedVector2Array = Board.ellipse(ground_point, 0.52 * (0.95 + 0.05 * pulse), 0.30 * (0.95 + 0.05 * pulse), 32)
+	ring_purple.append(ring_purple[0])
+	draw_polyline(ring_purple, Color(0.72, 0.18, 0.98, 0.9), 2.2, true)
+	# 5. Onda de choque pulsante que expande do centro
+	var wave_prog: float = fmod(visual_time * 0.45, 1.0)
+	var wave_r: float = 0.32 + 0.38 * wave_prog
+	var ring_wave: PackedVector2Array = Board.ellipse(ground_point, wave_r, wave_r * 0.58, 28)
+	ring_wave.append(ring_wave[0])
+	draw_polyline(ring_wave, Color(0.55, 0.1, 0.85, 0.7 * (1.0 - wave_prog)), 1.8, true)
+	# 6. Coluna vertical etérea de névoa escura/roxa ascendente
+	var b_height: float = float(entry["height"]) * 1.2
+	var base_dark: Color = Color(0.06, 0.01, 0.09, 0.55 * (0.75 + 0.25 * pulse))
+	var top_clear: Color = Color(0.45, 0.08, 0.65, 0.0)
+	draw_polygon(PackedVector2Array([feet + Vector2(-34, 4), feet + Vector2(34, 4), feet + Vector2(20, -b_height), feet + Vector2(-20, -b_height)]),
+		PackedColorArray([base_dark, base_dark, top_clear, top_clear]))
+	# 7. Gavinhas/runas orbitantes de sombra escura com miolo roxo
+	for index: int in range(8):
+		var angle: float = visual_time * 1.5 + TAU * float(index) / 8.0
+		var orbit_x: float = 0.65 + 0.05 * sin(visual_time * 3.0 + float(index))
+		var orbit_y: float = 0.38 + 0.03 * sin(visual_time * 3.0 + float(index))
+		var rune_pos: Vector2 = Board.project(ground_point + Vector2(cos(angle) * orbit_x, sin(angle) * orbit_y)).round()
+		var diamond_outer: PackedVector2Array = PackedVector2Array([rune_pos + Vector2(0, -5), rune_pos + Vector2(4, 0), rune_pos + Vector2(0, 5), rune_pos + Vector2(-4, 0)])
+		draw_colored_polygon(diamond_outer, Color(0.02, 0.01, 0.04, 0.95))
+		diamond_outer.append(diamond_outer[0])
+		draw_polyline(diamond_outer, Color(0.58, 0.12, 0.85, 0.85), 1.2, true)
+		var diamond_inner: PackedVector2Array = PackedVector2Array([rune_pos + Vector2(0, -3), rune_pos + Vector2(2, 0), rune_pos + Vector2(0, 3), rune_pos + Vector2(-2, 0)])
+		draw_colored_polygon(diamond_inner, Color("b24bf3") if index % 2 == 0 else Color("7918b9"))
+
 
 
 ## Aura especial do nível 3: violeta (contrasta com a areia clara), coluna de luz e faíscas douradas.
@@ -4111,13 +4730,22 @@ func _draw_units_layer() -> void:
 			units_layer.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 			units_layer.draw_circle(entry["feet"] + Vector2(0, -12), 8, TEAM_COLORS[int(unit.get("team", 0))])
 			continue
+		var is_boss: bool = str(unit.get("key", "")) == "boss_dev" or bool(unit.get("is_boss", false))
 		if bool(entry["ghost"]):
-			tint = Color(0.75, 0.8, 0.9, 0.5)
+			if is_boss:
+				tint = Color(1.0, 1.0, 1.0, 0.95)
+			else:
+				tint = Color(0.75, 0.8, 0.9, 0.5)
 		var scale: float = float(entry["scale"])
-		if not bool(entry["ghost"]) and bool(unit.get("alive", true)):
+		if (not bool(entry["ghost"]) or is_boss) and bool(unit.get("alive", true)):
 			units_layer.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 			var shadow_center: Vector2 = entry["feet"]
-			var shadow_radius: Vector2 = Vector2(17.0 * scale, 7.5 * scale)
+			var shadow_scale: float = scale
+			if is_boss:
+				shadow_scale = scale * 1.55
+			elif str(unit.get("key", "")) in ["slime_lodo_olho", "monstro_olho_tentaculos"]:
+				shadow_scale = scale * 1.3
+			var shadow_radius: Vector2 = Vector2(17.0 * shadow_scale, 7.5 * shadow_scale)
 			var shadow_pts: PackedVector2Array = PackedVector2Array()
 			for s_i: int in range(12):
 				var ang: float = TAU * s_i / 12.0
@@ -4138,6 +4766,13 @@ func _draw_units_layer() -> void:
 		var display_scale: float = float(entry["display_scale"])
 		units_layer.draw_set_transform(origin, float(pose["angle"]), Vector2(display_scale, display_scale))
 		units_layer.draw_texture(texture, (-anchor).round(), tint)
+		if bool(unit.get("alive", true)):
+			var u_key: String = str(unit.get("key", ""))
+			if u_key == "snoop":
+				var u_dir: String = str(visual_directions.get(int(unit.get("id", -1)), "south"))
+				_draw_snoop_cigar(units_layer, origin, display_scale, u_dir, visual_time + float(unit.get("id", 0)) * 0.37, tint, float(pose["angle"]))
+			elif u_key == "bob_marley" and not bool(entry["ghost"]) and _phase() == "preparation":
+				_draw_bob_musical_notes(units_layer, origin, visual_time + float(unit.get("id", 0)) * 0.25, 1.15 * scale, -44.0 * scale)
 	var ball_texture: Texture2D = Kit.icon("fx_ball")
 	for projectile: Dictionary in state.get("combat", {}).get("projectiles", []):
 		var progress: float = clampf(1.0 - float(projectile.get("flight_left", 0)) / maxf(float(projectile.get("flight_duration", 1)), 0.001), 0.0, 1.0)
@@ -4148,19 +4783,29 @@ func _draw_units_layer() -> void:
 		var flight_pos: Vector2 = Board.project(p_ground) + Vector2(0, -18 - sin(progress * PI) * (18 if kind == "rocket" else 24))
 		var flight_dir: Vector2 = (Board.project(p_to) - Board.project(p_from)).normalized()
 		var rot_angle: float = flight_dir.angle() if flight_dir.length_squared() > 0.01 else progress * TAU * 1.5
-		if kind == "rocket" and vfx.has_effect("foguete_02"):
+		if kind == "rocket" and bool(projectile.get("is_super", false)) and vfx.has_effect("foguete_02"):
 			_draw_vfx_frame(units_layer, _projectile_vfx_data("foguete_02", flight_pos, rot_angle))
 		elif kind == "smoke" and vfx.has_effect("anel_fumaca_01"):
 			_draw_vfx_frame(units_layer, _projectile_vfx_data("anel_fumaca_01", flight_pos, rot_angle))
+		elif kind == "mini_rocket":
+			units_layer.draw_set_transform(flight_pos, rot_angle, Vector2(0.7, 0.7))
+			units_layer.draw_polygon(PackedVector2Array([Vector2(-7, -2), Vector2(3, -2), Vector2(7, 0), Vector2(3, 2), Vector2(-7, 2)]),
+				PackedColorArray([Color("e8e8f2"), Color("e8e8f2"), Color("ff3b30"), Color("e8e8f2"), Color("e8e8f2")]))
+			units_layer.draw_polygon(PackedVector2Array([Vector2(-7, -4), Vector2(-4, -2), Vector2(-7, -1)]), PackedColorArray([Color("1c1c24"), Color("1c1c24"), Color("1c1c24")]))
+			units_layer.draw_polygon(PackedVector2Array([Vector2(-7, 1), Vector2(-4, 2), Vector2(-7, 4)]), PackedColorArray([Color("1c1c24"), Color("1c1c24"), Color("1c1c24")]))
+			var thrust_flicker: float = 0.8 + 0.4 * sin(visual_time * 32.0)
+			units_layer.draw_polygon(PackedVector2Array([Vector2(-7, -1.5), Vector2(-12 * thrust_flicker, 0), Vector2(-7, 1.5)]),
+				PackedColorArray([Color(1.0, 0.8, 0.2), Color(1.0, 0.4, 0.1, 0.85), Color(1.0, 0.8, 0.2)]))
 		elif kind == "rocket":
-			units_layer.draw_set_transform(flight_pos, rot_angle, Vector2(1.0, 1.0))
-			units_layer.draw_polygon(PackedVector2Array([Vector2(-9, -3), Vector2(4, -3), Vector2(9, 0), Vector2(4, 3), Vector2(-9, 3)]),
-				PackedColorArray([Color("e0e0ea"), Color("e0e0ea"), Color("e84034"), Color("e0e0ea"), Color("e0e0ea")]))
-			units_layer.draw_polygon(PackedVector2Array([Vector2(-9, -5), Vector2(-6, -3), Vector2(-9, -1)]), PackedColorArray([Color("2a2a35"), Color("2a2a35"), Color("2a2a35")]))
-			units_layer.draw_polygon(PackedVector2Array([Vector2(-9, 1), Vector2(-6, 3), Vector2(-9, 5)]), PackedColorArray([Color("2a2a35"), Color("2a2a35"), Color("2a2a35")]))
-			var thrust_flicker: float = 0.8 + 0.4 * sin(visual_time * 24.0)
-			units_layer.draw_polygon(PackedVector2Array([Vector2(-9, -2), Vector2(-15 * thrust_flicker, 0), Vector2(-9, 2)]),
-				PackedColorArray([Color(1.0, 0.7, 0.2), Color(1.0, 0.3, 0.1, 0.8), Color(1.0, 0.7, 0.2)]))
+			var rocket_scale: float = 1.35 if bool(projectile.get("is_super", false)) else 1.0
+			units_layer.draw_set_transform(flight_pos, rot_angle, Vector2(rocket_scale, rocket_scale))
+			units_layer.draw_polygon(PackedVector2Array([Vector2(-10, -4), Vector2(5, -4), Vector2(11, 0), Vector2(5, 4), Vector2(-10, 4)]),
+				PackedColorArray([Color("f0f0ff"), Color("f0f0ff"), Color("ff2a2a"), Color("f0f0ff"), Color("f0f0ff")]))
+			units_layer.draw_polygon(PackedVector2Array([Vector2(-10, -6), Vector2(-7, -4), Vector2(-10, -2)]), PackedColorArray([Color("2a2a35"), Color("2a2a35"), Color("2a2a35")]))
+			units_layer.draw_polygon(PackedVector2Array([Vector2(-10, 2), Vector2(-7, 4), Vector2(-10, 6)]), PackedColorArray([Color("2a2a35"), Color("2a2a35"), Color("2a2a35")]))
+			var thrust_flicker: float = 0.85 + 0.45 * sin(visual_time * 26.0)
+			units_layer.draw_polygon(PackedVector2Array([Vector2(-10, -3), Vector2(-18 * thrust_flicker, 0), Vector2(-10, 3)]),
+				PackedColorArray([Color(1.0, 0.85, 0.25), Color(1.0, 0.35, 0.05, 0.95), Color(1.0, 0.85, 0.25)]))
 		elif kind == "smoke":
 			units_layer.draw_set_transform(flight_pos, visual_time * 8.0, Vector2(1.0, 1.0))
 			units_layer.draw_circle(Vector2.ZERO, 7.0, Color(0.4, 0.45, 0.7, 0.75))
@@ -4179,7 +4824,8 @@ func _draw_overlay_layer() -> void:
 	var canvas: Node2D = overlay_layer
 	for entry: Dictionary in frame_entries:
 		var unit: Dictionary = entry["unit"]
-		if not bool(unit.get("alive", true)) or bool(entry["ghost"]):
+		var is_boss_overlay: bool = str(unit.get("key", "")) == "boss_dev" or bool(unit.get("is_boss", false))
+		if not bool(unit.get("alive", true)) or (bool(entry["ghost"]) and not is_boss_overlay):
 			continue
 		var feet: Vector2 = entry["feet"]
 		var height: float = float(entry["height"])
@@ -4197,7 +4843,7 @@ func _draw_overlay_layer() -> void:
 				var angle: float = visual_time * 5.0 + index * TAU / 3.0
 				var spark: Vector2 = feet + Vector2(cos(angle) * 9, -height - 19 + sin(angle) * 3)
 				canvas.draw_circle(spark, 1.7, GOLD)
-		if int(entry["level"]) >= 3:
+		if int(entry["level"]) >= 3 and not bool(entry["ghost"]):
 			for index: int in range(7):
 				var rise: float = fposmod(visual_time * 0.55 + index / 7.0 + float(unit["id"]) * 0.13, 1.0)
 				var sway: float = sin(index * 2.3 + visual_time * 2.0) * 13.0 * float(entry["scale"])
@@ -4206,6 +4852,16 @@ func _draw_overlay_layer() -> void:
 				var fade: float = 1.0 - rise
 				canvas.draw_rect(Rect2(mote - Vector2.ONE, Vector2(size + 2, size + 2)), Color(0.15, 0.06, 0.22, 0.75 * fade))
 				canvas.draw_rect(Rect2(mote, Vector2(size, size)), Color(Color("ffd85c") if index % 2 == 0 else Color("d6a8ff"), fade))
+		if is_boss_overlay and bool(unit.get("alive", true)):
+			for index: int in range(12):
+				var b_rise: float = fposmod(visual_time * 0.45 + float(index) / 12.0, 1.0)
+				var b_sway: float = sin(float(index) * 2.1 + visual_time * 2.3) * 26.0
+				var b_mote: Vector2 = (feet + Vector2(b_sway, -8 - b_rise * height * 1.12)).round()
+				var b_size: float = 4.0 if index % 3 == 0 else (3.0 if index % 2 == 0 else 2.0)
+				var b_fade: float = 1.0 - b_rise
+				canvas.draw_rect(Rect2(b_mote - Vector2.ONE, Vector2(b_size + 2, b_size + 2)), Color(0.02, 0.01, 0.04, 0.9 * b_fade))
+				var b_core: Color = Color("c040fb") if index % 2 == 0 else Color("7918b9")
+				canvas.draw_rect(Rect2(b_mote, Vector2(b_size, b_size)), Color(b_core, b_fade * 0.95))
 	for effect: Dictionary in slashes:
 		var life: float = float(effect["life"]) / 0.2
 		var start: float = float(effect["seed"])
@@ -4228,7 +4884,8 @@ func _draw_overlay_layer() -> void:
 
 func _draw_bars(canvas: CanvasItem, entry: Dictionary) -> void:
 	var unit: Dictionary = entry["unit"]
-	if bool(entry["ghost"]) or not bool(unit.get("alive", true)) or not unit.has("max_hp"):
+	var is_boss_bar: bool = str(unit.get("key", "")) == "boss_dev" or bool(unit.get("is_boss", false))
+	if (bool(entry["ghost"]) and not is_boss_bar) or not bool(unit.get("alive", true)) or not unit.has("max_hp"):
 		if bool(entry["ghost"]) and int(entry["level"]) > 1:
 			_draw_level_stars(canvas, (entry["feet"] as Vector2) + Vector2(0, -float(entry["height"]) - 10), int(entry["level"]))
 		return
@@ -4236,7 +4893,7 @@ func _draw_bars(canvas: CanvasItem, entry: Dictionary) -> void:
 	var height: float = float(entry["height"])
 	var team: int = int(unit.get("team", 0))
 	var maximum: float = maxf(float(unit.get("max_hp", 1)), 1.0)
-	var width: float = 38.0
+	var width: float = 64.0 if is_boss_bar else (48.0 if str(unit.get("key", "")) in ["slime_lodo_olho", "monstro_olho_tentaculos"] else 38.0)
 	var bar: Rect2 = Rect2((feet + Vector2(-width * 0.5, -height - 12)).round(), Vector2(width, 6))
 	canvas.draw_rect(bar.grow(1), Color(0.02, 0.02, 0.03, 0.85))
 	var hp_ratio: float = clampf(float(unit.get("hp", 0)) / maximum, 0.0, 1.0)
@@ -4244,7 +4901,13 @@ func _draw_bars(canvas: CanvasItem, entry: Dictionary) -> void:
 	canvas.draw_rect(Rect2(bar.position, Vector2(width * hp_ratio, 2)), Color(1, 1, 1, 0.25))
 	for part: Dictionary in _shield_parts(unit, width):
 		canvas.draw_rect(Rect2(bar.position + Vector2(float(part["start"]), 6), Vector2(float(part["width"]), 2)), part["color"])
-	var tick_size: float = 250.0 if maximum <= 1200.0 else 500.0
+	var mana: Dictionary = _mana_bar_data(unit, width)
+	if not mana.is_empty():
+		var mana_rect: Rect2 = Rect2(bar.position + Vector2(0, 10), Vector2(width, 3))
+		canvas.draw_rect(mana_rect.grow(1), Color(0.02, 0.06, 0.13, 0.9))
+		canvas.draw_rect(mana_rect, Color(0.13, 0.22, 0.38))
+		canvas.draw_rect(Rect2(mana_rect.position, Vector2(float(mana["width"]), 3)), Color("58aaff"))
+	var tick_size: float = 1000.0 if maximum >= 5000.0 else (250.0 if maximum <= 1200.0 else 500.0)
 	var tick: float = tick_size
 	while tick < maximum:
 		var x: float = bar.position.x + width * tick / maximum
@@ -4275,7 +4938,7 @@ func _draw_bars(canvas: CanvasItem, entry: Dictionary) -> void:
 		var display_slots: int = maxi(items.size(), 4 if is_selected else 0)
 		var total_w: float = display_slots * slot_w + (display_slots - 1) * gap
 		var start_x: float = bar.position.x + (width - total_w) * 0.5
-		var items_y: float = bar.position.y + 10.0
+		var items_y: float = bar.position.y + (16.0 if not mana.is_empty() else 10.0)
 		for slot_idx: int in range(display_slots):
 			var slot_rect: Rect2 = Rect2(start_x + slot_idx * (slot_w + gap), items_y, slot_w, slot_h)
 			if slot_idx < items.size():
@@ -4301,6 +4964,16 @@ func _draw_bars(canvas: CanvasItem, entry: Dictionary) -> void:
 				canvas.draw_rect(slot_rect, empty_border, false, 1.0)
 	
 	_draw_level_stars(canvas, bar.position + Vector2(width * 0.5, -6), int(entry["level"]))
+
+
+## Somente leitura do snapshot; ausência de max_mana não inventa um recurso.
+func _mana_bar_data(unit: Dictionary, width: float = 38.0) -> Dictionary:
+	var maximum: float = float(unit.get("max_mana", 0.0))
+	var mana: float = float(unit.get("mana", 0.0))
+	if not is_finite(maximum) or not is_finite(mana) or maximum <= 0.0:
+		return {}
+	var ratio: float = clampf(mana / maximum, 0.0, 1.0)
+	return {"value": mana, "maximum": maximum, "ratio": ratio, "width": maxf(0.0, width) * ratio}
 
 
 ## Faixa de escudo separada da vida: dança dourada e mala azul continuam legíveis juntas.

@@ -3,6 +3,9 @@
 *.tmp
 *.zip
 RelicArena/build/
+RelicArena/builds/
+__pycache__/
+revisoes/performance_2026-10-13/fonte_validada/
 RelicArena/.godot/
 captures/
 APKs/*.apk

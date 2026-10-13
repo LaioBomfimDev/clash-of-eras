@@ -1,0 +1,44 @@
+{
+  "app": "Sprite Fusion API (Packaged for RelicArena)",
+  "name": "Clash of Eras - Charutao Snoop Dogg 01",
+  "fps": 6,
+  "frame_ms": 167,
+  "frames": 4,
+  "loop": true,
+  "canvas": {
+    "w": 30,
+    "h": 28
+  },
+  "anchor": {
+    "kind": "origin",
+    "x": 1,
+    "y": 21
+  },
+  "clips": [
+    {
+      "name": "whole",
+      "title": "the whole effect, no sprite",
+      "depth": "front",
+      "loop": true,
+      "start_frame": 0,
+      "frames": 4,
+      "frame": {
+        "w": 30,
+        "h": 28
+      },
+      "sheets": [
+        {
+          "file": "whole.png",
+          "first_frame": 0,
+          "frames": 4,
+          "columns": 2,
+          "rows": 2
+        }
+      ],
+      "offset": {
+        "x": -1,
+        "y": -21
+      }
+    }
+  ]
+}

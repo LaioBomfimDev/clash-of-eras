@@ -52,7 +52,7 @@ func _force_round_win(session: Session, team: int = 0) -> void:
 func _test_initial_and_privacy() -> void:
 	var session: Session = Session.new(100)
 	var view: Dictionary = session.snapshot_for_team(0)
-	_check(session.phase == "benefit" and view["own"]["gold"] == 25, "initial benefit and 25 player gold")
+	_check(session.phase == "benefit" and view["own"]["gold"] == 20, "initial benefit and 20 player gold")
 	_check(view["lives"] == [4, 4] and session._active_count(0) == 0, "four lives and clean field on game start")
 	_check(not session.sim.get_unit(5).active and not session.sim.get_unit(4).active, "heroes start outside the field")
 	_check(view["own"]["owned"].is_empty(), "clean start: player starts without pre-allocated heroes")
@@ -66,7 +66,7 @@ func _test_initial_and_privacy() -> void:
 	_check(not view["enemy"].has("shop") and not view["enemy"].has("bag"), "enemy economy/inventory omitted")
 	view["own"]["gold"] = 9999
 	view["own"]["shop"].clear()
-	_check(session.teams[0]["gold"] == 25 and session.teams[0]["shop"].size() == 7, "snapshot cannot mutate authority")
+	_check(session.teams[0]["gold"] == 20 and session.teams[0]["shop"].size() == 7, "snapshot cannot mutate authority")
 	_check(session.snapshot_for_team(5).is_empty(), "invalid spectator/actor cannot receive private snapshot")
 	_check(not _command(session, "place", {"unit_id": 101, "cell": [0, 7]})["ok"], "player cannot command bot unit")
 	_check(not _command(session, "place", {"unit_id": {}, "cell": [0, 7]})["ok"], "malformed unit identifier rejected without type conversion crash")
@@ -94,7 +94,7 @@ func _test_commands_and_gold() -> void:
 	var repeated: Dictionary = session.apply_command(0, "buy_once", "buy_item", payload)
 	_check(first == repeated and first["ok"], "duplicate command returns original success")
 	_check(session.teams[0]["gold"] == gold and session.teams[0]["bag"].size() == 1, "duplicate purchase spends/grants once")
-	_check(gold == 25 - int(offer["price"]), "only item cost debited")
+	_check(gold == 20 - int(offer["price"]), "only item cost debited")
 	_check(not session.apply_command(0, "buy_once", "reroll")["ok"], "command ID reuse with different action rejected")
 	_check(not _command(session, "buy_item", payload)["ok"], "claimed item cannot be bought with a new command ID")
 	first["data"]["key"] = "hacked"
@@ -117,12 +117,12 @@ func _test_recruit_and_capacity() -> void:
 	_check(_command(session, "recruit", {"offer_id": _copy_offer(session, "zumbi", 90)["offer_id"]})["ok"], "fifth hero with full field goes to reserve")
 	_check(session.snapshot_for_team(0)["own"]["bench"] == [4], "fifth hero is on reserve bench")
 	_check(not _command(session, "deploy", {"unit_id": 4, "cell": [0, 7]})["ok"], "field capacity enforced")
-	_check(_command(session, "upgrade_capacity")["ok"] and session.teams[0]["gold"] == 17, "capacity four to five costs eight test gold")
+	_check(_command(session, "upgrade_capacity")["ok"] and session.teams[0]["gold"] == 12, "capacity four to five costs eight test gold")
 	_check(_command(session, "deploy", {"unit_id": 4, "cell": [0, 7]})["ok"] and session._active_count(0) == 5, "fifth hero deploys after expansion")
-	_check(_command(session, "upgrade_capacity")["ok"] and session.teams[0]["gold"] == 5 and int(session.teams[0]["capacity"]) == 6, "capacity five to six costs twelve test gold")
+	_check(_command(session, "upgrade_capacity")["ok"] and session.teams[0]["gold"] == 0 and int(session.teams[0]["capacity"]) == 6, "capacity five to six costs twelve test gold")
 	_check(_command(session, "bench", {"unit_id": 2})["ok"], "free removal preserves owned hero")
 	_check(_command(session, "swap", {"active_id": 3, "bench_id": 2})["ok"], "active/reserve swap succeeds atomically")
-	_check(session.sim.get_unit(2).active and not session.sim.get_unit(3).active and session.teams[0]["gold"] == 5, "swap changes membership without refund or charge")
+	_check(session.sim.get_unit(2).active and not session.sim.get_unit(3).active and session.teams[0]["gold"] == 0, "swap changes membership without refund or charge")
 	var previous: Vector2i = session.sim.get_unit(2).cell
 	_check(not _command(session, "swap", {"active_id": 2, "bench_id": 101})["ok"] and session.sim.get_unit(2).cell == previous, "foreign reserve cannot replace an owned unit")
 
@@ -148,10 +148,14 @@ func _test_copies_and_levels() -> void:
 	_check(int(session.teams[0]["gold"]) == gold and session.teams[0]["owned"].count("obama") == 1, "copy is free and does not create a second unit")
 	_check(session.snapshot_for_team(0)["own"]["bench"].is_empty(), "joined copy does not occupy the reserve")
 	var second: Dictionary = _command(session, "recruit", {"offer_id": _copy_offer(session, "obama", 82)["offer_id"]})
-	_check(second["ok"] and obama.level == 3 and is_equal_approx(obama.max_hp, base_hp * 2.25), "third copy in total reaches level 3 (x2.25)")
+	_check(second["ok"] and obama.level == 2 and int(second["data"]["copies"]) == 3
+		and is_equal_approx(obama.max_hp, base_hp * 1.5), "third total copy remains level 2")
+	var third: Dictionary = _command(session, "recruit", {"offer_id": _copy_offer(session, "obama", 83)["offer_id"]})
+	_check(third["ok"] and obama.level == 3 and int(third["data"]["copies"]) == 4
+		and is_equal_approx(obama.max_hp, base_hp * 2.25), "fourth total copy reaches level 3 (x2.25)")
 	var copies_before: Dictionary = (session.teams[0]["copies"] as Dictionary).duplicate()
-	var extra: Dictionary = _copy_offer(session, "obama", 83)
-	_check(_command(session, "recruit", {"offer_id": extra["offer_id"]})["code"] == "max_level" and obama.level == 3, "fourth copy rejected at max level")
+	var extra: Dictionary = _copy_offer(session, "obama", 84)
+	_check(_command(session, "recruit", {"offer_id": extra["offer_id"]})["code"] == "max_level" and obama.level == 3, "fifth copy rejected at max level")
 	_check(session.teams[0]["copies"] == copies_before and not extra["claimed"], "max-level rejection changes nothing")
 	for attempt: int in range(4):
 		_check(_command(session, "reroll")["ok"], "reroll after leveling")
@@ -276,18 +280,23 @@ func _test_benefits_and_rounds() -> void:
 		_force_round_win(session)
 		_check(session.phase == "round_result" and session.sim.team_lives[1] == 3 - index, "one life charged at resolution %d" % (index + 1))
 		var before: int = session.teams[0]["gold"]
-		_check(_command(session, "next_round")["ok"] and session.teams[0]["gold"] == before + 9, "next round grants income once (9 gold)")
-	_check(session.sim.round_index == 4 and session.phase == "benefit", "second benefit opens before fourth combat")
-	var life_found: bool = false
-	for choice: Dictionary in session.teams[0]["benefit_options"]:
-		life_found = life_found or choice["kind"] == "life"
-	_check(not life_found and session.teams[0]["benefit_options"].size() == 3, "extra life limited to once per match, replacement third option exists")
+		var expected_income: int = 12 + index * 3 + (1 if index >= 1 else 0)
+		_check(_command(session, "next_round")["ok"] and session.teams[0]["gold"] == before + expected_income, "next round grants growing income and fixed streak bonus once")
+	_check(session.sim.round_index == 4 and session.phase == "preparation" and session.sim.is_boss_round, "fourth round opens directly with boss raid without static benefit card")
+	var boss_unit = session.sim.get_unit(999)
+	_check(boss_unit != null and boss_unit.active and boss_unit.is_boss, "boss dev unit exists and is active in team 1 on round 4")
+	_check(session.teams[0]["benefit_options"].is_empty(), "no static benefit options on round 4")
 	_check(session.teams[0]["equipment"][1][0]["id"] == item_id and session.sim.get_unit(1).attack_damage > session.sim.get_unit(1).spec.attack_damage, "equipment persists and reapplies across new rounds")
 	_force_round_win(session)
-	_check(session.phase == "match_over" and session.sim.match_winner == 0, "four lost bot lives ends full match")
+	_check(session.phase == "round_result" and session.sim.match_winner == -1
+		and session.sim.team_lives[1] == 1, "Boss victory preserves opponent's final heart")
+	_check(session.teams[0]["boss_rewards"].size() == 3, "boss defeat awards exactly 3 loot drops")
+	_check(_command(session, "next_round")["ok"], "normal match continues after Boss victory")
+	_force_round_win(session)
+	_check(session.phase == "match_over" and session.sim.match_winner == 0, "four normal lost bot lives ends full match")
 	_check(not _command(session, "next_round")["ok"], "finished match cannot grant another round/income")
 	session.reset(104)
-	_check(session.sim.team_lives == [4, 4] and session.sim.round_index == 1 and session.teams[0]["gold"] == 25 and session.teams[0]["equipment"].is_empty(), "reset clears lives/economy/equipment/benefit history")
+	_check(session.sim.team_lives == [4, 4] and session.sim.round_index == 1 and session.teams[0]["gold"] == 20 and session.teams[0]["equipment"].is_empty(), "reset clears lives/economy/equipment/benefit history")
 
 func _test_clock_and_replay() -> void:
 	var session: Session = Session.new(105)

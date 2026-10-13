@@ -1,12 +1,12 @@
 extends RefCounted
 ## Banco opcional de quadros originais; não controla ações nem tempo da simulação.
-## Schema: characters.<hero>.states.<walk|attack|skill>.{fps,loop,directions}.
+## Schema: characters.<hero>.states.<stance|walk|attack|skill>.{fps,loop,directions}.
 ## Cada direção declara {frames:[respaths],anchor:[x,y]}; fps/loop/anchor podem
 ## ser definidos na direção. A âncora vale para todo o clip, nunca por quadro.
 ## O chamador mantém o visual idle quando frame_data() retorna {}.
 
 const DEFAULT_MANIFEST_PATH: String = "res://assets/characters/animations_manifest.json"
-const STATES: Array[String] = ["walk", "attack", "skill"]
+const STATES: Array[String] = ["stance", "walk", "attack", "skill"]
 const DIRECTIONS: Array[String] = [
 	"south", "south-east", "east", "north-east",
 	"north", "north-west", "west", "south-west"
@@ -42,6 +42,18 @@ func has_animation(key: String, state: String, direction: String = "") -> bool:
 func clip_duration(key: String, state: String, direction: String) -> float:
 	var clip: Dictionary = _get_clip(key, state, direction)
 	return 0.0 if clip.is_empty() else float(clip["duration"])
+
+
+## Referências já carregadas para aquecer recortes antes da primeira animação.
+## O descritor é novo; os PNGs/âncoras originais continuam os mesmos do clip.
+func loaded_frames() -> Array[Dictionary]:
+	var result: Array[Dictionary] = []
+	for states: Dictionary in _clips.values():
+		for directions: Dictionary in states.values():
+			for clip: Dictionary in directions.values():
+				for texture: Texture2D in clip["frames"]:
+					result.append({"texture": texture, "anchor": clip["anchor"]})
+	return result
 
 
 ## Walk pode repetir; attack e skill não repetem e conservam o último quadro.

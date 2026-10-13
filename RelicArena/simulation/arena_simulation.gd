@@ -29,6 +29,7 @@ var round_result: Dictionary = {}
 var team_lives: Array[int] = [4, 4]
 var round_index: int = 1
 var match_winner: int = -1
+var is_boss_round: bool = false
 var team_damage: Array[float] = [0.0, 0.0]
 var round_duration: float = 30.0
 var acceleration_at: float = 15.0
@@ -84,9 +85,16 @@ func _setup_round() -> void:
 	round_result = {}
 	synergy_snapshot = [[], []]
 	_rng.seed = _seed + (round_index - 1) * 997
+	# A Session seleciona PvE explicitamente; o núcleo também pode rodar PvP no round4.
+	is_boss_round = false
 	for entry: Dictionary in _roster:
 		var unit_id: int = int(entry["id"])
-		var definition: UnitSpec = specs[str(entry["key"])]
+		var key_str: String = str(entry["key"])
+		var definition: UnitSpec = specs.get(key_str, null)
+		if definition == null:
+			definition = summon_specs.get(key_str, null)
+		if definition == null:
+			continue
 		var unit: UnitState = UnitState.new(definition, unit_id, int(entry["team"]), _formation.get(unit_id, entry["cell"]))
 		unit.active = bool(entry["active"])
 		var level: int = clampi(int(entry.get("level", 1)), 1, Catalog.MAX_MATCH_LEVEL)
@@ -113,7 +121,7 @@ func preparation_setup(roster: Array[Dictionary]) -> bool:
 		if not raw_level is int or int(raw_level) < 1 or int(raw_level) > Catalog.MAX_MATCH_LEVEL:
 			return false
 		var unique_character: String = "%d:%s" % [team, character_key]
-		if unit_id < 1 or seen_ids.has(unit_id) or not specs.has(character_key) or team not in [0, 1] or seen_characters.has(unique_character):
+		if unit_id < 1 or seen_ids.has(unit_id) or (not specs.has(character_key) and not summon_specs.has(character_key)) or team not in [0, 1] or seen_characters.has(unique_character):
 			return false
 		if enabled and (not Grid.belongs_to_team(cell, team) or occupied.has(cell)):
 			return false
@@ -378,9 +386,13 @@ func _tick() -> void:
 	_update_lassos(FIXED_STEP)
 	_update_assassin_hunts(FIXED_STEP)
 	_update_briefcase_guards(FIXED_STEP)
+	_update_boss_spells(action_delta)
 	## Stable IDs determine ties in this prototype; not a claim of PvP fairness.
 	for unit: UnitState in units:
 		if not unit.active or not unit.alive or unit.stun_remaining > 0.0:
+			continue
+		## O Boss Desenvolvedor não dá socos nem persegue; conjura poderes à distância.
+		if unit.is_boss:
 			continue
 		## Waiting out of reach never banks attacks to be repaid as a burst.
 		unit.attack_cooldown = maxf(0.0, unit.attack_cooldown - action_delta)
@@ -420,7 +432,7 @@ func _find_target(source: UnitState) -> UnitState:
 				var guardian: UnitState = get_unit(current.guardian_id)
 				if guardian != null and guardian.active and guardian.alive:
 					return guardian
-			var is_tank: bool = "vanguarda" in current.spec.synergy_tags or current.guardian_id >= 0 or current.key in ["obama", "barbie", "lula", "ken"]
+			var is_tank: bool = current.summoned or "vanguarda" in current.spec.synergy_tags or current.guardian_id >= 0 or current.key in ["obama", "barbie", "lula", "ken"]
 			var dist: int = Grid.distance(source.cell, current.cell)
 			if is_tank or dist <= source.spec.attack_range:
 				return current
@@ -432,7 +444,7 @@ func _find_target(source: UnitState) -> UnitState:
 		if not candidate.active or not candidate.alive or candidate.team == source.team:
 			continue
 		var candidate_distance: int = Grid.distance(source.cell, candidate.cell)
-		var candidate_is_tank: bool = "vanguarda" in candidate.spec.synergy_tags or candidate.guardian_id >= 0 or candidate.key in ["obama", "barbie", "lula", "ken"]
+		var candidate_is_tank: bool = candidate.summoned or "vanguarda" in candidate.spec.synergy_tags or candidate.guardian_id >= 0 or candidate.key in ["obama", "barbie", "lula", "ken"]
 		var is_closer: bool = candidate_distance < best_distance
 		var same_dist: bool = candidate_distance == best_distance
 		var takes_taunt_priority: bool = same_dist and candidate_is_tank and not best_is_tank
@@ -447,6 +459,20 @@ func _find_target(source: UnitState) -> UnitState:
 		var guardian: UnitState = get_unit(best.guardian_id)
 		if guardian != null and guardian.active and guardian.alive:
 			return guardian
+
+	## Mobs sumonados do Boss puxam o aggro de quem atacaria o Boss enquanto estiverem vivos.
+	if best != null and best.is_boss:
+		var summon_taunter: UnitState = null
+		var min_summon_dist: int = 1000
+		for cand: UnitState in units:
+			if cand.team == best.team and cand.active and cand.alive and cand.summoned:
+				var s_dist: int = Grid.distance(source.cell, cand.cell)
+				if s_dist < min_summon_dist or (s_dist == min_summon_dist and (summon_taunter == null or cand.id < summon_taunter.id)):
+					min_summon_dist = s_dist
+					summon_taunter = cand
+		if summon_taunter != null:
+			return summon_taunter
+
 	return best
 
 ## TESTE: uma caça inicial ao maior dano à distância, sem salto e sem trocar de presa.
@@ -525,6 +551,9 @@ func _attack(source: UnitState, target: UnitState) -> void:
 	source.attack_count += 1
 	source.last_action = "attack"
 	_emit("attack", {"source_id": source.id, "target_id": target.id})
+	if source.spec.max_mana > 0.0 and source.spec.mana_per_attack > 0.0:
+		source.mana = minf(source.spec.max_mana, source.mana + source.spec.mana_per_attack)
+		_emit("mana_gained", {"source_id": source.id, "amount": source.mana, "max_mana": source.spec.max_mana})
 	var miss_chance: float = _smoke_miss_chance(source)
 	if miss_chance > 0.0 and _rng.randf() < miss_chance:
 		_emit("miss", {"source_id": source.id, "target_id": target.id})
@@ -547,10 +576,18 @@ func _attack(source: UnitState, target: UnitState) -> void:
 	var kind: String = source.spec.projectile_kind
 	if kind.is_empty() and source.key == "neymar":
 		kind = "ball"
+	var is_super: bool = false
+	if source.spec.super_attack_interval > 0:
+		if source.attack_count % source.spec.super_attack_interval == 0:
+			is_super = true
+			damage *= source.spec.super_damage_multiplier
+		else:
+			if kind == "rocket":
+				kind = "mini_rocket"
 	if kind == "ball":
 		_launch_ball(source, target, damage, critical)
-	elif kind in ["rocket", "smoke"]:
-		_launch_projectile(source, target, damage, critical, kind)
+	elif kind in ["rocket", "mini_rocket", "smoke"]:
+		_launch_projectile(source, target, damage, critical, kind, is_super)
 	else:
 		_deal_damage(source.id, target, damage, critical, "hit", false, source.damage_type)
 		if source.key == "caramelo" and target.alive:
@@ -578,7 +615,7 @@ func _launch_ball(source: UnitState, target: UnitState, damage: float, critical:
 	_emit("kick", {"projectile_id": ball.id, "source_id": source.id, "target_id": target.id, "flight_duration": ball.flight_duration, "critical": critical})
 
 ## Foguete (Elon) e fumaça (Snoop): um trecho só, sem ricochete.
-func _launch_projectile(source: UnitState, target: UnitState, damage: float, critical: bool, kind: String) -> void:
+func _launch_projectile(source: UnitState, target: UnitState, damage: float, critical: bool, kind: String, is_super: bool = false) -> void:
 	var projectile: BallProjectile = BallProjectile.new()
 	projectile.id = _next_projectile_id
 	_next_projectile_id += 1
@@ -590,21 +627,43 @@ func _launch_projectile(source: UnitState, target: UnitState, damage: float, cri
 	projectile.raw_damage = damage
 	projectile.critical = critical
 	projectile.damage_type = source.damage_type
+	projectile.is_super = is_super
 	_set_ball_leg(projectile, source.cell, target, source.spec)
 	projectiles.append(projectile)
-	_emit("projectile_launched", {"projectile_id": projectile.id, "source_id": source.id, "target_id": target.id, "kind": kind})
+	_emit("projectile_launched", {"projectile_id": projectile.id, "source_id": source.id, "target_id": target.id, "kind": kind, "is_super": is_super})
+	if is_super:
+		_emit("super_attack", {"source_id": source.id, "target_id": target.id, "kind": kind})
 
 func _resolve_projectile(projectile: BallProjectile, target: UnitState) -> void:
 	var source: UnitState = get_unit(projectile.source_id)
-	if projectile.kind == "rocket":
+	if projectile.kind == "mini_rocket":
+		_deal_damage(projectile.source_id, target, projectile.raw_damage, projectile.critical, "mini_rocket_hit", false, projectile.damage_type)
+		_emit("mini_rocket_impact", {"source_id": projectile.source_id, "target_id": target.id, "cell": target.cell})
+	elif projectile.kind == "rocket":
 		var center: Vector2i = target.cell
 		_deal_damage(projectile.source_id, target, projectile.raw_damage, projectile.critical, "rocket_hit", false, projectile.damage_type)
 		var radius: int = source.spec.splash_radius if source != null else 0
 		var ratio: float = source.spec.splash_ratio if source != null else 0.0
-		_emit("explosion", {"source_id": projectile.source_id, "cell": center, "radius": radius})
-		if radius > 0 and ratio > 0.0 and source != null:
+		var depth: int = source.spec.super_splash_depth if (source != null and projectile.is_super) else 0
+		var affected_cells: Array[Vector2i] = [center]
+		if radius > 0:
+			for candidate: Vector2i in Grid.neighbors(center):
+				if not affected_cells.has(candidate):
+					affected_cells.append(candidate)
+		if depth > 0 and source != null:
+			# Retaguarda do alvo na direção do avanço do time atacante:
+			for x: int in range(Grid.WIDTH):
+				for y: int in range(Grid.HEIGHT):
+					var c: Vector2i = Vector2i(x, y)
+					var dist: int = Grid.distance(c, center)
+					if dist > 0 and dist <= radius + depth:
+						var is_behind: bool = (c.y < center.y) if source.team == 0 else (c.y > center.y)
+						if is_behind and not affected_cells.has(c):
+							affected_cells.append(c)
+		_emit("explosion", {"source_id": projectile.source_id, "cell": center, "radius": radius, "depth": depth, "is_super": projectile.is_super, "cells": affected_cells})
+		if ratio > 0.0 and source != null:
 			for other: UnitState in units.duplicate():
-				if other.id != target.id and other.active and other.alive and other.team != source.team and Grid.distance(other.cell, center) <= radius:
+				if other.id != target.id and other.active and other.alive and other.team != source.team and affected_cells.has(other.cell):
 					_deal_damage(projectile.source_id, other, projectile.raw_damage * ratio, false, "splash", false, projectile.damage_type)
 	elif projectile.kind == "smoke":
 		var cloud_cell: Vector2i = target.cell
@@ -689,9 +748,13 @@ func _update_lassos(delta: float) -> void:
 	for source: UnitState in units:
 		if not source.active or not source.alive or source.spec.lasso_cooldown <= 0.0 or source.stun_remaining > 0.0:
 			continue
-		source.ability_cooldown = maxf(0.0, source.ability_cooldown - delta)
-		if source.ability_cooldown > 0.000001:
-			continue
+		if source.spec.max_mana > 0.0:
+			if source.mana + 0.000001 < source.spec.max_mana:
+				continue
+		else:
+			source.ability_cooldown = maxf(0.0, source.ability_cooldown - delta)
+			if source.ability_cooldown > 0.000001:
+				continue
 		var target: UnitState = null
 		var best_distance: int = -1
 		for candidate: UnitState in units:
@@ -703,6 +766,8 @@ func _update_lassos(delta: float) -> void:
 				best_distance = distance
 		if target == null:
 			continue
+		if source.spec.max_mana > 0.0:
+			source.mana = 0.0
 		source.ability_cooldown = source.spec.lasso_cooldown
 		var from: Vector2i = target.cell
 		if best_distance > 1:
@@ -716,6 +781,132 @@ func _update_lassos(delta: float) -> void:
 		source.last_action = "lasso"
 		_emit("lasso", {"source_id": source.id, "target_id": target.id, "from": from, "to": target.cell, "stun": source.spec.lasso_stun})
 		_deal_damage(source.id, target, source.spec.lasso_damage * source.level_multiplier, false, "lasso_hit", false, "physical")
+
+## Boss Desenvolvedor (Round 4): Fogo vermelho ardente, fogo roxo explosivo, furacão de chamas com empurrão e invocações escalonadas
+func _update_boss_spells(delta: float) -> void:
+	for unit: UnitState in units:
+		if not unit.active or not unit.alive or not unit.is_boss or unit.stun_remaining > 0.0:
+			continue
+		
+		# 1. Invocação de monstros em tempos específicos
+		for s_idx: int in range(unit.spec.boss_summon_times.size()):
+			var spawn_time: float = unit.spec.boss_summon_times[s_idx]
+			if elapsed >= spawn_time and not unit.boss_summons_spawned.has(s_idx):
+				unit.boss_summons_spawned.append(s_idx)
+				var summon_key: String = unit.spec.boss_summon_keys[s_idx]
+				var def: UnitSpec = summon_specs.get(summon_key, null)
+				if def != null:
+					var cell: Vector2i = _free_cell_near(unit.cell, unit.team)
+					if cell != Grid.INVALID:
+						var summon_id: int = maxi(1, unit.id + SUMMON_ID_OFFSET + (s_idx + 1) * 10)
+						while get_unit(summon_id) != null:
+							summon_id += 1
+						var summon: UnitState = UnitState.new(def, summon_id, unit.team, cell)
+						summon.summoned = true
+						summon.summoner_id = unit.id
+						units.append(summon)
+						unit.last_action = "cast"
+						_emit("summon", {"source_id": unit.id, "target_id": summon.id, "cell": cell, "key": summon_key})
+						_emit("boss_summon", {"boss_id": unit.id, "target_id": summon.id, "cell": cell, "key": summon_key})
+						for enemy: UnitState in units:
+							if enemy.team != summon.team and enemy.active and enemy.alive:
+								enemy.target_id = summon.id
+		
+		# 2. Fogo Vermelho (Disparo incandescente de dano concentrado e labaredas em área)
+		unit.boss_red_fire_timer = maxf(0.0, unit.boss_red_fire_timer - delta)
+		if unit.boss_red_fire_timer <= 0.000001:
+			unit.boss_red_fire_timer = unit.spec.boss_red_fire_cooldown
+			var target: UnitState = _find_threat_target(1 - unit.team)
+			if target != null:
+				var target_cell: Vector2i = target.cell
+				var impact_damage: float = unit.spec.boss_red_fire_damage
+				unit.last_action = "cast"
+				_emit("boss_cast", {"source_id": unit.id, "spell": "red_fire", "from": unit.cell, "to": target_cell})
+				for victim: UnitState in units:
+					if victim.active and victim.alive and victim.team != unit.team:
+						if Grid.distance(target_cell, victim.cell) <= 1:
+							_deal_damage(unit.id, victim, impact_damage, false, "red_fire_hit", false, "magic")
+				_emit("red_fire_explosion", {"source_id": unit.id, "center": target_cell, "radius": 1, "damage": impact_damage})
+
+		# 3. Fogo Roxo (Projétil em área com explosão mágica)
+		unit.boss_purple_fire_timer = maxf(0.0, unit.boss_purple_fire_timer - delta)
+		if unit.boss_purple_fire_timer <= 0.000001:
+			unit.boss_purple_fire_timer = unit.spec.boss_purple_fire_cooldown
+			var target: UnitState = _find_cluster_target(1 - unit.team)
+			if target != null:
+				var target_cell: Vector2i = target.cell
+				var impact_damage: float = unit.spec.boss_purple_fire_damage
+				unit.last_action = "cast"
+				_emit("boss_cast", {"source_id": unit.id, "spell": "purple_fire", "from": unit.cell, "to": target_cell})
+				for victim: UnitState in units:
+					if victim.active and victim.alive and victim.team != unit.team:
+						if Grid.distance(target_cell, victim.cell) <= 1:
+							_deal_damage(unit.id, victim, impact_damage, false, "purple_fire_hit", false, "magic")
+				_emit("purple_fire_explosion", {"source_id": unit.id, "center": target_cell, "radius": 1, "damage": impact_damage})
+		
+		# 4. Furacão de Fogo (Dano em área + Deslocamento / Embaralhamento da formação)
+		unit.boss_tornado_timer = maxf(0.0, unit.boss_tornado_timer - delta)
+		if unit.boss_tornado_timer <= 0.000001:
+			unit.boss_tornado_timer = unit.spec.boss_tornado_cooldown
+			var target: UnitState = _find_cluster_target(1 - unit.team)
+			if target != null:
+				var center_cell: Vector2i = target.cell
+				var tornado_damage: float = unit.spec.boss_tornado_damage
+				unit.last_action = "cast"
+				_emit("boss_cast", {"source_id": unit.id, "spell": "fire_tornado", "center": center_cell, "radius": 1})
+				var victims_to_displace: Array[UnitState] = []
+				for victim: UnitState in units:
+					if victim.active and victim.alive and victim.team != unit.team:
+						if Grid.distance(center_cell, victim.cell) <= 1:
+							_deal_damage(unit.id, victim, tornado_damage, false, "fire_tornado_hit", false, "magic")
+							victims_to_displace.append(victim)
+				for victim: UnitState in victims_to_displace:
+					if victim.alive:
+						var free_cell: Vector2i = _find_free_adjacent_cell(victim.cell)
+						if free_cell != Grid.INVALID:
+							var old_pos: Vector2i = victim.cell
+							victim.previous_cell = old_pos
+							victim.cell = free_cell
+							_emit("unit_displaced", {"unit_id": victim.id, "from": old_pos, "to": free_cell, "reason": "fire_tornado"})
+				_emit("fire_tornado", {"source_id": unit.id, "center": center_cell, "radius": 1, "damage": tornado_damage})
+
+func _find_threat_target(enemy_team: int) -> UnitState:
+	var best_unit: UnitState = null
+	var highest_threat: float = -1.0
+	for candidate: UnitState in units:
+		if not candidate.active or not candidate.alive or candidate.team != enemy_team:
+			continue
+		var threat: float = candidate.attack_damage * candidate.attack_speed_multiplier
+		if threat > highest_threat or (threat == highest_threat and (best_unit == null or candidate.id < best_unit.id)):
+			highest_threat = threat
+			best_unit = candidate
+	if best_unit == null:
+		return _find_cluster_target(enemy_team)
+	return best_unit
+
+func _find_cluster_target(enemy_team: int) -> UnitState:
+	var best_unit: UnitState = null
+	var best_neighbors: int = -1
+	for candidate: UnitState in units:
+		if not candidate.active or not candidate.alive or candidate.team != enemy_team:
+			continue
+		var neighbors: int = 0
+		for other: UnitState in units:
+			if other.active and other.alive and other.team == enemy_team:
+				if Grid.distance(candidate.cell, other.cell) <= 1:
+					neighbors += 1
+		if neighbors > best_neighbors or (neighbors == best_neighbors and (best_unit == null or candidate.id < best_unit.id)):
+			best_neighbors = neighbors
+			best_unit = candidate
+	return best_unit
+
+func _find_free_adjacent_cell(origin: Vector2i) -> Vector2i:
+	var occupied: Dictionary = _occupied_cells()
+	var candidates: Array[Vector2i] = Grid.neighbors(origin)
+	for cell: Vector2i in candidates:
+		if not occupied.has(cell) and Grid.contains(cell):
+			return cell
+	return Grid.INVALID
 
 func _set_ball_leg(ball: BallProjectile, origin: Vector2i, target: UnitState, definition: UnitSpec) -> void:
 	ball.from_cell = origin
@@ -795,7 +986,9 @@ func _update_support_skills(delta: float) -> void:
 		source.support_cooldown = source.spec.heal_interval
 		_emit("heal_pulse", {"source_id": source.id})
 		for target: UnitState in units:
-			if not target.active or not target.alive or target.team != source.team or Grid.distance(source.cell, target.cell) > source.spec.heal_range:
+			if not target.active or not target.alive or target.team != source.team:
+				continue
+			if not source.spec.heal_teamwide and Grid.distance(source.cell, target.cell) > source.spec.heal_range:
 				continue
 			var effective: float = minf(source.spec.heal_amount * source.level_multiplier, target.max_hp - target.hp)
 			if effective <= 0.000001:
@@ -904,9 +1097,9 @@ func _update_bleeds(delta: float) -> void:
 			bleed["remaining"] = float(bleed["remaining"]) - delta
 			bleed["until_tick"] = float(bleed["until_tick"]) - delta
 			if float(bleed["until_tick"]) <= 0.000001 and float(bleed["remaining"]) >= -0.000001:
-				var was_revived: bool = target.revived
+				var revives_before: int = target.revive_count
 				_deal_damage(int(bleed["source_id"]), target, float(bleed["damage"]), false, "bleed")
-				if not was_revived and target.revived:
+				if target.revive_count > revives_before:
 					## Revival cleanses all bleeds, including effects already retained locally.
 					remaining.clear()
 					break
@@ -945,13 +1138,19 @@ func _deal_damage(source_id: int, target: UnitState, raw_damage: float, critical
 		team_damage[source.team] += effective
 		source.damage_dealt += effective
 	_emit(kind, {"source_id": source_id, "target_id": target.id, "amount": effective, "absorbed": absorbed, "absorbed_dance": absorbed_dance, "absorbed_base": absorbed_base, "critical": critical, "damage_type": "execution" if execution else damage_type})
-	if target.hp <= 0.000001 and target.spec.revive_ratio > 0.0 and not target.revived:
-		## Lula "volta por cima": na primeira queda da rodada, levanta com parte da vida máxima.
+	var revival_ratio: float = 0.0
+	if target.revive_count == 0:
+		revival_ratio = target.spec.revive_ratio
+	elif target.revive_count == 1 and target.level >= target.spec.extra_revive_min_level:
+		revival_ratio = target.spec.extra_revive_ratio
+	if target.hp <= 0.000001 and revival_ratio > 0.0:
+		## Primeiro retorno40%; no N3 Lula tem mais um retorno configurado30%.
 		target.revived = true
-		target.hp = target.max_hp * target.spec.revive_ratio
+		target.revive_count += 1
+		target.hp = target.max_hp * revival_ratio
 		target.bleeds.clear()
 		target.stun_remaining = 0.0
-		_emit("revive", {"source_id": source_id, "target_id": target.id, "amount": target.hp})
+		_emit("revive", {"source_id": source_id, "target_id": target.id, "amount": target.hp, "count": target.revive_count})
 		return
 	if target.hp <= 0.000001:
 		target.hp = 0.0
@@ -964,6 +1163,19 @@ func _deal_damage(source_id: int, target: UnitState, raw_damage: float, critical
 			source.kills += 1
 		_emit("death", {"source_id": source_id, "target_id": target.id})
 
+## Sem chefe ativo existente não há vitória/recompensa PvE, mesmo com mais tropas.
+func boss_defeated() -> bool:
+	if not is_boss_round:
+		return false
+	var found_boss: bool = false
+	for unit: UnitState in units:
+		if not unit.active or not unit.is_boss or unit.team != 1:
+			continue
+		found_boss = true
+		if unit.alive:
+			return false
+	return found_boss
+
 func _check_resolution() -> void:
 	var survivors: Array[int] = [0, 0]
 	for unit: UnitState in units:
@@ -971,7 +1183,17 @@ func _check_resolution() -> void:
 			survivors[unit.team] += 1
 	var winner: int = -1
 	var reason: String = ""
-	if survivors[0] == 0 or survivors[1] == 0:
+	if is_boss_round:
+		if boss_defeated():
+			winner = 0
+			reason = "elimination"
+		elif survivors[0] == 0:
+			winner = 1
+			reason = "elimination"
+		elif elapsed + 0.000001 >= round_duration:
+			winner = 1
+			reason = "timeout"
+	elif survivors[0] == 0 or survivors[1] == 0:
 		reason = "elimination"
 		if survivors[0] != survivors[1]:
 			winner = 0 if survivors[0] > survivors[1] else 1
@@ -987,12 +1209,12 @@ func _check_resolution() -> void:
 	if reason.is_empty():
 		return
 	phase = "finished"
-	if winner >= 0:
+	if winner >= 0 and not is_boss_round:
 		var loser: int = 1 - winner
 		team_lives[loser] = maxi(0, team_lives[loser] - 1)
 		if team_lives[loser] == 0:
 			match_winner = winner
-	round_result = {"winner": winner, "reason": reason, "survivors": survivors, "damage": team_damage.duplicate(), "elapsed": elapsed, "units_summary": unit_summaries()}
+	round_result = {"winner": winner, "reason": reason, "survivors": survivors, "damage": team_damage.duplicate(), "elapsed": elapsed, "units_summary": unit_summaries(), "is_boss_round": is_boss_round}
 	projectiles.clear()
 	zones.clear()
 	_emit("round_finished", round_result.duplicate(true))
@@ -1021,6 +1243,7 @@ func snapshot() -> Dictionary:
 	return {
 		"phase": phase, "tick": tick, "elapsed": elapsed, "round": round_index,
 		"lives": team_lives.duplicate(), "match_winner": match_winner,
+		"is_boss_round": is_boss_round,
 		"units": unit_snapshots, "projectiles": projectile_snapshots,
 		"damage": team_damage.duplicate(), "result": round_result.duplicate(true),
 		"accelerated": accelerated, "synergies": synergy_snapshot.duplicate(true), "zones": zones.duplicate(true)

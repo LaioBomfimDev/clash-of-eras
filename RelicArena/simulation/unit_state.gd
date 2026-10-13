@@ -28,6 +28,8 @@ var level_multiplier: float = 1.0
 ## Lote 03: atordoamento (Rapunzel), volta por cima (Lula), invocação (Ken) e laço.
 var stun_remaining: float = 0.0
 var revived: bool = false
+var revive_count: int = 0
+var mana: float = 0.0
 var summoned: bool = false
 var summoner_id: int = -1
 var guardian_id: int = -1
@@ -65,6 +67,12 @@ var last_action: String = "idle"
 var target_id: int = -1
 ## One refreshable bleed per source, no unlimited stacks.
 var bleeds: Array[Dictionary] = []
+## Boss Desenvolvedor
+var is_boss: bool = false
+var boss_red_fire_timer: float = 1.2
+var boss_tornado_timer: float = 4.8
+var boss_purple_fire_timer: float = 2.4
+var boss_summons_spawned: Array[int] = []
 
 func _init(definition: UnitSpec, unit_id: int, side: int, start_cell: Vector2i) -> void:
 	spec = definition
@@ -86,6 +94,11 @@ func _init(definition: UnitSpec, unit_id: int, side: int, start_cell: Vector2i) 
 	assassin_opening_remaining = definition.assassin_opening_duration
 	assassin_opening_finished = definition.assassin_opening_duration <= 0.0
 	briefcase_cooldown = definition.briefcase_guard_interval
+	is_boss = definition.is_boss
+	boss_red_fire_timer = 1.2
+	boss_tornado_timer = 4.8
+	boss_purple_fire_timer = 2.4
+	boss_summons_spawned.clear()
 	recalculate_combat_stats()
 
 ## Somente na preparação: o escudo inicial da mala volta ao valor do novo nível.
@@ -97,7 +110,10 @@ func apply_level(new_level: int, multiplier: float) -> void:
 
 func recalculate_combat_stats() -> void:
 	var health_ratio: float = hp / max_hp if max_hp > 0.0 else 1.0
-	max_hp = maxf(1.0, (spec.max_hp * level_multiplier * float(equipment_modifiers.get("hp_mult", 1.0)) + float(equipment_modifiers.get("hp_bonus", 0.0))) * synergy_hp_multiplier)
+	var base_hp: float = spec.max_hp * level_multiplier
+	if spec.max_hp_by_level.size() == 3:
+		base_hp = spec.max_hp_by_level[clampi(level - 1, 0, 2)]
+	max_hp = maxf(1.0, (base_hp * float(equipment_modifiers.get("hp_mult", 1.0)) + float(equipment_modifiers.get("hp_bonus", 0.0))) * synergy_hp_multiplier)
 	hp = clampf(max_hp * health_ratio, 0.0, max_hp)
 	attack_damage = maxf(0.0, (spec.attack_damage * level_multiplier * float(equipment_modifiers.get("attack_mult", 1.0)) + float(equipment_modifiers.get("attack_bonus", 0.0))) * synergy_attack_multiplier)
 	armor = maxf(0.0, spec.armor * float(equipment_modifiers.get("armor_mult", 1.0)) + float(equipment_modifiers.get("armor_bonus", 0.0)) + synergy_armor_bonus)
@@ -118,7 +134,7 @@ func as_dictionary() -> Dictionary:
 		"moonwalk_from_cell": [moonwalk_from_cell.x, moonwalk_from_cell.y],
 		"moonwalk_to_cell": [moonwalk_to_cell.x, moonwalk_to_cell.y],
 		"facing_axial": [facing_axial.x, facing_axial.y],
-		"alive": alive, "active": active, "crit_growth": crit_growth, "level": level, "stun_remaining": stun_remaining, "revived": revived, "summoned": summoned, "summoner_id": summoner_id, "guardian_id": guardian_id,
+		"alive": alive, "active": active, "crit_growth": crit_growth, "level": level, "stun_remaining": stun_remaining, "revived": revived, "summoned": summoned, "summoner_id": summoner_id, "guardian_id": guardian_id, "is_boss": is_boss,
 		"attack_damage": attack_damage, "armor": armor, "resist": resist,
 		"damage_type": damage_type, "synergy_tags": spec.synergy_tags.duplicate(),
 		"damage_dealt": damage_dealt, "healing_done": healing_done,
@@ -126,6 +142,7 @@ func as_dictionary() -> Dictionary:
 		"equipment_modifiers": equipment_modifiers.duplicate(true),
 		"equipment": equipment.duplicate(true),
 		"attack_count": attack_count, "target_id": target_id,
+		"mana": mana, "max_mana": spec.max_mana, "revive_count": revive_count,
 		"attack_speed_multiplier": attack_speed_multiplier,
 		"effective_crit_chance": effective_crit_chance,
 		"crit_growth_hits": crit_growth_hits, "crit_damage_multiplier": spec.crit_multiplier + crit_growth,

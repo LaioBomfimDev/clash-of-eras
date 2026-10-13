@@ -17,9 +17,12 @@ var rooms: Dictionary = {} # room_id -> RoomData
 var next_client_id: int = 1
 var next_room_id: int = 1
 
-# Snapshot/Eventos push rate limiter adaptativo (otimizado para evitar lag e sobrecarga na nuvem/mobile)
-const COMBAT_SNAPSHOT_INTERVAL: float = 0.10 # 10 FPS durante combate (fluido com interpolação do cliente)
-const PREP_SNAPSHOT_INTERVAL: float = 0.50 # 2 FPS durante preparação (comandos continuam com envio instantâneo)
+# Taxa de snapshots por fase; não define o FPS da interface.
+const COMBAT_SNAPSHOT_INTERVAL: float = 0.10 # 10 snapshots/s durante combate.
+const PREP_SNAPSHOT_INTERVAL: float = 0.50 # 2 snapshots/s; comandos atualizam no mesmo step.
+const CATALOG_CACHE_CAPABILITY: String = "snapshot_catalog_cache_v1"
+## Uma conexão lenta recebe o próximo estado atual, sem acumular estados obsoletos.
+const SNAPSHOT_BACKPRESSURE_BYTES: int = 16 * 1024
 
 
 class RoomData:
@@ -28,6 +31,8 @@ class RoomData:
 	var player_ids: Array[int] = [-1, -1]
 	var player_names: Array[String] = ["Jogador 1", "Jogador 2"]
 	var snapshot_timer: float = 0.0
+	var snapshot_dirty: bool = false
+	var last_phase: String = ""
 	var command_counter: Array[int] = [0, 0]
 	var last_bought_offer: Dictionary = {} # offer_id -> item_id real
 
@@ -123,6 +128,8 @@ func _handle_client_message(client: Dictionary, msg: Dictionary) -> void:
 	match msg_type:
 		"join_queue":
 			if not matchmaking_queue.has(c_id) and str(client["room_id"]).is_empty():
+				var capabilities: Variant = msg.get("capabilities", [])
+				client["catalog_cache_enabled"] = capabilities is Array and capabilities.has(CATALOG_CACHE_CAPABILITY)
 				var req_name: String = str(msg.get("name", "")).strip_edges()
 				if not req_name.is_empty():
 					client["name"] = req_name.substr(0, 16)
@@ -146,6 +153,9 @@ func _handle_client_message(client: Dictionary, msg: Dictionary) -> void:
 
 		"pong":
 			pass
+		"ping":
+			if msg.get("nonce") is int:
+				_send_to_client(client, {"type": "pong", "nonce": msg["nonce"]})
 
 
 func _update_matchmaking() -> void:
@@ -176,8 +186,15 @@ func _create_room(c1: Dictionary, c2: Dictionary) -> void:
 	var match_seed: int = int(Time.get_ticks_msec()) + next_room_id * 1009
 	room.session = Session.new(match_seed)
 	room.session.bot_enabled = false # PvP puro: ambos os lados são humanos!
+	# O construtor já prepara o bot local; recria a autoridade PvP antes de revelá-la.
+	room.session.reset(match_seed)
 	room.player_ids = [int(c1["id"]), int(c2["id"])]
 	room.player_names = [str(c1["name"]), str(c2["name"])]
+	room.last_phase = room.session.phase
+	for client: Dictionary in [c1, c2]:
+		client["catalog_sent"] = false
+		client["snapshot_pending"] = false
+		client["snapshot_full_pending"] = false
 
 	c1["room_id"] = room_id
 	c2["room_id"] = room_id
@@ -227,8 +244,9 @@ func _process_room_command(room: RoomData, team: int, op: String, payload: Dicti
 		if not offer_id.is_empty() and not item_id.is_empty():
 			room.last_bought_offer[offer_id] = item_id
 
-	# Imediatamente envia o snapshot atualizado e os eventos após comando
-	_broadcast_room_snapshots(room, true)
+	# Todos os comandos deste poll são validados; só o estado final precisa viajar.
+	# _update_rooms envia no mesmo step(), antes de entregar os eventos.
+	room.snapshot_dirty = true
 
 
 func _update_rooms(delta: float) -> void:
@@ -238,6 +256,18 @@ func _update_rooms(delta: float) -> void:
 		var room: RoomData = rooms[r_id]
 		room.session.step(delta)
 		room.snapshot_timer += delta
+		var phase_changed: bool = room.last_phase != room.session.phase
+		var req_interval: float = COMBAT_SNAPSHOT_INTERVAL if room.session.phase == "combat" else PREP_SNAPSHOT_INTERVAL
+		var retry_pending: bool = false
+		for player_id: int in room.player_ids:
+			var client: Dictionary = _find_client(player_id)
+			if bool(client.get("snapshot_pending", false)) and not _snapshot_backpressured(client):
+				retry_pending = true
+		if room.snapshot_dirty or phase_changed or retry_pending or room.snapshot_timer >= req_interval:
+			room.snapshot_timer = 0.0
+			room.snapshot_dirty = false
+			room.last_phase = room.session.phase
+			_broadcast_room_snapshots(room, phase_changed)
 
 		# Envia eventos acumulados
 		var events_by_team: Array[Array] = room.session.drain_events_by_team()
@@ -250,12 +280,6 @@ func _update_rooms(delta: float) -> void:
 						"events": events_by_team[t]
 					})
 
-		# Envia snapshots periódicos com taxa adaptativa por fase
-		var req_interval: float = COMBAT_SNAPSHOT_INTERVAL if room.session.phase == "combat" else PREP_SNAPSHOT_INTERVAL
-		if room.snapshot_timer >= req_interval:
-			room.snapshot_timer = 0.0
-			_broadcast_room_snapshots(room, false)
-
 		if room.session.phase == "match_over":
 			_broadcast_match_over(room)
 			finished_rooms.append(r_id)
@@ -264,15 +288,30 @@ func _update_rooms(delta: float) -> void:
 		_close_room(r_id, "Partida concluída")
 
 
-func _broadcast_room_snapshots(room: RoomData, _force: bool) -> void:
+func _broadcast_room_snapshots(room: RoomData, force_full: bool) -> void:
 	for t: int in range(2):
 		var c: Dictionary = _find_client(room.player_ids[t])
 		if not c.is_empty():
+			if _snapshot_backpressured(c):
+				c["snapshot_pending"] = true
+				c["snapshot_full_pending"] = force_full or bool(c.get("snapshot_full_pending", false))
+				continue
 			var snap: Dictionary = room.session.snapshot_for_team(t)
-			_send_to_client(c, {
-				"type": "snapshot",
-				"snapshot": snap
-			})
+			var cached: bool = bool(c.get("catalog_cache_enabled", false)) and bool(c.get("catalog_sent", false)) and not force_full and not bool(c.get("snapshot_full_pending", false))
+			var message: Dictionary = {"type": "snapshot", "snapshot": snap}
+			if cached:
+				snap.erase("recipes")
+				snap.erase("item_catalog")
+				message["catalog_cached"] = true
+			if _send_to_client(c, message):
+				c["catalog_sent"] = true
+				c["snapshot_pending"] = false
+				c["snapshot_full_pending"] = false
+
+
+func _snapshot_backpressured(client: Dictionary) -> bool:
+	var peer: WebSocketPeer = client.get("peer")
+	return peer != null and peer.get_current_outbound_buffered_amount() >= SNAPSHOT_BACKPRESSURE_BYTES
 
 
 func _broadcast_match_over(room: RoomData) -> void:
@@ -321,8 +360,14 @@ func _find_client(c_id: int) -> Dictionary:
 	return {}
 
 
-func _send_to_client(client: Dictionary, msg: Dictionary) -> void:
+func _send_to_client(client: Dictionary, msg: Dictionary) -> bool:
 	var ws: WebSocketPeer = client.get("peer")
 	if ws != null and ws.get_ready_state() == WebSocketPeer.STATE_OPEN:
 		var bytes: PackedByteArray = Protocol.encode(msg)
-		ws.send(bytes, WebSocketPeer.WRITE_MODE_BINARY)
+		var err: Error = ws.send(bytes, WebSocketPeer.WRITE_MODE_BINARY)
+		if err != OK:
+			# Eventos confiáveis não podem sumir silenciosamente numa fila cheia.
+			ws.close(1011, "Fila de envio indisponível")
+			return false
+		return true
+	return false

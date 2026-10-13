@@ -75,6 +75,10 @@ func frame_for(unit: Dictionary, direction: String, walking: bool) -> Dictionary
 		_actions.erase(unit_id)
 	if not walking or not _has_clip(key, "walk", direction):
 		_walks.erase(unit_id)
+		# Pose opcional com os pés no chão: a pedra do retrato não reaparece
+		# entre passos/golpes. Continua exigindo uma direção realmente exportada.
+		if _has_clip(key, "stance", direction):
+			return _frame(key, "stance", direction, 0.0)
 		return {}
 	var walk: Dictionary = _walks.get(unit_id, {})
 	if walk.is_empty() or str(walk["key"]) != key or str(walk["direction"]) != direction:

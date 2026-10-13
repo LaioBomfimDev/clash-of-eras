@@ -9,7 +9,7 @@ var failed: int = 0
 func _initialize() -> void:
 	var library: VfxLibrary = VfxLibrary.new()
 	library.load_assets()
-	_check(library.effects.size() == 15, "fifteen exported effects load")
+	_check(library.effects.size() == 17, "seventeen exported effects load")
 	var expected: Dictionary = {
 		"escudo_danca_01": {"frames": 12, "fps": 10.0, "size": Vector2(43, 43), "offset": Vector2(-21, -43), "columns": 4, "rows": 3, "loop": true, "clip": "part-bubble_shield"},
 		"cura_01": {"frames": 11, "fps": 16.0, "size": Vector2(19, 23), "offset": Vector2(-9, -20), "columns": 4, "rows": 3, "loop": false, "clip": "part-cura"},
@@ -25,7 +25,9 @@ func _initialize() -> void:
 		"explosao_03": {"frames": 17, "fps": 18.0, "size": Vector2(240, 207), "offset": Vector2(-120, -132), "columns": 5, "rows": 4, "loop": false, "clip": "whole"},
 		"estilhaco_01": {"frames": 10, "fps": 18.0, "size": Vector2(65, 67), "offset": Vector2(-33, -52), "columns": 4, "rows": 3, "loop": false, "clip": "whole"},
 		"zumbi_estocada_critica": {"frames": 7, "fps": 24.0, "size": Vector2(34, 12), "offset": Vector2(-5, -6), "columns": 3, "rows": 3, "loop": false, "clip": "whole"},
-		"zumbi_inspiracao": {"frames": 7, "fps": 20.0, "size": Vector2(21, 17), "offset": Vector2(-10, -22), "columns": 3, "rows": 3, "loop": false, "clip": "part-inspiracao"}
+		"zumbi_inspiracao": {"frames": 7, "fps": 20.0, "size": Vector2(21, 17), "offset": Vector2(-10, -22), "columns": 3, "rows": 3, "loop": false, "clip": "part-inspiracao"},
+		"notas_bob_01": {"frames": 6, "fps": 6.0, "size": Vector2(14, 14), "offset": Vector2(-7, -7), "columns": 3, "rows": 2, "loop": true, "clip": "whole"},
+		"charutao_snoop_01": {"frames": 4, "fps": 6.0, "size": Vector2(30, 28), "offset": Vector2(-1, -21), "columns": 2, "rows": 2, "loop": true, "clip": "whole"}
 	}
 	for key: String in expected:
 		_test_effect(library, key, expected[key])
@@ -34,7 +36,7 @@ func _initialize() -> void:
 	_check(library.frame_data("cura_01", NAN).is_empty() and library.frame_data("cura_01", INF).is_empty(), "nonfinite time has no drawable frame")
 	_test_safe_clip_selection(library)
 	library.load_assets()
-	_check(library.effects.size() == 15, "reloading assets is idempotent")
+	_check(library.effects.size() == 17, "reloading assets is idempotent")
 	print("VFX LIBRARY TESTS: %d passed, %d failed" % [passed, failed])
 	quit(0 if failed == 0 else 1)
 

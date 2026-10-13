@@ -8,7 +8,8 @@ const DIRECTIONS: Array[String] = ["east", "south-east", "south", "south-west", 
 const BOARD_HEIGHT_TARGETS: Dictionary = {
 	"neymar": 68.0, "caramelo": 56.0, "obama": 70.0, "zumbi": 76.0,
 	"michael": 68.0, "barbie": 68.0, "ken": 68.0, "elon": 68.0,
-	"snoop": 68.0, "lula": 70.0, "bob_marley": 68.0, "rapunzel": 68.0
+	"snoop": 68.0, "lula": 70.0, "bob_marley": 68.0, "rapunzel": 68.0,
+	"boss_dev": 160.0, "monstro_olho_tentaculos": 118.0, "slime_lodo_olho": 108.0
 }
 const STATIC_PATHS: Dictionary = {
 	"neymar": "res://assets/characters/neymar/realista_03/original/Idle/rotations/south.png",
@@ -17,11 +18,14 @@ const STATIC_PATHS: Dictionary = {
 	"zumbi": "res://assets/characters/provisorio/zumbi.png",
 	"barbie": "res://assets/characters/barbie/realista_03/original/Idle/rotations/south.png",
 	"ken": "res://assets/characters/provisorio/ken.png",
-	"elon": "res://assets/characters/provisorio/elon.png",
+	"elon": "res://assets/characters/elon/grande_04/original/Idle/rotations/south.png",
 	"snoop": "res://assets/characters/provisorio/snoop.png",
 	"lula": "res://assets/characters/provisorio/lula.png",
 	"bob_marley": "res://assets/characters/provisorio/bob_marley.png",
 	"rapunzel": "res://assets/characters/provisorio/rapunzel.png",
+	"boss_dev": "res://assets/characters/boss_dev/game_ready/idle_south.png",
+	"monstro_olho_tentaculos": "res://assets/characters/boss_dev/monstros/monstro_olho_tentaculos.png",
+	"slime_lodo_olho": "res://assets/characters/boss_dev/monstros/slime_lodo_olho.png",
 	"cleopatra": "res://assets/characters/provisorio/cleopatra.png",
 	"julio_cesar": "res://assets/characters/provisorio/julio_cesar.png",
 	"einstein": "res://assets/characters/provisorio/einstein.png",
@@ -108,6 +112,14 @@ func texture_for(key: String, direction: String, visual_time: float, animation_s
 			return frames[int(floor(visual_time * fps)) % frames.size()] as Texture2D
 		if rotations.has(direction):
 			return rotations[direction] as Texture2D
+	if key == "boss_dev":
+		if animation_state in ["cast", "attack"]:
+			var cast_tex: Texture2D = statics.get("boss_dev_cast", null)
+			if cast_tex == null:
+				cast_tex = _load_texture("res://assets/characters/boss_dev/game_ready/cast_south_west.png")
+				statics["boss_dev_cast"] = cast_tex
+			if cast_tex != null:
+				return cast_tex
 	if character_states.has(key):
 		var states: Dictionary = character_states[key]
 		var directions: Dictionary = states.get(animation_state, states.get("idle", {}))

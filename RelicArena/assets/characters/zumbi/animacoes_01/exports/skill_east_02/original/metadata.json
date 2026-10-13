@@ -1,0 +1,155 @@
+{
+  "group_id": "b05314cd-22bf-43f1-9c8d-b91da1ec9a9f",
+  "states": [
+    {
+      "character": {
+        "id": "6a5ec045-5930-4955-a684-ef864e5607b9",
+        "name": "Idle",
+        "prompt": "Approved Zumbi dos Palmares warrior, keep the supplied original eight views exactly. Muscular adult Afro-Brazilian spear warrior, deep dark brown skin, short black hair, bare scarred chest, beige trousers, broken ankle shackles, exactly one waist dagger, large leaf-bladed spear, proud statue pose with one foot on a small stone. Realistic adult proportions, detailed pixel art, low top-down game camera.",
+        "size": {
+          "width": 128,
+          "height": 128
+        },
+        "template_id": "mannequin",
+        "directions": 8,
+        "view": "low top-down",
+        "created_at": "2026-10-12T23:03:53.592590+00:00"
+      },
+      "folder": "Idle",
+      "frames": {
+        "rotations": {
+          "south": "Idle/rotations/south.png",
+          "south-east": "Idle/rotations/south-east.png",
+          "east": "Idle/rotations/east.png",
+          "north-east": "Idle/rotations/north-east.png",
+          "north": "Idle/rotations/north.png",
+          "north-west": "Idle/rotations/north-west.png",
+          "west": "Idle/rotations/west.png",
+          "south-west": "Idle/rotations/south-west.png"
+        },
+        "animations": {
+          "spear_thrust_v2": {
+            "east": [
+              "Idle/animations/spear_thrust_v2/east/frame_000.png",
+              "Idle/animations/spear_thrust_v2/east/frame_001.png",
+              "Idle/animations/spear_thrust_v2/east/frame_002.png",
+              "Idle/animations/spear_thrust_v2/east/frame_003.png",
+              "Idle/animations/spear_thrust_v2/east/frame_004.png",
+              "Idle/animations/spear_thrust_v2/east/frame_005.png",
+              "Idle/animations/spear_thrust_v2/east/frame_006.png",
+              "Idle/animations/spear_thrust_v2/east/frame_007.png",
+              "Idle/animations/spear_thrust_v2/east/frame_008.png"
+            ],
+            "west": [
+              "Idle/animations/spear_thrust_v2/west/frame_000.png",
+              "Idle/animations/spear_thrust_v2/west/frame_001.png",
+              "Idle/animations/spear_thrust_v2/west/frame_002.png",
+              "Idle/animations/spear_thrust_v2/west/frame_003.png",
+              "Idle/animations/spear_thrust_v2/west/frame_004.png",
+              "Idle/animations/spear_thrust_v2/west/frame_005.png",
+              "Idle/animations/spear_thrust_v2/west/frame_006.png",
+              "Idle/animations/spear_thrust_v2/west/frame_007.png",
+              "Idle/animations/spear_thrust_v2/west/frame_008.png"
+            ]
+          },
+          "walk_ground_v1": {
+            "east": [
+              "Idle/animations/walk_ground_v1/east/frame_000.png",
+              "Idle/animations/walk_ground_v1/east/frame_001.png",
+              "Idle/animations/walk_ground_v1/east/frame_002.png",
+              "Idle/animations/walk_ground_v1/east/frame_003.png",
+              "Idle/animations/walk_ground_v1/east/frame_004.png",
+              "Idle/animations/walk_ground_v1/east/frame_005.png",
+              "Idle/animations/walk_ground_v1/east/frame_006.png",
+              "Idle/animations/walk_ground_v1/east/frame_007.png"
+            ]
+          },
+          "walk_ground_v2": {
+            "east": [
+              "Idle/animations/walk_ground_v2/east/frame_000.png",
+              "Idle/animations/walk_ground_v2/east/frame_001.png",
+              "Idle/animations/walk_ground_v2/east/frame_002.png",
+              "Idle/animations/walk_ground_v2/east/frame_003.png",
+              "Idle/animations/walk_ground_v2/east/frame_004.png",
+              "Idle/animations/walk_ground_v2/east/frame_005.png",
+              "Idle/animations/walk_ground_v2/east/frame_006.png",
+              "Idle/animations/walk_ground_v2/east/frame_007.png",
+              "Idle/animations/walk_ground_v2/east/frame_008.png"
+            ]
+          },
+          "spear_extension_v3": {
+            "east": [
+              "Idle/animations/spear_extension_v3/east/frame_000.png",
+              "Idle/animations/spear_extension_v3/east/frame_001.png",
+              "Idle/animations/spear_extension_v3/east/frame_002.png",
+              "Idle/animations/spear_extension_v3/east/frame_003.png",
+              "Idle/animations/spear_extension_v3/east/frame_004.png"
+            ],
+            "west": [
+              "Idle/animations/spear_extension_v3/west/frame_000.png",
+              "Idle/animations/spear_extension_v3/west/frame_001.png",
+              "Idle/animations/spear_extension_v3/west/frame_002.png",
+              "Idle/animations/spear_extension_v3/west/frame_003.png",
+              "Idle/animations/spear_extension_v3/west/frame_004.png"
+            ]
+          },
+          "rally_raise_v2": {
+            "east": [
+              "Idle/animations/rally_raise_v2/east/frame_000.png",
+              "Idle/animations/rally_raise_v2/east/frame_001.png",
+              "Idle/animations/rally_raise_v2/east/frame_002.png",
+              "Idle/animations/rally_raise_v2/east/frame_003.png",
+              "Idle/animations/rally_raise_v2/east/frame_004.png"
+            ]
+          },
+          "skill_rally_v1": {
+            "west": [
+              "Idle/animations/skill_rally_v1/west/frame_000.png",
+              "Idle/animations/skill_rally_v1/west/frame_001.png",
+              "Idle/animations/skill_rally_v1/west/frame_002.png",
+              "Idle/animations/skill_rally_v1/west/frame_003.png",
+              "Idle/animations/skill_rally_v1/west/frame_004.png",
+              "Idle/animations/skill_rally_v1/west/frame_005.png",
+              "Idle/animations/skill_rally_v1/west/frame_006.png"
+            ],
+            "east": [
+              "Idle/animations/skill_rally_v1/east/frame_000.png",
+              "Idle/animations/skill_rally_v1/east/frame_001.png",
+              "Idle/animations/skill_rally_v1/east/frame_002.png",
+              "Idle/animations/skill_rally_v1/east/frame_003.png",
+              "Idle/animations/skill_rally_v1/east/frame_004.png",
+              "Idle/animations/skill_rally_v1/east/frame_005.png",
+              "Idle/animations/skill_rally_v1/east/frame_006.png"
+            ]
+          },
+          "spear_thrust_v1": {
+            "west": [
+              "Idle/animations/spear_thrust_v1/west/frame_000.png",
+              "Idle/animations/spear_thrust_v1/west/frame_001.png",
+              "Idle/animations/spear_thrust_v1/west/frame_002.png",
+              "Idle/animations/spear_thrust_v1/west/frame_003.png",
+              "Idle/animations/spear_thrust_v1/west/frame_004.png",
+              "Idle/animations/spear_thrust_v1/west/frame_005.png",
+              "Idle/animations/spear_thrust_v1/west/frame_006.png",
+              "Idle/animations/spear_thrust_v1/west/frame_007.png",
+              "Idle/animations/spear_thrust_v1/west/frame_008.png"
+            ],
+            "east": [
+              "Idle/animations/spear_thrust_v1/east/frame_000.png",
+              "Idle/animations/spear_thrust_v1/east/frame_001.png",
+              "Idle/animations/spear_thrust_v1/east/frame_002.png",
+              "Idle/animations/spear_thrust_v1/east/frame_003.png",
+              "Idle/animations/spear_thrust_v1/east/frame_004.png",
+              "Idle/animations/spear_thrust_v1/east/frame_005.png",
+              "Idle/animations/spear_thrust_v1/east/frame_006.png",
+              "Idle/animations/spear_thrust_v1/east/frame_007.png",
+              "Idle/animations/spear_thrust_v1/east/frame_008.png"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "export_version": "3.1",
+  "export_date": "2026-10-13T05:38:52.308827"
+}

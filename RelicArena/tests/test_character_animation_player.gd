@@ -20,6 +20,7 @@ func _initialize() -> void:
 	_test_walk_clock_and_priority()
 	_test_interruptions_and_clear()
 	_test_missing_assets_and_inputs()
+	_test_grounded_stance()
 	print("CHARACTER ANIMATION PLAYER TESTS: %d passed, %d failed" % [passed, failed])
 	quit(0 if failed == 0 else 1)
 
@@ -171,6 +172,31 @@ func _test_missing_assets_and_inputs() -> void:
 	_check(invalid_player.frame_for(_unit(), "east", true).is_empty(), "incompatible bank leaves caller idle fallback")
 	var optional_player: RefCounted = CharacterPlayer.new()
 	_check(optional_player.frame_for({"id": 1, "key": "unknown"}, "east", true).is_empty(), "default optional bank safely handles absent hero")
+
+
+func _test_grounded_stance() -> void:
+	var bank: FixtureBank = _bank()
+	bank._load_definitions({"characters": {"zumbi": {"states": {
+		"stance": {"fps": 1.0, "loop": false, "directions": {
+			"east": {"frames": ["res://fixture/player_0.png"], "anchor": [4, 7]}
+		}}
+	}}}})
+	var player: RefCounted = CharacterPlayer.new(bank)
+	_frame(player.frame_for(_unit(), "east", false), "stance", 0, "grounded stance replaces portrait during combat pause")
+	player.advance(10.0)
+	_frame(player.frame_for(_unit(), "east", false), "stance", 0, "stance stays fixed instead of advancing or bobbing")
+	_frame(player.frame_for(_unit(), "east", true), "stance", 0, "missing walk clip can retain exact grounded stance")
+	_check(player.frame_for(_unit(), "north", false).is_empty(), "stance never substitutes another facing")
+	_check(not player.play_action(1, "zumbi", "stance", "east", "x"), "stance cannot be triggered as an attack")
+	var unit: Dictionary = _unit()
+	unit["alive"] = false
+	_check(player.frame_for(unit, "east", false).is_empty(), "death keeps existing death presentation, not stance")
+	unit["alive"] = true
+	unit["active"] = false
+	_check(player.frame_for(unit, "east", false).is_empty(), "preparation and bench preserve original portraits")
+	unit["active"] = true
+	unit["stun_remaining"] = 1.0
+	_check(player.frame_for(unit, "east", false).is_empty(), "stun preserves interrupted presentation")
 
 
 func _frame(data: Dictionary, state: String, expected: int, label: String) -> void:

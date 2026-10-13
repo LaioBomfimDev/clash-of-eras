@@ -1,5 +1,7 @@
 # Cérebro — regras atuais
 
+**Publicação de2026-10-13:** consultar primeiro [RELEASE_PERFORMANCE_WEB_01.md](RELEASE_PERFORMANCE_WEB_01.md). Esta release usa código/dados/arte da fonte congelada validada; as decisões antigas abaixo permanecem como histórico onde divergirem dos dados atuais. Mudanças posteriores paralelas não foram incluídas.
+
 Atualizado em 2026-10-12. Nome de trabalho: **Clash of Eras**; disponibilidade de nome/marca ainda não pesquisada. A pasta técnica continua `RelicArena`.
 
 Leia este arquivo antes de modificar o projeto. Pedido mais recente do usuário prevalece. Decisões abaixo são atuais; números de protótipo ficam nos dados e podem mudar após jogar. O registro anterior completo foi preservado em [CEREBRO_ARQUIVO_2026-10-11.md](CEREBRO_ARQUIVO_2026-10-11.md). Os guias antigos e seus manifestos são históricos.

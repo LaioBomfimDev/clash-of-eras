@@ -276,8 +276,8 @@
       "original_zip": "charuto_01/original/clash-of-eras-fumaca-charuto-snoop-01-game.zip",
       "zip_sha256": "BDFA3CA63E752734CEC1909F36AECD680E65DE16342A12C2DB5AADACB49CC31A",
       "character_embedded": false,
-      "runtime_integrated": false,
-      "runtime_role": "reserved"
+      "runtime_integrated": true,
+      "runtime_role": "active"
     },
     {
       "key": "explosao_03",
@@ -351,8 +351,8 @@
       "original_zip": "zumbi_estocada_02/original/clash-of-eras-zumbi-estocada-critica02-game.zip",
       "zip_sha256": "842985205FDAC04D8D7C61BA55D2CE1906989F0BFFA76FC2077DDCDF1A598A08",
       "character_embedded": false,
-      "runtime_integrated": false,
-      "runtime_role": "reserved"
+      "runtime_integrated": true,
+      "runtime_role": "critical_spear_hit"
     },
     {
       "key": "zumbi_inspiracao",
@@ -376,8 +376,58 @@
       "original_zip": "zumbi_inspiracao_02/original/clash-of-eras-zumbi-inspiracao02-game.zip",
       "zip_sha256": "7AA4558D748BD58830C793D6F6091FEB3CACD5E07C1EA9FB2CAB5853C94EBE95",
       "character_embedded": false,
-      "runtime_integrated": false,
-      "runtime_role": "reserved"
+      "runtime_integrated": true,
+      "runtime_role": "round_start_team_buff"
+    },
+    {
+      "key": "notas_bob_01",
+      "effect_id": "req_79cf33fd-8619-4e3d-af4e-5059dc6d6e32",
+      "step_id": "62579471-c0e9-4635-96fd-5aa47c17b367",
+      "export_image_id": "e8c02661-1cd5-43b9-99b8-f59bffced249",
+      "effect_url": "https://www.spritefusion.com/docs/pixel-art-generator/api/mcp",
+      "original_manifest": "res://assets/vfx/notas_bob_01/game_pack/manifest.json",
+      "clip": "whole",
+      "fps": 6,
+      "frames": 6,
+      "frame": {
+        "w": 14,
+        "h": 14
+      },
+      "offset": {
+        "x": -7,
+        "y": -7
+      },
+      "loop": true,
+      "original_zip": "spritefusion_01/ORIGEM.json",
+      "zip_sha256": "18D2183536035541B6304B3868EFD22F62D1926C9886A9BC86B5FF98C9B8B5E3",
+      "character_embedded": false,
+      "runtime_integrated": true,
+      "runtime_role": "active"
+    },
+    {
+      "key": "charutao_snoop_01",
+      "effect_id": "req_79cf33fd-8619-4e3d-af4e-5059dc6d6e32",
+      "step_id": "faa42462-c772-4624-ac46-99126b0e9c98",
+      "export_image_id": "1a20a102-b6b1-441d-8351-7773510ada25",
+      "effect_url": "https://www.spritefusion.com/docs/pixel-art-generator/api/mcp",
+      "original_manifest": "res://assets/vfx/charutao_snoop_01/game_pack/manifest.json",
+      "clip": "whole",
+      "fps": 6,
+      "frames": 4,
+      "frame": {
+        "w": 30,
+        "h": 28
+      },
+      "offset": {
+        "x": -1,
+        "y": -21
+      },
+      "loop": true,
+      "original_zip": "spritefusion_01/ORIGEM.json",
+      "zip_sha256": "B0818C7DE1B8AB78E9E02200BAF8688D3003CC8E39AB736AB2A6E53B2553EF25",
+      "character_embedded": false,
+      "runtime_integrated": true,
+      "runtime_role": "active"
     }
   ]
 }

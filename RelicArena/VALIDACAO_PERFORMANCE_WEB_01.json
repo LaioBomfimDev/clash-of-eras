@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-13",
+  "status": "local_build_prepared_public_deploy_pending",
+  "automatic_continuation": "PAUSED",
+  "godot": "4.7.2.stable.official.ed1daf0bf",
+  "public_deploy": false,
+  "purchases": false,
+  "new_art_generations": 0,
+  "source_snapshot": "revisoes/performance_2026-10-13/fonte_validada",
+  "source_hashes": {
+    "client/main.gd": "7b76242540a9bd5b2322bcb612e2d2676c75dde13ebbcc70145e076ea0b0393d",
+    "client/ui_kit.gd": "280f63484f99e420b31c7b6b5000054666601ca941f5f16ffd7ee57c0bdcca6a",
+    "client/arena_render_cache.gd": "84b94be12e585f1aefcade88ed2e954c2addc7378998f68ebaf7cb52c9a104f8",
+    "client/gold_pile_cache.gd": "1c6a618991cd1582dff488248cac341e09759a46795df15425b0385431b6c3fb",
+    "client/ornate_frame_cache.gd": "d492042708538fc47fe64160ac65980009e5d289e5cb2f772804e8e0a33ddfe0",
+    "client/shop_card_cache.gd": "7048b12f447d1c0f6585064fa4ea78f22530bc6938be7f74ec9be0419df3082c",
+    "client/web_shell.html": "f6c0521d26347dea4ee163c853280428784f4953861b0b4eeaf04e2754ad2fda",
+    "net/online_client.gd": "86048a9f5dfd9bbab46669f2908cd66a36001eb62c6e0dee1c53a7d93f71fcf7",
+    "net/online_server.gd": "b271e11b4a101d82392ef9712531b18af43eeb1dc0021557e108ce1262737840",
+    "net/perspective_mapper.gd": "f350b318e8492cec85f472b07a97a9484151079f9b49873ce100ef747b4250e4",
+    "server/dedicated_server.gd": "fcb9ba14a6ae34f005b4bf46601e8842892cca10992b2a7d89cbf7059224eb0f",
+    "project.godot": "b2255511df40eaf177c7d2b728a16a10cf1f702c2d65df41e9c25f3e921e86f8",
+    "export_presets.cfg": "7868e95163386b45897c42287b7eb757b5e2cc515eb08e80c5d57c5ee2809f31"
+  },
+  "artifacts": [
+    {
+      "file": "checkpoints\\Clash_of_Eras_WEB_desempenho_2026-10-13.zip",
+      "sha256": "7774620acb94bb09745bce1b8d5b9cc9ef0522b3e2b0ac770e8d7b9ee0d333a5",
+      "bytes": 16128614,
+      "files": 9,
+      "mismatches": 0
+    },
+    {
+      "file": "checkpoints\\Clash_of_Eras_fonte_validada_desempenho_2026-10-13.zip",
+      "sha256": "969d62fabd3ff5ec25820559ca8f6d4a746f81704c5292f7296365cd9749779e",
+      "bytes": 10565427,
+      "files": 2249,
+      "mismatches": 0
+    }
+  ],
+  "web_compare": {
+    "scope": "Chrome DPR2, one Web renderer plus native headless peer, seed20261013, peer enters queue first, loopback server; NOT public Render or phone",
+    "baseline_fps_range": [
+      8,
+      12
+    ],
+    "final_fps_range": [
+      29,
+      38
+    ],
+    "baseline_median_frame_ms": 105.4849,
+    "final_median_frame_ms": 31.40421875,
+    "median_frame_reduction_percent": 70.22870690496934
+  },
+  "validations": [
+    {
+      "log": "Guia_Godot4\\revisoes\\performance_2026-10-13\\client_cards.log",
+      "result": "CLIENT_PERFORMANCE_RESULT: 20 passed, 0 failed",
+      "stderr_bytes": 0
+    },
+    {
+      "log": "Guia_Godot4\\revisoes\\performance_2026-10-13\\drag_final.log",
+      "result": "DRAG_AND_DROP_TESTS: 18 passed, 0 failed",
+      "stderr_bytes": 0
+    },
+    {
+      "log": "Guia_Godot4\\revisoes\\performance_2026-10-13\\smoke_cards_final.log",
+      "result": "CLIENT_SMOKE_RESULT: 488 passed, 0 failed",
+      "stderr_bytes": 0
+    },
+    {
+      "log": "Guia_Godot4\\revisoes\\performance_2026-10-13\\smoke_cards_opengl.log",
+      "result": "CLIENT_SMOKE_RESULT: 488 passed, 0 failed",
+      "stderr_bytes": 0
+    },
+    {
+      "log": "Guia_Godot4\\revisoes\\performance_2026-10-13\\render_cards_final.log",
+      "result": "RENDER_CACHE_RESULT: 10 passed, 0 failed",
+      "stderr_bytes": 0
+    },
+    {
+      "result": "Web landing/resize DPR1/2: 8 checks passed; online one/two renderers without page/script errors",
+      "evidence": "Guia_Godot4/revisoes/performance_2026-10-13/web_landing_delivery/runtime.json"
+    },
+    {
+      "result": "Primary project client regression:20 passed,0failed; not the packaged-source gameplay/FPS validation",
+      "log": "Guia_Godot4/revisoes/performance_2026-10-13/primary_client_final.log",
+      "source_sha256": "87679c88ee0384176100c0a019239b73d191425ef1923e3d5a356ee64afd96c1"
+    }
+  ],
+  "limits": [
+    "60 FPS not achieved in measured combat",
+    "Public Vercel/Render deployment unchanged",
+    "No phone/PWA device measurement",
+    "Two Web renderers on same PC remain 14/15 FPS in the final sample",
+    "Primary project contains parallel IA changes; packaged source is the frozen validated runtime"
+  ],
+  "owned_test_processes": "Stopped local preview servers8766/8767/8768 and fixed-seed WebSocket8910; isolated browsers already closed"
+}

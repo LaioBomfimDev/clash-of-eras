@@ -1,0 +1,19 @@
+# Server image needs GDScript rules and data, not game art or development output.
+.git
+**/.godot
+**/__pycache__
+*.zip
+APKs
+dist
+checkpoints
+Guia_Godot4
+Xadrez_Auto_Battler_Guia_Godot4
+revisoes
+RelicArena/assets
+RelicArena/client
+RelicArena/tools
+RelicArena/tests
+RelicArena/captures
+RelicArena/build
+RelicArena/builds
+RelicArena/VALIDACAO_*.json

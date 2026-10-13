@@ -3,15 +3,17 @@ extends RefCounted
 ## "Chão" usa largura de hexágono = 1; profundidade 0 é a fileira mais próxima da câmera (7).
 
 const CENTER_X: float = 648.0
-const FRONT_Y: float = 448.0
-const FRONT_HEX_WIDTH: float = 76.0
+const FRONT_Y: float = 480.0
+## Hexágonos 18,4% mais largos; a simulação continua exatamente em 8×8.
+const FRONT_HEX_WIDTH: float = 90.0
 ## Quanto o tabuleiro encolhe com a distância (fileira do fundo ≈ 79% da frente).
 const DEPTH_FALLOFF: float = 0.0426
 ## Altura da câmera: controla a inclinação (achatamento vertical ≈ 0,62 na frente).
 const CAMERA_HEIGHT: float = 14.5
 const ROW_DEPTH: float = 0.8660254
 const HEX_RADIUS: float = 0.5773503
-const BENCH_DEPTH: float = -1.5
+## Reserva separada do perímetro e acima da loja, com a câmera ampliada.
+const BENCH_DEPTH: float = -1.18
 const BENCH_SLOTS: int = 5
 const BENCH_SPACING: float = 1.15
 const INVALID: Vector2i = Vector2i(-1, -1)
