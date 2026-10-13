@@ -77,8 +77,8 @@ func _test_matchmaking_and_server() -> void:
 	var client1: OnlineClient = OnlineClient.new()
 	var client2: OnlineClient = OnlineClient.new()
 
-	client1.start_matchmaking(url)
-	client2.start_matchmaking(url)
+	client1.start_matchmaking(url, "Laio")
+	client2.start_matchmaking(url, "Navegador2")
 
 	var counter: Array[int] = [0]
 	client1.match_started.connect(func(_t: int, _opp: String) -> void: counter[0] += 1)
@@ -96,6 +96,8 @@ func _test_matchmaking_and_server() -> void:
 	_check(client1.is_in_match(), "Cliente 1 entra no estado IN_MATCH")
 	_check(client2.is_in_match(), "Cliente 2 entra no estado IN_MATCH")
 	_check(client1.assigned_team != client2.assigned_team, "Clientes recebem times opostos (0 e 1)")
+	_check(client1.opponent_name == "Navegador2", "Cliente 1 vê o nome real do oponente ('Navegador2')")
+	_check(client2.opponent_name == "Laio", "Cliente 2 vê o nome real do oponente ('Laio')")
 
 	# Testa envio de comando do cliente 1
 	var sent: bool = client1.send_command("reroll", {})

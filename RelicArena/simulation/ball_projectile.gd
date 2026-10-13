@@ -17,6 +17,7 @@ var raw_damage: float = 0.0
 var critical: bool = false
 var damage_type: String = "physical"
 var kind: String = "ball"
+var decay_multipliers: Array[float] = []
 
 func as_dictionary() -> Dictionary:
 	return {
@@ -25,5 +26,6 @@ func as_dictionary() -> Dictionary:
 		"from_cell": [from_cell.x, from_cell.y], "to_cell": [to_cell.x, to_cell.y],
 		"flight_left": flight_left, "flight_duration": flight_duration,
 		"impacts": impacts, "total_impacts": total_impacts,
-		"critical": critical, "raw_damage": raw_damage, "damage_type": damage_type, "kind": kind
+		"critical": critical, "raw_damage": raw_damage, "damage_type": damage_type, "kind": kind,
+		"decay_multipliers": decay_multipliers.duplicate()
 	}

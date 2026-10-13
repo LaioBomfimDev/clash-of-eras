@@ -106,7 +106,10 @@ func _test_preparation() -> void:
 
 func _test_neymar() -> void:
 	var sim: Simulation = _sandbox()
-	var source: UnitState = _fixture_unit("neymar", 1, 0, Vector2i(3, 4), {"attack_range": 3})
+	var source: UnitState = _fixture_unit("neymar", 1, 0, Vector2i(3, 4), {
+		"attack_range": 3,
+		"projectile_decay_multipliers": [1.0, 0.8, 0.5]
+	})
 	var first: UnitState = _fixture_unit("target", 101, 1, Vector2i(3, 2))
 	var second: UnitState = _fixture_unit("target", 102, 1, Vector2i(4, 2))
 	var third: UnitState = _fixture_unit("target", 103, 1, Vector2i(5, 2))
@@ -118,8 +121,11 @@ func _test_neymar() -> void:
 	_check(impacts.size() == 3, "one kick has exactly three impacts with intact pair")
 	if impacts.size() == 3:
 		_check([impacts[0]["target_id"], impacts[1]["target_id"], impacts[2]["target_id"]] == [101, 102, 101], "ball follows A-B-A, never third target")
-	_near(first.hp, 980.0, "primary receives two impacts")
-	_near(second.hp, 990.0, "neighbor receives one impact")
+		_near(float(impacts[0]["damage"]), 10.0, "first impact applies 100% damage")
+		_near(float(impacts[1]["damage"]), 8.0, "second impact applies 80% damage")
+		_near(float(impacts[2]["damage"]), 5.0, "third impact applies 50% damage")
+	_near(first.hp, 985.0, "primary receives two impacts with decay (10 + 5 = 15)")
+	_near(second.hp, 992.0, "neighbor receives one impact with decay (8)")
 	_near(third.hp, 1000.0, "third enemy untouched")
 	_check(source.attack_count == 1 and sim.projectiles.is_empty(), "bounce never produces extra attacks or infinite projectiles")
 
@@ -285,6 +291,34 @@ func _test_zumbi() -> void:
 	personal.step(0.05)
 	_near(leader.crit_growth, 0.25, "own noncritical attack does not feed counter")
 	_check(leader.crit_growth_hits == 1, "noncritical hit leaves readable personal counter unchanged")
+
+	# Validação da calibração do Zumbi (base 50 -> 1º crit 100 -> 120 -> 140 -> 160 -> 180):
+	var zumbi_calib: Simulation = _sandbox()
+	var zumbi_real: UnitState = _kit_unit("zumbi", 1, 0, Vector2i(3, 4))
+	var zumbi_ally: UnitState = _fixture_unit("ally", 2, 0, Vector2i(0, 7))
+	var dummy: UnitState = _fixture_unit("dummy", 101, 1, Vector2i(3, 3), {"armor": 0.0, "max_hp": 5000.0})
+	dummy.hp = 5000.0
+	zumbi_calib.units = [zumbi_real, zumbi_ally, dummy]
+	zumbi_calib.start_combat()
+	# Buff de crítico e velocidade para o aliado:
+	_near(zumbi_ally.effective_crit_chance, 0.15, "Zumbi gives +15% crit chance to team allies")
+	_near(zumbi_ally.attack_speed_multiplier, 1.15, "Zumbi gives +15% attack speed to team allies")
+	# Ataque não-crítico causa dano base 50:
+	zumbi_real.effective_crit_chance = 0.0
+	zumbi_real.attack_cooldown = 0.0
+	zumbi_calib.step(0.05)
+	var non_crit_hits: Array[Dictionary] = _events(zumbi_calib, "hit")
+	_check(non_crit_hits.size() == 1 and is_equal_approx(float(non_crit_hits[0]["amount"]), 50.0), "non-critical attack deals base 50 damage")
+	_check(zumbi_real.crit_growth == 0.0 and zumbi_real.crit_growth_hits == 0, "non-critical hit does not start growth")
+	# Agora acertos críticos sequenciais:
+	zumbi_real.effective_crit_chance = 1.0
+	var expected_crit_damages: Array[float] = [100.0, 120.0, 140.0, 160.0, 180.0]
+	for idx: int in range(expected_crit_damages.size()):
+		zumbi_real.attack_cooldown = 0.0
+		zumbi_calib.step(0.05)
+		var current_hits: Array[Dictionary] = _events(zumbi_calib, "hit")
+		var last_hit: Dictionary = current_hits[current_hits.size() - 1]
+		_near(float(last_hit["amount"]), expected_crit_damages[idx], "zumbi crit %d deals %f" % [idx + 1, expected_crit_damages[idx]])
 
 func _test_clock_and_lives() -> void:
 	var sim: Simulation = _sandbox()
@@ -732,17 +766,19 @@ func _test_lote_03_kits() -> void:
 	_near(far.hp, 1000.0, "explosion does not reach distant enemies")
 	_check(_events(rockets, "explosion").size() == 1, "one explosion per rocket")
 
-	# Snoop: fumaça com dano contínuo e chance de errar para inimigos dentro.
+	# Snoop: fumaça com dano contínuo, buff de velocidade a aliados e chance de errar para inimigos dentro.
 	var smoke: Simulation = _sandbox()
 	var snoop: UnitState = _kit_unit("snoop", 8, 0, Vector2i(3, 6), {"attack_damage": 20.0, "crit_chance": 0.0, "smoke_miss_chance": 0.9})
 	var victim: UnitState = _fixture_unit("victim", 101, 1, Vector2i(3, 3), {"attack_damage": 10.0, "attacks_per_second": 10.0, "attack_range": 5})
+	var ally_in_smoke: UnitState = _fixture_unit("ally_smoke", 2, 0, Vector2i(4, 3), {"attacks_per_second": 1.0})
 	var outside: UnitState = _fixture_unit("outside", 102, 1, Vector2i(7, 0))
 	snoop.attack_cooldown = 0.0
-	smoke.units = [snoop, victim, outside]
+	smoke.units = [snoop, victim, ally_in_smoke, outside]
 	smoke.start_combat()
 	smoke.step(1.1) # impacto ~0,55 s; primeiro tique da nuvem 0,5 s depois
-	_check(smoke.zones.size() == 1 and smoke.zones[0]["cell"] == Vector2i(3, 3), "smoke hit leaves a cloud on the target hex")
+	_check(smoke.zones.size() == 1 and smoke.zones[0]["cell"] == Vector2i(3, 3) and int(smoke.zones[0]["radius"]) == 2, "smoke hit leaves a cloud of radius 2 on the target hex")
 	_check(_events(smoke, "smoke").size() >= 1, "cloud deals continuous magic damage")
+	_near(smoke._attack_speed(ally_in_smoke), 1.25, "ally inside friendly smoke cloud attacks 25% faster")
 	_check(outside.hp == outside.max_hp, "cloud does not hurt enemies outside its radius")
 	victim.attack_cooldown = 0.0
 	smoke.step(1.0)
@@ -770,11 +806,11 @@ func _test_lote_03_kits() -> void:
 	var enemy_near: UnitState = _fixture_unit("enemy", 101, 1, Vector2i(3, 4), {"attacks_per_second": 1.0})
 	var enemy_far: UnitState = _fixture_unit("far", 102, 1, Vector2i(3, 1), {"attacks_per_second": 1.0}) # 4 hexágonos
 	music.units = [bob, friend, enemy_near, enemy_far]
-	_near(music._attack_speed(friend), 1.2, "ally in the song radius attacks 20% faster")
-	_near(music._attack_speed(enemy_near), 0.8, "enemy in the song radius attacks 20% slower")
+	_near(music._attack_speed(friend), 1.3, "ally in the song radius attacks 30% faster")
+	_near(music._attack_speed(enemy_near), 0.7, "enemy in the song radius attacks 30% slower")
 	_near(music._attack_speed(enemy_far), 1.0, "enemy outside the level-1 radius is unaffected")
 	bob.apply_level(3, music.level_multiplier(3))
-	_near(music._attack_speed(enemy_far), 0.8, "level 3 widens the song radius to 4 hexes")
+	_near(music._attack_speed(enemy_far), 0.7, "level 3 widens the song radius to 5 hexes")
 
 	# Rapunzel: laça o inimigo mais distante, puxa para perto e atordoa ~1 s.
 	var rope: Simulation = _sandbox()

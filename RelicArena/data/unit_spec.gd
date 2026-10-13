@@ -18,6 +18,7 @@ var crit_multiplier: float = 1.5
 var projectile_seconds_per_hex: float = 0.12
 var projectile_min_seconds: float = 0.12
 var projectile_max_impacts: int = 3
+var projectile_decay_multipliers: Array[float] = []
 var bleed_damage_per_tick: float = 0.0
 var bleed_duration: float = 0.0
 var bleed_tick_interval: float = 1.0
@@ -48,6 +49,7 @@ var smoke_duration: float = 0.0
 var smoke_damage_per_tick: float = 0.0
 var smoke_tick_interval: float = 0.5
 var smoke_miss_chance: float = 0.0
+var smoke_ally_speed_bonus: float = 0.0
 var summon_key: String = ""
 var guardian_damage_bonus: float = 0.0
 var revive_ratio: float = 0.0
@@ -83,6 +85,9 @@ func load_values(character_key: String, values: Dictionary) -> void:
 	projectile_seconds_per_hex = maxf(0.05, float(values.get("projectile_seconds_per_hex", 0.12)))
 	projectile_min_seconds = maxf(0.05, float(values.get("projectile_min_seconds", 0.12)))
 	projectile_max_impacts = clampi(int(values.get("projectile_max_impacts", 3)), 1, 3)
+	projectile_decay_multipliers.clear()
+	for mult: Variant in values.get("projectile_decay_multipliers", []):
+		projectile_decay_multipliers.append(clampf(float(mult), 0.0, 10.0))
 	bleed_damage_per_tick = maxf(0.0, float(values.get("bleed_damage_per_tick", 0.0)))
 	bleed_duration = maxf(0.0, float(values.get("bleed_duration", 0.0)))
 	bleed_tick_interval = maxf(0.05, float(values.get("bleed_tick_interval", 1.0)))
@@ -114,6 +119,7 @@ func load_values(character_key: String, values: Dictionary) -> void:
 	smoke_damage_per_tick = maxf(0.0, float(values.get("smoke_damage_per_tick", 0.0)))
 	smoke_tick_interval = maxf(0.05, float(values.get("smoke_tick_interval", 0.5)))
 	smoke_miss_chance = clampf(float(values.get("smoke_miss_chance", 0.0)), 0.0, 0.9)
+	smoke_ally_speed_bonus = clampf(float(values.get("smoke_ally_speed_bonus", 0.0)), 0.0, 3.0)
 	summon_key = str(values.get("summon_key", ""))
 	guardian_damage_bonus = clampf(float(values.get("guardian_damage_bonus", 0.0)), 0.0, 5.0)
 	revive_ratio = clampf(float(values.get("revive_ratio", 0.0)), 0.0, 1.0)

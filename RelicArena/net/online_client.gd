@@ -22,6 +22,7 @@ var max_queue_seconds: float = Protocol.QUEUE_SECONDS
 
 var room_id: String = ""
 var assigned_team: int = 0
+var player_name: String = "Jogador"
 var opponent_name: String = "Adversário"
 var latest_snapshot: Dictionary = {}
 var pending_events: Array[Dictionary] = []
@@ -36,8 +37,10 @@ signal fallback_to_bot(reason: String)
 signal match_ended(winner: int, reason: String)
 
 
-func start_matchmaking(custom_url: String = "") -> void:
+func start_matchmaking(custom_url: String = "", custom_name: String = "") -> void:
 	reset()
+	if not custom_name.strip_edges().is_empty():
+		player_name = custom_name.strip_edges().substr(0, 16)
 	if not custom_url.is_empty():
 		server_url = custom_url
 	else:
@@ -103,7 +106,7 @@ func step(delta: float) -> void:
 		if ready_state == WebSocketPeer.STATE_OPEN:
 			state = State.IN_QUEUE
 			status_message = "Buscando jogador..."
-			_send_packet({"type": "join_queue", "version": Protocol.VERSION})
+			_send_packet({"type": "join_queue", "version": Protocol.VERSION, "name": player_name})
 		elif ready_state == WebSocketPeer.STATE_CLOSED or ready_state == WebSocketPeer.STATE_CLOSING:
 			_trigger_fallback("Servidor indisponível")
 			return

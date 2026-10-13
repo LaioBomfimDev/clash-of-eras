@@ -33,6 +33,11 @@
       "projectile_seconds_per_hex": 0.12,
       "projectile_min_seconds": 0.12,
       "projectile_max_impacts": 3,
+      "projectile_decay_multipliers": [
+        1.0,
+        0.8,
+        0.5
+      ],
       "projectile_kind": "ball",
       "rarity": "rare"
     },
@@ -81,7 +86,7 @@
     "zumbi": {
       "display_name": "Zumbi",
       "max_hp": 680.0,
-      "attack_damage": 46.0,
+      "attack_damage": 50.0,
       "armor": 20.0,
       "resist": 15.0,
       "damage_type": "physical",
@@ -92,12 +97,12 @@
       "attack_range": 1,
       "attacks_per_second": 1.0,
       "move_interval": 0.38,
-      "crit_chance": 0.18,
-      "crit_multiplier": 1.6,
+      "crit_chance": 0.2,
+      "crit_multiplier": 2.0,
       "team_attack_speed_bonus": 0.15,
-      "team_crit_bonus": 0.1,
-      "crit_growth_per_hit": 0.12,
-      "crit_growth_cap": 1.2,
+      "team_crit_bonus": 0.15,
+      "crit_growth_per_hit": 0.4,
+      "crit_growth_cap": 2.4,
       "rarity": "common"
     },
     "michael": {
@@ -185,11 +190,12 @@
       "projectile_kind": "smoke",
       "projectile_seconds_per_hex": 0.16,
       "projectile_min_seconds": 0.2,
-      "smoke_radius": 1,
+      "smoke_radius": 2,
       "smoke_duration": 3.0,
-      "smoke_damage_per_tick": 6.0,
+      "smoke_damage_per_tick": 8.0,
       "smoke_tick_interval": 0.5,
-      "smoke_miss_chance": 0.15,
+      "smoke_miss_chance": 0.3,
+      "smoke_ally_speed_bonus": 0.25,
       "rarity": "rare"
     },
     "lula": {
@@ -226,12 +232,12 @@
       "crit_chance": 0.05,
       "crit_multiplier": 1.5,
       "aura_radius_by_level": [
-        2,
         3,
-        4
+        4,
+        5
       ],
-      "aura_ally_speed_bonus": 0.2,
-      "aura_enemy_slow": 0.2,
+      "aura_ally_speed_bonus": 0.3,
+      "aura_enemy_slow": 0.3,
       "rarity": "rare"
     },
     "rapunzel": {

@@ -122,10 +122,13 @@ func _handle_client_message(client: Dictionary, msg: Dictionary) -> void:
 	match msg_type:
 		"join_queue":
 			if not matchmaking_queue.has(c_id) and str(client["room_id"]).is_empty():
+				var req_name: String = str(msg.get("name", "")).strip_edges()
+				if not req_name.is_empty():
+					client["name"] = req_name.substr(0, 16)
 				matchmaking_queue.append(c_id)
 				client["in_queue"] = true
 				_send_to_client(client, {"type": "queue_joined"})
-				print("[SERVER] Jogador %d entrou na fila. Total na fila: %d" % [c_id, matchmaking_queue.size()])
+				print("[SERVER] %s (ID %d) entrou na fila. Total na fila: %d" % [client["name"], c_id, matchmaking_queue.size()])
 
 		"leave_queue":
 			matchmaking_queue.erase(c_id)

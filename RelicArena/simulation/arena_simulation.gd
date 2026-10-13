@@ -567,6 +567,7 @@ func _launch_ball(source: UnitState, target: UnitState, damage: float, critical:
 	ball.raw_damage = damage
 	ball.critical = critical
 	ball.damage_type = source.damage_type
+	ball.decay_multipliers = source.spec.projectile_decay_multipliers.duplicate()
 	for other: UnitState in units:
 		if other.active and other.alive and other.team != source.team and other.id != target.id and Grid.distance(other.cell, target.cell) == 1:
 			if ball.secondary_id < 0 or other.id < ball.secondary_id:
@@ -621,7 +622,8 @@ func _spawn_smoke(source: UnitState, cell: Vector2i) -> void:
 	var zone: Dictionary = {"id": _next_zone_id, "source_id": source.id, "team": source.team, "cell": cell,
 		"radius": source.spec.smoke_radius, "remaining": source.spec.smoke_duration, "duration": source.spec.smoke_duration,
 		"until_tick": source.spec.smoke_tick_interval, "interval": source.spec.smoke_tick_interval,
-		"damage": source.spec.smoke_damage_per_tick * source.level_multiplier, "miss_chance": source.spec.smoke_miss_chance}
+		"damage": source.spec.smoke_damage_per_tick * source.level_multiplier, "miss_chance": source.spec.smoke_miss_chance,
+		"ally_speed_bonus": source.spec.smoke_ally_speed_bonus}
 	_next_zone_id += 1
 	zones.append(zone)
 	_emit("smoke_cloud", {"source_id": source.id, "zone_id": zone["id"], "cell": cell, "radius": zone["radius"]})
@@ -656,6 +658,7 @@ func _guardian_alive(unit: UnitState) -> bool:
 
 ## Bob Marley "paz e amor": aliados no raio atacam mais rápido; inimigos no raio, mais devagar.
 ## O raio cresce com o nível na partida. Só a velocidade muda; o dano não é reduzido.
+## Snoop Dogg "fumaça": aliados dentro da fumaça amiga recebem bônus de velocidade.
 func _attack_speed(unit: UnitState) -> float:
 	var multiplier: float = unit.attack_speed_multiplier
 	for singer: UnitState in units:
@@ -668,6 +671,12 @@ func _attack_speed(unit: UnitState) -> float:
 			multiplier *= 1.0 + singer.spec.aura_ally_speed_bonus
 		else:
 			multiplier *= 1.0 - singer.spec.aura_enemy_slow
+	for zone: Dictionary in zones:
+		if int(zone.get("team", -1)) == unit.team and Grid.distance(unit.cell, zone.get("cell", Grid.INVALID)) <= int(zone.get("radius", 0)):
+			var ally_buff: float = float(zone.get("ally_speed_bonus", 0.0))
+			if ally_buff > 0.0:
+				multiplier *= 1.0 + ally_buff
+				break
 	return clampf(unit.spec.attacks_per_second * multiplier, 0.05, 10.0)
 
 func _update_stuns(delta: float) -> void:
@@ -735,8 +744,12 @@ func _update_projectiles(delta: float) -> void:
 			_expire_ball(ball, _pair_end_reason(ball))
 			continue
 		ball.impacts += 1
-		_deal_damage(ball.source_id, target, ball.raw_damage, ball.critical, "ball_hit", false, ball.damage_type)
-		_emit("ball_impact", {"projectile_id": ball.id, "source_id": ball.source_id, "target_id": target.id, "impact": ball.impacts})
+		var impact_damage: float = ball.raw_damage
+		if not ball.decay_multipliers.is_empty():
+			var decay_index: int = clampi(ball.impacts - 1, 0, ball.decay_multipliers.size() - 1)
+			impact_damage *= ball.decay_multipliers[decay_index]
+		_deal_damage(ball.source_id, target, impact_damage, ball.critical, "ball_hit", false, ball.damage_type)
+		_emit("ball_impact", {"projectile_id": ball.id, "source_id": ball.source_id, "target_id": target.id, "impact": ball.impacts, "damage": impact_damage})
 		if ball.impacts >= ball.total_impacts:
 			_expire_ball(ball, "max_impacts")
 			continue
