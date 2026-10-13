@@ -1,0 +1,871 @@
+{
+  "official_export": true,
+  "sha256": "4892feb2c6e6763443edf0723710299fee5093a214a19065e33cb484625aeabe",
+  "files": [
+    {
+      "path": "Idle/rotations/south.png",
+      "sha256": "1e13b1a7fd6c6872208ab3def5516578fcf531ee21b37be7eb9986f3f14b28fa",
+      "bytes": 8206,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/rotations/south-east.png",
+      "sha256": "b3a982e1fdeee1bc7ecd989b5ba490207efa363f9158b6b162c01182790681d2",
+      "bytes": 8351,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/rotations/east.png",
+      "sha256": "14946ed92b07268f81009ab45f5760e8181bf598d88fbb459b0005d0036d30cb",
+      "bytes": 5079,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/rotations/north-east.png",
+      "sha256": "04c1b26952abf482a45ddf0670fbf183ac1f685696e26299b2375c28dbc99aaa",
+      "bytes": 7277,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/rotations/north.png",
+      "sha256": "8638e86eb7fc02b16794b51ef50b148bbf40df4214e0ee1fd9a528c19be0442f",
+      "bytes": 7425,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/rotations/north-west.png",
+      "sha256": "fa150aa2bca085ad9e7d86a16860911c33aec0d9b0a2176eb32c0f37c1db761c",
+      "bytes": 7249,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/rotations/west.png",
+      "sha256": "fcace88361d41672db30441eb194ecc841b476747b9e27f4b10c99ec2690305c",
+      "bytes": 4564,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/rotations/south-west.png",
+      "sha256": "efeec34be6acf56896ca0ef9150f4c4c4ba4937a38391a9f7e8390aceacd3c9c",
+      "bytes": 8775,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v2/east/frame_000.png",
+      "sha256": "e0657a31875f8dbb0a7a8c362c66f4fa8eee89583a3ed47ef8d9741cc47b3427",
+      "bytes": 5363,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v2/east/frame_001.png",
+      "sha256": "06aad8f57b1e0603e487d151ba377522f0f398d9aab818c939aef174b4dbc8ff",
+      "bytes": 7022,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v2/east/frame_002.png",
+      "sha256": "ba1b35adca8eb9dff4d86a86a67aa348e1c577ae59569494675119237fcea6bd",
+      "bytes": 7382,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v2/east/frame_003.png",
+      "sha256": "1e24f6abb17bde6db75dd2ad7187678c2b895d93a2bb91882e233d988faa4c77",
+      "bytes": 8054,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v2/east/frame_004.png",
+      "sha256": "cffc8432a771ca194b44a8399ab02426db40efd537a4756877d17d466ba7319d",
+      "bytes": 7817,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v2/east/frame_005.png",
+      "sha256": "325df02241d4522067396ab7f35c35c83b4d8d61bc34c6a163044e0f6092c1be",
+      "bytes": 7882,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v2/east/frame_006.png",
+      "sha256": "8fc0ffde7da1307136a84d6a8b0e8e9d00e7b48fc720527de444dc8e3b4a1b54",
+      "bytes": 7547,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v2/east/frame_007.png",
+      "sha256": "81258d8c864d4c750f94d278d3bf92f7b875be07da977b0139adef65f0f68094",
+      "bytes": 7159,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v2/east/frame_008.png",
+      "sha256": "b766a5e71c19d6049d7fd03b180949b1a16b17563eb0b565460a8670ff730571",
+      "bytes": 5370,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/walk_ground_v1/east/frame_000.png",
+      "sha256": "28dd60fd0df9cc66f24d1a6125c30926cbc77124b6cd518f328a4388f4fe0f9b",
+      "bytes": 6641,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/walk_ground_v1/east/frame_001.png",
+      "sha256": "7ad8b2b5380357ebdf4f715ec2e4c49e8d8cd5d44b42dbf983bb0a79566919e7",
+      "bytes": 6582,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/walk_ground_v1/east/frame_002.png",
+      "sha256": "33803617d0f1b375197c8522176c6e0ebe2815501e7740205c525226b4f60a00",
+      "bytes": 6880,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/walk_ground_v1/east/frame_003.png",
+      "sha256": "2ceb445e76b9ee8dbece478e6bb57c437b2a75595600d3c50cfaa91505c7f67f",
+      "bytes": 7033,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/walk_ground_v1/east/frame_004.png",
+      "sha256": "96f83048234a6eb906454f988db9bcbf3525f414571f4d0e7e8696a294cde9d3",
+      "bytes": 7043,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/walk_ground_v1/east/frame_005.png",
+      "sha256": "84209697f4753ab93e1421f0c1c6ca5bdd0fc4d8822a63dce0245f1d3a4aa791",
+      "bytes": 6955,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/walk_ground_v1/east/frame_006.png",
+      "sha256": "7f8d83bda82af9737914607d02950806628c77943d8f4be1babe6a8a0ac8b1c6",
+      "bytes": 7194,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/walk_ground_v1/east/frame_007.png",
+      "sha256": "bab61b8d9b04971b86f66722732ebe4991bac47b2a4669e8e495e77d52290dba",
+      "bytes": 7065,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/walk_ground_v2/east/frame_000.png",
+      "sha256": "7c06948777f9628d5d7df33084fedaeab645e7be51e500bcb4551d8518185474",
+      "bytes": 4282,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/walk_ground_v2/east/frame_001.png",
+      "sha256": "77fb357c1f5032c9d0c8d2b074fd83d98740d3e1e99be64027d92223a5079c1b",
+      "bytes": 5992,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/walk_ground_v2/east/frame_002.png",
+      "sha256": "f57f8d8ce4192b17d3667233ce8c7abbbed71ae2b5cecf5b59126838fec97527",
+      "bytes": 6216,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/walk_ground_v2/east/frame_003.png",
+      "sha256": "70ebac28b5c432ddcba79c2fa2712d1ed170906401863ccbfad81e94c150bec2",
+      "bytes": 5618,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/walk_ground_v2/east/frame_004.png",
+      "sha256": "76ae5d6b454acd85cd8fa892342a3845cd39161ec66e11c13b636a198381e637",
+      "bytes": 6013,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/walk_ground_v2/east/frame_005.png",
+      "sha256": "5e6ed1a5e589c6f2c857a4ff04a72356d9ae0d9532b82cb66cdb48c8a6515c7d",
+      "bytes": 7458,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/walk_ground_v2/east/frame_006.png",
+      "sha256": "52830d239fdafe3e5e0f050d5437dfcf2788acbecdbd1bd88e04b3a3d74e929b",
+      "bytes": 7117,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/walk_ground_v2/east/frame_007.png",
+      "sha256": "7c88ae91d8262bbade0822e60f716ca93980e1dc32090ad0e0ba8368839a9303",
+      "bytes": 6520,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/walk_ground_v2/east/frame_008.png",
+      "sha256": "c955d6ae40214ce816b94a7ea47ad1ab845510b2fa58bff0d81d696c039175bb",
+      "bytes": 4264,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/skill_rally_v1/east/frame_000.png",
+      "sha256": "f307282aa7646bab689b81084bcb972026fac2aff9a7b4c32beff5e99d7ab6c7",
+      "bytes": 4399,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/skill_rally_v1/east/frame_001.png",
+      "sha256": "2e986650e4129dee007cd575562445399a259fb9f424d98e5c2fa92c9c4aa10d",
+      "bytes": 4523,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/skill_rally_v1/east/frame_002.png",
+      "sha256": "5db5a1074b8e922d5fcef4e03548ef26a57173da8fa18441abee917dda104c5f",
+      "bytes": 4675,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/skill_rally_v1/east/frame_003.png",
+      "sha256": "42297d37940c7af1c071ee636e5a6116879143b9d1e201aeeac114c950e412cf",
+      "bytes": 6161,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/skill_rally_v1/east/frame_004.png",
+      "sha256": "2afaac0237f5add92c687493f2d8d859c8e37f44c5b8179cda7bf8715d5666f3",
+      "bytes": 6473,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/skill_rally_v1/east/frame_005.png",
+      "sha256": "f764dd4e14b02ec7b7b11a146b453f46c53ce7aab171b318a310937d428896ea",
+      "bytes": 5605,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/skill_rally_v1/east/frame_006.png",
+      "sha256": "9b0f6f1c046544c2ecf5f326f1eaf44def6621152b504f044081cd40763071a5",
+      "bytes": 4511,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v1/east/frame_000.png",
+      "sha256": "a9743959f3481c52c2fa70bd089584ac85f7e9a8f00a100c733e6e2b1f1fa493",
+      "bytes": 4322,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v1/east/frame_001.png",
+      "sha256": "43ac221a89fafb7c3b4ebbfbab36508381c25234b80e20ba672ffdb61ec3854f",
+      "bytes": 4666,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v1/east/frame_002.png",
+      "sha256": "2dccce29309c9eedf06a982c36d4a3d2d326e41e451292cd20471e8ee6ab2450",
+      "bytes": 6379,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v1/east/frame_003.png",
+      "sha256": "9810ba5459f3a3c499715e73b4668abbfe72d6f8e305fcc2876e65d5d0488aa6",
+      "bytes": 7011,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v1/east/frame_004.png",
+      "sha256": "eea2c582bc05552d044125b55e20111cab4f57420437371ca4395224d99e295e",
+      "bytes": 7203,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v1/east/frame_005.png",
+      "sha256": "e356ca50be545107899aa53b75e2ea7de285de6688919967e257d6de9e0f2c3a",
+      "bytes": 7209,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v1/east/frame_006.png",
+      "sha256": "2e90053168abaa3aecf8144cd9f43a06a613df835a4e37d94c41806f34157d54",
+      "bytes": 6194,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v1/east/frame_007.png",
+      "sha256": "6239ce14e6e7a25be27023a714d956995282668df0685dedd5ede0df6a1b1466",
+      "bytes": 5399,
+      "unchanged": true
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v1/east/frame_008.png",
+      "sha256": "0b1d64d43704d591cd8631c532ac9e13fef750387fbe9a90c77767f652c4162d",
+      "bytes": 4415,
+      "unchanged": true
+    },
+    {
+      "path": "metadata.json",
+      "sha256": "fd5b38dc912edae54ee36b39d6d58d91e75f8e766e1cd046b5c817f46b90f3d7",
+      "bytes": 4674,
+      "unchanged": true
+    }
+  ],
+  "mismatches": [],
+  "rotations_pixel_equal": {
+    "south": true,
+    "south-east": true,
+    "east": true,
+    "north-east": true,
+    "north": true,
+    "north-west": true,
+    "west": true,
+    "south-west": true
+  },
+  "animation_frames": [
+    {
+      "path": "Idle/animations/spear_thrust_v2/east/frame_000.png",
+      "size": [
+        212,
+        168
+      ],
+      "alpha_bbox": [
+        37,
+        28,
+        175,
+        143
+      ]
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v2/east/frame_001.png",
+      "size": [
+        212,
+        168
+      ],
+      "alpha_bbox": [
+        36,
+        28,
+        174,
+        143
+      ]
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v2/east/frame_002.png",
+      "size": [
+        212,
+        168
+      ],
+      "alpha_bbox": [
+        33,
+        29,
+        171,
+        143
+      ]
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v2/east/frame_003.png",
+      "size": [
+        212,
+        168
+      ],
+      "alpha_bbox": [
+        33,
+        30,
+        170,
+        143
+      ]
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v2/east/frame_004.png",
+      "size": [
+        212,
+        168
+      ],
+      "alpha_bbox": [
+        31,
+        32,
+        168,
+        143
+      ]
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v2/east/frame_005.png",
+      "size": [
+        212,
+        168
+      ],
+      "alpha_bbox": [
+        32,
+        31,
+        169,
+        143
+      ]
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v2/east/frame_006.png",
+      "size": [
+        212,
+        168
+      ],
+      "alpha_bbox": [
+        33,
+        30,
+        171,
+        140
+      ]
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v2/east/frame_007.png",
+      "size": [
+        212,
+        168
+      ],
+      "alpha_bbox": [
+        36,
+        28,
+        174,
+        140
+      ]
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v2/east/frame_008.png",
+      "size": [
+        212,
+        168
+      ],
+      "alpha_bbox": [
+        37,
+        28,
+        175,
+        143
+      ]
+    },
+    {
+      "path": "Idle/animations/walk_ground_v1/east/frame_000.png",
+      "size": [
+        180,
+        180
+      ],
+      "alpha_bbox": [
+        67,
+        25,
+        107,
+        153
+      ]
+    },
+    {
+      "path": "Idle/animations/walk_ground_v1/east/frame_001.png",
+      "size": [
+        180,
+        180
+      ],
+      "alpha_bbox": [
+        61,
+        28,
+        114,
+        152
+      ]
+    },
+    {
+      "path": "Idle/animations/walk_ground_v1/east/frame_002.png",
+      "size": [
+        180,
+        180
+      ],
+      "alpha_bbox": [
+        59,
+        33,
+        121,
+        150
+      ]
+    },
+    {
+      "path": "Idle/animations/walk_ground_v1/east/frame_003.png",
+      "size": [
+        180,
+        180
+      ],
+      "alpha_bbox": [
+        59,
+        37,
+        128,
+        148
+      ]
+    },
+    {
+      "path": "Idle/animations/walk_ground_v1/east/frame_004.png",
+      "size": [
+        180,
+        180
+      ],
+      "alpha_bbox": [
+        54,
+        35,
+        136,
+        148
+      ]
+    },
+    {
+      "path": "Idle/animations/walk_ground_v1/east/frame_005.png",
+      "size": [
+        180,
+        180
+      ],
+      "alpha_bbox": [
+        50,
+        32,
+        141,
+        148
+      ]
+    },
+    {
+      "path": "Idle/animations/walk_ground_v1/east/frame_006.png",
+      "size": [
+        180,
+        180
+      ],
+      "alpha_bbox": [
+        45,
+        33,
+        146,
+        148
+      ]
+    },
+    {
+      "path": "Idle/animations/walk_ground_v1/east/frame_007.png",
+      "size": [
+        180,
+        180
+      ],
+      "alpha_bbox": [
+        39,
+        35,
+        148,
+        148
+      ]
+    },
+    {
+      "path": "Idle/animations/walk_ground_v2/east/frame_000.png",
+      "size": [
+        128,
+        180
+      ],
+      "alpha_bbox": [
+        49,
+        26,
+        80,
+        149
+      ]
+    },
+    {
+      "path": "Idle/animations/walk_ground_v2/east/frame_001.png",
+      "size": [
+        128,
+        180
+      ],
+      "alpha_bbox": [
+        39,
+        27,
+        91,
+        149
+      ]
+    },
+    {
+      "path": "Idle/animations/walk_ground_v2/east/frame_002.png",
+      "size": [
+        128,
+        180
+      ],
+      "alpha_bbox": [
+        26,
+        29,
+        93,
+        149
+      ]
+    },
+    {
+      "path": "Idle/animations/walk_ground_v2/east/frame_003.png",
+      "size": [
+        128,
+        180
+      ],
+      "alpha_bbox": [
+        32,
+        27,
+        83,
+        147
+      ]
+    },
+    {
+      "path": "Idle/animations/walk_ground_v2/east/frame_004.png",
+      "size": [
+        128,
+        180
+      ],
+      "alpha_bbox": [
+        46,
+        27,
+        83,
+        149
+      ]
+    },
+    {
+      "path": "Idle/animations/walk_ground_v2/east/frame_005.png",
+      "size": [
+        128,
+        180
+      ],
+      "alpha_bbox": [
+        32,
+        28,
+        95,
+        148
+      ]
+    },
+    {
+      "path": "Idle/animations/walk_ground_v2/east/frame_006.png",
+      "size": [
+        128,
+        180
+      ],
+      "alpha_bbox": [
+        26,
+        28,
+        94,
+        149
+      ]
+    },
+    {
+      "path": "Idle/animations/walk_ground_v2/east/frame_007.png",
+      "size": [
+        128,
+        180
+      ],
+      "alpha_bbox": [
+        34,
+        27,
+        84,
+        149
+      ]
+    },
+    {
+      "path": "Idle/animations/walk_ground_v2/east/frame_008.png",
+      "size": [
+        128,
+        180
+      ],
+      "alpha_bbox": [
+        49,
+        26,
+        80,
+        149
+      ]
+    },
+    {
+      "path": "Idle/animations/skill_rally_v1/east/frame_000.png",
+      "size": [
+        168,
+        184
+      ],
+      "alpha_bbox": [
+        69,
+        28,
+        100,
+        151
+      ]
+    },
+    {
+      "path": "Idle/animations/skill_rally_v1/east/frame_001.png",
+      "size": [
+        168,
+        184
+      ],
+      "alpha_bbox": [
+        69,
+        28,
+        100,
+        151
+      ]
+    },
+    {
+      "path": "Idle/animations/skill_rally_v1/east/frame_002.png",
+      "size": [
+        168,
+        184
+      ],
+      "alpha_bbox": [
+        69,
+        28,
+        100,
+        151
+      ]
+    },
+    {
+      "path": "Idle/animations/skill_rally_v1/east/frame_003.png",
+      "size": [
+        168,
+        184
+      ],
+      "alpha_bbox": [
+        40,
+        27,
+        117,
+        151
+      ]
+    },
+    {
+      "path": "Idle/animations/skill_rally_v1/east/frame_004.png",
+      "size": [
+        168,
+        184
+      ],
+      "alpha_bbox": [
+        24,
+        35,
+        125,
+        151
+      ]
+    },
+    {
+      "path": "Idle/animations/skill_rally_v1/east/frame_005.png",
+      "size": [
+        168,
+        184
+      ],
+      "alpha_bbox": [
+        52,
+        36,
+        110,
+        151
+      ]
+    },
+    {
+      "path": "Idle/animations/skill_rally_v1/east/frame_006.png",
+      "size": [
+        168,
+        184
+      ],
+      "alpha_bbox": [
+        69,
+        28,
+        100,
+        151
+      ]
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v1/east/frame_000.png",
+      "size": [
+        148,
+        180
+      ],
+      "alpha_bbox": [
+        59,
+        26,
+        90,
+        149
+      ]
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v1/east/frame_001.png",
+      "size": [
+        148,
+        180
+      ],
+      "alpha_bbox": [
+        58,
+        26,
+        90,
+        149
+      ]
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v1/east/frame_002.png",
+      "size": [
+        148,
+        180
+      ],
+      "alpha_bbox": [
+        39,
+        29,
+        114,
+        149
+      ]
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v1/east/frame_003.png",
+      "size": [
+        148,
+        180
+      ],
+      "alpha_bbox": [
+        31,
+        36,
+        123,
+        149
+      ]
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v1/east/frame_004.png",
+      "size": [
+        148,
+        180
+      ],
+      "alpha_bbox": [
+        31,
+        37,
+        121,
+        149
+      ]
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v1/east/frame_005.png",
+      "size": [
+        148,
+        180
+      ],
+      "alpha_bbox": [
+        23,
+        37,
+        126,
+        149
+      ]
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v1/east/frame_006.png",
+      "size": [
+        148,
+        180
+      ],
+      "alpha_bbox": [
+        24,
+        35,
+        121,
+        149
+      ]
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v1/east/frame_007.png",
+      "size": [
+        148,
+        180
+      ],
+      "alpha_bbox": [
+        55,
+        33,
+        95,
+        149
+      ]
+    },
+    {
+      "path": "Idle/animations/spear_thrust_v1/east/frame_008.png",
+      "size": [
+        148,
+        180
+      ],
+      "alpha_bbox": [
+        59,
+        26,
+        90,
+        149
+      ]
+    }
+  ]
+}

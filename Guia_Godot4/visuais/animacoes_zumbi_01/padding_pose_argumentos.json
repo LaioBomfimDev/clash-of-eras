@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "draw",
+    "--recipe",
+    "{\"job\":{\"canvas\":[200,128],\"frame_count\":1,\"views\":[{\"id\":\"east\",\"offset\":[20,0]}],\"source_bookends_exact\":true},\"scene\":{\"layers\":[{\"id\":\"body\",\"name\":\"Body - original unchanged\"}],\"views\":{\"east\":{\"selections\":{\"all\":{}},\"nodes\":{\"body\":{\"layer\":\"body\",\"at\":[20,0],\"draw\":[{\"op\":\"copy\",\"part\":\"all\"}]}}}}}}",
+    "--sources",
+    "{\"east\":\"https://api.pixellab.ai/mcp/images/1d65c7a5-bff2-4371-a040-45519ebfd10b/download\"}"
+  ],
+  "mode": "low",
+  "notes": "Transparent padding: original 160x128 copied unchanged at x20,y0 into 200x128, no rescaling or redrawing. Match attack contact keyframe dimensions."
+}

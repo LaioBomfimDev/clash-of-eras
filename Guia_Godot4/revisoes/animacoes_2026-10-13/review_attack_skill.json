@@ -1,0 +1,473 @@
+{
+  "reviewed_at_utc": "2026-10-13T03:35:29.895034+00:00",
+  "scope": "Todos os 9 quadros de ataque e 7 de habilidade vistos individualmente com view_image; PIL apenas para leitura/métricas. Sem Godot, geração ou alterações de PNG/código/manifesto.",
+  "frames_seen_total": 16,
+  "final_user_approval": false,
+  "actions": {
+    "attack": {
+      "folder": "attack_east_02",
+      "anchor": [
+        107,
+        143
+      ],
+      "source_animation": "spear_thrust_v2",
+      "source_job": "03489e7e-80b1-4cab-a0c7-cb2ea85ade13",
+      "expected_frames": 9,
+      "direction": "east",
+      "fps_observed_in_initial_manifest": 10,
+      "loop_observed_in_initial_manifest": false,
+      "frames_seen": 9,
+      "frames": [
+        {
+          "index": 0,
+          "path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\attack_east_02\\frame_000.png",
+          "sha256": "e0657a31875f8dbb0a7a8c362c66f4fa8eee89583a3ed47ef8d9741cc47b3427",
+          "seen_individually_with_view_image": true,
+          "canvas": [
+            212,
+            168
+          ],
+          "alpha_bounds": [
+            37,
+            28,
+            175,
+            143
+          ],
+          "native_height": 115,
+          "screen_alpha_height_n1": 71.057,
+          "baseline_exclusive": 143,
+          "baseline_offset_from_anchor": 0,
+          "visual_notes": "Pose inicial com lança horizontal à cintura e pés próximos."
+        },
+        {
+          "index": 1,
+          "path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\attack_east_02\\frame_001.png",
+          "sha256": "06aad8f57b1e0603e487d151ba377522f0f398d9aab818c939aef174b4dbc8ff",
+          "seen_individually_with_view_image": true,
+          "canvas": [
+            212,
+            168
+          ],
+          "alpha_bounds": [
+            36,
+            28,
+            174,
+            143
+          ],
+          "native_height": 115,
+          "screen_alpha_height_n1": 71.057,
+          "baseline_exclusive": 143,
+          "baseline_offset_from_anchor": 0,
+          "visual_notes": "Começo de passada; braço da lança continua junto à cintura."
+        },
+        {
+          "index": 2,
+          "path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\attack_east_02\\frame_002.png",
+          "sha256": "ba1b35adca8eb9dff4d86a86a67aa348e1c577ae59569494675119237fcea6bd",
+          "seen_individually_with_view_image": true,
+          "canvas": [
+            212,
+            168
+          ],
+          "alpha_bounds": [
+            33,
+            29,
+            171,
+            143
+          ],
+          "native_height": 114,
+          "screen_alpha_height_n1": 70.439,
+          "baseline_exclusive": 143,
+          "baseline_offset_from_anchor": 0,
+          "visual_notes": "Pernas se afastam e corpo avança; ponta da lança recua na imagem."
+        },
+        {
+          "index": 3,
+          "path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\attack_east_02\\frame_003.png",
+          "sha256": "1e24f6abb17bde6db75dd2ad7187678c2b895d93a2bb91882e233d988faa4c77",
+          "seen_individually_with_view_image": true,
+          "canvas": [
+            212,
+            168
+          ],
+          "alpha_bounds": [
+            33,
+            30,
+            170,
+            143
+          ],
+          "native_height": 113,
+          "screen_alpha_height_n1": 69.821,
+          "baseline_exclusive": 143,
+          "baseline_offset_from_anchor": 0,
+          "visual_notes": "Passada aberta, sem extensão frontal clara do braço/lança."
+        },
+        {
+          "index": 4,
+          "path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\attack_east_02\\frame_004.png",
+          "sha256": "cffc8432a771ca194b44a8399ab02426db40efd537a4756877d17d466ba7319d",
+          "seen_individually_with_view_image": true,
+          "canvas": [
+            212,
+            168
+          ],
+          "alpha_bounds": [
+            31,
+            32,
+            168,
+            143
+          ],
+          "native_height": 111,
+          "screen_alpha_height_n1": 68.585,
+          "baseline_exclusive": 143,
+          "baseline_offset_from_anchor": 0,
+          "visual_notes": "Máxima abertura das pernas; ponta mais recuada, sem alcance frontal de estocada."
+        },
+        {
+          "index": 5,
+          "path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\attack_east_02\\frame_005.png",
+          "sha256": "325df02241d4522067396ab7f35c35c83b4d8d61bc34c6a163044e0f6092c1be",
+          "seen_individually_with_view_image": true,
+          "canvas": [
+            212,
+            168
+          ],
+          "alpha_bounds": [
+            32,
+            31,
+            169,
+            143
+          ],
+          "native_height": 112,
+          "screen_alpha_height_n1": 69.203,
+          "baseline_exclusive": 143,
+          "baseline_offset_from_anchor": 0,
+          "visual_notes": "Início da recuperação; arma ainda horizontal."
+        },
+        {
+          "index": 6,
+          "path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\attack_east_02\\frame_006.png",
+          "sha256": "8fc0ffde7da1307136a84d6a8b0e8e9d00e7b48fc720527de444dc8e3b4a1b54",
+          "seen_individually_with_view_image": true,
+          "canvas": [
+            212,
+            168
+          ],
+          "alpha_bounds": [
+            33,
+            30,
+            171,
+            140
+          ],
+          "native_height": 110,
+          "screen_alpha_height_n1": 67.967,
+          "baseline_exclusive": 140,
+          "baseline_offset_from_anchor": -3,
+          "visual_notes": "Perna se recolhe; base alfa fica 3 px acima da âncora."
+        },
+        {
+          "index": 7,
+          "path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\attack_east_02\\frame_007.png",
+          "sha256": "81258d8c864d4c750f94d278d3bf92f7b875be07da977b0139adef65f0f68094",
+          "seen_individually_with_view_image": true,
+          "canvas": [
+            212,
+            168
+          ],
+          "alpha_bounds": [
+            36,
+            28,
+            174,
+            140
+          ],
+          "native_height": 112,
+          "screen_alpha_height_n1": 69.203,
+          "baseline_exclusive": 140,
+          "baseline_offset_from_anchor": -3,
+          "visual_notes": "Pés se aproximam; base alfa ainda 3 px acima da âncora."
+        },
+        {
+          "index": 8,
+          "path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\attack_east_02\\frame_008.png",
+          "sha256": "b766a5e71c19d6049d7fd03b180949b1a16b17563eb0b565460a8670ff730571",
+          "seen_individually_with_view_image": true,
+          "canvas": [
+            212,
+            168
+          ],
+          "alpha_bounds": [
+            37,
+            28,
+            175,
+            143
+          ],
+          "native_height": 115,
+          "screen_alpha_height_n1": 71.057,
+          "baseline_exclusive": 143,
+          "baseline_offset_from_anchor": 0,
+          "visual_notes": "Retorno próximo da pose inicial, com diferenças de sombreamento."
+        }
+      ],
+      "first_last_rgba_changed_pixels": 471,
+      "first_last_alpha_changed_pixels": 11,
+      "decision": "Rejeitado como estocada pronta; preservar como estudo de caminhada carregando lança horizontal.",
+      "identity_and_anatomy": "Identidade geral reconhecível: pele, cabelo, torso musculoso, calça clara, faixa vermelha e correntes. Dois braços e pernas são legíveis; não detectei membro extra evidente. Braço da lança permanece junto à cintura em vez de estender o golpe.",
+      "weapon_finding": "Lança permanece apontada para leste, mas a ponta recua 7 px no auge da passada. A sequência não comunica preparação, avanço da ponta e recuperação de uma estocada.",
+      "silver_blade_xmax_exclusive_by_frame": [
+        174,
+        172,
+        170,
+        169,
+        167,
+        168,
+        169,
+        172,
+        174
+      ],
+      "tip_retraction_000_to_004_native_px": 7,
+      "tip_retraction_screen_n1_px": 4.325,
+      "anchor_review": "[107,143] é coerente com o corpo no canvas 212×168. Base alfa 143 na maioria dos quadros, 140 nos quadros 006/007. Manter âncora fixa; ela não corrige o gesto inadequado."
+    },
+    "skill": {
+      "folder": "skill_east_01",
+      "anchor": [
+        84,
+        151
+      ],
+      "source_animation": "skill_rally_v1",
+      "source_job": "6828b770-06dd-4ec7-9400-de3e06abfc0a",
+      "expected_frames": 7,
+      "direction": "east",
+      "fps_observed_in_initial_manifest": 10,
+      "loop_observed_in_initial_manifest": false,
+      "frames_seen": 7,
+      "frames": [
+        {
+          "index": 0,
+          "path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\skill_east_01\\frame_000.png",
+          "sha256": "f307282aa7646bab689b81084bcb972026fac2aff9a7b4c32beff5e99d7ab6c7",
+          "seen_individually_with_view_image": true,
+          "canvas": [
+            168,
+            184
+          ],
+          "alpha_bounds": [
+            69,
+            28,
+            100,
+            151
+          ],
+          "native_height": 123,
+          "screen_alpha_height_n1": 76.0,
+          "baseline_exclusive": 151,
+          "baseline_offset_from_anchor": 0,
+          "visual_notes": "Pose inicial com pernas livres e lança parcialmente atrás da cabeça."
+        },
+        {
+          "index": 1,
+          "path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\skill_east_01\\frame_001.png",
+          "sha256": "2e986650e4129dee007cd575562445399a259fb9f424d98e5c2fa92c9c4aa10d",
+          "seen_individually_with_view_image": true,
+          "canvas": [
+            168,
+            184
+          ],
+          "alpha_bounds": [
+            69,
+            28,
+            100,
+            151
+          ],
+          "native_height": 123,
+          "screen_alpha_height_n1": 76.0,
+          "baseline_exclusive": 151,
+          "baseline_offset_from_anchor": 0,
+          "visual_notes": "Preparação sutil próxima à pose inicial."
+        },
+        {
+          "index": 2,
+          "path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\skill_east_01\\frame_002.png",
+          "sha256": "5db5a1074b8e922d5fcef4e03548ef26a57173da8fa18441abee917dda104c5f",
+          "seen_individually_with_view_image": true,
+          "canvas": [
+            168,
+            184
+          ],
+          "alpha_bounds": [
+            69,
+            28,
+            100,
+            151
+          ],
+          "native_height": 123,
+          "screen_alpha_height_n1": 76.0,
+          "baseline_exclusive": 151,
+          "baseline_offset_from_anchor": 0,
+          "visual_notes": "Mão vai ao peito; lâmina parcialmente ocluída pela cabeça."
+        },
+        {
+          "index": 3,
+          "path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\skill_east_01\\frame_003.png",
+          "sha256": "42297d37940c7af1c071ee636e5a6116879143b9d1e201aeeac114c950e412cf",
+          "seen_individually_with_view_image": true,
+          "canvas": [
+            168,
+            184
+          ],
+          "alpha_bounds": [
+            40,
+            27,
+            117,
+            151
+          ],
+          "native_height": 124,
+          "screen_alpha_height_n1": 76.618,
+          "baseline_exclusive": 151,
+          "baseline_offset_from_anchor": 0,
+          "visual_notes": "Punho erguido; cabo inclina para cima/esquerda, sem ponta metálica naquele extremo."
+        },
+        {
+          "index": 4,
+          "path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\skill_east_01\\frame_004.png",
+          "sha256": "2afaac0237f5add92c687493f2d8d859c8e37f44c5b8179cda7bf8715d5666f3",
+          "seen_individually_with_view_image": true,
+          "canvas": [
+            168,
+            184
+          ],
+          "alpha_bounds": [
+            24,
+            35,
+            125,
+            151
+          ],
+          "native_height": 116,
+          "screen_alpha_height_n1": 71.675,
+          "baseline_exclusive": 151,
+          "baseline_offset_from_anchor": 0,
+          "visual_notes": "Punho perto da testa; ponta metálica aparece à direita, abaixo da cintura."
+        },
+        {
+          "index": 5,
+          "path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\skill_east_01\\frame_005.png",
+          "sha256": "f764dd4e14b02ec7b7b11a146b453f46c53ce7aab171b318a310937d428896ea",
+          "seen_individually_with_view_image": true,
+          "canvas": [
+            168,
+            184
+          ],
+          "alpha_bounds": [
+            52,
+            36,
+            110,
+            151
+          ],
+          "native_height": 115,
+          "screen_alpha_height_n1": 71.057,
+          "baseline_exclusive": 151,
+          "baseline_offset_from_anchor": 0,
+          "visual_notes": "Recuperação; duas formas de ponta metálica, superior direita e inferior esquerda."
+        },
+        {
+          "index": 6,
+          "path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\skill_east_01\\frame_006.png",
+          "sha256": "9b0f6f1c046544c2ecf5f326f1eaf44def6621152b504f044081cd40763071a5",
+          "seen_individually_with_view_image": true,
+          "canvas": [
+            168,
+            184
+          ],
+          "alpha_bounds": [
+            69,
+            28,
+            100,
+            151
+          ],
+          "native_height": 123,
+          "screen_alpha_height_n1": 76.0,
+          "baseline_exclusive": 151,
+          "baseline_offset_from_anchor": 0,
+          "visual_notes": "Retorno próximo da pose inicial, com diferenças de sombreamento."
+        }
+      ],
+      "first_last_rgba_changed_pixels": 229,
+      "first_last_alpha_changed_pixels": 0,
+      "decision": "Gesto de liderança legível como estudo; arma rejeitada como acabamento final por lâmina ausente/duplicada.",
+      "identity_and_anatomy": "Punho erguido e mão no peito comunicam liderança. Pernas livres permanecem estáveis; identidade reconhecível e nenhum membro extra evidente.",
+      "weapon_finding": {
+        "frame_003": "O cabo inclina para o alto/esquerda e termina sem lâmina metálica visível. Região [20,45,64,90] tem 0 pixels metálicos pelo limiar usado.",
+        "frame_005": "Duas pontas metálicas simultâneas: grupo superior bbox [96,54,108,69] com 58 pixels claros e inferior bbox [54,118,75,136] com 62. Ambas vistas no PNG individual."
+      },
+      "anchor_review": "[84,151] é coerente com canvas 168×184 e base alfa 151 em todos os 7 quadros. Skill 000 coincide exatamente com walk 000 quando as âncoras são alinhadas."
+    }
+  },
+  "measurement_method": "Alfa nativo; grupos metálicos conferidos visualmente e por pixels alfa>0, min(RGB)>=125, max(RGB)-min(RGB)<=60. Ataque medido em x>=125,y60..109; habilidade em regiões separadas descritas. O limiar apoia a observação, não segmenta semanticamente toda a arma.",
+  "transition_and_scale": {
+    "board_base_scale": 0.6178861788617886,
+    "front_reference_native_height": 123,
+    "front_screen_target_n1": 76,
+    "level_multipliers": [
+      1,
+      1.2,
+      1.44
+    ],
+    "walk_000_path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\walk_east_02\\original\\Idle\\animations\\walk_ground_v2\\east\\frame_000.png",
+    "walk_anchor": [
+      64,
+      149
+    ],
+    "walk_alpha_bounds": [
+      49,
+      26,
+      80,
+      149
+    ],
+    "skill_000_vs_walk_000_aligned_rgba_differences": 0,
+    "idle_east_path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\zumbi\\grande_04\\original\\Idle\\rotations\\east.png",
+    "idle_east_canvas": [
+      128,
+      128
+    ],
+    "idle_east_alpha_bounds": [
+      45,
+      0,
+      80,
+      127
+    ],
+    "idle_east_derived_anchor": [
+      64.0,
+      127
+    ],
+    "findings": [
+      "Walk 000 e skill 000 registram perfeitamente com suas âncoras próprias.",
+      "Ataque inicial tem altura alfa 115 px (~71,1 px em N1), contra 123 px (~76 px) no walk/skill iniciais. A arma horizontal reduz o limite superior; não normalizar separadamente cada ação/quadro.",
+      "Aplicar a mesma escala base; N2/N3 só multiplicam todo o clip. Não há lâmina animada N2/N3 aprovada nesta revisão.",
+      "Idle contém pedra; ações têm pés livres. A mudança de pose/apoio precisa ser conferida em reprodução no jogo."
+    ]
+  },
+  "manifest_state": {
+    "path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\animations_manifest.json",
+    "sha256_at_receipt": "c899afd647b12ea549e5f852c88c7506bf86098aa57c7efec15da54557805654",
+    "actions_observed_at_start": [
+      "walk",
+      "attack",
+      "skill"
+    ],
+    "actions_at_receipt": [
+      "walk"
+    ],
+    "note": "O manifesto mudou durante a revisão para somente walk; PNGs de ataque/habilidade permanecem. O recibo registra os arquivos físicos e as âncoras observadas antes da mudança, sem restaurar clips."
+  },
+  "documentation_discrepancy": "O cérebro descrevia estocada frontal nítida e retorno idêntico. A inspeção independente não confirmou a estocada e constatou diferenças RGBA entre início/fim. Parser e testes de integração não aprovam gesto/anatomia/continuidade da arma.",
+  "recommendations": [
+    "Preservar os assets como estudos; não repetir gerações automaticamente.",
+    "Ataque precisa projetar a ponta para leste com extensão coordenada de braços, preparação/impacto/recuperação legíveis.",
+    "Revisar gratuitamente lâmina ausente no skill 003 e dupla no 005, preservando corpo/pés/originais.",
+    "Manter âncoras fixas propostas e conferir transições/escala em visualizador separado antes de aprovação final."
+  ],
+  "limitations": [
+    "Somente leste; outras direções não revisadas.",
+    "Inspeção estática de todos os 16 PNGs e métricas, sem reprodução temporal em Godot, teste humano ou celular.",
+    "Não inferi causa interna do gerador. Não alterei código, manifesto, PNG ou regras."
+  ]
+}

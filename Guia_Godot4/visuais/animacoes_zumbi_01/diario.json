@@ -74,7 +74,7 @@
     },
     {
       "kind": "spear_thrust_v2",
-      "status": "completed_reviewed_integrated",
+      "status": "reviewed_rejected_removed_from_manifest",
       "job_id": "03489e7e-80b1-4cab-a0c7-cb2ea85ade13",
       "animation_group_id": "17a8c667-bd7b-4cda-8924-2e69ad58fa4b",
       "frames": 9,
@@ -85,11 +85,11 @@
         107,
         143
       ],
-      "review": "Frontal spear thrust with horizontal anchor; spear blade firmly points East throughout; zero flips; clean recovery."
+      "review": "Root and independent review: holds horizontal spear while walking; blade retreats rather than thrusts. Prior integrated claim withdrawn."
     },
     {
       "kind": "skill_rally_v1",
-      "status": "completed_reviewed_integrated",
+      "status": "reviewed_rejected_removed_from_manifest",
       "job_id": "6828b770-06dd-4ec7-9400-de3e06abfc0a",
       "animation_group_id": "ccfe3127-876a-42c1-833f-59811be39e89",
       "frames": 7,
@@ -100,7 +100,24 @@
         84,
         151
       ],
-      "review": "Inspirational battle cry / leadership rally gesture raising fist and spear high; chest proud; seamless return to stance."
+      "review": "Root and independent review: blade disappears in frame003 and two metal tips appear in005. Prior approval withdrawn."
+    },
+    {
+      "animation_group_id": "713a8133-fc86-4c50-a510-51b8965b6418",
+      "kind": "spear_extension_v3",
+      "custom_start_and_end": "padded200x128 ready pose -> extended thrust contact200x128",
+      "status": "processing_not_integrated",
+      "recovery": "reverse ordered references proposed after review",
+      "job_id": "c8740275-d0f4-471c-9504-58b41f91fbdf",
+      "cost": 3,
+      "frames": 5
+    },
+    {
+      "cost": 1,
+      "kind": "thrust_contact_pose",
+      "local": "pose_estocada_contato.png",
+      "job_id": "50d9f0c5-0f79-4304-8c0b-58847ea22a0b",
+      "status": "completed_root_reviewed"
     }
   ]
 }

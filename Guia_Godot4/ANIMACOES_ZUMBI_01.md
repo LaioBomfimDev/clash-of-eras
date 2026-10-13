@@ -1,5 +1,19 @@
 # Animações do Zumbi — produção 01
 
+## Revisão independente — 2026-10-13, prevalece sobre a fila anterior
+
+Somente **walk leste v2** permanece ativo. A revisão de todos os 16 quadros novos rejeitou `spear_thrust_v2` como estocada (ele caminha segurando a lança, cuja ponta recua 7 px), e `skill_rally_v1` por lâmina ausente no 003 e duplicada no 005. Foram retirados do manifesto, preservados nos diretórios e no ZIP oficial; os rótulos "concluída e integrada" da tabela abaixo são registros anteriores corrigidos por esta seção. Recibo: `revisoes/animacoes_2026-10-13/review_attack_skill.json`. Não confundir carregamento técnico com aprovação visual.
+
+Checkpoint oficial completo: `RelicArena/assets/characters/zumbi/animacoes_01/exports/checkpoint_2026-10-13/`; 51 arquivos, 42 quadros de animação incluindo rejeitados, zero divergências entre ZIP e extração, oito vistas iguais aos inputs. SHA-256 do ZIP: `4892feb2c6e6763443edf0723710299fee5093a214a19065e33cb484625aeabe`.
+
+Correção em produção: pose final de estocada `50d9f0c5-0f79-4304-8c0b-58847ea22a0b` (1 geração) mostra braços estendidos, joelho flexionado e ponta à direita. O editor gratuito acolchoou a pose inicial de 160×128 para 200×128, sem alterar seus pixels (comparação RGBA confirmou igualdade no recorte x20..179). Novo job `c8740275-d0f4-471c-9504-58b41f91fbdf`, grupo `713a8133-fc86-4c50-a510-51b8965b6418`, **3 gerações**, cinco quadros incluindo referência: interpolação apenas da extensão; retorno proposto por ordem reversa dos mesmos PNGs, sem redesenhar. Ainda aguarda inspeção. A primeira solicitação foi recusada por dimensões diferentes; não iniciou geração.
+
+Saldo consultado antes dessa correção: **19 restantes, 20 usadas, total40, US$0, trial**. Transcrever os campos de nova consulta após conclusão; não inferir saldo por subtração. Não gerar outra ação enquanto o job está pendente.
+
+Código de apresentação e escala: cliente **444/0 headless e 444/0 OpenGL**, VFX **209/0**, banco **122/0**, controlador **89/0**, integração **29/0**. Os três últimos usam fixtures, não aprovam os PNGs. Evidências/hashes em `revisoes/animacoes_2026-10-13/`; testes finais do cliente usam somente walk leste. Smoke foi atualizado para moeda32×32 e início explícito do bot: outra IA mudou JOGAR para matchmaking gráfico, preservado. Nenhuma regra de combate foi alterada por essa correção de testes.
+
+Cobertura ainda parcial: uma direção de caminhada; as outras sete usam a arte anterior. Clips animados usam arte N1 com multiplicador de tamanho por nível; a lâmina extra de N2/N3 permanece nas poses estáticas, ainda não foi produzida para os clips. Escala intermediária é teste visual, não aprovação final.
+
 ## Pedido confirmado em 2026-10-12
 
 O usuário atualizou a chave e autorizou começar pelo Zumbi do lote 04: animações reais de braços/pernas, caminhada, ataque e habilidade, com efeitos próprios. Reduzir somente a escala de exibição do Zumbi, preservando os pixels detalhados; aumentar os demais para encontrar um tamanho intermediário no tabuleiro. A escala escolhida para a primeira captura é teste visual, não aprovação final de tamanho.

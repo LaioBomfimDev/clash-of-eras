@@ -17,8 +17,9 @@ var rooms: Dictionary = {} # room_id -> RoomData
 var next_client_id: int = 1
 var next_room_id: int = 1
 
-# Snapshot/Eventos push rate limiter (envia snapshots regulares a ~15-20 FPS para economizar banda)
-const SNAPSHOT_INTERVAL: float = 0.05
+# Snapshot/Eventos push rate limiter adaptativo (otimizado para evitar lag e sobrecarga na nuvem/mobile)
+const COMBAT_SNAPSHOT_INTERVAL: float = 0.10 # 10 FPS durante combate (fluido com interpolação do cliente)
+const PREP_SNAPSHOT_INTERVAL: float = 0.50 # 2 FPS durante preparação (comandos continuam com envio instantâneo)
 
 
 class RoomData:
@@ -249,8 +250,9 @@ func _update_rooms(delta: float) -> void:
 						"events": events_by_team[t]
 					})
 
-		# Envia snapshots periódicos
-		if room.snapshot_timer >= SNAPSHOT_INTERVAL:
+		# Envia snapshots periódicos com taxa adaptativa por fase
+		var req_interval: float = COMBAT_SNAPSHOT_INTERVAL if room.session.phase == "combat" else PREP_SNAPSHOT_INTERVAL
+		if room.snapshot_timer >= req_interval:
 			room.snapshot_timer = 0.0
 			_broadcast_room_snapshots(room, false)
 

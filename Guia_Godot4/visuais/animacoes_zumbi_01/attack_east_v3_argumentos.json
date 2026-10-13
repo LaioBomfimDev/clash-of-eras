@@ -1,0 +1,13 @@
+{
+  "character_id": "6a5ec045-5930-4955-a684-ef864e5607b9",
+  "mode": "v3",
+  "animation_name": "spear_extension_v3",
+  "directions": [
+    "east"
+  ],
+  "frame_count": 4,
+  "keep_first_frame": true,
+  "custom_start_frame_url": "https://api.pixellab.ai/mcp/pixel-tools/ad47f1db-d75a-4d27-b350-694499c3c348/assets/east/full.png",
+  "end_frame_url": "https://api.pixellab.ai/mcp/images/50d9f0c5-0f79-4304-8c0b-58847ea22a0b/download",
+  "action_description": "Interpolate from the first ready pose to the final spear-contact pose: ONE forceful spear THRUST to the RIGHT. Extend both elbows, push both hands and the rigid horizontal spear forward; bend the front knee and lean the torso forward. End in the exact provided fully extended lunge. NO walking cycle and NO recovery in this clip. Single wide silver blade remains at the RIGHT tip only, plain wooden butt at LEFT, never rotate or spin the spear. Preserve adult body, face, scars, beige trousers, ankle cuffs, one dagger and detailed pixel shading. Feet stay on the same ground baseline, body height fixed. Transparent; no camera, zoom, floor, extra weapons, detached parts or effects."
+}

@@ -1,0 +1,153 @@
+ERROR: CLIENT_SMOKE_FAIL: ícone 16×16 ui_coin
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:19)
+       [1] _run (res://client/smoke.gd:561)
+ERROR: CLIENT_SMOKE_FAIL: nova partida mostra três benefícios
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:19)
+       [1] _run (res://client/smoke.gd:581)
+ERROR: CLIENT_SMOKE_FAIL: benefício aparece sobre fundo escurecido
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:19)
+       [1] _run (res://client/smoke.gd:582)
+SCRIPT ERROR: Invalid access to property or key '0:1:benefit:2' on a base object of type 'Dictionary'.
+   at: _choose_gold (res://client/smoke.gd:38)
+   GDScript backtrace (most recent call first):
+       [0] _choose_gold (res://client/smoke.gd:38)
+       [1] _run (res://client/smoke.gd:583)
+ERROR: CLIENT_SMOKE_FAIL: benefício leva à preparação
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:19)
+       [1] _run (res://client/smoke.gd:584)
+ERROR: CLIENT_SMOKE_FAIL: visor recebe ouro inicial e benefício da Session
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:19)
+       [1] _run (res://client/smoke.gd:585)
+ERROR: CLIENT_SMOKE_FAIL: zona revelada produz um clip de fumaça
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:19)
+       [1] _check_support_vfx_contracts (res://client/smoke.gd:341)
+       [2] _run (res://client/smoke.gd:601)
+ERROR: CLIENT_SMOKE_FAIL: fumaça continua após vários ciclos do clip nativo
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:19)
+       [1] _check_support_vfx_contracts (res://client/smoke.gd:350)
+       [2] _run (res://client/smoke.gd:601)
+ERROR: CLIENT_SMOKE_FAIL: morte da fonte não cancela uma zona ainda ativa
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:19)
+       [1] _check_support_vfx_contracts (res://client/smoke.gd:352)
+       [2] _run (res://client/smoke.gd:601)
+ERROR: CLIENT_SMOKE_FAIL: zona substituída não deixa clip no hexágono anterior
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:19)
+       [1] _check_support_vfx_contracts (res://client/smoke.gd:362)
+       [2] _run (res://client/smoke.gd:601)
+ERROR: CLIENT_SMOKE_FAIL: um laço cria um nó nativo separado
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:19)
+       [1] _check_support_vfx_contracts (res://client/smoke.gd:374)
+       [2] _run (res://client/smoke.gd:601)
+ERROR: CLIENT_SMOKE_FAIL: preparar nó antes de death
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:19)
+       [1] _check_support_vfx_contracts (res://client/smoke.gd:411)
+       [2] _run (res://client/smoke.gd:601)
+ERROR: CLIENT_SMOKE_FAIL: preparar nó antes de inactive
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:19)
+       [1] _check_support_vfx_contracts (res://client/smoke.gd:411)
+       [2] _run (res://client/smoke.gd:601)
+ERROR: CLIENT_SMOKE_FAIL: preparar nó antes de stun_ended
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:19)
+       [1] _check_support_vfx_contracts (res://client/smoke.gd:411)
+       [2] _run (res://client/smoke.gd:601)
+ERROR: CLIENT_SMOKE_FAIL: toque no herói seleciona e abre cartão
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:19)
+       [1] _run (res://client/smoke.gd:610)
+ERROR: CLIENT_SMOKE_FAIL: posicionamento válido via Session
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:19)
+       [1] _run (res://client/smoke.gd:612)
+ERROR: CLIENT_SMOKE_FAIL: posicionamento inimigo rejeitado com aviso
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:19)
+       [1] _run (res://client/smoke.gd:614)
+ERROR: CLIENT_SMOKE_FAIL: botão envia herói à reserva
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:19)
+       [1] _run (res://client/smoke.gd:616)
+ERROR: CLIENT_SMOKE_FAIL: tocar na reserva vazia guarda o herói selecionado
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:19)
+       [1] _run (res://client/smoke.gd:623)
+ERROR: CLIENT_SMOKE_FAIL: tocar no herói da reserva o seleciona
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:19)
+       [1] _run (res://client/smoke.gd:627)
+ERROR: CLIENT_SMOKE_FAIL: troca herói em campo com a reserva
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:19)
+       [1] _run (res://client/smoke.gd:639)
+ERROR: CLIENT_SMOKE_FAIL: herói trocado continua selecionado na reserva
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:19)
+       [1] _run (res://client/smoke.gd:640)
+ERROR: CLIENT_SMOKE_FAIL: capacidade e moedas vêm da Session
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:19)
+       [1] _run (res://client/smoke.gd:645)
+ERROR: CLIENT_SMOKE_FAIL: herói da reserva selecionado pelo chão
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:19)
+       [1] _run (res://client/smoke.gd:652)
+ERROR: CLIENT_SMOKE_FAIL: quinto herói colocado após expansão
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:19)
+       [1] _run (res://client/smoke.gd:654)
+ERROR: CLIENT_SMOKE_FAIL: item marcado habilita EQUIPAR com herói selecionado
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:19)
+       [1] _run (res://client/smoke.gd:661)
+ERROR: CLIENT_SMOKE_FAIL: equipar por controles
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:19)
+       [1] _run (res://client/smoke.gd:663)
+ERROR: CLIENT_SMOKE_FAIL: cartão mostra item equipado
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:19)
+       [1] _run (res://client/smoke.gd:664)
+SCRIPT ERROR: Out of bounds get index '0' (on base: 'Array[Button]')
+   at: _run (res://client/smoke.gd:665)
+   GDScript backtrace (most recent call first):
+       [0] _run (res://client/smoke.gd:665)
+CLIENT_SMOKE_FAIL: timeout de 20 segundos

@@ -66,6 +66,8 @@ Contratos temporários: execução do Caramelo em mordida contra vida ≤10% ant
 
 ## Trabalho e evidência
 
+- **Animações/escala — revisão de 2026-10-13:** tamanho de exibição do Zumbi N1 reduzido de123 para76px e humanos antigos ampliados para68–70px, PNGs intactos; ajuste visual de teste. Somente caminhada articulada leste v2 está ativa. Ataque v2 e inspiração v1 foram retirados após inspeção independente de todos os quadros; suas aprovações anteriores neste arquivo são superadas pela [revisão atual](ANIMACOES_ZUMBI_01.md). Código, eventos e dois VFX seguem prontos; não confundir VFX com animação corporal. Cliente444/0 headless/OpenGL, VFX209/0; contratos banco122/0, player89/0 e integração29/0 são fixtures. Ainda faltam direções e animações consistentes de ataque/habilidade. Lâminas maiores de N2/N3 só estão nas poses estáticas.
+
 - **Animações do Zumbi com PixelLab MCP (Estocada Frontal, Gesto de Inspiração e Coreografia na Mini-Arena) — 2026-10-13:**
   - A pedido do usuário ("adicionei o mcp do pixellab quero que voce utilize pra continuar os proximos 3 passos"):
   1. **Passo 1 — Estocada Frontal Refinada (Attack) via PixelLab MCP:**

@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 50d9f0c5-0f79-4304-8c0b-58847ea22a0b\njob_id: 50d9f0c5-0f79-4304-8c0b-58847ea22a0b\nmodel: pixen\nedit: Same adult warrior, same identity, detail, body size and waist dagger. EAST spear ATTACK CONTACT POSE: lunge RIGHT, lean chest right, bend front knee, plant both feet. Extend BOTH arms RIGHT to drive ONE horizontal spear forward at chest height, elbows nearly straight. ONE wide SILVER BLADE at the far RIGHT tip only; LEFT butt plain wood. Right blade clearly ahead of face. Entire spear visible. This is one strong thrust, not walking or holding. Transparent, no floor, props, trails.\nsource: 160x128px\nsize: 200x128px\ntransparent: True\nasset_id: 976fec82-198e-5fc7-b2de-c13245be3470\nasset_status: pending (saved when generation completes)\ncost: 1 generation\nstatus: processing (~10-40s)\n\nhint: get_image(job_id=\"50d9f0c5-0f79-4304-8c0b-58847ea22a0b\")"
+    }
+  ],
+  "isError": false
+}

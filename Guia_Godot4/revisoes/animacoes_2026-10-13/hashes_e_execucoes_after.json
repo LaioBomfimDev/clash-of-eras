@@ -1,0 +1,86 @@
+{
+  "results": [
+    {
+      "label": "client_headless_after",
+      "timeout": false,
+      "stderr_bytes": 0,
+      "runner": "res://client/smoke.gd",
+      "exit_code": 0
+    },
+    {
+      "label": "client_opengl_after",
+      "timeout": false,
+      "stderr_bytes": 0,
+      "runner": "res://client/smoke.gd",
+      "exit_code": 0
+    },
+    {
+      "label": "vfx_library",
+      "timeout": false,
+      "stderr_bytes": 0,
+      "runner": "res://tests/test_vfx_library.gd",
+      "exit_code": 0
+    }
+  ],
+  "after": [
+    {
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\main.gd",
+      "Hash": "2531D6F69D5A94BD5D58E599EB4F48395810E4581673D026AEFE216447E2EC8E"
+    },
+    {
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\character_visuals.gd",
+      "Hash": "A0AB4B309BF846AD7266265E7CEFC18997AC1EC18B03877E8EBD12FC81F0247E"
+    },
+    {
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\animations_manifest.json",
+      "Hash": "C899AFD647B12EA549E5F852C88C7506BF86098AA57C7EFEC15DA54557805654"
+    },
+    {
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\manifest.json",
+      "Hash": "3E3D9F469E5909D5BF0D26490C827E3A80BD925CD6725F9128E479CE8CAF928D"
+    },
+    {
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\vfx\\manifest.json",
+      "Hash": "AAD60BDB0E5305A673D3D64D4EDF3209C166BE12E1C7278CAD9170AA284791E4"
+    },
+    {
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\smoke.gd",
+      "Hash": "053BDBAEBE4B00EE61B4CF55073B2F055E8FE96A18800CEC80C64F7D863DEA24"
+    },
+    {
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\tests\\test_vfx_library.gd",
+      "Hash": "A404F2A0794C7F35807D8CC5F647F22A9B89E0DBFD181D63997D51EBDD57CD71"
+    }
+  ],
+  "animation_manifest_state": "walk east9 only; attack/skill rejected by root and removed before these runners",
+  "before": [
+    {
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\main.gd",
+      "Hash": "2531D6F69D5A94BD5D58E599EB4F48395810E4581673D026AEFE216447E2EC8E"
+    },
+    {
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\character_visuals.gd",
+      "Hash": "A0AB4B309BF846AD7266265E7CEFC18997AC1EC18B03877E8EBD12FC81F0247E"
+    },
+    {
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\animations_manifest.json",
+      "Hash": "C899AFD647B12EA549E5F852C88C7506BF86098AA57C7EFEC15DA54557805654"
+    },
+    {
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\manifest.json",
+      "Hash": "3E3D9F469E5909D5BF0D26490C827E3A80BD925CD6725F9128E479CE8CAF928D"
+    },
+    {
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\vfx\\manifest.json",
+      "Hash": "AAD60BDB0E5305A673D3D64D4EDF3209C166BE12E1C7278CAD9170AA284791E4"
+    },
+    {
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\smoke.gd",
+      "Hash": "053BDBAEBE4B00EE61B4CF55073B2F055E8FE96A18800CEC80C64F7D863DEA24"
+    },
+    {
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\tests\\test_vfx_library.gd",
+      "Hash": "A404F2A0794C7F35807D8CC5F647F22A9B89E0DBFD181D63997D51EBDD57CD71"
+    }
+  ]
+}

@@ -218,6 +218,35 @@ func _save_player_name(new_name: String) -> void:
 		file.store_string(cleaned)
 		file.close()
 
+var hex_polygons_outer: Dictionary = {}
+var hex_polygons_inner: Dictionary = {}
+var fullscreen_button: Button = null
+var hud_fullscreen_button: Button = null
+var rotate_device_panel: Panel = null
+
+func _toggle_fullscreen() -> void:
+	if OS.has_feature("web"):
+		JavaScriptBridge.eval("""
+		(function() {
+			var doc = window.document;
+			var docEl = doc.documentElement;
+			var requestFS = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+			var cancelFS = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+			var isFS = doc.fullscreenElement || doc.mozFullScreenElement || doc.webkitFullscreenElement || doc.msFullscreenElement;
+			if (!isFS) {
+				if (requestFS) { requestFS.call(docEl); }
+			} else {
+				if (cancelFS) { cancelFS.call(doc); }
+			}
+		})();
+		""")
+	else:
+		var mode: DisplayServer.WindowMode = DisplayServer.window_get_mode()
+		if mode == DisplayServer.WINDOW_MODE_FULLSCREEN:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		else:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+
 var hero_preview_control: Control
 var hud_controls: Array[Control] = []
 var drag: Node2D
@@ -275,7 +304,18 @@ func _load_arena_props() -> void:
 
 func _ready() -> void:
 	texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
-	Engine.max_fps = target_fps
+	if OS.has_feature("web"):
+		Engine.max_fps = 0 # Na Web/WASM o navegador gerencia o timing perfeitamente (sem stutter)
+	else:
+		Engine.max_fps = target_fps
+
+	# Pré-calcula os 64 hexágonos do tabuleiro para desempenho máximo sem alocações por frame
+	for r: int in range(8):
+		for c: int in range(8):
+			var cell: Vector2i = Vector2i(c, r)
+			hex_polygons_outer[cell] = Board.hex_polygon(cell, 0.07)
+			hex_polygons_inner[cell] = Board.hex_polygon(cell, 0.16)
+
 	specs.merge(Catalog.load_summon_specs())
 	art.load_assets()
 	character_bank.load_assets()
@@ -356,8 +396,12 @@ func _process(delta: float) -> void:
 			session.step(delta)
 			_consume_events()
 	_refresh()
-	_update_visuals(delta)
 	_prepare_frame()
+	_update_visuals(delta)
+	# Verificação inteligente de orientação para celular (avisa se estiver em pé)
+	var win_size: Vector2 = DisplayServer.window_get_size()
+	if rotate_device_panel != null and is_instance_valid(rotate_device_panel):
+		rotate_device_panel.visible = win_size.y > (win_size.x * 1.05) and win_size.x > 0
 	queue_redraw()
 	units_layer.queue_redraw()
 	overlay_layer.queue_redraw()
@@ -400,6 +444,15 @@ func _build_ui() -> void:
 	overlay = _panel(ui, Rect2(340, 132, 600, 436), 0.9)
 	result_label = _label(overlay, "", Rect2(20, 14, 560, 34), 26, GOLD, HORIZONTAL_ALIGNMENT_CENTER)
 	result_label.visible = false # Estado consultável; só o título do overlay é renderizado.
+
+	# Alerta para quando o usuário segurar o celular na vertical (em pé)
+	rotate_device_panel = _panel(ui, Rect2(0, 0, 1280, 720), 0.96, 0)
+	rotate_device_panel.visible = false
+	_label(rotate_device_panel, "📱 GIRE O SEU CELULAR", Rect2(140, 210, 1000, 50), 36, GOLD, HORIZONTAL_ALIGNMENT_CENTER)
+	_label(rotate_device_panel, "Clash of Eras foi criado para ser jogado na horizontal (deitado).\nGire o aparelho de lado e use a Tela Cheia para expandir 100%!", Rect2(140, 275, 1000, 56), 18, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER)
+	var fs_orient_btn: Button = _button(rotate_device_panel, "⛶ ATIVAR TELA CHEIA AGORA", Rect2(470, 370, 340, 54), _toggle_fullscreen)
+	fs_orient_btn.add_theme_font_size_override("font_size", 18)
+
 	_show_menu()
 
 
@@ -441,8 +494,11 @@ func _build_top_bar() -> void:
 	status_panel = _panel(ui, Rect2(400, 86, 480, 30), 0.62, 15)
 	status_label = _label(status_panel, "", Rect2(10, 3, 460, 22), 14, Color("f4e9ca"), HORIZONTAL_ALIGNMENT_CENTER)
 	sound_icon_button = _icon_button(ui, "ui_sound", Rect2(1184, 80, 40, 34), _toggle_sound, "Som liga/desliga")
+	hud_fullscreen_button = _button(ui, "⛶", Rect2(1096, 80, 40, 34), _toggle_fullscreen)
+	hud_fullscreen_button.tooltip_text = "Modo Tela Cheia (F11)"
+	hud_fullscreen_button.add_theme_font_size_override("font_size", 16)
 	hud_controls.append_array([_icon_button(ui, "ui_menu", Rect2(1228, 80, 40, 34), _open_menu, "Menu"), sound_icon_button,
-		_icon_button(ui, "ui_scroll", Rect2(1140, 80, 40, 34), _toggle_drawer.bind("log"), "Eventos do combate")])
+		_icon_button(ui, "ui_scroll", Rect2(1140, 80, 40, 34), _toggle_drawer.bind("log"), "Eventos do combate"), hud_fullscreen_button])
 
 
 func _build_synergy_tracker() -> void:
@@ -2110,7 +2166,8 @@ func _cell_position(cell: Vector2i) -> Vector2:
 func _update_visuals(delta: float) -> void:
 	character_player.advance(delta)
 	var combat: bool = _phase() == "combat"
-	for entry: Dictionary in _draw_entries():
+	var entries: Array[Dictionary] = frame_entries if not frame_entries.is_empty() else _draw_entries()
+	for entry: Dictionary in entries:
 		var unit: Dictionary = entry["unit"]
 		var unit_id: int = int(unit["id"])
 		var target: Vector2 = entry["target"]
@@ -2756,9 +2813,17 @@ func _refresh_lobby_main() -> void:
 	_label(title_panel, "ARENA DE HERÓIS · AUTO-BATTLER TÁTICO", Rect2(22, 60, 580, 22), 15, Color("e0d8b0"))
 	_label(title_panel, "12 Heróis · Sinergias TFT · Cópias sobem nível (★1 → ★2 → ★3)", Rect2(22, 82, 580, 18), 12, Kit.MUTED)
 
-	# Pílula de Otimização & Foco em 30 FPS
-	var badge_panel: Panel = _panel(lobby_root, Rect2(890, 16, 204, 38), 0.82, 19)
-	_label(badge_panel, "⚡ %d FPS · OTIMIZADO" % target_fps, Rect2(8, 8, 188, 22), 13, Color("86eda5"), HORIZONTAL_ALIGNMENT_CENTER)
+	# Pílula de Otimização & Desempenho
+	var badge_panel: Panel = _panel(lobby_root, Rect2(720, 16, 190, 38), 0.82, 19)
+	_label(badge_panel, "⚡ 60 FPS · FLUIDEZ" if OS.has_feature("web") else "⚡ %d FPS · OTIMIZADO" % target_fps, Rect2(8, 8, 174, 22), 13, Color("86eda5"), HORIZONTAL_ALIGNMENT_CENTER)
+
+	# Botão de Tela Cheia (F11 / Mobile Fullscreen)
+	fullscreen_button = _button(lobby_root, "⛶ TELA CHEIA", Rect2(924, 16, 166, 38), _toggle_fullscreen)
+	fullscreen_button.add_theme_font_size_override("font_size", 13)
+	var fs_style: StyleBoxFlat = (fullscreen_button.get_theme_stylebox("normal") as StyleBoxFlat).duplicate() as StyleBoxFlat
+	fs_style.border_color = GOLD
+	fs_style.set_border_width_all(1)
+	fullscreen_button.add_theme_stylebox_override("normal", fs_style)
 
 	# Controle Rápido de Áudio no Topo (preserva contrato smoke.gd: sound_button != null)
 	sound_button = _button(lobby_root, "SOM: LIGADO" if audio.enabled else "SOM: DESLIGADO", Rect2(1106, 16, 146, 38), _toggle_sound)
@@ -3844,7 +3909,7 @@ func _draw_board() -> void:
 		for column: int in range(8):
 			var cell: Vector2i = Vector2i(column, row)
 			var own_half: bool = row >= 4
-			var polygon: PackedVector2Array = Board.hex_polygon(cell, 0.07)
+			var polygon: PackedVector2Array = (hex_polygons_outer.get(cell) as PackedVector2Array).duplicate() if hex_polygons_outer.has(cell) else Board.hex_polygon(cell, 0.07)
 			## Tons mais escuros que a areia clara; a borda escura dá leitura, o brilho interno dá acabamento.
 			var fill: Color = Color(0.2, 0.52, 0.52, 0.1 if calm else 0.2) if own_half else Color(0.6, 0.27, 0.22, 0.08 if calm else 0.15)
 			if not selected.is_empty() and own_half and not occupied.has(cell):
@@ -3854,7 +3919,7 @@ func _draw_board() -> void:
 			draw_colored_polygon(polygon, fill)
 			polygon.append(polygon[0])
 			draw_polyline(polygon, Color(0.33, 0.22, 0.1, 0.22 if calm else 0.4), 1.6, true)
-			var inner: PackedVector2Array = Board.hex_polygon(cell, 0.16)
+			var inner: PackedVector2Array = (hex_polygons_inner.get(cell) as PackedVector2Array).duplicate() if hex_polygons_inner.has(cell) else Board.hex_polygon(cell, 0.16)
 			inner.append(inner[0])
 			draw_polyline(inner, Color(1.0, 0.97, 0.88, 0.1 if calm else 0.2), 1.0, true)
 	if not selected.is_empty() and bool(selected.get("active", false)):

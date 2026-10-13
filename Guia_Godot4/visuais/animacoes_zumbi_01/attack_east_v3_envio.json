@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "error: 422: End frame dimensions (200x128) must match start frame (160x128)"
+    }
+  ],
+  "isError": true
+}

@@ -4,6 +4,15 @@ extends SceneTree
 const MainView = preload("res://client/main.gd")
 const Board = preload("res://client/board_projection.gd")
 const Kit = preload("res://client/ui_kit.gd")
+const ClientTransport = preload("res://net/online_client.gd")
+
+## O botão real pode abrir a fila; esta fixture registra a chamada sem rede.
+class NoNetworkClient extends ClientTransport:
+	var matchmaking_calls: int = 0
+
+	func start_matchmaking(_custom_url: String = "", _custom_name: String = "") -> void:
+		matchmaking_calls += 1
+
 var passed: int = 0
 var failed: int = 0
 var completed: bool = false
@@ -38,6 +47,22 @@ func _choose_gold(view: MainView) -> void:
 			(view.benefit_buttons[str(option["option_id"])] as Button).pressed.emit()
 			return
 	_check(false, "benefício de ouro oferecido")
+
+
+func _check_play_button_without_network(view: MainView) -> void:
+	var original_client: ClientTransport = view.online_client
+	var fixture: NoNetworkClient = NoNetworkClient.new()
+	view.online_client = fixture
+	view.start_button.pressed.emit()
+	if DisplayServer.get_name() == "headless":
+		_check(fixture.matchmaking_calls == 0, "JOGAR headless inicia bot sem buscar rede")
+		_check(view._phase() == "benefit", "JOGAR headless abre a partida local")
+	else:
+		_check(fixture.matchmaking_calls == 1, "JOGAR gráfico solicita matchmaking ao transporte injetado")
+		_check(view._phase() == "menu" and view.lobby_subview == "matchmaking", "JOGAR gráfico abre a fila sem presumir partida local imediata")
+	_check(fixture.ws.get_ready_state() == WebSocketPeer.STATE_CLOSED, "fixture do botão não abriu conexão WebSocket")
+	view.online_client = original_client
+	view._show_menu()
 
 func _advance_combat(view: MainView) -> Dictionary:
 	var observed: Dictionary = {"projectile": false, "heal": false, "damage": false, "dance_shield": false, "moonwalk": false, "native_heal": false, "native_thrust": false, "native_shield": false, "shield_follows_state": true, "base_without_dance": false, "heals_on_living_only": true, "shield_stopped": false}
@@ -556,9 +581,16 @@ func _run() -> void:
 			_check(icon.texture == view.heart and view.ui.is_ancestor_of(icon), "coração pertence à interface")
 			visible_hearts += 1 if icon.visible else 0
 		_check(visible_hearts == 4, "quatro corações visíveis no início")
+	var coin_definition: Variant = JSON.parse_string(FileAccess.get_file_as_string("res://assets/ui/icons/coin_sheet.json"))
+	var coin_frame: Vector2i = Vector2i.ZERO
+	if coin_definition is Dictionary:
+		var coin_meta: Dictionary = coin_definition.get("meta", {})
+		coin_frame = Vector2i(int(coin_meta.get("frame_width", 0)), int(coin_meta.get("frame_height", 0)))
+	_check(coin_frame.x > 0 and coin_frame.y > 0, "manifesto da moeda HD declara tamanho do quadro")
 	for icon_name: String in ["fx_ball", "ui_star", "syn_atacantes", "syn_atiradores", "syn_apoio", "item_blade", "item_great_blade", "item_vest", "item_guard_vest", "item_boots", "item_plate", "item_ward", "item_charm", "ui_coin", "ui_refresh"]:
 		var texture: Texture2D = Kit.icon(icon_name)
-		_check(texture != null and texture.get_width() == 16, "ícone 16×16 " + icon_name)
+		var expected_size: Vector2i = coin_frame if icon_name == "ui_coin" else Vector2i(16, 16)
+		_check(texture != null and texture.get_size() == Vector2(expected_size), "dimensões originais do ícone " + icon_name)
 	for key: String in ["neymar", "caramelo", "obama", "zumbi", "michael"]:
 		_check(view.art.portrait_for(key, 30, 28) != null, "retrato recortado de " + key)
 	_check(view.audio.streams.size() == 6 and not view.audio.streams["heal"].data.is_empty(), "seis sons PCM sintetizados em memória")
@@ -577,7 +609,8 @@ func _run() -> void:
 	view._set_animation_fps(12)
 	_check(view.art.fps == 12, "ajuste visual de FPS")
 	view._set_animation_fps(10)
-	view.start_button.pressed.emit()
+	_check_play_button_without_network(view)
+	view._start_match() # As próximas fixtures exercitam deliberadamente o bot local.
 	_check(view._phase() == "benefit" and view.benefit_buttons.size() == 3, "nova partida mostra três benefícios")
 	_check(view.overlay.visible and view.overlay_dim.visible, "benefício aparece sobre fundo escurecido")
 	_choose_gold(view)

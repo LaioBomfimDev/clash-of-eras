@@ -1,0 +1,83 @@
+{
+  "before": [
+    {
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\main.gd",
+      "Hash": "2531D6F69D5A94BD5D58E599EB4F48395810E4581673D026AEFE216447E2EC8E"
+    },
+    {
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\character_visuals.gd",
+      "Hash": "A0AB4B309BF846AD7266265E7CEFC18997AC1EC18B03877E8EBD12FC81F0247E"
+    },
+    {
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\animations_manifest.json",
+      "Hash": "6DE270A3B2DC34591837A376AF5C42EB5C15ADD734681AFCCBDF2DED36DA621C"
+    },
+    {
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\manifest.json",
+      "Hash": "3E3D9F469E5909D5BF0D26490C827E3A80BD925CD6725F9128E479CE8CAF928D"
+    },
+    {
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\vfx\\manifest.json",
+      "Hash": "AAD60BDB0E5305A673D3D64D4EDF3209C166BE12E1C7278CAD9170AA284791E4"
+    }
+  ],
+  "after": [
+    {
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\main.gd",
+      "Hash": "2531D6F69D5A94BD5D58E599EB4F48395810E4581673D026AEFE216447E2EC8E"
+    },
+    {
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\character_visuals.gd",
+      "Hash": "A0AB4B309BF846AD7266265E7CEFC18997AC1EC18B03877E8EBD12FC81F0247E"
+    },
+    {
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\animations_manifest.json",
+      "Hash": "6DE270A3B2DC34591837A376AF5C42EB5C15ADD734681AFCCBDF2DED36DA621C"
+    },
+    {
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\manifest.json",
+      "Hash": "3E3D9F469E5909D5BF0D26490C827E3A80BD925CD6725F9128E479CE8CAF928D"
+    },
+    {
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\vfx\\manifest.json",
+      "Hash": "AAD60BDB0E5305A673D3D64D4EDF3209C166BE12E1C7278CAD9170AA284791E4"
+    }
+  ],
+  "results": [
+    {
+      "timeout": false,
+      "runner": "res://tests/test_character_animation_bank.gd",
+      "label": "bank",
+      "exit_code": 0,
+      "stderr_bytes": 0
+    },
+    {
+      "timeout": false,
+      "runner": "res://tests/test_character_animation_player.gd",
+      "label": "player",
+      "exit_code": 0,
+      "stderr_bytes": 0
+    },
+    {
+      "timeout": false,
+      "runner": "res://tests/test_character_animation_integration.gd",
+      "label": "integration",
+      "exit_code": 0,
+      "stderr_bytes": 0
+    },
+    {
+      "timeout": false,
+      "runner": "res://client/smoke.gd",
+      "label": "client_headless",
+      "exit_code": 1,
+      "stderr_bytes": 248
+    },
+    {
+      "timeout": false,
+      "runner": "res://client/smoke.gd",
+      "label": "client_opengl",
+      "exit_code": 1,
+      "stderr_bytes": 8254
+    }
+  ]
+}

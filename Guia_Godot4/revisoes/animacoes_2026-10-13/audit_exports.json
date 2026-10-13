@@ -1,0 +1,904 @@
+{
+  "schema_version": 1,
+  "audited_at_utc": "2026-10-13T03:36:40.363975+00:00",
+  "scope": "Read-only audit; only this isolated JSON is written. No network call, image edit, generation, gameplay or manifest change.",
+  "official_mcp_endpoint": "https://api.pixellab.ai/mcp",
+  "character_id": "6a5ec045-5930-4955-a684-ef864e5607b9",
+  "manifest": {
+    "path": "RelicArena/assets/characters/animations_manifest.json",
+    "sha256": "c899afd647b12ea549e5f852c88c7506bf86098aa57c7efec15da54557805654",
+    "current_states": [
+      "walk"
+    ],
+    "checked_path_count": 9,
+    "missing_paths": [],
+    "unsafe_paths": [],
+    "unchanged_during_audit": true
+  },
+  "archive": {
+    "path": "RelicArena/assets/characters/zumbi/animacoes_01/exports/checkpoint_2026-10-13/pixellab_original.zip",
+    "sha256": "4892feb2c6e6763443edf0723710299fee5093a214a19065e33cb484625aeabe",
+    "crc_bad_entry": null,
+    "file_count": 51,
+    "unsafe_paths": [],
+    "extracted_mismatches": [],
+    "files": [
+      {
+        "path": "Idle/rotations/south.png",
+        "bytes": 8206,
+        "sha256": "1e13b1a7fd6c6872208ab3def5516578fcf531ee21b37be7eb9986f3f14b28fa",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/rotations/south-east.png",
+        "bytes": 8351,
+        "sha256": "b3a982e1fdeee1bc7ecd989b5ba490207efa363f9158b6b162c01182790681d2",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/rotations/east.png",
+        "bytes": 5079,
+        "sha256": "14946ed92b07268f81009ab45f5760e8181bf598d88fbb459b0005d0036d30cb",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/rotations/north-east.png",
+        "bytes": 7277,
+        "sha256": "04c1b26952abf482a45ddf0670fbf183ac1f685696e26299b2375c28dbc99aaa",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/rotations/north.png",
+        "bytes": 7425,
+        "sha256": "8638e86eb7fc02b16794b51ef50b148bbf40df4214e0ee1fd9a528c19be0442f",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/rotations/north-west.png",
+        "bytes": 7249,
+        "sha256": "fa150aa2bca085ad9e7d86a16860911c33aec0d9b0a2176eb32c0f37c1db761c",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/rotations/west.png",
+        "bytes": 4564,
+        "sha256": "fcace88361d41672db30441eb194ecc841b476747b9e27f4b10c99ec2690305c",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/rotations/south-west.png",
+        "bytes": 8775,
+        "sha256": "efeec34be6acf56896ca0ef9150f4c4c4ba4937a38391a9f7e8390aceacd3c9c",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/spear_thrust_v2/east/frame_000.png",
+        "bytes": 5363,
+        "sha256": "e0657a31875f8dbb0a7a8c362c66f4fa8eee89583a3ed47ef8d9741cc47b3427",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/spear_thrust_v2/east/frame_001.png",
+        "bytes": 7022,
+        "sha256": "06aad8f57b1e0603e487d151ba377522f0f398d9aab818c939aef174b4dbc8ff",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/spear_thrust_v2/east/frame_002.png",
+        "bytes": 7382,
+        "sha256": "ba1b35adca8eb9dff4d86a86a67aa348e1c577ae59569494675119237fcea6bd",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/spear_thrust_v2/east/frame_003.png",
+        "bytes": 8054,
+        "sha256": "1e24f6abb17bde6db75dd2ad7187678c2b895d93a2bb91882e233d988faa4c77",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/spear_thrust_v2/east/frame_004.png",
+        "bytes": 7817,
+        "sha256": "cffc8432a771ca194b44a8399ab02426db40efd537a4756877d17d466ba7319d",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/spear_thrust_v2/east/frame_005.png",
+        "bytes": 7882,
+        "sha256": "325df02241d4522067396ab7f35c35c83b4d8d61bc34c6a163044e0f6092c1be",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/spear_thrust_v2/east/frame_006.png",
+        "bytes": 7547,
+        "sha256": "8fc0ffde7da1307136a84d6a8b0e8e9d00e7b48fc720527de444dc8e3b4a1b54",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/spear_thrust_v2/east/frame_007.png",
+        "bytes": 7159,
+        "sha256": "81258d8c864d4c750f94d278d3bf92f7b875be07da977b0139adef65f0f68094",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/spear_thrust_v2/east/frame_008.png",
+        "bytes": 5370,
+        "sha256": "b766a5e71c19d6049d7fd03b180949b1a16b17563eb0b565460a8670ff730571",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/walk_ground_v1/east/frame_000.png",
+        "bytes": 6641,
+        "sha256": "28dd60fd0df9cc66f24d1a6125c30926cbc77124b6cd518f328a4388f4fe0f9b",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/walk_ground_v1/east/frame_001.png",
+        "bytes": 6582,
+        "sha256": "7ad8b2b5380357ebdf4f715ec2e4c49e8d8cd5d44b42dbf983bb0a79566919e7",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/walk_ground_v1/east/frame_002.png",
+        "bytes": 6880,
+        "sha256": "33803617d0f1b375197c8522176c6e0ebe2815501e7740205c525226b4f60a00",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/walk_ground_v1/east/frame_003.png",
+        "bytes": 7033,
+        "sha256": "2ceb445e76b9ee8dbece478e6bb57c437b2a75595600d3c50cfaa91505c7f67f",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/walk_ground_v1/east/frame_004.png",
+        "bytes": 7043,
+        "sha256": "96f83048234a6eb906454f988db9bcbf3525f414571f4d0e7e8696a294cde9d3",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/walk_ground_v1/east/frame_005.png",
+        "bytes": 6955,
+        "sha256": "84209697f4753ab93e1421f0c1c6ca5bdd0fc4d8822a63dce0245f1d3a4aa791",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/walk_ground_v1/east/frame_006.png",
+        "bytes": 7194,
+        "sha256": "7f8d83bda82af9737914607d02950806628c77943d8f4be1babe6a8a0ac8b1c6",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/walk_ground_v1/east/frame_007.png",
+        "bytes": 7065,
+        "sha256": "bab61b8d9b04971b86f66722732ebe4991bac47b2a4669e8e495e77d52290dba",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/walk_ground_v2/east/frame_000.png",
+        "bytes": 4282,
+        "sha256": "7c06948777f9628d5d7df33084fedaeab645e7be51e500bcb4551d8518185474",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/walk_ground_v2/east/frame_001.png",
+        "bytes": 5992,
+        "sha256": "77fb357c1f5032c9d0c8d2b074fd83d98740d3e1e99be64027d92223a5079c1b",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/walk_ground_v2/east/frame_002.png",
+        "bytes": 6216,
+        "sha256": "f57f8d8ce4192b17d3667233ce8c7abbbed71ae2b5cecf5b59126838fec97527",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/walk_ground_v2/east/frame_003.png",
+        "bytes": 5618,
+        "sha256": "70ebac28b5c432ddcba79c2fa2712d1ed170906401863ccbfad81e94c150bec2",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/walk_ground_v2/east/frame_004.png",
+        "bytes": 6013,
+        "sha256": "76ae5d6b454acd85cd8fa892342a3845cd39161ec66e11c13b636a198381e637",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/walk_ground_v2/east/frame_005.png",
+        "bytes": 7458,
+        "sha256": "5e6ed1a5e589c6f2c857a4ff04a72356d9ae0d9532b82cb66cdb48c8a6515c7d",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/walk_ground_v2/east/frame_006.png",
+        "bytes": 7117,
+        "sha256": "52830d239fdafe3e5e0f050d5437dfcf2788acbecdbd1bd88e04b3a3d74e929b",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/walk_ground_v2/east/frame_007.png",
+        "bytes": 6520,
+        "sha256": "7c88ae91d8262bbade0822e60f716ca93980e1dc32090ad0e0ba8368839a9303",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/walk_ground_v2/east/frame_008.png",
+        "bytes": 4264,
+        "sha256": "c955d6ae40214ce816b94a7ea47ad1ab845510b2fa58bff0d81d696c039175bb",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/skill_rally_v1/east/frame_000.png",
+        "bytes": 4399,
+        "sha256": "f307282aa7646bab689b81084bcb972026fac2aff9a7b4c32beff5e99d7ab6c7",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/skill_rally_v1/east/frame_001.png",
+        "bytes": 4523,
+        "sha256": "2e986650e4129dee007cd575562445399a259fb9f424d98e5c2fa92c9c4aa10d",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/skill_rally_v1/east/frame_002.png",
+        "bytes": 4675,
+        "sha256": "5db5a1074b8e922d5fcef4e03548ef26a57173da8fa18441abee917dda104c5f",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/skill_rally_v1/east/frame_003.png",
+        "bytes": 6161,
+        "sha256": "42297d37940c7af1c071ee636e5a6116879143b9d1e201aeeac114c950e412cf",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/skill_rally_v1/east/frame_004.png",
+        "bytes": 6473,
+        "sha256": "2afaac0237f5add92c687493f2d8d859c8e37f44c5b8179cda7bf8715d5666f3",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/skill_rally_v1/east/frame_005.png",
+        "bytes": 5605,
+        "sha256": "f764dd4e14b02ec7b7b11a146b453f46c53ce7aab171b318a310937d428896ea",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/skill_rally_v1/east/frame_006.png",
+        "bytes": 4511,
+        "sha256": "9b0f6f1c046544c2ecf5f326f1eaf44def6621152b504f044081cd40763071a5",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/spear_thrust_v1/east/frame_000.png",
+        "bytes": 4322,
+        "sha256": "a9743959f3481c52c2fa70bd089584ac85f7e9a8f00a100c733e6e2b1f1fa493",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/spear_thrust_v1/east/frame_001.png",
+        "bytes": 4666,
+        "sha256": "43ac221a89fafb7c3b4ebbfbab36508381c25234b80e20ba672ffdb61ec3854f",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/spear_thrust_v1/east/frame_002.png",
+        "bytes": 6379,
+        "sha256": "2dccce29309c9eedf06a982c36d4a3d2d326e41e451292cd20471e8ee6ab2450",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/spear_thrust_v1/east/frame_003.png",
+        "bytes": 7011,
+        "sha256": "9810ba5459f3a3c499715e73b4668abbfe72d6f8e305fcc2876e65d5d0488aa6",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/spear_thrust_v1/east/frame_004.png",
+        "bytes": 7203,
+        "sha256": "eea2c582bc05552d044125b55e20111cab4f57420437371ca4395224d99e295e",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/spear_thrust_v1/east/frame_005.png",
+        "bytes": 7209,
+        "sha256": "e356ca50be545107899aa53b75e2ea7de285de6688919967e257d6de9e0f2c3a",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/spear_thrust_v1/east/frame_006.png",
+        "bytes": 6194,
+        "sha256": "2e90053168abaa3aecf8144cd9f43a06a613df835a4e37d94c41806f34157d54",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/spear_thrust_v1/east/frame_007.png",
+        "bytes": 5399,
+        "sha256": "6239ce14e6e7a25be27023a714d956995282668df0685dedd5ede0df6a1b1466",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "Idle/animations/spear_thrust_v1/east/frame_008.png",
+        "bytes": 4415,
+        "sha256": "0b1d64d43704d591cd8631c532ac9e13fef750387fbe9a90c77767f652c4162d",
+        "extracted_byte_equal": true
+      },
+      {
+        "path": "metadata.json",
+        "bytes": 4674,
+        "sha256": "fd5b38dc912edae54ee36b39d6d58d91e75f8e766e1cd046b5c817f46b90f3d7",
+        "extracted_byte_equal": true
+      }
+    ],
+    "parent_receipt_sha_matches": true,
+    "export_version": "3.1",
+    "export_date": "2026-10-13T03:29:38.146665"
+  },
+  "clips": [
+    {
+      "state": "attack",
+      "directory": "RelicArena/assets/characters/zumbi/animacoes_01/exports/attack_east_02",
+      "animation": "spear_thrust_v2",
+      "job_id": "03489e7e-80b1-4cab-a0c7-cb2ea85ade13",
+      "group_id": "17a8c667-bd7b-4cda-8924-2e69ad58fa4b",
+      "frame_url_template_from_saved_mcp": "https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/3d2d2e68-d07c-4d5e-8c3e-eee9d8dd150a/east/{i}.png?t=1791850817826",
+      "official_download_endpoint": "https://api.pixellab.ai/mcp/characters/6a5ec045-5930-4955-a684-ef864e5607b9/download",
+      "source_responses": [
+        {
+          "path": "Guia_Godot4/visuais/animacoes_zumbi_01/attack_east_v2_argumentos.json",
+          "sha256": "85a2147b9b1bd28dd1167f373f05de346ff1ad4e0fb57277122648d610159f1c"
+        },
+        {
+          "path": "Guia_Godot4/visuais/animacoes_zumbi_01/attack_east_v2_envio.json",
+          "sha256": "5adc227e63355d6a836b16b9daa9720d15675e27192126aa0e677453f47cae83"
+        },
+        {
+          "path": "Guia_Godot4/visuais/animacoes_zumbi_01/attack_east_v2_estado.json",
+          "sha256": "2c4290c91ca0d2b9a3725d286f5c3b34da14f5f7e565e36add79b1570f7f98b6"
+        }
+      ],
+      "mcp_is_error": [
+        false,
+        false
+      ],
+      "current_active_manifest_entry": false,
+      "previously_observed_manifest_fps": 10,
+      "previously_observed_manifest_loop": false,
+      "anchor": [
+        107,
+        143
+      ],
+      "anchor_source": "preserved diary, agrees with earlier manifest inspection",
+      "local_zip_present": false,
+      "local_export_receipt_present": false,
+      "local_original_directory_present": false,
+      "method_evidence": "flat PNGs plus saved get_character frame URL templates, no clip-local ZIP or transfer receipt; official ZIP originals now preserved in checkpoint_2026-10-13",
+      "frames": [
+        {
+          "index": 0,
+          "path": "RelicArena/assets/characters/zumbi/animacoes_01/exports/attack_east_02/frame_000.png",
+          "prior_manifest_respath": "res://assets/characters/zumbi/animacoes_01/exports/attack_east_02/frame_000.png",
+          "safe_local_path": true,
+          "original_zip_entry": "Idle/animations/spear_thrust_v2/east/frame_000.png",
+          "original_frame_url": "https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/3d2d2e68-d07c-4d5e-8c3e-eee9d8dd150a/east/0.png?t=1791850817826",
+          "bytes": 5363,
+          "sha256_local": "e0657a31875f8dbb0a7a8c362c66f4fa8eee89583a3ed47ef8d9741cc47b3427",
+          "sha256_original": "e0657a31875f8dbb0a7a8c362c66f4fa8eee89583a3ed47ef8d9741cc47b3427",
+          "byte_equal_original": true,
+          "size": [
+            212,
+            168
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            37,
+            28,
+            175,
+            143
+          ],
+          "anchor_inside_canvas": true,
+          "alpha_bottom_minus_anchor_y": 0
+        },
+        {
+          "index": 1,
+          "path": "RelicArena/assets/characters/zumbi/animacoes_01/exports/attack_east_02/frame_001.png",
+          "prior_manifest_respath": "res://assets/characters/zumbi/animacoes_01/exports/attack_east_02/frame_001.png",
+          "safe_local_path": true,
+          "original_zip_entry": "Idle/animations/spear_thrust_v2/east/frame_001.png",
+          "original_frame_url": "https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/3d2d2e68-d07c-4d5e-8c3e-eee9d8dd150a/east/1.png?t=1791850817826",
+          "bytes": 7022,
+          "sha256_local": "06aad8f57b1e0603e487d151ba377522f0f398d9aab818c939aef174b4dbc8ff",
+          "sha256_original": "06aad8f57b1e0603e487d151ba377522f0f398d9aab818c939aef174b4dbc8ff",
+          "byte_equal_original": true,
+          "size": [
+            212,
+            168
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            36,
+            28,
+            174,
+            143
+          ],
+          "anchor_inside_canvas": true,
+          "alpha_bottom_minus_anchor_y": 0
+        },
+        {
+          "index": 2,
+          "path": "RelicArena/assets/characters/zumbi/animacoes_01/exports/attack_east_02/frame_002.png",
+          "prior_manifest_respath": "res://assets/characters/zumbi/animacoes_01/exports/attack_east_02/frame_002.png",
+          "safe_local_path": true,
+          "original_zip_entry": "Idle/animations/spear_thrust_v2/east/frame_002.png",
+          "original_frame_url": "https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/3d2d2e68-d07c-4d5e-8c3e-eee9d8dd150a/east/2.png?t=1791850817826",
+          "bytes": 7382,
+          "sha256_local": "ba1b35adca8eb9dff4d86a86a67aa348e1c577ae59569494675119237fcea6bd",
+          "sha256_original": "ba1b35adca8eb9dff4d86a86a67aa348e1c577ae59569494675119237fcea6bd",
+          "byte_equal_original": true,
+          "size": [
+            212,
+            168
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            33,
+            29,
+            171,
+            143
+          ],
+          "anchor_inside_canvas": true,
+          "alpha_bottom_minus_anchor_y": 0
+        },
+        {
+          "index": 3,
+          "path": "RelicArena/assets/characters/zumbi/animacoes_01/exports/attack_east_02/frame_003.png",
+          "prior_manifest_respath": "res://assets/characters/zumbi/animacoes_01/exports/attack_east_02/frame_003.png",
+          "safe_local_path": true,
+          "original_zip_entry": "Idle/animations/spear_thrust_v2/east/frame_003.png",
+          "original_frame_url": "https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/3d2d2e68-d07c-4d5e-8c3e-eee9d8dd150a/east/3.png?t=1791850817826",
+          "bytes": 8054,
+          "sha256_local": "1e24f6abb17bde6db75dd2ad7187678c2b895d93a2bb91882e233d988faa4c77",
+          "sha256_original": "1e24f6abb17bde6db75dd2ad7187678c2b895d93a2bb91882e233d988faa4c77",
+          "byte_equal_original": true,
+          "size": [
+            212,
+            168
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            33,
+            30,
+            170,
+            143
+          ],
+          "anchor_inside_canvas": true,
+          "alpha_bottom_minus_anchor_y": 0
+        },
+        {
+          "index": 4,
+          "path": "RelicArena/assets/characters/zumbi/animacoes_01/exports/attack_east_02/frame_004.png",
+          "prior_manifest_respath": "res://assets/characters/zumbi/animacoes_01/exports/attack_east_02/frame_004.png",
+          "safe_local_path": true,
+          "original_zip_entry": "Idle/animations/spear_thrust_v2/east/frame_004.png",
+          "original_frame_url": "https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/3d2d2e68-d07c-4d5e-8c3e-eee9d8dd150a/east/4.png?t=1791850817826",
+          "bytes": 7817,
+          "sha256_local": "cffc8432a771ca194b44a8399ab02426db40efd537a4756877d17d466ba7319d",
+          "sha256_original": "cffc8432a771ca194b44a8399ab02426db40efd537a4756877d17d466ba7319d",
+          "byte_equal_original": true,
+          "size": [
+            212,
+            168
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            31,
+            32,
+            168,
+            143
+          ],
+          "anchor_inside_canvas": true,
+          "alpha_bottom_minus_anchor_y": 0
+        },
+        {
+          "index": 5,
+          "path": "RelicArena/assets/characters/zumbi/animacoes_01/exports/attack_east_02/frame_005.png",
+          "prior_manifest_respath": "res://assets/characters/zumbi/animacoes_01/exports/attack_east_02/frame_005.png",
+          "safe_local_path": true,
+          "original_zip_entry": "Idle/animations/spear_thrust_v2/east/frame_005.png",
+          "original_frame_url": "https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/3d2d2e68-d07c-4d5e-8c3e-eee9d8dd150a/east/5.png?t=1791850817826",
+          "bytes": 7882,
+          "sha256_local": "325df02241d4522067396ab7f35c35c83b4d8d61bc34c6a163044e0f6092c1be",
+          "sha256_original": "325df02241d4522067396ab7f35c35c83b4d8d61bc34c6a163044e0f6092c1be",
+          "byte_equal_original": true,
+          "size": [
+            212,
+            168
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            32,
+            31,
+            169,
+            143
+          ],
+          "anchor_inside_canvas": true,
+          "alpha_bottom_minus_anchor_y": 0
+        },
+        {
+          "index": 6,
+          "path": "RelicArena/assets/characters/zumbi/animacoes_01/exports/attack_east_02/frame_006.png",
+          "prior_manifest_respath": "res://assets/characters/zumbi/animacoes_01/exports/attack_east_02/frame_006.png",
+          "safe_local_path": true,
+          "original_zip_entry": "Idle/animations/spear_thrust_v2/east/frame_006.png",
+          "original_frame_url": "https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/3d2d2e68-d07c-4d5e-8c3e-eee9d8dd150a/east/6.png?t=1791850817826",
+          "bytes": 7547,
+          "sha256_local": "8fc0ffde7da1307136a84d6a8b0e8e9d00e7b48fc720527de444dc8e3b4a1b54",
+          "sha256_original": "8fc0ffde7da1307136a84d6a8b0e8e9d00e7b48fc720527de444dc8e3b4a1b54",
+          "byte_equal_original": true,
+          "size": [
+            212,
+            168
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            33,
+            30,
+            171,
+            140
+          ],
+          "anchor_inside_canvas": true,
+          "alpha_bottom_minus_anchor_y": -3
+        },
+        {
+          "index": 7,
+          "path": "RelicArena/assets/characters/zumbi/animacoes_01/exports/attack_east_02/frame_007.png",
+          "prior_manifest_respath": "res://assets/characters/zumbi/animacoes_01/exports/attack_east_02/frame_007.png",
+          "safe_local_path": true,
+          "original_zip_entry": "Idle/animations/spear_thrust_v2/east/frame_007.png",
+          "original_frame_url": "https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/3d2d2e68-d07c-4d5e-8c3e-eee9d8dd150a/east/7.png?t=1791850817826",
+          "bytes": 7159,
+          "sha256_local": "81258d8c864d4c750f94d278d3bf92f7b875be07da977b0139adef65f0f68094",
+          "sha256_original": "81258d8c864d4c750f94d278d3bf92f7b875be07da977b0139adef65f0f68094",
+          "byte_equal_original": true,
+          "size": [
+            212,
+            168
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            36,
+            28,
+            174,
+            140
+          ],
+          "anchor_inside_canvas": true,
+          "alpha_bottom_minus_anchor_y": -3
+        },
+        {
+          "index": 8,
+          "path": "RelicArena/assets/characters/zumbi/animacoes_01/exports/attack_east_02/frame_008.png",
+          "prior_manifest_respath": "res://assets/characters/zumbi/animacoes_01/exports/attack_east_02/frame_008.png",
+          "safe_local_path": true,
+          "original_zip_entry": "Idle/animations/spear_thrust_v2/east/frame_008.png",
+          "original_frame_url": "https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/3d2d2e68-d07c-4d5e-8c3e-eee9d8dd150a/east/8.png?t=1791850817826",
+          "bytes": 5370,
+          "sha256_local": "b766a5e71c19d6049d7fd03b180949b1a16b17563eb0b565460a8670ff730571",
+          "sha256_original": "b766a5e71c19d6049d7fd03b180949b1a16b17563eb0b565460a8670ff730571",
+          "byte_equal_original": true,
+          "size": [
+            212,
+            168
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            37,
+            28,
+            175,
+            143
+          ],
+          "anchor_inside_canvas": true,
+          "alpha_bottom_minus_anchor_y": 0
+        }
+      ],
+      "first_last": {
+        "png_byte_equal": false,
+        "rgba_equal": false,
+        "differing_visible_pixels": 471,
+        "alpha_equal": false
+      },
+      "reference_frame_zero": {
+        "path": "Guia_Godot4/visuais/animacoes_zumbi_01/pose_lanca_horizontal.png",
+        "sha256": "b818b280e12e50716c7928474530b488b48db0c1b5d2dc773686463b8790044c",
+        "size": [
+          160,
+          128
+        ],
+        "translation_to_padded_frame": [
+          26,
+          20
+        ],
+        "rgba_differences_inside_reference_rectangle": 0,
+        "visible_pixels_outside_reference_rectangle": 0
+      },
+      "frame_count": 9,
+      "unchanged_official_frames": 9,
+      "total_png_bytes": 63596,
+      "uniform_frame_size": true,
+      "submission_frame_count_matches": true,
+      "diary_job_matches": true
+    },
+    {
+      "state": "skill",
+      "directory": "RelicArena/assets/characters/zumbi/animacoes_01/exports/skill_east_01",
+      "animation": "skill_rally_v1",
+      "job_id": "6828b770-06dd-4ec7-9400-de3e06abfc0a",
+      "group_id": "ccfe3127-876a-42c1-833f-59811be39e89",
+      "frame_url_template_from_saved_mcp": "https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/79ea5cee-27ca-450f-bb51-780de6114abb/east/{i}.png?t=1791851012290",
+      "official_download_endpoint": "https://api.pixellab.ai/mcp/characters/6a5ec045-5930-4955-a684-ef864e5607b9/download",
+      "source_responses": [
+        {
+          "path": "Guia_Godot4/visuais/animacoes_zumbi_01/skill_east_argumentos.json",
+          "sha256": "a39765e609bcf154fe9ad2b4a7b9a000ce64ebba79e5307e6753cebb0f8bf4a9"
+        },
+        {
+          "path": "Guia_Godot4/visuais/animacoes_zumbi_01/skill_east_envio.json",
+          "sha256": "4487f0649a65d3d8187cba8203c961767c0db1bea63fbadc586e62a3db6d1abb"
+        },
+        {
+          "path": "Guia_Godot4/visuais/animacoes_zumbi_01/skill_east_estado.json",
+          "sha256": "b8e274ba9138c885b1eb362ca0b7c7b2ba254ea2917c97f62bd14e6af0c1b345"
+        }
+      ],
+      "mcp_is_error": [
+        false,
+        false
+      ],
+      "current_active_manifest_entry": false,
+      "previously_observed_manifest_fps": 10,
+      "previously_observed_manifest_loop": false,
+      "anchor": [
+        84,
+        151
+      ],
+      "anchor_source": "preserved diary, agrees with earlier manifest inspection",
+      "local_zip_present": false,
+      "local_export_receipt_present": false,
+      "local_original_directory_present": false,
+      "method_evidence": "flat PNGs plus saved get_character frame URL templates, no clip-local ZIP or transfer receipt; official ZIP originals now preserved in checkpoint_2026-10-13",
+      "frames": [
+        {
+          "index": 0,
+          "path": "RelicArena/assets/characters/zumbi/animacoes_01/exports/skill_east_01/frame_000.png",
+          "prior_manifest_respath": "res://assets/characters/zumbi/animacoes_01/exports/skill_east_01/frame_000.png",
+          "safe_local_path": true,
+          "original_zip_entry": "Idle/animations/skill_rally_v1/east/frame_000.png",
+          "original_frame_url": "https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/79ea5cee-27ca-450f-bb51-780de6114abb/east/0.png?t=1791851012290",
+          "bytes": 4399,
+          "sha256_local": "f307282aa7646bab689b81084bcb972026fac2aff9a7b4c32beff5e99d7ab6c7",
+          "sha256_original": "f307282aa7646bab689b81084bcb972026fac2aff9a7b4c32beff5e99d7ab6c7",
+          "byte_equal_original": true,
+          "size": [
+            168,
+            184
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            69,
+            28,
+            100,
+            151
+          ],
+          "anchor_inside_canvas": true,
+          "alpha_bottom_minus_anchor_y": 0
+        },
+        {
+          "index": 1,
+          "path": "RelicArena/assets/characters/zumbi/animacoes_01/exports/skill_east_01/frame_001.png",
+          "prior_manifest_respath": "res://assets/characters/zumbi/animacoes_01/exports/skill_east_01/frame_001.png",
+          "safe_local_path": true,
+          "original_zip_entry": "Idle/animations/skill_rally_v1/east/frame_001.png",
+          "original_frame_url": "https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/79ea5cee-27ca-450f-bb51-780de6114abb/east/1.png?t=1791851012290",
+          "bytes": 4523,
+          "sha256_local": "2e986650e4129dee007cd575562445399a259fb9f424d98e5c2fa92c9c4aa10d",
+          "sha256_original": "2e986650e4129dee007cd575562445399a259fb9f424d98e5c2fa92c9c4aa10d",
+          "byte_equal_original": true,
+          "size": [
+            168,
+            184
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            69,
+            28,
+            100,
+            151
+          ],
+          "anchor_inside_canvas": true,
+          "alpha_bottom_minus_anchor_y": 0
+        },
+        {
+          "index": 2,
+          "path": "RelicArena/assets/characters/zumbi/animacoes_01/exports/skill_east_01/frame_002.png",
+          "prior_manifest_respath": "res://assets/characters/zumbi/animacoes_01/exports/skill_east_01/frame_002.png",
+          "safe_local_path": true,
+          "original_zip_entry": "Idle/animations/skill_rally_v1/east/frame_002.png",
+          "original_frame_url": "https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/79ea5cee-27ca-450f-bb51-780de6114abb/east/2.png?t=1791851012290",
+          "bytes": 4675,
+          "sha256_local": "5db5a1074b8e922d5fcef4e03548ef26a57173da8fa18441abee917dda104c5f",
+          "sha256_original": "5db5a1074b8e922d5fcef4e03548ef26a57173da8fa18441abee917dda104c5f",
+          "byte_equal_original": true,
+          "size": [
+            168,
+            184
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            69,
+            28,
+            100,
+            151
+          ],
+          "anchor_inside_canvas": true,
+          "alpha_bottom_minus_anchor_y": 0
+        },
+        {
+          "index": 3,
+          "path": "RelicArena/assets/characters/zumbi/animacoes_01/exports/skill_east_01/frame_003.png",
+          "prior_manifest_respath": "res://assets/characters/zumbi/animacoes_01/exports/skill_east_01/frame_003.png",
+          "safe_local_path": true,
+          "original_zip_entry": "Idle/animations/skill_rally_v1/east/frame_003.png",
+          "original_frame_url": "https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/79ea5cee-27ca-450f-bb51-780de6114abb/east/3.png?t=1791851012290",
+          "bytes": 6161,
+          "sha256_local": "42297d37940c7af1c071ee636e5a6116879143b9d1e201aeeac114c950e412cf",
+          "sha256_original": "42297d37940c7af1c071ee636e5a6116879143b9d1e201aeeac114c950e412cf",
+          "byte_equal_original": true,
+          "size": [
+            168,
+            184
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            40,
+            27,
+            117,
+            151
+          ],
+          "anchor_inside_canvas": true,
+          "alpha_bottom_minus_anchor_y": 0
+        },
+        {
+          "index": 4,
+          "path": "RelicArena/assets/characters/zumbi/animacoes_01/exports/skill_east_01/frame_004.png",
+          "prior_manifest_respath": "res://assets/characters/zumbi/animacoes_01/exports/skill_east_01/frame_004.png",
+          "safe_local_path": true,
+          "original_zip_entry": "Idle/animations/skill_rally_v1/east/frame_004.png",
+          "original_frame_url": "https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/79ea5cee-27ca-450f-bb51-780de6114abb/east/4.png?t=1791851012290",
+          "bytes": 6473,
+          "sha256_local": "2afaac0237f5add92c687493f2d8d859c8e37f44c5b8179cda7bf8715d5666f3",
+          "sha256_original": "2afaac0237f5add92c687493f2d8d859c8e37f44c5b8179cda7bf8715d5666f3",
+          "byte_equal_original": true,
+          "size": [
+            168,
+            184
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            24,
+            35,
+            125,
+            151
+          ],
+          "anchor_inside_canvas": true,
+          "alpha_bottom_minus_anchor_y": 0
+        },
+        {
+          "index": 5,
+          "path": "RelicArena/assets/characters/zumbi/animacoes_01/exports/skill_east_01/frame_005.png",
+          "prior_manifest_respath": "res://assets/characters/zumbi/animacoes_01/exports/skill_east_01/frame_005.png",
+          "safe_local_path": true,
+          "original_zip_entry": "Idle/animations/skill_rally_v1/east/frame_005.png",
+          "original_frame_url": "https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/79ea5cee-27ca-450f-bb51-780de6114abb/east/5.png?t=1791851012290",
+          "bytes": 5605,
+          "sha256_local": "f764dd4e14b02ec7b7b11a146b453f46c53ce7aab171b318a310937d428896ea",
+          "sha256_original": "f764dd4e14b02ec7b7b11a146b453f46c53ce7aab171b318a310937d428896ea",
+          "byte_equal_original": true,
+          "size": [
+            168,
+            184
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            52,
+            36,
+            110,
+            151
+          ],
+          "anchor_inside_canvas": true,
+          "alpha_bottom_minus_anchor_y": 0
+        },
+        {
+          "index": 6,
+          "path": "RelicArena/assets/characters/zumbi/animacoes_01/exports/skill_east_01/frame_006.png",
+          "prior_manifest_respath": "res://assets/characters/zumbi/animacoes_01/exports/skill_east_01/frame_006.png",
+          "safe_local_path": true,
+          "original_zip_entry": "Idle/animations/skill_rally_v1/east/frame_006.png",
+          "original_frame_url": "https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/79ea5cee-27ca-450f-bb51-780de6114abb/east/6.png?t=1791851012290",
+          "bytes": 4511,
+          "sha256_local": "9b0f6f1c046544c2ecf5f326f1eaf44def6621152b504f044081cd40763071a5",
+          "sha256_original": "9b0f6f1c046544c2ecf5f326f1eaf44def6621152b504f044081cd40763071a5",
+          "byte_equal_original": true,
+          "size": [
+            168,
+            184
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            69,
+            28,
+            100,
+            151
+          ],
+          "anchor_inside_canvas": true,
+          "alpha_bottom_minus_anchor_y": 0
+        }
+      ],
+      "first_last": {
+        "png_byte_equal": false,
+        "rgba_equal": false,
+        "differing_visible_pixels": 229,
+        "alpha_equal": true
+      },
+      "reference_frame_zero": {
+        "path": "Guia_Godot4/visuais/animacoes_zumbi_01/pose_combate_east_limpa.png",
+        "sha256": "588b9f64d5b0bf59cd0d275d065edeceb5d56582662f6e93c5c3c531db0e485f",
+        "size": [
+          128,
+          128
+        ],
+        "translation_to_padded_frame": [
+          20,
+          28
+        ],
+        "rgba_differences_inside_reference_rectangle": 0,
+        "visible_pixels_outside_reference_rectangle": 0
+      },
+      "frame_count": 7,
+      "unchanged_official_frames": 7,
+      "total_png_bytes": 36347,
+      "uniform_frame_size": true,
+      "submission_frame_count_matches": true,
+      "diary_job_matches": true
+    }
+  ],
+  "limitations": [
+    "Parent downloaded official ZIP using advertised /mcp/characters/<id>/download endpoint; this audit compares preserved local bytes.",
+    "The original flat-frame transfer commands/receipts were not saved, so directory layout alone cannot prove the original transfer method.",
+    "Integrity and valid dimensions do not prove animation quality. Parent removed attack/skill from the active manifest after visual rejection during this audit."
+  ],
+  "summary": {
+    "clip_frames_checked": 16,
+    "byte_identical_official_frames": 16,
+    "clip_png_bytes": 99943,
+    "archive_files_checked": 51,
+    "archive_extracted_mismatches": 0,
+    "unsafe_archive_paths": 0,
+    "missing_current_manifest_paths": 0
+  },
+  "audit_helper": {
+    "path": "RelicArena/tools/auditar_animacoes_pixellab.py",
+    "requires": [
+      "pixellab_original.zip",
+      "original/"
+    ],
+    "writes": "exportacao.json",
+    "compatible_root": "RelicArena/assets/characters/zumbi/animacoes_01/exports/checkpoint_2026-10-13",
+    "flat_clip_roots_incompatible": true,
+    "executed": false,
+    "classification": "audit input-layout limitation, not a gameplay defect"
+  },
+  "notes": [
+    "No local crop/resize/pixel changes found: all 16 flat PNGs exactly match official ZIP originals.",
+    "Frame-zero references are copied unchanged into larger service canvases (attack +26,+20; skill +20,+28).",
+    "First/last frames are not pixel-identical: 471 visible pixels differ in attack and 229 in skill. Exact return wording must not imply pixel equality."
+  ]
+}

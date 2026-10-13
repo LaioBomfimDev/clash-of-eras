@@ -1,0 +1,8 @@
+{
+  "notes": "User wants articulated Zumbi spear attack. Need transparent canvas padding only, preserving all pixels and scale, to match custom keyframe dimensions.",
+  "argv": [
+    "describe",
+    "cli"
+  ],
+  "mode": "low"
+}
