@@ -1,0 +1,7 @@
+{
+  "chunk_id": "efd59f",
+  "wall_time_seconds": 1.8919051,
+  "exit_code": 1,
+  "original_token_count": 128,
+  "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\nOpenGL API 3.3.0 Core Profile Context 26.8.1.260806 - Compatibility - Using Device: ATI Technologies Inc. - AMD Radeon(TM) Graphics\r\n\r\nSCRIPT ERROR: Parse Error: Expected indented block after \"if\" block.\r\n   at: GDScript::reload (res://tools/preview_zumbi_animations.gd:43)\r\nERROR: Failed to load script \"res://tools/preview_zumbi_animations.gd\" with error \"Parse error\".\r\n   at: load (modules/gdscript/gdscript_resource_format.cpp:46)\r\n"
+}

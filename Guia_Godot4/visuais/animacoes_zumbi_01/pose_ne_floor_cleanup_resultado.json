@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "error: a change says `operation`, not `op` — write {\"operation\": \"patch_pixels\", ...}. `op` is for the shapes inside a recipe's `draw`. `describe change_operations` lists every operation."
+    }
+  ],
+  "isError": true
+}

@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "draw",
+    "--recipe",
+    "{\"scene\":{\"views\":{\"ne-03\":{\"selections\":{\"all\":{}},\"nodes\":{\"body\":{\"at\":[0,0],\"draw\":[{\"op\":\"copy\",\"part\":\"all\"}],\"layer\":\"body\"}}},\"ne-01\":{\"selections\":{\"all\":{}},\"nodes\":{\"body\":{\"at\":[0,0],\"draw\":[{\"op\":\"copy\",\"part\":\"all\"}],\"layer\":\"body\"}}},\"ne-00\":{\"selections\":{\"all\":{}},\"nodes\":{\"body\":{\"at\":[0,0],\"draw\":[{\"op\":\"copy\",\"part\":\"all\"}],\"layer\":\"body\"}}},\"ne-02\":{\"selections\":{\"all\":{}},\"nodes\":{\"body\":{\"at\":[0,0],\"draw\":[{\"op\":\"copy\",\"part\":\"all\"}],\"layer\":\"body\"}}}},\"layers\":[{\"name\":\"Body - exact spear extension source and NW mirror\",\"id\":\"body\"}]},\"job\":{\"canvas\":[176,196],\"frame_count\":1,\"source_bookends_exact\":true,\"views\":[{\"offset\":[0,0],\"id\":\"ne-00\"},{\"mirror_of\":\"ne-00\",\"id\":\"nw-00\"},{\"offset\":[0,0],\"id\":\"ne-01\"},{\"mirror_of\":\"ne-01\",\"id\":\"nw-01\"},{\"offset\":[0,0],\"id\":\"ne-02\"},{\"mirror_of\":\"ne-02\",\"id\":\"nw-02\"},{\"offset\":[0,0],\"id\":\"ne-03\"},{\"mirror_of\":\"ne-03\",\"id\":\"nw-03\"}],\"durations_ms\":[50],\"require_clear_border\":true}}",
+    "--sources",
+    "{\"ne-03\":\"https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/6da0ef60-9129-470a-a755-51ca449db421/north-east/3.png?t=1791885710149\",\"ne-01\":\"https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/6da0ef60-9129-470a-a755-51ca449db421/north-east/1.png?t=1791885710149\",\"ne-00\":\"https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/6da0ef60-9129-470a-a755-51ca449db421/north-east/0.png?t=1791885710149\",\"ne-02\":\"https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/6da0ef60-9129-470a-a755-51ca449db421/north-east/2.png?t=1791885710149\"}"
+  ],
+  "mode": "low",
+  "notes": "User requests genuine Zumbi limb/spear animations. All five northeast originals inspected: preserve every original pixel, exact north-west mirror. No new AI generation, rescaling or gameplay change."
+}

@@ -114,12 +114,21 @@ func texture_for(key: String, direction: String, visual_time: float, animation_s
 			return rotations[direction] as Texture2D
 	if key == "boss_dev":
 		if animation_state in ["cast", "attack"]:
-			var cast_tex: Texture2D = statics.get("boss_dev_cast", null)
+			var is_east: bool = "east" in direction
+			var cast_key: String = "boss_dev_cast_east" if is_east else "boss_dev_cast_west"
+			var cast_tex: Texture2D = statics.get(cast_key, null)
 			if cast_tex == null:
-				cast_tex = _load_texture("res://assets/characters/boss_dev/game_ready/cast_south_west.png")
-				statics["boss_dev_cast"] = cast_tex
+				var path: String = "res://assets/characters/boss_dev/game_ready/cast_south_east.png" if is_east else "res://assets/characters/boss_dev/game_ready/cast_south_west.png"
+				cast_tex = _load_texture(path)
+				statics[cast_key] = cast_tex
 			if cast_tex != null:
 				return cast_tex
+			var fallback_tex: Texture2D = statics.get("boss_dev_cast", null)
+			if fallback_tex == null:
+				fallback_tex = _load_texture("res://assets/characters/boss_dev/game_ready/cast_south_west.png")
+				statics["boss_dev_cast"] = fallback_tex
+			if fallback_tex != null:
+				return fallback_tex
 	if character_states.has(key):
 		var states: Dictionary = character_states[key]
 		var directions: Dictionary = states.get(animation_state, states.get("idle", {}))

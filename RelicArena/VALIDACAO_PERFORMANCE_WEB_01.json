@@ -1,9 +1,9 @@
 {
   "date": "2026-10-13",
-  "status": "local_build_prepared_public_deploy_pending",
+  "status": "published_frontend_hashes_and_public_websocket_verified",
   "automatic_continuation": "PAUSED",
   "godot": "4.7.2.stable.official.ed1daf0bf",
-  "public_deploy": false,
+  "public_deploy": true,
   "purchases": false,
   "new_art_generations": 0,
   "source_snapshot": "revisoes/performance_2026-10-13/fonte_validada",
@@ -90,10 +90,17 @@
   ],
   "limits": [
     "60 FPS not achieved in measured combat",
-    "Public Vercel/Render deployment unchanged",
     "No phone/PWA device measurement",
     "Two Web renderers on same PC remain 14/15 FPS in the final sample",
-    "Primary project contains parallel IA changes; packaged source is the frozen validated runtime"
+    "Primary project contains parallel IA changes; packaged source is the frozen validated runtime",
+    "Published lobby/protocol verified; public PvP match and user-device FPS not measured"
   ],
-  "owned_test_processes": "Stopped local preview servers8766/8767/8768 and fixed-seed WebSocket8910; isolated browsers already closed"
+  "owned_test_processes": "Stopped local preview servers8766/8767/8768 and fixed-seed WebSocket8910; isolated browsers already closed",
+  "deployment": {
+    "commit": "999a37dd823d2cb20a6a4bda1ec0e6ec6f2bf11d",
+    "url": "https://clash-of-eras.vercel.app/",
+    "receipt": "Guia_Godot4/revisoes/deploy_2026-10-13/PUBLICACAO.json",
+    "backend_pong": true,
+    "public_browser_checks_passed": 8
+  }
 }

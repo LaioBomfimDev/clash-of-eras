@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 8fdd25ac-7bf7-43e8-a0e1-8523765e4cd8\njob_id: 8fdd25ac-7bf7-43e8-a0e1-8523765e4cd8\nmodel: pixen\nedit: Keep this exact warrior and upright spear. Change ONLY the FREE ARM: raise his free fist high ABOVE his head in a proud rally gesture. The other hand stays at the waist holding the SAME upright spear, in the SAME fixed position with ONE silver tip above his head. Feet, legs, torso, face, dagger, trousers and ankle cuffs unchanged. Do NOT spin, rotate, lower, move or duplicate the spear. Both feet on ground. Transparent background, no ground, rock, effects or added props.\nsource: 128x128px\nsize: 128x128px\ntransparent: True\nasset_id: 5afa3d79-94d3-5356-84fb-43ae859f1088\nasset_status: pending (saved when generation completes)\ncost: 1 generation\nstatus: processing (~10-40s)\n\nhint: get_image(job_id=\"8fdd25ac-7bf7-43e8-a0e1-8523765e4cd8\")"
+    }
+  ],
+  "isError": false
+}

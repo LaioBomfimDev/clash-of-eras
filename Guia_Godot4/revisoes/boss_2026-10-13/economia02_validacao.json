@@ -1,0 +1,76 @@
+{
+  "recorded_at_utc": "2026-10-13T11:48:41.878625+00:00",
+  "godot_version": "4.7.2.stable.official.ed1daf0bf",
+  "scope": "Session economy02/dismiss and BUG023 Session guard; four pure GDScript runners. No UI, network, art generation or balance claim.",
+  "runs": [
+    {
+      "name": "economia02",
+      "passed": 82,
+      "failed": 0,
+      "exit_code": 0,
+      "stdout_path": "C:\\Users\\m\\Documents\\Relic Arena MY\\Guia_Godot4\\revisoes\\boss_2026-10-13\\economia02.log",
+      "stderr_path": "C:\\Users\\m\\Documents\\Relic Arena MY\\Guia_Godot4\\revisoes\\boss_2026-10-13\\economia02.err",
+      "stderr_bytes": 0,
+      "stdout_sha256": "74b722bec22e7bb540fa71ad149cb4511c68fe2eb21592b3e0c9f64dc6f60b10",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "summary": "ECONOMIA02 TESTS: 82 passed, 0 failed",
+      "script_errors": false
+    },
+    {
+      "name": "match_session",
+      "passed": 173,
+      "failed": 0,
+      "exit_code": 0,
+      "stdout_path": "C:\\Users\\m\\Documents\\Relic Arena MY\\Guia_Godot4\\revisoes\\boss_2026-10-13\\match_session_economia02.log",
+      "stderr_path": "C:\\Users\\m\\Documents\\Relic Arena MY\\Guia_Godot4\\revisoes\\boss_2026-10-13\\match_session_economia02.err",
+      "stderr_bytes": 0,
+      "stdout_sha256": "ac639e6b0af6f2bd6ad73f29344ac86453b186dc80cf054858e19ca204b09a62",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "summary": "MATCH SESSION TESTS: 173 passed, 0 failed",
+      "script_errors": false
+    },
+    {
+      "name": "boss_resolution",
+      "passed": 46,
+      "failed": 0,
+      "exit_code": 0,
+      "stdout_path": "C:\\Users\\m\\Documents\\Relic Arena MY\\Guia_Godot4\\revisoes\\boss_2026-10-13\\boss_regression_economia02.log",
+      "stderr_path": "C:\\Users\\m\\Documents\\Relic Arena MY\\Guia_Godot4\\revisoes\\boss_2026-10-13\\boss_regression_economia02.err",
+      "stderr_bytes": 0,
+      "stdout_sha256": "007817a2623aefce165479791dc372e4b2644ca6d2cfe86efe7f386834cbddf5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "summary": "BOSS RESOLUTION REGRESSION: 46 passed, 0 failed",
+      "script_errors": false
+    },
+    {
+      "name": "full_matches",
+      "passed": 775,
+      "failed": 0,
+      "exit_code": 0,
+      "stdout_path": "C:\\Users\\m\\Documents\\Relic Arena MY\\Guia_Godot4\\revisoes\\boss_2026-10-13\\full_matches_economia02.log",
+      "stderr_path": "C:\\Users\\m\\Documents\\Relic Arena MY\\Guia_Godot4\\revisoes\\boss_2026-10-13\\full_matches_economia02.err",
+      "stderr_bytes": 0,
+      "stdout_sha256": "f21ec4c0bebbab37258ae2d79ca9d3bf3d110e5ae3b567a8f1f0c77a3d5e228d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "summary": "FULL MATCH TESTS: 4 automated matches, 775 passed, 0 failed",
+      "script_errors": false
+    }
+  ],
+  "hashes_after_runs": {
+    "RelicArena/simulation/match_session.gd": "cdd6497f9c8bc716f6cd04b1076c5ad030c217f8838336d7e6f65186fc5317e1",
+    "RelicArena/tests/test_economia_02.gd": "b6127a70f7573cf4e14c3503b51e9f9d87d90ab949d4b7947a6d353617ca53d1",
+    "RelicArena/tests/test_match_session.gd": "ecd92c8b7ce997fc847fd1ddf9e040f88f5d5ce45bd7b5f6acb94778c44fd614",
+    "RelicArena/tests/test_boss_resolution_regression.gd": "3af2fefa193553efda098831a66318cadcd094b01693c3863f7a8433c637c92c",
+    "RelicArena/tests/test_full_matches.gd": "bfc25d652ad38ec08786d6bdc9d8aef9e01e83706a36ed17d39877567a6cd466"
+  },
+  "files_modified_by_agent": [
+    "RelicArena/simulation/match_session.gd",
+    "RelicArena/tests/test_economia_02.gd",
+    "RelicArena/tests/test_match_session.gd",
+    "RelicArena/tests/test_boss_resolution_regression.gd"
+  ],
+  "full_matches_modified": false,
+  "post_test_change": "Only Session comment changed to state the maintained five-slot reserve; no logic changed after executions.",
+  "total_passed": 1076,
+  "total_failed": 0
+}

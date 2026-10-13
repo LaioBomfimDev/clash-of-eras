@@ -21,6 +21,7 @@ var level_rules: Dictionary = {}
 var summon_specs: Dictionary = {}
 ## Nuvens de fumaça do Snoop: {id, source_id, team, cell, radius, remaining, until_tick, interval, damage, miss_chance}.
 var zones: Array[Dictionary] = []
+var boss_pending_spells: Array[Dictionary] = []
 var _next_zone_id: int = 1
 var phase: String = "preparation"
 var elapsed: float = 0.0
@@ -44,6 +45,7 @@ var _accumulator: float = 0.0
 var _next_projectile_id: int = 1
 var _formation: Dictionary = {}
 var _roster: Array[Dictionary] = []
+var _ascended_units: Dictionary = {}
 
 func _init() -> void:
 	specs = Catalog.load_specs()
@@ -56,6 +58,7 @@ func reset(seed_value: int = 20261011) -> void:
 	team_lives = [4, 4]
 	round_index = 1
 	match_winner = -1
+	_ascended_units.clear()
 	_formation = {
 		1: Vector2i(2, 6), 2: Vector2i(5, 5), 3: Vector2i(3, 4), 4: Vector2i(4, 4),
 		5: Vector2i(1, 7),
@@ -73,6 +76,7 @@ func _setup_round() -> void:
 	units.clear()
 	projectiles.clear()
 	zones.clear()
+	boss_pending_spells.clear()
 	_next_zone_id = 1
 	events.clear()
 	team_damage = [0.0, 0.0]
@@ -97,6 +101,8 @@ func _setup_round() -> void:
 			continue
 		var unit: UnitState = UnitState.new(definition, unit_id, int(entry["team"]), _formation.get(unit_id, entry["cell"]))
 		unit.active = bool(entry["active"])
+		if _ascended_units.get(unit_id, false):
+			unit.has_angel_wings = true
 		var level: int = clampi(int(entry.get("level", 1)), 1, Catalog.MAX_MATCH_LEVEL)
 		unit.apply_level(level, level_multiplier(level))
 		units.append(unit)
@@ -387,9 +393,11 @@ func _tick() -> void:
 	_update_assassin_hunts(FIXED_STEP)
 	_update_briefcase_guards(FIXED_STEP)
 	_update_boss_spells(action_delta)
+	_update_revivals(FIXED_STEP)
+	_update_buffs(FIXED_STEP)
 	## Stable IDs determine ties in this prototype; not a claim of PvP fairness.
 	for unit: UnitState in units:
-		if not unit.active or not unit.alive or unit.stun_remaining > 0.0:
+		if not unit.active or not unit.alive or unit.is_reviving or unit.stun_remaining > 0.0:
 			continue
 		## O Boss Desenvolvedor não dá socos nem persegue; conjura poderes à distância.
 		if unit.is_boss:
@@ -421,17 +429,21 @@ func _tick() -> void:
 func _find_target(source: UnitState) -> UnitState:
 	if not source.assassin_opening_finished:
 		var hunted: UnitState = get_unit(source.assassin_target_id)
-		if hunted != null and hunted.active and hunted.alive and hunted.team != source.team:
+		if hunted != null and hunted.active and hunted.alive and not hunted.is_reviving and hunted.team != source.team:
 			return hunted
 
 	# Taunt / Trava de mira: se já ataca um tank ou alvo em alcance, mantém a mira fixa
 	if source.target_id >= 0:
 		var current: UnitState = get_unit(source.target_id)
-		if current != null and current.active and current.alive and current.team != source.team:
+		if current != null and current.active and current.alive and not current.is_reviving and current.team != source.team:
 			if current.guardian_id >= 0:
 				var guardian: UnitState = get_unit(current.guardian_id)
-				if guardian != null and guardian.active and guardian.alive:
+				if guardian != null and guardian.active and guardian.alive and not guardian.is_reviving:
 					return guardian
+			if current.is_boss:
+				for cand: UnitState in units:
+					if cand.team == current.team and cand.active and cand.alive and not cand.is_reviving and cand.summoned:
+						return cand
 			var is_tank: bool = current.summoned or "vanguarda" in current.spec.synergy_tags or current.guardian_id >= 0 or current.key in ["obama", "barbie", "lula", "ken"]
 			var dist: int = Grid.distance(source.cell, current.cell)
 			if is_tank or dist <= source.spec.attack_range:
@@ -441,7 +453,7 @@ func _find_target(source: UnitState) -> UnitState:
 	var best_distance: int = 1000
 	var best_is_tank: bool = false
 	for candidate: UnitState in units:
-		if not candidate.active or not candidate.alive or candidate.team == source.team:
+		if not candidate.active or not candidate.alive or candidate.is_reviving or candidate.team == source.team:
 			continue
 		var candidate_distance: int = Grid.distance(source.cell, candidate.cell)
 		var candidate_is_tank: bool = candidate.summoned or "vanguarda" in candidate.spec.synergy_tags or candidate.guardian_id >= 0 or candidate.key in ["obama", "barbie", "lula", "ken"]
@@ -563,8 +575,10 @@ func _attack(source: UnitState, target: UnitState) -> void:
 	if source.key == "caramelo" and target.hp <= target.max_hp * source.spec.execute_threshold + 0.000001:
 		_deal_damage(source.id, target, target.hp, false, "execute", true)
 		return
-	var critical: bool = _rng.randf() < source.effective_crit_chance
+	var critical: bool = (_rng.randf() < source.effective_crit_chance) or (source.divine_frenzy_timer > 0.0)
 	var damage: float = source.attack_damage
+	if source.group_attack_buff_timer > 0.0:
+		damage *= 1.25
 	if _guardian_alive(source):
 		damage *= 1.0 + source.spec.guardian_damage_bonus
 	if critical:
@@ -782,13 +796,34 @@ func _update_lassos(delta: float) -> void:
 		_emit("lasso", {"source_id": source.id, "target_id": target.id, "from": from, "to": target.cell, "stun": source.spec.lasso_stun})
 		_deal_damage(source.id, target, source.spec.lasso_damage * source.level_multiplier, false, "lasso_hit", false, "physical")
 
-## Boss Desenvolvedor (Round 4): Fogo vermelho ardente, fogo roxo explosivo, furacão de chamas com empurrão e invocações escalonadas
+## Boss Desenvolvedor (Round 4): Fogo vermelho ardente, fogo roxo explosivo, furacão de chamas com telegrafia de área, invocações e modo Fúria
 func _update_boss_spells(delta: float) -> void:
 	for unit: UnitState in units:
 		if not unit.active or not unit.alive or not unit.is_boss or unit.stun_remaining > 0.0:
 			continue
 		
-		# 1. Invocação de monstros em tempos específicos
+		# 0. Fase de Fúria (Enrage aos 40% de HP = 4.000 HP)
+		if not unit.boss_enraged and unit.hp <= unit.max_hp * 0.40:
+			unit.boss_enraged = true
+			_emit("boss_enrage", {"boss_id": unit.id, "hp": unit.hp, "max_hp": unit.max_hp})
+			# Onda de choque: empurra unidades inimigas que estiverem em volta
+			var shockwave_victims: Array[UnitState] = []
+			for victim: UnitState in units:
+				if victim.active and victim.alive and victim.team != unit.team:
+					if Grid.distance(unit.cell, victim.cell) <= 2:
+						shockwave_victims.append(victim)
+			for victim: UnitState in shockwave_victims:
+				var push_cell: Vector2i = _find_free_adjacent_cell(victim.cell)
+				if push_cell != Grid.INVALID:
+					var old_c: Vector2i = victim.cell
+					victim.previous_cell = old_c
+					victim.cell = push_cell
+					_emit("unit_displaced", {"unit_id": victim.id, "from": old_c, "to": push_cell, "reason": "boss_enrage_shockwave"})
+			_emit("boss_shockwave", {"boss_id": unit.id, "center": unit.cell, "radius": 2})
+
+		var cdr_mult: float = 0.75 if unit.boss_enraged else 1.0
+
+		# 1. Invocação de monstros no fundo da arena com provocação/aggro
 		for s_idx: int in range(unit.spec.boss_summon_times.size()):
 			var spawn_time: float = unit.spec.boss_summon_times[s_idx]
 			if elapsed >= spawn_time and not unit.boss_summons_spawned.has(s_idx):
@@ -796,7 +831,7 @@ func _update_boss_spells(delta: float) -> void:
 				var summon_key: String = unit.spec.boss_summon_keys[s_idx]
 				var def: UnitSpec = summon_specs.get(summon_key, null)
 				if def != null:
-					var cell: Vector2i = _free_cell_near(unit.cell, unit.team)
+					var cell: Vector2i = _find_backline_spawn_cell()
 					if cell != Grid.INVALID:
 						var summon_id: int = maxi(1, unit.id + SUMMON_ID_OFFSET + (s_idx + 1) * 10)
 						while get_unit(summon_id) != null:
@@ -805,6 +840,7 @@ func _update_boss_spells(delta: float) -> void:
 						summon.summoned = true
 						summon.summoner_id = unit.id
 						units.append(summon)
+						unit.guardian_id = summon.id
 						unit.last_action = "cast"
 						_emit("summon", {"source_id": unit.id, "target_id": summon.id, "cell": cell, "key": summon_key})
 						_emit("boss_summon", {"boss_id": unit.id, "target_id": summon.id, "cell": cell, "key": summon_key})
@@ -812,10 +848,16 @@ func _update_boss_spells(delta: float) -> void:
 							if enemy.team != summon.team and enemy.active and enemy.alive:
 								enemy.target_id = summon.id
 		
-		# 2. Fogo Vermelho (Disparo incandescente de dano concentrado e labaredas em área)
+		# 2. Teleporte Místico a cada 4 segundos para locais diferentes da arena
+		unit.boss_teleport_timer = maxf(0.0, unit.boss_teleport_timer - delta)
+		if unit.boss_teleport_timer <= 0.000001:
+			unit.boss_teleport_timer = unit.spec.boss_teleport_interval * cdr_mult
+			_execute_boss_teleport(unit)
+		
+		# 3. Fogo Vermelho (Disparo incandescente de dano concentrado e labaredas em área)
 		unit.boss_red_fire_timer = maxf(0.0, unit.boss_red_fire_timer - delta)
 		if unit.boss_red_fire_timer <= 0.000001:
-			unit.boss_red_fire_timer = unit.spec.boss_red_fire_cooldown
+			unit.boss_red_fire_timer = unit.spec.boss_red_fire_cooldown * cdr_mult
 			var target: UnitState = _find_threat_target(1 - unit.team)
 			if target != null:
 				var target_cell: Vector2i = target.cell
@@ -828,13 +870,24 @@ func _update_boss_spells(delta: float) -> void:
 							_deal_damage(unit.id, victim, impact_damage, false, "red_fire_hit", false, "magic")
 				_emit("red_fire_explosion", {"source_id": unit.id, "center": target_cell, "radius": 1, "damage": impact_damage})
 
-		# 3. Fogo Roxo (Projétil em área com explosão mágica)
+		# 3. Fogo Roxo (Telegrafia de aviso prévio com 0.8s + Projétil em área com explosão mágica)
+		if unit.boss_purple_fire_timer <= 0.8 and not unit.boss_purple_telegraphed:
+			unit.boss_purple_telegraphed = true
+			var tele_target: UnitState = _find_cluster_target(1 - unit.team)
+			if tele_target != null:
+				unit.boss_purple_target = tele_target.cell
+				_emit("boss_spell_telegraph", {"source_id": unit.id, "spell": "purple_fire", "center": unit.boss_purple_target, "radius": 1, "duration": 0.8})
+
 		unit.boss_purple_fire_timer = maxf(0.0, unit.boss_purple_fire_timer - delta)
 		if unit.boss_purple_fire_timer <= 0.000001:
-			unit.boss_purple_fire_timer = unit.spec.boss_purple_fire_cooldown
-			var target: UnitState = _find_cluster_target(1 - unit.team)
-			if target != null:
-				var target_cell: Vector2i = target.cell
+			unit.boss_purple_fire_timer = unit.spec.boss_purple_fire_cooldown * cdr_mult
+			unit.boss_purple_telegraphed = false
+			var target_cell: Vector2i = unit.boss_purple_target
+			if target_cell == Grid.INVALID:
+				var fallback_t: UnitState = _find_cluster_target(1 - unit.team)
+				if fallback_t != null:
+					target_cell = fallback_t.cell
+			if target_cell != Grid.INVALID:
 				var impact_damage: float = unit.spec.boss_purple_fire_damage
 				unit.last_action = "cast"
 				_emit("boss_cast", {"source_id": unit.id, "spell": "purple_fire", "from": unit.cell, "to": target_cell})
@@ -843,14 +896,26 @@ func _update_boss_spells(delta: float) -> void:
 						if Grid.distance(target_cell, victim.cell) <= 1:
 							_deal_damage(unit.id, victim, impact_damage, false, "purple_fire_hit", false, "magic")
 				_emit("purple_fire_explosion", {"source_id": unit.id, "center": target_cell, "radius": 1, "damage": impact_damage})
+				unit.boss_purple_target = Grid.INVALID
 		
-		# 4. Furacão de Fogo (Dano em área + Deslocamento / Embaralhamento da formação)
+		# 4. Furacão de Fogo (Telegrafia de aviso prévio com 0.8s + Dano em área e Deslocamento)
+		if unit.boss_tornado_timer <= 0.8 and not unit.boss_tornado_telegraphed:
+			unit.boss_tornado_telegraphed = true
+			var tele_target: UnitState = _find_cluster_target(1 - unit.team)
+			if tele_target != null:
+				unit.boss_tornado_target = tele_target.cell
+				_emit("boss_spell_telegraph", {"source_id": unit.id, "spell": "fire_tornado", "center": unit.boss_tornado_target, "radius": 1, "duration": 0.8})
+
 		unit.boss_tornado_timer = maxf(0.0, unit.boss_tornado_timer - delta)
 		if unit.boss_tornado_timer <= 0.000001:
-			unit.boss_tornado_timer = unit.spec.boss_tornado_cooldown
-			var target: UnitState = _find_cluster_target(1 - unit.team)
-			if target != null:
-				var center_cell: Vector2i = target.cell
+			unit.boss_tornado_timer = unit.spec.boss_tornado_cooldown * cdr_mult
+			unit.boss_tornado_telegraphed = false
+			var center_cell: Vector2i = unit.boss_tornado_target
+			if center_cell == Grid.INVALID:
+				var fallback_t: UnitState = _find_cluster_target(1 - unit.team)
+				if fallback_t != null:
+					center_cell = fallback_t.cell
+			if center_cell != Grid.INVALID:
 				var tornado_damage: float = unit.spec.boss_tornado_damage
 				unit.last_action = "cast"
 				_emit("boss_cast", {"source_id": unit.id, "spell": "fire_tornado", "center": center_cell, "radius": 1})
@@ -869,6 +934,7 @@ func _update_boss_spells(delta: float) -> void:
 							victim.cell = free_cell
 							_emit("unit_displaced", {"unit_id": victim.id, "from": old_pos, "to": free_cell, "reason": "fire_tornado"})
 				_emit("fire_tornado", {"source_id": unit.id, "center": center_cell, "radius": 1, "damage": tornado_damage})
+				unit.boss_tornado_target = Grid.INVALID
 
 func _find_threat_target(enemy_team: int) -> UnitState:
 	var best_unit: UnitState = null
@@ -907,6 +973,45 @@ func _find_free_adjacent_cell(origin: Vector2i) -> Vector2i:
 		if not occupied.has(cell) and Grid.contains(cell):
 			return cell
 	return Grid.INVALID
+
+func _find_backline_spawn_cell() -> Vector2i:
+	var occupied: Dictionary = _occupied_cells()
+	for row: int in [7, 6, 5]:
+		for col: int in [3, 4, 2, 5, 1, 6, 0, 7]:
+			var cell: Vector2i = Vector2i(col, row)
+			if not occupied.has(cell) and Grid.contains(cell):
+				return cell
+	for row: int in range(Grid.HEIGHT - 1, -1, -1):
+		for col: int in range(Grid.WIDTH):
+			var cell: Vector2i = Vector2i(col, row)
+			if not occupied.has(cell) and Grid.contains(cell):
+				return cell
+	return Grid.INVALID
+
+func _execute_boss_teleport(unit: UnitState) -> void:
+	var occupied: Dictionary = _occupied_cells()
+	var options: Array[Vector2i] = []
+	for y: int in range(Grid.HEIGHT):
+		for x: int in range(Grid.WIDTH):
+			var cand: Vector2i = Vector2i(x, y)
+			if not occupied.has(cand) and Grid.contains(cand):
+				var d: int = Grid.distance(unit.cell, cand)
+				if d >= 3:
+					options.append(cand)
+	if options.is_empty():
+		for y: int in range(Grid.HEIGHT):
+			for x: int in range(Grid.WIDTH):
+				var cand: Vector2i = Vector2i(x, y)
+				if not occupied.has(cand) and Grid.contains(cand) and Grid.distance(unit.cell, cand) >= 2:
+					options.append(cand)
+	if not options.is_empty():
+		var dest: Vector2i = options[_rng.randi_range(0, options.size() - 1)]
+		var old_c: Vector2i = unit.cell
+		unit.previous_cell = old_c
+		unit.cell = dest
+		unit.last_action = "teleport"
+		_emit("boss_teleport", {"boss_id": unit.id, "from": old_c, "to": dest})
+		_emit("unit_displaced", {"unit_id": unit.id, "from": old_c, "to": dest, "reason": "boss_teleport"})
 
 func _set_ball_leg(ball: BallProjectile, origin: Vector2i, target: UnitState, definition: UnitSpec) -> void:
 	ball.from_cell = origin
@@ -1063,6 +1168,7 @@ func _grant_dance_shield(source: UnitState) -> void:
 			continue
 		ally.dance_shield = maxf(ally.dance_shield, source.spec.dance_shield_amount * source.level_multiplier)
 		ally.dance_shield_remaining = source.spec.dance_shield_duration
+		ally.dance_shield_source_id = source.id
 		targets.append(ally.id)
 	source.last_action = "dance"
 	_emit("dance_shield", {"source_id": source.id, "amount": source.spec.dance_shield_amount * source.level_multiplier, "duration": source.spec.dance_shield_duration, "targets": targets})
@@ -1074,6 +1180,7 @@ func _update_dance_shields(delta: float) -> void:
 		unit.dance_shield_remaining = maxf(0.0, unit.dance_shield_remaining - delta)
 		if unit.dance_shield_remaining <= 0.000001:
 			unit.dance_shield = 0.0
+			unit.dance_shield_source_id = -1
 
 func _apply_bleed(source: UnitState, target: UnitState) -> void:
 	for bleed: Dictionary in target.bleeds:
@@ -1099,7 +1206,7 @@ func _update_bleeds(delta: float) -> void:
 			if float(bleed["until_tick"]) <= 0.000001 and float(bleed["remaining"]) >= -0.000001:
 				var revives_before: int = target.revive_count
 				_deal_damage(int(bleed["source_id"]), target, float(bleed["damage"]), false, "bleed")
-				if target.revive_count > revives_before:
+				if target.revive_count > revives_before or target.is_reviving:
 					## Revival cleanses all bleeds, including effects already retained locally.
 					remaining.clear()
 					break
@@ -1115,7 +1222,7 @@ func _update_bleeds(delta: float) -> void:
 			target.bleeds.clear()
 
 func _deal_damage(source_id: int, target: UnitState, raw_damage: float, critical: bool, kind: String, execution: bool = false, damage_type: String = "physical") -> void:
-	if not target.active or not target.alive:
+	if not target.active or not target.alive or target.is_reviving:
 		return
 	var defense: float = target.resist if damage_type == "magic" else target.armor
 	var reduced: float = maxf(0.0, raw_damage) if execution else maxf(0.0, raw_damage) * 100.0 / (100.0 + defense)
@@ -1128,9 +1235,16 @@ func _deal_damage(source_id: int, target: UnitState, raw_damage: float, critical
 		reduced -= absorbed_dance
 		absorbed_base = minf(target.shield, reduced)
 		target.shield -= absorbed_base
-		absorbed = absorbed_dance + absorbed_base
-		target.shield_absorbed += absorbed
 		reduced -= absorbed_base
+		absorbed = absorbed_dance + absorbed_base
+		if absorbed_dance > 0.0:
+			var provider: UnitState = get_unit(target.dance_shield_source_id)
+			if provider != null:
+				provider.shield_absorbed += absorbed_dance
+			else:
+				target.shield_absorbed += absorbed_dance
+		if absorbed_base > 0.0:
+			target.shield_absorbed += absorbed_base
 	var effective: float = minf(target.hp, reduced)
 	target.hp = maxf(0.0, target.hp - effective)
 	var source: UnitState = get_unit(source_id)
@@ -1144,13 +1258,18 @@ func _deal_damage(source_id: int, target: UnitState, raw_damage: float, critical
 	elif target.revive_count == 1 and target.level >= target.spec.extra_revive_min_level:
 		revival_ratio = target.spec.extra_revive_ratio
 	if target.hp <= 0.000001 and revival_ratio > 0.0:
-		## Primeiro retorno40%; no N3 Lula tem mais um retorno configurado30%.
-		target.revived = true
-		target.revive_count += 1
-		target.hp = target.max_hp * revival_ratio
+		## Lula: demora 1.0s para descer dos céus com asas de anjo e conceder buffs.
+		var delay: float = target.spec.revive_delay
+		target.is_reviving = true
+		target.revive_delay_remaining = delay
+		target.pending_revival_ratio = revival_ratio
+		target.hp = 0.0
 		target.bleeds.clear()
 		target.stun_remaining = 0.0
-		_emit("revive", {"source_id": source_id, "target_id": target.id, "amount": target.hp, "count": target.revive_count})
+		target.last_action = "reviving"
+		_emit("reviving", {"source_id": source_id, "target_id": target.id, "duration": delay, "ratio": revival_ratio, "cell": [target.cell.x, target.cell.y]})
+		if delay <= 0.000001:
+			_complete_revival(target)
 		return
 	if target.hp <= 0.000001:
 		target.hp = 0.0
@@ -1162,6 +1281,41 @@ func _deal_damage(source_id: int, target: UnitState, raw_damage: float, critical
 		if source != null:
 			source.kills += 1
 		_emit("death", {"source_id": source_id, "target_id": target.id})
+
+func _complete_revival(target: UnitState) -> void:
+	target.is_reviving = false
+	target.revived = true
+	target.revive_count += 1
+	target.hp = target.max_hp * target.pending_revival_ratio
+	target.alive = true
+	target.has_angel_wings = true
+	_ascended_units[target.id] = true
+	target.last_action = "idle"
+	var frenzy_dur: float = target.spec.revive_divine_frenzy_duration
+	if frenzy_dur > 0.0:
+		target.divine_frenzy_timer = frenzy_dur
+	var buff_dur: float = target.spec.revive_buff_duration
+	var buff_ratio: float = target.spec.revive_team_attack_bonus
+	if buff_dur > 0.0 and buff_ratio > 0.0:
+		for ally: UnitState in units:
+			if ally.active and ally.alive and ally.team == target.team:
+				ally.group_attack_buff_timer = buff_dur
+	_emit("revive", {"source_id": target.id, "target_id": target.id, "amount": target.hp, "count": target.revive_count, "cell": [target.cell.x, target.cell.y]})
+	_emit("lula_ascended", {"unit_id": target.id, "cell": [target.cell.x, target.cell.y], "team": target.team, "buff_duration": buff_dur, "attack_buff": buff_ratio, "frenzy_duration": frenzy_dur})
+
+func _update_revivals(delta: float) -> void:
+	for unit: UnitState in units:
+		if unit.is_reviving:
+			unit.revive_delay_remaining = maxf(0.0, unit.revive_delay_remaining - delta)
+			if unit.revive_delay_remaining <= 0.000001:
+				_complete_revival(unit)
+
+func _update_buffs(delta: float) -> void:
+	for unit: UnitState in units:
+		if unit.group_attack_buff_timer > 0.0:
+			unit.group_attack_buff_timer = maxf(0.0, unit.group_attack_buff_timer - delta)
+		if unit.divine_frenzy_timer > 0.0:
+			unit.divine_frenzy_timer = maxf(0.0, unit.divine_frenzy_timer - delta)
 
 ## Sem chefe ativo existente não há vitória/recompensa PvE, mesmo com mais tropas.
 func boss_defeated() -> bool:
@@ -1179,7 +1333,7 @@ func boss_defeated() -> bool:
 func _check_resolution() -> void:
 	var survivors: Array[int] = [0, 0]
 	for unit: UnitState in units:
-		if unit.active and unit.alive and not unit.summoned:
+		if unit.active and (unit.alive or unit.is_reviving) and not unit.summoned:
 			survivors[unit.team] += 1
 	var winner: int = -1
 	var reason: String = ""
@@ -1217,6 +1371,7 @@ func _check_resolution() -> void:
 	round_result = {"winner": winner, "reason": reason, "survivors": survivors, "damage": team_damage.duplicate(), "elapsed": elapsed, "units_summary": unit_summaries(), "is_boss_round": is_boss_round}
 	projectiles.clear()
 	zones.clear()
+	boss_pending_spells.clear()
 	_emit("round_finished", round_result.duplicate(true))
 
 func _emit(kind: String, fields: Dictionary = {}) -> void:

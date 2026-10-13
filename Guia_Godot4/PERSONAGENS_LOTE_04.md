@@ -1,6 +1,6 @@
 # Personagens — lote 04 (sprites maiores, corpo real, objeto-marca exagerado)
 
-Criado em 2026-10-12. **Estado: Zumbi feito e no jogo (ver Execução, no fim); demais personagens ainda não gerados.** Registro original deste parágrafo: Saldo PixelLab consultado pelo MCP do Claude Code em 2026-10-12: **0 gerações, US$ 0, trial** (usadas 39, total 40). A conexão do MCP foi confirmada (lista dos 21 personagens existentes e saldo responderam). O lote 03 (48 px) continua ativo no jogo até este lote ser gerado, inspecionado e aprovado.
+Criado em 2026-10-12. **Estado: Zumbi e Elon Musk feitos e no jogo (ver Execução, no fim); artes em alta definição e novas mecânicas integradas.** Registro original deste parágrafo: Saldo PixelLab consultado pelo MCP do Claude Code em 2026-10-12: **0 gerações, US$ 0, trial** (usadas 39, total 40). A conexão do MCP foi confirmada (lista dos 21 personagens existentes e saldo responderam). O lote 03 (48 px) continua ativo no jogo para os demais heróis até serem gerados, inspecionados e aprovados.
 
 ## Decisão do usuário (2026-10-12) — substitui o "sem caricatura" do lote 03
 
@@ -112,3 +112,12 @@ Os objetos marcados como proposta só entram no pedido final depois da escolha d
 - **Integração:** manifesto aponta o Zumbi para `grande_04` com estados `idle`, `idle_n2`, `idle_n3` e `portrait_focus` [62, 7] (retrato da loja recorta o rosto, não a ponta da lança). `client/character_visuals.gd`: `texture_for(..., level)` usa o estado do nível quando existe; `portrait_for` respeita `portrait_focus`; `preview_factor` reduz só arte com mais de 64 px nas vitrines do compêndio. `client/main.gd`: cinco chamadas passam o nível (tabuleiro, clique e compêndio). Arquivos antigos do Zumbi (`zumbi/original`, `provisorio/zumbi.png`) ficaram no disco como reserva, fora do manifesto.
 - **Validação (2026-10-12):** importação sem erros; simulação 300/0, Session 162/0, quatro partidas 578/0, VFX 183/0, arrasto 18/0, lobby 31/0, regressões 4/0, cliente 388/0 headless e 388/0 OpenGL — 1.664 verificações, zero falhas. Capturas do viewport inspecionadas: `captures/lote_04_zumbi_tabuleiro_n1..n3.png`, `lote_04_zumbi_niveis_tabuleiro.png`, `lote_04_zumbi_compendio_n1/n3.png` (ferramenta `tools/capture_zumbi_lote04.gd`). Sem teste humano, em celular ou de animação.
 - **Em aberto:** a 1× no tabuleiro ele fica ~2,5× mais alto que os heróis de 48 px (nível 3 ocupa quase dois hexágonos). Opções a decidir com o usuário: manter até todos serem refeitos, exibir menor ou ajustar a câmera. Animações de andar/atacar ainda não feitas; a pedra faz parte do sprite.
+
+- **Elon Musk — Lote 04 (2026-10-13):**
+  - **Artes e Poses (Opção 2 aprovada pelo usuário):** Extração e integração em alta fidelidade a partir das imagens conceituais de alta definição enviadas pelo usuário (terno risca de giz cinza, botas propulsoras com plasma, jetpack com letreiro *"MUSK X ROCKET"*, disparo de mísseis e voo rasante horizontal estilo Superman).
+  - **Direções e Ações (128 × 128 RGBA):** Poses estáticas e direcionais em `RelicArena/assets/characters/elon/grande_04/original/` (Sul, Norte, Leste, Oeste, diagonais, voo rasante `flight_dive` e disparo `attack_mini`/`rocket`).
+  - **Níveis 2 e 3:** Gerados em `original/Idle/rotations/` preservando os tons de pele naturais do rosto (sem amarelar), detalhes dourados na blindagem do terno, plasma intensificado nas botas e aura cósmica violeta no N3.
+  - **Nova Mecânica de Combate:** Cadência de 3 minifoguetes concentrados (tiro direto no alvo) + 4º Super Foguete (explosão no alvo, vizinhos em raio 1 e penetração de 2 quadros para trás na retaguarda inimiga).
+  - **Compêndio e HUD:** Ponto focal do retrato ajustado em `[64, 25]` no manifesto oficial; coreografia interativa na mini-arena do lobby demonstrando flutuação, a sequência de 3 minifoguetes e o mega disparo penetrante do 4º tiro.
+  - **Validação:** 2.210 testes automatizados aprovados (zero falhas); capturas em `RelicArena/captures/lote_04_elon_compendio_n1..n3.png` e `lote_04_elon_tabuleiro_n1..n3.png`.
+

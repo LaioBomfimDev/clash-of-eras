@@ -1,0 +1,34 @@
+{
+  "scope": "Two real Web exports in desktop Chrome, loopback server. Not public Render latency or phone FPS.",
+  "cases": [
+    {
+      "dpr": 1,
+      "errors": [],
+      "logs": [
+        "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org",
+        "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL",
+        "Build configuration: Emscripten 4.0.20, multi-threaded, no GDExtension support.",
+        "CLIENT_PHASE: menu; rodada 1; vidas [4, 4]",
+        "CLIENT_READY: Clash of Eras protótipo local; lobby de boas-vindas; 30 FPS; compêndio de heróis",
+        "CLIENT_PHASE: benefit; rodada 1; vidas [4, 4]",
+        "CLIENT_PHASE: preparation; rodada 1; vidas [4, 4]",
+        "CLIENT_PHASE: combat; rodada 1; vidas [4, 4]"
+      ]
+    },
+    {
+      "dpr": 2,
+      "errors": [],
+      "logs": [
+        "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org",
+        "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL",
+        "Build configuration: Emscripten 4.0.20, multi-threaded, no GDExtension support.",
+        "CLIENT_PHASE: menu; rodada 1; vidas [4, 4]",
+        "CLIENT_READY: Clash of Eras protótipo local; lobby de boas-vindas; 30 FPS; compêndio de heróis",
+        "CLIENT_PHASE: benefit; rodada 1; vidas [4, 4]",
+        "CLIENT_PHASE: preparation; rodada 1; vidas [4, 4]",
+        "CLIENT_PHASE: combat; rodada 1; vidas [4, 4]"
+      ]
+    }
+  ],
+  "error": "page.waitForEvent: Timeout 15000ms exceeded while waiting for event \"console\"\n=========================== logs ===========================\nwaiting for event \"console\"\n============================================================"
+}

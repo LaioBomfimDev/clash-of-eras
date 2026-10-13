@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "error: canvas 128x180, 1 frames, 18 views is over the limit (canvas side <= 512, frames <= 128, views <= 8)"
+    }
+  ],
+  "isError": true
+}

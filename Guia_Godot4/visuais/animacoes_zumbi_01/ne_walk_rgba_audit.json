@@ -1,0 +1,100 @@
+[
+  {
+    "i": 0,
+    "direction": "north-east",
+    "shift_y": 0,
+    "alpha_pixels_preserved": true,
+    "rgba_equal_to_registered_original": true
+  },
+  {
+    "i": 0,
+    "direction": "north-west",
+    "shift_y": 0,
+    "alpha_pixels_preserved": true,
+    "rgba_equal_to_registered_original": true
+  },
+  {
+    "i": 1,
+    "direction": "north-east",
+    "shift_y": -2,
+    "alpha_pixels_preserved": true,
+    "rgba_equal_to_registered_original": true
+  },
+  {
+    "i": 1,
+    "direction": "north-west",
+    "shift_y": -2,
+    "alpha_pixels_preserved": true,
+    "rgba_equal_to_registered_original": true
+  },
+  {
+    "i": 2,
+    "direction": "north-east",
+    "shift_y": 1,
+    "alpha_pixels_preserved": true,
+    "rgba_equal_to_registered_original": true
+  },
+  {
+    "i": 2,
+    "direction": "north-west",
+    "shift_y": 1,
+    "alpha_pixels_preserved": true,
+    "rgba_equal_to_registered_original": true
+  },
+  {
+    "i": 3,
+    "direction": "north-east",
+    "shift_y": -4,
+    "alpha_pixels_preserved": true,
+    "rgba_equal_to_registered_original": true
+  },
+  {
+    "i": 3,
+    "direction": "north-west",
+    "shift_y": -4,
+    "alpha_pixels_preserved": true,
+    "rgba_equal_to_registered_original": true
+  },
+  {
+    "i": 4,
+    "direction": "north-east",
+    "shift_y": -8,
+    "alpha_pixels_preserved": true,
+    "rgba_equal_to_registered_original": true
+  },
+  {
+    "i": 4,
+    "direction": "north-west",
+    "shift_y": -8,
+    "alpha_pixels_preserved": true,
+    "rgba_equal_to_registered_original": true
+  },
+  {
+    "i": 5,
+    "direction": "north-east",
+    "shift_y": -1,
+    "alpha_pixels_preserved": true,
+    "rgba_equal_to_registered_original": true
+  },
+  {
+    "i": 5,
+    "direction": "north-west",
+    "shift_y": -1,
+    "alpha_pixels_preserved": true,
+    "rgba_equal_to_registered_original": true
+  },
+  {
+    "i": 6,
+    "direction": "north-east",
+    "shift_y": 0,
+    "alpha_pixels_preserved": true,
+    "rgba_equal_to_registered_original": true
+  },
+  {
+    "i": 6,
+    "direction": "north-west",
+    "shift_y": 0,
+    "alpha_pixels_preserved": true,
+    "rgba_equal_to_registered_original": true
+  }
+]

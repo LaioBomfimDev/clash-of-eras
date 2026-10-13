@@ -13,3 +13,7 @@ APKs/*.idsig
 
 # Mantém a pasta dist/ para deploy estático na Vercel
 !dist/
+
+# Pastas de checkpoints locais e revisões temporárias pesadas
+checkpoints/
+revisoes/performance_2026-10-13/

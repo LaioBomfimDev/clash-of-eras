@@ -1,0 +1,273 @@
+ERROR: Unable to open file: res://.godot/imported/part-bubble_shield.png-fbddb2b87ce56520ad18147129531b0a.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Failed loading resource: res://.godot/imported/part-bubble_shield.png-fbddb2b87ce56520ad18147129531b0a.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Failed loading resource: res://assets/vfx/escudo_danca_01/original/part-bubble_shield.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Unable to open file: res://.godot/imported/part-estocada.png-09c52f2e4d148574189ef4c5a927e40f.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Failed loading resource: res://.godot/imported/part-estocada.png-09c52f2e4d148574189ef4c5a927e40f.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Failed loading resource: res://assets/vfx/estocada_01/part-estocada.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Unable to open file: res://.godot/imported/part-fire_blast.png-c177b10772cf97b1d5aa8c96bec812dc.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Failed loading resource: res://.godot/imported/part-fire_blast.png-c177b10772cf97b1d5aa8c96bec812dc.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Failed loading resource: res://assets/vfx/foguete_01/game_pack/part-fire_blast.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Unable to open file: res://.godot/imported/part-fumaca.png-230eef100637b7c89c7a0c693cbbca70.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Failed loading resource: res://.godot/imported/part-fumaca.png-230eef100637b7c89c7a0c693cbbca70.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Failed loading resource: res://assets/vfx/fumaca_01/original/part-fumaca.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Unable to open file: res://.godot/imported/part-laco.png-8a23f47c16bf29830385691435f5304e.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Failed loading resource: res://.godot/imported/part-laco.png-8a23f47c16bf29830385691435f5304e.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Failed loading resource: res://assets/vfx/laco_01/game_pack/part-laco.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Unable to open file: res://.godot/imported/whole.png-d13723b0958ae4a208556287fa5c706a.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Failed loading resource: res://.godot/imported/whole.png-d13723b0958ae4a208556287fa5c706a.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Failed loading resource: res://assets/vfx/explosao_02/game_pack/whole.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Unable to open file: res://.godot/imported/whole.png-9af7dfa2dc57cebd2d148362c5d0e6a7.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Failed loading resource: res://.godot/imported/whole.png-9af7dfa2dc57cebd2d148362c5d0e6a7.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Failed loading resource: res://assets/vfx/foguete_02/game_pack/whole.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Unable to open file: res://.godot/imported/whole.png-affe9f7d09ca4accc858d543cb1ef8f3.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Failed loading resource: res://.godot/imported/whole.png-affe9f7d09ca4accc858d543cb1ef8f3.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Failed loading resource: res://assets/vfx/fumaca_02/game_pack/whole.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Unable to open file: res://.godot/imported/whole.png-4ebb5791ca0aa813dcbbfa579c497e62.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Failed loading resource: res://.godot/imported/whole.png-4ebb5791ca0aa813dcbbfa579c497e62.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Failed loading resource: res://assets/vfx/explosao_03/game_pack/whole.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Unable to open file: res://.godot/imported/whole.png-5b2f3ed36d983b80eed2c7ca2fad8ac1.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Failed loading resource: res://.godot/imported/whole.png-5b2f3ed36d983b80eed2c7ca2fad8ac1.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Failed loading resource: res://assets/vfx/estilhaco_01/game_pack/whole.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Unable to open file: res://.godot/imported/whole.png-f0c964ae58d0ab541652624948c0f913.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Failed loading resource: res://.godot/imported/whole.png-f0c964ae58d0ab541652624948c0f913.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Failed loading resource: res://assets/vfx/zumbi_estocada_02/game_pack/whole.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Unable to open file: res://.godot/imported/part-inspiracao.png-af768381b74542c0a8bb87222a44c13a.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Failed loading resource: res://.godot/imported/part-inspiracao.png-af768381b74542c0a8bb87222a44c13a.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Failed loading resource: res://assets/vfx/zumbi_inspiracao_02/game_pack/part-inspiracao.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Unable to open file: res://.godot/imported/whole.png-20cbd9531a4b0fce7bac23fffb7eaaa9.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Failed loading resource: res://.godot/imported/whole.png-20cbd9531a4b0fce7bac23fffb7eaaa9.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)
+ERROR: Failed loading resource: res://assets/vfx/notas_bob_01/game_pack/whole.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://tests/test_client_performance.gd:40)

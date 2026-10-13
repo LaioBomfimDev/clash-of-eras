@@ -1,0 +1,11 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[SERVER] Sala criada: room_1 (Fresh1 vs Fresh2)
+ROOM INITIAL STATE team=0 gold=20 owned=[] capacity=4 benefits=3 ready=false phase=benefit
+ROOM INITIAL STATE team=1 gold=20 owned=[] capacity=4 benefits=3 ready=false phase=benefit
+[SERVER] Ouvindo conexões WebSocket na porta 8936...
+[SERVER] Perf1 (ID 1) entrou na fila. Total na fila: 1
+[SERVER] Perf2 (ID 2) entrou na fila. Total na fila: 2
+[SERVER] Sala criada: room_1 (Perf1 vs Perf2)
+LOCAL NETWORK METRICS: {"decode_last_step_usec":0,"events_received":1,"outbound_buffered_bytes":0,"queued_inbound_packets":0,"rtt_ms":0.698,"rx_bytes":12521,"rx_packets":13,"snapshot_age_ms":0.63,"snapshots_applied":9,"snapshots_coalesced":0,"snapshots_received":9,"tx_bytes":156,"tx_packets":2}
+ONLINE PERFORMANCE TESTS: 71 passed, 0 failed

@@ -1,0 +1,781 @@
+{
+  "date": "2026-10-13",
+  "stage": "Zumbi directions batch02",
+  "godot": "4.7.2.stable.official.ed1daf0bf",
+  "coverage": {
+    "walk": [
+      "east",
+      "west",
+      "north-east",
+      "north-west"
+    ],
+    "attack": [
+      "east",
+      "west",
+      "north-east",
+      "north-west"
+    ],
+    "skill": [
+      "east",
+      "west"
+    ],
+    "stance": [
+      "east",
+      "west",
+      "north-east",
+      "north-west"
+    ]
+  },
+  "unique_active_pngs": 64,
+  "new_active_pngs_vs_east_only_pilot": 45,
+  "missing_active_paths": [],
+  "assets": [
+    {
+      "path": "res://assets/characters/zumbi/animacoes_01/ajustes/attack_contact_east.png",
+      "size": [
+        256,
+        172
+      ],
+      "sha256": "e61192e1a39635cf821dec9f23e35045c7e24f9a8fa6e79ddac64f5b6a308612"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_01/exports/attack_east_03/original/Idle/animations/spear_extension_v3/east/frame_000.png",
+      "size": [
+        256,
+        168
+      ],
+      "sha256": "eff1123fef4b947db3a9efb46396e19bba3162fdfca6ae487df928af62fdbf4d"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_01/exports/attack_east_03/original/Idle/animations/spear_extension_v3/east/frame_001.png",
+      "size": [
+        256,
+        168
+      ],
+      "sha256": "c9d360a67f850aa80bc9c104f48a095bb52e71e11590a0dd53326750c49b4f93"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_01/exports/attack_east_03/original/Idle/animations/spear_extension_v3/east/frame_002.png",
+      "size": [
+        256,
+        168
+      ],
+      "sha256": "572b13111cb813c81f43d0f41b9586b573a9006ee212f9cb0113c4031a739368"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_01/exports/attack_east_03/original/Idle/animations/spear_extension_v3/east/frame_003.png",
+      "size": [
+        256,
+        168
+      ],
+      "sha256": "2a1fb97d9b859010ea72b577a4ee541854a1a5698c9942fd644f753b7b60f131"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_01/exports/skill_east_02/original/Idle/animations/rally_raise_v2/east/frame_000.png",
+      "size": [
+        128,
+        188
+      ],
+      "sha256": "a975fadafefa1b2248411b0ede3fa9c2c2e462b68f92b6e2d9ecf9ab78ccd8eb"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_01/exports/skill_east_02/original/Idle/animations/rally_raise_v2/east/frame_001.png",
+      "size": [
+        128,
+        188
+      ],
+      "sha256": "4bbd6da21104c53bd96053ca950862ca55c1c8b653231d09cbd6551686393892"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_01/exports/skill_east_02/original/Idle/animations/rally_raise_v2/east/frame_002.png",
+      "size": [
+        128,
+        188
+      ],
+      "sha256": "06c0226ef41a371bec7dbfd35ca9ae5ff3d9395bb409cd3aae5c5b0e41ed2a6f"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_01/exports/skill_east_02/original/Idle/animations/rally_raise_v2/east/frame_003.png",
+      "size": [
+        128,
+        188
+      ],
+      "sha256": "5f75d67c2b61aa1a45097ba1cf6763d8755d217fd1325ccabbdf6efe4d96df29"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_01/exports/skill_east_02/original/Idle/animations/rally_raise_v2/east/frame_004.png",
+      "size": [
+        128,
+        188
+      ],
+      "sha256": "52a4186dfcb48bb3a5200420948d7137424ab1f5459e16e43896899cdd7bf129"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_01/exports/skill_east_02/original/Idle/animations/spear_extension_v3/west/frame_000.png",
+      "size": [
+        256,
+        168
+      ],
+      "sha256": "a0a31dca3bd39cb6fc2708f2780e827e455c8e1b62cf8b9442b69c3ede30e727"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_01/exports/skill_east_02/original/Idle/animations/spear_extension_v3/west/frame_001.png",
+      "size": [
+        256,
+        168
+      ],
+      "sha256": "bd95acecc918df8a9eaec7dd69b290b9b0819f641676f35b1f8b01f84c8b53ca"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_01/exports/skill_east_02/original/Idle/animations/spear_extension_v3/west/frame_002.png",
+      "size": [
+        256,
+        168
+      ],
+      "sha256": "9c3f8abf0212afc0619d129bc9d0d5e420f6f565478cd61192fcdfe7e8eec853"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_01/exports/skill_east_02/original/Idle/animations/spear_extension_v3/west/frame_003.png",
+      "size": [
+        256,
+        168
+      ],
+      "sha256": "f8d39437fbcc1161013e909eb03e91406d23f819c501fffaa9de271735b73b33"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_01/exports/walk_east_02/original/Idle/animations/walk_ground_v2/east/frame_000.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "7c06948777f9628d5d7df33084fedaeab645e7be51e500bcb4551d8518185474"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_01/exports/walk_east_02/original/Idle/animations/walk_ground_v2/east/frame_001.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "77fb357c1f5032c9d0c8d2b074fd83d98740d3e1e99be64027d92223a5079c1b"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_01/exports/walk_east_02/original/Idle/animations/walk_ground_v2/east/frame_002.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "f57f8d8ce4192b17d3667233ce8c7abbbed71ae2b5cecf5b59126838fec97527"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_01/exports/walk_east_02/original/Idle/animations/walk_ground_v2/east/frame_003.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "70ebac28b5c432ddcba79c2fa2712d1ed170906401863ccbfad81e94c150bec2"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_01/exports/walk_east_02/original/Idle/animations/walk_ground_v2/east/frame_004.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "76ae5d6b454acd85cd8fa892342a3845cd39161ec66e11c13b636a198381e637"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_01/exports/walk_east_02/original/Idle/animations/walk_ground_v2/east/frame_005.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "5e6ed1a5e589c6f2c857a4ff04a72356d9ae0d9532b82cb66cdb48c8a6515c7d"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_01/exports/walk_east_02/original/Idle/animations/walk_ground_v2/east/frame_006.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "52830d239fdafe3e5e0f050d5437dfcf2788acbecdbd1bd88e04b3a3d74e929b"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_01/exports/walk_east_02/original/Idle/animations/walk_ground_v2/east/frame_007.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "7c88ae91d8262bbade0822e60f716ca93980e1dc32090ad0e0ba8368839a9303"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_01/exports/walk_east_02/original/Idle/animations/walk_ground_v2/east/frame_008.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "c955d6ae40214ce816b94a7ea47ad1ab845510b2fa58bff0d81d696c039175bb"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/attack/north-west/frame_000.png",
+      "size": [
+        176,
+        196
+      ],
+      "sha256": "ac5f94b2ae08e458857e62d98c852f306232ae1e8ae81e8e7228874049d76c1b"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/attack/north-west/frame_001.png",
+      "size": [
+        176,
+        196
+      ],
+      "sha256": "c338f8d16dbbffbef970dbf534ead02df8bc3170f8e754281bdb02ef18f7b9cc"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/attack/north-west/frame_002.png",
+      "size": [
+        176,
+        196
+      ],
+      "sha256": "23709f193669903734513c9b5b46c0473764d268c8efaa82eb6c86370a609e32"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/attack/north-west/frame_003.png",
+      "size": [
+        176,
+        196
+      ],
+      "sha256": "bf0008c93370799c03d4294fa48885921aa61eb3e0f080e62201dd6143ec2518"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/attack/north-west/frame_004.png",
+      "size": [
+        176,
+        196
+      ],
+      "sha256": "d6953e77fcc6237ae1a1472dd8af196f0f6d2d2a807478a3e9dfbb053d2a99f5"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/exports/attack_ne_01/original/Idle/animations/spear_extension_ne_v1/north-east/frame_000.png",
+      "size": [
+        176,
+        196
+      ],
+      "sha256": "25a27bc5fe43889c9980c812edf5ce5a9274284033e79b4b32ecdb5112a0872b"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/exports/attack_ne_01/original/Idle/animations/spear_extension_ne_v1/north-east/frame_001.png",
+      "size": [
+        176,
+        196
+      ],
+      "sha256": "f6dffd01c93cb3da32f08b5f391fb88cec1561a5648efa5edefcd0b1da7cf66c"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/exports/attack_ne_01/original/Idle/animations/spear_extension_ne_v1/north-east/frame_002.png",
+      "size": [
+        176,
+        196
+      ],
+      "sha256": "23d9e2f256c042529a0b1792bcf2de4d261cdc1a69cba78e96d2f234df168bd7"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/exports/attack_ne_01/original/Idle/animations/spear_extension_ne_v1/north-east/frame_003.png",
+      "size": [
+        176,
+        196
+      ],
+      "sha256": "979706aa01a714832ace5aa20dbf34ee40dbee1d8bb0001c41d2204f4eaa9c42"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/exports/attack_ne_01/original/Idle/animations/spear_extension_ne_v1/north-east/frame_004.png",
+      "size": [
+        176,
+        196
+      ],
+      "sha256": "e6ef10b4a224703c387750874619a2133165ba194352a6a0baa6225fbd11a0a7"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/stance/north-east.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "24e53e6568bb2040b506a3c6f8138789974d878cb4afb047eb8a0f344a7c6b7b"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/stance/north-west.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "3d8f8b8ff022e71a949e7bc4011ecdee47a473b62c92125d94bf9be03f029a70"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/walk/north-east/frame_000.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "b2d9f18dcbfd2eb01cb08c73cf0b06e8c9abfe8ba22a4a5b521cac64afabbe4e"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/walk/north-east/frame_001.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "49a64941c24b16f0ee68e6cff9ea3bcb3e092d0e328d918888af9ba5060f3882"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/walk/north-east/frame_002.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "d7db65484bd5d19751ca3d8ddc3aa491422e8a2819b31dab703d479feca545a2"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/walk/north-east/frame_003.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "cd903090f1abef233063e9db1f89a00ca37b2bf1d1fa9d615eb1ba6e0ea8219d"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/walk/north-east/frame_004.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "da6b09fa77d60659724ac585b5469e3978b313442c514a78071f8d07ac622579"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/walk/north-east/frame_005.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "451166ba2779f2acb488b3d5d5284470e645c9d0e7a1194a11995d4ebec783d2"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/walk/north-east/frame_006.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "bf3d946e674b83f67b33a9e87ea91085458ba4ac7337a30ef50b1c098002555a"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/walk/north-west/frame_000.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "9cc2a6b630659a96a2116fcfab9d8bcf46164f2b84e8b790d0a993c5b5bc09f8"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/walk/north-west/frame_001.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "91c2e9128ea0b6ffc6be6a9960847906ca8cdff0c04d26fc09cf1de77a2c13b5"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/walk/north-west/frame_002.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "ce913b5320f7285bb6ce9dd0a5c558041e142eaa113e3bd558f7ae2d9ef9e67f"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/walk/north-west/frame_003.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "32dd9e2d4c40b67d224a19659013e89ce7643bc8d76f110aadc96e566bf2b94b"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/walk/north-west/frame_004.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "be1ebc651b7fda83eea31913cbc432d62bbbe137f3a8381bd20f4eda379ee005"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/walk/north-west/frame_005.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "b17c810c8e4cd0e93689d8c997e50f00cc57e90eb11d24bb95fe222dd6b362c1"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/walk/north-west/frame_006.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "055ceb83b9770b61b9ee7d495c69da5091b6b0e1d523f91766ef839855d3c88b"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/west/attack_contact/frame_004.png",
+      "size": [
+        256,
+        172
+      ],
+      "sha256": "d0ef85fdf0bd708b059ac4b7862dec2aa37532aa3cf45de686d61b0e59154eda"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/west/skill/frame_000.png",
+      "size": [
+        128,
+        188
+      ],
+      "sha256": "ae3d51beed56bdfecb77648c14cc0c9014123ee15c8f718610b6d167bc9f39ad"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/west/skill/frame_001.png",
+      "size": [
+        128,
+        188
+      ],
+      "sha256": "e0086cda37bd820865111e57e70b495bd03118f657c074b0694cf30e74eb8d97"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/west/skill/frame_002.png",
+      "size": [
+        128,
+        188
+      ],
+      "sha256": "cbb79018c8acada3ff17f7dc05a812de16c62b1342cc527ee3256c8238147ba8"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/west/skill/frame_003.png",
+      "size": [
+        128,
+        188
+      ],
+      "sha256": "f33af07a095354ebeb09c6192e9b174bf8dad9fbc1eec81f5c7b5e0c861ae43e"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/west/skill/frame_004.png",
+      "size": [
+        128,
+        188
+      ],
+      "sha256": "bd13bebe468c52e23ca543bbec179b6c08d976985de23cc0ce574320e7009868"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/west/walk/frame_000.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "3f89aac469699c732ecf51b75ae70da57151aa6a0353d508f9b35bb6da319e02"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/west/walk/frame_001.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "e223d32b291caca4bd20e01f2f45f8c984b140f192db26790028cbe7ff474aec"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/west/walk/frame_002.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "218c22ffa3df69705a70ad4b91963d8c16bcd91c995edec5d856fd8184cb3ddb"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/west/walk/frame_003.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "d2a532f20212523c2b0cb7f2d13fcae7e6f3ef271fe356494d9423f4f03fd55f"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/west/walk/frame_004.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "0c51347cbdbae3c900ae289433c884e1dea2249be4894d9c255f96c2693eb862"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/west/walk/frame_005.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "bb911180287ffaff3c88f04caffa94bcd88df77511909ea1cb5f74dc2c82bf44"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/west/walk/frame_006.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "c9ce3725a6ea75484b6dec043690c7a4ebba84c0e4bf80fe812f037e9c3e181b"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/west/walk/frame_007.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "83fa56aeed2f59020d18e84e979e5e1058107be3abc28485e5125e3d4f0b95e8"
+    },
+    {
+      "path": "res://assets/characters/zumbi/animacoes_02/west/walk/frame_008.png",
+      "size": [
+        128,
+        180
+      ],
+      "sha256": "85df04c58b00c750ab30afe1782dad9da98771b31d22ae90af71d2196d93fdb1"
+    }
+  ],
+  "tests": {
+    "bank": {
+      "passed": 122,
+      "failed": 0,
+      "kind": "fixture"
+    },
+    "player": {
+      "passed": 97,
+      "failed": 0,
+      "kind": "fixture before final NE attack manifest"
+    },
+    "integration": {
+      "passed": 30,
+      "failed": 0,
+      "kind": "fixture"
+    }
+  },
+  "captures": {
+    "west": {
+      "captured": [
+        "skill",
+        "walk",
+        "attack"
+      ],
+      "frames": [
+        {
+          "anchor": "(64.0, 153.0)",
+          "display_scale": 0.617886178861789,
+          "elapsed_combat": 0.0,
+          "path": "C:/Users/m/Documents/Relic Arena MY/RelicArena/captures/zumbi_game_west_skill_2026-10-13.png",
+          "state": "skill",
+          "texture": "res://assets/characters/zumbi/animacoes_02/west/skill/frame_004.png"
+        },
+        {
+          "anchor": "(64.0, 149.0)",
+          "display_scale": 0.617886178861789,
+          "elapsed_combat": 0.15,
+          "path": "C:/Users/m/Documents/Relic Arena MY/RelicArena/captures/zumbi_game_west_walk_2026-10-13.png",
+          "state": "walk",
+          "texture": "res://assets/characters/zumbi/animacoes_02/west/walk/frame_001.png"
+        },
+        {
+          "anchor": "(128.0, 143.0)",
+          "display_scale": 0.617886178861789,
+          "elapsed_combat": 0.25,
+          "path": "C:/Users/m/Documents/Relic Arena MY/RelicArena/captures/zumbi_game_west_attack_2026-10-13.png",
+          "state": "attack",
+          "texture": "res://assets/characters/zumbi/animacoes_02/west/attack_contact/frame_004.png"
+        }
+      ],
+      "kind": "isolated visual capture with real simulation events and PNGs",
+      "requested_facing": "west",
+      "required": [
+        "skill",
+        "walk",
+        "attack"
+      ]
+    },
+    "north-east": {
+      "captured": [
+        "skill",
+        "walk",
+        "attack"
+      ],
+      "frames": [
+        {
+          "anchor": "(64.0, 153.0)",
+          "display_scale": 0.617886178861789,
+          "elapsed_combat": 0.0,
+          "path": "C:/Users/m/Documents/Relic Arena MY/RelicArena/captures/zumbi_game_north-east_skill_2026-10-13.png",
+          "state": "skill",
+          "texture": "res://assets/characters/zumbi/animacoes_01/exports/skill_east_02/original/Idle/animations/rally_raise_v2/east/frame_004.png"
+        },
+        {
+          "anchor": "(64.0, 145.0)",
+          "display_scale": 0.617886178861789,
+          "elapsed_combat": 0.15,
+          "path": "C:/Users/m/Documents/Relic Arena MY/RelicArena/captures/zumbi_game_north-east_walk_2026-10-13.png",
+          "state": "walk",
+          "texture": "res://assets/characters/zumbi/animacoes_02/walk/north-east/frame_001.png"
+        },
+        {
+          "anchor": "(72.0, 168.0)",
+          "display_scale": 0.617886178861789,
+          "elapsed_combat": 0.25,
+          "path": "C:/Users/m/Documents/Relic Arena MY/RelicArena/captures/zumbi_game_north-east_attack_2026-10-13.png",
+          "state": "attack",
+          "texture": "res://assets/characters/zumbi/animacoes_02/exports/attack_ne_01/original/Idle/animations/spear_extension_ne_v1/north-east/frame_003.png"
+        }
+      ],
+      "kind": "isolated visual capture with real simulation events and PNGs",
+      "requested_facing": "north-east",
+      "required": [
+        "skill",
+        "walk",
+        "attack"
+      ]
+    },
+    "north-west": {
+      "captured": [
+        "skill",
+        "walk",
+        "attack"
+      ],
+      "frames": [
+        {
+          "anchor": "(64.0, 153.0)",
+          "display_scale": 0.617886178861789,
+          "elapsed_combat": 0.0,
+          "path": "C:/Users/m/Documents/Relic Arena MY/RelicArena/captures/zumbi_game_north-west_skill_2026-10-13.png",
+          "state": "skill",
+          "texture": "res://assets/characters/zumbi/animacoes_01/exports/skill_east_02/original/Idle/animations/rally_raise_v2/east/frame_004.png"
+        },
+        {
+          "anchor": "(64.0, 145.0)",
+          "display_scale": 0.617886178861789,
+          "elapsed_combat": 0.15,
+          "path": "C:/Users/m/Documents/Relic Arena MY/RelicArena/captures/zumbi_game_north-west_walk_2026-10-13.png",
+          "state": "walk",
+          "texture": "res://assets/characters/zumbi/animacoes_02/walk/north-west/frame_001.png"
+        },
+        {
+          "anchor": "(104.0, 168.0)",
+          "display_scale": 0.617886178861789,
+          "elapsed_combat": 0.5,
+          "path": "C:/Users/m/Documents/Relic Arena MY/RelicArena/captures/zumbi_game_north-west_attack_2026-10-13.png",
+          "state": "attack",
+          "texture": "res://assets/characters/zumbi/animacoes_02/attack/north-west/frame_003.png"
+        }
+      ],
+      "kind": "isolated visual capture with real simulation events and PNGs",
+      "requested_facing": "north-west",
+      "required": [
+        "skill",
+        "walk",
+        "attack"
+      ]
+    }
+  },
+  "capture_scope": "isolated native OpenGL MainView with real simulation events; NE/NW skill is deliberate east-facing rally, not new NE/NW skill",
+  "hashes_before": [
+    {
+      "Algorithm": "SHA256",
+      "Hash": "C5197EE6E9EAA88FCA24CF219F76869FC0520C08EB493DDFC65CEFEB3B1059BB",
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\main.gd"
+    },
+    {
+      "Algorithm": "SHA256",
+      "Hash": "44A730E7C545BEB06FD9A83801EEE99DDB78566BC46EE07FC85A2D5D26D0AEE9",
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\character_visuals.gd"
+    },
+    {
+      "Algorithm": "SHA256",
+      "Hash": "51CDAB5219FDCC356BC699E8AC2EA64F926CD4349E8A51BC1AF459F4D135D739",
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\character_animation_bank.gd"
+    },
+    {
+      "Algorithm": "SHA256",
+      "Hash": "FCFF989609BBD138D0F81D60392F0A525D39FE9D5F0E4FA7396CF1688A6EF2FD",
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\character_animation_player.gd"
+    },
+    {
+      "Algorithm": "SHA256",
+      "Hash": "68C0C78A8D225B706B6B2083ADE22E7E327E7EBD41BDE09C8AD35BACC6051ADD",
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\animations_manifest.json"
+    },
+    {
+      "Algorithm": "SHA256",
+      "Hash": "A1F46D38A894A02D1EA8618E442D16365F43AED20BB22B690F4BBB1317751B96",
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\tools\\preview_zumbi_animations.gd"
+    },
+    {
+      "Algorithm": "SHA256",
+      "Hash": "BA69BA49970A35C11C13275B5692902FB07F32FB3A56CE2C6D32FFBC9F561CE8",
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\tools\\capture_zumbi_animation_game.gd"
+    }
+  ],
+  "hashes_after": [
+    {
+      "Algorithm": "SHA256",
+      "Hash": "C5197EE6E9EAA88FCA24CF219F76869FC0520C08EB493DDFC65CEFEB3B1059BB",
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\main.gd"
+    },
+    {
+      "Algorithm": "SHA256",
+      "Hash": "44A730E7C545BEB06FD9A83801EEE99DDB78566BC46EE07FC85A2D5D26D0AEE9",
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\character_visuals.gd"
+    },
+    {
+      "Algorithm": "SHA256",
+      "Hash": "51CDAB5219FDCC356BC699E8AC2EA64F926CD4349E8A51BC1AF459F4D135D739",
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\character_animation_bank.gd"
+    },
+    {
+      "Algorithm": "SHA256",
+      "Hash": "FCFF989609BBD138D0F81D60392F0A525D39FE9D5F0E4FA7396CF1688A6EF2FD",
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\character_animation_player.gd"
+    },
+    {
+      "Algorithm": "SHA256",
+      "Hash": "68C0C78A8D225B706B6B2083ADE22E7E327E7EBD41BDE09C8AD35BACC6051ADD",
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\animations_manifest.json"
+    },
+    {
+      "Algorithm": "SHA256",
+      "Hash": "A1F46D38A894A02D1EA8618E442D16365F43AED20BB22B690F4BBB1317751B96",
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\tools\\preview_zumbi_animations.gd"
+    },
+    {
+      "Algorithm": "SHA256",
+      "Hash": "BA69BA49970A35C11C13275B5692902FB07F32FB3A56CE2C6D32FFBC9F561CE8",
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\tools\\capture_zumbi_animation_game.gd"
+    }
+  ],
+  "changed_during_final_tests": [],
+  "changed_since_west_ne_walk_window": [
+    "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\animations_manifest.json"
+  ],
+  "account_after": {
+    "generations_remaining": 1,
+    "generations_used": 38,
+    "generations_total": 40,
+    "credits_usd": 0,
+    "subscription": "trial",
+    "receipt": "saldo_lote02_final.json"
+  },
+  "paid_generations_this_expansion": 11,
+  "pending_jobs": [],
+  "not_tested": [
+    "physical phone",
+    "network",
+    "balance",
+    "new N2/N3 blade animation"
+  ],
+  "outputs": "Guia_Godot4/revisoes/animacoes_2026-10-13/lote02_test_outputs.json"
+}

@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: bf4febf4-4601-4fc0-87bf-bab20e913d1f\njob_id: bf4febf4-4601-4fc0-87bf-bab20e913d1f\nmodel: pixen\nedit: Same back-three-quarter warrior, same size, NORTH-EAST spear thrust. Raise and fully STRAIGHTEN his RIGHT ARM diagonally UP-RIGHT at45 degrees from shoulder; hand above and ahead of his head. ONE spear follows that SAME45degree diagonal, single silver blade near x145,y12, plain wooden butt down-left. Left arm stays behind for balance. Lean chest up-right, bent front knee, rear foot near y150. Do NOT point spear horizontally right. Preserve scars, pants, chains and dagger. Transparent, no floor.\nsource: 160x160px\nsize: 160x160px\ntransparent: True\nasset_id: 88c4ee5d-5418-59d3-8f47-9e398e2c352a\nasset_status: pending (saved when generation completes)\ncost: 1 generation\nstatus: processing (~10-40s)\n\nhint: get_image(job_id=\"bf4febf4-4601-4fc0-87bf-bab20e913d1f\")"
+    }
+  ],
+  "isError": false
+}

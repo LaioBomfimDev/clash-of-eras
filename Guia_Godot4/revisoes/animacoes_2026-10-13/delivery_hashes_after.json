@@ -1,0 +1,32 @@
+[
+  {
+    "Algorithm": "SHA256",
+    "Hash": "629034E0B6BBED89488132810E342DB5B1451DF05EF2B09237F85EBCDB94D87E",
+    "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\main.gd"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "44A730E7C545BEB06FD9A83801EEE99DDB78566BC46EE07FC85A2D5D26D0AEE9",
+    "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\character_visuals.gd"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "51022A5859BBC0911A99B0EDEF90D0946636B531324EAFF09B5DBA6B5AB3F20E",
+    "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\animations_manifest.json"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "51CDAB5219FDCC356BC699E8AC2EA64F926CD4349E8A51BC1AF459F4D135D739",
+    "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\character_animation_bank.gd"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "FCFF989609BBD138D0F81D60392F0A525D39FE9D5F0E4FA7396CF1688A6EF2FD",
+    "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\character_animation_player.gd"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "03DAA80A5641F835C7B75AB4754AE7C87F8FE865DF6CC696C2D45CCD915778F0",
+    "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\vfx\\manifest.json"
+  }
+]

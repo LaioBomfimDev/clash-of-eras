@@ -1,0 +1,194 @@
+{
+  "url": "http://127.0.0.1:8766/",
+  "at": "2026-10-13T17:43:32.345Z",
+  "scope": "Isolated desktop Chrome landing page. Browser rAF measures the page main thread, NOT Godot render FPS or phone performance.",
+  "cases": [
+    {
+      "dpr": 1,
+      "ready": true,
+      "readyMs": 20167.3402,
+      "metrics": {
+        "crossOriginIsolated": true,
+        "dpr": 1,
+        "hardwareConcurrency": 8,
+        "canvas": {
+          "width": 1280,
+          "height": 720,
+          "cssWidth": 1280,
+          "cssHeight": 720
+        },
+        "browserRafSamples": 177,
+        "browserRafMeanMs": 17.23050847457627,
+        "browserRafP95Ms": 17.784999999999854,
+        "longTasks": [],
+        "godotMetrics": {
+          "client_cpu_ms": 0.527766666666667,
+          "fps": 60,
+          "frame_ms": 16.6763611111111,
+          "p95_frame_ms": 16.6666666666667,
+          "rtt_ms": -1
+        },
+        "resources": [
+          {
+            "name": "/index.js",
+            "durationMs": 90.61999999731779,
+            "transferSize": 314953
+          },
+          {
+            "name": "/index.wasm",
+            "durationMs": 608.6150000020862,
+            "transferSize": 38820372
+          },
+          {
+            "name": "/index.pck",
+            "durationMs": 194.57999999821186,
+            "transferSize": 7061268
+          },
+          {
+            "name": "/index.js",
+            "durationMs": -100.4400000050664,
+            "transferSize": 314953
+          },
+          {
+            "name": "/index.js",
+            "durationMs": -103.6849999949336,
+            "transferSize": 314953
+          },
+          {
+            "name": "/index.js",
+            "durationMs": -145.29499999433756,
+            "transferSize": 314953
+          },
+          {
+            "name": "/index.js",
+            "durationMs": -195.53999999910593,
+            "transferSize": 314953
+          },
+          {
+            "name": "/index.js",
+            "durationMs": -48.67000000178814,
+            "transferSize": 314953
+          },
+          {
+            "name": "/index.js",
+            "durationMs": -19.634999997913837,
+            "transferSize": 314953
+          },
+          {
+            "name": "/index.js",
+            "durationMs": -86.0350000038743,
+            "transferSize": 314953
+          },
+          {
+            "name": "/index.js",
+            "durationMs": -237.00999999791384,
+            "transferSize": 314953
+          }
+        ]
+      },
+      "errors": [],
+      "consoleLines": [
+        "log: Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org",
+        "log: OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL",
+        "log: Build configuration: Emscripten 4.0.20, multi-threaded, no GDExtension support.",
+        "log: CLIENT_PHASE: menu; rodada 1; vidas [4, 4]",
+        "log: CLIENT_READY: Clash of Eras protótipo local; lobby de boas-vindas; 30 FPS; compêndio de heróis"
+      ]
+    },
+    {
+      "dpr": 2,
+      "ready": true,
+      "readyMs": 8109.654500000001,
+      "metrics": {
+        "crossOriginIsolated": true,
+        "dpr": 2,
+        "hardwareConcurrency": 8,
+        "canvas": {
+          "width": 2560,
+          "height": 1440,
+          "cssWidth": 1280,
+          "cssHeight": 720
+        },
+        "browserRafSamples": 147,
+        "browserRafMeanMs": 20.86197278911564,
+        "browserRafP95Ms": 33.63500000000022,
+        "longTasks": [
+          167,
+          56
+        ],
+        "godotMetrics": {
+          "client_cpu_ms": 0.30918,
+          "fps": 60,
+          "frame_ms": 20.0148466666667,
+          "p95_frame_ms": 26.1544444444446,
+          "rtt_ms": -1
+        },
+        "resources": [
+          {
+            "name": "/index.js",
+            "durationMs": 30.28999999910593,
+            "transferSize": 314953
+          },
+          {
+            "name": "/index.wasm",
+            "durationMs": 550.320000000298,
+            "transferSize": 38820372
+          },
+          {
+            "name": "/index.pck",
+            "durationMs": 212.75499999523163,
+            "transferSize": 7061268
+          },
+          {
+            "name": "/index.js",
+            "durationMs": -110.63500000536442,
+            "transferSize": 314953
+          },
+          {
+            "name": "/index.js",
+            "durationMs": -20.989999994635582,
+            "transferSize": 314953
+          },
+          {
+            "name": "/index.js",
+            "durationMs": -169.5599999949336,
+            "transferSize": 314953
+          },
+          {
+            "name": "/index.js",
+            "durationMs": -25.635000005364418,
+            "transferSize": 314953
+          },
+          {
+            "name": "/index.js",
+            "durationMs": -61.84000000357628,
+            "transferSize": 314953
+          },
+          {
+            "name": "/index.js",
+            "durationMs": -92.36500000208616,
+            "transferSize": 314953
+          },
+          {
+            "name": "/index.js",
+            "durationMs": -61.939999997615814,
+            "transferSize": 314953
+          },
+          {
+            "name": "/index.js",
+            "durationMs": -54.939999997615814,
+            "transferSize": 314953
+          }
+        ]
+      },
+      "errors": [],
+      "consoleLines": [
+        "log: Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org",
+        "log: OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL",
+        "log: Build configuration: Emscripten 4.0.20, multi-threaded, no GDExtension support.",
+        "log: CLIENT_PHASE: menu; rodada 1; vidas [4, 4]",
+        "log: CLIENT_READY: Clash of Eras protótipo local; lobby de boas-vindas; 30 FPS; compêndio de heróis"
+      ]
+    }
+  ]
+}

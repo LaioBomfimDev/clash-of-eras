@@ -1,0 +1,13 @@
+{
+  "character_id": "6a5ec045-5930-4955-a684-ef864e5607b9",
+  "mode": "v3",
+  "animation_name": "rally_raise_v2",
+  "directions": [
+    "east"
+  ],
+  "frame_count": 4,
+  "keep_first_frame": true,
+  "custom_start_frame_url": "https://api.pixellab.ai/mcp/pixel-tools/2a6325bf-ac24-49c7-881a-24e47b7a3adb/image.png",
+  "end_frame_url": "https://api.pixellab.ai/mcp/images/8fdd25ac-7bf7-43e8-a0e1-8523765e4cd8/download",
+  "action_description": "Interpolate only from the supplied resting pose to the supplied raised-fist rally pose. Raise the FREE arm until its fist is above the head; a proud slight turn of the chest toward the viewer is permitted. The OTHER hand continues holding ONE straight UPRIGHT spear at the waist: its single silver blade stays at the TOP, never spin, tilt down, duplicate or vanish. Feet and ankles remain planted, no walking, no jumping, no recovery in these four frames. Preserve adult face, dark skin, scars, beige trousers, ankle cuffs, waist dagger, body height and detailed pixel shading. Entire fist and spear tip visible. Transparent, no ground, rock, camera, zoom, new props or effects."
+}

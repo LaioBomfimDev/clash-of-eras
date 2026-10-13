@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "draw",
+    "--recipe",
+    "{\"job\":{\"canvas\":[128,180],\"frame_count\":1,\"durations_ms\":[100],\"views\":[{\"id\":\"east-08\",\"offset\":[0,0]},{\"id\":\"west-08\",\"mirror_of\":\"east-08\"}],\"source_bookends_exact\":true},\"scene\":{\"layers\":[{\"id\":\"body\",\"name\":\"Body - original pixels\"}],\"views\":{\"east-08\":{\"selections\":{\"all\":{}},\"nodes\":{\"body\":{\"layer\":\"body\",\"at\":[0,0],\"draw\":[{\"op\":\"copy\",\"part\":\"all\"}]}}}}}}",
+    "--sources",
+    "{\"east-08\":\"https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/24851f83-849c-4155-82a1-e009581b5c93/east/8.png?t=1791846994725\"}"
+  ],
+  "mode": "low",
+  "notes": "Exact west mirror of reviewed articulated Zumbi frames. Preserve every pixel and source scale; eight or fewer views, documented mirror_of, no AI generation."
+}

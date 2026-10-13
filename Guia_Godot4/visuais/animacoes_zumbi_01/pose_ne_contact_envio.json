@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 5140cbfc-3c1b-4082-bd21-31ea3193500f\njob_id: 5140cbfc-3c1b-4082-bd21-31ea3193500f\nmodel: pixen\nedit: Same exact warrior and BACK THREE-QUARTER NORTH-EAST view, facing upper right. Strong SPEAR CONTACT POSE: lunge and lean the chest toward UPPER RIGHT, front knee bent, both feet planted. Extend BOTH arms and elbows toward UPPER RIGHT to drive the SAME rigid diagonal spear forward. ONE silver blade at far upper-right tip, plain wood at lower-left butt. Entire spear visible. Preserve body size, scars, pants, ankle chains and single waist dagger. Transparent: no floor, rock, new props or effects.\nsource: 128x128px\nsize: 128x128px\ntransparent: True\nasset_id: 82fa8f08-fd18-5082-b9fb-e79b00effb0a\nasset_status: pending (saved when generation completes)\ncost: 1 generation\nstatus: processing (~10-40s)\n\nhint: get_image(job_id=\"5140cbfc-3c1b-4082-bd21-31ea3193500f\")"
+    }
+  ],
+  "isError": false
+}

@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "note": "Pilot real PixelLab frames, only reviewed directions. No simulation timing control.",
+  "characters": {
+    "zumbi": {
+      "states": {
+        "walk": {
+          "loop": true,
+          "fps": 30,
+          "directions": {
+            "east": {
+              "frames": [
+                "res://assets/characters/zumbi/animacoes_01/exports/walk_east_02/original/Idle/animations/walk_ground_v2/east/frame_000.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/walk_east_02/original/Idle/animations/walk_ground_v2/east/frame_001.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/walk_east_02/original/Idle/animations/walk_ground_v2/east/frame_002.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/walk_east_02/original/Idle/animations/walk_ground_v2/east/frame_003.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/walk_east_02/original/Idle/animations/walk_ground_v2/east/frame_004.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/walk_east_02/original/Idle/animations/walk_ground_v2/east/frame_005.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/walk_east_02/original/Idle/animations/walk_ground_v2/east/frame_006.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/walk_east_02/original/Idle/animations/walk_ground_v2/east/frame_007.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/walk_east_02/original/Idle/animations/walk_ground_v2/east/frame_008.png"
+              ],
+              "review": "pilot accepted; spear occlusion/loop shading require refinement",
+              "source_job": "f789806a-20c2-4b68-b2b2-edaaf9f21316",
+              "source_animation": "walk_ground_v2",
+              "anchor": [
+                64,
+                149
+              ]
+            },
+            "west": {
+              "anchor": [
+                64,
+                149
+              ],
+              "derivation": "Exact PixelLab mirror_of of reviewed east originals, RGBA equality confirmed",
+              "source_job": "f789806a-20c2-4b68-b2b2-edaaf9f21316",
+              "frames": [
+                "res://assets/characters/zumbi/animacoes_02/west/walk/frame_000.png",
+                "res://assets/characters/zumbi/animacoes_02/west/walk/frame_001.png",
+                "res://assets/characters/zumbi/animacoes_02/west/walk/frame_002.png",
+                "res://assets/characters/zumbi/animacoes_02/west/walk/frame_003.png",
+                "res://assets/characters/zumbi/animacoes_02/west/walk/frame_004.png",
+                "res://assets/characters/zumbi/animacoes_02/west/walk/frame_005.png",
+                "res://assets/characters/zumbi/animacoes_02/west/walk/frame_006.png",
+                "res://assets/characters/zumbi/animacoes_02/west/walk/frame_007.png",
+                "res://assets/characters/zumbi/animacoes_02/west/walk/frame_008.png"
+              ]
+            },
+            "north-east": {
+              "derivation": "PixelLab integer registration to baseline145; NW exact mirror. All14RGBAchecked, no source visible pixels lost.",
+              "frames": [
+                "res://assets/characters/zumbi/animacoes_02/walk/north-east/frame_000.png",
+                "res://assets/characters/zumbi/animacoes_02/walk/north-east/frame_001.png",
+                "res://assets/characters/zumbi/animacoes_02/walk/north-east/frame_002.png",
+                "res://assets/characters/zumbi/animacoes_02/walk/north-east/frame_003.png",
+                "res://assets/characters/zumbi/animacoes_02/walk/north-east/frame_004.png",
+                "res://assets/characters/zumbi/animacoes_02/walk/north-east/frame_005.png",
+                "res://assets/characters/zumbi/animacoes_02/walk/north-east/frame_006.png"
+              ],
+              "source_job": "d4dfef86-99bb-4b44-9d47-426db6edeb9f",
+              "anchor": [
+                64,
+                145
+              ],
+              "source_animation": "walk_ne_v1",
+              "fps": 24
+            },
+            "north-west": {
+              "derivation": "PixelLab integer registration to baseline145; NW exact mirror. All14RGBAchecked, no source visible pixels lost.",
+              "frames": [
+                "res://assets/characters/zumbi/animacoes_02/walk/north-west/frame_000.png",
+                "res://assets/characters/zumbi/animacoes_02/walk/north-west/frame_001.png",
+                "res://assets/characters/zumbi/animacoes_02/walk/north-west/frame_002.png",
+                "res://assets/characters/zumbi/animacoes_02/walk/north-west/frame_003.png",
+                "res://assets/characters/zumbi/animacoes_02/walk/north-west/frame_004.png",
+                "res://assets/characters/zumbi/animacoes_02/walk/north-west/frame_005.png",
+                "res://assets/characters/zumbi/animacoes_02/walk/north-west/frame_006.png"
+              ],
+              "source_job": "d4dfef86-99bb-4b44-9d47-426db6edeb9f",
+              "anchor": [
+                64,
+                145
+              ],
+              "source_animation": "walk_ne_v1",
+              "fps": 24
+            }
+          }
+        },
+        "attack": {
+          "fps": 20,
+          "loop": false,
+          "directions": {
+            "east": {
+              "frames": [
+                "res://assets/characters/zumbi/animacoes_01/exports/attack_east_03/original/Idle/animations/spear_extension_v3/east/frame_003.png",
+                "res://assets/characters/zumbi/animacoes_01/ajustes/attack_contact_east.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/attack_east_03/original/Idle/animations/spear_extension_v3/east/frame_003.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/attack_east_03/original/Idle/animations/spear_extension_v3/east/frame_002.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/attack_east_03/original/Idle/animations/spear_extension_v3/east/frame_001.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/attack_east_03/original/Idle/animations/spear_extension_v3/east/frame_000.png"
+              ],
+              "review": "Root inspected5sourceframes: one right-facing blade; bent knees and both elbows extend. Short contact/recovery presentation,50ms tocontact; final contactshifted4px through freePixelLabeditor. No simulation change.",
+              "anchor": [
+                128,
+                143
+              ],
+              "source_animation": "spear_extension_v3",
+              "source_job": "c8740275-d0f4-471c-9504-58b41f91fbdf"
+            },
+            "west": {
+              "anchor": [
+                128,
+                143
+              ],
+              "derivation": "Four official west frames are exact mirrors of east; contact mirrored through PixelLab after baseline correction",
+              "source_job": "c8740275-d0f4-471c-9504-58b41f91fbdf",
+              "frames": [
+                "res://assets/characters/zumbi/animacoes_01/exports/skill_east_02/original/Idle/animations/spear_extension_v3/west/frame_003.png",
+                "res://assets/characters/zumbi/animacoes_02/west/attack_contact/frame_004.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/skill_east_02/original/Idle/animations/spear_extension_v3/west/frame_003.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/skill_east_02/original/Idle/animations/spear_extension_v3/west/frame_002.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/skill_east_02/original/Idle/animations/spear_extension_v3/west/frame_001.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/skill_east_02/original/Idle/animations/spear_extension_v3/west/frame_000.png"
+              ]
+            }
+          }
+        },
+        "skill": {
+          "fps": 14,
+          "loop": false,
+          "directions": {
+            "east": {
+              "frames": [
+                "res://assets/characters/zumbi/animacoes_01/exports/skill_east_02/original/Idle/animations/rally_raise_v2/east/frame_000.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/skill_east_02/original/Idle/animations/rally_raise_v2/east/frame_001.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/skill_east_02/original/Idle/animations/rally_raise_v2/east/frame_002.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/skill_east_02/original/Idle/animations/rally_raise_v2/east/frame_003.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/skill_east_02/original/Idle/animations/rally_raise_v2/east/frame_004.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/skill_east_02/original/Idle/animations/rally_raise_v2/east/frame_004.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/skill_east_02/original/Idle/animations/rally_raise_v2/east/frame_003.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/skill_east_02/original/Idle/animations/rally_raise_v2/east/frame_002.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/skill_east_02/original/Idle/animations/rally_raise_v2/east/frame_001.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/skill_east_02/original/Idle/animations/rally_raise_v2/east/frame_000.png"
+              ],
+              "anchor": [
+                64,
+                153
+              ],
+              "source_animation": "rally_raise_v2",
+              "review": "Root inspected5frames: free fist rises, one upright spear remains, return uses same PNGs in reverse. Feet153/152, no per-frame anchor.",
+              "source_job": "515e8d45-026c-4080-b810-a0a55008ece7"
+            },
+            "west": {
+              "anchor": [
+                64,
+                153
+              ],
+              "derivation": "Exact PixelLab mirror_of of reviewed east originals, RGBA equality confirmed",
+              "source_job": "515e8d45-026c-4080-b810-a0a55008ece7",
+              "frames": [
+                "res://assets/characters/zumbi/animacoes_02/west/skill/frame_000.png",
+                "res://assets/characters/zumbi/animacoes_02/west/skill/frame_001.png",
+                "res://assets/characters/zumbi/animacoes_02/west/skill/frame_002.png",
+                "res://assets/characters/zumbi/animacoes_02/west/skill/frame_003.png",
+                "res://assets/characters/zumbi/animacoes_02/west/skill/frame_004.png",
+                "res://assets/characters/zumbi/animacoes_02/west/skill/frame_004.png",
+                "res://assets/characters/zumbi/animacoes_02/west/skill/frame_003.png",
+                "res://assets/characters/zumbi/animacoes_02/west/skill/frame_002.png",
+                "res://assets/characters/zumbi/animacoes_02/west/skill/frame_001.png",
+                "res://assets/characters/zumbi/animacoes_02/west/skill/frame_000.png"
+              ]
+            }
+          }
+        },
+        "stance": {
+          "fps": 1,
+          "loop": false,
+          "directions": {
+            "east": {
+              "anchor": [
+                64,
+                149
+              ],
+              "frames": [
+                "res://assets/characters/zumbi/animacoes_01/exports/walk_east_02/original/Idle/animations/walk_ground_v2/east/frame_000.png"
+              ]
+            },
+            "west": {
+              "frames": [
+                "res://assets/characters/zumbi/animacoes_02/west/walk/frame_000.png"
+              ],
+              "anchor": [
+                64,
+                149
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

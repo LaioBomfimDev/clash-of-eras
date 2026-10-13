@@ -1,0 +1,104 @@
+{
+  "scope": "One real Web export plus native headless peer in desktop Chrome, loopback server. Not public Render latency or phone FPS.",
+  "cases": [
+    {
+      "dpr": 2,
+      "metrics": {
+        "client_cpu_ms": 4.248,
+        "fps": 10,
+        "frame_ms": 88.4415833333333,
+        "p95_frame_ms": 131.589,
+        "render_height": 720,
+        "render_width": 1280,
+        "rtt_ms": 182.496
+      },
+      "samples": [
+        {
+          "client_cpu_ms": 7.92711111111111,
+          "fps": 8,
+          "frame_ms": 118.308888888889,
+          "p95_frame_ms": 148.21,
+          "render_height": 720,
+          "render_width": 1280,
+          "rtt_ms": 72.016
+        },
+        {
+          "client_cpu_ms": 5.7273,
+          "fps": 8,
+          "frame_ms": 105.4849,
+          "p95_frame_ms": 147.05,
+          "render_height": 720,
+          "render_width": 1280,
+          "rtt_ms": 142.766
+        },
+        {
+          "client_cpu_ms": 4.36041666666667,
+          "fps": 12,
+          "frame_ms": 90.4604166666667,
+          "p95_frame_ms": 113.791,
+          "render_height": 720,
+          "render_width": 1280,
+          "rtt_ms": 142.766
+        },
+        {
+          "client_cpu_ms": 5.61077777777778,
+          "fps": 9,
+          "frame_ms": 118.208888888889,
+          "p95_frame_ms": 159.185,
+          "render_height": 720,
+          "render_width": 1280,
+          "rtt_ms": 142.766
+        },
+        {
+          "client_cpu_ms": 4.53972727272727,
+          "fps": 9,
+          "frame_ms": 95.9704545454545,
+          "p95_frame_ms": 138.705,
+          "render_height": 720,
+          "render_width": 1280,
+          "rtt_ms": 184.651
+        },
+        {
+          "client_cpu_ms": 5.9796,
+          "fps": 10,
+          "frame_ms": 108.6416,
+          "p95_frame_ms": 139.311,
+          "render_height": 720,
+          "render_width": 1280,
+          "rtt_ms": 184.651
+        },
+        {
+          "client_cpu_ms": 5.06572727272727,
+          "fps": 10,
+          "frame_ms": 96.3163636363636,
+          "p95_frame_ms": 105.56,
+          "render_height": 720,
+          "render_width": 1280,
+          "rtt_ms": 184.651
+        },
+        {
+          "client_cpu_ms": 4.59490909090909,
+          "fps": 10,
+          "frame_ms": 95.9955454545454,
+          "p95_frame_ms": 119.5,
+          "render_height": 720,
+          "render_width": 1280,
+          "rtt_ms": 182.496
+        }
+      ],
+      "sampleMedianFrameMs": 105.4849,
+      "errors": [],
+      "logs": [
+        "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org",
+        "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL",
+        "Build configuration: Emscripten 4.0.20, multi-threaded, no GDExtension support.",
+        "CLIENT_PHASE: menu; rodada 1; vidas [4, 4]",
+        "CLIENT_READY: Clash of Eras protótipo local; lobby de boas-vindas; 30 FPS; compêndio de heróis",
+        "CLIENT_PHASE: benefit; rodada 1; vidas [4, 4]",
+        "CLIENT_PHASE: preparation; rodada 1; vidas [4, 4]",
+        "CLIENT_PHASE: combat; rodada 1; vidas [4, 4]"
+      ],
+      "combatStarted": true
+    }
+  ]
+}

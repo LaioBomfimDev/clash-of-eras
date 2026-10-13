@@ -1,0 +1,852 @@
+ERROR: Unable to open file: res://.godot/imported/part-bubble_shield.png-fbddb2b87ce56520ad18147129531b0a.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Failed loading resource: res://.godot/imported/part-bubble_shield.png-fbddb2b87ce56520ad18147129531b0a.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Failed loading resource: res://assets/vfx/escudo_danca_01/original/part-bubble_shield.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Unable to open file: res://.godot/imported/part-estocada.png-09c52f2e4d148574189ef4c5a927e40f.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Failed loading resource: res://.godot/imported/part-estocada.png-09c52f2e4d148574189ef4c5a927e40f.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Failed loading resource: res://assets/vfx/estocada_01/part-estocada.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Unable to open file: res://.godot/imported/part-fire_blast.png-c177b10772cf97b1d5aa8c96bec812dc.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Failed loading resource: res://.godot/imported/part-fire_blast.png-c177b10772cf97b1d5aa8c96bec812dc.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Failed loading resource: res://assets/vfx/foguete_01/game_pack/part-fire_blast.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Unable to open file: res://.godot/imported/part-fumaca.png-230eef100637b7c89c7a0c693cbbca70.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Failed loading resource: res://.godot/imported/part-fumaca.png-230eef100637b7c89c7a0c693cbbca70.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Failed loading resource: res://assets/vfx/fumaca_01/original/part-fumaca.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Unable to open file: res://.godot/imported/part-laco.png-8a23f47c16bf29830385691435f5304e.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Failed loading resource: res://.godot/imported/part-laco.png-8a23f47c16bf29830385691435f5304e.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Failed loading resource: res://assets/vfx/laco_01/game_pack/part-laco.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Unable to open file: res://.godot/imported/whole.png-d13723b0958ae4a208556287fa5c706a.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Failed loading resource: res://.godot/imported/whole.png-d13723b0958ae4a208556287fa5c706a.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Failed loading resource: res://assets/vfx/explosao_02/game_pack/whole.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Unable to open file: res://.godot/imported/whole.png-9af7dfa2dc57cebd2d148362c5d0e6a7.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Failed loading resource: res://.godot/imported/whole.png-9af7dfa2dc57cebd2d148362c5d0e6a7.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Failed loading resource: res://assets/vfx/foguete_02/game_pack/whole.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Unable to open file: res://.godot/imported/whole.png-affe9f7d09ca4accc858d543cb1ef8f3.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Failed loading resource: res://.godot/imported/whole.png-affe9f7d09ca4accc858d543cb1ef8f3.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Failed loading resource: res://assets/vfx/fumaca_02/game_pack/whole.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Unable to open file: res://.godot/imported/whole.png-4ebb5791ca0aa813dcbbfa579c497e62.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Failed loading resource: res://.godot/imported/whole.png-4ebb5791ca0aa813dcbbfa579c497e62.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Failed loading resource: res://assets/vfx/explosao_03/game_pack/whole.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Unable to open file: res://.godot/imported/whole.png-5b2f3ed36d983b80eed2c7ca2fad8ac1.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Failed loading resource: res://.godot/imported/whole.png-5b2f3ed36d983b80eed2c7ca2fad8ac1.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Failed loading resource: res://assets/vfx/estilhaco_01/game_pack/whole.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Unable to open file: res://.godot/imported/whole.png-f0c964ae58d0ab541652624948c0f913.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Failed loading resource: res://.godot/imported/whole.png-f0c964ae58d0ab541652624948c0f913.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Failed loading resource: res://assets/vfx/zumbi_estocada_02/game_pack/whole.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Unable to open file: res://.godot/imported/part-inspiracao.png-af768381b74542c0a8bb87222a44c13a.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Failed loading resource: res://.godot/imported/part-inspiracao.png-af768381b74542c0a8bb87222a44c13a.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Failed loading resource: res://assets/vfx/zumbi_inspiracao_02/game_pack/part-inspiracao.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Unable to open file: res://.godot/imported/whole.png-20cbd9531a4b0fce7bac23fffb7eaaa9.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Failed loading resource: res://.godot/imported/whole.png-20cbd9531a4b0fce7bac23fffb7eaaa9.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: Failed loading resource: res://assets/vfx/notas_bob_01/game_pack/whole.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _run (res://client/smoke.gd:700)
+ERROR: CLIENT_SMOKE_FAIL: feedback distinto: rocket_hit/elon
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_visual_contracts (res://client/smoke.gd:243)
+       [2] _run (res://client/smoke.gd:765)
+ERROR: CLIENT_SMOKE_FAIL: eventos auxiliares não duplicam bola ou explosão nativa
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_visual_contracts (res://client/smoke.gd:247)
+       [2] _run (res://client/smoke.gd:765)
+ERROR: CLIENT_SMOKE_FAIL: splash mostra só o estouro do vizinho, nunca outra explosão grande
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_visual_contracts (res://client/smoke.gd:249)
+       [2] _run (res://client/smoke.gd:765)
+ERROR: CLIENT_SMOKE_FAIL: pacote PixelLab disponível no cliente: escudo_danca_01
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_vfx_contracts (res://client/smoke.gd:278)
+       [2] _run (res://client/smoke.gd:766)
+ERROR: CLIENT_SMOKE_FAIL: pacote PixelLab disponível no cliente: estocada_01
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_vfx_contracts (res://client/smoke.gd:278)
+       [2] _run (res://client/smoke.gd:766)
+ERROR: CLIENT_SMOKE_FAIL: pacote PixelLab disponível no cliente: foguete_01
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_vfx_contracts (res://client/smoke.gd:278)
+       [2] _run (res://client/smoke.gd:766)
+ERROR: CLIENT_SMOKE_FAIL: pacote PixelLab disponível no cliente: fumaca_01
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_vfx_contracts (res://client/smoke.gd:278)
+       [2] _run (res://client/smoke.gd:766)
+ERROR: CLIENT_SMOKE_FAIL: pacote PixelLab disponível no cliente: laco_01
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_vfx_contracts (res://client/smoke.gd:278)
+       [2] _run (res://client/smoke.gd:766)
+ERROR: CLIENT_SMOKE_FAIL: pacote PixelLab disponível no cliente: explosao_02
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_vfx_contracts (res://client/smoke.gd:278)
+       [2] _run (res://client/smoke.gd:766)
+ERROR: CLIENT_SMOKE_FAIL: pacote PixelLab disponível no cliente: foguete_02
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_vfx_contracts (res://client/smoke.gd:278)
+       [2] _run (res://client/smoke.gd:766)
+ERROR: CLIENT_SMOKE_FAIL: pacote PixelLab disponível no cliente: fumaca_02
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_vfx_contracts (res://client/smoke.gd:278)
+       [2] _run (res://client/smoke.gd:766)
+ERROR: CLIENT_SMOKE_FAIL: pacote PixelLab disponível no cliente: explosao_03
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_vfx_contracts (res://client/smoke.gd:278)
+       [2] _run (res://client/smoke.gd:766)
+ERROR: CLIENT_SMOKE_FAIL: pacote PixelLab disponível no cliente: estilhaco_01
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_vfx_contracts (res://client/smoke.gd:278)
+       [2] _run (res://client/smoke.gd:766)
+ERROR: CLIENT_SMOKE_FAIL: estocada usa os sete quadros e tempo nativos
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_vfx_contracts (res://client/smoke.gd:302)
+       [2] _run (res://client/smoke.gd:766)
+ERROR: CLIENT_SMOKE_FAIL: impacto gera uma explosão grande e o splash um estouro no vizinho atingido
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_vfx_contracts (res://client/smoke.gd:310)
+       [2] _run (res://client/smoke.gd:766)
+ERROR: CLIENT_SMOKE_FAIL: impacto do foguete inicia o tremor
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_vfx_contracts (res://client/smoke.gd:318)
+       [2] _run (res://client/smoke.gd:766)
+ERROR: CLIENT_SMOKE_FAIL: zona revelada produz um clip de fumaça
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_support_vfx_contracts (res://client/smoke.gd:373)
+       [2] _run (res://client/smoke.gd:767)
+ERROR: CLIENT_SMOKE_FAIL: foguete em voo usa o clip nativo girado na direção do alvo
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_support_vfx_contracts (res://client/smoke.gd:378)
+       [2] _run (res://client/smoke.gd:767)
+ERROR: CLIENT_SMOKE_FAIL: fumaça continua após vários ciclos do clip nativo
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_support_vfx_contracts (res://client/smoke.gd:382)
+       [2] _run (res://client/smoke.gd:767)
+ERROR: CLIENT_SMOKE_FAIL: morte da fonte não cancela uma zona ainda ativa
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_support_vfx_contracts (res://client/smoke.gd:384)
+       [2] _run (res://client/smoke.gd:767)
+ERROR: CLIENT_SMOKE_FAIL: zona substituída não deixa clip no hexágono anterior
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_support_vfx_contracts (res://client/smoke.gd:394)
+       [2] _run (res://client/smoke.gd:767)
+ERROR: CLIENT_SMOKE_FAIL: nuvem e dano periódico não criam clips extras por evento
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_support_vfx_contracts (res://client/smoke.gd:398)
+       [2] _run (res://client/smoke.gd:767)
+ERROR: CLIENT_SMOKE_FAIL: fumaça e nó ocultos fora do combate: preparation
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_support_vfx_contracts (res://client/smoke.gd:402)
+       [2] _run (res://client/smoke.gd:767)
+ERROR: CLIENT_SMOKE_FAIL: fumaça e nó ocultos fora do combate: benefit
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_support_vfx_contracts (res://client/smoke.gd:402)
+       [2] _run (res://client/smoke.gd:767)
+ERROR: CLIENT_SMOKE_FAIL: fumaça e nó ocultos fora do combate: menu
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_support_vfx_contracts (res://client/smoke.gd:402)
+       [2] _run (res://client/smoke.gd:767)
+ERROR: CLIENT_SMOKE_FAIL: fumaça e nó ocultos fora do combate: round_result
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_support_vfx_contracts (res://client/smoke.gd:402)
+       [2] _run (res://client/smoke.gd:767)
+ERROR: CLIENT_SMOKE_FAIL: um laço cria um nó nativo separado
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_support_vfx_contracts (res://client/smoke.gd:406)
+       [2] _run (res://client/smoke.gd:767)
+ERROR: CLIENT_SMOKE_FAIL: preparar nó antes de death
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_support_vfx_contracts (res://client/smoke.gd:443)
+       [2] _run (res://client/smoke.gd:767)
+ERROR: CLIENT_SMOKE_FAIL: preparar nó antes de inactive
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_support_vfx_contracts (res://client/smoke.gd:443)
+       [2] _run (res://client/smoke.gd:767)
+ERROR: CLIENT_SMOKE_FAIL: preparar nó antes de stun_ended
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_support_vfx_contracts (res://client/smoke.gd:443)
+       [2] _run (res://client/smoke.gd:767)
+ERROR: CLIENT_SMOKE_FAIL: combate real reproduz cura, estocada e escudo PixelLab
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _run (res://client/smoke.gd:894)
+       [2] _advance_combat (res://client/smoke.gd:103)
+ERROR: CLIENT_SMOKE_FAIL: escudo PixelLab acompanha consumo, morte e fase reais
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _run (res://client/smoke.gd:895)
+       [2] _advance_combat (res://client/smoke.gd:103)
+ERROR: CLIENT_SMOKE_FAIL: bolha dourada some ao encerrar a proteção real
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _run (res://client/smoke.gd:897)
+       [2] _advance_combat (res://client/smoke.gd:103)
+ERROR: CLIENT_SMOKE_FAIL: novo combate integrado apresentou native_rocket
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_new_kits_match (res://client/smoke.gd:566)
+ERROR: CLIENT_SMOKE_FAIL: novo combate integrado apresentou native_smoke
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_new_kits_match (res://client/smoke.gd:566)
+ERROR: CLIENT_SMOKE_FAIL: novo combate integrado apresentou native_knot
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_new_kits_match (res://client/smoke.gd:566)
+ERROR: CLIENT_SMOKE_FAIL: novo combate integrado apresentou moving_knot
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_new_kits_match (res://client/smoke.gd:566)
+ERROR: CLIENT_SMOKE_FAIL: novo combate integrado apresentou replaced_zone
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_new_kits_match (res://client/smoke.gd:566)
+ERROR: CLIENT_SMOKE_FAIL: zonas visuais acompanham o snapshot real e somem ao terminar
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://client/smoke.gd:28)
+       [1] _check_new_kits_match (res://client/smoke.gd:569)
+ERROR: Unable to open file: res://.godot/imported/part-bubble_shield.png-fbddb2b87ce56520ad18147129531b0a.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Failed loading resource: res://.godot/imported/part-bubble_shield.png-fbddb2b87ce56520ad18147129531b0a.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Failed loading resource: res://assets/vfx/escudo_danca_01/original/part-bubble_shield.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Unable to open file: res://.godot/imported/part-estocada.png-09c52f2e4d148574189ef4c5a927e40f.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Failed loading resource: res://.godot/imported/part-estocada.png-09c52f2e4d148574189ef4c5a927e40f.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Failed loading resource: res://assets/vfx/estocada_01/part-estocada.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Unable to open file: res://.godot/imported/part-fire_blast.png-c177b10772cf97b1d5aa8c96bec812dc.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Failed loading resource: res://.godot/imported/part-fire_blast.png-c177b10772cf97b1d5aa8c96bec812dc.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Failed loading resource: res://assets/vfx/foguete_01/game_pack/part-fire_blast.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Unable to open file: res://.godot/imported/part-fumaca.png-230eef100637b7c89c7a0c693cbbca70.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Failed loading resource: res://.godot/imported/part-fumaca.png-230eef100637b7c89c7a0c693cbbca70.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Failed loading resource: res://assets/vfx/fumaca_01/original/part-fumaca.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Unable to open file: res://.godot/imported/part-laco.png-8a23f47c16bf29830385691435f5304e.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Failed loading resource: res://.godot/imported/part-laco.png-8a23f47c16bf29830385691435f5304e.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Failed loading resource: res://assets/vfx/laco_01/game_pack/part-laco.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Unable to open file: res://.godot/imported/whole.png-d13723b0958ae4a208556287fa5c706a.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Failed loading resource: res://.godot/imported/whole.png-d13723b0958ae4a208556287fa5c706a.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Failed loading resource: res://assets/vfx/explosao_02/game_pack/whole.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Unable to open file: res://.godot/imported/whole.png-9af7dfa2dc57cebd2d148362c5d0e6a7.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Failed loading resource: res://.godot/imported/whole.png-9af7dfa2dc57cebd2d148362c5d0e6a7.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Failed loading resource: res://assets/vfx/foguete_02/game_pack/whole.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Unable to open file: res://.godot/imported/whole.png-affe9f7d09ca4accc858d543cb1ef8f3.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Failed loading resource: res://.godot/imported/whole.png-affe9f7d09ca4accc858d543cb1ef8f3.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Failed loading resource: res://assets/vfx/fumaca_02/game_pack/whole.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Unable to open file: res://.godot/imported/whole.png-4ebb5791ca0aa813dcbbfa579c497e62.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Failed loading resource: res://.godot/imported/whole.png-4ebb5791ca0aa813dcbbfa579c497e62.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Failed loading resource: res://assets/vfx/explosao_03/game_pack/whole.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Unable to open file: res://.godot/imported/whole.png-5b2f3ed36d983b80eed2c7ca2fad8ac1.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Failed loading resource: res://.godot/imported/whole.png-5b2f3ed36d983b80eed2c7ca2fad8ac1.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Failed loading resource: res://assets/vfx/estilhaco_01/game_pack/whole.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Unable to open file: res://.godot/imported/whole.png-f0c964ae58d0ab541652624948c0f913.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Failed loading resource: res://.godot/imported/whole.png-f0c964ae58d0ab541652624948c0f913.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Failed loading resource: res://assets/vfx/zumbi_estocada_02/game_pack/whole.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Unable to open file: res://.godot/imported/part-inspiracao.png-af768381b74542c0a8bb87222a44c13a.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Failed loading resource: res://.godot/imported/part-inspiracao.png-af768381b74542c0a8bb87222a44c13a.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Failed loading resource: res://assets/vfx/zumbi_inspiracao_02/game_pack/part-inspiracao.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Unable to open file: res://.godot/imported/whole.png-20cbd9531a4b0fce7bac23fffb7eaaa9.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Failed loading resource: res://.godot/imported/whole.png-20cbd9531a4b0fce7bac23fffb7eaaa9.ctex.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)
+ERROR: Failed loading resource: res://assets/vfx/notas_bob_01/game_pack/whole.png.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _load_effect (res://client/vfx_library.gd:108)
+       [1] load_assets (res://client/vfx_library.gd:21)
+       [2] _ready (res://client/main.gd:354)
+       [3] _check_dismiss_controls (res://client/smoke.gd:585)
+       [4] _run (res://client/smoke.gd:942)
+       [5] _check_new_kits_match (res://client/smoke.gd:580)

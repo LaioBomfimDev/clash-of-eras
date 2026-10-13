@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "error: this drawing was rejected: view east: its 256x168 source at offset [0, 4] covers [0, 4, 255, 171] ends at y=171 > 167: outside the 256x168 canvas (x 0-255, y 0-167)\n\nnothing was rendered. hint: `describe draw` has the exact fields; `describe animation` covers changes."
+    }
+  ],
+  "isError": true
+}

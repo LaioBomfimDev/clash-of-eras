@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "draw",
+    "--recipe",
+    "{\"job\":{\"canvas\":[160,160],\"frame_count\":1,\"views\":[{\"id\":\"north-east\",\"offset\":[0,32]}],\"source_bookends_exact\":true},\"scene\":{\"layers\":[{\"id\":\"body\",\"name\":\"Body - unchanged pose with thrust room\"}],\"views\":{\"north-east\":{\"selections\":{\"all\":{}},\"nodes\":{\"body\":{\"layer\":\"body\",\"at\":[0,32],\"draw\":[{\"op\":\"copy\",\"part\":\"all\"}]}}}}}}",
+    "--sources",
+    "{\"north-east\":\"https://api.pixellab.ai/mcp/pixel-tools/6c291d95-70ee-4924-ae2b-d5846abebab7/image.png\"}"
+  ],
+  "mode": "low",
+  "notes": "The128px contact trial did not extend arms; spear tip was already near upper-right border. Pad unchanged128x128 ready pose at0,32 in160x160, providing32px room above/right; preserve body pixels and size. Not a resize."
+}

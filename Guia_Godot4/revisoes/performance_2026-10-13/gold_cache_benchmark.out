@@ -1,0 +1,4 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 Core Profile Context 26.8.1.260806 - Compatibility - Using Device: ATI Technologies Inc. - AMD Radeon(TM) Graphics
+
+GOLD_CACHE_BENCHMARK: {"cache_dynamic":{"mean_draw_cpu_us":95.8125,"p95_draw_cpu_us":129.0,"samples":160},"cache_rendered_once":false,"legacy":{"mean_draw_cpu_us":4541.925,"p95_draw_cpu_us":5449.0,"samples":160},"scope":"Native OpenGL CPU spent inside gold draw callbacks only; not browser FPS/GPU time","static_draw_count":1}

@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria e Mapeamento de Assets - Boss Dev (O Criador da Arena)</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --panel: #161b22;
+            --panel-border: #30363d;
+            --accent: #a371f7;
+            --accent-glow: rgba(163, 113, 247, 0.25);
+            --danger: #f85149;
+            --success: #3fb950;
+            --warning: #d29922;
+            --text-main: #f0f6fc;
+            --text-muted: #8b949e;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            padding: 24px;
+            line-height: 1.5;
+        }
+
+        header {
+            max-width: 1400px;
+            margin: 0 auto 32px auto;
+            background: linear-gradient(135deg, #1c1230 0%, #161b22 100%);
+            border: 1px solid #49287a;
+            border-radius: 12px;
+            padding: 28px 32px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .header-badge {
+            display: inline-block;
+            background: rgba(163, 113, 247, 0.2);
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 15px;
+            max-width: 900px;
+            margin-bottom: 20px;
+        }
+
+        .alert-box {
+            background: rgba(63, 185, 80, 0.12);
+            border-left: 4px solid var(--success);
+            padding: 14px 18px;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #c9f5d0;
+            margin-top: 14px;
+        }
+        .alert-box strong {
+            color: #fff;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin: 36px 0 16px 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--panel-border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-title .count {
+            background: var(--panel);
+            border: 1px solid var(--panel-border);
+            color: var(--accent);
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--panel);
+            border: 1px solid var(--panel-border);
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent);
+            box-shadow: 0 8px 24px var(--accent-glow);
+        }
+
+        .card.active-in-game {
+            border: 2px solid #e3b341;
+            box-shadow: 0 0 16px rgba(227, 179, 65, 0.2);
+        }
+        .card.active-in-game .badge-status {
+            background: #e3b341;
+            color: #000;
+            font-weight: bold;
+        }
+        .card.fixed-in-game {
+            border: 2px solid #3fb950;
+            box-shadow: 0 0 16px rgba(63, 185, 80, 0.2);
+        }
+        .card.fixed-in-game .badge-status {
+            background: #3fb950;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .card-preview {
+            height: 240px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #0a0d12;
+            background-image: 
+                linear-gradient(45deg, #13171f 25%, transparent 25%), 
+                linear-gradient(-45deg, #13171f 25%, transparent 25%), 
+                linear-gradient(45deg, transparent 75%, #13171f 75%), 
+                linear-gradient(-45deg, transparent 75%, #13171f 75%);
+            background-size: 16px 16px;
+            background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+            position: relative;
+            padding: 16px;
+            overflow: hidden;
+        }
+
+        .card-preview img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+            image-rendering: pixelated;
+            transition: transform 0.25s ease;
+        }
+        .card-preview:hover img {
+            transform: scale(1.15);
+        }
+
+        .badge-status {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(4px);
+            color: #e6edf3;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 8px;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .card-body {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex-grow: 1;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+        }
+        .card-meta {
+            font-size: 12px;
+            color: var(--text-muted);
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        }
+
+        .card-desc {
+            font-size: 13px;
+            color: #c9d1d9;
+            flex-grow: 1;
+        }
+
+        .code-path {
+            background: #090d13;
+            border: 1px solid #21262d;
+            border-radius: 6px;
+            padding: 8px 10px;
+            font-size: 11.5px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            color: #79c0ff;
+            word-break: break-all;
+        }
+        .code-usage {
+            font-size: 11.5px;
+            color: #d2a8ff;
+            margin-top: 4px;
+        }
+
+        .ref-board-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+            gap: 24px;
+        }
+
+        .ref-card {
+            background: var(--panel);
+            border: 1px solid var(--panel-border);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .ref-preview {
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-height: 480px;
+            overflow: hidden;
+            padding: 8px;
+        }
+        .ref-preview img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 6px;
+        }
+        .ref-body {
+            padding: 18px;
+        }
+
+        .guide-box {
+            background: #121d2f;
+            border: 1px solid #1f3a60;
+            border-radius: 10px;
+            padding: 24px;
+            margin-top: 40px;
+        }
+        .guide-box h2 {
+            font-size: 18px;
+            color: #58a6ff;
+            margin-bottom: 12px;
+        }
+        .guide-steps {
+            list-style: none;
+            counter-reset: steps;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .guide-steps li {
+            counter-increment: steps;
+            position: relative;
+            padding-left: 36px;
+            font-size: 14px;
+            color: #c9d1d9;
+        }
+        .guide-steps li::before {
+            content: counter(steps);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            background: #1f6feb;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <span class="header-badge">Painel de Produção & Inspeção de Assets</span>
+        <h1>👾 Boss Dev: O Criador da Arena</h1>
+        <p class="subtitle">
+            Visualizador completo de todos os sprites atualizados, novos VFX de magias em alta definição, monólitos e referências conceituais para a batalha PvE (Round 4).
+        </p>
+        <div class="alert-box">
+            <strong>✅ Correção do Braço e Melhorias Aplicadas:</strong><br>
+            1. <strong>Braço Bugado Consertado:</strong> O recorte anterior havia apagado partes da manga e antebraço. O algoritmo foi reformulado e agora o braço, manga e punho estão 100% sólidos, conectados e perfeitos!<br>
+            2. <strong>Direção Dinâmica de Conjuração:</strong> O Boss agora vira e aponta dinamicamente na direção do alvo (sudoeste ou sudeste) independentemente de onde estiver posicionado no tabuleiro.<br>
+            3. <strong>Aura Aprimorada:</strong> Círculo de invocação arcana com runas de ouro e magenta, anéis de choque concêntricos e reações dinâmicas ao disparar feitiços.<br>
+            4. <strong>Sprites de Habilidades Renovados:</strong> Novos sprites de alta definição para Fogo Vermelho, Fogo Roxo e Furacão de Fogo!
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- SEÇÃO 1: SPRITES ATUALMENTE EM USO NO GODOT -->
+        <h2 class="section-title">
+            1. Sprites do Boss no Jogo (Game Ready)
+            <span class="count">Ativos & Atualizados</span>
+        </h2>
+        <div class="cards-grid">
+            
+            <div class="card fixed-in-game">
+                <div class="card-preview">
+                    <span class="badge-status">★ CONJURAÇÃO OESTE (BRAÇO CORRIGIDO)</span>
+                    <img src="game_ready/cast_south_west.png" alt="cast_south_west.png">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>cast_south_west.png</span>
+                        <span class="card-meta">53 × 112 px</span>
+                    </div>
+                    <div class="card-desc">
+                        <strong>Pose de Conjuração (Oeste/Sudoeste):</strong> Braço, manga e dedo completamente restaurados (sem falhas transparentes). Disparada ao lançar magias em alvos à esquerda.
+                    </div>
+                    <div class="code-path">
+                        res://assets/characters/boss_dev/game_ready/cast_south_west.png
+                    </div>
+                    <div class="code-usage">
+                        Chamada em: <code>character_visuals.gd#L119</code> e <code>main.gd#L2903</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card fixed-in-game">
+                <div class="card-preview">
+                    <span class="badge-status">★ CONJURAÇÃO LESTE (BRAÇO CORRIGIDO)</span>
+                    <img src="game_ready/cast_south_east.png" alt="cast_south_east.png">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>cast_south_east.png</span>
+                        <span class="card-meta">61 × 112 px</span>
+                    </div>
+                    <div class="card-desc">
+                        <strong>Pose de Conjuração (Leste/Sudeste):</strong> Braço e manga restaurados apontando para a direita. Disparada dinamicamente ao mirar em alvos à direita.
+                    </div>
+                    <div class="code-path">
+                        res://assets/characters/boss_dev/game_ready/cast_south_east.png
+                    </div>
+                    <div class="code-usage">
+                        Chamada em: <code>character_visuals.gd#L121</code> e <code>main.gd#L2903</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card active-in-game">
+                <div class="card-preview">
+                    <span class="badge-status">★ REPOUSO (PARADO NO TABULEIRO)</span>
+                    <img src="game_ready/idle_south.png" alt="idle_south.png">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>idle_south.png</span>
+                        <span class="card-meta">39 × 112 px</span>
+                    </div>
+                    <div class="card-desc">
+                        Sprite de repouso frontal no tabuleiro e no avatar do topo da tela. Recorte sólido sem ruídos.
+                    </div>
+                    <div class="code-path">
+                        res://assets/characters/boss_dev/game_ready/idle_south.png
+                    </div>
+                    <div class="code-usage">
+                        Chamada em: <code>character_visuals.gd#L26</code> e <code>main.gd#L2477</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-preview">
+                    <span class="badge-status">Alternativa (5 Poses Centro)</span>
+                    <img src="game_ready/boss_dev_5poses_centro.png" alt="boss_dev_5poses_centro.png">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>boss_dev_5poses_centro.png</span>
+                        <span class="card-meta">60 × 112 px</span>
+                    </div>
+                    <div class="card-desc">
+                        Recorte da figura central imponente com sobretudo aberto e pose mágica de comando.
+                    </div>
+                    <div class="code-path">
+                        res://assets/characters/boss_dev/game_ready/boss_dev_5poses_centro.png
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-preview">
+                    <span class="badge-status">Reserva (Costas)</span>
+                    <img src="game_ready/idle_north.png" alt="idle_north.png">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>idle_north.png</span>
+                        <span class="card-meta">39 × 112 px</span>
+                    </div>
+                    <div class="card-desc">
+                        Sprite olhando para o norte (de costas).
+                    </div>
+                    <div class="code-path">
+                        res://assets/characters/boss_dev/game_ready/idle_north.png
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-preview">
+                    <span class="badge-status">Reserva (Perfil)</span>
+                    <img src="game_ready/idle_profile_left.png" alt="idle_profile_left.png">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>idle_profile_left.png</span>
+                        <span class="card-meta">22 × 112 px</span>
+                    </div>
+                    <div class="card-desc">
+                        Sprite de perfil olhando para o oeste.
+                    </div>
+                    <div class="code-path">
+                        res://assets/characters/boss_dev/game_ready/idle_profile_left.png
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SEÇÃO 2: EFEITOS VISUAIS DE MAGIA (VFX) RENOVADOS -->
+        <h2 class="section-title">
+            2. Sprites das Habilidades / Efeitos de Magia (Novos VFX em HD)
+            <span class="count">Novos Sprites</span>
+        </h2>
+        <div class="cards-grid">
+
+            <div class="card fixed-in-game">
+                <div class="card-preview">
+                    <span class="badge-status">★ NOVO SPRITE HD</span>
+                    <img src="../../vfx/boss_dev/fogo_vermelho_projetil.png" alt="fogo_vermelho_projetil">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>fogo_vermelho_projetil.png</span>
+                        <span class="card-meta">48 × 48 px</span>
+                    </div>
+                    <div class="card-desc">Cometa meteórico ardente de alta energia com núcleo branco-dourado incandescente e cauda de plasma.</div>
+                    <div class="code-path">res://assets/vfx/boss_dev/fogo_vermelho_projetil.png</div>
+                </div>
+            </div>
+
+            <div class="card fixed-in-game">
+                <div class="card-preview">
+                    <span class="badge-status">★ NOVO SPRITE HD</span>
+                    <img src="../../vfx/boss_dev/explosao_fogo_vermelho.png" alt="explosao_fogo_vermelho">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>explosao_fogo_vermelho.png</span>
+                        <span class="card-meta">64 × 64 px</span>
+                    </div>
+                    <div class="card-desc">Super explosão esférica com 12 pontas radiais de labaredas explosivas e núcleo solar incandescente (135 dano).</div>
+                    <div class="code-path">res://assets/vfx/boss_dev/explosao_fogo_vermelho.png</div>
+                </div>
+            </div>
+
+            <div class="card fixed-in-game">
+                <div class="card-preview">
+                    <span class="badge-status">★ NOVO SPRITE HD</span>
+                    <img src="../../vfx/boss_dev/fogo_roxo_projetil.png" alt="fogo_roxo_projetil">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>fogo_roxo_projetil.png</span>
+                        <span class="card-meta">48 × 48 px</span>
+                    </div>
+                    <div class="card-desc">Cometa arcano de vácuo cósmico com núcleo estelar ciano/violeta e cauda espiral de plasma cósmico.</div>
+                    <div class="code-path">res://assets/vfx/boss_dev/fogo_roxo_projetil.png</div>
+                </div>
+            </div>
+
+            <div class="card fixed-in-game">
+                <div class="card-preview">
+                    <span class="badge-status">★ NOVO SPRITE HD</span>
+                    <img src="../../vfx/boss_dev/explosao_fogo_roxo.png" alt="explosao_fogo_roxo">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>explosao_fogo_roxo.png</span>
+                        <span class="card-meta">64 × 64 px</span>
+                    </div>
+                    <div class="card-desc">Supernova cósmica com estilhaços estelares e anel de choque magenta e roxo elétrico (140 dano).</div>
+                    <div class="code-path">res://assets/vfx/boss_dev/explosao_fogo_roxo.png</div>
+                </div>
+            </div>
+
+            <div class="card fixed-in-game">
+                <div class="card-preview">
+                    <span class="badge-status">★ NOVO SPRITE HD</span>
+                    <img src="../../vfx/boss_dev/furacao_fogo.png" alt="furacao_fogo">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>furacao_fogo.png</span>
+                        <span class="card-meta">80 × 80 px (4 frames dinâmicos)</span>
+                    </div>
+                    <div class="card-desc">Vórtice ciclônico de fogo imponente com labaredas espirais fluidas em rotação contínua (160 dano + arremesso).</div>
+                    <div class="code-path">res://assets/vfx/boss_dev/furacao_fogo.png</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-preview">
+                    <img src="../../vfx/boss_dev/loot_orb_brilhante.png" alt="loot_orb_brilhante">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>loot_orb_brilhante.png</span>
+                        <span class="card-meta">32 × 32 px</span>
+                    </div>
+                    <div class="card-desc">Orbe de espólio radiante com resplendor ametista que surge no centro da arena após a vitória.</div>
+                    <div class="code-path">res://assets/vfx/boss_dev/loot_orb_brilhante.png</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SEÇÃO 3: MONSTROS INVOCADOS PELO BOSS -->
+        <h2 class="section-title">
+            3. Lacaios Invocados na Arena (Provocação / Taunt)
+            <span class="count">2 lacaios</span>
+        </h2>
+        <div class="cards-grid">
+
+            <div class="card active-in-game">
+                <div class="card-preview">
+                    <span class="badge-status">★ INVOCADO NO FUNDO</span>
+                    <img src="monstros/slime_lodo_olho.png" alt="slime_lodo_olho.png">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>slime_lodo_olho.png</span>
+                        <span class="card-meta">68 × 68 px (Escala 108 px)</span>
+                    </div>
+                    <div class="card-desc">
+                        <strong>Lodo Negro do Vazio (4000 HP):</strong> Invocado no fundo da arena (fileiras 6 e 7). Puxa o aggro total dos heróis aliados para o fundo.
+                    </div>
+                    <div class="code-path">
+                        res://assets/characters/boss_dev/monstros/slime_lodo_olho.png
+                    </div>
+                </div>
+            </div>
+
+            <div class="card active-in-game">
+                <div class="card-preview">
+                    <span class="badge-status">★ INVOCADO NO FUNDO</span>
+                    <img src="monstros/monstro_olho_tentaculos.png" alt="monstro_olho_tentaculos.png">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>monstro_olho_tentaculos.png</span>
+                        <span class="card-meta">67 × 67 px (Escala 118 px)</span>
+                    </div>
+                    <div class="card-desc">
+                        <strong>Aberração Cósmica com Tentáculos (5000 HP):</strong> Lacaio colossal de olhos roxos e tentáculos sombrios que desce do portal.
+                    </div>
+                    <div class="code-path">
+                        res://assets/characters/boss_dev/monstros/monstro_olho_tentaculos.png
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SEÇÃO 4: PRANCHAS CONCEITUAIS ORIGINAIS -->
+        <h2 class="section-title">
+            4. Pranchas Conceituais Originais Enviadas
+            <span class="count">4 pranchas originais</span>
+        </h2>
+        <div class="ref-board-grid">
+
+            <div class="ref-card">
+                <div class="ref-preview">
+                    <img src="referencias/boss_dev_apontando_quadrantes_4angulos.png" alt="Quadrantes 4 Ângulos">
+                </div>
+                <div class="ref-body">
+                    <div class="card-title">
+                        <span>boss_dev_apontando_quadrantes_4angulos.png</span>
+                    </div>
+                    <div class="card-desc" style="margin-top: 8px;">
+                        <strong style="color: #3fb950;">Origem dos Sprites de Conjuração Atualizados:</strong><br>
+                        Poses de conjuração nos 4 ângulos agora extraídas com braços e mangas 100% sólidos e preservados.
+                    </div>
+                </div>
+            </div>
+
+            <div class="ref-card">
+                <div class="ref-preview">
+                    <img src="referencias/boss_dev_apontando_5poses_destaque.jpg" alt="5 Poses Destaque">
+                </div>
+                <div class="ref-body">
+                    <div class="card-title">
+                        <span>boss_dev_apontando_5poses_destaque.jpg</span>
+                    </div>
+                    <div class="card-desc" style="margin-top: 8px;">
+                        <strong style="color: #a371f7;">Poses Dinâmicas e Dramáticas:</strong><br>
+                        Figura central grande com sobretudo aberto e pose imponente.
+                    </div>
+                </div>
+            </div>
+
+            <div class="ref-card">
+                <div class="ref-preview">
+                    <img src="referencias/boss_dev_turnaround_parado_4angulos.jpg" alt="Turnaround Parado">
+                </div>
+                <div class="ref-body">
+                    <div class="card-title">
+                        <span>boss_dev_turnaround_parado_4angulos.jpg</span>
+                    </div>
+                    <div class="card-desc" style="margin-top: 8px;">
+                        Turnaround de 4 ângulos neutros (frente, perfil esquerdo, costas, perfil direito) estático.
+                    </div>
+                </div>
+            </div>
+
+            <div class="ref-card">
+                <div class="ref-preview">
+                    <img src="referencias/boss_dev_apontando_linha_4angulos.jpg" alt="Linha 4 Ângulos">
+                </div>
+                <div class="ref-body">
+                    <div class="card-title">
+                        <span>boss_dev_apontando_linha_4angulos.jpg</span>
+                    </div>
+                    <div class="card-desc" style="margin-top: 8px;">
+                        Os 4 ângulos dispostos lado a lado com iluminação e contraste alternativo.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

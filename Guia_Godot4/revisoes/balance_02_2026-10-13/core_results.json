@@ -1,0 +1,19 @@
+{
+  "scope": "Pure gameplay rules, not UI/network/balancing",
+  "results": {
+    "character_balance_02": {
+      "chunk_id": "e3f259",
+      "wall_time_seconds": 1.1606791,
+      "exit_code": 0,
+      "original_token_count": 31,
+      "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\n\r\nCHARACTER BALANCE02 TESTS: 67 passed, 0 failed\r\n"
+    },
+    "simulation": {
+      "chunk_id": "677a4a",
+      "wall_time_seconds": 1.7416523000000002,
+      "exit_code": 0,
+      "original_token_count": 29,
+      "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\n\r\nSIMULATION TESTS: 321 passed, 0 failed\r\n"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "draw",
+    "--recipe",
+    "{\"job\":{\"canvas\":[128,128],\"frame_count\":1,\"views\":[{\"id\":\"north-east\",\"offset\":[0,0]},{\"id\":\"north-west\",\"mirror_of\":\"north-east\"}],\"source_bookends_exact\":true},\"scene\":{\"layers\":[{\"id\":\"body\",\"name\":\"Body - cleaned combat ready pose\"}],\"views\":{\"north-east\":{\"selections\":{\"all\":{}},\"nodes\":{\"body\":{\"layer\":\"body\",\"at\":[0,0],\"draw\":[{\"op\":\"copy\",\"part\":\"all\"}]}}}}}}",
+    "--sources",
+    "{\"north-east\":\"https://api.pixellab.ai/mcp/pixel-tools/6c291d95-70ee-4924-ae2b-d5846abebab7/image.png\"}"
+  ],
+  "mode": "low",
+  "notes": "Preserve cleaned NE ready pose and derive exact NW mirror, no resizing or redrawing. Two planted feet, one diagonal spear blade. Supported exact combat facing only."
+}

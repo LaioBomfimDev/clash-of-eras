@@ -1,0 +1,17 @@
+FAIL: live Boss cannot lose on normal survivor advantage
+FAIL: live Boss timeout grants no loot with survivor advantage
+FAIL: Boss timeout changes neither side's hearts with survivor advantage
+FAIL: live Boss cannot lose on normal damage advantage
+FAIL: live Boss timeout grants no loot with damage advantage
+FAIL: Boss timeout changes neither side's hearts with damage advantage
+FAIL: PvE victory changes neither side's hearts
+FAIL: PvE victory cannot consume the opponent's final heart or end match
+FAIL: duplicate next-round command advances exactly once after PvE
+FAIL: continuing after PvE grants only one normal round income
+FAIL: legitimate life reward cannot consume opponent heart or end match
+FAIL: Session refuses loot for a reported victory with live Boss
+FAIL: Session refuses loot when no Boss exists
+FAIL: missing Boss cannot be mistaken for a defeated Boss at timeout
+FAIL: missing-Boss PvE resolution changes neither side's hearts
+FAIL: round number4 alone does not enable PvE in bare core
+FAIL: normal round4 damage tiebreak still removes losing heart

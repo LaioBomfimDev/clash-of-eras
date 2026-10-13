@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "draw",
+    "--recipe",
+    "{\"job\":{\"canvas\":[128,188],\"frame_count\":1,\"durations_ms\":[100],\"views\":[{\"id\":\"east-00\",\"offset\":[0,0]},{\"id\":\"west-00\",\"mirror_of\":\"east-00\"},{\"id\":\"east-01\",\"offset\":[0,0]},{\"id\":\"west-01\",\"mirror_of\":\"east-01\"},{\"id\":\"east-02\",\"offset\":[0,0]},{\"id\":\"west-02\",\"mirror_of\":\"east-02\"},{\"id\":\"east-03\",\"offset\":[0,0]},{\"id\":\"west-03\",\"mirror_of\":\"east-03\"}],\"source_bookends_exact\":true},\"scene\":{\"layers\":[{\"id\":\"body\",\"name\":\"Body - original pixels\"}],\"views\":{\"east-00\":{\"selections\":{\"all\":{}},\"nodes\":{\"body\":{\"layer\":\"body\",\"at\":[0,0],\"draw\":[{\"op\":\"copy\",\"part\":\"all\"}]}}},\"east-01\":{\"selections\":{\"all\":{}},\"nodes\":{\"body\":{\"layer\":\"body\",\"at\":[0,0],\"draw\":[{\"op\":\"copy\",\"part\":\"all\"}]}}},\"east-02\":{\"selections\":{\"all\":{}},\"nodes\":{\"body\":{\"layer\":\"body\",\"at\":[0,0],\"draw\":[{\"op\":\"copy\",\"part\":\"all\"}]}}},\"east-03\":{\"selections\":{\"all\":{}},\"nodes\":{\"body\":{\"layer\":\"body\",\"at\":[0,0],\"draw\":[{\"op\":\"copy\",\"part\":\"all\"}]}}}}}}",
+    "--sources",
+    "{\"east-00\":\"https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/6f94e391-445d-46ac-90fb-22d61100a4a5/east/0.png?t=1791869831254\",\"east-01\":\"https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/6f94e391-445d-46ac-90fb-22d61100a4a5/east/1.png?t=1791869831254\",\"east-02\":\"https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/6f94e391-445d-46ac-90fb-22d61100a4a5/east/2.png?t=1791869831254\",\"east-03\":\"https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/6f94e391-445d-46ac-90fb-22d61100a4a5/east/3.png?t=1791869831254\"}"
+  ],
+  "mode": "low",
+  "notes": "Exact west mirror of reviewed articulated Zumbi frames. Preserve every pixel and source scale; eight or fewer views, documented mirror_of, no AI generation."
+}

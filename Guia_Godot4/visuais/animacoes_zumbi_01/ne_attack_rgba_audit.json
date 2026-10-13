@@ -1,0 +1,117 @@
+{
+  "frames": [
+    {
+      "frame": 0,
+      "mirror_exact_rgba": true,
+      "size": [
+        176,
+        196
+      ],
+      "bbox_ne": [
+        26,
+        57,
+        123,
+        168
+      ],
+      "bbox_nw": [
+        53,
+        57,
+        150,
+        168
+      ]
+    },
+    {
+      "frame": 1,
+      "mirror_exact_rgba": true,
+      "size": [
+        176,
+        196
+      ],
+      "bbox_ne": [
+        32,
+        46,
+        133,
+        168
+      ],
+      "bbox_nw": [
+        43,
+        46,
+        144,
+        168
+      ]
+    },
+    {
+      "frame": 2,
+      "mirror_exact_rgba": true,
+      "size": [
+        176,
+        196
+      ],
+      "bbox_ne": [
+        43,
+        29,
+        143,
+        168
+      ],
+      "bbox_nw": [
+        33,
+        29,
+        133,
+        168
+      ]
+    },
+    {
+      "frame": 3,
+      "mirror_exact_rgba": true,
+      "size": [
+        176,
+        196
+      ],
+      "bbox_ne": [
+        44,
+        30,
+        150,
+        168
+      ],
+      "bbox_nw": [
+        26,
+        30,
+        132,
+        168
+      ]
+    },
+    {
+      "frame": 4,
+      "mirror_exact_rgba": true,
+      "size": [
+        176,
+        196
+      ],
+      "bbox_ne": [
+        42,
+        33,
+        145,
+        168
+      ],
+      "bbox_nw": [
+        31,
+        33,
+        134,
+        168
+      ]
+    }
+  ],
+  "ne_start_is_clean_pose_pasted_at": [
+    8,
+    50
+  ],
+  "ne_start_rgba_equal": true,
+  "anchor_ne": [
+    72,
+    168
+  ],
+  "anchor_nw": [
+    104,
+    168
+  ]
+}

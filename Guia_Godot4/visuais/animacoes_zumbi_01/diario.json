@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "scope": "Articulated Zumbi animation pilot, attack thrust, and skill rally integration",
+  "scope": "Zumbi east/west/NE/NW articulated animation expansion; display scale preserved",
   "character_id": "6a5ec045-5930-4955-a684-ef864e5607b9",
   "original_character_id": "47e44cf4-8365-4c14-8d6f-15ff0fbc4498",
   "official_mcp_endpoint": "https://api.pixellab.ai/mcp",
@@ -12,10 +12,12 @@
     "credits_usd": 0
   },
   "account_after": {
+    "generations_remaining": 1,
+    "generations_used": 38,
+    "generations_total": 40,
+    "credits_usd": 0,
     "subscription": "trial",
-    "generations_remaining": 19,
-    "daily_bonus": 5,
-    "credits_usd": 0
+    "receipt": "saldo_lote02_final.json"
   },
   "jobs": [
     {
@@ -106,11 +108,17 @@
       "animation_group_id": "713a8133-fc86-4c50-a510-51b8965b6418",
       "kind": "spear_extension_v3",
       "custom_start_and_end": "padded200x128 ready pose -> extended thrust contact200x128",
-      "status": "processing_not_integrated",
-      "recovery": "reverse ordered references proposed after review",
+      "status": "exported_reviewed_integrated_east_pilot",
+      "recovery": "runtime6slots [3,registered4,3,2,1,0] at20fps; contact50ms; no gameplay timing change",
       "job_id": "c8740275-d0f4-471c-9504-58b41f91fbdf",
       "cost": 3,
-      "frames": 5
+      "frames": 5,
+      "export": "RelicArena/assets/characters/zumbi/animacoes_01/exports/attack_east_03",
+      "anchor": [
+        128,
+        143
+      ],
+      "registration": "PixelLab free drawing5d751637-c70a-4e40-8bb2-80ef5cc0fad5 shifts contact4px down; RGBA equality checked"
     },
     {
       "cost": 1,
@@ -118,6 +126,174 @@
       "local": "pose_estocada_contato.png",
       "job_id": "50d9f0c5-0f79-4304-8c0b-58847ea22a0b",
       "status": "completed_root_reviewed"
+    },
+    {
+      "local": "pose_lanca_horizontal.png",
+      "kind": "horizontal_ready_pose",
+      "status": "completed_preserved",
+      "cost": 1,
+      "job_id": "1d65c7a5-bff2-4371-a040-45519ebfd10b"
+    },
+    {
+      "local": "pose_inspiracao_fim.png",
+      "kind": "rally_end_pose",
+      "status": "completed_reviewed",
+      "cost": 1,
+      "job_id": "8fdd25ac-7bf7-43e8-a0e1-8523765e4cd8"
+    },
+    {
+      "fps": 14,
+      "frames": 5,
+      "animation_group_id": "8c077b03-a5ee-44ef-987d-0faa6bc23843",
+      "export": "RelicArena/assets/characters/zumbi/animacoes_01/exports/skill_east_02",
+      "playback_slots": 10,
+      "status": "exported_reviewed_integrated_east_pilot",
+      "cost": 2,
+      "anchor": [
+        64,
+        153
+      ],
+      "job_id": "515e8d45-026c-4080-b810-a0a55008ece7",
+      "kind": "rally_raise_v2"
+    },
+    {
+      "kind": "grounded_ne_pose",
+      "status": "completed_reviewed_mid_stride_without_rock",
+      "job_id": "f7ac1531-0985-4c85-ab27-a76553d400e1",
+      "cost": 1,
+      "review": "Right foot remains raised: usable walking mid-stride reference, not approved neutral stance",
+      "local": "pose_ne_ground.png"
+    },
+    {
+      "job_id": "d4dfef86-99bb-4b44-9d47-426db6edeb9f",
+      "frames": 7,
+      "animation_group_id": "f6b1fec6-9ed4-4dac-a2c5-23777e66afa6",
+      "kind": "walk_ne_v1",
+      "cost": 3,
+      "status": "exported_reviewed_registered_integrated_ne_nw",
+      "export": "RelicArena/assets/characters/zumbi/animacoes_02/exports/walk_ne_01",
+      "registration": "PixelLab free drawings910d7ce3-a721-42f7-bab7-c01bd9dccd36 and36836198-2496-46c0-8600-3586fc04ad2c; baseline145, exactNWmirrors;14RGBApassed",
+      "anchor": [
+        64,
+        145
+      ],
+      "fps": 24
+    },
+    {
+      "pixels_erased": 610,
+      "cost": 1,
+      "kind": "combat_ready_ne_pose",
+      "job_id": "31328260-9b6d-4172-bdcc-2c8e506a9c9a",
+      "clean_image_id": "6c291d95-70ee-4924-ae2b-d5846abebab7",
+      "status": "completed_reviewed_floor_cleaned"
+    },
+    {
+      "status": "completed_reviewed_rejected",
+      "kind": "contact_ne_pose",
+      "cost": 1,
+      "job_id": "5140cbfc-3c1b-4082-bd21-31ea3193500f",
+      "reason": "Insufficient arm extension: blade only moves about5px and down instead of advancing upper-right. Original128canvas has insufficient room near tip; no final animation sent from this contact."
+    },
+    {
+      "status": "completed_reviewed_rejected_not_integrated",
+      "kind": "contact_ne_pose_v2",
+      "cost": 1,
+      "source": "ready padded160x160 without rescaling",
+      "job_id": "90d0bd9b-dc94-4911-b6e0-0ba9a167b698",
+      "reason": "Whole arm extension, but pole turns horizontal toward east instead of diagonal north-east. Rejected aimed attack contact."
+    },
+    {
+      "kind": "contact_ne_pose_v3",
+      "job_id": "bf4febf4-4601-4fc0-87bf-bab20e913d1f",
+      "cost": 1,
+      "status": "completed_reviewed_approved_keyframe",
+      "local": "pose_ne_contact_v3.png",
+      "review": "Single right arm extends upper-right with one diagonal spear; feet grounded at150; no stone. Left arm balances behind body."
+    },
+    {
+      "kind": "spear_extension_ne_v1",
+      "job_id": "5ca53ce7-5004-4c9e-8eca-d733e1fc681d",
+      "animation_group_id": "625c3f1b-30d0-4bfe-ae89-aec1b9394679",
+      "cost": 3,
+      "frames": 5,
+      "status": "exported_reviewed_integrated_ne_nw",
+      "source_start": "49b23b59-48fe-4555-b67f-dcca40a0e8d2 padded ready160x160",
+      "source_end": "bf4febf4-4601-4fc0-87bf-bab20e913d1f contact160x160",
+      "export": "RelicArena/assets/characters/zumbi/animacoes_02/exports/attack_ne_01",
+      "review": "All5frames viewed: one diagonal spear, actual right-arm extension, small knee articulation, fixed feet168. Contact frame003 furthest reach; anchor72,168 from exact padding. No poison/gameplay change.",
+      "anchors": {
+        "north-east": [
+          72,
+          168
+        ],
+        "north-west": [
+          104,
+          168
+        ]
+      },
+      "fps": 20,
+      "playback_order": [
+        2,
+        3,
+        4,
+        2,
+        1,
+        0
+      ]
     }
-  ]
+  ],
+  "account_initial_verified": {
+    "subscription": "trial",
+    "credits_usd": 0,
+    "generations_remaining": 40
+  },
+  "pending_jobs": [],
+  "coverage": {
+    "walk": [
+      "east",
+      "west",
+      "north-east",
+      "north-west"
+    ],
+    "attack": [
+      "east",
+      "west",
+      "north-east",
+      "north-west"
+    ],
+    "skill": [
+      "east",
+      "west"
+    ],
+    "stance": [
+      "east",
+      "west",
+      "north-east",
+      "north-west"
+    ],
+    "larger_blades_n2_n3": "static poses only; no level-specific animated blades",
+    "skill_non_aimed_facing": "E/W real clips; rally can deliberately face east when current NE/NW lacks skill clip",
+    "missing_walk_attack": [
+      "south-east",
+      "south-west",
+      "north",
+      "south"
+    ]
+  },
+  "free_expansion": {
+    "west": "15 new native PNGs plus4 official west attack frames; all exact RGBA mirrors; same timings as east",
+    "ne_walk": "7 originals, feet registered by free PixelLab at145; NW exact mirror;14 native PNGs",
+    "ne_attack": "5 NE original PNGs,5 exact NW mirror PNGs from free PixelLab; fixed feet168",
+    "stance": "2 free PNGs at128x128, ground cleaned; anchor64,118",
+    "receipts": [
+      "west_free_exports.json",
+      "west_rgba_audit.json",
+      "ne_walk_register_exports.json",
+      "ne_walk_rgba_audit_final.json",
+      "ne_attack_rgba_audit.json",
+      "mirror_attack_ne_0_resultado.json",
+      "mirror_attack_ne_1_resultado.json"
+    ]
+  },
+  "current_delivery": "Guia_Godot4/ANIMACOES_ZUMBI_02.md"
 }

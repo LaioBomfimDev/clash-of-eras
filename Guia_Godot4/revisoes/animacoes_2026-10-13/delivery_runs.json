@@ -1,0 +1,49 @@
+{
+  "headless_smoke": {
+    "chunk_id": "56bfa3",
+    "wall_time_seconds": 8.4673319,
+    "exit_code": 0,
+    "original_token_count": 408,
+    "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\n\r\nCLIENT_PHASE: menu; rodada 1; vidas [4, 4]\r\nCLIENT_READY: Clash of Eras protótipo local; lobby de boas-vindas; 30 FPS; compêndio de heróis\r\nCLIENT_PHASE: benefit; rodada 1; vidas [4, 4]\r\nCLIENT_PHASE: menu; rodada 1; vidas [4, 4]\r\nCLIENT_PHASE: benefit; rodada 1; vidas [4, 4]\r\nCLIENT_PHASE: preparation; rodada 1; vidas [4, 4]\r\nCLIENT_PHASE: combat; rodada 1; vidas [4, 4]\r\nCLIENT_PHASE: round_result; rodada 1; vidas [4, 3]\r\nCLIENT_PHASE: preparation; rodada 2; vidas [4, 3]\r\nCLIENT_PHASE: combat; rodada 2; vidas [4, 3]\r\nCLIENT_PHASE: round_result; rodada 2; vidas [3, 3]\r\nCLIENT_PHASE: preparation; rodada 3; vidas [3, 3]\r\nCLIENT_PHASE: combat; rodada 3; vidas [3, 3]\r\nCLIENT_PHASE: round_result; rodada 3; vidas [2, 3]\r\nCLIENT_PHASE: preparation; rodada 4; vidas [2, 3]\r\nCLIENT_PHASE: combat; rodada 4; vidas [2, 3]\r\nCLIENT_PHASE: round_result; rodada 4; vidas [2, 2]\r\nCLIENT_PHASE: preparation; rodada 5; vidas [2, 2]\r\nCLIENT_PHASE: combat; rodada 5; vidas [2, 2]\r\nCLIENT_PHASE: round_result; rodada 5; vidas [1, 2]\r\nCLIENT_PHASE: preparation; rodada 6; vidas [1, 2]\r\nCLIENT_PHASE: combat; rodada 6; vidas [1, 2]\r\nCLIENT_PHASE: match_over; rodada 6; vidas [0, 2]\r\nCLIENT_PHASE: benefit; rodada 1; vidas [4, 4]\r\nCLIENT_PHASE: preparation; rodada 1; vidas [5, 4]\r\nCLIENT_PHASE: benefit; rodada 1; vidas [4, 4]\r\nCLIENT_PHASE: preparation; rodada 1; vidas [4, 4]\r\nCLIENT_PHASE: combat; rodada 1; vidas [4, 4]\r\nCLIENT_PHASE: round_result; rodada 1; vidas [3, 4]\r\nCLIENT_PHASE: menu; rodada 1; vidas [3, 4]\r\nCLIENT_SMOKE_RESULT: 444 passed, 0 failed\r\n"
+  },
+  "native_capture": {
+    "chunk_id": "70f0d8",
+    "wall_time_seconds": 3.6624537,
+    "exit_code": 0,
+    "original_token_count": 115,
+    "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\nOpenGL API 3.3.0 Core Profile Context 26.8.1.260806 - Compatibility - Using Device: ATI Technologies Inc. - AMD Radeon(TM) Graphics\r\n\r\nCLIENT_PHASE: menu; rodada 1; vidas [4, 4]\r\nCLIENT_READY: Clash of Eras protótipo local; lobby de boas-vindas; 30 FPS; compêndio de heróis\r\nCLIENT_PHASE: combat; rodada 1; vidas [4, 4]\r\nZUMBI GAME ANIMATION CAPTURES: [\"skill\", \"walk\", \"attack\"]\r\n"
+  },
+  "integration": {
+    "chunk_id": "a5c2a4",
+    "wall_time_seconds": 2.630909,
+    "exit_code": 0,
+    "original_token_count": 70,
+    "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\n\r\nCLIENT_PHASE: menu; rodada 1; vidas [4, 4]\r\nCLIENT_READY: Clash of Eras protótipo local; lobby de boas-vindas; 30 FPS; compêndio de heróis\r\nCHARACTER ANIMATION INTEGRATION TESTS: 30 passed, 0 failed\r\n"
+  },
+  "opengl_smoke_start": {
+    "chunk_id": "5be02c",
+    "wall_time_seconds": 10.0038231,
+    "session_id": 81588,
+    "original_token_count": 273,
+    "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\nOpenGL API 3.3.0 Core Profile Context 26.8.1.260806 - Compatibility - Using Device: ATI Technologies Inc. - AMD Radeon(TM) Graphics\r\n\r\nCLIENT_PHASE: menu; rodada 1; vidas [4, 4]\r\nCLIENT_READY: Clash of Eras protótipo local; lobby de boas-vindas; 30 FPS; compêndio de heróis\r\nCLIENT_PHASE: benefit; rodada 1; vidas [4, 4]\r\nCLIENT_PHASE: preparation; rodada 1; vidas [4, 4]\r\nCLIENT_PHASE: combat; rodada 1; vidas [4, 4]\r\nCLIENT_PHASE: round_result; rodada 1; vidas [4, 3]\r\nCLIENT_PHASE: preparation; rodada 2; vidas [4, 3]\r\nCLIENT_PHASE: combat; rodada 2; vidas [4, 3]\r\nCLIENT_PHASE: round_result; rodada 2; vidas [3, 3]\r\nCLIENT_PHASE: preparation; rodada 3; vidas [3, 3]\r\nCLIENT_PHASE: combat; rodada 3; vidas [3, 3]\r\nCLIENT_PHASE: round_result; rodada 3; vidas [2, 3]\r\nCLIENT_PHASE: preparation; rodada 4; vidas [2, 3]\r\nCLIENT_PHASE: combat; rodada 4; vidas [2, 3]\r\nCLIENT_PHASE: round_result; rodada 4; vidas [2, 2]\r\nCLIENT_PHASE: preparation; rodada 5; vidas [2, 2]\r\nCLIENT_PHASE: combat; rodada 5; vidas [2, 2]\r\n"
+  },
+  "opengl_smoke_completion": {
+    "session_id": 81588,
+    "exit_code": 0,
+    "observed_summary": "CLIENT_SMOKE_RESULT: 444 passed, 0 failed"
+  },
+  "vfx": {
+    "chunk_id": "4d1cee",
+    "wall_time_seconds": 0.623845,
+    "exit_code": 0,
+    "original_token_count": 29,
+    "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\n\r\nVFX LIBRARY TESTS: 237 passed, 0 failed\r\n"
+  },
+  "preview": {
+    "chunk_id": "b014ca",
+    "wall_time_seconds": 2.0103834,
+    "exit_code": 0,
+    "original_token_count": 61,
+    "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\nOpenGL API 3.3.0 Core Profile Context 26.8.1.260806 - Compatibility - Using Device: ATI Technologies Inc. - AMD Radeon(TM) Graphics\r\n\r\nZUMBI ANIMATION PREVIEW CAPTURE: 0\r\n"
+  }
+}

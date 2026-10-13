@@ -1,0 +1,9 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+INICIANDO TESTES DO MULTIPLAYER ONLINE...
+[SERVER] Ouvindo conexões WebSocket na porta 8922...
+[SERVER] Laio (ID 1) entrou na fila. Total na fila: 1
+[SERVER] Navegador2 (ID 2) entrou na fila. Total na fila: 2
+[SERVER] Sala criada: room_1 (Laio vs Navegador2)
+
+RESULTADO MULTIPLAYER: 21 aprovados, 0 falhas

@@ -1,0 +1,27 @@
+[
+  {
+    "Algorithm": "SHA256",
+    "Hash": "8D825BA578BBCF4D8DA3B9A23CFC5D71C887FB2513C57661FDA44078EEA9395A",
+    "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\simulation\\arena_simulation.gd"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "8157DEAA77EE9B6B0B938DCA2BBA8AB17CCFF77DFDC9BB32A95480BA468F4250",
+    "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\simulation\\match_session.gd"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "C5197EE6E9EAA88FCA24CF219F76869FC0520C08EB493DDFC65CEFEB3B1059BB",
+    "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\main.gd"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "DE2B99CDAB0744B657CEC87F5308189BED2F03B15AE14269A3720946910E9553",
+    "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\data\\debug_characters.json"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "68C0C78A8D225B706B6B2083ADE22E7E327E7EBD41BDE09C8AD35BACC6051ADD",
+    "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\animations_manifest.json"
+  }
+]

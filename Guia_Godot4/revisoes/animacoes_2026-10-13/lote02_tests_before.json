@@ -1,0 +1,37 @@
+[
+  {
+    "Algorithm": "SHA256",
+    "Hash": "C5197EE6E9EAA88FCA24CF219F76869FC0520C08EB493DDFC65CEFEB3B1059BB",
+    "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\main.gd"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "44A730E7C545BEB06FD9A83801EEE99DDB78566BC46EE07FC85A2D5D26D0AEE9",
+    "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\character_visuals.gd"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "51CDAB5219FDCC356BC699E8AC2EA64F926CD4349E8A51BC1AF459F4D135D739",
+    "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\character_animation_bank.gd"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "FCFF989609BBD138D0F81D60392F0A525D39FE9D5F0E4FA7396CF1688A6EF2FD",
+    "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\character_animation_player.gd"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "68C0C78A8D225B706B6B2083ADE22E7E327E7EBD41BDE09C8AD35BACC6051ADD",
+    "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\animations_manifest.json"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "A1F46D38A894A02D1EA8618E442D16365F43AED20BB22B690F4BBB1317751B96",
+    "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\tools\\preview_zumbi_animations.gd"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "BA69BA49970A35C11C13275B5692902FB07F32FB3A56CE2C6D32FFBC9F561CE8",
+    "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\tools\\capture_zumbi_animation_game.gd"
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "character_balance_02": {
+    "chunk_id": "b34a2e",
+    "wall_time_seconds": 0.7745171,
+    "exit_code": 0,
+    "original_token_count": 31,
+    "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\n\r\nCHARACTER BALANCE02 TESTS: 71 passed, 0 failed\r\n"
+  },
+  "network_local": {
+    "chunk_id": "c1360d",
+    "wall_time_seconds": 0.8880768,
+    "exit_code": 0,
+    "original_token_count": 98,
+    "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\n\r\nINICIANDO TESTES DO MULTIPLAYER ONLINE...\r\n[SERVER] Ouvindo conexões WebSocket na porta 8922...\r\n[SERVER] Laio (ID 1) entrou na fila. Total na fila: 1\r\n[SERVER] Navegador2 (ID 2) entrou na fila. Total na fila: 2\r\n[SERVER] Sala criada: room_1 (Laio vs Navegador2)\r\n\r\nRESULTADO MULTIPLAYER: 21 aprovados, 0 falhas\r\n"
+  },
+  "simulation": {
+    "chunk_id": "677a4a",
+    "wall_time_seconds": 1.7416523000000002,
+    "exit_code": 0,
+    "original_token_count": 29,
+    "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\n\r\nSIMULATION TESTS: 321 passed, 0 failed\r\n"
+  },
+  "first_simulation_with_old_expectations": {
+    "chunk_id": "234030",
+    "wall_time_seconds": 1.5704559,
+    "exit_code": 1,
+    "original_token_count": 687,
+    "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\n\r\nERROR: FAIL: Barbie deals +30% while Ken lives (got 150.0; expected 130.0)\r\n   at: push_error (core/variant/variant_utility.cpp:1023)\r\n   GDScript backtrace (most recent call first):\r\n       [0] _check (res://tests/test_simulation.gd:45)\r\n       [1] _near (res://tests/test_simulation.gd:48)\r\n       [2] _test_lote_03_kits (res://tests/test_simulation.gd:728)\r\n       [3] _initialize (res://tests/test_simulation.gd:34)\r\nERROR: FAIL: Ken inherits Barbie's match level (got 2300.0; expected 1462.5)\r\n   at: push_error (core/variant/variant_utility.cpp:1023)\r\n   GDScript backtrace (most recent call first):\r\n       [0] _check (res://tests/test_simulation.gd:45)\r\n       [1] _near (res://tests/test_simulation.gd:48)\r\n       [2] _test_lote_03_kits (res://tests/test_simulation.gd:750)\r\n       [3] _initialize (res://tests/test_simulation.gd:34)\r\nERROR: FAIL: enemy outside the level-1 radius is unaffected (got 0.7; expected 1.0)\r\n   at: push_error (core/variant/variant_utility.cpp:1023)\r\n   GDScript backtrace (most recent call first):\r\n       [0] _check (res://tests/test_simulation.gd:45)\r\n       [1] _near (res://tests/test_simulation.gd:48)\r\n       [2] _test_lote_03_kits (res://tests/test_simulation.gd:822)\r\n       [3] _initialize (res://tests/test_simulation.gd:34)\r\nERROR: FAIL: lasso picks the farthest enemy\r\n   at: push_error (core/variant/variant_utility.cpp:1023)\r\n   GDScript backtrace (most recent call first):\r\n       [0] _check (res://tests/test_simulation.gd:45)\r\n       [1] _test_lote_03_kits (res://tests/test_simulation.gd:838)\r\n       [2] _initialize (res://tests/test_simulation.gd:34)\r\nERROR: FAIL: target pulled next to Rapunzel and stunned\r\n   at: push_error (core/variant/variant_utility.cpp:1023)\r\n   GDScript backtrace (most recent call first):\r\n       [0] _check (res://tests/test_simulation.gd:45)\r\n       [1] _test_lote_03_kits (res://tests/test_simulation.gd:839)\r\n       [2] _initialize (res://tests/test_simulation.gd:34)\r\nERROR: FAIL: stunned unit does not attack\r\n   at: push_error (core/variant/variant_utility.cpp:1023)\r\n   GDScript backtrace (most recent call first):\r\n       [0] _check (res://tests/test_simulation.gd:45)\r\n       [1] _test_lote_03_kits (res://tests/test_simulation.gd:842)\r\n       [2] _initialize (res://tests/test_simulation.gd:34)\r\nERROR: FAIL: lasso repeats after its cooldown\r\n   at: push_error (core/variant/variant_utility.cpp:1023)\r\n   GDScript backtrace (most recent call first):\r\n       [0] _check (res://tests/test_simulation.gd:45)\r\n       [1] _test_lote_03_kits (res://tests/test_simulation.gd:846)\r\n       [2] _initialize (res://tests/test_simulation.gd:34)\r\nSIMULATION TESTS: 313 passed, 7 failed\r\n"
+  }
+}

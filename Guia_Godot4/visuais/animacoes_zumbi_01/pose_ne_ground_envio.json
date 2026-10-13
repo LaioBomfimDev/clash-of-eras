@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: f7ac1531-0985-4c85-ab27-a76553d400e1\njob_id: f7ac1531-0985-4c85-ab27-a76553d400e1\nmodel: pixen\nedit: Same detailed adult warrior from BACK THREE-QUARTER, facing NORTH-EAST (upper right), exact identity, scars, proportions and pixels. Remove ONLY the rock under his right foot and lower that foot onto flat ground beside the other. Relax both knees into a walking-ready stance. Keep the ONE upright straight spear, one wide silver tip, his waist dagger, beige trousers and broken ankle chains. Do not turn him toward the viewer or enlarge him. Transparent; no floor strip, shadows, rock or new props.\nsource: 128x128px\nsize: 128x128px\ntransparent: True\nasset_id: 9c68f28d-e37e-5bc3-8076-120177863c0d\nasset_status: pending (saved when generation completes)\ncost: 1 generation\nstatus: processing (~10-40s)\n\nhint: get_image(job_id=\"f7ac1531-0985-4c85-ab27-a76553d400e1\")"
+    }
+  ],
+  "isError": false
+}

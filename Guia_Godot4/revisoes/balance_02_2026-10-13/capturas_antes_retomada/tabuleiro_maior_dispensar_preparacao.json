@@ -1,0 +1,88 @@
+{
+	"front_hex_width": 90.0,
+	"income": {
+		"base": 9,
+		"current_round_base": 9,
+		"growth": 3,
+		"last_paid": 0,
+		"next_round": 2,
+		"next_round_base": 12,
+		"next_round_total": 12,
+		"win_bonus": 0
+	},
+	"phase": "preparation",
+	"selected_unit": {
+		"active": true,
+		"alive": true,
+		"armor": 12.0,
+		"assassin_opening_finished": true,
+		"assassin_opening_remaining": 0.0,
+		"assassin_target_id": -1,
+		"attack_count": 0,
+		"attack_damage": 28.0,
+		"attack_speed_multiplier": 1.0,
+		"bleeds": [],
+		"briefcase_cooldown": 5.0,
+		"cell": [
+			1,
+			4
+		],
+		"crit_damage_multiplier": 1.5,
+		"crit_growth": 0.0,
+		"crit_growth_hits": 0,
+		"damage_dealt": 0.0,
+		"damage_type": "physical",
+		"dance_shield": 0.0,
+		"dance_shield_remaining": 0.0,
+		"effective_crit_chance": 0.08,
+		"equipment": [],
+		"equipment_modifiers": {},
+		"facing_axial": [
+			0,
+			1
+		],
+		"guardian_id": -1,
+		"healing_done": 0.0,
+		"hp": 540.0,
+		"id": 11,
+		"is_boss": false,
+		"key": "rapunzel",
+		"kills": 0,
+		"level": 1,
+		"mana": 0.0,
+		"max_hp": 540.0,
+		"max_mana": 100.0,
+		"moonwalk_from_cell": [
+			-100,
+			-100
+		],
+		"moonwalk_pause_duration": 1.2,
+		"moonwalk_stage": "none",
+		"moonwalk_step_duration": 0.55,
+		"moonwalk_steps_done": 0,
+		"moonwalk_timer": 0.0,
+		"moonwalk_to_cell": [
+			-100,
+			-100
+		],
+		"name": "Rapunzel",
+		"resist": 18.0,
+		"revive_count": 0,
+		"revived": false,
+		"shield": 0.0,
+		"shield_absorbed": 0.0,
+		"stun_remaining": 0.0,
+		"summoned": false,
+		"summoner_id": -1,
+		"synergy_tags": [
+			"apoio"
+		],
+		"target_id": -1,
+		"team": 0
+	},
+	"viewport": [
+		1280,
+		720
+	],
+	"win_streak": 0
+}

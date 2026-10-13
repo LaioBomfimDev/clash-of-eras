@@ -1,0 +1,9 @@
+{
+	"clients": 0,
+	"duration_ms": 2509.946,
+	"max_fps": 0,
+	"polls": 361,
+	"polls_per_second": 143.827795498389,
+	"rooms": 0,
+	"scope": "Idle real headless entry point; loop count is not browser FPS or cloud capacity."
+}

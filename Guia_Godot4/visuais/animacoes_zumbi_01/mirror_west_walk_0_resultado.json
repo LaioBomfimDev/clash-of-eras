@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "error: this drawing was rejected: view ids must be lowercase letters, digits and '-'; got ['east_00', 'west_00', 'east_01', 'west_01', 'east_02', 'west_02', 'east_03', 'west_03']\n\nnothing was rendered. hint: `describe draw` has the exact fields; `describe animation` covers changes."
+    }
+  ],
+  "isError": true
+}

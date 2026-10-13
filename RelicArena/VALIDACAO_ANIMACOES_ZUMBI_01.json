@@ -1,0 +1,156 @@
+{
+  "date": "2026-10-13",
+  "stage": "Zumbi east animation pilot",
+  "godot": "4.7.2.stable.official.ed1daf0bf",
+  "coverage": {
+    "skill": [
+      "east"
+    ],
+    "stance": [
+      "east"
+    ],
+    "walk": [
+      "east"
+    ],
+    "attack": [
+      "east"
+    ]
+  },
+  "unique_active_pngs": 19,
+  "missing_active_paths": [],
+  "tests": {
+    "animation_bank": {
+      "passed": 122,
+      "failed": 0
+    },
+    "client_opengl": {
+      "passed": 444,
+      "failed": 0
+    },
+    "vfx": {
+      "passed": 237,
+      "failed": 0
+    },
+    "integration": {
+      "passed": 30,
+      "failed": 0
+    },
+    "animation_player": {
+      "passed": 97,
+      "failed": 0
+    },
+    "client_headless": {
+      "passed": 444,
+      "failed": 0
+    }
+  },
+  "capture": {
+    "captured": [
+      "skill",
+      "walk",
+      "attack"
+    ],
+    "frames": [
+      {
+        "anchor": "(64.0, 153.0)",
+        "display_scale": 0.617886178861789,
+        "elapsed_combat": 0.0,
+        "path": "C:/Users/m/Documents/Relic Arena MY/RelicArena/captures/zumbi_game_skill_2026-10-13.png",
+        "state": "skill",
+        "texture": "res://assets/characters/zumbi/animacoes_01/exports/skill_east_02/original/Idle/animations/rally_raise_v2/east/frame_004.png"
+      },
+      {
+        "anchor": "(64.0, 149.0)",
+        "display_scale": 0.617886178861789,
+        "elapsed_combat": 0.15,
+        "path": "C:/Users/m/Documents/Relic Arena MY/RelicArena/captures/zumbi_game_walk_2026-10-13.png",
+        "state": "walk",
+        "texture": "res://assets/characters/zumbi/animacoes_01/exports/walk_east_02/original/Idle/animations/walk_ground_v2/east/frame_001.png"
+      },
+      {
+        "anchor": "(128.0, 143.0)",
+        "display_scale": 0.617886178861789,
+        "elapsed_combat": 0.25,
+        "path": "C:/Users/m/Documents/Relic Arena MY/RelicArena/captures/zumbi_game_attack_2026-10-13.png",
+        "state": "attack",
+        "texture": "res://assets/characters/zumbi/animacoes_01/ajustes/attack_contact_east.png"
+      }
+    ],
+    "kind": "isolated visual capture with real simulation events and PNGs"
+  },
+  "hashes_before": [
+    {
+      "Algorithm": "SHA256",
+      "Hash": "B86145892926531B21561381890EA22E235E744D49757AF749737C8FB5149969",
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\main.gd"
+    },
+    {
+      "Algorithm": "SHA256",
+      "Hash": "44A730E7C545BEB06FD9A83801EEE99DDB78566BC46EE07FC85A2D5D26D0AEE9",
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\character_visuals.gd"
+    },
+    {
+      "Algorithm": "SHA256",
+      "Hash": "51022A5859BBC0911A99B0EDEF90D0946636B531324EAFF09B5DBA6B5AB3F20E",
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\animations_manifest.json"
+    },
+    {
+      "Algorithm": "SHA256",
+      "Hash": "51CDAB5219FDCC356BC699E8AC2EA64F926CD4349E8A51BC1AF459F4D135D739",
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\character_animation_bank.gd"
+    },
+    {
+      "Algorithm": "SHA256",
+      "Hash": "FCFF989609BBD138D0F81D60392F0A525D39FE9D5F0E4FA7396CF1688A6EF2FD",
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\character_animation_player.gd"
+    },
+    {
+      "Algorithm": "SHA256",
+      "Hash": "03DAA80A5641F835C7B75AB4754AE7C87F8FE865DF6CC696C2D45CCD915778F0",
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\vfx\\manifest.json"
+    }
+  ],
+  "hashes_after": [
+    {
+      "Algorithm": "SHA256",
+      "Hash": "629034E0B6BBED89488132810E342DB5B1451DF05EF2B09237F85EBCDB94D87E",
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\main.gd"
+    },
+    {
+      "Algorithm": "SHA256",
+      "Hash": "44A730E7C545BEB06FD9A83801EEE99DDB78566BC46EE07FC85A2D5D26D0AEE9",
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\character_visuals.gd"
+    },
+    {
+      "Algorithm": "SHA256",
+      "Hash": "51022A5859BBC0911A99B0EDEF90D0946636B531324EAFF09B5DBA6B5AB3F20E",
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\animations_manifest.json"
+    },
+    {
+      "Algorithm": "SHA256",
+      "Hash": "51CDAB5219FDCC356BC699E8AC2EA64F926CD4349E8A51BC1AF459F4D135D739",
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\character_animation_bank.gd"
+    },
+    {
+      "Algorithm": "SHA256",
+      "Hash": "FCFF989609BBD138D0F81D60392F0A525D39FE9D5F0E4FA7396CF1688A6EF2FD",
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\character_animation_player.gd"
+    },
+    {
+      "Algorithm": "SHA256",
+      "Hash": "03DAA80A5641F835C7B75AB4754AE7C87F8FE865DF6CC696C2D45CCD915778F0",
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\vfx\\manifest.json"
+    }
+  ],
+  "main_changed_during_test_window": true,
+  "limitation": "Another AI edited main during final test window; cannot claim whole checkout frozen. Animation bank/player/loader/manifests remained stable. No network or device test.",
+  "pixellab_balance": {
+    "usd": 0,
+    "subscription": "trial",
+    "used": 27,
+    "total": 40,
+    "remaining": 12
+  },
+  "pending_jobs_this_queue": [],
+  "next": "Inspect western views already present in official exports; produce north/diagonal coverage and level-specific blades next. No new generation before inspecting existing outputs."
+}

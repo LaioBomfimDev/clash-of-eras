@@ -1,0 +1,13 @@
+{
+  "character_id": "6a5ec045-5930-4955-a684-ef864e5607b9",
+  "mode": "v3",
+  "animation_name": "walk_ne_v1",
+  "directions": [
+    "north-east"
+  ],
+  "frame_count": 6,
+  "keep_first_frame": true,
+  "custom_start_frame_url": "https://api.pixellab.ai/mcp/images/f7ac1531-0985-4c85-ab27-a76553d400e1/download",
+  "end_frame_url": "https://api.pixellab.ai/mcp/images/f7ac1531-0985-4c85-ab27-a76553d400e1/download",
+  "action_description": "One seamless in-place human WALK cycle, seen from BACK THREE-QUARTER and facing NORTH-EAST (upper right), returning to the same mid-stride starting pose. Alternate LEFT and RIGHT legs with natural knee bending, heel lift, push-off and free arm counter-swing. The raised foot in the reference is a moving stride, not a statue: include both planted-foot phases during the cycle. Keep the exact muscular adult body, back scars, beige trousers, ankle chains, one waist dagger and crisp pixel detail. One rigid upright spear with one wide silver blade, never duplicate or twirl. Body centered, same height, stable ground baseline, no translation or camera motion. No rock, floor strip, background, shadows or effects."
+}

@@ -1,5 +1,26 @@
 # Animações do Zumbi — produção 01
 
+## Entrega atual — 2026-10-13
+
+**Piloto jogável para leste:** caminhada (9 quadros,30FPS), estocada (6 posições de reprodução,20FPS) e inspiração (10 posições,14FPS), mais pose com os pés no chão entre ações. São **19 PNGs distintos** no manifesto; retornos reaproveitam os quadros originais na ordem reversa. O tamanho de tela do Zumbi N1 é76px e o dos demais humanos68–70px, sem reduzir os arquivos. As oito direções e lâminas animadas N2/N3 ainda não estão concluídas.
+
+Estocada v3 usa braços estendidos e joelhos flexionados, com uma ponta à direita. A sequência curta chega ao contato em50ms e retorna à pose; não altera o instante do dano da simulação. O quadro de contato recebeu deslocamento de4px no editor gratuito do PixelLab para manter a base em143: comparação confirmou os pixels originais intactos no novo canvas. Inspiração v2 mantém uma lança vertical enquanto o punho sobe; volta pelos mesmos cinco PNGs. Durante esse gesto sem alvo o personagem pode virar para a plateia usando o clip leste real, mesmo se o adversário estiver noutra direção. Ataques continuam exigindo a direção exata.
+
+Gerações novas concluídas e inspecionadas quadro a quadro nesta retomada:
+
+| Ação | Job | Cobrança | Exportação |
+| --- | --- | --- | --- |
+| Pose de contato | `50d9f0c5-0f79-4304-8c0b-58847ea22a0b` |1| `pose_estocada_contato.png` |
+| Extensão v3 | `c8740275-d0f4-471c-9504-58b41f91fbdf` |3| `exports/attack_east_03`, ZIP86arquivos/0divergências |
+| Pose do punho erguido | `8fdd25ac-7bf7-43e8-a0e1-8523765e4cd8` |1| `pose_inspiracao_fim.png` |
+| Inspiração v2 | `515e8d45-026c-4080-b810-a0a55008ece7` |2| `exports/skill_east_02`, ZIP91arquivos/0divergências |
+
+Os ZIPs incluem estudos rejeitados e vistas oeste adicionadas em paralelo, ainda fora deste manifesto. Inspecionar essas vistas antes de gastar em novas gerações. Não há job pendente desta fila. Saldo final consultado: **12 restantes,27 usadas,total40,US$0,trial**.
+
+Verificado: banco122/0, controlador97/0, integração30/0, cliente444/0 headless e444/0 OpenGL, VFX237/0. Três capturas reais do cliente mostram skill, caminhada e estocada por eventos da simulação numa sessão isolada; não são teste de rede ou balanceamento. Capturas e recibo em `RelicArena/captures/zumbi_game_*_2026-10-13.png` e `zumbi_animation_game_evidence.json`. A vitrine ampliada está em `tools/preview_zumbi_animations.gd`; iniciar por `RelicArena/Testar_animacoes_Zumbi.cmd`.
+
+**Limite da verificação:** outra IA alterou `main.gd` durante a janela dos testes finais. Banco, controlador, loader, animações e manifesto VFX ficaram estáveis nos hashes antes/depois. As contagens registram execuções reais, mas não congelam toda a versão do cliente atual. Logs/hashes em `revisoes/animacoes_2026-10-13/`; novas mudanças da outra IA precisam da própria validação. As seções abaixo preservam o histórico da produção e suas correções.
+
 ## Revisão independente — 2026-10-13, prevalece sobre a fila anterior
 
 Somente **walk leste v2** permanece ativo. A revisão de todos os 16 quadros novos rejeitou `spear_thrust_v2` como estocada (ele caminha segurando a lança, cuja ponta recua 7 px), e `skill_rally_v1` por lâmina ausente no 003 e duplicada no 005. Foram retirados do manifesto, preservados nos diretórios e no ZIP oficial; os rótulos "concluída e integrada" da tabela abaixo são registros anteriores corrigidos por esta seção. Recibo: `revisoes/animacoes_2026-10-13/review_attack_skill.json`. Não confundir carregamento técnico com aprovação visual.

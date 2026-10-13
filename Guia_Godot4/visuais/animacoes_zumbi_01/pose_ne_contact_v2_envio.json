@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 90d0bd9b-dc94-4911-b6e0-0ba9a167b698\njob_id: 90d0bd9b-dc94-4911-b6e0-0ba9a167b698\nmodel: pixen\nedit: Strong NE spear THRUST contact pose, same back-three-quarter warrior and body size. Fully STRAIGHTEN BOTH ARMS toward UPPER RIGHT: both hands well beyond the face, left hand also grips the shaft. Lean chest forward, bend front knee, rear foot planted. Drive ONE rigid diagonal spear up-right so its single SILVER TIP reaches near x148,y16; lower-left butt stays plain wood. Keep feet near y150, original adult proportions, scars, pants, chains and dagger. Transparent, no ground or new props.\nsource: 160x160px\nsize: 160x160px\ntransparent: True\nasset_id: bd5685fa-6a7c-5310-9a58-5fed09f5ed8e\nasset_status: pending (saved when generation completes)\ncost: 1 generation\nstatus: processing (~10-40s)\n\nhint: get_image(job_id=\"90d0bd9b-dc94-4911-b6e0-0ba9a167b698\")"
+    }
+  ],
+  "isError": false
+}

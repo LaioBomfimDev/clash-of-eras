@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "draw",
+    "--recipe",
+    "{\"job\":{\"canvas\":[128,180],\"frame_count\":1,\"durations_ms\":[100],\"views\":[{\"id\":\"ne-04\",\"offset\":[0,0]},{\"id\":\"nw-04\",\"mirror_of\":\"ne-04\"},{\"id\":\"ne-05\",\"offset\":[0,0]},{\"id\":\"nw-05\",\"mirror_of\":\"ne-05\"},{\"id\":\"ne-06\",\"offset\":[0,0]},{\"id\":\"nw-06\",\"mirror_of\":\"ne-06\"}],\"source_bookends_exact\":false,\"body_palette_exact\":true,\"require_clear_border\":true},\"scene\":{\"layers\":[{\"id\":\"body\",\"name\":\"Body - original pixels registered to foot baseline\"}],\"views\":{\"ne-04\":{\"selections\":{\"all\":{}},\"nodes\":{\"body\":{\"layer\":\"body\",\"at\":[0,-8],\"draw\":[{\"op\":\"copy\",\"part\":\"all\"}]}}},\"ne-05\":{\"selections\":{\"all\":{}},\"nodes\":{\"body\":{\"layer\":\"body\",\"at\":[0,-1],\"draw\":[{\"op\":\"copy\",\"part\":\"all\"}]}}},\"ne-06\":{\"selections\":{\"all\":{}},\"nodes\":{\"body\":{\"layer\":\"body\",\"at\":[0,0],\"draw\":[{\"op\":\"copy\",\"part\":\"all\"}]}}}}}}",
+    "--sources",
+    "{\"ne-04\":\"https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/074082f9-8af4-460d-bd3e-751ca9a9a129/north-east/4.png?t=1791877209684\",\"ne-05\":\"https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/074082f9-8af4-460d-bd3e-751ca9a9a129/north-east/5.png?t=1791877209684\",\"ne-06\":\"https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/074082f9-8af4-460d-bd3e-751ca9a9a129/north-east/6.png?t=1791877209684\"}"
+  ],
+  "mode": "low",
+  "notes": "Reviewed all7 genuinely articulated NE walk frames: feet drift145,147,144,149,153,146,145. Translate frames vertically by0,-2,+1,-4,-8,-1,0 respectively to one baseline145. Preserve every visible pixel, no resizing/redrawing; clear border required. Derive exact NW mirrors using documented mirror_of. Source frames and official ZIP preserved."
+}

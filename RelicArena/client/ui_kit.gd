@@ -59,7 +59,14 @@ static var _icons: Dictionary = {}
 static func icon(name: String) -> Texture2D:
 	if not _icons.has(name):
 		var path: String = ICON_DIR + name + ".png"
-		_icons[name] = load(path) as Texture2D if ResourceLoader.exists(path) else null
+		var tex: Texture2D = null
+		if ResourceLoader.exists(path):
+			tex = load(path) as Texture2D
+		elif FileAccess.file_exists(path):
+			var img: Image = Image.load_from_file(path)
+			if img != null:
+				tex = ImageTexture.create_from_image(img)
+		_icons[name] = tex
 	return _icons[name] as Texture2D
 
 
@@ -268,13 +275,13 @@ static func draw_gold_pile(canvas: CanvasItem, center: Vector2, _gold_amount: in
 
 
 static func draw_gold_pile_glow(canvas: CanvasItem, center: Vector2, visual_time: float) -> void:
-	# 1. Resplendor / Aura difusa de ouro atrás da pilha
+	# 1. Resplendor / Aura difusa de ouro concentrada no centro da pilha
 	var pulse: float = 0.88 + 0.12 * sin(visual_time * 2.8)
 	var glow_layers: Array = [
-		[Vector2(135, 46), Color(1.0, 0.76, 0.2, 0.12 * pulse)],
-		[Vector2(105, 36), Color(1.0, 0.84, 0.26, 0.20 * pulse)],
-		[Vector2(70, 24), Color(1.0, 0.92, 0.38, 0.32 * pulse)],
-		[Vector2(38, 14), Color(1.0, 0.98, 0.58, 0.48 * pulse)]
+		[Vector2(65, 34), Color(1.0, 0.76, 0.2, 0.16 * pulse)],
+		[Vector2(50, 26), Color(1.0, 0.84, 0.26, 0.25 * pulse)],
+		[Vector2(36, 18), Color(1.0, 0.92, 0.38, 0.38 * pulse)],
+		[Vector2(20, 10), Color(1.0, 0.98, 0.58, 0.55 * pulse)]
 	]
 	for layer: Array in glow_layers:
 		var rad: Vector2 = layer[0]
@@ -287,45 +294,38 @@ static func draw_gold_pile_glow(canvas: CanvasItem, center: Vector2, visual_time
 
 
 static func draw_gold_pile_coins(canvas: CanvasItem, center: Vector2) -> void:
-	# 2. Moedas empilhadas organicamente em camadas (monte amplo e alto)
+	# 2. Moedas empilhadas organicamente no centro (monte compacto, alto e denso)
 	var coin_defs: Array = [
-		# Pico traseiro superior (visível bem acima do pill)
-		Vector2(0, -32), Vector2(-16, -30), Vector2(16, -29),
-		Vector2(-32, -26), Vector2(32, -25), Vector2(-8, -27), Vector2(8, -26),
-		Vector2(-48, -22), Vector2(48, -21), Vector2(-24, -23), Vector2(24, -22), Vector2(0, -24),
-		# Camada traseira média
-		Vector2(-64, -17), Vector2(64, -16), Vector2(-40, -18), Vector2(40, -17),
-		Vector2(-78, -11), Vector2(78, -10), Vector2(-55, -12), Vector2(55, -11),
-		Vector2(-20, -15), Vector2(20, -14), Vector2(0, -16),
-		# Laterais transbordando (asas do monte)
-		Vector2(-92, -4), Vector2(92, -3), Vector2(-70, -5), Vector2(70, -4),
-		Vector2(-104, 5), Vector2(104, 6), Vector2(-85, 3), Vector2(85, 4),
-		Vector2(-114, 14), Vector2(114, 15), Vector2(-96, 12), Vector2(96, 13),
-		Vector2(-76, 9), Vector2(76, 10), Vector2(-56, 7), Vector2(56, 8),
-		# Camada frontal inferior contornando e abraçando a base do pill
-		Vector2(-86, 20), Vector2(86, 21), Vector2(-66, 19), Vector2(66, 20),
-		Vector2(-46, 20), Vector2(46, 21), Vector2(-26, 22), Vector2(26, 23),
-		Vector2(-10, 24), Vector2(10, 24), Vector2(0, 25),
-		Vector2(-95, 25), Vector2(95, 26), Vector2(-75, 25), Vector2(75, 26),
-		Vector2(-55, 27), Vector2(55, 27), Vector2(-35, 28), Vector2(35, 28),
-		Vector2(-18, 29), Vector2(18, 29), Vector2(0, 30)
+		# Pico superior central (visível no topo do painel)
+		Vector2(0, -34), Vector2(-8, -32), Vector2(8, -31),
+		Vector2(-16, -28), Vector2(16, -27), Vector2(-4, -28), Vector2(4, -27),
+		Vector2(-24, -24), Vector2(24, -23), Vector2(-12, -24), Vector2(12, -23), Vector2(0, -25),
+		# Camada média superior
+		Vector2(-32, -19), Vector2(32, -18), Vector2(-20, -20), Vector2(20, -19),
+		Vector2(-28, -15), Vector2(28, -14), Vector2(-14, -16), Vector2(14, -15), Vector2(0, -17),
+		# Camada central compacta
+		Vector2(-38, -10), Vector2(38, -9), Vector2(-24, -11), Vector2(24, -10),
+		Vector2(-35, -5), Vector2(35, -4), Vector2(-18, -6), Vector2(18, -5), Vector2(0, -7),
+		# Base traseira que abraça o topo do mostrador
+		Vector2(-42, 0), Vector2(42, 1), Vector2(-26, -1), Vector2(26, 0), Vector2(-10, -2), Vector2(10, -1),
+		Vector2(-40, 6), Vector2(40, 7), Vector2(-22, 5), Vector2(22, 6), Vector2(0, 4)
 	]
 
-	var base_rim: Color = Color("9e6c1e")
-	var base_face: Color = Color("f5bf2e")
-	var base_bevel: Color = Color("ffea75")
-	var shadow_col: Color = Color(0.14, 0.08, 0.02, 0.55)
+	var base_rim: Color = Color("b47d24")
+	var base_face: Color = Color("ffd700") # Ouro puro reluzente
+	var base_bevel: Color = Color("fff3a8") # Brilho especular dourado
+	var shadow_col: Color = Color(0.12, 0.07, 0.02, 0.65)
 
 	for i: int in range(coin_defs.size()):
 		var c_pos: Vector2 = center + coin_defs[i]
-		var rx: float = 8.2
-		var ry: float = 5.2
+		var rx: float = 8.5
+		var ry: float = 5.4
 
 		# Gradiente de luz por altitude na pilha
-		var alt_factor: float = clampf((c_pos.y - center.y + 32.0) / 60.0, 0.0, 1.0)
-		var rim_col: Color = base_rim.lerp(Color("845214"), alt_factor * 0.4)
-		var face_col: Color = base_face.lerp(Color("e5a820"), alt_factor * 0.35)
-		var inner_bevel: Color = base_bevel.lerp(Color("f4c740"), alt_factor * 0.3)
+		var alt_factor: float = clampf((c_pos.y - center.y + 34.0) / 45.0, 0.0, 1.0)
+		var rim_col: Color = base_rim.lerp(Color("845214"), alt_factor * 0.3)
+		var face_col: Color = base_face.lerp(Color("f5bf2e"), alt_factor * 0.25)
+		var inner_bevel: Color = base_bevel.lerp(Color("ffea75"), alt_factor * 0.2)
 
 		# Sombra na base
 		var sh_pts: PackedVector2Array = PackedVector2Array()
@@ -354,30 +354,33 @@ static func draw_gold_pile_coins(canvas: CanvasItem, center: Vector2) -> void:
 			var a: float = TAU * float(step) / 12.0
 			bevel_pts.append(c_pos + Vector2(0, -0.6) + Vector2(cos(a) * (rx - 2.2), sin(a) * (ry - 1.4)))
 		bevel_pts.append(bevel_pts[0])
-		canvas.draw_polyline(bevel_pts, Color(inner_bevel, 0.65), 1.0, true)
+		canvas.draw_polyline(bevel_pts, Color(inner_bevel, 0.80), 1.0, true)
 
 		# Brasão gravado no centro das moedas frontais/visíveis
 		if i % 2 == 0:
-			canvas.draw_line(c_pos + Vector2(-2.2, -0.6), c_pos + Vector2(2.2, -0.6), Color(rim_col, 0.55), 1.0, true)
-			canvas.draw_circle(c_pos + Vector2(0, -1.8), 0.8, Color(inner_bevel, 0.75))
+			canvas.draw_line(c_pos + Vector2(-2.4, -0.6), c_pos + Vector2(2.4, -0.6), Color(rim_col, 0.65), 1.0, true)
+			canvas.draw_circle(c_pos + Vector2(0, -1.8), 0.9, Color(inner_bevel, 0.85))
 
 		# Ponto de brilho especular no canto superior esquerdo
-		canvas.draw_circle(c_pos + Vector2(-rx * 0.45, -ry * 0.45), 1.1, Color(1, 1, 0.95, 0.95))
+		canvas.draw_circle(c_pos + Vector2(-rx * 0.45, -ry * 0.45), 1.2, Color(1, 1, 0.95, 0.98))
 
 
 static func draw_gold_pile_sparks(canvas: CanvasItem, center: Vector2, visual_time: float) -> void:
-	# 3. Faíscas sutis cintilantes sobre a pilha
+	# 3. Faíscas e estrelas cintilantes intensificadas no centro da pilha
 	var spark_offsets: Array = [
-		Vector2(-45, -24), Vector2(40, -22), Vector2(-15, -28), Vector2(10, -26), Vector2(-70, -8), Vector2(65, -10)
+		Vector2(0, -36), Vector2(-16, -28), Vector2(16, -27),
+		Vector2(-26, -18), Vector2(25, -17), Vector2(-6, -22), Vector2(7, -21),
+		Vector2(-36, -8), Vector2(34, -7)
 	]
 	for s_idx: int in range(spark_offsets.size()):
 		var sp_pos: Vector2 = center + spark_offsets[s_idx]
-		var sp_alpha: float = clampf(sin(visual_time * 4.2 + float(s_idx) * 1.6), 0.0, 1.0)
-		if sp_alpha > 0.15:
-			var sp_col: Color = Color(Color("fff3a8"), sp_alpha * 0.92)
-			canvas.draw_line(sp_pos - Vector2(3.5, 0), sp_pos + Vector2(3.5, 0), sp_col, 1.2, true)
-			canvas.draw_line(sp_pos - Vector2(0, 3.5), sp_pos + Vector2(0, 3.5), sp_col, 1.2, true)
-			canvas.draw_circle(sp_pos, 1.0, Color.WHITE)
+		var sp_alpha: float = clampf(sin(visual_time * 4.8 + float(s_idx) * 1.4), 0.0, 1.0)
+		if sp_alpha > 0.12:
+			var sp_col: Color = Color(Color("fff7b2"), sp_alpha * 0.98)
+			var arm: float = 3.8 if s_idx < 3 else 2.8
+			canvas.draw_line(sp_pos - Vector2(arm, 0), sp_pos + Vector2(arm, 0), sp_col, 1.3, true)
+			canvas.draw_line(sp_pos - Vector2(0, arm), sp_pos + Vector2(0, arm), sp_col, 1.3, true)
+			canvas.draw_circle(sp_pos, 1.2, Color.WHITE)
 
 
 ## Moldura ornada de botões da loja (Espaço, Renovar, Lutar)
@@ -424,3 +427,33 @@ static func draw_ornate_button_frame(canvas: CanvasItem, rect: Rect2, theme_name
 		if is_hover:
 			canvas.draw_line(dot_pos - Vector2(2.5, 0), dot_pos + Vector2(2.5, 0), Color.WHITE, 1.0, true)
 			canvas.draw_line(dot_pos - Vector2(0, 2.5), dot_pos + Vector2(0, 2.5), Color.WHITE, 1.0, true)
+
+
+## Moldura decorada de painel (como o badge de membros da equipe)
+static func draw_ornate_panel_frame(canvas: CanvasItem, rect: Rect2, theme_name: String = "bronze") -> void:
+	var bg_col: Color = Color(0.07, 0.09, 0.12, 0.94) if theme_name == "bronze" else Color(0.06, 0.14, 0.18, 0.94)
+	var b_col: Color = Color(0.82, 0.64, 0.36, 0.88) if theme_name == "bronze" else Color(0.20, 0.62, 0.68, 0.88)
+	var b_light: Color = Color(1.0, 0.88, 0.55, 1.0) if theme_name == "bronze" else Color(0.48, 0.88, 0.95, 1.0)
+
+	# 1. Sombra exterior suave
+	canvas.draw_rect(rect.grow(1.5), Color(0.0, 0.0, 0.0, 0.45), false, 1.5)
+
+	# 2. Fundo sólido
+	canvas.draw_rect(rect, bg_col)
+	# Brilho sutil no topo
+	var top_glow: Rect2 = Rect2(rect.position, Vector2(rect.size.x, rect.size.y * 0.45))
+	canvas.draw_rect(top_glow, Color(b_light, 0.08))
+
+	# 3. Moldura dupla chanfrada
+	canvas.draw_rect(rect, b_col, false, 1.5)
+	canvas.draw_rect(rect.grow(-2.0), Color(b_light, 0.35), false, 1.0)
+
+	# 4. Cantoneiras medievais chanfradas nos 4 cantos
+	var corners: Array[Vector2] = [rect.position, Vector2(rect.end.x, rect.position.y), Vector2(rect.position.x, rect.end.y), rect.end]
+	var corner_dirs: Array[Vector2] = [Vector2(1, 1), Vector2(-1, 1), Vector2(1, -1), Vector2(-1, -1)]
+	for i: int in range(4):
+		var cp: Vector2 = corners[i]
+		var cd: Vector2 = corner_dirs[i]
+		canvas.draw_line(cp + Vector2(cd.x * 6, 0), cp + Vector2(0, cd.y * 6), b_light, 1.2, true)
+		var dot_pos: Vector2 = cp + Vector2(cd.x * 3.0, cd.y * 3.0)
+		canvas.draw_circle(dot_pos, 1.0, b_light)

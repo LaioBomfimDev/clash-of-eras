@@ -121,13 +121,13 @@
       "move_interval": 0.45,
       "crit_chance": 0.08,
       "crit_multiplier": 1.5,
-      "heal_amount": 10.0,
+      "heal_amount": 11.5,
       "heal_interval": 1.0,
       "heal_range": 2,
       "moonwalk_steps": 3,
       "moonwalk_step_duration": 0.55,
       "moonwalk_pause_duration": 1.2,
-      "dance_shield_amount": 120.0,
+      "dance_shield_amount": 138.0,
       "dance_shield_duration": 4.0,
       "rarity": "epic",
       "heal_teamwide": true
@@ -184,7 +184,7 @@
     "snoop": {
       "display_name": "Snoop",
       "max_hp": 470.0,
-      "attack_damage": 30.0,
+      "attack_damage": 34.5,
       "armor": 8.0,
       "resist": 18.0,
       "damage_type": "magic",
@@ -201,7 +201,7 @@
       "projectile_min_seconds": 0.2,
       "smoke_radius": 2,
       "smoke_duration": 3.0,
-      "smoke_damage_per_tick": 8.0,
+      "smoke_damage_per_tick": 9.2,
       "smoke_tick_interval": 0.5,
       "smoke_miss_chance": 0.3,
       "smoke_ally_speed_bonus": 0.25,
@@ -225,12 +225,16 @@
       "revive_ratio": 0.4,
       "rarity": "common",
       "extra_revive_ratio": 0.3,
-      "extra_revive_min_level": 3
+      "extra_revive_min_level": 3,
+      "revive_delay": 1.0,
+      "revive_buff_duration": 5.0,
+      "revive_team_attack_bonus": 0.25,
+      "revive_divine_frenzy_duration": 5.0
     },
     "bob_marley": {
       "display_name": "Bob Marley",
       "max_hp": 520.0,
-      "attack_damage": 22.0,
+      "attack_damage": 25.3,
       "armor": 10.0,
       "resist": 24.0,
       "damage_type": "magic",
@@ -316,6 +320,7 @@
       "boss_purple_fire_damage": 140.0,
       "boss_tornado_cooldown": 7.5,
       "boss_tornado_damage": 160.0,
+      "boss_teleport_interval": 4.0,
       "boss_summon_times": [
         2.0,
         14.0

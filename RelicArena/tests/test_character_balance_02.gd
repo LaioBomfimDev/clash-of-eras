@@ -100,8 +100,13 @@ func _test_lula_returns() -> void:
 		sim.units = [lula, _unit(sim, "neymar", 101, 1, Vector2i(3, 2))]
 		sim.start_combat()
 		sim._deal_damage(101, lula, 100000.0, false, "execute", true)
-		_check(lula.alive and lula.revive_count == 1, "first lethal hit revives at every level")
+		_check(lula.is_reviving and lula.revive_delay_remaining > 0.0, "first lethal hit starts 1.0s descent delay")
+		sim.step(1.0)
+		_check(lula.alive and lula.revive_count == 1, "first lethal hit revives at every level after 1.0s")
 		_near(lula.hp, lula.max_hp * 0.4, "first return40percent")
+		_check(lula.has_angel_wings, "Lula acquires angel wings")
+		_check(lula.divine_frenzy_timer > 0.0, "divine frenzy 100% crit active")
+		_check(lula.group_attack_buff_timer > 0.0, "group attack buff +25% active")
 		if level == 3:
 			lula.hp = 5.0
 			lula.bleeds = [
@@ -109,7 +114,9 @@ func _test_lula_returns() -> void:
 				{"source_id": 101, "damage": 1000.0, "remaining": 3.0, "until_tick": 0.0, "interval": 1.0}
 			]
 			sim._update_bleeds(0.05)
-			_check(lula.alive and lula.revive_count == 2 and lula.bleeds.is_empty(), "second return also clears retained and triggering bleeds")
+			_check(lula.is_reviving and lula.bleeds.is_empty(), "second return also clears bleeds")
+			sim.step(1.0)
+			_check(lula.alive and lula.revive_count == 2, "second N3 return revives after 1.0s")
 			_near(lula.hp, lula.max_hp * 0.3, "second N3 return30percent")
 		sim._deal_damage(101, lula, 100000.0, false, "execute", true)
 		_check(not lula.alive, "revivals are finite: next lethal hit kills")
@@ -164,7 +171,9 @@ func _test_round_reset() -> void:
 	sim.get_unit(11).attack_cooldown = 0.0
 	sim.step(0.05)
 	sim._deal_damage(101, lula, 100000.0, false, "execute", true)
+	sim.step(1.0)
 	sim._deal_damage(101, lula, 100000.0, false, "execute", true)
+	sim.step(1.0)
 	_check(sim.get_unit(11).mana > 0.0 and lula.revive_count == 2, "combat changes mana and consumes both returns")
 	sim._deal_damage(11, sim.get_unit(101), 100000.0, false, "execute", true)
 	sim.step(0.05)

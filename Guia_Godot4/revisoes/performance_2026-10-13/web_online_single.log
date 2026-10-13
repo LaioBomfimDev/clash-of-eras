@@ -1,0 +1,53 @@
+{
+  "scope": "Two real Web exports in desktop Chrome, loopback server. Not public Render latency or phone FPS.",
+  "cases": [
+    {
+      "dpr": 1,
+      "metrics": {
+        "client_cpu_ms": 6.213125,
+        "fps": 4,
+        "frame_ms": 133.521666666667,
+        "p95_frame_ms": 143.246666666667,
+        "render_height": 720,
+        "render_width": 1280,
+        "rtt_ms": 549.63
+      },
+      "errors": [],
+      "logs": [
+        "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org",
+        "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL",
+        "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support.",
+        "CLIENT_PHASE: menu; rodada 1; vidas [4, 4]",
+        "CLIENT_READY: Clash of Eras protótipo local; lobby de boas-vindas; 30 FPS; compêndio de heróis",
+        "CLIENT_PHASE: benefit; rodada 1; vidas [4, 4]",
+        "CLIENT_PHASE: preparation; rodada 1; vidas [5, 5]",
+        "CLIENT_PHASE: combat; rodada 1; vidas [5, 5]"
+      ],
+      "combatStarted": true
+    },
+    {
+      "dpr": 2,
+      "metrics": {
+        "client_cpu_ms": 6.025625,
+        "fps": 3,
+        "frame_ms": 133.471041666667,
+        "p95_frame_ms": 140.645,
+        "render_height": 720,
+        "render_width": 1280,
+        "rtt_ms": 561.085
+      },
+      "errors": [],
+      "logs": [
+        "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org",
+        "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL",
+        "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support.",
+        "CLIENT_PHASE: menu; rodada 1; vidas [4, 4]",
+        "CLIENT_READY: Clash of Eras protótipo local; lobby de boas-vindas; 30 FPS; compêndio de heróis",
+        "CLIENT_PHASE: benefit; rodada 1; vidas [4, 4]",
+        "CLIENT_PHASE: preparation; rodada 1; vidas [5, 5]",
+        "CLIENT_PHASE: combat; rodada 1; vidas [5, 5]"
+      ],
+      "combatStarted": true
+    }
+  ]
+}

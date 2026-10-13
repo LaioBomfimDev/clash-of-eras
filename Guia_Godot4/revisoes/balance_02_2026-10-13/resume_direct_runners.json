@@ -1,0 +1,25 @@
+{
+  "scope": "Real root tool outputs after resuming; other runs have separate stdout/stderr logs.",
+  "tests": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "ae103b",
+        "wall_time_seconds": 0.7421963,
+        "exit_code": 0,
+        "original_token_count": 31,
+        "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\n\r\nCHARACTER BALANCE02 TESTS: 71 passed, 0 failed\r\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "091808",
+        "wall_time_seconds": 0.7886277,
+        "exit_code": 0,
+        "original_token_count": 31,
+        "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\n\r\nBOSS RESOLUTION REGRESSION: 46 passed, 0 failed\r\n"
+      }
+    }
+  ]
+}

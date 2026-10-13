@@ -14,6 +14,7 @@ var max_hp: float
 var shield: float
 var dance_shield: float = 0.0
 var dance_shield_remaining: float = 0.0
+var dance_shield_source_id: int = -1
 var moonwalk_stage: String = "none"
 var moonwalk_steps_done: int = 0
 var moonwalk_timer: float = 0.0
@@ -29,6 +30,12 @@ var level_multiplier: float = 1.0
 var stun_remaining: float = 0.0
 var revived: bool = false
 var revive_count: int = 0
+var is_reviving: bool = false
+var revive_delay_remaining: float = 0.0
+var pending_revival_ratio: float = 0.0
+var has_angel_wings: bool = false
+var divine_frenzy_timer: float = 0.0
+var group_attack_buff_timer: float = 0.0
 var mana: float = 0.0
 var summoned: bool = false
 var summoner_id: int = -1
@@ -69,10 +76,16 @@ var target_id: int = -1
 var bleeds: Array[Dictionary] = []
 ## Boss Desenvolvedor
 var is_boss: bool = false
+var boss_enraged: bool = false
 var boss_red_fire_timer: float = 1.2
 var boss_tornado_timer: float = 4.8
 var boss_purple_fire_timer: float = 2.4
+var boss_teleport_timer: float = 4.0
 var boss_summons_spawned: Array[int] = []
+var boss_tornado_telegraphed: bool = false
+var boss_purple_telegraphed: bool = false
+var boss_tornado_target: Vector2i = Vector2i(-1, -1)
+var boss_purple_target: Vector2i = Vector2i(-1, -1)
 
 func _init(definition: UnitSpec, unit_id: int, side: int, start_cell: Vector2i) -> void:
 	spec = definition
@@ -98,6 +111,7 @@ func _init(definition: UnitSpec, unit_id: int, side: int, start_cell: Vector2i) 
 	boss_red_fire_timer = 1.2
 	boss_tornado_timer = 4.8
 	boss_purple_fire_timer = 2.4
+	boss_teleport_timer = definition.boss_teleport_interval if definition != null else 4.0
 	boss_summons_spawned.clear()
 	recalculate_combat_stats()
 
@@ -127,6 +141,7 @@ func as_dictionary() -> Dictionary:
 		"id": id, "key": key, "name": display_name, "team": team,
 		"cell": [cell.x, cell.y], "hp": hp, "max_hp": max_hp,
 		"shield": shield, "dance_shield": dance_shield, "dance_shield_remaining": dance_shield_remaining,
+		"dance_shield_source_id": dance_shield_source_id,
 		"moonwalk_stage": moonwalk_stage, "moonwalk_steps_done": moonwalk_steps_done,
 		"moonwalk_timer": moonwalk_timer,
 		"moonwalk_step_duration": spec.moonwalk_step_duration,
@@ -134,7 +149,8 @@ func as_dictionary() -> Dictionary:
 		"moonwalk_from_cell": [moonwalk_from_cell.x, moonwalk_from_cell.y],
 		"moonwalk_to_cell": [moonwalk_to_cell.x, moonwalk_to_cell.y],
 		"facing_axial": [facing_axial.x, facing_axial.y],
-		"alive": alive, "active": active, "crit_growth": crit_growth, "level": level, "stun_remaining": stun_remaining, "revived": revived, "summoned": summoned, "summoner_id": summoner_id, "guardian_id": guardian_id, "is_boss": is_boss,
+		"alive": alive, "active": active, "crit_growth": crit_growth, "level": level, "stun_remaining": stun_remaining, "revived": revived, "summoned": summoned, "summoner_id": summoner_id, "guardian_id": guardian_id, "is_boss": is_boss, "boss_enraged": boss_enraged, "boss_teleport_timer": boss_teleport_timer,
+		"is_reviving": is_reviving, "revive_delay_remaining": revive_delay_remaining, "has_angel_wings": has_angel_wings, "divine_frenzy_timer": divine_frenzy_timer, "group_attack_buff_timer": group_attack_buff_timer,
 		"attack_damage": attack_damage, "armor": armor, "resist": resist,
 		"damage_type": damage_type, "synergy_tags": spec.synergy_tags.duplicate(),
 		"damage_dealt": damage_dealt, "healing_done": healing_done,

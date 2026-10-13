@@ -1,6 +1,6 @@
 # Histórico de bugs e investigações
 
-Atualização: 2026-10-12, America/Sao_Paulo.
+Atualização: 2026-10-13, America/Sao_Paulo.
 
 Este arquivo registra o que foi observado, como investigamos, quais hipóteses foram descartadas, o que mudou e como verificamos a solução. Consultar antes de investigar um problema semelhante. Decisões e regras atuais ficam em [CEREBRO.md](CEREBRO.md).
 
@@ -651,6 +651,20 @@ Em `_refresh_synergies()`, a propriedade `row.tooltip_text = _rich_synergy_toolt
 
 ## 7. Verificações futuras importantes
 
+### ART-004 — Clips aprovados por descrição não mostravam o ataque correto
+
+**Data/estado:** 2026-10-13, corrigido no piloto leste; demais vistas pendentes.
+
+**Reprodução/investigação:** abrir todos os quadros de `attack_east_02` e `skill_east_01`. O primeiro fazia passada segurando a lança, cuja ponta recuava7px; na habilidade a lâmina sumia no003 e aparecia em duas extremidades no005. Arquivos eram byte a byte iguais aos originais oficiais:16/16 conferidos, portanto não houve corrupção de download. Recibos `revisoes/animacoes_2026-10-13/review_attack_skill.json` e `audit_exports.json`.
+
+**Causa sustentada:** os quadros gerados não representavam a ação/continuidade da arma pedidas. Os registros anteriores de "integrado" não substituíam essa revisão visual; testes de carregamento não verificavam a estocada.
+
+**Mudança:** retirar ambos os clips, preservar originais; produzir poses finais explícitas de estocada e punho erguido; interpolar até elas com quatro quadros gerados por ação. Padding e registro do contato feitos pelo editor gratuito do PixelLab, sem reduzir pixels. Retorno usa os mesmos PNGs na ordem reversa. Pose de combate opcional evita a pedra do retrato reaparecendo entre ações.
+
+**Validação:** todos os dez quadros novos vistos individualmente pelo agente principal; uma lâmina em cada quadro, braços articulados e estocada de corpo inteiro. PNG do contato preservado integralmente após deslocamento4px, conferido RGBA. Três capturas do viewport real mostram os clips ligados aos eventos. Banco122/0, player97/0 e integração30/0; cliente444/0 headless/OpenGL. São verificações do piloto; `main.gd` teve alterações paralelas durante a janela final, registradas nos hashes. Não afirmar aprovação de todas as direções ou de balanceamento.
+
+**Lição:** inspecionar movimento, arma e registro em cada quadro antes de marcar uma ação concluída. Um teste técnico aprovado e uma legenda "estocada" não provam a qualidade visual.
+
 Esta lista orienta próximas etapas. Formação, relógio, resultado, economia local, itens e privacidade da Session já têm fixtures; rede, coleção, sinergias completas e dispositivo continuam pendentes. Não são bugs encontrados nem uma lista de testes de rede aprovados.
 
 | Área | Regra/invariante a verificar |
@@ -707,6 +721,107 @@ Esta lista orienta próximas etapas. Formação, relógio, resultado, economia l
 | BUG-019 | Apresentação / sinergias | Gaveta consulta a formação congelada, igual à barra; morte não reduz o patamar exibido. |
 | BUG-020 | Layout / botões / hover | Sobreposição de CAMPO com FUNDIR resolvida, legibilidade de texto recuperada com show_behind_parent e auras de hover implementadas. |
 | BUG-021 | Apresentação / sinergia | Tooltip nativo redundante removido; card gráfico refinado com retratos pixel art e sem caracteres de console. |
+| BUG-022 | Ferramenta / vitrine de animações | Indentação corrigida no seletor de direções; captura oeste voltou a carregar e salvar pelo Godot. |
+| BUG-023 | Rodada PvE / resolução e vidas | Corrigido: prêmio exige chefe morto; PvE protege vidas de ambos os lados; regressão46/0 e partidas completas verificadas. |
+| BUG-024 | Cópias / feedback de evolução | Corrigido: terceira cópia registra3/4 sem anunciar novo nível; evento informa previous_level/level_changed e cliente só anima evolução real. |
+| BUG-025 | Cliente / atualização repetida | Corrigido: UI online atualiza uma vez por estado novo; benchmark3200→800 atualizações, sem remover animações. |
+| BUG-026 | Transporte / trabalho e histórico acumulados | Corrigido: comandos agrupam snapshots, cache é negociado, eventos têm histórico limitado e recepção usa lotes; dados/eventos privados preservados. |
+| BUG-027 | Inicialização PvP / bot indevido | Corrigido: time1 não recebe compras/formação do bot antes da partida humana; reset ocorre depois de desativar bot, antes dos snapshots. |
+| BUG-028 | Cliente / compilação em edição simultânea | Declaração duplicada de is_boss_bar removida pontualmente; cópia congelada revalidada antes de exportar. |
+| BUG-029 | Diagnóstico / relógio de quadro | Intervalo de quadro usa relógio monotônico; delta limitado pelo engine escondia parte dos travamentos. |
+| BUG-030 | Web / desenho estático repetido | Arena, moedas e aparência das cartas usam cache GPU; combate local Web melhorou, sem comprovar 60 FPS ou desempenho público. |
 | INC-007 | Configuração MCP & Moedas HD | Sintaxe JSON em mcp_config.json corrigida, servidor AutoSprite MCP configurado, cliente REST CLI criado e moedas HD integradas com animação no HUD. |
 
 O primeiro bug de combate foi registrado como BUG-001. Se uma ocorrência acima voltar, acrescentar evidências ao registro existente ou vincular o novo caso; não presumir a mesma causa apenas por ter sintoma parecido.
+
+### BUG-022 — Vitrine de animações não carregava após incluir seleção de direção
+
+**Reprodução (2026-10-13):** executar `tools/preview_zumbi_animations.gd -- --capture --direction=west` no Godot retornou saída1 e `Expected indented block after "if" block`, linha43. Saída preservada em [lote02_preview_initial_failure.json](revisoes/animacoes_2026-10-13/lote02_preview_initial_failure.json). Afetava a ferramenta de inspeção, não a simulação.
+
+**Investigação e causa:** conferida a indentação do bloco que enumera clips disponíveis; `available.append(candidate)` estava no mesmo nível do `if`, deixando o bloco vazio. Consultado o histórico; a causa é distinta dos erros de compilação anteriores.
+
+**Mudança:** acrescentado um nível de tabulação nessa linha, dentro do `if`, sem alterar regras do jogo.
+
+**Validação:** a mesma captura oeste terminou com saída0 e `ZUMBI ANIMATION PREVIEW CAPTURE: 0`. [Imagem real](../RelicArena/captures/zumbi_animacoes_west_2026-10-13.png) inspecionada: três painéis exibem os PNGs oeste. Isso valida o carregamento/captura desta ferramenta; não é teste de multiplayer ou balanceamento.
+
+### BUG-023 — Chefe vivo no timeout concede espólios e PvE altera vidas adversárias
+
+**Estado:** corrigido na continuação de2026-10-13. A reprodução abaixo registra o estado anterior. Histórico consultado; não havia ocorrência de resolução da rodada do Boss.
+
+**Reprodução:** runner temporário fora do projeto usa Session/simulação reais. Com dois heróis vivos e Boss com2200HP, `Session.step(0.05)` a partir do último tick leva a30s: resultado`winner=0`, motivo`survivors`, sobreviventes`[2,1]`, três drops (+30ouro nesta semente) e vidas`[4,4]→[4,3]`. Em outro caso, derrotar o Boss com adversário a1vida gera`[4,1]→[4,0]`, `match_winner=0` e `match_over`.
+
+**Investigação/causa sustentada:** `_check_resolution()` em `arena_simulation.gd` reutiliza desempate por sobreviventes/dano na rodada PvE; a exceção de vida só protege o perdedor0. `_resolve_boss_rewards()` em `match_session.gd` concede prêmio quando`winner==0`, sem exigir morte do chefe. Isso contraria a regra documentada de derrotar o chefe em30s e transforma a vitória PvE em derrota do adversário.
+
+**Evidência anterior:** [boss_readonly_repro.json](revisoes/animacoes_2026-10-13/boss_readonly_repro.json); Godot4.7.2, sete verificações de fixture aprovadas e cinco de contrato falharam, saída1 por divergência esperada, sem erro de script. Não confundir esse runner diagnóstico com a suíte anterior de18 testes do Boss que não cobria estes casos. Naquela revisão a correção ficou pendente; a continuação abaixo registra sua conclusão.
+
+**Mudança aplicada:** core reseta modoPvE em cada rodada e a Session o ativa explicitamente. `boss_defeated()` exige um chefe inimigo ativo existente e morto. PvE vence só pela morte do chefe (lacaios restantes não bloqueiam prêmio), falha por eliminação/timeout com chefe vivo, e não desconta corações de nenhum lado. A Session valida o chefe morto antes de sortear prêmios e conserva a guarda de concessão única. PvP mantém desempates e desconto normais. Novos HP8000/2000/3000 são pedido posterior de balanceamento, não a causa do bug.
+
+**Validação posterior real:** runner novo `tests/test_boss_resolution_regression.gd` tinha baseline válido29/17 falhas de contrato, saída1; depois ficou46/0, saída0. Cobre chefe ausente, timeout com vantagem de tropas/dano, morte com lacaio vivo, vidas protegidas, recompensa única, vida extra legítima e rodada4 normal no core. Session173/0, economia82/0 e quatro partidas completas775/0 também passaram; logs/hashes em [economia02_validacao.json](revisoes/boss_2026-10-13/economia02_validacao.json). Sem afirmação de equilíbrio ou de PvP pela internet. A única atualização no runner após baseline foi adaptar rendaR5 à curva nova pedida pelo usuário; invariantes do chefe preservados.
+
+### BUG-024 — Terceira cópia anuncia evolução sem mudar de nível
+
+**Estado/reprodução (2026-10-13):** com a nova regra1/2/4cópias, recrutar a terceira cópia de um herói jáN2. O nível permanecia corretamenteN2, porém o cliente repetia a explosão e mensagem de evolução. O smoke inicial registrou `CLIENT_SMOKE_FAIL terceira cópia guarda progresso sem anunciar evolução falsa`, em [tabuleiro_maior_smoke_inicial.log](../RelicArena/captures/tabuleiro_maior_smoke_inicial.log). Das três falhas daquele runner, duas eram expectativas antigas de ouro/renda; apenas esta representava defeito de apresentação.
+
+**Investigação/causa:** consultado este histórico; BUG-010 tratava nível ausente no resultado e não explicava o caso. `_add_copy()` emitia `hero_upgraded` para toda cópia incorporada; a interface tratava o evento como aumento de nível incondicional. Com a regra anterior1/2/3, toda cópia aceita realmente evoluía; com1/2/4, isso deixou de ser verdade.
+
+**Mudança:** Session informa `previous_level` e `level_changed` na resposta/evento. O cliente só dispara a celebração de evolução quando o nível muda; a terceira cópia mostra `Cópia incorporada (3/4)` e feedback de recrutamento. Cartão da loja informa o progresso restante. Transporte mantém o dicionário completo e a filtragem privada por time; esta última verificação foi leitura de código, não novo teste pela internet.
+
+**Validação:** economia91/0 verifica a sequência de mudançastrue/false/true e comandos repetidos. Smoke488/0 headless,491/0 OpenGL com três capturas na entrega visual; revalidação posterior do cliente atual488/0 headless e488/0 OpenGL sem capturas. Session173/0, todas com saída0. [Recibo visual e hashes](../RelicArena/captures/tabuleiro_maior_validacao.json) e [recibo consolidado](../RelicArena/VALIDACAO_BALANCE_02.json). Nenhum novo defeito foi inferido dos erros temporários de scripts de teste durante a implementação.
+
+**Lição:** separar incorporação de recurso e mudança efetiva de nível; eventos de apresentação precisam refletir a transição real, não apenas o comando aceito.
+
+### BUG-025 — Interface reconstruída sem estado novo
+
+**Reprodução/investigação (2026-10-13):** usuário relata travas no navegador/atalho, com Godot nativo fluido. Consultados os bugs de apresentação anteriores; não havia registro deste custo. `_process()` chamava `_refresh()` todo quadro; `snapshot_received` o chamava novamente, e a loja solicitava redraw de todos os filhos estáticos. Offline, dois caminhos obtinham o mesmo snapshot. Fixture com2400quadros e800snapshots reais da Session reproduziu3200atualizações completas. Isso comprova repetição, não a causa única de toda queda deFPS.
+
+**Mudança:** callback guarda estado/sinaliza atualização; uma atualização de UI por quadro com novo estado, mantendo seleção/toasts imediatos e animações por quadro. Snapshotoffline reutilizado, bordas/recortes/VFX preparados na inicialização e redraw dos filhos estáticos removido. Diagnóstico usa medição real em lugar de promessa fixa60FPS.
+
+**Validação:** fixture agora800atualizações; CPU média headless preparação1,880→0,542ms e combate1,772→1,076ms. Smoke488/0 headless/OpenGL, regressão20/0 em ambos e banco122/0. [Reprodução, hashes, logs e limites](../revisoes/performance_2026-10-13/CLIENTE.md). Aquecimento transfere custo para o carregamento; testes não representam FPS de aparelho físico.
+
+### BUG-026 — Trabalho de rede repetido e filas sem orçamento
+
+**Reprodução/investigação (2026-10-13):** oito comandos no mesmo poll construíam16snapshots completos,38424bytes; catálogos/receitas eram repetidos e o mapeador recopiava ramos já duplicados. `pending_events` acumulava toda a partida sem consumidor. Leitura de pacotes não tinha limite de trabalho por quadro. Os bugs005–007/018 de autoridade/privacidade foram consultados; a correção precisava manter seus contratos. Congestionamento específico do Render não foi reproduzido.
+
+**Mudança:** snapshots finais agrupados por sala/quadro, mantendo execução de todos os comandos; catálogo público em cache negociado, compatível com clientes/servidores antigos; uma cópia profunda no mapeamento. Sinais entregam todos os eventos, histórico limitado aos256recentes. Backpressure evita snapshots substituíveis acumulados, sem descartar eventos. Recepção processa até64pacotes e verifica orçamento4ms entre pacotes; o restante permanece na fila. Um pacote/callback individual ainda pode ultrapassar esse orçamento.
+
+**Validação:** oito comandos agora2snapshots/4803bytes (−87,5% nesse cenário); payload periódico combate−13,5%, preparação−19,5%; mediana pareada do mapeamento combate−35,9%. Rede existente21/0, suíte nova originalmente55/0, recepção13/0 com70mensagens em ordem sem perda; suíte ampliada71/0 após BUG-027. [Relatório, backups e logs](../RelicArena/captures/perf_rede_2026_10_13/RELATORIO.md). Medidas locais, sem promessa de ping ouFPS público.
+
+### BUG-027 — Jogador2 começa com ações automáticas do bot
+
+**Reprodução (2026-10-13):** teste de dois clientes Web reais no servidor local mostrou time0 com20ouro/campo vazio/benefício, enquanto time1 já tinha4heróis, itens, capacidade5,8ouro e pronto. Capturas `web_online_debug/joined_dpr1.png`/`joined_dpr2.png` preservadas em `revisoes/performance_2026-10-13/`. Regressão direta de `_create_room` confirmou seis violações de igualdade inicial:65aprovadas/6falhas, saída1.
+
+**Investigação/causa sustentada:** `Session.new(seed)` executa reset/preparação automática com `bot_enabled=true` por padrão. O servidor desativava o bot somente depois desse construtor; os gastos e formação inicial permaneciam. Não era atraso de rede nem um novo requisito de economia.
+
+**Mudança:** após desativar o bot, reinicializar a Session com a mesma semente antes de enviar mensagens/snapshots. Sem mudar API, valores ou regras. Agora ambos começam com20ouro, campo vazio, capacidade4, três benefícios e`ready=false`.
+
+**Validação:** nova suíte71/0, matchmaking21/0 e recepção13/0, todas saída0 sem erros. Baseline e versão corrigida em [relatório de rede](../RelicArena/captures/perf_rede_2026_10_13/RELATORIO.md). A inicialização simétrica é independente das melhorias de desempenho.
+
+### BUG-028 — Cliente deixa de abrir após declaração duplicada
+
+**Reprodução/investigação (2026-10-13):** depois do congelamento informado pelo agente, o hash de `main.gd` mudou por uma edição simultânea. A build Web seguinte retornou `There is already a variable named "is_boss_bar" declared in this scope`, em `_draw_bars`. Capturas/console preservados em `revisoes/performance_2026-10-13/web_online_delivery/`. O export havia retornado0; isso não comprovava que a cena abria corretamente. Consultados BUG-012/016/022; o mecanismo de falha era compilação, mas a nova causa era uma duplicata nesta função.
+
+**Causa/mudança:** duas declarações idênticas existiam no mesmo escopo, antes e depois da guarda de exibição da barra. Removida somente a segunda, preservando o novo comportamento de barra do Boss. Fonte com erro preservada em `revisoes/performance_2026-10-13/antes/main_parallel_parse_error.gd`. Criada cópia congelada da árvore completa, com0arquivos alterados durante a cópia, para impedir nova divergência durante a validação.
+
+**Validação:** na cópia congelada, após importação completa, cliente20/0, VFX237/0 e smoke488/0, todos saída0 e stderr vazio. A expectativa de exatamente5texturas no novo teste foi ajustada para exigir as5originais por chave: a edição paralela acrescentou efeitos opcionais, o que não é defeito do produto. A primeira validação da cópia também teve recursos ausentes porque a importação foi iniciada antes de terminar a cópia; reimportar resolveu sem alterar qualquer asset. Logs iniciais preservados; não registrar esta corrida de bootstrap como falha de VFX do jogo.
+
+
+### BUG-029 — Medição escondia parte do intervalo em quadros lentos
+
+**Reprodução/investigação (2026-10-13):** combate Web de dois clientes indicava 3–4 FPS, mas o novo diagnóstico repetia média de aproximadamente133ms. Comparação com o relógio real e documentação do Godot mostrou que `_process(delta)` pode limitar o delta em quadros lentos (8/60 ≈133ms nas configurações usadas). Era uma falha na métrica introduzida durante a investigação, não prova de limitação do servidor. BUG-025 consultado; seu cronômetro de CPU media outro escopo.
+
+**Mudança:** calcular intervalos por `Time.get_ticks_usec()`, sem alterar delta de gameplay, simulação ou animações. FPS do engine e CPU da atualização continuam identificados separadamente; diagnóstico expõe também dimensões e contadores de renderização.
+
+**Validação:** probe determinístico com quatro intervalos de250ms produziu média/p95 de250ms e CPU de1ms:2/0, stderr vazio. Cliente20/0 após a correção. Logs `revisoes/performance_2026-10-13/probe_wall_clock.*` e `client_wall_clock.*`; testes Web seguintes passaram a registrar intervalos reais acima de133ms quando presentes. [Documento oficial](https://docs.godotengine.org/en/stable/classes/class_node.html#class-node-private-method-process).
+
+### BUG-030 — Base da arena e decoração custosas em cada quadro Web
+
+**Reprodução (2026-10-13):** depois das primeiras otimizações de UI/rede, dois navegadores locais funcionavam com apenas3–4FPS. Um único renderizador, com peer nativo sem GPU e servidor local, também ficou em13FPS/84ms. A carga não dependia da distância até o Render. Chrome usou GPU AMD/ANGLE, sem SwiftShader. Consultados BUG-025/026/029 para distinguir CPU de atualização, renderização e rede.
+
+**Investigação/causa sustentada:** `_draw()` regenerava arena, perímetro,64hexágonos e reserva junto das tropas, embora essa base raramente mudasse. A pilha de61moedas gerava centenas de comandos Canvas; CPU nativa dos callbacks caiu de4,587 para0,096ms ao guardar o desenho. Textos, ícones e molduras de cada carta também mantinham muitos comandos. CPU da atualização incluía decode/eventos/rede e era muito menor que o intervalo de quadro. Contagens de comandos em fonte não foram confundidas com draw calls de GPU.
+
+**Mudança:** cache GPU para moedas estáticas (brilho/faíscas continuam animados), arena/tabuleiro/reserva, molduras e conteúdo das cartas. Invalidar base em fase/seleção/hover/ocupação e cartas em hover/pressionado/desabilitado; o realce selecionado pulsa a8Hz. Button original, drag, tooltip, kits, arte, economia, corpos, projéteis e efeitos por quadro preservados. Nenhuma imagem original foi reduzida/reescrita. A mudança de threads foi experimentada, sem ganho consistente que justificasse promovê-la.
+
+**Validação:** oito janelas de combate com semente fixa, ChromeDPR2/peer nativo/servidor local: baseline anterior aos caches de base/loja em8–12FPS, mediana105,48ms; versão nova29–38FPS, mediana31,40ms. Outra execução nova32–42FPS. Dois renderizadores no mesmoPC:14/15FPS finais, sem erros, ainda abaixo da fluidez desejada. Capturas inspecionadas. Regressão gráfica10/0 cobre cache após lobby oculto, areia/moedas preenchidas, reutilização no combate e invalidação de seleção/hover; drag18/0 e smoke488/0 headless/OpenGL após cache das cartas. [Medições, hipóteses restantes e limites](revisoes/performance_2026-10-13/DESEMPENHO.md). Não é prova de60FPS, celular físico ou capacidade do Render. Build local preparada; publicação e medição no dispositivo do usuário continuam pendentes.
+
+
+**Publicação posterior do BUG-030:** usuário autorizou atualizar o jogo; commit`999a37d` publicado em2026-10-13. HTML ePCK públicos conferem porSHA-256 com a build validada. Servidor Render respondeu pong/nonce onde a baseline anterior conectava mas não respondia; nenhum probe entrou na fila. Lobby/resize públicoDPR1/2:8/0, ambos a60FPS; isso não mede combate público. [Recibo](revisoes/deploy_2026-10-13/PUBLICACAO.json). Mudanças posteriores da outra IA no workspace original foram preservadas e não misturadas nesta release.

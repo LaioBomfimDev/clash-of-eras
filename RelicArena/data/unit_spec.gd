@@ -61,6 +61,10 @@ var guardian_damage_bonus: float = 0.0
 var revive_ratio: float = 0.0
 var extra_revive_ratio: float = 0.0
 var extra_revive_min_level: int = 3
+var revive_delay: float = 0.0
+var revive_buff_duration: float = 0.0
+var revive_team_attack_bonus: float = 0.0
+var revive_divine_frenzy_duration: float = 0.0
 var aura_radius_by_level: Array[int] = []
 var aura_ally_speed_bonus: float = 0.0
 var aura_enemy_slow: float = 0.0
@@ -78,6 +82,7 @@ var boss_tornado_cooldown: float = 0.0
 var boss_tornado_damage: float = 0.0
 var boss_purple_fire_cooldown: float = 0.0
 var boss_purple_fire_damage: float = 0.0
+var boss_teleport_interval: float = 4.0
 var boss_summon_times: Array[float] = []
 var boss_summon_keys: Array[String] = []
 
@@ -154,6 +159,10 @@ func load_values(character_key: String, values: Dictionary) -> void:
 	revive_ratio = clampf(float(values.get("revive_ratio", 0.0)), 0.0, 1.0)
 	extra_revive_ratio = clampf(float(values.get("extra_revive_ratio", 0.0)), 0.0, 1.0)
 	extra_revive_min_level = clampi(int(values.get("extra_revive_min_level", 3)), 1, 3)
+	revive_delay = clampf(float(values.get("revive_delay", 1.0 if key == "lula" else 0.0)), 0.0, 10.0)
+	revive_buff_duration = clampf(float(values.get("revive_buff_duration", 5.0 if key == "lula" else 0.0)), 0.0, 30.0)
+	revive_team_attack_bonus = clampf(float(values.get("revive_team_attack_bonus", 0.25 if key == "lula" else 0.0)), 0.0, 5.0)
+	revive_divine_frenzy_duration = clampf(float(values.get("revive_divine_frenzy_duration", 5.0 if key == "lula" else 0.0)), 0.0, 30.0)
 	aura_radius_by_level.clear()
 	for radius: Variant in values.get("aura_radius_by_level", []):
 		aura_radius_by_level.append(clampi(int(radius), 0, 14))
@@ -172,6 +181,7 @@ func load_values(character_key: String, values: Dictionary) -> void:
 	boss_tornado_damage = maxf(0.0, float(values.get("boss_tornado_damage", 0.0)))
 	boss_purple_fire_cooldown = maxf(0.0, float(values.get("boss_purple_fire_cooldown", 0.0)))
 	boss_purple_fire_damage = maxf(0.0, float(values.get("boss_purple_fire_damage", 0.0)))
+	boss_teleport_interval = maxf(0.5, float(values.get("boss_teleport_interval", 4.0)))
 	boss_summon_times.clear()
 	for time_val: Variant in values.get("boss_summon_times", []):
 		boss_summon_times.append(maxf(0.1, float(time_val)))

@@ -76,6 +76,11 @@ func _run() -> void:
 		_assert(boss_prep.get("cell", []) == [4, 1], "Boss posicionado no topo do mapa em cell (4, 1)")
 		_assert(float(boss_prep.get("max_hp", 0)) == 10000.0, "Boss na prévia tem max_hp 10.000")
 
+	# Validar presença da Barra Épica de Boss no Topo da Tela (Raid Boss Bar)
+	_assert(view.boss_bar_panel != null and view.boss_bar_panel.visible, "Barra Épica de Boss ativa e visível no topo da tela")
+	_assert(view.boss_bar_title != null and view.boss_bar_title.text.find("CRIADOR") != -1, "Título da Boss Bar identifica 'O CRIADOR DA ARENA (BOSS)'")
+	_assert(view.boss_bar_hp_label != null and view.boss_bar_hp_label.text.find("10000") != -1, "Rótulo de HP exibe valor total de 10.000 HP")
+
 	# Capturar tela da prévia do Boss no mapa aguardando os combatentes
 	view.queue_redraw()
 	await process_frame
@@ -119,6 +124,11 @@ func _run() -> void:
 	var red_fire_seen: bool = false
 	var purple_fire_seen: bool = false
 	var aggro_transferred_to_summon: bool = false
+	var telegraph_seen: bool = false
+	var portals_seen: bool = false
+	var teleports_seen: int = 0
+	var backline_summon_seen: bool = false
+
 	for step_i: int in range(25):
 		for u in view.session.sim.units:
 			if u.team == 0:
@@ -127,9 +137,17 @@ func _run() -> void:
 		view._consume_events()
 		view._refresh()
 		await process_frame
+
+		if not view.boss_telegraphs.is_empty():
+			telegraph_seen = true
+		if not view.boss_summon_portals.is_empty():
+			portals_seen = true
+
 		for u in view.session.sim.units:
 			if u.summoned and u.team == 1:
 				summons_seen += 1
+				if u.cell.y in [5, 6, 7]:
+					backline_summon_seen = true
 				if u.key == "slime_lodo_olho":
 					_assert(u.max_hp == 4000.0, "Lodo Negro tem 4.000 HP (+2k de vida) (HP: %f)" % u.max_hp)
 				elif u.key == "monstro_olho_tentaculos":
@@ -141,6 +159,8 @@ func _run() -> void:
 				red_fire_seen = true
 			if line.find("fogo roxo") != -1 or line.find("Fogo Roxo") != -1 or line.find("FOGO ROXO") != -1:
 				purple_fire_seen = true
+			if line.find("teletransporte") != -1 or line.find("TELEPORTE") != -1:
+				teleports_seen += 1
 
 		# Validar que mob invocado toma aggro das tropas do jogador
 		var summoned_mobs: Array = []
@@ -164,10 +184,33 @@ func _run() -> void:
 			_capture("res://captures/boss_desenvolvedor_com_monstros.png")
 
 	_assert(summons_seen > 0, "Monstros invocados pelo Boss durante a luta (%d registros)" % summons_seen)
+	_assert(backline_summon_seen, "Monstro invocado no fundo da arena (fileira 5, 6 ou 7)")
 	_assert(aggro_transferred_to_summon, "Monstros invocados puxaram o aggro das tropas do jogador com sucesso")
+	_assert(teleports_seen > 0, "Boss realizou teletransporte a cada 4 segundos durante a luta (%d registros)" % teleports_seen)
 	_assert(casts_seen > 0, "Feitiços do Boss conjurados e registrados no log (%d registros)" % casts_seen)
 	_assert(red_fire_seen, "Boss utilizou Fogo Vermelho em combate")
 	_assert(purple_fire_seen, "Boss utilizou Fogo Roxo em combate")
+	_assert(telegraph_seen, "Telegrafia de aviso prévio de área disparada e capturada pelo cliente")
+	_assert(portals_seen, "Portais de invocação com vórtice e lodo renderizados no chão")
+
+	# Testar o Modo de Fúria (Enrage) aos 40% de vida (<= 4.000 HP)
+	var boss_unit_sim = null
+	for u in view.session.sim.units:
+		if u.id == 999 and u.is_boss:
+			boss_unit_sim = u
+			break
+	if boss_unit_sim != null:
+		boss_unit_sim.hp = 3500.0 # Reduz para 35% de vida
+		view.session.step(0.1)
+		view._consume_events()
+		view._refresh()
+		await process_frame
+		_assert(boss_unit_sim.boss_enraged, "Boss entrou no estado de Fúria aos 40% de HP")
+		_assert(view.boss_bar_title.text.find("FÚRIA") != -1, "Título da Boss Bar no topo atualizado para 'FÚRIA'")
+		view.queue_redraw()
+		await process_frame
+		await process_frame
+		_capture("res://captures/boss_modo_furia_enrage.png")
 
 	# Concluir combate
 	while view._phase() == "combat":

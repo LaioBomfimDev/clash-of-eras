@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-13",
+  "scope": "Existing matchmaking test: real local WebSocket with two client objects in one Godot process. Not public internet, two separate devices or full PvP validation.",
+  "result": {
+    "chunk_id": "b80d6f",
+    "wall_time_seconds": 1.6175439,
+    "exit_code": 0,
+    "original_token_count": 98,
+    "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\n\r\nINICIANDO TESTES DO MULTIPLAYER ONLINE...\r\n[SERVER] Ouvindo conexões WebSocket na porta 8922...\r\n[SERVER] Laio (ID 1) entrou na fila. Total na fila: 1\r\n[SERVER] Navegador2 (ID 2) entrou na fila. Total na fila: 2\r\n[SERVER] Sala criada: room_1 (Laio vs Navegador2)\r\n\r\nRESULTADO MULTIPLAYER: 21 aprovados, 0 falhas\r\n"
+  }
+}

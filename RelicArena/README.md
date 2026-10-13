@@ -1,6 +1,8 @@
-**Release Web Performance01 (2026-10-13):** caches gráficos, transporte e diagnóstico revisados; conjunto cliente/servidor congelado e testado. Consulte [nota de publicação](../Guia_Godot4/RELEASE_PERFORMANCE_WEB_01.md).
-
 # Clash of Eras — protótipo local jogável
+
+**Desempenho web/online, 2026-10-13:** atualização de interface por estado novo, caches de desenho/animação, transporte com menos repetição e recepção em lotes; buffer do navegador até1280×720. Diagnóstico opcional em Configurações/F3 separa FPS de RTT da rede. [Medições e hospedagens](../Guia_Godot4/revisoes/performance_2026-10-13/DESEMPENHO.md). [Build e fonte revisadas](VALIDACAO_PERFORMANCE_WEB_01.json) empacotadas;dist local atualizado. Publicado no commit`999a37d`;HTML/PCK públicos eWebSocket conferidos. [Recibo da publicação](../Guia_Godot4/revisoes/deploy_2026-10-13/PUBLICACAO.json).
+
+**Balance 02 entregue em2026-10-13:** ouro inicial20, renda crescente12/15/18…, bônus fixo+1 após duas vitórias; cópias2→N2 e4→N3; dispensa gratuita com devolução de itens. Barbie/Ken com HP próprio, cura global de Michael, segundo retorno do LulaN3 e mana por ataques na Rapunzel. Hexágonos ampliados18,4%, mantendo8×8. A produção paralela elevou posteriormente Boss/lacaios de8000/2000/3000 para10000/4000/5000HP; o estado encontrado foi preservado e revalidado. [Testes, capturas e limites](../Guia_Godot4/revisoes/balance_02_2026-10-13/resume_direct_runners.json); recibo consolidado/pacote Balance02 pendentes na pausa anterior. As notas datadas das versões anteriores abaixo são históricas.
 
 **Estado revisado em 2026-10-12:** lobby/compêndio e controles da V1.5, economia da V1.6, campo vazio para recrutar, loja com sete ofertas e capacidade até oito. Corrigidos compartilhamento de regras pelo snapshot e contagem da gaveta de sinergias durante combate. [Revisão e evidências](../Guia_Godot4/revisoes/2026-10-12_1409/REVISAO.md).
 
@@ -26,11 +28,11 @@ Pelo editor: abra o Godot → **Importar** → selecione **project.godot** desta
 2. Você começa com o **campo vazio e quatro vagas**. Recrute heróis grátis da loja, por toque ou arrastando até um hexágono da sua metade. **Arraste** um herói já recrutado para movê-lo, até a **reserva** para guardá-lo, ou sobre outro herói para trocar os dois de lugar. Também funciona por toque: toque no herói (abre o cartão à direita) e depois no destino. Tocar no mesmo herói desfaz a seleção.
    - **Itens:** arraste da bolsa até um herói para equipar, sobre outro item para fundir; do cartão do herói para a bolsa (devolver) ou para outro herói (trocar de dono).
    - **Loja:** arraste um herói da loja até um hexágono ou a reserva para recrutar ali; arraste um item da loja até um herói para comprar e equipar de uma vez. Tocar nas cartas continua funcionando.
-3. A **reserva fica no chão**, à frente do tabuleiro. Com um herói selecionado, toque num espaço vazio da reserva para guardá-lo; toque em outro herói para trocar campo ↔ reserva. O botão **RESERVAR** do cartão faz o mesmo.
+3. A **reserva fica no chão**, à frente do tabuleiro. Com um herói selecionado, toque num espaço vazio da reserva para guardá-lo; toque em outro herói para trocar campo ↔ reserva. O botão **RESERVAR** do cartão faz o mesmo. **DISPENSAR** remove o herói sem ouro e devolve itens à bolsa; libere espaço na bolsa se necessário.
 4. A loja inferior tem **três itens pagos e quatro ofertas de heróis gratuitos**. Renovar custa **2 moedas**. Com o campo cheio, um novo herói vai para a reserva se houver vaga. **ESPAÇO** amplia o limite de quatro até oito, com custos sucessivos de **8, 12, 16 e 20 moedas** neste teste.
-5. **Cópias:** a loja também oferece heróis que você já tem. A cópia é grátis e se junta na hora: 2 cópias = **nível 2**, 3 cópias = **nível 3** (máximo). O herói cresce 20% por nível, ganha estrelas (bronze, prata, ouro) e, no nível 3, uma aura especial. Valores de teste: vida e dano ×1,5 e ×2,25.
+5. **Cópias:** a loja também oferece heróis que você já tem. A cópia é grátis e se junta na hora: 2 cópias = **nível 2**, 4 cópias no total = **nível 3** (máximo). O herói cresce 20% por nível, ganha estrelas (bronze, prata, ouro) e, no nível 3, uma aura especial. Valores gerais de teste: vida/dano×1,5/×2,25; Barbie/Ken têm curvas próprias de HP.
 6. Os **ITENS** ficam sempre visíveis à esquerda. Marque um item e toque num herói (ou use **EQUIPAR** com o herói selecionado). Toque num item do cartão para devolvê-lo à bolsa. Marque dois itens compatíveis para **FUNDIR**.
-7. **LUTAR** inicia o combate; ele também começa ao terminar a preparação de 30 segundos. Durante o combate, toque em qualquer herói (inclusive inimigo) para inspecionar. As sinergias mostram o patamar congelado no início da rodada.
+7. **LUTAR** inicia o combate; ele também começa ao terminar a preparação de 30 segundos. Durante o combate, toque em qualquer herói (inclusive inimigo) para inspecionar; também pode comprar/equipar itens. As sinergias mostram o patamar congelado no início da rodada.
 8. Veja dano, cura e absorção por personagem no resultado e use **PRÓXIMA RODADA**. Quem perder quatro corações perde a partida; o benefício de vida extra pode acrescentar um coração uma vez.
 
 **Receitas desta versão:** lâmina + lâmina → lâmina dupla; colete + amuleto → colete protegido. Para fundir, os dois componentes precisam estar na bolsa.
@@ -42,13 +44,13 @@ Pelo editor: abra o Godot → **Importar** → selecione **project.godot** desta
 - Caramelo caça um atirador na abertura por até 5 s, andando por hexágonos; depois usa seleção normal. Morde, sangra e executa em mordida contra vida≤10% antes do dano. Caça/prazo são testes configuráveis.
 - Obama começa com escudo da mala e renova a própria proteção até 120 a cada 5 s, sem acumular nem alterar escudo da dança (teste).
 - Zumbi dá crítico/velocidade à equipe; seus próprios críticos aumentam o próximo crítico, com teto temporário e multiplicador visível.
-- Michael dança usando **72 quadros originais, em oito direções**: anda três hexágonos aleatórios de costas, para e dá escudo dourado à equipe (teste: 120 por 4 s, renova sem acumular); enquanto vivo, cura 10 HP por segundo em raio de dois hexágonos.
-- Barbie invoca Ken, que protege a dupla; ela causa +30% de dano enquanto ele vive. Ken não é comprado e não conta no desempate (contrato de teste).
-- Elon dispara foguetes com explosão vizinha; Snoop cria fumaça com dano contínuo e chance de erro.
-- Lula revive uma única vez por rodada com 40% da vida; Bob acelera aliados e desacelera inimigos no raio, crescente por nível.
-- Rapunzel puxa o inimigo mais distante com a trança e atordoa. Valores de recarga/raio/erro são experimentais.
-- Dano físico e mágico, armadura/resistência, equipamentos e três sinergias funcionais provisórias identificadas como **TESTE**.
-- Ouro guardado entre rodadas, renovação por duas moedas, expansão, bolsa, reserva, fusões e benefícios no início e na quarta rodada.
+- Michael dança usando **72 quadros originais, em oito direções**: anda três hexágonos aleatórios de costas, para e dá escudo dourado à equipe (teste:120 por4s, renova sem acumular); enquanto vivo, cura10HP por segundo em todos os aliados ativos/vivos.
+- Barbie invoca Ken, que protege a dupla; ela causa **+50% de dano** enquanto ele vive. HP base por nível: Barbie600/900/1200; Ken1200/1600/2300. Ken não é comprado e não conta no desempate (contrato de teste).
+- Elon dispara três minifoguetes diretos e um super foguete de área no quarto ataque; Snoop cria fumaça com dano contínuo e chance de erro.
+- Lula retorna com40% da vida; noN3 tem um segundo retorno com30%. Bob acelera aliados e desacelera inimigos nos raios4/5/6 por nível, em teste.
+- Rapunzel começa com0/100mana e ganha25 por ataque iniciado. Ao encher, puxa o inimigo mais distante e atordoa; sem alvo ou atordoada, conserva a carga. Não carrega por tempo.
+- Dano físico e mágico, armadura/resistência, equipamentos e quatro sinergias funcionais provisórias identificadas como **TESTE**.
+- Ouro guardado entre rodadas, renovação por duas moedas, expansão, bolsa, reserva e fusões. Benefício inicial; na quarta rodada, BossPvE com espólios somente ao derrotá-lo. Nenhum lado perde corações nessa rodada.
 - Bot compra/equipa/expande com o mesmo orçamento inicial e regras. Ele prepara antes das ações do jogador, sem consultar sua nova formação para contra-atacar.
 - Preparação mostra somente a formação inimiga da rodada anterior; a formação atual aparece ao começar a luta.
 - Combate até 30 segundos, aceleração de ataques/movimento/voo aos 15; resultado por sobreviventes e depois dano efetivo. Empate completo preserva vidas.
@@ -56,11 +58,11 @@ Pelo editor: abra o Godot → **Importar** → selecione **project.godot** desta
 
 ## Valores de teste e próximos limites
 
-25 moedas iniciais, **9 de renda por rodada**, expansão progressiva por 8/12/16/20, reserva de cinco, bolsa de oito itens e quatro equipamentos por unidade. Bônus e atributos são ajustáveis; não foram balanceados. Sinergias cotidianas, seleção do deck, intervenções, coleção/passe e níveis fora da partida ainda precisam de desenvolvimento. Nova produção de personagens aguarda a atualização de acesso registrada no [lote 04](../Guia_Godot4/PERSONAGENS_LOTE_04.md); as artes atuais continuam provisórias.
+20 moedas iniciais; ao avançar paraR2/R3/R4, recebe12/15/18, crescendo3 por rodada. Vitória normal a partir da segunda consecutiva acrescenta sempre1, sem crescer; derrota/nova partida zera, Boss não conta. Expansão8/12/16/20, reserva5, bolsa8 e quatro equipamentos por unidade. Bônus e atributos ainda precisam de partidas de teste. Presidentes/Maconheiros/Astro não têm novos buffs implementados; deck10, intervenções, coleção/passe e níveis fora da partida seguem pendentes. Fila de arte e saldo em [EXECUCAO_CONTINUA.md](../Guia_Godot4/EXECUCAO_CONTINUA.md).
 
-Esta versão roda **localmente contra bot**. Servidor dedicado, conexão entre jogadores e publicação continuam etapas futuras. Há um [APK de teste separado](../APKs/VALIDACAO_ANDROID.md), exportado antes das correções desta revisão e com limitações próprias; não foi testado em aparelho físico. A janela usa paisagem e aceita emulação de mouse por toque. O fundo da batalha é o estudo de arena do PixelLab (não aprovado como arte final); tabuleiro, ícones e painéis são provisórios.
+Esta versão foi validada **localmente contra bot**. Há servidor/cliente WebSocket experimental e teste com dois clientes locais no mesmo processo; internet, dispositivos separados e PvP completo ainda não foram verificados nesta entrega. Há um [APK de teste separado](../APKs/VALIDACAO_ANDROID.md), exportado antes destas correções e sem teste em aparelho físico. A janela usa paisagem e aceita emulação de mouse por toque. O fundo da batalha é o estudo do PixelLab; arte final e equilíbrio continuam em desenvolvimento.
 
-Os seis efeitos foram produzidos no editor determinístico gratuito do PixelLab, sem consumir gerações por IA. Estão na [biblioteca de VFX](assets/vfx/README.md), com folhas, manifestos, originais e conferência de integridade. Os demais efeitos provisórios continuam por código; não foram geradas animações novas de caminhada/ataque dos personagens.
+Os seis efeitos dessa etapa foram produzidos no editor determinístico gratuito do PixelLab, sem consumir gerações por IA. Estão na [biblioteca de VFX](assets/vfx/README.md), com folhas, manifestos e originais. Posteriormente, Zumbi recebeu caminhada/estocada/poseE/W/NE/NW e habilidadeE/W: [cobertura real e pendências](../Guia_Godot4/ANIMACOES_ZUMBI_02.md). Michael mantém72quadros; poses em oito direções dos demais heróis não equivalem a animações completas.
 
 ## Arquivos e validação
 

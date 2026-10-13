@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "draw",
+    "--recipe",
+    "{\"job\":{\"canvas\":[256,172],\"frame_count\":1,\"views\":[{\"id\":\"east\",\"offset\":[0,4]}],\"source_bookends_exact\":true},\"scene\":{\"layers\":[{\"id\":\"body\",\"name\":\"Body - contact baseline correction\"}],\"views\":{\"east\":{\"selections\":{\"all\":{}},\"nodes\":{\"body\":{\"layer\":\"body\",\"at\":[0,4],\"draw\":[{\"op\":\"copy\",\"part\":\"all\"}]}}}}}}",
+    "--sources",
+    "{\"east\":\"https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/16d1ae2f-73f7-472b-b0e7-2401f1b2929d/east/4.png?t=1791862603917\"}"
+  ],
+  "mode": "low",
+  "notes": "Contact frame has feet4pixels above shared baseline143. Translate original frame down4px on same256x168 transparent canvas, no rescale/redraw, preserve original export separately. Same fixed anchor for entire action."
+}

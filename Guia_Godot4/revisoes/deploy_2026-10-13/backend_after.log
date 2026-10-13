@@ -1,0 +1,3 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PUBLIC_WEBSOCKET_PROBE: {"connected":true,"endpoint":"wss://clash-of-eras-server.onrender.com","handshake_ms":637,"joined_queue":false,"pong":true,"rtt_ms":200,"scope":"WebSocket handshake/ping; no queue, room, player or gameplay"}

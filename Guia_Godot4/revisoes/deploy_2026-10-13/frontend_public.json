@@ -1,0 +1,24 @@
+{
+  "url": "https://clash-of-eras.vercel.app/",
+  "expected_build_id": "performance-web-01-20261013",
+  "published": true,
+  "checked_at_utc": "2026-10-13T23:16:52Z",
+  "release": {
+    "build_id": "performance-web-01-20261013",
+    "source": "validated-frozen-runtime",
+    "pck_sha256": "16b4d68b01f31237ee75956f20b9850199aedd1f97f4285275e0a4d97b759ab8",
+    "html_sha256": "1edc77ec1f9b0a51b0c47c3c2e1d621611788889c399b384e459c28b22473612",
+    "simulation_sha256": "76fcc85eb35fe47251bdb6eec89e4905e749338b12016a2694847cde67c55d21",
+    "server_sha256": "b271e11b4a101d82392ef9712531b18af43eeb1dc0021557e108ce1262737840"
+  },
+  "html_sha256": "1edc77ec1f9b0a51b0c47c3c2e1d621611788889c399b384e459c28b22473612",
+  "pck_sha256": "16b4d68b01f31237ee75956f20b9850199aedd1f97f4285275e0a4d97b759ab8",
+  "pck_bytes": 7072232,
+  "headers": {
+    "Cross-Origin-Embedder-Policy": "require-corp",
+    "Cross-Origin-Opener-Policy": "same-origin",
+    "Last-Modified": "Tue, 13 Oct 2026 23:16:53 GMT",
+    "X-Vercel-Cache": "MISS",
+    "X-Vercel-Id": "gru1::kdccj-1791933413459-802ad960ca40"
+  }
+}

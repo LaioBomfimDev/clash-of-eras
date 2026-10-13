@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 31328260-9b6d-4172-bdcc-2c8e506a9c9a\njob_id: 31328260-9b6d-4172-bdcc-2c8e506a9c9a\nmodel: pixen\nedit: Same adult warrior, BACK THREE-QUARTER view, facing NORTH-EAST (upper right), same face, scars and detailed body size. COMBAT READY: plant BOTH feet on one flat baseline with knees slightly bent, no raised knee. Hold ONE rigid spear diagonally forward to the UPPER RIGHT at chest height, BOTH elbows bent. The SINGLE wide silver blade is at the far UPPER-RIGHT tip; the LOWER-LEFT butt is plain wood. Keep dagger, pants and broken ankle chains. Transparent, no rock, floor or new props.\nsource: 128x128px\nsize: 128x128px\ntransparent: True\nasset_id: 3d707f8d-8014-56b1-955c-f7416f867719\nasset_status: pending (saved when generation completes)\ncost: 1 generation\nstatus: processing (~10-40s)\n\nhint: get_image(job_id=\"31328260-9b6d-4172-bdcc-2c8e506a9c9a\")"
+    }
+  ],
+  "isError": false
+}

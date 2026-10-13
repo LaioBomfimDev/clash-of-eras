@@ -1,0 +1,14 @@
+SCRIPT ERROR: Parse Error: Identifier "height" not declared in the current scope.
+   at: GDScript::reload (res://client/main.gd:4096)
+SCRIPT ERROR: Parse Error: Identifier "height" not declared in the current scope.
+   at: GDScript::reload (res://client/main.gd:4108)
+SCRIPT ERROR: Parse Error: Identifier "height" not declared in the current scope.
+   at: GDScript::reload (res://client/main.gd:4112)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://tools/capture_zumbi_animation_game.gd:0)
+ERROR: Failed to load script "res://tools/capture_zumbi_animation_game.gd" with error "Compilation failed".
+   at: load (modules/gdscript/gdscript_resource_format.cpp:46)
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'GDScript'.
+   at: _run (res://tools/capture_zumbi_animation_game.gd:17)
+   GDScript backtrace (most recent call first):
+       [0] _run (res://tools/capture_zumbi_animation_game.gd:17)

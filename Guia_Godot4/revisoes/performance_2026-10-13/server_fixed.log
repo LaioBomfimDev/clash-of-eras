@@ -1,0 +1,31 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[SERVER] Ouvindo conexões WebSocket na porta 8910...
+FIXED_SEED_WEB_SERVER_READY: seed=20261013; port=8910; production code except seed
+[SERVER] Jogador143 (ID 1) entrou na fila. Total na fila: 1
+[SERVER] PerfPeer (ID 2) entrou na fila. Total na fila: 2
+[SERVER] Sala criada: room_1 (Jogador143 vs PerfPeer)
+[SERVER] Jogador317 (ID 3) entrou na fila. Total na fila: 1
+[SERVER] PerfPeer (ID 4) entrou na fila. Total na fila: 2
+[SERVER] Sala criada: room_2 (Jogador317 vs PerfPeer)
+[SERVER] Jogador707 (ID 5) entrou na fila. Total na fila: 1
+[SERVER] PerfPeer (ID 6) entrou na fila. Total na fila: 2
+[SERVER] Sala criada: room_3 (Jogador707 vs PerfPeer)
+[SERVER] Jogador653 (ID 7) entrou na fila. Total na fila: 1
+[SERVER] PerfPeer (ID 8) entrou na fila. Total na fila: 2
+[SERVER] Sala criada: room_4 (Jogador653 vs PerfPeer)
+[SERVER] Jogador938 (ID 9) entrou na fila. Total na fila: 1
+[SERVER] PerfPeer (ID 10) entrou na fila. Total na fila: 2
+[SERVER] Sala criada: room_5 (Jogador938 vs PerfPeer)
+[SERVER] PerfPeer (ID 11) entrou na fila. Total na fila: 1
+[SERVER] Jogador809 (ID 12) entrou na fila. Total na fila: 2
+[SERVER] Sala criada: room_6 (PerfPeer vs Jogador809)
+[SERVER] Jogador496 (ID 14) entrou na fila. Total na fila: 1
+[SERVER] Jogador221 (ID 13) entrou na fila. Total na fila: 2
+[SERVER] Sala criada: room_7 (Jogador496 vs Jogador221)
+[SERVER] PerfPeer (ID 15) entrou na fila. Total na fila: 1
+[SERVER] Jogador676 (ID 16) entrou na fila. Total na fila: 2
+[SERVER] Sala criada: room_8 (PerfPeer vs Jogador676)
+[SERVER] PerfPeer (ID 17) entrou na fila. Total na fila: 1
+[SERVER] Jogador561 (ID 18) entrou na fila. Total na fila: 2
+[SERVER] Sala criada: room_9 (PerfPeer vs Jogador561)

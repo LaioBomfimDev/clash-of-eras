@@ -720,7 +720,7 @@ func _run() -> void:
 		_check(texture != null and texture.get_size() == Vector2(expected_size), "dimensões originais do ícone " + icon_name)
 	for key: String in ["neymar", "caramelo", "obama", "zumbi", "michael"]:
 		_check(view.art.portrait_for(key, 30, 28) != null, "retrato recortado de " + key)
-	_check(view.audio.streams.size() == 6 and not view.audio.streams["heal"].data.is_empty(), "seis sons PCM sintetizados em memória")
+	_check(view.audio.streams.size() >= 20 and not view.audio.streams["heal"].data.is_empty() and view.audio.streams.has("bob_marley_8bit"), "efeitos de combate e single 8-bit de Bob Marley sintetizados em memória")
 	view.sound_button.pressed.emit()
 	_check(not view.audio.enabled, "controle de som desativa")
 	view.sound_button.pressed.emit()

@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "draw",
+    "--recipe",
+    "{\"scene\":{\"views\":{\"ne-04\":{\"selections\":{\"all\":{}},\"nodes\":{\"body\":{\"at\":[0,0],\"draw\":[{\"op\":\"copy\",\"part\":\"all\"}],\"layer\":\"body\"}}}},\"layers\":[{\"name\":\"Body - exact spear extension source and NW mirror\",\"id\":\"body\"}]},\"job\":{\"canvas\":[176,196],\"frame_count\":1,\"source_bookends_exact\":true,\"views\":[{\"offset\":[0,0],\"id\":\"ne-04\"},{\"mirror_of\":\"ne-04\",\"id\":\"nw-04\"}],\"durations_ms\":[50],\"require_clear_border\":true}}",
+    "--sources",
+    "{\"ne-04\":\"https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/6da0ef60-9129-470a-a755-51ca449db421/north-east/4.png?t=1791885710149\"}"
+  ],
+  "mode": "low",
+  "notes": "User requests genuine Zumbi limb/spear animations. All five northeast originals inspected: preserve every original pixel, exact north-west mirror. No new AI generation, rescaling or gameplay change."
+}

@@ -1,0 +1,7 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+INTEGRATION seed=1 rounds=5 lives=[5, 0] winner=0
+INTEGRATION seed=2 rounds=6 lives=[0, 4] winner=1
+INTEGRATION seed=77 rounds=5 lives=[5, 0] winner=0
+INTEGRATION seed=20261011 rounds=9 lives=[2, 0] winner=0
+FULL MATCH TESTS: 4 automated matches, 766 passed, 0 failed

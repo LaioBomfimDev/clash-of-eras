@@ -1,0 +1,51 @@
+{
+  "z02_test_1": {
+    "chunk_id": "c812f5",
+    "wall_time_seconds": 1.2953332,
+    "exit_code": 0,
+    "original_token_count": 33,
+    "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\n\r\nCHARACTER ANIMATION PLAYER TESTS: 97 passed, 0 failed\r\n"
+  },
+  "z02_capture_west": {
+    "chunk_id": "11248a",
+    "wall_time_seconds": 4.757214,
+    "exit_code": 0,
+    "original_token_count": 115,
+    "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\nOpenGL API 3.3.0 Core Profile Context 26.8.1.260806 - Compatibility - Using Device: ATI Technologies Inc. - AMD Radeon(TM) Graphics\r\n\r\nCLIENT_PHASE: menu; rodada 1; vidas [4, 4]\r\nCLIENT_READY: Clash of Eras protótipo local; lobby de boas-vindas; 30 FPS; compêndio de heróis\r\nCLIENT_PHASE: combat; rodada 1; vidas [4, 4]\r\nZUMBI GAME ANIMATION CAPTURES: [\"skill\", \"walk\", \"attack\"]\r\n"
+  },
+  "z02_final_bank": {
+    "chunk_id": "23bfab",
+    "wall_time_seconds": 0.9795369,
+    "exit_code": 0,
+    "original_token_count": 33,
+    "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\n\r\nCHARACTER ANIMATION BANK TESTS: 122 passed, 0 failed\r\n"
+  },
+  "z02_final_integration": {
+    "chunk_id": "e182a9",
+    "wall_time_seconds": 2.6068816999999997,
+    "exit_code": 0,
+    "original_token_count": 70,
+    "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\n\r\nCLIENT_PHASE: menu; rodada 1; vidas [4, 4]\r\nCLIENT_READY: Clash of Eras protótipo local; lobby de boas-vindas; 30 FPS; compêndio de heróis\r\nCHARACTER ANIMATION INTEGRATION TESTS: 30 passed, 0 failed\r\n"
+  },
+  "z02_final_capture_ne": {
+    "chunk_id": "bad87d",
+    "wall_time_seconds": 3.7346752,
+    "exit_code": 0,
+    "original_token_count": 115,
+    "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\nOpenGL API 3.3.0 Core Profile Context 26.8.1.260806 - Compatibility - Using Device: ATI Technologies Inc. - AMD Radeon(TM) Graphics\r\n\r\nCLIENT_PHASE: menu; rodada 1; vidas [4, 4]\r\nCLIENT_READY: Clash of Eras protótipo local; lobby de boas-vindas; 30 FPS; compêndio de heróis\r\nCLIENT_PHASE: combat; rodada 1; vidas [4, 4]\r\nZUMBI GAME ANIMATION CAPTURES: [\"skill\", \"walk\", \"attack\"]\r\n"
+  },
+  "z02_final_capture_nw": {
+    "chunk_id": "44bc28",
+    "wall_time_seconds": 4.2314701,
+    "exit_code": 0,
+    "original_token_count": 115,
+    "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\nOpenGL API 3.3.0 Core Profile Context 26.8.1.260806 - Compatibility - Using Device: ATI Technologies Inc. - AMD Radeon(TM) Graphics\r\n\r\nCLIENT_PHASE: menu; rodada 1; vidas [4, 4]\r\nCLIENT_READY: Clash of Eras protótipo local; lobby de boas-vindas; 30 FPS; compêndio de heróis\r\nCLIENT_PHASE: combat; rodada 1; vidas [4, 4]\r\nZUMBI GAME ANIMATION CAPTURES: [\"skill\", \"walk\", \"attack\"]\r\n"
+  },
+  "z02_final_preview_ne": {
+    "chunk_id": "722592",
+    "wall_time_seconds": 2.484193,
+    "exit_code": 0,
+    "original_token_count": 61,
+    "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\nOpenGL API 3.3.0 Core Profile Context 26.8.1.260806 - Compatibility - Using Device: ATI Technologies Inc. - AMD Radeon(TM) Graphics\r\n\r\nZUMBI ANIMATION PREVIEW CAPTURE: 0\r\n"
+  }
+}

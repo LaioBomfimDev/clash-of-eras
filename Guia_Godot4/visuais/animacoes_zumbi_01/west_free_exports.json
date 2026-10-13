@@ -1,0 +1,97 @@
+{
+  "method": "PixelLab pixelart_workbench documented mirror_of; exact mirrors of reviewed real animation, no AI generation",
+  "batches": [
+    {
+      "label": "walk_0",
+      "kind": "walk",
+      "indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "canvas": [
+        128,
+        180
+      ],
+      "animation": "24851f83-849c-4155-82a1-e009581b5c93",
+      "stamp": "1791846994725",
+      "drawing_id": "f946d246-5275-4dad-bf7f-ed588b9e17ea"
+    },
+    {
+      "label": "walk_1",
+      "kind": "walk",
+      "indices": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "canvas": [
+        128,
+        180
+      ],
+      "animation": "24851f83-849c-4155-82a1-e009581b5c93",
+      "stamp": "1791846994725",
+      "drawing_id": "e2777132-99fb-4c77-85c6-72da48afaf4e"
+    },
+    {
+      "label": "walk_2",
+      "kind": "walk",
+      "indices": [
+        8
+      ],
+      "canvas": [
+        128,
+        180
+      ],
+      "animation": "24851f83-849c-4155-82a1-e009581b5c93",
+      "stamp": "1791846994725",
+      "drawing_id": "90164e2c-8b9e-48da-9a46-8dd889999f19"
+    },
+    {
+      "label": "skill_0",
+      "kind": "skill",
+      "indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "canvas": [
+        128,
+        188
+      ],
+      "animation": "6f94e391-445d-46ac-90fb-22d61100a4a5",
+      "stamp": "1791869831254",
+      "drawing_id": "147b4239-a224-4650-929d-40a45fb07339"
+    },
+    {
+      "label": "skill_1",
+      "kind": "skill",
+      "indices": [
+        4
+      ],
+      "canvas": [
+        128,
+        188
+      ],
+      "animation": "6f94e391-445d-46ac-90fb-22d61100a4a5",
+      "stamp": "1791869831254",
+      "drawing_id": "fca23c64-6282-47bb-beb3-d75fc45ed102"
+    },
+    {
+      "label": "contact",
+      "kind": "attack_contact",
+      "indices": [
+        4
+      ],
+      "canvas": [
+        256,
+        172
+      ],
+      "url": "https://api.pixellab.ai/mcp/pixel-tools/5d751637-c70a-4e40-8bb2-80ef5cc0fad5/assets/east/full.png",
+      "drawing_id": "402a5a61-ddad-4053-b6ab-19f0a714d82e"
+    }
+  ]
+}

@@ -500,6 +500,8 @@ func _test_michael_moonwalk() -> void:
 	_near(ally.hp, 1000.0, "dance shield absorbs damage before HP")
 	_near(ally.dance_shield, 70.0, "dance shield is consumed by absorbed damage")
 	_check(_events(sim, "hit").back()["absorbed_dance"] == 30.0, "hit event reports dance absorption")
+	_near(dancer.shield_absorbed, 30.0, "damage absorbed by Michael's shield is credited to Michael (fair stats)")
+	_near(ally.shield_absorbed, 0.0, "ally who only received the shield has 0 shield provider credit")
 	sim.step(1.0)
 	_check(dancer.moonwalk_stage == "walking" and dancer.moonwalk_steps_done == 0, "after the pause a new three-step cycle begins")
 	sim.step(1.5)
@@ -805,7 +807,10 @@ func _test_lote_03_kits() -> void:
 	comeback.units = [lula, killer]
 	comeback.start_combat()
 	comeback._deal_damage(101, lula, 100000.0, false, "hit")
-	_check(lula.alive and lula.revived and is_equal_approx(lula.hp, lula.max_hp * 0.4), "first lethal hit: Lula rises with 40% HP")
+	_check(lula.is_reviving and lula.revive_delay_remaining > 0.0, "first lethal hit: Lula starts 1.0s revival delay")
+	comeback.step(1.0)
+	_check(lula.alive and lula.revived and is_equal_approx(lula.hp, lula.max_hp * 0.4), "after 1.0s: Lula rises with 40% HP")
+	_check(lula.has_angel_wings and lula.divine_frenzy_timer > 0.0, "Lula gains angel wings and divine frenzy")
 	_check(_events(comeback, "revive").size() == 1 and _events(comeback, "death").is_empty(), "revive event, no death")
 	comeback._deal_damage(101, lula, 100000.0, false, "hit")
 	_check(not lula.alive and _events(comeback, "death").size() == 1, "second lethal hit in the same round kills")
@@ -1007,7 +1012,7 @@ func _test_kick_observation() -> void:
 
 func _test_revive_clears_bleeds() -> void:
 	var sim: Simulation = _sandbox()
-	var tank: UnitState = _fixture_unit("lula", 9, 0, Vector2i(1, 7), {"max_hp": 1000.0, "revive_ratio": 0.4})
+	var tank: UnitState = _fixture_unit("lula", 9, 0, Vector2i(1, 7), {"max_hp": 1000.0, "revive_ratio": 0.4, "revive_delay": 1.0})
 	var ally: UnitState = _fixture_unit("ally", 2, 0, Vector2i(2, 7))
 	var enemy: UnitState = _fixture_unit("enemy", 101, 1, Vector2i(7, 0))
 	tank.hp = 5.0
@@ -1018,7 +1023,9 @@ func _test_revive_clears_bleeds() -> void:
 	sim.units = [tank, ally, enemy]
 	sim.start_combat()
 	sim.step(0.05)
-	_check(tank.alive and tank.revived and tank.bleeds.is_empty(), "revival during bleed ticking clears current and previously retained bleeds")
+	_check(tank.is_reviving and tank.bleeds.is_empty(), "revival during bleed ticking clears current and previously retained bleeds and starts descent")
+	sim.step(1.0)
+	_check(tank.alive and tank.revived, "after 1.0s descent: Lula rises")
 	_near(tank.hp, 400.0, "bleed lethal hit revives at configured HP ratio")
 	_near(ally.hp, 998.0, "revival does not abort bleed ticks for later units")
 	sim.step(1.0)

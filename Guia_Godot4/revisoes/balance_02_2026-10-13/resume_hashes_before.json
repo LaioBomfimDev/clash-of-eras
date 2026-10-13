@@ -1,0 +1,90 @@
+[
+  {
+    "sha256": "680c3e66809522f9cd7efad28144cc1c2152359d89721511403464142bc81de0",
+    "path": "RelicArena/simulation/arena_simulation.gd"
+  },
+  {
+    "sha256": "f0c3e9ca6065c036662f6383cc6b4d2867356ad17f02ff9f9886cb6056b4a8f9",
+    "path": "RelicArena/simulation/match_session.gd"
+  },
+  {
+    "sha256": "367edd841b5bb0f0bde43a6b64e79c54209b713ce7503f5de6be0196410a7eb6",
+    "path": "RelicArena/data/unit_spec.gd"
+  },
+  {
+    "sha256": "5c8950b96eaad0736e2caac58c4fd4ceab8aa59797acd1f63f5767e8310357a2",
+    "path": "RelicArena/data/debug_characters.json"
+  },
+  {
+    "sha256": "94464455035b0063bd8cd1c6655f3ab06f7cd6fb6a2c42701ba3cff8c6a5bae8",
+    "path": "RelicArena/data/character_catalog.gd"
+  },
+  {
+    "sha256": "d15eee865bcc4667a0fd3c9f434352521edadc8a812855e3d738a82c42ba3e36",
+    "path": "RelicArena/simulation/unit_state.gd"
+  },
+  {
+    "sha256": "bc14962febc91b0f332e328cd111b7d740659b4bdfe8c27b4095757df8efafdb",
+    "path": "RelicArena/client/main.gd"
+  },
+  {
+    "sha256": "a35bbd299cbade2e3a6510f34eab11d0b24ad9ea31e174d43519440e3700131f",
+    "path": "RelicArena/client/board_projection.gd"
+  },
+  {
+    "sha256": "6b09df24a490befb7acd94cedd9a110af80db0de1354e693e5c6cfdf4e5521c8",
+    "path": "RelicArena/client/smoke.gd"
+  },
+  {
+    "sha256": "679d215ad63e52b5a1a80c6843ede913282a470e04d5e48fa37e869582fd411a",
+    "path": "RelicArena/client/character_visuals.gd"
+  },
+  {
+    "sha256": "434bb7e1d52f15bceacbc3624877dcc480fc8a0b46e31c67821dcc2cf1ce79e3",
+    "path": "RelicArena/net/online_protocol.gd"
+  },
+  {
+    "sha256": "479ad6615b278532f27ab6f95449fee7480c2331b404abde06796ea73509260a",
+    "path": "RelicArena/net/online_server.gd"
+  },
+  {
+    "sha256": "cfe5231a51545b3c063d2a9015db9dec4b414acd3d773d62c916e2921ab8c071",
+    "path": "RelicArena/net/online_client.gd"
+  },
+  {
+    "sha256": "14a8b6dbc347b055790c960b303f47fd0576622b340a99fb3fceeba6f722a499",
+    "path": "RelicArena/net/perspective_mapper.gd"
+  },
+  {
+    "sha256": "58c67728d39642ea0a8d2b388cfb3610acfd03a92f63b8e033c542c89b4bfeb2",
+    "path": "RelicArena/tests/test_character_balance_02.gd"
+  },
+  {
+    "sha256": "87a53523df993da5f6c24ee07bd46a0a076b80907032190612d3ae673675ba0e",
+    "path": "RelicArena/tests/test_economia_02.gd"
+  },
+  {
+    "sha256": "3af2fefa193553efda098831a66318cadcd094b01693c3863f7a8433c637c92c",
+    "path": "RelicArena/tests/test_boss_resolution_regression.gd"
+  },
+  {
+    "sha256": "068c56d9ee8d7a7fd810c5a95e38dcac9ab30cb50f26d448d3c7de11c61fd3af",
+    "path": "RelicArena/tests/test_simulation.gd"
+  },
+  {
+    "sha256": "ecd92c8b7ce997fc847fd1ddf9e040f88f5d5ce45bd7b5f6acb94778c44fd614",
+    "path": "RelicArena/tests/test_match_session.gd"
+  },
+  {
+    "sha256": "bfc25d652ad38ec08786d6bdc9d8aef9e01e83706a36ed17d39877567a6cd466",
+    "path": "RelicArena/tests/test_full_matches.gd"
+  },
+  {
+    "sha256": "818636779b3d3b18c3581ff5a7f60924d2187b2b68211cf1579844b7e1e544ff",
+    "path": "RelicArena/assets/characters/manifest.json"
+  },
+  {
+    "sha256": "68c0c78a8d225b706b6b2083ade22e7e327e7ebd41bde09c8ad35bacc6051add",
+    "path": "RelicArena/assets/characters/animations_manifest.json"
+  }
+]

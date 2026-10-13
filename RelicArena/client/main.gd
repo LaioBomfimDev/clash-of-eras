@@ -43,7 +43,7 @@ const KIT_TEXT: Dictionary = {
 	"ken": "Guardião invocado pela Barbie. Atrai os golpes destinados a ela; enquanto vive, fortalece o dano dela.",
 	"elon": "Artilharia espacial. Dispara 3 minifoguetes focados e no 4º tiro um Super Foguete com explosão que penetra 2 quadros na retaguarda inimiga.",
 	"snoop": "Atirador de fumaça. Lança nuvem em grande área (raio 2) que causa dano mágico, faz inimigos errarem 30% dos ataques e acelera aliados em +25%.",
-	"lula": "Ao cair, revive com 40% de vida. No nível 3, pode voltar uma segunda vez na rodada com 30% de vida.",
+	"lula": "Ao sofrer dano letal, demora 1.0s para descer dos céus como anjo com 40% de vida, concedendo +25% de dano à equipe e 100% de acertos críticos por 5s. No nível 3, pode voltar uma segunda vez na rodada com 30% de vida. Mantém as asas até o fim da partida.",
 	"bob_marley": "Ritmo de paz e amor: aura de amplo alcance (raio 4/5/6). Aliados atacam +30% mais rápido; inimigos, 30% mais devagar.",
 	"rapunzel": "Começa com 0/100 mana e ganha 25 por ataque lançado. Ao encher, puxa o inimigo mais distante e o atordoa; a mana é consumida."
 }
@@ -54,6 +54,7 @@ const HERO_CATALOG_KEYS: Array[String] = [
 	"neymar", "caramelo", "obama", "zumbi", "michael",
 	"barbie", "ken", "elon", "snoop", "lula", "bob_marley", "rapunzel"
 ]
+const SINGER_KEYS: Array[String] = ["bob_marley", "snoop", "michael"]
 
 const SYNERGY_INFO: Dictionary = {
 	"vanguarda": {
@@ -135,6 +136,25 @@ var synergy_signature: String = ""
 var drawer_signature: String = ""
 var overlay_signature: String = ""
 var boss_result_view_mode: String = "rewards"
+var stage_panel: Panel = null
+var boss_bar_panel: Panel = null
+var boss_bar_title: Label = null
+var boss_bar_timer_label: Label = null
+var boss_bar_track: ColorRect = null
+var boss_bar_fill: ColorRect = null
+var boss_bar_ghost: ColorRect = null
+var boss_bar_hp_label: Label = null
+var boss_bar_minions_label: Label = null
+var boss_ghost_hp_ratio: float = 1.0
+var boss_telegraphs: Array[Dictionary] = []
+var boss_summon_portals: Array[Dictionary] = []
+var lula_descents: Dictionary = {}
+var ascended_units: Dictionary = {}
+const REGGAE_GREEN: Color = Color("009b3a")
+const REGGAE_GOLD: Color = Color("fed100")
+const REGGAE_RED: Color = Color("d52b1e")
+var cannabis_leaf_tex: Texture2D = null
+var bob_reggae_note_tex: Texture2D = null
 
 func _boss_icon(icon_name: String) -> Texture2D:
 	var path: String = "res://assets/ui/boss_dev/" + icon_name + ".png"
@@ -171,6 +191,15 @@ var gold_pile_layer: GoldPileCache
 var gold_label: Label
 var income_label: Label
 var capacity_label: Label
+var capacity_title_label: Label = null
+var capacity_btn_label: Label = null
+var capacity_btn_coin: TextureRect = null
+var capacity_btn_cost: Label = null
+var reroll_btn_label: Label = null
+var reroll_btn_coin: TextureRect = null
+var reroll_btn_cost: Label = null
+var fight_btn_icon: TextureRect = null
+var fight_btn_label: Label = null
 var status_panel: Panel
 var status_label: Label
 var result_label: Label
@@ -368,6 +397,10 @@ func _ready() -> void:
 	for effect_name: String in ["explosao_fogo_roxo", "explosao_fogo_vermelho", "fogo_vermelho_projetil", "fogo_roxo_projetil", "furacao_fogo", "furacao_fogo_frame_0", "furacao_fogo_frame_1", "furacao_fogo_frame_2", "furacao_fogo_frame_3", "loot_orb_brilhante"]:
 		var effect_path: String = "res://assets/vfx/boss_dev/%s.png" % effect_name
 		boss_vfx_textures[effect_name] = load(effect_path) as Texture2D if ResourceLoader.exists(effect_path) else null
+	if ResourceLoader.exists("res://assets/vfx/cannabis_leaf.png"):
+		cannabis_leaf_tex = load("res://assets/vfx/cannabis_leaf.png") as Texture2D
+	if ResourceLoader.exists("res://assets/vfx/bob_reggae_note.png"):
+		bob_reggae_note_tex = load("res://assets/vfx/bob_reggae_note.png") as Texture2D
 	arena_render_cache = ArenaRenderCache.new()
 	arena_render_cache.z_index = -1
 	add_child(arena_render_cache)
@@ -434,8 +467,7 @@ func _process(delta: float) -> void:
 	toast_remaining = maxf(0.0, toast_remaining - delta)
 	if online_client != null:
 		online_client.step(delta)
-	if gold_coin_atlas != null:
-		Kit.update_coin_atlas_frame(gold_coin_atlas, visual_time, 8.0, 8)
+	# Moeda do ouro parada conforme preferência do usuário (sem giro contínuo)
 	if not menu_open and not is_online_match:
 		session.step(delta)
 		_consume_events()
@@ -584,16 +616,16 @@ func _build_top_bar() -> void:
 			lives_label = lives
 		else:
 			bot_lives_label = lives
-	var stage: Panel = _panel(ui, Rect2(482, 8, 316, 70))
-	hud_controls.append(stage)
-	round_label = _label(stage, "", Rect2(0, 3, 316, 18), 13, GOLD, HORIZONTAL_ALIGNMENT_CENTER)
-	phase_label = _label(stage, "", Rect2(0, 19, 316, 28), 22, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER)
+	stage_panel = _panel(ui, Rect2(482, 8, 316, 70))
+	hud_controls.append(stage_panel)
+	round_label = _label(stage_panel, "", Rect2(0, 3, 316, 18), 13, GOLD, HORIZONTAL_ALIGNMENT_CENTER)
+	phase_label = _label(stage_panel, "", Rect2(0, 19, 316, 28), 22, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER)
 	var track: ColorRect = ColorRect.new()
 	track.color = Color(0, 0, 0, 0.5)
 	track.position = Vector2(20, 52)
 	track.size = Vector2(276, 8)
 	track.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	stage.add_child(track)
+	stage_panel.add_child(track)
 	timer_fill = ColorRect.new()
 	timer_fill.color = GOLD
 	timer_fill.size = Vector2(276, 8)
@@ -609,6 +641,46 @@ func _build_top_bar() -> void:
 		_icon_button(ui, "ui_scroll", Rect2(1140, 80, 40, 34), _toggle_drawer.bind("log"), "Eventos do combate"), hud_fullscreen_button])
 	performance_label = _label(ui, "FPS —\nREDE —", Rect2(978, 80, 112, 36), 10, Kit.MUTED, HORIZONTAL_ALIGNMENT_CENTER)
 	hud_controls.append(performance_label)
+	_build_boss_hud()
+
+
+## Barra Épica de Vida do Boss no topo da tela (estilo Raid Boss / TFT)
+func _build_boss_hud() -> void:
+	boss_bar_panel = _panel(ui, Rect2(304, 8, 672, 56), 0.92, 10)
+	boss_bar_panel.visible = false
+	boss_bar_panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	hud_controls.append(boss_bar_panel)
+	var style: StyleBoxFlat = boss_bar_panel.get_theme_stylebox("panel") as StyleBoxFlat
+	if style != null:
+		style.border_color = Color(GOLD, 0.9)
+		style.set_border_width_all(2)
+	
+	boss_bar_title = _label(boss_bar_panel, "👑 O CRIADOR DA ARENA (BOSS)", Rect2(14, 3, 340, 18), 13, GOLD, HORIZONTAL_ALIGNMENT_LEFT)
+	boss_bar_timer_label = _label(boss_bar_panel, "", Rect2(360, 3, 298, 18), 12, Color.WHITE, HORIZONTAL_ALIGNMENT_RIGHT)
+	
+	boss_bar_track = ColorRect.new()
+	boss_bar_track.color = Color(0.04, 0.02, 0.06, 0.95)
+	boss_bar_track.position = Vector2(14, 22)
+	boss_bar_track.size = Vector2(644, 13)
+	boss_bar_track.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	boss_bar_panel.add_child(boss_bar_track)
+	
+	boss_bar_ghost = ColorRect.new()
+	boss_bar_ghost.color = Color(0.95, 0.75, 0.25, 0.8)
+	boss_bar_ghost.position = Vector2.ZERO
+	boss_bar_ghost.size = Vector2(644, 13)
+	boss_bar_ghost.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	boss_bar_track.add_child(boss_bar_ghost)
+	
+	boss_bar_fill = ColorRect.new()
+	boss_bar_fill.color = Color(0.68, 0.15, 0.95)
+	boss_bar_fill.position = Vector2.ZERO
+	boss_bar_fill.size = Vector2(644, 13)
+	boss_bar_fill.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	boss_bar_track.add_child(boss_bar_fill)
+	
+	boss_bar_hp_label = _label(boss_bar_panel, "10.000 / 10.000", Rect2(14, 22, 644, 13), 11, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER)
+	boss_bar_minions_label = _label(boss_bar_panel, "", Rect2(14, 37, 644, 14), 10, Color("c2a6ff"), HORIZONTAL_ALIGNMENT_CENTER)
 
 
 func _build_synergy_tracker() -> void:
@@ -663,48 +735,91 @@ func _build_unit_card() -> void:
 
 
 func _build_shop() -> void:
-	var capacity_pill: Panel = _panel(ui, Rect2(148, 558, 122, 32), 0.72, 16)
-	capacity_label = _label(capacity_pill, "", Rect2(6, 5, 110, 22), 14, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER)
+	var capacity_pill: Panel = _panel(ui, Rect2(144, 554, 150, 34), 0.88, 8)
+	var cap_frame: OrnateFrameCache = OrnateFrameCache.new()
+	cap_frame.show_behind_parent = true
+	cap_frame.size = capacity_pill.size
+	cap_frame.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	capacity_pill.add_child(cap_frame)
+	cap_frame.setup(func(canvas: CanvasItem) -> void:
+		Kit.draw_ornate_panel_frame(canvas, Rect2(Vector2.ZERO, cap_frame.size), "bronze")
+	)
+	_icon_rect(capacity_pill, Kit.icon("ui_team"), Rect2(8, 6, 22, 22))
+	capacity_title_label = _label(capacity_pill, "MEMBROS:", Rect2(34, 6, 70, 22), 12, Color("e2e8f0"))
+	capacity_title_label.add_theme_constant_override("outline_size", 3)
+	capacity_title_label.add_theme_color_override("font_outline_color", Color(0.02, 0.04, 0.06, 0.95))
+	capacity_label = _label(capacity_pill, "", Rect2(106, 5, 36, 22), 14, Color("fde047"))
+	capacity_label.add_theme_constant_override("outline_size", 3)
+	capacity_label.add_theme_color_override("font_outline_color", Color(0.02, 0.04, 0.06, 0.95))
 
-	# Pilha de moedas de ouro ilustrada atrás do mostrador de ouro
+	# Pilha de moedas de ouro ilustrada atrás do mostrador de ouro (concentrada no centro com brilhos)
 	gold_pile_layer = GoldPileCache.new()
 	gold_pile_layer.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	gold_pile_layer.position = Vector2(1180, 558)
-	gold_pile_layer.scale = Vector2(0.6, 0.6)
+	gold_pile_layer.position = Vector2(1180, 546)
+	gold_pile_layer.scale = Vector2(0.9, 0.9)
 	ui.add_child(gold_pile_layer)
 
 	var gold_pill: Panel = _panel(ui, Rect2(1124, 542, 112, 38), 0.88, 19)
-	gold_coin_atlas = Kit.create_animated_coin_atlas()
-	if gold_coin_atlas != null:
-		gold_coin_rect = _icon_rect(gold_pill, gold_coin_atlas, Rect2(12, 3, 32, 32))
-	else:
-		gold_coin_rect = _icon_rect(gold_pill, Kit.icon("ui_coin"), Rect2(12, 3, 32, 32))
-	gold_label = _label(gold_pill, "", Rect2(48, 4, 56, 28), 22, GOLD)
+	gold_coin_rect = _icon_rect(gold_pill, Kit.icon("ui_coin"), Rect2(10, 5, 28, 28))
+	gold_label = _label(gold_pill, "", Rect2(44, 4, 62, 28), 22, Color("fde047"))
+	gold_label.add_theme_constant_override("outline_size", 3)
+	gold_label.add_theme_color_override("font_outline_color", Color(0.02, 0.04, 0.06, 0.95))
 	income_label = _label(ui, "", Rect2(1088, 577, 180, 18), 12, GOLD, HORIZONTAL_ALIGNMENT_CENTER)
 	income_label.mouse_filter = Control.MOUSE_FILTER_PASS
 
 	var shop: Panel = _panel(ui, Rect2(144, 596, 940, 116), 0.85, 10)
 	hud_controls.append_array([capacity_pill, gold_pile_layer, gold_pill, income_label, shop])
 
-	capacity_button = _button(shop, "ESPAÇO · 8", Rect2(8, 8, 114, 48), _command.bind("upgrade_capacity", {}))
-	capacity_button.icon = Kit.icon("ui_expand")
-	reroll_button = _button(shop, "RENOVAR · 2", Rect2(8, 60, 114, 48), _command.bind("reroll", {}))
-	reroll_button.icon = Kit.icon("ui_refresh")
+	capacity_button = _button(shop, "", Rect2(8, 8, 114, 48), _command.bind("upgrade_capacity", {}))
+	reroll_button = _button(shop, "", Rect2(8, 60, 114, 48), _command.bind("reroll", {}))
 	for button: Button in [capacity_button, reroll_button]:
-		button.add_theme_constant_override("icon_max_width", 28)
-		button.add_theme_font_size_override("font_size", 12)
 		button.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 		_apply_ornate_button(button, "teal")
+
+	# Conteúdo interno do capacity_button (enquadramento com folga, fonte negrita e mini-moeda)
+	var cap_content: Control = Control.new()
+	cap_content.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	cap_content.size = Vector2(114, 48)
+	capacity_button.add_child(cap_content)
+	_icon_rect(cap_content, Kit.icon("ui_expand"), Rect2(8, 14, 20, 20))
+	capacity_btn_label = _label(cap_content, "ESPAÇO", Rect2(30, 14, 48, 20), 12, Color.WHITE)
+	capacity_btn_label.add_theme_constant_override("outline_size", 3)
+	capacity_btn_label.add_theme_color_override("font_outline_color", Color(0.02, 0.04, 0.06, 0.98))
+	capacity_btn_coin = _icon_rect(cap_content, Kit.icon("ui_coin"), Rect2(80, 17, 14, 14))
+	capacity_btn_cost = _label(cap_content, "8", Rect2(96, 14, 14, 20), 12, Color("fde047"))
+	capacity_btn_cost.add_theme_constant_override("outline_size", 3)
+	capacity_btn_cost.add_theme_color_override("font_outline_color", Color(0.02, 0.04, 0.06, 0.98))
+
+	# Conteúdo interno do reroll_button
+	var reroll_content: Control = Control.new()
+	reroll_content.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	reroll_content.size = Vector2(114, 48)
+	reroll_button.add_child(reroll_content)
+	_icon_rect(reroll_content, Kit.icon("ui_refresh"), Rect2(8, 14, 20, 20))
+	reroll_btn_label = _label(reroll_content, "RENOVAR", Rect2(29, 14, 52, 20), 11, Color.WHITE)
+	reroll_btn_label.add_theme_constant_override("outline_size", 3)
+	reroll_btn_label.add_theme_color_override("font_outline_color", Color(0.02, 0.04, 0.06, 0.98))
+	reroll_btn_coin = _icon_rect(reroll_content, Kit.icon("ui_coin"), Rect2(82, 17, 14, 14))
+	reroll_btn_cost = _label(reroll_content, "2", Rect2(98, 14, 14, 20), 12, Color("fde047"))
+	reroll_btn_cost.add_theme_constant_override("outline_size", 3)
+	reroll_btn_cost.add_theme_color_override("font_outline_color", Color(0.02, 0.04, 0.06, 0.98))
 
 	shop_root = _container(shop)
 	var fight_plate: Panel = _panel(ui, Rect2(1092, 596, 176, 116), 0.85, 10)
 	hud_controls.append(fight_plate)
-	fight_button = _button(fight_plate, "LUTAR", Rect2(8, 8, 160, 100), _fight)
-	fight_button.icon = Kit.icon("ui_fight")
-	fight_button.add_theme_constant_override("icon_max_width", 32)
-	fight_button.add_theme_font_size_override("font_size", 20)
+	fight_button = _button(fight_plate, "", Rect2(8, 8, 160, 100), _fight)
 	fight_button.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	_apply_ornate_button(fight_button, "gold")
+
+	# Conteúdo interno do fight_button (enquadramento centralizado perfeito e fonte negrita)
+	var fight_content: Control = Control.new()
+	fight_content.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	fight_content.size = Vector2(160, 100)
+	fight_button.add_child(fight_content)
+	fight_btn_icon = _icon_rect(fight_content, Kit.icon("ui_fight"), Rect2(64, 16, 32, 32))
+	fight_btn_label = _label(fight_content, "LUTAR", Rect2(8, 54, 144, 34), 20, Color("fef08a"), HORIZONTAL_ALIGNMENT_CENTER)
+	fight_btn_label.add_theme_constant_override("outline_size", 3)
+	fight_btn_label.add_theme_color_override("font_outline_color", Color(0.02, 0.04, 0.06, 0.98))
 
 
 func _apply_ornate_button(btn: Button, theme_name: String = "teal") -> void:
@@ -820,13 +935,15 @@ func _icon_button(parent: Control, icon_name: String, rect: Rect2, action: Calla
 func _icon_rect(parent: Control, texture: Texture2D, rect: Rect2) -> TextureRect:
 	var icon: TextureRect = TextureRect.new()
 	icon.texture = texture
-	icon.position = rect.position
-	icon.size = rect.size
 	icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	icon.custom_minimum_size = rect.size
+	icon.size = rect.size
+	icon.position = rect.position
 	icon.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	parent.add_child(icon)
+	icon.size = rect.size
 	return icon
 
 
@@ -887,19 +1004,41 @@ func _refresh(synchronize_local_state: bool = true) -> void:
 	income_label.text = income_view["text"]
 	income_label.tooltip_text = income_view["tooltip"]
 	(gold_label.get_parent() as Control).tooltip_text = income_view["tooltip"]
-	capacity_label.text = "CAMPO %d/%d" % [_active_count(), capacity]
+	capacity_label.text = "%d/%d" % [_active_count(), capacity]
 	var reroll_cost: int = int(config.get("reroll_cost", 2))
 	var upgrade_cost: int = int(config.get("upgrade_cost", 8))
-	reroll_button.text = "RENOVAR · %d" % reroll_cost
 	reroll_button.disabled = not prep or gold < reroll_cost
+	if reroll_btn_cost != null:
+		reroll_btn_cost.text = str(reroll_cost)
 	var max_cap: int = int(config.get("max_capacity", 8))
 	var capacity_maximum: bool = capacity >= max_cap
 	capacity_button.disabled = not prep or capacity_maximum or gold < upgrade_cost
-	capacity_button.text = "CAMPO MÁX." if capacity_maximum else "ESPAÇO · %d" % upgrade_cost
+	if capacity_btn_label != null and capacity_btn_cost != null and capacity_btn_coin != null:
+		if capacity_maximum:
+			capacity_btn_label.text = "CAMPO MÁX."
+			capacity_btn_label.size = Vector2(74, 20)
+			capacity_btn_coin.visible = false
+			capacity_btn_cost.visible = false
+		else:
+			capacity_btn_label.text = "ESPAÇO"
+			capacity_btn_label.size = Vector2(52, 20)
+			capacity_btn_coin.visible = true
+			capacity_btn_cost.visible = true
+			capacity_btn_cost.text = str(upgrade_cost)
 	var active_units: int = _active_count()
 	fight_button.disabled = not prep or active_units == 0
-	fight_button.text = "EM COMBATE" if phase == "combat" else ("RECRUTE" if active_units == 0 and prep else "LUTAR")
+	if fight_btn_label != null:
+		if phase == "combat":
+			fight_btn_label.text = "EM COMBATE"
+			fight_btn_label.add_theme_color_override("font_color", Color("94a3b8"))
+		elif active_units == 0 and prep:
+			fight_btn_label.text = "RECRUTE"
+			fight_btn_label.add_theme_color_override("font_color", Color("38bdf8"))
+		else:
+			fight_btn_label.text = "LUTAR"
+			fight_btn_label.add_theme_color_override("font_color", Color("fef08a"))
 	_refresh_status()
+	_refresh_boss_hud(is_boss_round, phase)
 	var in_match: bool = phase not in ["menu"]
 	for control: Control in hud_controls + [bag_panel, synergy_root]:
 		control.visible = in_match
@@ -938,6 +1077,68 @@ func _refresh_status() -> void:
 		hint = toast_text
 	status_label.text = hint
 	status_panel.visible = not hint.is_empty() and phase != "menu"
+
+
+func _refresh_boss_hud(is_boss_round: bool, phase: String) -> void:
+	if boss_bar_panel == null:
+		return
+	if is_boss_round and phase in ["preparation", "combat"]:
+		boss_bar_panel.visible = true
+		if stage_panel != null:
+			stage_panel.visible = false
+		if status_panel != null:
+			status_panel.visible = false
+		var boss_unit: Dictionary = {}
+		var minions_alive: Array[String] = []
+		for u: Dictionary in state.get("combat", {}).get("units", []):
+			if str(u.get("key", "")) == "boss_dev" or bool(u.get("is_boss", false)):
+				boss_unit = u
+			elif str(u.get("key", "")) == "slime_lodo_olho" and bool(u.get("alive", true)):
+				minions_alive.append("Lodo Negro")
+			elif str(u.get("key", "")) == "monstro_olho_tentaculos" and bool(u.get("alive", true)):
+				minions_alive.append("Aberração Cósmica")
+		if boss_unit.is_empty():
+			for u: Dictionary in state.get("enemy", {}).get("units", []):
+				if str(u.get("key", "")) == "boss_dev" or bool(u.get("is_boss", false)):
+					boss_unit = u
+		if not boss_unit.is_empty():
+			var b_hp: float = maxf(0.0, float(boss_unit.get("hp", 0)))
+			var b_max: float = maxf(1.0, float(boss_unit.get("max_hp", 10000)))
+			var b_ratio: float = clampf(b_hp / b_max, 0.0, 1.0)
+			boss_bar_fill.size = Vector2(644.0 * b_ratio, 13)
+			boss_bar_ghost.size = Vector2(644.0 * maxf(b_ratio, boss_ghost_hp_ratio), 13)
+			boss_ghost_hp_ratio = move_toward(boss_ghost_hp_ratio, b_ratio, 0.04)
+			var is_enraged: bool = bool(boss_unit.get("boss_enraged", false))
+			if is_enraged:
+				boss_bar_title.text = "🔥 O CRIADOR DA ARENA · EM FÚRIA! 🔥"
+				boss_bar_title.add_theme_color_override("font_color", Color("ff3322"))
+				boss_bar_fill.color = Color("ff2211")
+				var b_style: StyleBoxFlat = boss_bar_panel.get_theme_stylebox("panel") as StyleBoxFlat
+				if b_style != null:
+					b_style.border_color = Color("ff4422")
+			else:
+				boss_bar_title.text = "👑 O CRIADOR DA ARENA (BOSS)"
+				boss_bar_title.add_theme_color_override("font_color", GOLD)
+				boss_bar_fill.color = Color(0.68, 0.15, 0.95)
+				var b_style: StyleBoxFlat = boss_bar_panel.get_theme_stylebox("panel") as StyleBoxFlat
+				if b_style != null:
+					b_style.border_color = Color(GOLD, 0.9)
+			boss_bar_hp_label.text = "%d / %d (%d%%)" % [roundi(b_hp), roundi(b_max), roundi(b_ratio * 100.0)]
+			var remaining: int = maxi(0, int(ceil(float(state.get("phase_remaining", 0)))))
+			if boss_bar_timer_label != null:
+				boss_bar_timer_label.text = ("PREPARAÇÃO · %ds" % remaining) if phase == "preparation" else ("BATALHA DE BOSS · %ds" % remaining)
+			if minions_alive.is_empty():
+				boss_bar_minions_label.text = "⚡ TELEPORTE: A CADA 4s · SEM LACAIOS ATIVOS" if phase == "combat" else "AGUARDANDO O COMBATE..."
+			else:
+				boss_bar_minions_label.text = "⚡ TELEPORTE: A CADA 4s · LACAIO NA RETAGUARDA (AGGRO): " + ", ".join(minions_alive)
+			if bot_lives_label != null:
+				bot_lives_label.text = "DESAFIO PVE (SEM PERDA DE VIDA)"
+	else:
+		boss_bar_panel.visible = false
+		if stage_panel != null and phase != "menu":
+			stage_panel.visible = true
+		if status_panel != null and phase != "menu":
+			status_panel.visible = true
 
 
 ## Valores recebidos da Session; não reproduz a fórmula de renda no cliente.
@@ -1438,7 +1639,15 @@ func _shop_card(offer: Dictionary, own: Dictionary, rect: Rect2) -> Button:
 		name_lbl.add_theme_constant_override("outline_size", 2)
 
 		var description: String = "Personagem gratuito: entra no campo ou na reserva." if not owned else "Cópia grátis (%d/%d): junta na hora. %s" % [copies + 1, _max_copies(), ("Sobe para o nível %d." % _level_for_copies(copies + 1)) if _level_for_copies(copies + 1) > _level_for_copies(copies) else "Avança até a próxima evolução."]
-		button.tooltip_text = "%s\n%s" % [str(offer.get("name", "")), description]
+		var skill_desc: String = str(KIT_TEXT.get(key, ""))
+		var tags_names: Array[String] = []
+		for t: String in tags:
+			tags_names.append(str(SYNERGY_INFO.get(t, {}).get("name", t.capitalize())))
+		var tags_text: String = " · ".join(tags_names)
+		var hero_header: String = str(offer.get("name", "")).to_upper()
+		if owned:
+			hero_header += " (Nível %d)" % _level_for_copies(copies)
+		button.tooltip_text = "%s\n[%s]\n✦ HABILIDADE: %s\n%s" % [hero_header, tags_text, skill_desc, description]
 		var tag_lbl: Label = _label(button, "HERÓI", Rect2(6, 80, 42, 16), 10, accent, HORIZONTAL_ALIGNMENT_LEFT, false)
 		tag_lbl.add_theme_color_override("font_outline_color", Color(0.02, 0.04, 0.06, 0.95))
 		tag_lbl.add_theme_constant_override("outline_size", 2)
@@ -1765,8 +1974,9 @@ func _show_menu() -> void:
 	character_player.clear()
 	passive_character_stamps.clear()
 	lobby_subview = "none"
+	audio.stop_bob_music()
 	visual_pulls.clear()
-	for effects: Array in [kit_effects, shield_waves, slashes, floating, level_bursts, blast_zones]:
+	for effects: Array in [kit_effects, shield_waves, slashes, floating, level_bursts, blast_zones, boss_telegraphs, boss_summon_portals]:
 		effects.clear()
 	shake_remaining = 0.0
 	position = Vector2.ZERO
@@ -1785,13 +1995,14 @@ func _start_match() -> void:
 		session.reset(MATCH_SEED)
 	menu_open = false
 	lobby_subview = "none"
+	audio.stop_bob_music()
 	boss_result_view_mode = "rewards"
 	if opponent_name_label != null and is_instance_valid(opponent_name_label):
 		opponent_name_label.text = opponent_title
 	selected_id = -1
 	selected_items.clear()
 	target_hit_seq.clear()
-	for effects: Variant in [visual_ground, visual_directions, visual_moves, visual_attacks, visual_hits, visual_deaths, visual_pulls, shield_waves, slashes, floating, log_lines, level_bursts, kit_effects, blast_zones]:
+	for effects: Variant in [visual_ground, visual_directions, visual_moves, visual_attacks, visual_hits, visual_deaths, visual_pulls, shield_waves, slashes, floating, log_lines, level_bursts, kit_effects, blast_zones, boss_telegraphs, boss_summon_portals, lula_descents, ascended_units]:
 		effects.clear()
 	character_player.clear()
 	passive_character_stamps.clear()
@@ -1853,7 +2064,7 @@ func _next_round() -> void:
 	boss_result_view_mode = "rewards"
 	_command("next_round")
 	target_hit_seq.clear()
-	for effects: Variant in [visual_ground, visual_moves, visual_attacks, visual_hits, visual_deaths, visual_pulls, shield_waves, slashes, floating, level_bursts, kit_effects, blast_zones]:
+	for effects: Variant in [visual_ground, visual_moves, visual_attacks, visual_hits, visual_deaths, visual_pulls, shield_waves, slashes, floating, level_bursts, kit_effects, blast_zones, boss_telegraphs, boss_summon_portals, lula_descents]:
 		effects.clear()
 	character_player.clear()
 	passive_character_stamps.clear()
@@ -2498,7 +2709,7 @@ func _update_visuals(delta: float) -> void:
 		visual_directions[unit_id] = direction
 	shake_remaining = maxf(0.0, shake_remaining - delta)
 	position = _shake_offset() if combat else Vector2.ZERO
-	for effects: Array in [floating, shield_waves, slashes, level_bursts, kit_effects, blast_zones]:
+	for effects: Array in [floating, shield_waves, slashes, level_bursts, kit_effects, blast_zones, boss_telegraphs, boss_summon_portals]:
 		for index: int in range(effects.size() - 1, -1, -1):
 			var attached_key: String = str(effects[index].get("library_key", ""))
 			if effects == kit_effects and attached_key in ["cura_01", "laco_01", "zumbi_inspiracao"]:
@@ -2523,6 +2734,10 @@ func _update_visuals(delta: float) -> void:
 	for timers: Dictionary in [visual_hits, visual_deaths]:
 		for unit_id: int in timers:
 			timers[unit_id] = maxf(0.0, float(timers[unit_id]) - delta)
+	for uid: int in lula_descents.keys():
+		lula_descents[uid]["remaining"] = maxf(0.0, float(lula_descents[uid]["remaining"]) - delta)
+		if float(lula_descents[uid]["remaining"]) <= 0.0:
+			lula_descents.erase(uid)
 
 
 func _head_of(unit: Dictionary) -> Vector2:
@@ -2591,6 +2806,37 @@ func _consume_events() -> void:
 			_process_game_event(event)
 
 
+func _sync_singer_music() -> void:
+	if _phase() != "combat":
+		audio.stop_singer_music()
+		return
+	var best_singer: Dictionary = {}
+	var best_score: float = -1.0
+	for u: Dictionary in state.get("combat", {}).get("units", []):
+		if not bool(u.get("alive", true)):
+			continue
+		var u_key: String = str(u.get("key", ""))
+		if u_key in SINGER_KEYS:
+			var lvl: int = clampi(int(u.get("level", 1)), 1, 3)
+			var hp: float = float(u.get("max_hp", 0.0))
+			var atk: float = float(u.get("attack_damage", 0.0))
+			# Nível de estrelas tem peso decisivo absoluto (3★ > 2★ > 1★), desempate por vida e dano
+			var score: float = float(lvl) * 1000000.0 + hp * 10.0 + atk
+			if score > best_score:
+				best_score = score
+				best_singer = u
+	if not best_singer.is_empty():
+		var s_key: String = str(best_singer.get("key", ""))
+		var s_lvl: int = clampi(int(best_singer.get("level", 1)), 1, 3)
+		audio.play_singer_music(s_key, s_lvl)
+	else:
+		audio.stop_singer_music()
+
+
+func _sync_bob_marley_music() -> void:
+	_sync_singer_music()
+
+
 func _process_game_event(event: Dictionary) -> void:
 	var kind: String = str(event.get("type", ""))
 	if kind in ["item_bought", "items_fused", "capacity_upgraded", "hero_recruited"]:
@@ -2607,13 +2853,16 @@ func _process_game_event(event: Dictionary) -> void:
 	elif kind == "combat_started":
 		audio.play_cue("start")
 		_start_passive_character_skills(event)
+		_sync_singer_music()
 	elif kind == "round_finished":
 		character_player.clear()
 		passive_character_stamps.clear()
+		audio.stop_singer_music()
 		audio.play_cue("win" if int(event.get("winner", -1)) == 0 else "lose")
 	elif kind == "preparation_started":
 		character_player.clear()
 		passive_character_stamps.clear()
+		audio.stop_singer_music()
 	elif kind in ["heal", "dance_shield"] and visual_time - last_heal_sound > 0.25:
 		audio.play_cue("heal")
 		last_heal_sound = visual_time
@@ -2628,13 +2877,37 @@ func _process_game_event(event: Dictionary) -> void:
 		if str(source.get("key", "")) != "michael":
 			var direction: String = art.direction_for(Board.facing_vector(from, to), str(visual_directions.get(int(source["id"]), "south")))
 			character_player.play_action(int(source["id"]), str(source.get("key", "")), "attack", direction, _character_event_stamp(event, int(source["id"])))
+		var src_key: String = str(source.get("key", ""))
+		if src_key == "caramelo":
+			audio.play_cue("bite")
+		elif src_key == "zumbi":
+			audio.play_cue("thrust")
+		elif src_key == "neymar":
+			audio.play_cue("shoot")
+		elif src_key == "elon":
+			audio.play_cue("rocket")
+		else:
+			audio.play_cue("hit")
 	if kind == "dance_shield" and not source.is_empty():
 		shield_waves.append({"ground": visual_ground.get(int(source["id"]), Board.ground(_cell(source.get("cell", [])))), "life": 0.9, "duration": 0.9})
 		if int(source["id"]) == selected_id:
 			floating.append({"text": "ESCUDO %d" % roundi(float(event.get("amount", 0))), "position": _head_of(source) + Vector2(-30, -6), "color": GOLD, "life": 1.0, "size": 15})
 	if kind == "boss_cast" and not source.is_empty():
-		visual_attacks[int(source["id"])] = {"remaining": 0.55, "duration": 0.55, "direction": Vector2.DOWN}
+		var u_id: int = int(source["id"])
+		var cast_dir: String = "south-west"
+		if event.has("to") and event.has("from"):
+			var c_from: Variant = event.get("from")
+			var c_to: Variant = event.get("to")
+			var from_x: int = int(c_from.x) if (c_from is Vector2i or c_from is Vector2) else (int(c_from[0]) if c_from is Array and c_from.size() > 0 else 0)
+			var to_x: int = int(c_to.x) if (c_to is Vector2i or c_to is Vector2) else (int(c_to[0]) if c_to is Array and c_to.size() > 0 else 0)
+			cast_dir = "south-east" if to_x >= from_x else "south-west"
+		visual_directions[u_id] = cast_dir
+		visual_attacks[u_id] = {"remaining": 0.55, "duration": 0.55, "direction": Vector2.RIGHT if "east" in cast_dir else Vector2.LEFT}
 		var spell_name: String = str(event.get("spell", ""))
+		if spell_name == "fire_tornado":
+			audio.play_cue("tornado")
+		else:
+			audio.play_cue("boss_spell")
 		var spell_label: String = "FURACÃO DE FOGO!" if spell_name == "fire_tornado" else ("FOGO VERMELHO!" if spell_name == "red_fire" else ("FOGO ROXO!" if spell_name == "purple_fire" else "CONJURAÇÃO!"))
 		var spell_col: Color = Color("ff3322") if spell_name == "red_fire" else (Color("da70d6") if spell_name == "purple_fire" else Color("ff8e36"))
 		floating.append({"text": spell_label, "position": _head_of(source) + Vector2(-30, -20), "color": spell_col, "life": 1.2, "duration": 1.2, "size": 17, "critical": true})
@@ -2651,26 +2924,63 @@ func _process_game_event(event: Dictionary) -> void:
 				"duration": 0.32,
 				"critical": true
 			})
+	if kind == "boss_spell_telegraph" and event.has("center"):
+		var tele_cell: Vector2i = _cell(event.get("center", []))
+		boss_telegraphs.append({
+			"spell": str(event.get("spell", "")),
+			"cell": tele_cell,
+			"radius": int(event.get("radius", 1)),
+			"duration": float(event.get("duration", 0.8)),
+			"life": float(event.get("duration", 0.8))
+		})
+	if kind == "boss_enrage":
+		shake_remaining = 0.45
+		var b_source: Dictionary = _unit_by_id(int(event.get("boss_id", -1)))
+		var b_pos: Vector2 = _head_of(b_source) if not b_source.is_empty() else Vector2(640, 200)
+		floating.append({"text": "🔥 FÚRIA DO CRIADOR! 🔥", "position": b_pos + Vector2(-60, -25), "color": Color("ff3311"), "life": 1.5, "duration": 1.5, "size": 18, "critical": true})
+		log_lines.append("🔥 [FÚRIA] O Criador entrou em fúria aos 40% de HP! Velocidade aumentada!")
+	if kind == "boss_shockwave" and event.has("center"):
+		shake_remaining = 0.35
+		blast_zones.append({"cell": event["center"], "radius": int(event.get("radius", 2)), "life": 0.85, "duration": 0.85, "color_primary": Color(1.0, 0.25, 0.1, 0.5), "color_border": Color(1.0, 0.85, 0.2, 0.95)})
 	if kind == "red_fire_explosion" and event.has("center"):
+		audio.play_cue("explosion")
 		shake_remaining = 0.24
 		blast_zones.append({"cell": event["center"], "radius": int(event.get("radius", 1)), "life": 0.75, "duration": 0.75, "color_primary": Color(1.0, 0.18, 0.08, 0.48), "color_border": Color(1.0, 0.55, 0.2, 0.95)})
 		kit_effects.append({"kind": "red_explosion", "position": Board.project(Board.ground(_cell(event["center"]))), "life": 0.65, "duration": 0.65, "critical": false})
 	if kind == "purple_fire_explosion" and event.has("center"):
+		audio.play_cue("explosion")
 		shake_remaining = 0.22
 		blast_zones.append({"cell": event["center"], "radius": int(event.get("radius", 1)), "life": 0.75, "duration": 0.75, "color_primary": Color(0.68, 0.2, 0.95, 0.45), "color_border": Color(0.9, 0.55, 1.0, 0.9)})
 		kit_effects.append({"kind": "purple_explosion", "position": Board.project(Board.ground(_cell(event["center"]))), "life": 0.65, "duration": 0.65, "critical": false})
 	if kind == "fire_tornado" and event.has("center"):
+		audio.play_cue("tornado")
 		shake_remaining = 0.28
 		blast_zones.append({"cell": event["center"], "radius": int(event.get("radius", 1)), "life": 1.05, "duration": 1.05, "color_primary": Color(1.0, 0.35, 0.1, 0.45), "color_border": Color(1.0, 0.75, 0.2, 0.9)})
 		kit_effects.append({"kind": "fire_tornado", "position": Board.project(Board.ground(_cell(event["center"]))), "life": 0.95, "duration": 0.95, "critical": false})
+	if kind == "boss_teleport":
+		var boss_id: int = int(event.get("boss_id", -1))
+		var dest_cell: Vector2i = _cell(event.get("to", []))
+		var from_cell: Vector2i = _cell(event.get("from", []))
+		visual_ground[boss_id] = Board.ground(dest_cell)
+		kit_effects.append({"kind": "boss_teleport", "position": Board.project(Board.ground(from_cell)), "life": 0.55, "duration": 0.55, "critical": false})
+		kit_effects.append({"kind": "boss_teleport_land", "position": Board.project(Board.ground(dest_cell)), "life": 0.55, "duration": 0.55, "critical": false})
+		floating.append({"text": "⚡ TELEPORTE! ⚡", "position": Board.project(Board.ground(dest_cell)) + Vector2(-28, -42), "color": Color("c084fc"), "life": 1.2, "duration": 1.2, "size": 15, "critical": true})
+		audio.play_cue("boss_spell")
+		shake_remaining = 0.22
+		log_lines.append("⚡ [TELEPORTE] O Criador se teletransportou para um novo setor da arena!")
 	if kind == "unit_displaced":
-		var victim: Dictionary = _unit_by_id(int(event.get("unit_id", -1)))
-		if not victim.is_empty():
-			floating.append({"text": "ARREMESSADO!", "position": _head_of(victim) + Vector2(-22, -8), "color": Color("ff9944"), "life": 0.9, "duration": 0.9, "size": 13})
-			visual_pulls[int(victim["id"])] = {"from": Board.ground(_cell(event.get("from", []))), "to": Board.ground(_cell(event.get("to", []))), "remaining": 0.35, "duration": 0.35}
+		if str(event.get("reason", "")) != "boss_teleport":
+			var victim: Dictionary = _unit_by_id(int(event.get("unit_id", -1)))
+			if not victim.is_empty():
+				floating.append({"text": "ARREMESSADO!", "position": _head_of(victim) + Vector2(-22, -8), "color": Color("ff9944"), "life": 0.9, "duration": 0.9, "size": 13})
+				visual_pulls[int(victim["id"])] = {"from": Board.ground(_cell(event.get("from", []))), "to": Board.ground(_cell(event.get("to", []))), "remaining": 0.35, "duration": 0.35}
 	if kind == "boss_summon" and event.has("cell"):
 		kit_effects.append({"kind": "boss_summon", "position": Board.project(Board.ground(_cell(event["cell"]))) + Vector2(0, -10), "life": 0.85, "duration": 0.85, "critical": false})
-		floating.append({"text": "INVOCAÇÃO!", "position": Board.project(Board.ground(_cell(event["cell"]))) + Vector2(-20, -35), "color": Color("b870ff"), "life": 1.1, "duration": 1.1, "size": 15})
+		boss_summon_portals.append({"cell": _cell(event["cell"]), "ground": Board.ground(_cell(event["cell"])), "duration": 1.4, "life": 1.4, "key": str(event.get("key", ""))})
+		floating.append({"text": "⚡ LACAIO NA RETAGUARDA! (PROVOCAÇÃO) ⚡", "position": Board.project(Board.ground(_cell(event["cell"]))) + Vector2(-54, -40), "color": Color("f87171"), "life": 1.6, "duration": 1.6, "size": 14, "critical": true})
+		audio.play_cue("boss_spell")
+		shake_remaining = 0.2
+		log_lines.append("⚔️ [LACAIO] O Criador invocou um monstro na retaguarda! Todas as tropas foram provocadas!")
 	if kind in ["hit", "execute"] and not target.is_empty() and source.get("key", "") not in ["caramelo", "zumbi"]:
 		slashes.append({"position": _head_of(target) + Vector2(0, 24), "life": 0.2, "critical": bool(event.get("critical", false)), "seed": randf() * TAU})
 		visual_hits[int(target["id"])] = 0.12
@@ -2678,8 +2988,23 @@ func _process_game_event(event: Dictionary) -> void:
 		visual_hits[int(target["id"])] = 0.12
 	if kind in ["hit", "execute"] and not target.is_empty():
 		visual_hits[int(target["id"])] = 0.12
+		if kind == "execute":
+			audio.play_cue("super_bite")
+		elif bool(event.get("critical", false)):
+			audio.play_cue("crit")
+		elif str(source.get("key", "")) == "caramelo":
+			audio.play_cue("bite")
+		elif str(source.get("key", "")) == "zumbi":
+			audio.play_cue("thrust")
+		else:
+			audio.play_cue("hit")
 	if kind == "death" and not target.is_empty():
 		visual_deaths[int(target["id"])] = 0.6
+		audio.play_cue("death")
+		if str(target.get("key", "")) in SINGER_KEYS:
+			_sync_singer_music()
+	if kind == "revive":
+		audio.play_cue("revive")
 	if kind in ["hit", "ball_hit", "bleed", "execute", "heal", "rocket_hit", "mini_rocket_hit", "splash", "smoke_hit", "smoke", "lasso_hit", "purple_fire_hit", "red_fire_hit", "fire_tornado_hit"] and not target.is_empty():
 		var target_id: int = int(target.get("id", -1))
 		var amount: float = float(event.get("amount", 0))
@@ -2735,6 +3060,11 @@ func _spawn_kit_feedback(event: Dictionary, source: Dictionary, target: Dictiona
 	elif kind in ["hit", "execute"] and key == "caramelo":
 		effect_kind = "bite"
 		duration = 0.24 if kind == "hit" else 0.42
+	elif (kind in ["hit", "reggae_hit", "reggae_impact"] and (key == "bob_marley" or str(source.get("key", "")) == "bob_marley")):
+		effect_kind = "reggae_impact"
+		duration = 0.42
+		if not target.is_empty():
+			target_point = Board.project(_ground_of(target)) + Vector2(0, -21)
 	elif kind == "bleed":
 		effect_kind = "bleed"
 		duration = 0.35
@@ -2804,11 +3134,33 @@ func _spawn_kit_feedback(event: Dictionary, source: Dictionary, target: Dictiona
 		if not target.is_empty():
 			visual_pulls[int(target["id"])] = {"from": Board.ground(_cell(event.get("from", []))), "to": Board.ground(_cell(event.get("to", []))), "remaining": 0.3, "duration": 0.3}
 		_spawn_lasso_knot(source, target)
+	elif kind == "reviving":
+		var target_id: int = int(target.get("id", -1))
+		visual_deaths.erase(target_id)
+		var dur: float = float(event.get("duration", 1.0))
+		var r_cell: Vector2i = _cell(event.get("cell", target.get("cell", [])))
+		var r_ground: Vector2 = Board.ground(r_cell)
+		lula_descents[target_id] = {
+			"duration": dur,
+			"remaining": dur,
+			"cell": r_cell,
+			"ground": r_ground
+		}
+		floating.append({"text": "✨ DESCENDO DOS CÉUS... ✨", "position": Board.project(r_ground) + Vector2(-65, -70), "color": Color("fff59d"), "life": 1.0, "size": 15})
 	elif kind == "revive":
 		effect_kind = "revive"
-		duration = 0.8
-		visual_deaths.erase(int(target.get("id", -1)))
-		floating.append({"text": "VOLTA POR CIMA!", "position": target_point + Vector2(-48, -36), "color": Color("86f6a5"), "life": 1.1, "size": 16})
+		duration = 1.0
+		var target_id: int = int(target.get("id", -1))
+		visual_deaths.erase(target_id)
+		lula_descents.erase(target_id)
+		ascended_units[target_id] = true
+		floating.append({"text": "😇 VOLTA POR CIMA DIVINA!", "position": target_point + Vector2(-65, -55), "color": Color("86f6a5"), "life": 1.4, "size": 17})
+		floating.append({"text": "⚔ +25% DANO DO GRUPO (5s)", "position": target_point + Vector2(-70, -34), "color": Color("ffd700"), "life": 1.5, "size": 14})
+		floating.append({"text": "⚡ FRENESI DIVINO (CRÍTICO 100%)", "position": target_point + Vector2(-80, -12), "color": Color("ffe082"), "life": 1.6, "size": 14})
+		shield_waves.append({"ground": target_point, "life": 0.8, "duration": 0.8, "team": target.get("team", 0), "color": Color("ffd700")})
+	elif kind == "lula_ascended":
+		var target_id: int = int(event.get("unit_id", -1))
+		ascended_units[target_id] = true
 	elif kind == "summon":
 		effect_kind = "summon"
 		duration = 0.55
@@ -2898,7 +3250,7 @@ func _smoke_vfx_data(zone: Dictionary) -> Dictionary:
 		var scale_boost: float = 1.0 + float(z_rad - 1) * 0.45
 		data["scale"] = (Board.cell_scale(cell) * scale_boost) if key == "fumaca_02" else (2.0 * scale_boost)
 		if key == "fumaca_02":
-			data["modulate"] = Color(1, 1, 1, 0.85)
+			data["modulate"] = Color(0.35, 0.92, 0.45, 0.65)
 		data["zone_id"] = int(zone.get("id", -1))
 		data["source_id"] = int(zone.get("source_id", -1))
 		data["remaining"] = float(zone.get("remaining", 0))
@@ -2977,7 +3329,7 @@ func _draw_kit_feedback(canvas: Node2D) -> void:
 		var progress: float = 1.0 - float(effect["life"]) / float(effect["duration"])
 		var alpha: float = clampf(1.0 - progress, 0.0, 1.0)
 		var point: Vector2 = effect["position"]
-		var critical: bool = bool(effect["critical"])
+		var critical: bool = bool(effect.get("critical", false))
 		match str(effect["kind"]):
 			"thrust":
 				var from: Vector2 = effect["from"]
@@ -3019,11 +3371,32 @@ func _draw_kit_feedback(canvas: Node2D) -> void:
 					var spark_p: Vector2 = point + Vector2(cos(spark_ang), sin(spark_ang)) * (blast_r * 0.85)
 					canvas.draw_circle(spark_p, 2.5 * alpha, Color("ffd85c"))
 			"smoke_cloud":
-				for puff_i: int in range(5):
-					var puff_ang: float = TAU * puff_i / 5.0 + progress * 1.5
-					var puff_dist: float = 10.0 + progress * 16.0
+				for puff_i: int in range(6):
+					var puff_ang: float = TAU * float(puff_i) / 6.0 + progress * 1.5
+					var puff_dist: float = 10.0 + progress * 18.0
 					var puff_p: Vector2 = point + Vector2(cos(puff_ang) * 1.4, sin(puff_ang) * 0.8) * puff_dist
-					canvas.draw_circle(puff_p, 13.0 * (0.8 + 0.2 * sin(progress * PI)), Color(0.48, 0.52, 0.78, alpha * 0.38))
+					canvas.draw_circle(puff_p, 14.0 * (0.8 + 0.2 * sin(progress * PI)), Color(0.24, 0.82, 0.36, alpha * 0.42))
+					canvas.draw_circle(puff_p, 8.0 * (0.8 + 0.2 * sin(progress * PI)), Color(0.38, 0.95, 0.48, alpha * 0.25))
+			"reggae_impact":
+				var b_rad: float = 14.0 + progress * 28.0
+				# 3 anéis de choque com as cores autênticas da Jamaica/Rastafari: Verde, Ouro e Vermelho
+				canvas.draw_arc(point, b_rad * 1.15, 0, TAU, 22, Color(REGGAE_GREEN, alpha * 0.85), 2.2, true)
+				canvas.draw_arc(point, b_rad * 0.82, 0, TAU, 20, Color(REGGAE_GOLD, alpha * 0.9), 2.5, true)
+				canvas.draw_arc(point, b_rad * 0.48, 0, TAU, 18, Color(REGGAE_RED, alpha * 0.95), 2.8, true)
+				if bob_reggae_note_tex != null:
+					var r_sz: Vector2 = Vector2(24, 24) * (0.8 + progress * 0.9)
+					var r_rot: float = sin(progress * PI) * 0.5
+					canvas.draw_set_transform(point, r_rot, Vector2.ONE)
+					canvas.draw_texture_rect(bob_reggae_note_tex, Rect2(-r_sz * 0.5, r_sz), false, Color(1, 1, 1, alpha * 0.95))
+					canvas.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+				var r_font: Font = ThemeDB.fallback_font
+				for spk_i: int in range(6):
+					var spk_ang: float = TAU * float(spk_i) / 6.0 + progress * 2.2
+					var spk_p: Vector2 = point + Vector2(cos(spk_ang), sin(spk_ang)) * (b_rad * 0.9)
+					var note_c: String = "♪" if spk_i % 2 == 0 else "♫"
+					var col_c: Color = [REGGAE_GREEN, REGGAE_GOLD, REGGAE_RED][spk_i % 3]
+					canvas.draw_string_outline(r_font, spk_p, note_c, HORIZONTAL_ALIGNMENT_CENTER, -1, 11, 2, Color(0, 0, 0, 0.7 * alpha))
+					canvas.draw_string(r_font, spk_p, note_c, HORIZONTAL_ALIGNMENT_CENTER, -1, 11, Color(col_c, alpha))
 			"lasso":
 				var pts: PackedVector2Array = _lasso_points(effect)
 				canvas.draw_polyline(pts, Color(Color("ffd55a"), alpha), 2.0, true)
@@ -3102,6 +3475,14 @@ func _draw_kit_feedback(canvas: Node2D) -> void:
 				for sm_i: int in range(5):
 					var sm_up: Vector2 = point + Vector2((sm_i - 2) * 8.0, 10 - progress * 40.0 - float(sm_i % 3) * 6.0)
 					canvas.draw_circle(sm_up, maxf(1.0, 3.0 * (1.0 - progress)), Color(0.5, 0.1, 0.8, alpha * 0.8))
+			"boss_teleport":
+				var tp_rad: float = 24.0 * (1.0 - progress)
+				canvas.draw_arc(point, tp_rad, 0, TAU, 24, Color(0.8, 0.3, 1.0, alpha), 3.0, true)
+				canvas.draw_circle(point, maxf(1.0, 8.0 * (1.0 - progress)), Color(1.0, 0.7, 1.0, alpha * 0.9))
+			"boss_teleport_land":
+				var land_rad: float = 28.0 * progress
+				canvas.draw_arc(point, land_rad, 0, TAU, 24, Color(0.6, 0.2, 0.9, alpha), 3.5, true)
+				canvas.draw_arc(point, land_rad * 0.6, 0, TAU, 18, Color(1.0, 0.8, 0.3, alpha * 0.8), 2.0, true)
 
 
 func _event_text(event: Dictionary) -> String:
@@ -3123,7 +3504,7 @@ func _event_text(event: Dictionary) -> String:
 		"revive": "Lula: volta por cima", "summon": "Barbie: invocou Ken", "miss": "Ataque errou", "hero_dismissed": "Herói dispensado; itens devolvidos à bolsa",
 		"boss_cast": "Criador: conjuração mágica", "purple_fire_explosion": "Criador: explosão de fogo roxo",
 		"red_fire_explosion": "Criador: explosão de fogo vermelho",
-		"fire_tornado": "Criador: furacão de fogo", "boss_summon": "Criador: invocou monstro",
+		"fire_tornado": "Criador: furacão de fogo", "boss_summon": "Criador: invocou monstro", "boss_teleport": "Criador: teletransporte",
 		"unit_displaced": "Unidade arremessada", "purple_fire_hit": "Impacto de fogo roxo", "red_fire_hit": "Impacto de fogo vermelho", "fire_tornado_hit": "Dano do furacão",
 		"rocket_hit": "Super Foguete acertou", "mini_rocket_hit": "Minifoguete acertou", "super_attack": "Super Ataque disparado", "splash": "Explosão atingiu", "projectile_launched": "Projétil disparado"}
 	var text: String = str(names.get(kind, kind.replace("_", " ")))
@@ -3211,10 +3592,18 @@ func _refresh_lobby() -> void:
 
 	match lobby_subview:
 		"none":
+			audio.stop_singer_music()
 			_refresh_lobby_main()
 		"heroes":
+			if lobby_selected_hero_key == "bob_marley":
+				audio.play_bob_music(lobby_preview_level)
+			elif lobby_selected_hero_key == "snoop":
+				audio.play_snoop_music(lobby_preview_level)
+			else:
+				audio.stop_singer_music()
 			_refresh_lobby_heroes()
 		"settings":
+			audio.stop_singer_music()
 			_refresh_lobby_settings()
 		"matchmaking":
 			_refresh_lobby_matchmaking()
@@ -3425,6 +3814,7 @@ func _refresh_lobby_settings() -> void:
 
 	# Fechar
 	_button(modal, "VOLTAR AO LOBBY", Rect2(240, 516, 240, 48), func() -> void:
+		audio.stop_bob_music()
 		lobby_subview = "none"
 		lobby_signature = ""
 		_refresh())
@@ -3435,6 +3825,7 @@ func _refresh_lobby_heroes() -> void:
 	_label(modal, "COMPÊNDIO DE HERÓIS", Rect2(24, 12, 500, 32), 26, GOLD)
 	_label(modal, "Conheça os 12 heróis do Clash of Eras, suas sinergias e evolução de nível", Rect2(26, 42, 600, 20), 13, Kit.MUTED)
 	_button(modal, "X", Rect2(1150, 14, 44, 40), func() -> void:
+		audio.stop_bob_music()
 		lobby_subview = "none"
 		lobby_signature = ""
 		_refresh())
@@ -3499,6 +3890,12 @@ func _refresh_lobby_heroes() -> void:
 			audio.play_cue("click")
 			lobby_selected_hero_key = h_key
 			lobby_signature = ""
+			if h_key == "bob_marley":
+				audio.play_bob_music(lobby_preview_level)
+			elif h_key == "snoop":
+				audio.play_snoop_music(lobby_preview_level)
+			else:
+				audio.stop_singer_music()
 			_refresh())
 		list_container.add_child(card)
 
@@ -3590,6 +3987,10 @@ func _refresh_lobby_heroes() -> void:
 		var btn_lvl: Button = _button(lvl_bar, "%s NÍVEL %d" % ["★".repeat(lvl), lvl], Rect2(8 + l_idx * 130, 4, 124, 36), func() -> void:
 			lobby_preview_level = lvl
 			lobby_signature = ""
+			if lobby_selected_hero_key == "bob_marley":
+				audio.play_bob_music(lvl)
+			elif lobby_selected_hero_key == "snoop":
+				audio.play_snoop_music(lvl)
 			_refresh())
 		btn_lvl.add_theme_font_size_override("font_size", 13)
 		var st_lvl: StyleBoxFlat = (btn_lvl.get_theme_stylebox("normal") as StyleBoxFlat).duplicate() as StyleBoxFlat
@@ -3696,19 +4097,28 @@ func _draw_snoop_cigar(canvas: CanvasItem, feet_pos: Vector2, hero_scale: float,
 			var tip_pos: Vector2 = mouth_pos + Vector2(22.0 * flip * cigar_scale, -2.0 * cigar_scale).rotated(body_angle)
 			var smoke_scale: float = cigar_scale * 0.72
 			canvas.draw_set_transform(tip_pos.round(), 0.0, Vector2(smoke_scale, smoke_scale))
-			canvas.draw_texture_rect_region(smoke_data["texture"], Rect2(smoke_data["offset"], smoke_data["size"]), smoke_data["region"], Color(tint.r, tint.g, tint.b, tint.a * 0.62))
+			canvas.draw_texture_rect_region(smoke_data["texture"], Rect2(smoke_data["offset"], smoke_data["size"]), smoke_data["region"], Color(0.35, 0.92, 0.45, tint.a * 0.7))
+			if cannabis_leaf_tex != null and tint.a > 0.5:
+				var c_t: float = fmod(elapsed * 0.65, 1.0)
+				var c_rise: float = c_t * 22.0 * cigar_scale
+				var c_sway: float = sin(elapsed * 3.8) * 4.0 * cigar_scale
+				var c_alpha: float = clampf(sin(c_t * PI) * 1.3, 0.0, 0.8) * tint.a
+				var c_pos: Vector2 = tip_pos + Vector2(c_sway, -c_rise)
+				var c_sz: float = 14.0 * cigar_scale
+				canvas.draw_set_transform(c_pos.round(), sin(elapsed * 2.5) * 0.35, Vector2.ONE)
+				canvas.draw_texture_rect(cannabis_leaf_tex, Rect2(-Vector2(c_sz, c_sz) * 0.5, Vector2(c_sz, c_sz)), false, Color(1, 1, 1, c_alpha))
 	canvas.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 
 
-## Desenha as notas musicais de reggae (verde, ouro e vermelho) do Bob Marley usando notas_bob_01 (Sprite Fusion).
+## Desenha as notas musicais de reggae (verde, ouro e vermelho da Jamaica) do Bob Marley.
 func _draw_bob_musical_notes(canvas: CanvasItem, bob_feet: Vector2, elapsed: float, scale_mult: float = 1.4, base_y: float = -34.0) -> void:
 	var base_offsets: Array[Vector2] = [
 		Vector2(-18.0, base_y),
 		Vector2(16.0, base_y + 4.0),
 		Vector2(-1.0, base_y - 8.0)
 	]
+	var reggae_cols: Array[Color] = [REGGAE_GREEN, REGGAE_GOLD, REGGAE_RED]
 	if vfx.has_effect("notas_bob_01"):
-		# 6 frames a 6 fps: 0=Verde ♪, 1=Ouro ♫, 2=Vermelho ♪, 3=Verde ♫, 4=Ouro ♪, 5=Vermelho ♫
 		for n_i: int in range(3):
 			var cycle: float = fmod(elapsed * 0.85 + float(n_i) * 0.33, 1.0)
 			var rise: float = cycle * 24.0
@@ -3725,14 +4135,331 @@ func _draw_bob_musical_notes(canvas: CanvasItem, bob_feet: Vector2, elapsed: flo
 				data["scale"] = scale_mult
 				data["modulate"] = Color(1.0, 1.0, 1.0, alpha)
 				_draw_vfx_frame(canvas, data)
+				if bob_reggae_note_tex != null and n_i == 1:
+					var r_pos: Vector2 = (bob_feet + base_offsets[n_i] + Vector2(sway, -rise)).round()
+					var r_sz: float = 14.0 * scale_mult
+					canvas.draw_set_transform(r_pos, tilt, Vector2.ONE)
+					canvas.draw_texture_rect(bob_reggae_note_tex, Rect2(-Vector2(r_sz, r_sz) * 0.5, Vector2(r_sz, r_sz)), false, Color(1, 1, 1, alpha * 0.85))
+					canvas.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 		return
 	var music_font: Font = ThemeDB.fallback_font
 	var note_chars: Array[String] = ["♪", "♫", "♪"]
-	var note_cols: Array[Color] = [Color("2ec756"), Color("f4c430"), Color("e63946")]
 	for n_i: int in range(3):
-		var n_pos: Vector2 = bob_feet + base_offsets[n_i] + Vector2(0.0, -fmod((elapsed + float(n_i) * 0.4) * 22.0, 26.0))
-		canvas.draw_string_outline(music_font, n_pos, note_chars[n_i], HORIZONTAL_ALIGNMENT_CENTER, -1, 15, 3, Color(0, 0, 0, 0.75))
-		canvas.draw_string(music_font, n_pos, note_chars[n_i], HORIZONTAL_ALIGNMENT_CENTER, -1, 15, note_cols[n_i])
+		var cycle: float = fmod(elapsed * 0.85 + float(n_i) * 0.33, 1.0)
+		var rise: float = cycle * 26.0
+		var sway: float = sin(elapsed * 4.2 + float(n_i) * 2.1) * 4.0
+		var tilt: float = sin(elapsed * 5.0 + float(n_i) * 1.9) * 0.16
+		var alpha: float = clampf(sin(cycle * PI) * 1.45, 0.25, 1.0)
+		var n_pos: Vector2 = bob_feet + base_offsets[n_i] + Vector2(sway, -rise)
+		if bob_reggae_note_tex != null and n_i == 1:
+			var note_sz: float = 18.0 * scale_mult
+			canvas.draw_set_transform(n_pos.round(), tilt, Vector2.ONE)
+			canvas.draw_texture_rect(bob_reggae_note_tex, Rect2(-Vector2(note_sz, note_sz) * 0.5, Vector2(note_sz, note_sz)), false, Color(1, 1, 1, alpha))
+			canvas.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+		else:
+			canvas.draw_string_outline(music_font, n_pos, note_chars[n_i], HORIZONTAL_ALIGNMENT_CENTER, -1, int(15 * scale_mult), 3, Color(0, 0, 0, 0.85 * alpha))
+			canvas.draw_string(music_font, n_pos, note_chars[n_i], HORIZONTAL_ALIGNMENT_CENTER, -1, int(15 * scale_mult), Color(reggae_cols[n_i], alpha))
+
+
+## Buff visual de ritmo do Bob Marley para aliados (+30% velocidade de ataque nas cores reais da Jamaica)
+func _draw_bob_song_buff(canvas: CanvasItem, ground_or_pos: Vector2, elapsed: float, scale_mult: float = 1.0, is_isometric: bool = true) -> void:
+	var pulse: float = 0.91 + 0.09 * sin(elapsed * 6.5)
+	# Cores oficiais do Reggae/Rastafari da Jamaica: Verde (externo), Ouro (médio), Vermelho (interno)
+	var r_colors: Array[Color] = [REGGAE_GREEN, REGGAE_GOLD, REGGAE_RED]
+	var radii: Array = [0.38, 0.26, 0.16] if is_isometric else [22.0, 16.0, 10.0]
+	
+	for c_i: int in range(3):
+		var r_base: float = (radii[c_i] + (0.04 - c_i * 0.01) * sin(elapsed * 7.0 + c_i)) * pulse * scale_mult
+		var ell: PackedVector2Array
+		if is_isometric:
+			ell = Board.ellipse(ground_or_pos, r_base, r_base * 0.58, 22)
+		else:
+			ell = _make_ellipse(ground_or_pos, r_base, r_base * 0.55, 22)
+		ell.append(ell[0])
+		# Borda de contraste preta estilo bandeira da Jamaica sob a linha colorida
+		canvas.draw_polyline(ell, Color(0.06, 0.06, 0.06, 0.45), 2.4 if c_i == 0 else 1.9, true)
+		canvas.draw_polyline(ell, Color(r_colors[c_i], 0.78 - float(c_i) * 0.1), 1.6, true)
+	
+	var center_scr: Vector2 = Board.project(ground_or_pos) if is_isometric else ground_or_pos
+	var music_font: Font = ThemeDB.fallback_font
+	for p_i: int in range(3):
+		var p_cycle: float = fmod(elapsed * 0.9 + float(p_i) * 0.33, 1.0)
+		var p_rise: float = p_cycle * (32.0 * scale_mult)
+		var p_sway: float = sin(elapsed * 5.0 + float(p_i) * 2.1) * (8.0 * scale_mult)
+		var p_alpha: float = clampf(sin(p_cycle * PI) * 1.5, 0.0, 1.0)
+		var p_col: Color = Color(r_colors[p_i], p_alpha)
+		var p_offset: Vector2 = Vector2([-14.0, 12.0, 0.0][p_i], -14.0 * scale_mult)
+		var p_pos: Vector2 = center_scr + p_offset + Vector2(p_sway, -p_rise)
+		var note_char: String = ["♪", "♫", "♪"][p_i]
+		canvas.draw_string_outline(music_font, p_pos, note_char, HORIZONTAL_ALIGNMENT_CENTER, -1, int(13 * scale_mult), 3, Color(0, 0, 0, 0.75 * p_alpha))
+		canvas.draw_string(music_font, p_pos, note_char, HORIZONTAL_ALIGNMENT_CENTER, -1, int(13 * scale_mult), p_col)
+	if bob_reggae_note_tex != null:
+		var n_cycle: float = fmod(elapsed * 0.75, 1.0)
+		var n_rise: float = n_cycle * (38.0 * scale_mult)
+		var n_sway: float = sin(elapsed * 4.0) * (6.0 * scale_mult)
+		var n_alpha: float = clampf(sin(n_cycle * PI) * 1.3, 0.0, 0.85)
+		var n_pos: Vector2 = center_scr + Vector2(n_sway, -18.0 * scale_mult - n_rise)
+		var n_sz: float = 16.0 * scale_mult
+		canvas.draw_set_transform(n_pos.round(), sin(elapsed * 3.0) * 0.25, Vector2.ONE)
+		canvas.draw_texture_rect(bob_reggae_note_tex, Rect2(-Vector2(n_sz, n_sz) * 0.5, Vector2(n_sz, n_sz)), false, Color(1, 1, 1, n_alpha))
+		canvas.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+
+
+## Debuff visual de lentidão do Bob Marley para inimigos (-30% desaceleração / chill nas cores profundas de dub reggae)
+func _draw_bob_song_debuff(canvas: CanvasItem, ground_or_pos: Vector2, elapsed: float, scale_mult: float = 1.0, is_isometric: bool = true) -> void:
+	var slow_pulse: float = 0.93 + 0.07 * sin(elapsed * 2.0)
+	# Cores profundas de dub/roots reggae para desaceleração: Vermelho escuro, Ouro âmbar e Verde musgo
+	var debuff_cols: Array[Color] = [Color("b71c1c"), Color("d97706"), Color("1b5e20")]
+	var radii: Array = [0.36, 0.25, 0.15] if is_isometric else [22.0, 15.0, 9.0]
+	
+	for d_i: int in range(3):
+		var r_d: float = (radii[d_i] + (0.03 - d_i * 0.01) * sin(elapsed * 2.2 + d_i)) * slow_pulse * scale_mult
+		var ell: PackedVector2Array
+		if is_isometric:
+			ell = Board.ellipse(ground_or_pos, r_d, r_d * 0.58, 20)
+		else:
+			ell = _make_ellipse(ground_or_pos, r_d, r_d * 0.55, 20)
+		ell.append(ell[0])
+		canvas.draw_polyline(ell, Color(0.04, 0.04, 0.04, 0.4), 2.2 if d_i == 0 else 1.7, true)
+		canvas.draw_polyline(ell, Color(debuff_cols[d_i], 0.68 - float(d_i) * 0.1), 1.6, true)
+	
+	var center_scr: Vector2 = Board.project(ground_or_pos) if is_isometric else ground_or_pos
+	var music_font: Font = ThemeDB.fallback_font
+	for d_i: int in range(2):
+		var d_cycle: float = fmod(elapsed * 0.4 + float(d_i) * 0.5, 1.0)
+		var d_fall: float = d_cycle * (18.0 * scale_mult)
+		var d_sway: float = sin(elapsed * 2.0 + float(d_i) * 2.5) * (4.0 * scale_mult)
+		var d_alpha: float = clampf(sin(d_cycle * PI) * 1.3, 0.0, 0.85)
+		var d_col: Color = Color(debuff_cols[d_i], d_alpha)
+		var d_offset: Vector2 = Vector2(-9.0 if d_i == 0 else 9.0, -28.0 * scale_mult)
+		var d_pos: Vector2 = center_scr + d_offset + Vector2(d_sway, d_fall)
+		var slow_char: String = "♫" if d_i == 0 else "♪"
+		canvas.draw_string_outline(music_font, d_pos, slow_char, HORIZONTAL_ALIGNMENT_CENTER, -1, int(11 * scale_mult), 2, Color(0, 0, 0, 0.6 * d_alpha))
+		canvas.draw_string(music_font, d_pos, slow_char, HORIZONTAL_ALIGNMENT_CENTER, -1, int(11 * scale_mult), d_col)
+
+
+## Retorna a zona de fumaça ativa que cobre a unidade, ou vazio se fora da cortina.
+func _unit_in_smoke_zone(unit: Dictionary) -> Dictionary:
+	if _phase() != "combat":
+		return {}
+	var u_cell: Vector2i = _cell(unit.get("cell", []))
+	for zone: Dictionary in state.get("combat", {}).get("zones", []):
+		if float(zone.get("remaining", 0)) > 0.0:
+			var z_cell: Vector2i = _cell(zone.get("cell", []))
+			if Grid.distance(u_cell, z_cell) <= int(zone.get("radius", 2)):
+				return zone
+	return {}
+
+
+## Desenha a fumaça verde translúcida na altura da cintura dos personagens com emotions de cannabis.
+func _draw_unit_smoke_immersion(canvas: CanvasItem, feet_pos: Vector2, u_scale: float, is_ally: bool, elapsed: float) -> void:
+	var waist_y: float = -20.0 * u_scale
+	var mist_center: Vector2 = feet_pos + Vector2(0.0, waist_y)
+	
+	# Puffs ondulantes de fumaça verde translúcida ao redor da cintura e pernas
+	for puff_i: int in range(4):
+		var ang: float = float(puff_i) * (PI * 0.5) + elapsed * 1.8
+		var dist_x: float = (16.0 + 4.0 * sin(elapsed * 2.5 + float(puff_i))) * u_scale
+		var dist_y: float = (7.0 + 2.0 * cos(elapsed * 2.5 + float(puff_i))) * u_scale
+		var puff_pos: Vector2 = mist_center + Vector2(cos(ang) * dist_x, sin(ang) * dist_y + 4.0 * u_scale)
+		var puff_r: float = (13.0 + 3.0 * sin(elapsed * 3.0 + float(puff_i) * 1.5)) * u_scale
+		canvas.draw_circle(puff_pos, puff_r, Color(0.24, 0.82, 0.36, 0.26))
+		canvas.draw_circle(puff_pos, puff_r * 0.6, Color(0.38, 0.94, 0.48, 0.18))
+	
+	# Folha de cannabis / emotion estilizado subindo como fumaça aromática
+	if cannabis_leaf_tex != null:
+		var c_cycle: float = fmod(elapsed * 0.45 + (0.3 if is_ally else 0.7), 1.0)
+		var c_rise: float = c_cycle * (34.0 * u_scale)
+		var c_sway: float = sin(elapsed * 3.2) * (8.0 * u_scale)
+		var c_alpha: float = clampf(sin(c_cycle * PI) * 1.2, 0.0, 0.85)
+		var c_pos: Vector2 = mist_center + Vector2(c_sway, 6.0 * u_scale - c_rise)
+		var c_size: float = 16.0 * u_scale
+		canvas.draw_set_transform(c_pos.round(), sin(elapsed * 2.0) * 0.35, Vector2.ONE)
+		canvas.draw_texture_rect(cannabis_leaf_tex, Rect2(-Vector2(c_size, c_size) * 0.5, Vector2(c_size, c_size)), false, Color(1, 1, 1, c_alpha))
+		canvas.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+	
+	# Bônus para aliados na fumaça (+25% velocidade de ataque)
+	if is_ally:
+		var speed_pulse: float = 0.85 + 0.15 * sin(elapsed * 7.0)
+		var s_pts: PackedVector2Array = _make_ellipse(feet_pos + Vector2(0, waist_y * 0.5), 18.0 * u_scale * speed_pulse, 9.0 * u_scale * speed_pulse, 16)
+		s_pts.append(s_pts[0])
+		canvas.draw_polyline(s_pts, Color(0.35, 0.95, 0.45, 0.55), 1.6, true)
+	else:
+		# Penalidade para inimigos na fumaça (30% erro de ataque): névoa estonteante nos olhos
+		var eye_center: Vector2 = feet_pos + Vector2(0.0, -48.0 * u_scale)
+		var eye_haze: float = 0.4 + 0.2 * sin(elapsed * 4.0)
+		canvas.draw_circle(eye_center, 9.0 * u_scale, Color(0.2, 0.75, 0.3, 0.22 * eye_haze))
+		for h_i: int in range(3):
+			var h_ang: float = elapsed * 3.5 + float(h_i) * (TAU / 3.0)
+			var h_pos: Vector2 = eye_center + Vector2(cos(h_ang) * 8.0, sin(h_ang) * 4.0) * u_scale
+			canvas.draw_circle(h_pos, 2.0 * u_scale, Color(0.4, 0.95, 0.5, 0.65))
+
+
+## Desenha a atmosfera volumétrica e emotions de cannabis que flutuam por toda a área da cortina de fumaça.
+func _draw_snoop_smoke_zone_atmosphere(canvas: CanvasItem, zone: Dictionary) -> void:
+	var z_cell: Vector2i = _cell(zone.get("cell", []))
+	var z_radius: int = int(zone.get("radius", 2))
+	var center_ground: Vector2 = Board.ground(z_cell)
+	var z_id: float = float(zone.get("id", 0))
+	
+	# Puffs volumétricos flutuantes à altura da cintura (meio-termo para dar profundidade de cena)
+	for n_i: int in range(7):
+		var n_ang: float = float(n_i) * (TAU / 7.0) + visual_time * 0.15 + z_id
+		var n_dist: float = (0.28 + 0.45 * sin(float(n_i) * 2.3 + z_id)) * float(z_radius)
+		var puff_ground: Vector2 = center_ground + Vector2(cos(n_ang) * n_dist, sin(n_ang) * n_dist * 0.58)
+		var puff_screen: Vector2 = Board.project(puff_ground) + Vector2(sin(visual_time * 2.0 + n_i) * 5.0, -22.0 + sin(visual_time * 1.8 + n_i) * 4.0)
+		var p_rad: float = 24.0 + 6.0 * sin(visual_time * 2.2 + n_i)
+		canvas.draw_circle(puff_screen, p_rad, Color(0.22, 0.8, 0.32, 0.18))
+		canvas.draw_circle(puff_screen, p_rad * 0.65, Color(0.35, 0.92, 0.45, 0.14))
+	
+	# Emotions de cannabis que sobem e dançam no ar pela área da fumaça
+	if cannabis_leaf_tex != null:
+		for leaf_i: int in range(6):
+			var l_cycle: float = fmod(visual_time * 0.28 + float(leaf_i) * 0.166 + z_id * 0.2, 1.0)
+			var l_ang: float = float(leaf_i) * (TAU / 6.0) + visual_time * 0.1
+			var l_dist: float = (0.3 + 0.5 * sin(float(leaf_i) * 3.1)) * float(z_radius)
+			var l_ground: Vector2 = center_ground + Vector2(cos(l_ang) * l_dist, sin(l_ang) * l_dist * 0.58)
+			var l_rise: float = l_cycle * 42.0
+			var l_sway: float = sin(visual_time * 2.6 + leaf_i) * 7.0
+			var l_pos: Vector2 = Board.project(l_ground) + Vector2(l_sway, -6.0 - l_rise)
+			var l_alpha: float = clampf(sin(l_cycle * PI) * 1.3, 0.0, 0.8)
+			var l_sz: float = 18.0 + 4.0 * sin(float(leaf_i))
+			canvas.draw_set_transform(l_pos.round(), sin(visual_time * 2.0 + leaf_i) * 0.4, Vector2.ONE)
+			canvas.draw_texture_rect(cannabis_leaf_tex, Rect2(-Vector2(l_sz, l_sz) * 0.5, Vector2(l_sz, l_sz)), false, Color(1, 1, 1, l_alpha))
+			canvas.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+
+
+## Asas de anjo engraçadas brancas e douradas bem brilhantes do Lula.
+func _draw_lula_angel_wings(canvas: CanvasItem, body_center: Vector2, height: float, scale_mult: float, elapsed: float, is_descending: bool, is_frenzy: bool) -> void:
+	canvas.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+	var flap_freq: float = 24.0 if is_descending else (16.0 if is_frenzy else 7.5)
+	var flap_angle: float = sin(elapsed * flap_freq) * (0.35 if is_descending else (0.28 if is_frenzy else 0.18))
+	var wing_span: float = 38.0 * scale_mult
+	var wing_height: float = 34.0 * scale_mult
+	var shoulder_offset_y: float = -height * 0.52
+	
+	for side: int in [-1, 1]:
+		var s_f: float = float(side)
+		var root_pos: Vector2 = body_center + Vector2(s_f * (7.0 * scale_mult), shoulder_offset_y)
+		var angle: float = (s_f * 0.32) + (s_f * flap_angle)
+		
+		var tip: Vector2 = root_pos + Vector2(cos(angle - PI * 0.5 * s_f) * wing_span * 0.3, -wing_height).rotated(angle * 0.3)
+		var mid_feather: Vector2 = root_pos + Vector2(s_f * wing_span * 0.95, -wing_height * 0.55).rotated(angle * 0.2)
+		var low_feather: Vector2 = root_pos + Vector2(s_f * wing_span * 0.75, 4.0 * scale_mult).rotated(angle * 0.1)
+		
+		# Glow celestial de fundo
+		if is_frenzy or is_descending:
+			var glow_poly: PackedVector2Array = PackedVector2Array([
+				root_pos,
+				tip + Vector2(s_f * 6, -6),
+				mid_feather + Vector2(s_f * 8, 0),
+				low_feather + Vector2(s_f * 6, 6)
+			])
+			canvas.draw_colored_polygon(glow_poly, Color(1.0, 0.88, 0.3, 0.35 + 0.15 * sin(elapsed * 12.0)))
+		
+		# 1. Pena Superior (Maior)
+		var poly_top: PackedVector2Array = PackedVector2Array([
+			root_pos + Vector2(0, -6 * scale_mult),
+			root_pos + Vector2(s_f * 12 * scale_mult, -wing_height * 0.7),
+			tip,
+			root_pos + Vector2(s_f * 16 * scale_mult, -wing_height * 0.35),
+			root_pos
+		])
+		canvas.draw_colored_polygon(poly_top, Color(0.98, 0.98, 1.0, 0.96))
+		var gold_edge_top: PackedVector2Array = PackedVector2Array([
+			root_pos + Vector2(0, -6 * scale_mult),
+			root_pos + Vector2(s_f * 12 * scale_mult, -wing_height * 0.7),
+			tip
+		])
+		canvas.draw_polyline(gold_edge_top, Color("ffd700"), 2.2 * scale_mult, true)
+		canvas.draw_circle(tip, 2.5 * scale_mult, Color("fff176"))
+		
+		# 2. Pena do Meio
+		var poly_mid: PackedVector2Array = PackedVector2Array([
+			root_pos,
+			root_pos + Vector2(s_f * 16 * scale_mult, -wing_height * 0.35),
+			mid_feather,
+			root_pos + Vector2(s_f * 12 * scale_mult, -2 * scale_mult),
+			root_pos
+		])
+		canvas.draw_colored_polygon(poly_mid, Color(0.96, 0.96, 0.99, 0.96))
+		var gold_edge_mid: PackedVector2Array = PackedVector2Array([
+			root_pos + Vector2(s_f * 16 * scale_mult, -wing_height * 0.35),
+			mid_feather
+		])
+		canvas.draw_polyline(gold_edge_mid, Color("ffd700"), 1.8 * scale_mult, true)
+		canvas.draw_circle(mid_feather, 2.0 * scale_mult, Color("fff176"))
+		
+		# 3. Pena Inferior
+		var poly_low: PackedVector2Array = PackedVector2Array([
+			root_pos + Vector2(0, 4 * scale_mult),
+			root_pos + Vector2(s_f * 12 * scale_mult, -2 * scale_mult),
+			low_feather,
+			root_pos + Vector2(s_f * 4 * scale_mult, 8 * scale_mult)
+		])
+		canvas.draw_colored_polygon(poly_low, Color(0.94, 0.94, 0.98, 0.95))
+		var gold_edge_low: PackedVector2Array = PackedVector2Array([
+			root_pos + Vector2(s_f * 12 * scale_mult, -2 * scale_mult),
+			low_feather
+		])
+		canvas.draw_polyline(gold_edge_low, Color("ffca28"), 1.6 * scale_mult, true)
+		canvas.draw_circle(low_feather, 1.8 * scale_mult, Color("ffe082"))
+		
+		# Contorno nítido delineando a asa
+		var outline: PackedVector2Array = PackedVector2Array([
+			root_pos,
+			root_pos + Vector2(0, -6 * scale_mult),
+			root_pos + Vector2(s_f * 12 * scale_mult, -wing_height * 0.7),
+			tip,
+			mid_feather,
+			low_feather,
+			root_pos + Vector2(s_f * 4 * scale_mult, 8 * scale_mult)
+		])
+		canvas.draw_polyline(outline, Color(0.65, 0.48, 0.05, 0.75), 1.2, true)
+		
+		# Partículas que se desprendem
+		if is_frenzy or is_descending:
+			for spark_i: int in range(2):
+				var sp_prog: float = fposmod(elapsed * 2.2 + float(spark_i) * 0.5, 1.0)
+				var sp_pos: Vector2 = tip.lerp(tip + Vector2(s_f * 14, 18), sp_prog)
+				canvas.draw_circle(sp_pos, 1.6 * (1.0 - sp_prog), Color("fff9c4"))
+
+
+## Auréola (areola) celestial dourada brilhante sobre a cabeça do Lula.
+func _draw_lula_halo(canvas: CanvasItem, feet_pos: Vector2, height: float, scale_mult: float, elapsed: float, is_frenzy: bool) -> void:
+	canvas.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+	var bob: float = sin(elapsed * 3.6) * 3.0
+	var halo_center: Vector2 = feet_pos + Vector2(0, -height - 12.0 * scale_mult + bob)
+	var tilt_angle: float = 0.22
+	var rad_x: float = 16.0 * scale_mult
+	var rad_y: float = 5.5 * scale_mult
+	
+	# Glow externo pulsante
+	var pulse: float = 0.5 + 0.5 * sin(elapsed * 5.0)
+	var glow_pts: PackedVector2Array = PackedVector2Array()
+	for i: int in range(16):
+		var ang: float = TAU * float(i) / 16.0
+		var pt: Vector2 = halo_center + Vector2(cos(ang) * (rad_x + 4.0), sin(ang) * (rad_y + 3.0)).rotated(tilt_angle)
+		glow_pts.append(pt)
+	glow_pts.append(glow_pts[0])
+	canvas.draw_colored_polygon(glow_pts, Color(1.0, 0.9, 0.3, 0.24 + (0.2 if is_frenzy else 0.12) * pulse))
+	
+	# Anel principal da auréola
+	var ring_pts: PackedVector2Array = PackedVector2Array()
+	for i: int in range(24):
+		var ang: float = TAU * float(i) / 24.0
+		var pt: Vector2 = halo_center + Vector2(cos(ang) * rad_x, sin(ang) * rad_y).rotated(tilt_angle)
+		ring_pts.append(pt)
+	ring_pts.append(ring_pts[0])
+	
+	canvas.draw_polyline(ring_pts, Color("ffb300"), 3.2 * scale_mult, true)
+	canvas.draw_polyline(ring_pts, Color("fffde7"), 1.6 * scale_mult, true)
+	
+	# Centelhas cintilantes nas extremidades
+	var left_tip: Vector2 = halo_center + Vector2(-rad_x, 0).rotated(tilt_angle)
+	var right_tip: Vector2 = halo_center + Vector2(rad_x, 0).rotated(tilt_angle)
+	canvas.draw_circle(left_tip, 2.0 * scale_mult * (0.8 + 0.3 * sin(elapsed * 8.0)), Color("ffffff"))
+	canvas.draw_circle(right_tip, 2.0 * scale_mult * (0.8 + 0.3 * cos(elapsed * 8.0)), Color("ffffff"))
 
 
 func _draw_arena_cell(canvas: Control, hex_center: Vector2, fill_color: Color, border_color: Color) -> void:
@@ -3786,6 +4513,7 @@ func _draw_hero_preview(canvas: Control) -> void:
 				_draw_snoop_cigar(canvas, feet, spr_scale, "south", visual_time)
 			elif key == "bob_marley":
 				_draw_bob_musical_notes(canvas, feet, visual_time, 1.55 * LEVEL_SCALE[lobby_preview_level - 1], -58.0 * LEVEL_SCALE[lobby_preview_level - 1])
+				_draw_bob_song_buff(canvas, feet, visual_time, 1.25 * LEVEL_SCALE[lobby_preview_level - 1], false)
 
 		# Estrelas de nível desenhadas sob os pés
 		var star_step: float = 18.0
@@ -4010,7 +4738,9 @@ func _draw_hero_preview(canvas: Control) -> void:
 			opp_wobble = sin(t * 12.0) * 1.5
 			var s_ring: PackedVector2Array = _make_ellipse(opp_pos + Vector2(0, -4), 48.0, 24.0, 24)
 			s_ring.append(s_ring[0])
-			canvas.draw_polyline(s_ring, Color(0.5, 0.9, 0.6, 0.45), 1.8, true)
+			canvas.draw_polyline(s_ring, Color(0.28, 0.95, 0.45, 0.65), 1.8, true)
+			_draw_unit_smoke_immersion(canvas, opp_pos, 1.1, false, t)
+			_draw_unit_smoke_immersion(canvas, hero_pos, 1.1, true, t)
 			if fmod(t, 0.8) < 0.4:
 				combat_msg = "ERROU! 30% MISS ☁"
 				combat_msg_col = Color("b1daff")
@@ -4143,15 +4873,19 @@ func _draw_hero_preview(canvas: Control) -> void:
 		hero_pos = cell_hero
 		hero_dir = "east"
 		var r_pulse: float = 0.92 + 0.08 * sin(t * 5.0)
-		# 3 Anéis de Reggae expandindo (verde, amarelo e vermelho)
+		# 3 Anéis de Reggae expandindo com as cores oficiais da Jamaica (verde, ouro e vermelho)
 		for r_i: int in range(3):
-			var r_col: Color = [Color("2ec756"), Color("f4c430"), Color("e63946")][r_i]
+			var r_col: Color = [REGGAE_GREEN, REGGAE_GOLD, REGGAE_RED][r_i]
 			var ring_r: float = (24.0 + float(r_i) * 16.0 + fmod(t * 22.0, 24.0)) * r_pulse
 			var r_ell: PackedVector2Array = _make_ellipse(hero_pos + Vector2(0, 4), ring_r, ring_r * 0.52, 28)
 			r_ell.append(r_ell[0])
-			canvas.draw_polyline(r_ell, Color(r_col, 0.45 - float(r_i) * 0.1), 1.8, true)
+			canvas.draw_polyline(r_ell, Color(r_col, 0.65 - float(r_i) * 0.12), 1.8, true)
 		# Notas musicais em pixel art (notas_bob_01) flutuando sobre Bob Marley
 		_draw_bob_musical_notes(canvas, hero_pos, visual_time, 1.45 * LEVEL_SCALE[lobby_preview_level - 1], -32.0 * LEVEL_SCALE[lobby_preview_level - 1])
+		# Buff visual nos pés e corpo do Bob Marley (+30% velocidade de ataque)
+		_draw_bob_song_buff(canvas, hero_pos + Vector2(0, 4), visual_time, 1.15 * LEVEL_SCALE[lobby_preview_level - 1], false)
+		# Debuff visual nos pés e corpo do Zumbi oponente (-30% desaceleração / chill)
+		_draw_bob_song_debuff(canvas, opp_pos + Vector2(0, 4), visual_time, 1.15, false)
 		if t < 1.0:
 			hero_tag = "AURA DE PAZ E AMOR ♫"
 			tag_col = Color("f4c430")
@@ -4168,6 +4902,7 @@ func _draw_hero_preview(canvas: Control) -> void:
 			combat_msg_col = Color("e63946")
 			combat_msg_target = "opp"
 			opp_wobble = sin(t * 8.0) * 1.5
+			opp_tint = Color("f5b7b1")
 	else:
 		# Padrão para os demais heróis (Obama, Ken, Lula, Rapunzel, Cleopatra, Julio Cesar, Einstein, Napoleao)
 		opp_key = "caramelo" if key == "zumbi" else "zumbi"
@@ -4375,6 +5110,16 @@ func _prepare_frame() -> void:
 		entry["display_scale"] = LEVEL_SCALE[level - 1] * art.board_scale_for(str(unit.get("key", "")))
 		entry["height"] = float(body["height"]) * float(entry["display_scale"])
 		entry["feet"] = Board.project(entry["ground"])
+		var unit_id: int = int(unit.get("id", -1))
+		if bool(unit.get("has_angel_wings", false)):
+			ascended_units[unit_id] = true
+		if lula_descents.has(unit_id):
+			var descent: Dictionary = lula_descents[unit_id]
+			var prog: float = clampf(1.0 - float(descent["remaining"]) / maxf(float(descent["duration"]), 0.001), 0.0, 1.0)
+			var ease_descent: float = 1.0 - pow(1.0 - prog, 2.5)
+			pose["angle"] = sin(visual_time * 16.0) * 0.08 * (1.0 - ease_descent)
+			pose["offset"] = Vector2(0, -360.0 * (1.0 - ease_descent))
+			pose["tint"] = Color(1.0, 1.0, 1.0, clampf(prog * 2.5, 0.45, 1.0))
 
 
 func _projectile_ground(projectile: Dictionary) -> Vector2:
@@ -4501,16 +5246,15 @@ func _draw_board_effects() -> void:
 		var z_cell: Vector2i = _cell(zone.get("cell", []))
 		var z_radius: int = int(zone.get("radius", 1))
 		var z_ground: Vector2 = Board.ground(z_cell)
-		_draw_cell_range(z_cell, z_radius, Color(0.35, 0.4, 0.68, 0.12), Color(0.55, 0.62, 0.9, 0.3))
+		_draw_cell_range(z_cell, z_radius, Color(0.18, 0.72, 0.28, 0.16), Color(0.28, 0.95, 0.42, 0.45))
 		var cloud_frame: Dictionary = _smoke_vfx_data(zone)
 		if not cloud_frame.is_empty():
 			_draw_vfx_frame(self, cloud_frame)
-			continue
 		var z_pulse: float = 0.92 + 0.08 * sin(visual_time * 3.5 + float(zone.get("id", 0)))
 		var z_ellipse: PackedVector2Array = Board.ellipse(z_ground, (0.42 + z_radius * 0.38) * z_pulse, (0.24 + z_radius * 0.22) * z_pulse, 24)
-		draw_colored_polygon(z_ellipse, Color(0.35, 0.4, 0.68, 0.24))
+		draw_colored_polygon(z_ellipse, Color(0.2, 0.8, 0.32, 0.22))
 		z_ellipse.append(z_ellipse[0])
-		draw_polyline(z_ellipse, Color(0.55, 0.62, 0.9, 0.42), 1.6, true)
+		draw_polyline(z_ellipse, Color(0.32, 0.95, 0.45, 0.5), 1.6, true)
 	# Os hexágonos reais da explosão do foguete acendem em laranja e apagam junto com o fogo.
 	if phase == "combat":
 		for blast: Dictionary in blast_zones:
@@ -4520,6 +5264,75 @@ func _draw_board_effects() -> void:
 			c_prim.a *= b_fade
 			c_bord.a *= b_fade
 			_draw_cell_range(_cell(blast["cell"]), int(blast["radius"]), c_prim, c_bord)
+		# Avisos telegrafados de área do Boss (Círculos e hexágonos de perigo com anel de contagem regressiva)
+		for tele: Dictionary in boss_telegraphs:
+			var prog: float = 1.0 - clampf(float(tele["life"]) / maxf(float(tele["duration"]), 0.001), 0.0, 1.0)
+			var is_tornado: bool = tele["spell"] == "fire_tornado"
+			var t_color_fill: Color = Color(1.0, 0.25, 0.05, 0.26 + 0.16 * sin(visual_time * 16.0)) if is_tornado else Color(0.72, 0.15, 0.95, 0.26 + 0.16 * sin(visual_time * 16.0))
+			var t_color_border: Color = Color(1.0, 0.75, 0.2, 0.95) if is_tornado else Color(0.95, 0.5, 1.0, 0.95)
+			_draw_cell_range(_cell(tele["cell"]), int(tele["radius"]), t_color_fill, t_color_border)
+			var t_ground: Vector2 = Board.ground(_cell(tele["cell"]))
+			var ring_r: float = 0.85 * (1.0 - prog)
+			var ring_pts: PackedVector2Array = Board.ellipse(t_ground, ring_r, ring_r * 0.58, 28)
+			ring_pts.append(ring_pts[0])
+			draw_polyline(ring_pts, Color.WHITE if int(visual_time * 20.0) % 2 == 0 else t_color_border, 2.5, true)
+			var center_pt: Vector2 = Board.project(t_ground)
+			var warn_font: Font = ThemeDB.fallback_font
+			draw_string_outline(warn_font, center_pt + Vector2(-12, 6), "⚠", HORIZONTAL_ALIGNMENT_CENTER, -1, 20, 4, Color.BLACK)
+			draw_string(warn_font, center_pt + Vector2(-12, 6), "⚠", HORIZONTAL_ALIGNMENT_CENTER, -1, 20, Color("ffea44"))
+
+		# Portais de invocação de monstros do Boss (Poça de lodo negro borbulhante e vórtice cósmico)
+		for portal: Dictionary in boss_summon_portals:
+			var p_life: float = float(portal["life"])
+			var p_dur: float = float(portal["duration"])
+			var p_prog: float = 1.0 - clampf(p_life / p_dur, 0.0, 1.0)
+			var p_ground: Vector2 = portal["ground"]
+			var p_alpha: float = clampf(sin(p_prog * PI), 0.0, 1.0)
+			var pool_r: float = 0.55 * clampf(p_prog * 2.5, 0.0, 1.0)
+			draw_colored_polygon(Board.ellipse(p_ground, pool_r, pool_r * 0.55, 24), Color(0.04, 0.02, 0.07, 0.9 * p_alpha))
+			var v_pts: PackedVector2Array = Board.ellipse(p_ground, pool_r * 0.85, pool_r * 0.48, 20)
+			v_pts.append(v_pts[0])
+			draw_polyline(v_pts, Color(0.65, 0.15, 0.9, 0.85 * p_alpha), 2.2, true)
+			for b_i: int in range(6):
+				var b_ang: float = visual_time * 4.0 + b_i * TAU / 6.0
+				var b_dist: float = pool_r * (0.3 + 0.4 * sin(visual_time * 6.0 + b_i))
+				var b_pos: Vector2 = Board.project(p_ground + Vector2(cos(b_ang) * b_dist, sin(b_ang) * b_dist * 0.55))
+				var b_size: float = 2.5 + 1.5 * sin(visual_time * 8.0 + b_i)
+				draw_circle(b_pos, b_size, Color(0.55, 0.1, 0.75, 0.85 * p_alpha))
+
+		# Descida dos céus do Lula: coluna de luz sagrada, penas celestiais e círculo de pouso
+		for d_uid: int in lula_descents.keys():
+			var descent: Dictionary = lula_descents[d_uid]
+			var d_ground: Vector2 = descent["ground"]
+			var d_screen: Vector2 = Board.project(d_ground)
+			var d_prog: float = clampf(1.0 - float(descent["remaining"]) / maxf(float(descent["duration"]), 0.001), 0.0, 1.0)
+			var d_alpha: float = clampf(sin(d_prog * PI * 0.95), 0.3, 1.0)
+			var top_y: float = -520.0
+			var col_bot_w: float = 48.0
+			var col_top_w: float = 28.0
+			var beam_poly: PackedVector2Array = PackedVector2Array([
+				d_screen + Vector2(-col_bot_w, 4),
+				d_screen + Vector2(col_bot_w, 4),
+				d_screen + Vector2(col_top_w, top_y),
+				d_screen + Vector2(-col_top_w, top_y)
+			])
+			draw_polygon(beam_poly, PackedColorArray([
+				Color(1.0, 0.95, 0.45, 0.45 * d_alpha),
+				Color(1.0, 0.95, 0.45, 0.45 * d_alpha),
+				Color(1.0, 1.0, 0.8, 0.08 * d_alpha),
+				Color(1.0, 1.0, 0.8, 0.08 * d_alpha)
+			]))
+			var ring_ground: PackedVector2Array = Board.ellipse(d_ground, 0.52 + 0.08 * sin(visual_time * 8.0), 0.3 + 0.05 * sin(visual_time * 8.0), 24)
+			ring_ground.append(ring_ground[0])
+			draw_polyline(ring_ground, Color("ffd700", 0.95 * d_alpha), 2.8, true)
+			draw_colored_polygon(Board.ellipse(d_ground, 0.42, 0.24, 20), Color(1.0, 0.9, 0.35, 0.32 * d_alpha))
+			for f_i: int in range(6):
+				var f_fall: float = fposmod(d_prog * 2.2 + float(f_i) * 0.17, 1.0)
+				var f_y: float = lerpf(top_y * 0.65, 0.0, f_fall)
+				var f_x: float = sin(visual_time * 5.0 + float(f_i) * 1.6) * 32.0
+				var f_pos: Vector2 = d_screen + Vector2(f_x, f_y)
+				draw_circle(f_pos, 2.8 * (1.0 - f_fall * 0.3), Color(1.0, 1.0, 1.0, 0.9 * (1.0 - f_fall)))
+				draw_circle(f_pos + Vector2(0.5, 0.5), 1.4, Color("ffd700", 0.95 * (1.0 - f_fall)))
 	# Aura musical de ritmo do Bob Marley durante o combate
 	if calm:
 		for entry: Dictionary in frame_entries:
@@ -4527,21 +5340,39 @@ func _draw_board_effects() -> void:
 			if str(unit.get("key", "")) == "bob_marley" and bool(unit.get("alive", true)) and not bool(entry["ghost"]):
 				var b_ground: Vector2 = entry["ground"]
 				var b_lvl: int = clampi(int(unit.get("level", 1)), 1, 3)
+				var b_cell: Vector2i = _cell(unit.get("cell", []))
+				var b_team: int = int(unit.get("team", -1))
 				var bob_spec: Variant = specs.get("bob_marley")
 				var cur_radius: int = 3
 				if bob_spec != null and not bob_spec.aura_radius_by_level.is_empty():
 					cur_radius = bob_spec.aura_radius_by_level[mini(b_lvl - 1, bob_spec.aura_radius_by_level.size() - 1)]
 				if int(unit["id"]) == selected_id:
-					_draw_cell_range(_cell(unit["cell"]), cur_radius, Color(0.25, 0.72, 0.35, 0.05), Color(0.42, 0.85, 0.52, 0.32))
+					_draw_cell_range(b_cell, cur_radius, Color(0.25, 0.72, 0.35, 0.05), Color(0.42, 0.85, 0.52, 0.32))
 				var b_pulse: float = 0.94 + 0.06 * sin(visual_time * 4.5)
 				for r_i: int in range(3):
-					var r_color: Color = [Color("2ec756"), Color("f4c430"), Color("e63946")][r_i]
+					var r_color: Color = [REGGAE_GREEN, REGGAE_GOLD, REGGAE_RED][r_i]
 					var r_r: float = (0.42 + float(r_i) * 0.18 + fmod(visual_time * 0.22, 0.22)) * b_pulse * (1.0 + float(cur_radius - 3) * 0.15)
 					var r_ellipse: PackedVector2Array = Board.ellipse(b_ground, r_r, r_r * 0.58, 28)
 					r_ellipse.append(r_ellipse[0])
-					draw_polyline(r_ellipse, Color(r_color, 0.38 - float(r_i) * 0.08), 1.6, true)
+					draw_polyline(r_ellipse, Color(r_color, 0.5 - float(r_i) * 0.1), 1.8, true)
 				var bob_screen: Vector2 = Board.project(b_ground)
 				_draw_bob_musical_notes(self, bob_screen, visual_time + float(unit.get("id", 0)) * 0.23, 1.25 * float(entry["scale"]), -44.0 * float(entry["scale"]))
+				# Buff rítmico nos aliados e debuff de lentidão nos inimigos no raio da música
+				for other_entry: Dictionary in frame_entries:
+					var other_u: Dictionary = other_entry["unit"]
+					if not bool(other_u.get("alive", true)) or bool(other_entry.get("ghost", false)):
+						continue
+					if int(other_u.get("id", -1)) == int(unit.get("id", -1)):
+						continue
+					var o_cell: Vector2i = _cell(other_u.get("cell", []))
+					if Grid.distance(b_cell, o_cell) <= cur_radius:
+						var o_ground: Vector2 = other_entry["ground"]
+						var o_scale: float = float(other_entry.get("scale", 1.0))
+						var o_time: float = visual_time + float(other_u.get("id", 0)) * 0.35
+						if int(other_u.get("team", -1)) == b_team:
+							_draw_bob_song_buff(self, o_ground, o_time, o_scale, true)
+						else:
+							_draw_bob_song_debuff(self, o_ground, o_time, o_scale, true)
 	# Marca de caça discreta, ligada ao alvo real; não implica salto ou teleporte.
 	for hunter: Dictionary in state.get("combat", {}).get("units", []):
 		if not bool(hunter.get("alive", false)) or int(hunter.get("assassin_target_id", -1)) < 0:
@@ -4606,10 +5437,18 @@ func _visual_pose(unit: Dictionary) -> Dictionary:
 	if float(visual_hits.get(unit_id, 0)) > 0.0:
 		pose["tint"] = Color("ffb3a6")
 	if not bool(unit.get("alive", true)):
-		var fall: float = clampf(1.0 - float(visual_deaths.get(unit_id, 0)) / 0.6, 0.0, 1.0)
-		pose["angle"] = fall * 1.2
-		pose["offset"] = Vector2(0, fall * 6.0)
-		pose["tint"] = Color(0.7, 0.7, 0.7, 1.0 - fall)
+		if lula_descents.has(unit_id):
+			var descent: Dictionary = lula_descents[unit_id]
+			var prog: float = clampf(1.0 - float(descent["remaining"]) / maxf(float(descent["duration"]), 0.001), 0.0, 1.0)
+			var ease_descent: float = 1.0 - pow(1.0 - prog, 2.5)
+			pose["angle"] = sin(visual_time * 16.0) * 0.08 * (1.0 - ease_descent)
+			pose["offset"] = Vector2(0, -360.0 * (1.0 - ease_descent))
+			pose["tint"] = Color(1.0, 1.0, 1.0, clampf(prog * 2.5, 0.45, 1.0))
+		else:
+			var fall: float = clampf(1.0 - float(visual_deaths.get(unit_id, 0)) / 0.6, 0.0, 1.0)
+			pose["angle"] = fall * 1.2
+			pose["offset"] = Vector2(0, fall * 6.0)
+			pose["tint"] = Color(0.7, 0.7, 0.7, 1.0 - fall)
 	return pose
 
 
@@ -4641,53 +5480,100 @@ func _draw_ground(entry: Dictionary) -> void:
 		var glow: PackedVector2Array = Board.ellipse(ground_point, 0.36 * ground_scale, 0.21 * ground_scale, 24)
 		glow.append(glow[0])
 		draw_polyline(glow, Color(GOLD, 0.7 + 0.3 * sin(visual_time * 6.0)), 2.0, true)
+	var buff_time: float = float(unit.get("group_attack_buff_timer", 0))
+	if buff_time > 0.0 and bool(unit.get("alive", true)):
+		var b_pulse: float = 0.5 + 0.5 * sin(visual_time * 8.0)
+		var b_ring: PackedVector2Array = Board.ellipse(ground_point, 0.36 + 0.05 * b_pulse, 0.21 + 0.03 * b_pulse, 20)
+		b_ring.append(b_ring[0])
+		draw_polyline(b_ring, Color("ffd700", 0.9), 2.2, true)
+		for s_i: int in range(3):
+			var s_rise: float = fposmod(visual_time * 1.5 + float(s_i) / 3.0 + float(unit.get("id", 0)) * 0.2, 1.0)
+			var s_pos: Vector2 = (entry["feet"] as Vector2) + Vector2(sin(float(s_i) * 2.1 + visual_time * 3.0) * 14.0, -s_rise * 32.0)
+			draw_circle(s_pos, 1.8 * (1.0 - s_rise), Color("fff59d", 1.0 - s_rise))
 
 
-## Aura exclusiva do Boss Dev: vórtice de vácuo negro e púrpura mística ao redor dos pés e coluna de sombras.
+## Aura exclusiva do Boss Dev: vórtice arcano profundo, glifos cósmicos e chamas/clarão na conjuração.
 func _draw_boss_aura_back(entry: Dictionary) -> void:
+	var unit: Dictionary = entry["unit"]
+	var u_id: int = int(unit.get("id", -1))
+	var is_enraged: bool = bool(unit.get("boss_enraged", false))
+	var is_casting: bool = visual_attacks.has(u_id)
 	var ground_point: Vector2 = entry["ground"]
 	var feet: Vector2 = entry["feet"]
-	var pulse: float = 0.5 + 0.5 * sin(visual_time * 2.8)
-	# 1. Base externa de névoa escura e púrpura profunda
-	for layer: int in range(3):
-		var r_x: float = 0.72 + float(layer) * 0.12
-		var r_y: float = 0.42 + float(layer) * 0.07
-		var a_col: Color = Color(0.18, 0.02, 0.26, (0.32 - float(layer) * 0.09) * (0.8 + 0.2 * pulse))
+	var speed_mult: float = 2.4 if is_enraged else (1.8 if is_casting else 1.0)
+	var pulse: float = 0.5 + 0.5 * sin(visual_time * (2.8 * speed_mult))
+	var cast_scale: float = 1.35 if is_casting else 1.0
+	
+	# 1. Base externa de névoa escura cósmica / chamas de vácuo (4 camadas)
+	for layer: int in range(4):
+		var r_x: float = (0.75 + float(layer) * 0.14) * (1.18 if is_enraged else 1.0) * cast_scale
+		var r_y: float = (0.43 + float(layer) * 0.08) * (1.18 if is_enraged else 1.0) * cast_scale
+		var a_col: Color
+		if is_enraged:
+			a_col = Color(0.42, 0.06, 0.04, (0.42 - float(layer) * 0.09) * (0.8 + 0.2 * pulse))
+		elif is_casting:
+			a_col = Color(0.35, 0.08, 0.50, (0.45 - float(layer) * 0.09) * (0.85 + 0.15 * pulse))
+		else:
+			a_col = Color(0.18, 0.02, 0.28, (0.34 - float(layer) * 0.08) * (0.8 + 0.2 * pulse))
 		draw_colored_polygon(Board.ellipse(ground_point, r_x, r_y, 32), a_col)
-	# 2. Vórtice de escuridão negra profunda no centro dos pés
-	draw_colored_polygon(Board.ellipse(ground_point, 0.55 + 0.04 * pulse, 0.32 + 0.03 * pulse, 28), Color(0.03, 0.01, 0.05, 0.88))
-	# 3. Anel de vácuo ébano grosso com bordas escuras
-	var ring_dark: PackedVector2Array = Board.ellipse(ground_point, 0.70 * (0.96 + 0.04 * pulse), 0.41 * (0.96 + 0.04 * pulse), 36)
+		
+	# 2. Vórtice de vácuo profundo nos pés
+	var v_col: Color = Color(0.18, 0.01, 0.01, 0.94) if is_enraged else (Color(0.12, 0.01, 0.20, 0.94) if is_casting else Color(0.03, 0.01, 0.05, 0.88))
+	draw_colored_polygon(Board.ellipse(ground_point, (0.58 + 0.05 * pulse) * cast_scale, (0.33 + 0.03 * pulse) * cast_scale, 28), v_col)
+	
+	# 3. Grande Círculo de Invocação Arcana / Runas ao Conjurar
+	if is_casting:
+		var circ_rad: float = 0.95 * cast_scale
+		var c_ring: PackedVector2Array = Board.ellipse(ground_point, circ_rad, circ_rad * 0.57, 36)
+		c_ring.append(c_ring[0])
+		draw_polyline(c_ring, Color("ffd700", 0.95), 2.5, true)
+		# Raios radiais do círculo mágico (8 pontas de invocação)
+		for ray_i: int in range(8):
+			var r_ang: float = visual_time * 2.0 + TAU * float(ray_i) / 8.0
+			var p_center: Vector2 = Board.project(ground_point).round()
+			var p_edge: Vector2 = Board.project(ground_point + Vector2(cos(r_ang) * circ_rad, sin(r_ang) * (circ_rad * 0.57))).round()
+			draw_line(p_center, p_edge, Color("ffb3ff", 0.75), 1.4)
+			
+	# 4. Anéis concêntricos de energia
+	var ring_dark: PackedVector2Array = Board.ellipse(ground_point, 0.72 * (0.96 + 0.04 * pulse) * cast_scale, 0.42 * (0.96 + 0.04 * pulse) * cast_scale, 36)
 	ring_dark.append(ring_dark[0])
-	draw_polyline(ring_dark, Color(0.08, 0.01, 0.12, 0.95), 3.2, true)
-	# 4. Anel interno de energia mística roxa cintilante
-	var ring_purple: PackedVector2Array = Board.ellipse(ground_point, 0.52 * (0.95 + 0.05 * pulse), 0.30 * (0.95 + 0.05 * pulse), 32)
+	draw_polyline(ring_dark, Color(0.98, 0.18, 0.05, 0.95) if is_enraged else (Color("d65eff", 0.95) if is_casting else Color(0.12, 0.02, 0.18, 0.95)), 3.2, true)
+	
+	var ring_purple: PackedVector2Array = Board.ellipse(ground_point, 0.54 * (0.95 + 0.05 * pulse) * cast_scale, 0.31 * (0.95 + 0.05 * pulse) * cast_scale, 32)
 	ring_purple.append(ring_purple[0])
-	draw_polyline(ring_purple, Color(0.72, 0.18, 0.98, 0.9), 2.2, true)
-	# 5. Onda de choque pulsante que expande do centro
-	var wave_prog: float = fmod(visual_time * 0.45, 1.0)
-	var wave_r: float = 0.32 + 0.38 * wave_prog
-	var ring_wave: PackedVector2Array = Board.ellipse(ground_point, wave_r, wave_r * 0.58, 28)
-	ring_wave.append(ring_wave[0])
-	draw_polyline(ring_wave, Color(0.55, 0.1, 0.85, 0.7 * (1.0 - wave_prog)), 1.8, true)
-	# 6. Coluna vertical etérea de névoa escura/roxa ascendente
-	var b_height: float = float(entry["height"]) * 1.2
-	var base_dark: Color = Color(0.06, 0.01, 0.09, 0.55 * (0.75 + 0.25 * pulse))
-	var top_clear: Color = Color(0.45, 0.08, 0.65, 0.0)
-	draw_polygon(PackedVector2Array([feet + Vector2(-34, 4), feet + Vector2(34, 4), feet + Vector2(20, -b_height), feet + Vector2(-20, -b_height)]),
+	draw_polyline(ring_purple, Color(1.0, 0.65, 0.15, 0.95) if is_enraged else Color(0.85, 0.28, 1.0, 0.95), 2.4, true)
+	
+	# 5. Ondas de choque contínuas que expandem do centro
+	for wave_idx: int in range(2):
+		var wave_prog: float = fmod(visual_time * (0.55 * speed_mult) + float(wave_idx) * 0.5, 1.0)
+		var wave_r: float = (0.28 + 0.48 * wave_prog) * cast_scale
+		var ring_wave: PackedVector2Array = Board.ellipse(ground_point, wave_r, wave_r * 0.57, 28)
+		ring_wave.append(ring_wave[0])
+		var w_col: Color = Color(1.0, 0.35, 0.05, 0.9 * (1.0 - wave_prog)) if is_enraged else Color(0.75, 0.2, 0.95, 0.85 * (1.0 - wave_prog))
+		draw_polyline(ring_wave, w_col, 2.2, true)
+		
+	# 6. Coluna vertical etérea de névoa / labaredas ascendentes nas costas
+	var b_height: float = float(entry["height"]) * (1.4 if is_casting else 1.25)
+	var col_w: float = 38.0 * cast_scale
+	var base_dark: Color = Color(0.40, 0.04, 0.04, 0.7 * (0.75 + 0.25 * pulse)) if is_enraged else (Color(0.25, 0.05, 0.35, 0.75) if is_casting else Color(0.08, 0.01, 0.12, 0.58 * (0.75 + 0.25 * pulse)))
+	var top_clear: Color = Color(1.0, 0.45, 0.1, 0.0) if is_enraged else Color(0.75, 0.2, 0.95, 0.0)
+	draw_polygon(PackedVector2Array([feet + Vector2(-col_w, 4), feet + Vector2(col_w, 4), feet + Vector2(col_w * 0.6, -b_height), feet + Vector2(-col_w * 0.6, -b_height)]),
 		PackedColorArray([base_dark, base_dark, top_clear, top_clear]))
-	# 7. Gavinhas/runas orbitantes de sombra escura com miolo roxo
-	for index: int in range(8):
-		var angle: float = visual_time * 1.5 + TAU * float(index) / 8.0
-		var orbit_x: float = 0.65 + 0.05 * sin(visual_time * 3.0 + float(index))
-		var orbit_y: float = 0.38 + 0.03 * sin(visual_time * 3.0 + float(index))
+		
+	# 7. Gavinhas/runas orbitantes (10 runas com rotação e faíscas)
+	var num_runes: int = 10 if is_casting else 8
+	for index: int in range(num_runes):
+		var angle: float = visual_time * (1.6 * speed_mult) + TAU * float(index) / float(num_runes)
+		var orbit_x: float = (0.70 + 0.06 * sin(visual_time * 3.0 + float(index))) * cast_scale
+		var orbit_y: float = (0.40 + 0.04 * sin(visual_time * 3.0 + float(index))) * cast_scale
 		var rune_pos: Vector2 = Board.project(ground_point + Vector2(cos(angle) * orbit_x, sin(angle) * orbit_y)).round()
-		var diamond_outer: PackedVector2Array = PackedVector2Array([rune_pos + Vector2(0, -5), rune_pos + Vector2(4, 0), rune_pos + Vector2(0, 5), rune_pos + Vector2(-4, 0)])
-		draw_colored_polygon(diamond_outer, Color(0.02, 0.01, 0.04, 0.95))
+		var diamond_outer: PackedVector2Array = PackedVector2Array([rune_pos + Vector2(0, -6), rune_pos + Vector2(5, 0), rune_pos + Vector2(0, 6), rune_pos + Vector2(-5, 0)])
+		draw_colored_polygon(diamond_outer, Color(0.18, 0.01, 0.01, 0.95) if is_enraged else Color(0.04, 0.01, 0.06, 0.95))
 		diamond_outer.append(diamond_outer[0])
-		draw_polyline(diamond_outer, Color(0.58, 0.12, 0.85, 0.85), 1.2, true)
-		var diamond_inner: PackedVector2Array = PackedVector2Array([rune_pos + Vector2(0, -3), rune_pos + Vector2(2, 0), rune_pos + Vector2(0, 3), rune_pos + Vector2(-2, 0)])
-		draw_colored_polygon(diamond_inner, Color("b24bf3") if index % 2 == 0 else Color("7918b9"))
+		draw_polyline(diamond_outer, Color(1.0, 0.4, 0.1, 0.95) if is_enraged else Color(0.75, 0.25, 0.95, 0.9), 1.5, true)
+		var diamond_inner: PackedVector2Array = PackedVector2Array([rune_pos + Vector2(0, -3), rune_pos + Vector2(3, 0), rune_pos + Vector2(0, 3), rune_pos + Vector2(-3, 0)])
+		var core_col: Color = Color("ff5522") if is_enraged else (Color("ffd700") if is_casting else (Color("b24bf3") if index % 2 == 0 else Color("8a2be2")))
+		draw_colored_polygon(diamond_inner, core_col)
 
 
 
@@ -4764,6 +5650,12 @@ func _draw_units_layer() -> void:
 		var anchor: Vector2 = entry["anchor"]
 		var origin: Vector2 = ((entry["feet"] as Vector2) + (pose["offset"] as Vector2)).round()
 		var display_scale: float = float(entry["display_scale"])
+		var u_id: int = int(unit.get("id", -1))
+		var is_angel: bool = bool(unit.get("has_angel_wings", false)) or ascended_units.has(u_id) or lula_descents.has(u_id)
+		if is_angel and (bool(unit.get("alive", true)) or lula_descents.has(u_id)):
+			var is_descending: bool = lula_descents.has(u_id)
+			var is_frenzy: bool = float(unit.get("divine_frenzy_timer", 0)) > 0.0
+			_draw_lula_angel_wings(units_layer, origin, float(entry["height"]), display_scale, visual_time + float(u_id) * 0.35, is_descending, is_frenzy)
 		units_layer.draw_set_transform(origin, float(pose["angle"]), Vector2(display_scale, display_scale))
 		units_layer.draw_texture(texture, (-anchor).round(), tint)
 		if bool(unit.get("alive", true)):
@@ -4773,6 +5665,9 @@ func _draw_units_layer() -> void:
 				_draw_snoop_cigar(units_layer, origin, display_scale, u_dir, visual_time + float(unit.get("id", 0)) * 0.37, tint, float(pose["angle"]))
 			elif u_key == "bob_marley" and not bool(entry["ghost"]) and _phase() == "preparation":
 				_draw_bob_musical_notes(units_layer, origin, visual_time + float(unit.get("id", 0)) * 0.25, 1.15 * scale, -44.0 * scale)
+			var in_smoke: Dictionary = _unit_in_smoke_zone(unit)
+			if not in_smoke.is_empty():
+				_draw_unit_smoke_immersion(units_layer, entry["feet"], scale, int(unit.get("team", 0)) == int(in_smoke.get("team", 0)), visual_time + float(unit.get("id", 0)) * 0.41)
 	var ball_texture: Texture2D = Kit.icon("fx_ball")
 	for projectile: Dictionary in state.get("combat", {}).get("projectiles", []):
 		var progress: float = clampf(1.0 - float(projectile.get("flight_left", 0)) / maxf(float(projectile.get("flight_duration", 1)), 0.001), 0.0, 1.0)
@@ -4853,21 +5748,32 @@ func _draw_overlay_layer() -> void:
 				canvas.draw_rect(Rect2(mote - Vector2.ONE, Vector2(size + 2, size + 2)), Color(0.15, 0.06, 0.22, 0.75 * fade))
 				canvas.draw_rect(Rect2(mote, Vector2(size, size)), Color(Color("ffd85c") if index % 2 == 0 else Color("d6a8ff"), fade))
 		if is_boss_overlay and bool(unit.get("alive", true)):
+			var is_boss_enraged: bool = bool(unit.get("boss_enraged", false))
 			for index: int in range(12):
-				var b_rise: float = fposmod(visual_time * 0.45 + float(index) / 12.0, 1.0)
+				var b_rise: float = fposmod(visual_time * (0.65 if is_boss_enraged else 0.45) + float(index) / 12.0, 1.0)
 				var b_sway: float = sin(float(index) * 2.1 + visual_time * 2.3) * 26.0
 				var b_mote: Vector2 = (feet + Vector2(b_sway, -8 - b_rise * height * 1.12)).round()
 				var b_size: float = 4.0 if index % 3 == 0 else (3.0 if index % 2 == 0 else 2.0)
 				var b_fade: float = 1.0 - b_rise
-				canvas.draw_rect(Rect2(b_mote - Vector2.ONE, Vector2(b_size + 2, b_size + 2)), Color(0.02, 0.01, 0.04, 0.9 * b_fade))
-				var b_core: Color = Color("c040fb") if index % 2 == 0 else Color("7918b9")
+				canvas.draw_rect(Rect2(b_mote - Vector2.ONE, Vector2(b_size + 2, b_size + 2)), Color(0.15, 0.01, 0.01, 0.9 * b_fade) if is_boss_enraged else Color(0.02, 0.01, 0.04, 0.9 * b_fade))
+				var b_core: Color = (Color("ff3b1e") if index % 2 == 0 else Color("ffaa22")) if is_boss_enraged else (Color("c040fb") if index % 2 == 0 else Color("7918b9"))
 				canvas.draw_rect(Rect2(b_mote, Vector2(b_size, b_size)), Color(b_core, b_fade * 0.95))
+		var u_id: int = int(unit.get("id", -1))
+		var is_angel_overlay: bool = bool(unit.get("has_angel_wings", false)) or ascended_units.has(u_id) or lula_descents.has(u_id)
+		if is_angel_overlay and (bool(unit.get("alive", true)) or lula_descents.has(u_id)):
+			var is_frenzy_overlay: bool = float(unit.get("divine_frenzy_timer", 0)) > 0.0
+			var pose_offset: Vector2 = entry["pose"]["offset"] as Vector2 if entry.has("pose") else Vector2.ZERO
+			_draw_lula_halo(canvas, feet + pose_offset, height, float(entry["display_scale"]), visual_time + float(u_id) * 0.35, is_frenzy_overlay)
 	for effect: Dictionary in slashes:
 		var life: float = float(effect["life"]) / 0.2
 		var start: float = float(effect["seed"])
 		canvas.draw_arc(effect["position"], 11.0 + (1.0 - life) * 6.0, start, start + 1.9, 10, Color(GOLD if bool(effect["critical"]) else Color("fff4de"), life), 2.5 if bool(effect["critical"]) else 1.8, true)
 	_draw_library_feedback(canvas, "front")
 	_draw_kit_feedback(canvas)
+	if _phase() == "combat":
+		for zone: Dictionary in state.get("combat", {}).get("zones", []):
+			if float(zone.get("remaining", 0)) > 0.0:
+				_draw_snoop_smoke_zone_atmosphere(canvas, zone)
 	for entry: Dictionary in frame_entries:
 		_draw_bars(canvas, entry)
 	var font: Font = ThemeDB.fallback_font
@@ -4880,6 +5786,7 @@ func _draw_overlay_layer() -> void:
 		canvas.draw_string_outline(font, position, str(effect["text"]), HORIZONTAL_ALIGNMENT_LEFT, -1, size, outline_width, Color(0, 0, 0, 0.85 * alpha))
 		canvas.draw_string(font, position, str(effect["text"]), HORIZONTAL_ALIGNMENT_LEFT, -1, size, (effect["color"] as Color) * Color(1, 1, 1, alpha))
 	_draw_world_item_tooltip(canvas)
+	_draw_world_hero_tooltip(canvas)
 
 
 func _draw_bars(canvas: CanvasItem, entry: Dictionary) -> void:
@@ -5064,3 +5971,119 @@ func _draw_world_item_tooltip(canvas: Node2D) -> void:
 	canvas.draw_string(font, pos + Vector2(10, 44), line_desc, HORIZONTAL_ALIGNMENT_LEFT, int(tip_w - 20), 11, Color("dfe6e3"))
 	var owner_col: Color = Color("f87171") if item_team == 1 else Color("9eb3c2")
 	canvas.draw_string(font, pos + Vector2(10, 60), line_owner, HORIZONTAL_ALIGNMENT_LEFT, int(tip_w - 20), 10, owner_col)
+
+
+## Tooltip flutuante exibido ao passar o mouse sobre os heróis no tabuleiro e na reserva (lê habilidades).
+func _draw_world_hero_tooltip(canvas: Node2D) -> void:
+	if mouse_pointer.x < -100 or mouse_pointer.y < 0:
+		return
+	# Se estiver sobre um ícone de item, dá prioridade ao tooltip de item
+	for entry: Dictionary in world_item_hover_rects:
+		if (entry["rect"] as Rect2).grow(3.0).has_point(mouse_pointer):
+			return
+	
+	# Detecta unidade sob o mouse
+	var unit: Dictionary = _unit_at_point(mouse_pointer)
+	if unit.is_empty() and hover_bench >= 0:
+		unit = _bench_unit(hover_bench)
+	if unit.is_empty() and hover_cell != Board.INVALID:
+		unit = _own_unit_at(hover_cell)
+		if unit.is_empty():
+			for u: Dictionary in state.get("enemy", {}).get("units", []):
+				if bool(u.get("active", false)) and _cell(u.get("cell", [])) == hover_cell:
+					unit = u
+					break
+	if unit.is_empty() or not bool(unit.get("alive", true)):
+		return
+
+	var key: String = str(unit.get("key", ""))
+	if key.is_empty() or key in ["ball", "rocket", "mini_rocket", "smoke"]:
+		return
+
+	var unit_name: String = str(unit.get("name", key.capitalize()))
+	var level: int = clampi(int(unit.get("level", 1)), 1, 3)
+	var team: int = int(unit.get("team", 0))
+	var is_ally: bool = team == 0
+	var team_tag: String = " (Aliado)" if is_ally else " (Inimigo)"
+	var stars_text: String = "★".repeat(level)
+	var skill_desc: String = str(KIT_TEXT.get(key, "Combate tático e ataques de arena."))
+
+	var tags: Array[String] = []
+	if specs.has(key):
+		tags = specs[key].synergy_tags
+	var tag_names: Array[String] = []
+	for t: String in tags:
+		tag_names.append(str(SYNERGY_INFO.get(t, {}).get("name", t.capitalize())))
+	var tags_line: String = " · ".join(tag_names) if not tag_names.is_empty() else "Neutro"
+
+	var hp_cur: int = int(round(float(unit.get("hp", 0.0))))
+	var hp_max: int = int(round(float(unit.get("max_hp", 100.0))))
+	var portrait: Texture2D = art.portrait_for(key, 30, 28)
+
+	var font: Font = ThemeDB.fallback_font
+	var tip_w: float = 300.0
+
+	# Quebra inteligente de linhas para a descrição completa da habilidade
+	var words: PackedStringArray = skill_desc.split(" ")
+	var desc_lines: Array[String] = []
+	var cur_line: String = ""
+	for w: String in words:
+		var test_line: String = (cur_line + " " + w).strip_edges()
+		if font.get_string_size(test_line, HORIZONTAL_ALIGNMENT_LEFT, -1, 10).x > (tip_w - 24):
+			if not cur_line.is_empty():
+				desc_lines.append(cur_line)
+			cur_line = w
+		else:
+			cur_line = test_line
+	if not cur_line.is_empty():
+		desc_lines.append(cur_line)
+
+	var tip_h: float = maxf(72.0 + float(desc_lines.size()) * 15.0, 95.0)
+	var pos: Vector2 = mouse_pointer + Vector2(16, -tip_h - 10)
+	if pos.y < 10.0:
+		pos.y = mouse_pointer.y + 24.0
+	if pos.x + tip_w > 1270.0:
+		pos.x = mouse_pointer.x - tip_w - 16.0
+	pos.x = clampf(pos.x, 10.0, 1270.0 - tip_w)
+	pos.y = clampf(pos.y, 10.0, 710.0 - tip_h)
+
+	var card_rect: Rect2 = Rect2(pos, Vector2(tip_w, tip_h))
+	# Sombra e fundo sólido escuro
+	canvas.draw_rect(card_rect.grow(2.5), Color(0.0, 0.0, 0.0, 0.70))
+	canvas.draw_rect(card_rect, Color(0.06, 0.08, 0.12, 0.96))
+
+	# Moldura temática chanfrada
+	var border_col: Color = GOLD if level == 3 else (Color("64dcd2") if is_ally else Color("f87171"))
+	canvas.draw_rect(card_rect, border_col, false, 1.5)
+	canvas.draw_rect(card_rect.grow(-2.0), Color(border_col, 0.35), false, 1.0)
+
+	# Cantoneiras ornamentadas medievais nos 4 cantos
+	var corners: Array[Vector2] = [card_rect.position, Vector2(card_rect.end.x, card_rect.position.y), Vector2(card_rect.position.x, card_rect.end.y), card_rect.end]
+	var corner_dirs: Array[Vector2] = [Vector2(1, 1), Vector2(-1, 1), Vector2(1, -1), Vector2(-1, -1)]
+	for i: int in range(4):
+		var cp: Vector2 = corners[i]
+		var cd: Vector2 = corner_dirs[i]
+		canvas.draw_line(cp + Vector2(cd.x * 6, 0), cp + Vector2(0, cd.y * 6), border_col, 1.2, true)
+
+	# Mini-retrato à esquerda
+	var p_rect: Rect2 = Rect2(pos + Vector2(8, 8), Vector2(36, 36))
+	canvas.draw_rect(p_rect.grow(1), Color(0.02, 0.03, 0.05, 0.9))
+	if portrait != null:
+		canvas.draw_texture_rect(portrait, p_rect, false)
+	canvas.draw_rect(p_rect, border_col, false, 1.0)
+
+	# Título: NOME + ESTRELAS + TIME
+	var title_col: Color = GOLD if is_ally else Color("fca5a5")
+	canvas.draw_string(font, pos + Vector2(50, 22), "%s  %s%s" % [unit_name.to_upper(), stars_text, team_tag], HORIZONTAL_ALIGNMENT_LEFT, int(tip_w - 56), 13, title_col)
+
+	# Linha de Classes e HP
+	canvas.draw_string(font, pos + Vector2(50, 38), "[%s]  ❤ %d/%d" % [tags_line, hp_cur, hp_max], HORIZONTAL_ALIGNMENT_LEFT, int(tip_w - 56), 11, Color("94a3b8"))
+
+	# Divisória decorada
+	canvas.draw_line(pos + Vector2(8, 48), pos + Vector2(tip_w - 8, 48), Color(border_col, 0.4), 1.0)
+
+	# Habilidade com título dourado e linhas detalhadas
+	canvas.draw_string(font, pos + Vector2(8, 63), "✦ HABILIDADE:", HORIZONTAL_ALIGNMENT_LEFT, int(tip_w - 16), 11, GOLD)
+	for l_i: int in range(desc_lines.size()):
+		canvas.draw_string(font, pos + Vector2(8, 78 + float(l_i) * 14.0), desc_lines[l_i], HORIZONTAL_ALIGNMENT_LEFT, int(tip_w - 16), 10, Color("f1f5f9"))
+

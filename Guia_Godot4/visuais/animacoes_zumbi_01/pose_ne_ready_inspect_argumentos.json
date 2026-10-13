@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "inspect",
+    "https://api.pixellab.ai/mcp/images/31328260-9b6d-4172-bdcc-2c8e506a9c9a/download",
+    "--region",
+    "20,104,105,127",
+    "--scale",
+    "6"
+  ],
+  "mode": "low",
+  "notes": "Review generated NE ready pose. Remove only opaque golden floor strip beneath feet, preserving feet, ankles, chains and pixels of warrior."
+}

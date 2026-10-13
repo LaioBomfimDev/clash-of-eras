@@ -1,0 +1,6 @@
+page.waitForEvent: Timeout 15000ms exceeded while waiting for event "console"
+=========================== logs ===========================
+waiting for event "console"
+============================================================
+    at C:\Users\m\Documents\Relic Arena MY\RelicArena\tools\test_web_online_runtime.cjs:33:48
+    at C:\Users\m\Documents\Relic Arena MY\RelicArena\tools\test_web_online_runtime.cjs:33:31

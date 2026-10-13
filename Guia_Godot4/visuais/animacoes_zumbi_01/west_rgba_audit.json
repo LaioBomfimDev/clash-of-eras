@@ -1,0 +1,242 @@
+[
+  {
+    "path": "RelicArena\\assets\\characters\\zumbi\\animacoes_02\\west\\walk\\frame_000.png",
+    "source": "RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\walk_east_02\\original\\Idle\\animations\\walk_ground_v2\\east\\frame_000.png",
+    "sha256": "3f89aac469699c732ecf51b75ae70da57151aa6a0353d508f9b35bb6da319e02",
+    "rgba_equal_to_exact_mirror": true,
+    "size": [
+      128,
+      180
+    ],
+    "bbox": [
+      48,
+      26,
+      79,
+      149
+    ]
+  },
+  {
+    "path": "RelicArena\\assets\\characters\\zumbi\\animacoes_02\\west\\walk\\frame_001.png",
+    "source": "RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\walk_east_02\\original\\Idle\\animations\\walk_ground_v2\\east\\frame_001.png",
+    "sha256": "e223d32b291caca4bd20e01f2f45f8c984b140f192db26790028cbe7ff474aec",
+    "rgba_equal_to_exact_mirror": true,
+    "size": [
+      128,
+      180
+    ],
+    "bbox": [
+      37,
+      27,
+      89,
+      149
+    ]
+  },
+  {
+    "path": "RelicArena\\assets\\characters\\zumbi\\animacoes_02\\west\\walk\\frame_002.png",
+    "source": "RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\walk_east_02\\original\\Idle\\animations\\walk_ground_v2\\east\\frame_002.png",
+    "sha256": "218c22ffa3df69705a70ad4b91963d8c16bcd91c995edec5d856fd8184cb3ddb",
+    "rgba_equal_to_exact_mirror": true,
+    "size": [
+      128,
+      180
+    ],
+    "bbox": [
+      35,
+      29,
+      102,
+      149
+    ]
+  },
+  {
+    "path": "RelicArena\\assets\\characters\\zumbi\\animacoes_02\\west\\walk\\frame_003.png",
+    "source": "RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\walk_east_02\\original\\Idle\\animations\\walk_ground_v2\\east\\frame_003.png",
+    "sha256": "d2a532f20212523c2b0cb7f2d13fcae7e6f3ef271fe356494d9423f4f03fd55f",
+    "rgba_equal_to_exact_mirror": true,
+    "size": [
+      128,
+      180
+    ],
+    "bbox": [
+      45,
+      27,
+      96,
+      147
+    ]
+  },
+  {
+    "path": "RelicArena\\assets\\characters\\zumbi\\animacoes_02\\west\\walk\\frame_004.png",
+    "source": "RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\walk_east_02\\original\\Idle\\animations\\walk_ground_v2\\east\\frame_004.png",
+    "sha256": "0c51347cbdbae3c900ae289433c884e1dea2249be4894d9c255f96c2693eb862",
+    "rgba_equal_to_exact_mirror": true,
+    "size": [
+      128,
+      180
+    ],
+    "bbox": [
+      45,
+      27,
+      82,
+      149
+    ]
+  },
+  {
+    "path": "RelicArena\\assets\\characters\\zumbi\\animacoes_02\\west\\walk\\frame_005.png",
+    "source": "RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\walk_east_02\\original\\Idle\\animations\\walk_ground_v2\\east\\frame_005.png",
+    "sha256": "bb911180287ffaff3c88f04caffa94bcd88df77511909ea1cb5f74dc2c82bf44",
+    "rgba_equal_to_exact_mirror": true,
+    "size": [
+      128,
+      180
+    ],
+    "bbox": [
+      33,
+      28,
+      96,
+      148
+    ]
+  },
+  {
+    "path": "RelicArena\\assets\\characters\\zumbi\\animacoes_02\\west\\walk\\frame_006.png",
+    "source": "RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\walk_east_02\\original\\Idle\\animations\\walk_ground_v2\\east\\frame_006.png",
+    "sha256": "c9ce3725a6ea75484b6dec043690c7a4ebba84c0e4bf80fe812f037e9c3e181b",
+    "rgba_equal_to_exact_mirror": true,
+    "size": [
+      128,
+      180
+    ],
+    "bbox": [
+      34,
+      28,
+      102,
+      149
+    ]
+  },
+  {
+    "path": "RelicArena\\assets\\characters\\zumbi\\animacoes_02\\west\\walk\\frame_007.png",
+    "source": "RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\walk_east_02\\original\\Idle\\animations\\walk_ground_v2\\east\\frame_007.png",
+    "sha256": "83fa56aeed2f59020d18e84e979e5e1058107be3abc28485e5125e3d4f0b95e8",
+    "rgba_equal_to_exact_mirror": true,
+    "size": [
+      128,
+      180
+    ],
+    "bbox": [
+      44,
+      27,
+      94,
+      149
+    ]
+  },
+  {
+    "path": "RelicArena\\assets\\characters\\zumbi\\animacoes_02\\west\\walk\\frame_008.png",
+    "source": "RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\walk_east_02\\original\\Idle\\animations\\walk_ground_v2\\east\\frame_008.png",
+    "sha256": "85df04c58b00c750ab30afe1782dad9da98771b31d22ae90af71d2196d93fdb1",
+    "rgba_equal_to_exact_mirror": true,
+    "size": [
+      128,
+      180
+    ],
+    "bbox": [
+      48,
+      26,
+      79,
+      149
+    ]
+  },
+  {
+    "path": "RelicArena\\assets\\characters\\zumbi\\animacoes_02\\west\\skill\\frame_000.png",
+    "source": "RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\skill_east_02\\original\\Idle\\animations\\rally_raise_v2\\east\\frame_000.png",
+    "sha256": "ae3d51beed56bdfecb77648c14cc0c9014123ee15c8f718610b6d167bc9f39ad",
+    "rgba_equal_to_exact_mirror": true,
+    "size": [
+      128,
+      188
+    ],
+    "bbox": [
+      48,
+      30,
+      79,
+      153
+    ]
+  },
+  {
+    "path": "RelicArena\\assets\\characters\\zumbi\\animacoes_02\\west\\skill\\frame_001.png",
+    "source": "RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\skill_east_02\\original\\Idle\\animations\\rally_raise_v2\\east\\frame_001.png",
+    "sha256": "e0086cda37bd820865111e57e70b495bd03118f657c074b0694cf30e74eb8d97",
+    "rgba_equal_to_exact_mirror": true,
+    "size": [
+      128,
+      188
+    ],
+    "bbox": [
+      48,
+      31,
+      85,
+      153
+    ]
+  },
+  {
+    "path": "RelicArena\\assets\\characters\\zumbi\\animacoes_02\\west\\skill\\frame_002.png",
+    "source": "RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\skill_east_02\\original\\Idle\\animations\\rally_raise_v2\\east\\frame_002.png",
+    "sha256": "cbb79018c8acada3ff17f7dc05a812de16c62b1342cc527ee3256c8238147ba8",
+    "rgba_equal_to_exact_mirror": true,
+    "size": [
+      128,
+      188
+    ],
+    "bbox": [
+      46,
+      28,
+      87,
+      153
+    ]
+  },
+  {
+    "path": "RelicArena\\assets\\characters\\zumbi\\animacoes_02\\west\\skill\\frame_003.png",
+    "source": "RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\skill_east_02\\original\\Idle\\animations\\rally_raise_v2\\east\\frame_003.png",
+    "sha256": "f33af07a095354ebeb09c6192e9b174bf8dad9fbc1eec81f5c7b5e0c861ae43e",
+    "rgba_equal_to_exact_mirror": true,
+    "size": [
+      128,
+      188
+    ],
+    "bbox": [
+      44,
+      32,
+      88,
+      152
+    ]
+  },
+  {
+    "path": "RelicArena\\assets\\characters\\zumbi\\animacoes_02\\west\\skill\\frame_004.png",
+    "source": "RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\skill_east_02\\original\\Idle\\animations\\rally_raise_v2\\east\\frame_004.png",
+    "sha256": "bd13bebe468c52e23ca543bbec179b6c08d976985de23cc0ce574320e7009868",
+    "rgba_equal_to_exact_mirror": true,
+    "size": [
+      128,
+      188
+    ],
+    "bbox": [
+      46,
+      35,
+      85,
+      152
+    ]
+  },
+  {
+    "path": "RelicArena\\assets\\characters\\zumbi\\animacoes_02\\west\\attack_contact\\frame_004.png",
+    "source": "RelicArena\\assets\\characters\\zumbi\\animacoes_01\\ajustes\\attack_contact_east.png",
+    "sha256": "d0ef85fdf0bd708b059ac4b7862dec2aa37532aa3cf45de686d61b0e59154eda",
+    "rgba_equal_to_exact_mirror": true,
+    "size": [
+      256,
+      172
+    ],
+    "bbox": [
+      33,
+      40,
+      217,
+      143
+    ]
+  }
+]

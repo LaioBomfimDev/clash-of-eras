@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "character: 6a5ec045-5930-4955-a684-ef864e5607b9\nanimation: v3 custom (In-place spear extension facing NORTH-EAST, back three-quarter view. Begin in the supplied grounded ready pose and extend the RIGHT arm in one strong diagonal thrust UP-RIGHT, ending exactly in the supplied contact pose. Left arm balances behind torso, knees flex. One broad steel spearhead on one wooden shaft angled up-right throughout. Fixed planted feet, no translation or turn toward camera, no horizontal east-facing pole, no duplicate weapon, no stone or floor. Preserve adult proportions, skin, clothes, scars and ankle chains. Extension only, no return.)\ndirections: north-east (1 jobs)\njob_ids: north-east=5ca53ce7-5004-4c9e-8eca-d733e1fc681d\ngroup: 625c3f1b-30d0-4bfe-ae89-aec1b9394679\nframes: 5 (1 reference + 4 animated)\ncost: 3 generations (3/dir x 1)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"6a5ec045-5930-4955-a684-ef864e5607b9\")\nadd more directions to this group: animate_character(character_id=\"6a5ec045-5930-4955-a684-ef864e5607b9\", action_description=\"In-place spear extension facing NORTH-EAST, back three-quarter view. Begin in the supplied grounded ready pose and extend the RIGHT arm in one strong diagonal thrust UP-RIGHT, ending exactly in the supplied contact pose. Left arm balances behind torso, knees flex. One broad steel spearhead on one wooden shaft angled up-right throughout. Fixed planted feet, no translation or turn toward camera, no horizontal east-facing pole, no duplicate weapon, no stone or floor. Preserve adult proportions, skin, clothes, scars and ankle chains. Extension only, no return.\", animation_group_id=\"625c3f1b-30d0-4bfe-ae89-aec1b9394679\", directions=[...])"
+    }
+  ],
+  "isError": false
+}
