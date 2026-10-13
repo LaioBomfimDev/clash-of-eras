@@ -1,0 +1,235 @@
+{
+ "frames": [
+  {
+   "filename": "clash-of-eras-anel-fumaca-snoop-01 0.png",
+   "frame": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 40
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 40
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 40
+   },
+   "pivot": {
+    "x": 0.71875,
+    "y": 0.5
+   },
+   "duration": 63
+  },
+  {
+   "filename": "clash-of-eras-anel-fumaca-snoop-01 1.png",
+   "frame": {
+    "x": 64,
+    "y": 0,
+    "w": 64,
+    "h": 40
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 40
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 40
+   },
+   "pivot": {
+    "x": 0.71875,
+    "y": 0.5
+   },
+   "duration": 63
+  },
+  {
+   "filename": "clash-of-eras-anel-fumaca-snoop-01 2.png",
+   "frame": {
+    "x": 128,
+    "y": 0,
+    "w": 64,
+    "h": 40
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 40
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 40
+   },
+   "pivot": {
+    "x": 0.71875,
+    "y": 0.5
+   },
+   "duration": 63
+  },
+  {
+   "filename": "clash-of-eras-anel-fumaca-snoop-01 3.png",
+   "frame": {
+    "x": 0,
+    "y": 40,
+    "w": 64,
+    "h": 40
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 40
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 40
+   },
+   "pivot": {
+    "x": 0.71875,
+    "y": 0.5
+   },
+   "duration": 63
+  },
+  {
+   "filename": "clash-of-eras-anel-fumaca-snoop-01 4.png",
+   "frame": {
+    "x": 64,
+    "y": 40,
+    "w": 64,
+    "h": 40
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 40
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 40
+   },
+   "pivot": {
+    "x": 0.71875,
+    "y": 0.5
+   },
+   "duration": 63
+  },
+  {
+   "filename": "clash-of-eras-anel-fumaca-snoop-01 5.png",
+   "frame": {
+    "x": 128,
+    "y": 40,
+    "w": 64,
+    "h": 40
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 40
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 40
+   },
+   "pivot": {
+    "x": 0.71875,
+    "y": 0.5
+   },
+   "duration": 63
+  },
+  {
+   "filename": "clash-of-eras-anel-fumaca-snoop-01 6.png",
+   "frame": {
+    "x": 0,
+    "y": 80,
+    "w": 64,
+    "h": 40
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 40
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 40
+   },
+   "pivot": {
+    "x": 0.71875,
+    "y": 0.5
+   },
+   "duration": 63
+  },
+  {
+   "filename": "clash-of-eras-anel-fumaca-snoop-01 7.png",
+   "frame": {
+    "x": 64,
+    "y": 80,
+    "w": 64,
+    "h": 40
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 40
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 40
+   },
+   "pivot": {
+    "x": 0.71875,
+    "y": 0.5
+   },
+   "duration": 63
+  }
+ ],
+ "meta": {
+  "app": "PixelLab VFX Creator",
+  "image": "clash-of-eras-anel-fumaca-snoop-01.png",
+  "format": "RGBA8888",
+  "size": {
+   "w": 192,
+   "h": 120
+  },
+  "scale": "1",
+  "anchor": {
+   "kind": "origin",
+   "x": 46,
+   "y": 20
+  },
+  "frameTags": [
+   {
+    "name": "clash-of-eras-anel-fumaca-snoop-01",
+    "from": 0,
+    "to": 7,
+    "direction": "forward"
+   }
+  ]
+ }
+}

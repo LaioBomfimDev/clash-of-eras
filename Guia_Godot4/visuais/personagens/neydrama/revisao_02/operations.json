@@ -1,0 +1,1752 @@
+{
+  "tool": "pixelart_workbench",
+  "native_resolution": true,
+  "passes": [
+    {
+      "input_id": "b32b7fca-46a3-4e95-90c0-79d623f8e255",
+      "output_id": "3ec68878-6187-452b-98f4-140b3bf3e5ef",
+      "changes": [
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              16,
+              42
+            ],
+            [
+              20,
+              42
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Bola de 13 px apoiada no chão"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              14,
+              43
+            ],
+            [
+              22,
+              43
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Bola de 13 px apoiada no chão"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              13,
+              44
+            ],
+            [
+              23,
+              44
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Bola de 13 px apoiada no chão"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              12,
+              45
+            ],
+            [
+              24,
+              45
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Bola de 13 px apoiada no chão"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              12,
+              46
+            ],
+            [
+              24,
+              46
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Bola de 13 px apoiada no chão"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              12,
+              47
+            ],
+            [
+              24,
+              47
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Bola de 13 px apoiada no chão"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              12,
+              48
+            ],
+            [
+              24,
+              48
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Bola de 13 px apoiada no chão"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              12,
+              49
+            ],
+            [
+              24,
+              49
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Bola de 13 px apoiada no chão"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              12,
+              50
+            ],
+            [
+              24,
+              50
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Bola de 13 px apoiada no chão"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              12,
+              51
+            ],
+            [
+              24,
+              51
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Bola de 13 px apoiada no chão"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              13,
+              52
+            ],
+            [
+              23,
+              52
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Bola de 13 px apoiada no chão"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              14,
+              53
+            ],
+            [
+              22,
+              53
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Bola de 13 px apoiada no chão"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              16,
+              54
+            ],
+            [
+              20,
+              54
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Bola de 13 px apoiada no chão"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              16,
+              43
+            ],
+            [
+              20,
+              43
+            ]
+          ],
+          "color": "#dedee1ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Volume claro da bola"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              14,
+              44
+            ],
+            [
+              22,
+              44
+            ]
+          ],
+          "color": "#dedee1ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Volume claro da bola"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              13,
+              45
+            ],
+            [
+              23,
+              45
+            ]
+          ],
+          "color": "#dedee1ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Volume claro da bola"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              13,
+              46
+            ],
+            [
+              23,
+              46
+            ]
+          ],
+          "color": "#dedee1ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Volume claro da bola"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              13,
+              47
+            ],
+            [
+              23,
+              47
+            ]
+          ],
+          "color": "#dedee1ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Volume claro da bola"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              13,
+              48
+            ],
+            [
+              23,
+              48
+            ]
+          ],
+          "color": "#dedee1ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Volume claro da bola"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              13,
+              49
+            ],
+            [
+              23,
+              49
+            ]
+          ],
+          "color": "#dedee1ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Volume claro da bola"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              13,
+              50
+            ],
+            [
+              23,
+              50
+            ]
+          ],
+          "color": "#dedee1ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Volume claro da bola"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              13,
+              51
+            ],
+            [
+              23,
+              51
+            ]
+          ],
+          "color": "#939cbeff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Volume claro da bola"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              14,
+              52
+            ],
+            [
+              22,
+              52
+            ]
+          ],
+          "color": "#939cbeff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Volume claro da bola"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              16,
+              53
+            ],
+            [
+              20,
+              53
+            ]
+          ],
+          "color": "#939cbeff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Volume claro da bola"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              17,
+              43
+            ],
+            [
+              19,
+              43
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Gomos escuros de futebol"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              17,
+              44
+            ],
+            [
+              19,
+              44
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Gomos escuros de futebol"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              18,
+              46
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Gomos escuros de futebol"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              17,
+              47
+            ],
+            [
+              19,
+              47
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Gomos escuros de futebol"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              17,
+              48
+            ],
+            [
+              19,
+              48
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Gomos escuros de futebol"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              18,
+              49
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Gomos escuros de futebol"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              13,
+              47
+            ],
+            [
+              14,
+              47
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Gomos escuros de futebol"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              13,
+              48
+            ],
+            [
+              14,
+              48
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Gomos escuros de futebol"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              22,
+              47
+            ],
+            [
+              23,
+              47
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Gomos escuros de futebol"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              22,
+              48
+            ],
+            [
+              23,
+              48
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Gomos escuros de futebol"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              15,
+              52
+            ],
+            [
+              17,
+              52
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Gomos escuros de futebol"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              20,
+              52
+            ],
+            [
+              22,
+              52
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Gomos escuros de futebol"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              15,
+              45
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Gomos escuros de futebol"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              21,
+              45
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Gomos escuros de futebol"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              35,
+              47
+            ],
+            [
+              38,
+              47
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Chuteira exagerada no pé direito"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              35,
+              48
+            ],
+            [
+              39,
+              48
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Chuteira exagerada no pé direito"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              35,
+              49
+            ],
+            [
+              41,
+              49
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Chuteira exagerada no pé direito"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              35,
+              50
+            ],
+            [
+              48,
+              50
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Chuteira exagerada no pé direito"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              35,
+              51
+            ],
+            [
+              51,
+              51
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Chuteira exagerada no pé direito"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              35,
+              52
+            ],
+            [
+              52,
+              52
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Chuteira exagerada no pé direito"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              35,
+              53
+            ],
+            [
+              52,
+              53
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Chuteira exagerada no pé direito"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              36,
+              54
+            ],
+            [
+              51,
+              54
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Chuteira exagerada no pé direito"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              36,
+              48
+            ],
+            [
+              38,
+              48
+            ]
+          ],
+          "color": "#c7923eff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Corpo dourado da chuteira"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              36,
+              49
+            ],
+            [
+              39,
+              49
+            ]
+          ],
+          "color": "#c7923eff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Corpo dourado da chuteira"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              36,
+              50
+            ],
+            [
+              41,
+              50
+            ]
+          ],
+          "color": "#c7923eff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Corpo dourado da chuteira"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              36,
+              51
+            ],
+            [
+              50,
+              51
+            ]
+          ],
+          "color": "#c7923eff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Corpo dourado da chuteira"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              36,
+              52
+            ],
+            [
+              51,
+              52
+            ]
+          ],
+          "color": "#c7923eff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Corpo dourado da chuteira"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              36,
+              53
+            ],
+            [
+              51,
+              53
+            ]
+          ],
+          "color": "#a76f2eff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Corpo dourado da chuteira"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              36,
+              48
+            ],
+            [
+              37,
+              48
+            ]
+          ],
+          "color": "#e5b94eff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Luz no couro dourado"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              36,
+              49
+            ],
+            [
+              38,
+              49
+            ]
+          ],
+          "color": "#e5b94eff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Luz no couro dourado"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              40,
+              51
+            ],
+            [
+              47,
+              51
+            ]
+          ],
+          "color": "#e5b94eff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Luz no couro dourado"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              46,
+              52
+            ],
+            [
+              50,
+              52
+            ]
+          ],
+          "color": "#e5b94eff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Luz no couro dourado"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              36,
+              49
+            ],
+            [
+              37,
+              49
+            ]
+          ],
+          "color": "#ddcb2eff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Brilho contido na chuteira"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              37,
+              50
+            ],
+            [
+              39,
+              50
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Cadarço legível"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              39,
+              51
+            ],
+            [
+              41,
+              51
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Cadarço legível"
+        }
+      ]
+    },
+    {
+      "input_id": "3ec68878-6187-452b-98f4-140b3bf3e5ef",
+      "output_id": "a459f961-58dc-4ebd-8704-a971e117c91f",
+      "reason": "Gomos da primeira bola lembravam um rosto; reparados para pentágono central e painéis assimétricos.",
+      "changes": [
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              16,
+              43
+            ],
+            [
+              20,
+              43
+            ]
+          ],
+          "color": "#dedee1ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Reorganizar gomos que pareciam um rosto"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              14,
+              44
+            ],
+            [
+              22,
+              44
+            ]
+          ],
+          "color": "#dedee1ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Reorganizar gomos que pareciam um rosto"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              13,
+              45
+            ],
+            [
+              23,
+              45
+            ]
+          ],
+          "color": "#dedee1ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Reorganizar gomos que pareciam um rosto"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              13,
+              46
+            ],
+            [
+              23,
+              46
+            ]
+          ],
+          "color": "#dedee1ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Reorganizar gomos que pareciam um rosto"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              13,
+              47
+            ],
+            [
+              23,
+              47
+            ]
+          ],
+          "color": "#dedee1ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Reorganizar gomos que pareciam um rosto"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              13,
+              48
+            ],
+            [
+              23,
+              48
+            ]
+          ],
+          "color": "#dedee1ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Reorganizar gomos que pareciam um rosto"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              13,
+              49
+            ],
+            [
+              23,
+              49
+            ]
+          ],
+          "color": "#dedee1ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Reorganizar gomos que pareciam um rosto"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              13,
+              50
+            ],
+            [
+              23,
+              50
+            ]
+          ],
+          "color": "#dedee1ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Reorganizar gomos que pareciam um rosto"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              13,
+              51
+            ],
+            [
+              23,
+              51
+            ]
+          ],
+          "color": "#939cbeff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Reorganizar gomos que pareciam um rosto"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              14,
+              52
+            ],
+            [
+              22,
+              52
+            ]
+          ],
+          "color": "#939cbeff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Reorganizar gomos que pareciam um rosto"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              16,
+              53
+            ],
+            [
+              20,
+              53
+            ]
+          ],
+          "color": "#939cbeff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Reorganizar gomos que pareciam um rosto"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              17,
+              46
+            ],
+            [
+              19,
+              46
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Pentágono central e painéis de futebol"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              16,
+              47
+            ],
+            [
+              20,
+              47
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Pentágono central e painéis de futebol"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              16,
+              48
+            ],
+            [
+              20,
+              48
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Pentágono central e painéis de futebol"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              17,
+              49
+            ],
+            [
+              19,
+              49
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Pentágono central e painéis de futebol"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              18,
+              50
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Pentágono central e painéis de futebol"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              14,
+              44
+            ],
+            [
+              15,
+              44
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Pentágono central e painéis de futebol"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              13,
+              45
+            ],
+            [
+              14,
+              45
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Pentágono central e painéis de futebol"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              21,
+              44
+            ],
+            [
+              22,
+              44
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Pentágono central e painéis de futebol"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              22,
+              45
+            ],
+            [
+              23,
+              45
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Pentágono central e painéis de futebol"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              17,
+              52
+            ],
+            [
+              20,
+              52
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Pentágono central e painéis de futebol"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              17,
+              53
+            ],
+            [
+              20,
+              53
+            ]
+          ],
+          "color": "#271817ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Pentágono central e painéis de futebol"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              15,
+              45
+            ]
+          ],
+          "color": "#939cbeff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Junções discretas entre os painéis"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              21,
+              45
+            ]
+          ],
+          "color": "#939cbeff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Junções discretas entre os painéis"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "points": [
+            [
+              18,
+              51
+            ]
+          ],
+          "color": "#939cbeff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Junções discretas entre os painéis"
+        }
+      ]
+    }
+  ]
+}
+

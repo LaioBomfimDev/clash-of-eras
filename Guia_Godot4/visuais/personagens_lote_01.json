@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-11",
+  "stage": "Primeiro núcleo visual: 2 prévias disponíveis, 2 personagens bloqueados pelo serviço.",
+  "scope": "Criação de bases estáticas no PixelLab; nenhum jogo ou animação nova implementados.",
+  "gallery": "personagens_lote_01.html",
+  "technical_proposal": {
+    "mode": "standard",
+    "requested_size": 48,
+    "directions": 8,
+    "view": "low top-down",
+    "names_final_approved": false
+  },
+  "characters": [
+    {
+      "reference": "Michael Jackson",
+      "role": "Suporte",
+      "character_id": "8e001e18-9617-4a67-a326-32af26dc4f24",
+      "new_generation": false,
+      "status": "completed_existing_preserved",
+      "reported_size": [
+        48,
+        48
+      ],
+      "cloud_directions": 8,
+      "local_preview": "personagens/michael_existente/south.png",
+      "local_directions": 1,
+      "animation": "Uma animação existente preservada, sem validação quadro a quadro nesta etapa.",
+      "metadata": "personagens/michael_existente/character.json"
+    },
+    {
+      "reference": "Zumbi dos Palmares",
+      "role": "Dano corpo a corpo",
+      "character_id": "40cff10a-fe31-472e-8bd8-94246e5f341e",
+      "new_generation": true,
+      "status": "completed",
+      "reported_size": [
+        68,
+        68
+      ],
+      "requested_size": 48,
+      "cloud_directions": 8,
+      "local_preview": "personagens/zumbalhao/south.png",
+      "local_directions": 1,
+      "animations_created": 0,
+      "metadata": "personagens/zumbalhao/character.json",
+      "brief": {
+        "mode": "standard",
+        "n_directions": 8,
+        "size": 48,
+        "view": "low top-down",
+        "outline": "selective outline",
+        "shading": "medium shading",
+        "detail": "high detail",
+        "name": "Relic Arena — Zumbalhão",
+        "body_type": "humanoid",
+        "proportions": "{\"type\":\"preset\",\"name\":\"chibi\"}",
+        "description": "An instantly recognizable exaggerated heroic caricature inspired by Zumbi dos Palmares for a Brazilian pixel art arena game, a fierce close-range damage warrior. Adult Black Brazilian man with deep brown skin, strong proud face, enormous expressive eyebrows, thick black afro hair tied by a vivid red headband, fearless grin. Extremely broad muscular shoulders with bare forearms, simple earthy brown and ochre cloth clothing, red waist sash, sturdy dark sandals. His signature accessory is one comically oversized broad-bladed short spear with a wooden shaft, almost as tall as his body, readable as a single bold weapon shape. Powerful grounded ready stance, funny exaggerated head and weapon while retaining a dignified formidable personality. Crisp pixel clusters, restrained warm earth palette, medium shading, clean dark selective outline, warm upper-left lighting. Low top-down full-body sprite viewed from a slightly elevated arena camera; feet aligned on a shared ground plane. Entire body, afro and spear inside 48px canvas, transparent background, no scenery, no lettering, no aura or particles."
+      }
+    },
+    {
+      "reference": "Vira-lata Caramelo",
+      "role": "Assassino",
+      "new_generation": true,
+      "status": "failed",
+      "attempts": [
+        {
+          "character_id": "8fe8568a-d1a7-4023-b22c-2e4bff40f642",
+          "error": "Generation failed: Cannot connect to host <worker> ssl:default [Connect call failed (<worker>)]"
+        },
+        {
+          "character_id": "307e36d8-a8fe-4fd3-bf77-45f3a3bcf134",
+          "error": "Sorry, we are experiencing high demand and need to temporarily limit free tier."
+        }
+      ],
+      "local_preview": null,
+      "brief": {
+        "mode": "standard",
+        "n_directions": 8,
+        "size": 48,
+        "view": "low top-down",
+        "outline": "selective outline",
+        "shading": "medium shading",
+        "detail": "high detail",
+        "name": "Relic Arena — Caramelo Relâmpago",
+        "body_type": "quadruped",
+        "proportions": "Quadruped street dog caricature with a disproportionately large expressive head, short compact body, agile thin legs and oversized signature collar. All paws and tail visible within the canvas.",
+        "description": "A wildly exaggerated funny Brazilian caramel-colored mixed-breed street dog, the recognizable vira-lata caramelo, as a fast melee assassin for a pixel art arena game. Warm golden caramel fur, huge expressive eyebrows, mischievous toothy grin, one floppy ear and one upright ear, curled wagging tail, compact agile quadruped stance. His signature accessory is an absurdly oversized chunky golden dog-tag collar with one large plain round tag and a bright red bandana flapping behind. The collar is comically too big but the face remains readable. Confident scrappy street-dog energy; funny and formidable, clearly a dog rather than a humanoid. Crisp pixel clusters, restrained palette and shading, readable silhouette at 48px, warm light from upper left, clean dark selective outline, slightly elevated camera matching an inclined auto-battler arena. Single full-body character, all four paws on the same ground plane, centered, transparent background, no lettering, no scenery, no weapon in his mouth, no glow or particles.",
+        "template": "dog"
+      }
+    },
+    {
+      "reference": "Barack Obama",
+      "role": "Tanque",
+      "new_generation": true,
+      "status": "failed",
+      "character_id": "d33b1ab5-3166-4503-a90e-aaadb14cea0a",
+      "error": "Sorry, we are experiencing high demand and need to temporarily limit free tier.",
+      "local_preview": null,
+      "brief": {
+        "mode": "standard",
+        "n_directions": 8,
+        "size": 48,
+        "view": "low top-down",
+        "outline": "selective outline",
+        "shading": "medium shading",
+        "detail": "high detail",
+        "name": "Relic Arena — Obamuralha",
+        "body_type": "humanoid",
+        "proportions": "{\"type\":\"preset\",\"name\":\"chibi\"}",
+        "description": "An unmistakably recognizable absurd exaggerated caricature of Barack Obama as a melee tank in a funny pixel art arena game. Middle-aged Black man with warm brown skin, elongated face, comically prominent ears, raised eyebrows, confident broad crooked smile, close-cropped black hair with gray at the sides. Wears a ridiculously oversized navy blue presidential suit with gigantic square padded shoulders, white shirt, bright red tie and polished black shoes. His signature accessory is an enormous heavy rectangular dark-blue metal briefcase held as a shield, with a plain gold clasp and no markings, almost half as big as he is. Big head and massive shoulder silhouette; humorous imposing defensive stance, clearly recognizable as the real person exaggerated. Crisp pixel clusters, restrained palette, medium shading and clean dark selective outline, warm light from upper left, readable at 48px, low top-down slightly elevated camera matching an inclined auto-battler arena. Single full body with both shoes grounded, shield and ears fully inside the canvas, transparent background, no text, no scenery, no aura, no particles."
+      }
+    }
+  ],
+  "billing": {
+    "announced_standard_generation_cost": 1,
+    "balance_before": {
+      "remaining": 15,
+      "used": 24,
+      "total": 40,
+      "credits": 0,
+      "subscription": "trial",
+      "daily_bonus": 2
+    },
+    "balance_after": {
+      "remaining": 14,
+      "used": 25,
+      "total": 40,
+      "credits": 0,
+      "subscription": "trial",
+      "daily_bonus": 1
+    },
+    "failed_jobs_charge": "Não confirmado; contadores não estabelecem cobrança ou reembolso por tentativa."
+  },
+  "download": {
+    "public_rotations_status": 403,
+    "handling": "Download interrompido, sem tentar contornar. Prévias locais vieram de bytes já entregues pela ferramenta MCP.",
+    "eight_local_directions": false
+  },
+  "review": {
+    "zumbi": "Primeiro rascunho: exagero moderado e silhueta genérica de guerreiro. Identificação e acessório ainda precisam de avaliação do usuário.",
+    "scale": "Telas nativas diferentes; galeria alinha pés pela área visível sem modificar PNGs.",
+    "godot": false,
+    "browser_rendering_tested": false
+  },
+  "validation": "Dimensões, transparência, hashes, links e sintaxe conferidos no registro de validação separado."
+}

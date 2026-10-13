@@ -1,0 +1,16 @@
+{
+  "state": "exported_validated",
+  "step_id": "f44e7e92-191f-42f1-a9d0-7b401b445dea",
+  "ai_generation_calls": 0,
+  "shared_manifest_modified": true,
+  "gameplay_modified": false,
+  "last_response": "requests\\04_add_buff_loop_result.json",
+  "effect_id": "6313f6b8-a969-405c-b435-38f58a8817cd",
+  "export_image_id": "3c944447-93b6-403c-9623-9da1412bd427",
+  "effect_url": "https://pixellab.ai/create-vfx?effect=6313f6b8-a969-405c-b435-38f58a8817cd",
+  "receipt": "exportacao.json",
+  "zip_sha256": "7aa4558d748bd58830c793d6f6091feb3cacd5e07c1ea9fb2cab5853c94ebe95",
+  "manifest_registered": true,
+  "manifest_key": "zumbi_inspiracao",
+  "runtime_integrated": false
+}

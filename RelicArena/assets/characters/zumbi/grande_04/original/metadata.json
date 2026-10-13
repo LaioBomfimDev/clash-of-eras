@@ -1,0 +1,36 @@
+{
+  "group_id": "13bf5020-b0a1-4b82-92f1-287e8bdafdcb",
+  "states": [
+    {
+      "character": {
+        "id": "47e44cf4-8365-4c14-8d6f-15ff0fbc4498",
+        "name": "Idle",
+        "prompt": "Rotate this exact south-facing sprite into eight coherent views. Strong muscular Afro-Brazilian warrior, dark brown skin, shirtless with clearly visible pale pink scars on chest and arms, short dark hair and short beard, off-white trousers rolled below the knee with earth stains, pink-red cloth sash with one long blade tucked at the waist. Left foot raised on a low brown rock with the knee bent and his left hand resting on that knee; right hand holds a very tall wooden spear with a broad leaf-shaped iron blade. Broken iron shackles on both ankles with a short dangling chain end each, the legs are not chained together. Keep the same pixel scale, colors, line weight and proportions in every direction; spear and rock fully inside the canvas; transparent background, no ground shadow, no text.",
+        "size": {
+          "width": 128,
+          "height": 128
+        },
+        "template_id": "mannequin",
+        "directions": 8,
+        "view": "low top-down",
+        "created_at": "2026-10-12T22:31:32.925727+00:00"
+      },
+      "folder": "Idle",
+      "frames": {
+        "rotations": {
+          "south": "Idle/rotations/south.png",
+          "south-east": "Idle/rotations/south-east.png",
+          "east": "Idle/rotations/east.png",
+          "north-east": "Idle/rotations/north-east.png",
+          "north": "Idle/rotations/north.png",
+          "north-west": "Idle/rotations/north-west.png",
+          "west": "Idle/rotations/west.png",
+          "south-west": "Idle/rotations/south-west.png"
+        },
+        "animations": {}
+      }
+    }
+  ],
+  "export_version": "3.1",
+  "export_date": "2026-10-12T22:34:45.371643"
+}

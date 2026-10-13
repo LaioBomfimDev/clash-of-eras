@@ -1,0 +1,3036 @@
+{
+  "audit": "Independent original-file integrity audit for two V1.4 VFX packages; not gameplay validation or final visual approval.",
+  "date_utc": "2026-10-12T13:18:15.120897+00:00",
+  "method": "Read-only Python zipfile/hashlib and Pillow image inspection. Source image files and code were not modified.",
+  "packages": [
+    {
+      "key": "fumaca_01",
+      "receipt": "ORIGEM.json",
+      "receipt_sha256": "217f4522a06a522291053ecfd577b2876de9ebd3d146c4a3761e78a95f5fb8d4",
+      "zip_sha256": "de71bf96731bc8c47ac6ae33bdb0028d06a1047a2a03e6557c5cc8f84d4057ec",
+      "zip_bytes": 3918,
+      "zip_entries": [
+        {
+          "file": "whole.png",
+          "bytes": 1315,
+          "crc32": "1821977e",
+          "sha256": "be0930a9d03414b76158616f2efcc7910c8e4ec8f147f362c6746d34f0330e1a",
+          "safe_path": true,
+          "extracted_byte_identical": true
+        },
+        {
+          "file": "part-fumaca.png",
+          "bytes": 1315,
+          "crc32": "1821977e",
+          "sha256": "be0930a9d03414b76158616f2efcc7910c8e4ec8f147f362c6746d34f0330e1a",
+          "safe_path": true,
+          "extracted_byte_identical": true
+        },
+        {
+          "file": "manifest.json",
+          "bytes": 1035,
+          "crc32": "97b126b9",
+          "sha256": "6bbcb723a61cf66d46f41c4ec519f26b09292b56838b83d6ad499623d269e905",
+          "safe_path": true,
+          "extracted_byte_identical": true
+        },
+        {
+          "file": "README.txt",
+          "bytes": 942,
+          "crc32": "f70d7923",
+          "sha256": "3030bb6c509e7759cd342fd0b98dd3968551c657dfd76c4e6886399f751d632c",
+          "safe_path": true,
+          "extracted_byte_identical": true
+        }
+      ],
+      "files_checked_against_receipt": [
+        {
+          "file": "clash-of-eras-fumaca01-game.zip",
+          "bytes": 3918,
+          "sha256": "de71bf96731bc8c47ac6ae33bdb0028d06a1047a2a03e6557c5cc8f84d4057ec",
+          "matches_receipt": true
+        },
+        {
+          "file": "clash-of-eras-fumaca01.gif",
+          "bytes": 1733,
+          "sha256": "bc61cfaac6bf27bcc065f25ba40db1bf810ca7450eba1ec4d1375132a253581e",
+          "matches_receipt": true
+        },
+        {
+          "file": "clash-of-eras-fumaca01.json",
+          "bytes": 6489,
+          "sha256": "fa308686b45cc7b11fd56fdb5cc1d114474ca1b057faf7e5d30e048c8bd6750c",
+          "matches_receipt": true
+        },
+        {
+          "file": "clash-of-eras-fumaca01.png",
+          "bytes": 1479,
+          "sha256": "c2a9b57584d34147e1114c0a77abf0a4a7dd8daa9f9552cd430f1eda294c4b8d",
+          "matches_receipt": true
+        },
+        {
+          "file": "original/manifest.json",
+          "bytes": 1035,
+          "sha256": "6bbcb723a61cf66d46f41c4ec519f26b09292b56838b83d6ad499623d269e905",
+          "matches_receipt": true
+        },
+        {
+          "file": "original/part-fumaca.png",
+          "bytes": 1315,
+          "sha256": "be0930a9d03414b76158616f2efcc7910c8e4ec8f147f362c6746d34f0330e1a",
+          "matches_receipt": true
+        },
+        {
+          "file": "original/README.txt",
+          "bytes": 942,
+          "sha256": "3030bb6c509e7759cd342fd0b98dd3968551c657dfd76c4e6886399f751d632c",
+          "matches_receipt": true
+        },
+        {
+          "file": "original/whole.png",
+          "bytes": 1315,
+          "sha256": "be0930a9d03414b76158616f2efcc7910c8e4ec8f147f362c6746d34f0330e1a",
+          "matches_receipt": true
+        }
+      ],
+      "canvas": {
+        "w": 37,
+        "h": 16
+      },
+      "anchor": {
+        "kind": "origin",
+        "x": 18,
+        "y": 6
+      },
+      "authored_frame_count": 16,
+      "authored_alpha_bounds": [
+        [
+          6,
+          3,
+          34,
+          9
+        ],
+        [
+          5,
+          3,
+          34,
+          9
+        ],
+        [
+          5,
+          3,
+          34,
+          10
+        ],
+        [
+          5,
+          3,
+          34,
+          9
+        ],
+        [
+          8,
+          3,
+          33,
+          10
+        ],
+        [
+          9,
+          3,
+          33,
+          9
+        ],
+        [
+          7,
+          3,
+          33,
+          9
+        ],
+        [
+          8,
+          3,
+          32,
+          9
+        ],
+        [
+          8,
+          3,
+          32,
+          9
+        ],
+        [
+          9,
+          3,
+          32,
+          9
+        ],
+        [
+          8,
+          3,
+          31,
+          9
+        ],
+        [
+          8,
+          3,
+          31,
+          9
+        ],
+        [
+          6,
+          3,
+          31,
+          9
+        ],
+        [
+          5,
+          3,
+          31,
+          9
+        ],
+        [
+          5,
+          3,
+          34,
+          10
+        ],
+        [
+          6,
+          3,
+          34,
+          9
+        ]
+      ],
+      "clips": [
+        {
+          "name": "whole",
+          "sheet": "whole.png",
+          "sheet_pixels": [
+            116,
+            28
+          ],
+          "frame_pixels": [
+            29,
+            7
+          ],
+          "frames": 16,
+          "fps": 10,
+          "loop": true,
+          "offset": {
+            "x": -13,
+            "y": -3
+          },
+          "crop_on_authored_canvas": [
+            5,
+            3,
+            34,
+            10
+          ],
+          "nontransparent_pixels_range": [
+            69,
+            84
+          ],
+          "frames_compared": [
+            {
+              "packed_frame": 0,
+              "authored_frame": 0,
+              "alpha_bbox": [
+                1,
+                0,
+                29,
+                6
+              ],
+              "nontransparent_pixels": 81,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 1,
+              "authored_frame": 1,
+              "alpha_bbox": [
+                0,
+                0,
+                29,
+                6
+              ],
+              "nontransparent_pixels": 84,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 2,
+              "authored_frame": 2,
+              "alpha_bbox": [
+                0,
+                0,
+                29,
+                7
+              ],
+              "nontransparent_pixels": 84,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 3,
+              "authored_frame": 3,
+              "alpha_bbox": [
+                0,
+                0,
+                29,
+                6
+              ],
+              "nontransparent_pixels": 77,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 4,
+              "authored_frame": 4,
+              "alpha_bbox": [
+                3,
+                0,
+                28,
+                7
+              ],
+              "nontransparent_pixels": 82,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 5,
+              "authored_frame": 5,
+              "alpha_bbox": [
+                4,
+                0,
+                28,
+                6
+              ],
+              "nontransparent_pixels": 76,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 6,
+              "authored_frame": 6,
+              "alpha_bbox": [
+                2,
+                0,
+                28,
+                6
+              ],
+              "nontransparent_pixels": 75,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 7,
+              "authored_frame": 7,
+              "alpha_bbox": [
+                3,
+                0,
+                27,
+                6
+              ],
+              "nontransparent_pixels": 75,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 8,
+              "authored_frame": 8,
+              "alpha_bbox": [
+                3,
+                0,
+                27,
+                6
+              ],
+              "nontransparent_pixels": 75,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 9,
+              "authored_frame": 9,
+              "alpha_bbox": [
+                4,
+                0,
+                27,
+                6
+              ],
+              "nontransparent_pixels": 74,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 10,
+              "authored_frame": 10,
+              "alpha_bbox": [
+                3,
+                0,
+                26,
+                6
+              ],
+              "nontransparent_pixels": 73,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 11,
+              "authored_frame": 11,
+              "alpha_bbox": [
+                3,
+                0,
+                26,
+                6
+              ],
+              "nontransparent_pixels": 73,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 12,
+              "authored_frame": 12,
+              "alpha_bbox": [
+                1,
+                0,
+                26,
+                6
+              ],
+              "nontransparent_pixels": 69,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 13,
+              "authored_frame": 13,
+              "alpha_bbox": [
+                0,
+                0,
+                26,
+                6
+              ],
+              "nontransparent_pixels": 72,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 14,
+              "authored_frame": 14,
+              "alpha_bbox": [
+                0,
+                0,
+                29,
+                7
+              ],
+              "nontransparent_pixels": 72,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 15,
+              "authored_frame": 15,
+              "alpha_bbox": [
+                1,
+                0,
+                29,
+                6
+              ],
+              "nontransparent_pixels": 75,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            }
+          ],
+          "unused_sheet_cells": [],
+          "omitted_authored_frames": []
+        },
+        {
+          "name": "part-fumaca",
+          "sheet": "part-fumaca.png",
+          "sheet_pixels": [
+            116,
+            28
+          ],
+          "frame_pixels": [
+            29,
+            7
+          ],
+          "frames": 16,
+          "fps": 10,
+          "loop": true,
+          "offset": {
+            "x": -13,
+            "y": -3
+          },
+          "crop_on_authored_canvas": [
+            5,
+            3,
+            34,
+            10
+          ],
+          "nontransparent_pixels_range": [
+            69,
+            84
+          ],
+          "frames_compared": [
+            {
+              "packed_frame": 0,
+              "authored_frame": 0,
+              "alpha_bbox": [
+                1,
+                0,
+                29,
+                6
+              ],
+              "nontransparent_pixels": 81,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 1,
+              "authored_frame": 1,
+              "alpha_bbox": [
+                0,
+                0,
+                29,
+                6
+              ],
+              "nontransparent_pixels": 84,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 2,
+              "authored_frame": 2,
+              "alpha_bbox": [
+                0,
+                0,
+                29,
+                7
+              ],
+              "nontransparent_pixels": 84,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 3,
+              "authored_frame": 3,
+              "alpha_bbox": [
+                0,
+                0,
+                29,
+                6
+              ],
+              "nontransparent_pixels": 77,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 4,
+              "authored_frame": 4,
+              "alpha_bbox": [
+                3,
+                0,
+                28,
+                7
+              ],
+              "nontransparent_pixels": 82,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 5,
+              "authored_frame": 5,
+              "alpha_bbox": [
+                4,
+                0,
+                28,
+                6
+              ],
+              "nontransparent_pixels": 76,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 6,
+              "authored_frame": 6,
+              "alpha_bbox": [
+                2,
+                0,
+                28,
+                6
+              ],
+              "nontransparent_pixels": 75,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 7,
+              "authored_frame": 7,
+              "alpha_bbox": [
+                3,
+                0,
+                27,
+                6
+              ],
+              "nontransparent_pixels": 75,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 8,
+              "authored_frame": 8,
+              "alpha_bbox": [
+                3,
+                0,
+                27,
+                6
+              ],
+              "nontransparent_pixels": 75,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 9,
+              "authored_frame": 9,
+              "alpha_bbox": [
+                4,
+                0,
+                27,
+                6
+              ],
+              "nontransparent_pixels": 74,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 10,
+              "authored_frame": 10,
+              "alpha_bbox": [
+                3,
+                0,
+                26,
+                6
+              ],
+              "nontransparent_pixels": 73,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 11,
+              "authored_frame": 11,
+              "alpha_bbox": [
+                3,
+                0,
+                26,
+                6
+              ],
+              "nontransparent_pixels": 73,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 12,
+              "authored_frame": 12,
+              "alpha_bbox": [
+                1,
+                0,
+                26,
+                6
+              ],
+              "nontransparent_pixels": 69,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 13,
+              "authored_frame": 13,
+              "alpha_bbox": [
+                0,
+                0,
+                26,
+                6
+              ],
+              "nontransparent_pixels": 72,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 14,
+              "authored_frame": 14,
+              "alpha_bbox": [
+                0,
+                0,
+                29,
+                7
+              ],
+              "nontransparent_pixels": 72,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 15,
+              "authored_frame": 15,
+              "alpha_bbox": [
+                1,
+                0,
+                29,
+                6
+              ],
+              "nontransparent_pixels": 75,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            }
+          ],
+          "unused_sheet_cells": [],
+          "omitted_authored_frames": []
+        }
+      ],
+      "gif": {
+        "encoded_frames": 16,
+        "durations_ms": [
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "total_ms": 1600,
+        "authoritative_for_game_timing": false
+      }
+    },
+    {
+      "key": "laco_01",
+      "receipt": "exportacao.json",
+      "receipt_sha256": "22bbe37098b4fc0356b5e3ec2b408c1d031ec50f6e947f4f2ab0e7d80db0652d",
+      "zip_sha256": "9db2a623b867ab01d167fdf6db4fb84afb3713c768fcfcf0553a974be103a63c",
+      "zip_bytes": 3196,
+      "zip_entries": [
+        {
+          "file": "whole.png",
+          "bytes": 963,
+          "crc32": "fd433e45",
+          "sha256": "a818bb7520c4224c15455419f33f78a03f77949cf8dbe690bcdafcce752c2113",
+          "safe_path": true,
+          "extracted_byte_identical": true
+        },
+        {
+          "file": "part-laco.png",
+          "bytes": 963,
+          "crc32": "fd433e45",
+          "sha256": "a818bb7520c4224c15455419f33f78a03f77949cf8dbe690bcdafcce752c2113",
+          "safe_path": true,
+          "extracted_byte_identical": true
+        },
+        {
+          "file": "manifest.json",
+          "bytes": 983,
+          "crc32": "ef00e40d",
+          "sha256": "9b89e0493389b04718077cd87b8e50ecdffea4dbead6aa926417c79486cb8806",
+          "safe_path": true,
+          "extracted_byte_identical": true
+        },
+        {
+          "file": "README.txt",
+          "bytes": 942,
+          "crc32": "f70d7923",
+          "sha256": "3030bb6c509e7759cd342fd0b98dd3968551c657dfd76c4e6886399f751d632c",
+          "safe_path": true,
+          "extracted_byte_identical": true
+        }
+      ],
+      "files_checked_against_receipt": [
+        {
+          "file": "original/clash-of-eras-laco01-game.zip",
+          "bytes": 3196,
+          "sha256": "9db2a623b867ab01d167fdf6db4fb84afb3713c768fcfcf0553a974be103a63c",
+          "matches_receipt": true
+        },
+        {
+          "file": "original/clash-of-eras-laco01.gif",
+          "bytes": 1107,
+          "sha256": "647ff5d05505e2b830c7f87e9b096aac0503c3f4030de2b82801ce3453acdd9d",
+          "matches_receipt": true
+        },
+        {
+          "file": "original/clash-of-eras-laco01.json",
+          "bytes": 4711,
+          "sha256": "83773d490f60da74666b11db3631f02ff023cef866f1977ea2e7e40abe6d2a91",
+          "matches_receipt": true
+        },
+        {
+          "file": "original/clash-of-eras-laco01.png",
+          "bytes": 1091,
+          "sha256": "d46d60a52bbb816e430e83776fb55e66c0b48bdb0bd4b694aa7a04b7beb8a2f4",
+          "matches_receipt": true
+        },
+        {
+          "file": "game_pack/whole.png",
+          "bytes": 963,
+          "sha256": "a818bb7520c4224c15455419f33f78a03f77949cf8dbe690bcdafcce752c2113",
+          "matches_receipt": true
+        },
+        {
+          "file": "game_pack/part-laco.png",
+          "bytes": 963,
+          "sha256": "a818bb7520c4224c15455419f33f78a03f77949cf8dbe690bcdafcce752c2113",
+          "matches_receipt": true
+        },
+        {
+          "file": "game_pack/manifest.json",
+          "bytes": 983,
+          "sha256": "9b89e0493389b04718077cd87b8e50ecdffea4dbead6aa926417c79486cb8806",
+          "matches_receipt": true
+        },
+        {
+          "file": "game_pack/README.txt",
+          "bytes": 942,
+          "sha256": "3030bb6c509e7759cd342fd0b98dd3968551c657dfd76c4e6886399f751d632c",
+          "matches_receipt": true
+        }
+      ],
+      "canvas": {
+        "w": 32,
+        "h": 28
+      },
+      "anchor": {
+        "kind": "origin",
+        "x": 16,
+        "y": 14
+      },
+      "authored_frame_count": 12,
+      "authored_alpha_bounds": [
+        [
+          4,
+          6,
+          28,
+          21
+        ],
+        [
+          5,
+          6,
+          27,
+          20
+        ],
+        [
+          6,
+          6,
+          28,
+          21
+        ],
+        [
+          6,
+          7,
+          27,
+          21
+        ],
+        [
+          6,
+          7,
+          27,
+          21
+        ],
+        [
+          6,
+          7,
+          27,
+          21
+        ],
+        [
+          6,
+          7,
+          27,
+          21
+        ],
+        [
+          6,
+          7,
+          27,
+          21
+        ],
+        [
+          6,
+          7,
+          28,
+          21
+        ],
+        [
+          6,
+          7,
+          27,
+          20
+        ],
+        [
+          5,
+          6,
+          28,
+          20
+        ],
+        null
+      ],
+      "clips": [
+        {
+          "name": "whole",
+          "sheet": "whole.png",
+          "sheet_pixels": [
+            96,
+            45
+          ],
+          "frame_pixels": [
+            24,
+            15
+          ],
+          "frames": 11,
+          "fps": 16,
+          "loop": false,
+          "offset": {
+            "x": -12,
+            "y": -8
+          },
+          "crop_on_authored_canvas": [
+            4,
+            6,
+            28,
+            21
+          ],
+          "nontransparent_pixels_range": [
+            46,
+            158
+          ],
+          "frames_compared": [
+            {
+              "packed_frame": 0,
+              "authored_frame": 0,
+              "alpha_bbox": [
+                0,
+                0,
+                24,
+                15
+              ],
+              "nontransparent_pixels": 113,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 1,
+              "authored_frame": 1,
+              "alpha_bbox": [
+                1,
+                0,
+                23,
+                14
+              ],
+              "nontransparent_pixels": 121,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 2,
+              "authored_frame": 2,
+              "alpha_bbox": [
+                2,
+                0,
+                24,
+                15
+              ],
+              "nontransparent_pixels": 158,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 3,
+              "authored_frame": 3,
+              "alpha_bbox": [
+                2,
+                1,
+                23,
+                15
+              ],
+              "nontransparent_pixels": 146,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 4,
+              "authored_frame": 4,
+              "alpha_bbox": [
+                2,
+                1,
+                23,
+                15
+              ],
+              "nontransparent_pixels": 146,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 5,
+              "authored_frame": 5,
+              "alpha_bbox": [
+                2,
+                1,
+                23,
+                15
+              ],
+              "nontransparent_pixels": 146,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 6,
+              "authored_frame": 6,
+              "alpha_bbox": [
+                2,
+                1,
+                23,
+                15
+              ],
+              "nontransparent_pixels": 146,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 7,
+              "authored_frame": 7,
+              "alpha_bbox": [
+                2,
+                1,
+                23,
+                15
+              ],
+              "nontransparent_pixels": 146,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 8,
+              "authored_frame": 8,
+              "alpha_bbox": [
+                2,
+                1,
+                24,
+                15
+              ],
+              "nontransparent_pixels": 153,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 9,
+              "authored_frame": 9,
+              "alpha_bbox": [
+                2,
+                1,
+                23,
+                14
+              ],
+              "nontransparent_pixels": 55,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 10,
+              "authored_frame": 10,
+              "alpha_bbox": [
+                1,
+                0,
+                24,
+                14
+              ],
+              "nontransparent_pixels": 46,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            }
+          ],
+          "unused_sheet_cells": [
+            {
+              "index": 11,
+              "transparent": true
+            }
+          ],
+          "omitted_authored_frames": [
+            {
+              "index": 11,
+              "transparent": true
+            }
+          ]
+        },
+        {
+          "name": "part-laco",
+          "sheet": "part-laco.png",
+          "sheet_pixels": [
+            96,
+            45
+          ],
+          "frame_pixels": [
+            24,
+            15
+          ],
+          "frames": 11,
+          "fps": 16,
+          "loop": false,
+          "offset": {
+            "x": -12,
+            "y": -8
+          },
+          "crop_on_authored_canvas": [
+            4,
+            6,
+            28,
+            21
+          ],
+          "nontransparent_pixels_range": [
+            46,
+            158
+          ],
+          "frames_compared": [
+            {
+              "packed_frame": 0,
+              "authored_frame": 0,
+              "alpha_bbox": [
+                0,
+                0,
+                24,
+                15
+              ],
+              "nontransparent_pixels": 113,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 1,
+              "authored_frame": 1,
+              "alpha_bbox": [
+                1,
+                0,
+                23,
+                14
+              ],
+              "nontransparent_pixels": 121,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 2,
+              "authored_frame": 2,
+              "alpha_bbox": [
+                2,
+                0,
+                24,
+                15
+              ],
+              "nontransparent_pixels": 158,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 3,
+              "authored_frame": 3,
+              "alpha_bbox": [
+                2,
+                1,
+                23,
+                15
+              ],
+              "nontransparent_pixels": 146,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 4,
+              "authored_frame": 4,
+              "alpha_bbox": [
+                2,
+                1,
+                23,
+                15
+              ],
+              "nontransparent_pixels": 146,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 5,
+              "authored_frame": 5,
+              "alpha_bbox": [
+                2,
+                1,
+                23,
+                15
+              ],
+              "nontransparent_pixels": 146,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 6,
+              "authored_frame": 6,
+              "alpha_bbox": [
+                2,
+                1,
+                23,
+                15
+              ],
+              "nontransparent_pixels": 146,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 7,
+              "authored_frame": 7,
+              "alpha_bbox": [
+                2,
+                1,
+                23,
+                15
+              ],
+              "nontransparent_pixels": 146,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 8,
+              "authored_frame": 8,
+              "alpha_bbox": [
+                2,
+                1,
+                24,
+                15
+              ],
+              "nontransparent_pixels": 153,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 9,
+              "authored_frame": 9,
+              "alpha_bbox": [
+                2,
+                1,
+                23,
+                14
+              ],
+              "nontransparent_pixels": 55,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            },
+            {
+              "packed_frame": 10,
+              "authored_frame": 10,
+              "alpha_bbox": [
+                1,
+                0,
+                24,
+                14
+              ],
+              "nontransparent_pixels": 46,
+              "rgba_crop_exact": true,
+              "all_visible_original_pixels_retained": true,
+              "alpha_values": [
+                0,
+                255
+              ]
+            }
+          ],
+          "unused_sheet_cells": [
+            {
+              "index": 11,
+              "transparent": true
+            }
+          ],
+          "omitted_authored_frames": [
+            {
+              "index": 11,
+              "transparent": true
+            }
+          ]
+        }
+      ],
+      "gif": {
+        "encoded_frames": 8,
+        "durations_ms": [
+          60,
+          60,
+          60,
+          310,
+          60,
+          60,
+          60,
+          60
+        ],
+        "total_ms": 730,
+        "authoritative_for_game_timing": false
+      }
+    }
+  ],
+  "checks": [
+    {
+      "category": "zip_crc",
+      "case": "fumaca_01",
+      "passed": true,
+      "details": {
+        "bad_member": null
+      }
+    },
+    {
+      "category": "zip_unique_members",
+      "case": "fumaca_01",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "zip_safe_path",
+      "case": "fumaca_01/whole.png",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "zip_extracted_bytes",
+      "case": "fumaca_01/whole.png",
+      "passed": true,
+      "details": {
+        "bytes": 1315
+      }
+    },
+    {
+      "category": "zip_safe_path",
+      "case": "fumaca_01/part-fumaca.png",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "zip_extracted_bytes",
+      "case": "fumaca_01/part-fumaca.png",
+      "passed": true,
+      "details": {
+        "bytes": 1315
+      }
+    },
+    {
+      "category": "zip_safe_path",
+      "case": "fumaca_01/manifest.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "zip_extracted_bytes",
+      "case": "fumaca_01/manifest.json",
+      "passed": true,
+      "details": {
+        "bytes": 1035
+      }
+    },
+    {
+      "category": "zip_safe_path",
+      "case": "fumaca_01/README.txt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "zip_extracted_bytes",
+      "case": "fumaca_01/README.txt",
+      "passed": true,
+      "details": {
+        "bytes": 942
+      }
+    },
+    {
+      "category": "receipt_file_hash_and_bytes",
+      "case": "fumaca_01/clash-of-eras-fumaca01-game.zip",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "receipt_file_hash_and_bytes",
+      "case": "fumaca_01/clash-of-eras-fumaca01.gif",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "receipt_file_hash_and_bytes",
+      "case": "fumaca_01/clash-of-eras-fumaca01.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "receipt_file_hash_and_bytes",
+      "case": "fumaca_01/clash-of-eras-fumaca01.png",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "receipt_file_hash_and_bytes",
+      "case": "fumaca_01/original/manifest.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "receipt_file_hash_and_bytes",
+      "case": "fumaca_01/original/part-fumaca.png",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "receipt_file_hash_and_bytes",
+      "case": "fumaca_01/original/README.txt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "receipt_file_hash_and_bytes",
+      "case": "fumaca_01/original/whole.png",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "atlas_dimensions",
+      "case": "fumaca_01",
+      "passed": true,
+      "details": {
+        "actual": [
+          148,
+          64
+        ]
+      }
+    },
+    {
+      "category": "atlas_count",
+      "case": "fumaca_01",
+      "passed": true,
+      "details": {
+        "authored_frames": 16,
+        "manifest_frames": 16
+      }
+    },
+    {
+      "category": "no_character_clip",
+      "case": "fumaca_01",
+      "passed": true,
+      "details": {
+        "clips": [
+          "whole",
+          "part-fumaca"
+        ]
+      }
+    },
+    {
+      "category": "authored_frame_inside_atlas",
+      "case": "fumaca_01/0",
+      "passed": true,
+      "details": {
+        "rect": [
+          0,
+          0,
+          37,
+          16
+        ]
+      }
+    },
+    {
+      "category": "authored_frame_inside_atlas",
+      "case": "fumaca_01/1",
+      "passed": true,
+      "details": {
+        "rect": [
+          37,
+          0,
+          74,
+          16
+        ]
+      }
+    },
+    {
+      "category": "authored_frame_inside_atlas",
+      "case": "fumaca_01/2",
+      "passed": true,
+      "details": {
+        "rect": [
+          74,
+          0,
+          111,
+          16
+        ]
+      }
+    },
+    {
+      "category": "authored_frame_inside_atlas",
+      "case": "fumaca_01/3",
+      "passed": true,
+      "details": {
+        "rect": [
+          111,
+          0,
+          148,
+          16
+        ]
+      }
+    },
+    {
+      "category": "authored_frame_inside_atlas",
+      "case": "fumaca_01/4",
+      "passed": true,
+      "details": {
+        "rect": [
+          0,
+          16,
+          37,
+          32
+        ]
+      }
+    },
+    {
+      "category": "authored_frame_inside_atlas",
+      "case": "fumaca_01/5",
+      "passed": true,
+      "details": {
+        "rect": [
+          37,
+          16,
+          74,
+          32
+        ]
+      }
+    },
+    {
+      "category": "authored_frame_inside_atlas",
+      "case": "fumaca_01/6",
+      "passed": true,
+      "details": {
+        "rect": [
+          74,
+          16,
+          111,
+          32
+        ]
+      }
+    },
+    {
+      "category": "authored_frame_inside_atlas",
+      "case": "fumaca_01/7",
+      "passed": true,
+      "details": {
+        "rect": [
+          111,
+          16,
+          148,
+          32
+        ]
+      }
+    },
+    {
+      "category": "authored_frame_inside_atlas",
+      "case": "fumaca_01/8",
+      "passed": true,
+      "details": {
+        "rect": [
+          0,
+          32,
+          37,
+          48
+        ]
+      }
+    },
+    {
+      "category": "authored_frame_inside_atlas",
+      "case": "fumaca_01/9",
+      "passed": true,
+      "details": {
+        "rect": [
+          37,
+          32,
+          74,
+          48
+        ]
+      }
+    },
+    {
+      "category": "authored_frame_inside_atlas",
+      "case": "fumaca_01/10",
+      "passed": true,
+      "details": {
+        "rect": [
+          74,
+          32,
+          111,
+          48
+        ]
+      }
+    },
+    {
+      "category": "authored_frame_inside_atlas",
+      "case": "fumaca_01/11",
+      "passed": true,
+      "details": {
+        "rect": [
+          111,
+          32,
+          148,
+          48
+        ]
+      }
+    },
+    {
+      "category": "authored_frame_inside_atlas",
+      "case": "fumaca_01/12",
+      "passed": true,
+      "details": {
+        "rect": [
+          0,
+          48,
+          37,
+          64
+        ]
+      }
+    },
+    {
+      "category": "authored_frame_inside_atlas",
+      "case": "fumaca_01/13",
+      "passed": true,
+      "details": {
+        "rect": [
+          37,
+          48,
+          74,
+          64
+        ]
+      }
+    },
+    {
+      "category": "authored_frame_inside_atlas",
+      "case": "fumaca_01/14",
+      "passed": true,
+      "details": {
+        "rect": [
+          74,
+          48,
+          111,
+          64
+        ]
+      }
+    },
+    {
+      "category": "authored_frame_inside_atlas",
+      "case": "fumaca_01/15",
+      "passed": true,
+      "details": {
+        "rect": [
+          111,
+          48,
+          148,
+          64
+        ]
+      }
+    },
+    {
+      "category": "single_sheet_contract",
+      "case": "fumaca_01/whole",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "sheet_dimensions",
+      "case": "fumaca_01/whole",
+      "passed": true,
+      "details": {
+        "actual": [
+          116,
+          28
+        ],
+        "frame": [
+          29,
+          7
+        ],
+        "columns": 4,
+        "rows": 4
+      }
+    },
+    {
+      "category": "clip_frame_count_capacity",
+      "case": "fumaca_01/whole",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/whole/0",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/whole/0",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/whole/1",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/whole/1",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/whole/2",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/whole/2",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/whole/3",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/whole/3",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/whole/4",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/whole/4",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/whole/5",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/whole/5",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/whole/6",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/whole/6",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/whole/7",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/whole/7",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/whole/8",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/whole/8",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/whole/9",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/whole/9",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/whole/10",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/whole/10",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/whole/11",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/whole/11",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/whole/12",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/whole/12",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/whole/13",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/whole/13",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/whole/14",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/whole/14",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/whole/15",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/whole/15",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "single_sheet_contract",
+      "case": "fumaca_01/part-fumaca",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "sheet_dimensions",
+      "case": "fumaca_01/part-fumaca",
+      "passed": true,
+      "details": {
+        "actual": [
+          116,
+          28
+        ],
+        "frame": [
+          29,
+          7
+        ],
+        "columns": 4,
+        "rows": 4
+      }
+    },
+    {
+      "category": "clip_frame_count_capacity",
+      "case": "fumaca_01/part-fumaca",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/part-fumaca/0",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/part-fumaca/0",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/part-fumaca/1",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/part-fumaca/1",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/part-fumaca/2",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/part-fumaca/2",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/part-fumaca/3",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/part-fumaca/3",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/part-fumaca/4",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/part-fumaca/4",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/part-fumaca/5",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/part-fumaca/5",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/part-fumaca/6",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/part-fumaca/6",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/part-fumaca/7",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/part-fumaca/7",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/part-fumaca/8",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/part-fumaca/8",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/part-fumaca/9",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/part-fumaca/9",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/part-fumaca/10",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/part-fumaca/10",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/part-fumaca/11",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/part-fumaca/11",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/part-fumaca/12",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/part-fumaca/12",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/part-fumaca/13",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/part-fumaca/13",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/part-fumaca/14",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/part-fumaca/14",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "fumaca_01/part-fumaca/15",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "fumaca_01/part-fumaca/15",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "receipt_playback_metadata",
+      "case": "fumaca_01",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "zip_crc",
+      "case": "laco_01",
+      "passed": true,
+      "details": {
+        "bad_member": null
+      }
+    },
+    {
+      "category": "zip_unique_members",
+      "case": "laco_01",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "zip_safe_path",
+      "case": "laco_01/whole.png",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "zip_extracted_bytes",
+      "case": "laco_01/whole.png",
+      "passed": true,
+      "details": {
+        "bytes": 963
+      }
+    },
+    {
+      "category": "zip_safe_path",
+      "case": "laco_01/part-laco.png",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "zip_extracted_bytes",
+      "case": "laco_01/part-laco.png",
+      "passed": true,
+      "details": {
+        "bytes": 963
+      }
+    },
+    {
+      "category": "zip_safe_path",
+      "case": "laco_01/manifest.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "zip_extracted_bytes",
+      "case": "laco_01/manifest.json",
+      "passed": true,
+      "details": {
+        "bytes": 983
+      }
+    },
+    {
+      "category": "zip_safe_path",
+      "case": "laco_01/README.txt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "zip_extracted_bytes",
+      "case": "laco_01/README.txt",
+      "passed": true,
+      "details": {
+        "bytes": 942
+      }
+    },
+    {
+      "category": "receipt_file_hash_and_bytes",
+      "case": "laco_01/original/clash-of-eras-laco01-game.zip",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "receipt_file_hash_and_bytes",
+      "case": "laco_01/original/clash-of-eras-laco01.gif",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "receipt_file_hash_and_bytes",
+      "case": "laco_01/original/clash-of-eras-laco01.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "receipt_file_hash_and_bytes",
+      "case": "laco_01/original/clash-of-eras-laco01.png",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "receipt_file_hash_and_bytes",
+      "case": "laco_01/game_pack/whole.png",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "receipt_file_hash_and_bytes",
+      "case": "laco_01/game_pack/part-laco.png",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "receipt_file_hash_and_bytes",
+      "case": "laco_01/game_pack/manifest.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "receipt_file_hash_and_bytes",
+      "case": "laco_01/game_pack/README.txt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "atlas_dimensions",
+      "case": "laco_01",
+      "passed": true,
+      "details": {
+        "actual": [
+          128,
+          84
+        ]
+      }
+    },
+    {
+      "category": "atlas_count",
+      "case": "laco_01",
+      "passed": true,
+      "details": {
+        "authored_frames": 12,
+        "manifest_frames": 12
+      }
+    },
+    {
+      "category": "no_character_clip",
+      "case": "laco_01",
+      "passed": true,
+      "details": {
+        "clips": [
+          "whole",
+          "part-laco"
+        ]
+      }
+    },
+    {
+      "category": "authored_frame_inside_atlas",
+      "case": "laco_01/0",
+      "passed": true,
+      "details": {
+        "rect": [
+          0,
+          0,
+          32,
+          28
+        ]
+      }
+    },
+    {
+      "category": "authored_frame_inside_atlas",
+      "case": "laco_01/1",
+      "passed": true,
+      "details": {
+        "rect": [
+          32,
+          0,
+          64,
+          28
+        ]
+      }
+    },
+    {
+      "category": "authored_frame_inside_atlas",
+      "case": "laco_01/2",
+      "passed": true,
+      "details": {
+        "rect": [
+          64,
+          0,
+          96,
+          28
+        ]
+      }
+    },
+    {
+      "category": "authored_frame_inside_atlas",
+      "case": "laco_01/3",
+      "passed": true,
+      "details": {
+        "rect": [
+          96,
+          0,
+          128,
+          28
+        ]
+      }
+    },
+    {
+      "category": "authored_frame_inside_atlas",
+      "case": "laco_01/4",
+      "passed": true,
+      "details": {
+        "rect": [
+          0,
+          28,
+          32,
+          56
+        ]
+      }
+    },
+    {
+      "category": "authored_frame_inside_atlas",
+      "case": "laco_01/5",
+      "passed": true,
+      "details": {
+        "rect": [
+          32,
+          28,
+          64,
+          56
+        ]
+      }
+    },
+    {
+      "category": "authored_frame_inside_atlas",
+      "case": "laco_01/6",
+      "passed": true,
+      "details": {
+        "rect": [
+          64,
+          28,
+          96,
+          56
+        ]
+      }
+    },
+    {
+      "category": "authored_frame_inside_atlas",
+      "case": "laco_01/7",
+      "passed": true,
+      "details": {
+        "rect": [
+          96,
+          28,
+          128,
+          56
+        ]
+      }
+    },
+    {
+      "category": "authored_frame_inside_atlas",
+      "case": "laco_01/8",
+      "passed": true,
+      "details": {
+        "rect": [
+          0,
+          56,
+          32,
+          84
+        ]
+      }
+    },
+    {
+      "category": "authored_frame_inside_atlas",
+      "case": "laco_01/9",
+      "passed": true,
+      "details": {
+        "rect": [
+          32,
+          56,
+          64,
+          84
+        ]
+      }
+    },
+    {
+      "category": "authored_frame_inside_atlas",
+      "case": "laco_01/10",
+      "passed": true,
+      "details": {
+        "rect": [
+          64,
+          56,
+          96,
+          84
+        ]
+      }
+    },
+    {
+      "category": "authored_frame_inside_atlas",
+      "case": "laco_01/11",
+      "passed": true,
+      "details": {
+        "rect": [
+          96,
+          56,
+          128,
+          84
+        ]
+      }
+    },
+    {
+      "category": "single_sheet_contract",
+      "case": "laco_01/whole",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "sheet_dimensions",
+      "case": "laco_01/whole",
+      "passed": true,
+      "details": {
+        "actual": [
+          96,
+          45
+        ],
+        "frame": [
+          24,
+          15
+        ],
+        "columns": 4,
+        "rows": 3
+      }
+    },
+    {
+      "category": "clip_frame_count_capacity",
+      "case": "laco_01/whole",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "laco_01/whole/0",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "laco_01/whole/0",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "laco_01/whole/1",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "laco_01/whole/1",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "laco_01/whole/2",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "laco_01/whole/2",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "laco_01/whole/3",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "laco_01/whole/3",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "laco_01/whole/4",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "laco_01/whole/4",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "laco_01/whole/5",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "laco_01/whole/5",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "laco_01/whole/6",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "laco_01/whole/6",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "laco_01/whole/7",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "laco_01/whole/7",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "laco_01/whole/8",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "laco_01/whole/8",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "laco_01/whole/9",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "laco_01/whole/9",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "laco_01/whole/10",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "laco_01/whole/10",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "unused_sheet_cell_transparent",
+      "case": "laco_01/whole/11",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "omitted_authored_frame_transparent",
+      "case": "laco_01/whole/11",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "single_sheet_contract",
+      "case": "laco_01/part-laco",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "sheet_dimensions",
+      "case": "laco_01/part-laco",
+      "passed": true,
+      "details": {
+        "actual": [
+          96,
+          45
+        ],
+        "frame": [
+          24,
+          15
+        ],
+        "columns": 4,
+        "rows": 3
+      }
+    },
+    {
+      "category": "clip_frame_count_capacity",
+      "case": "laco_01/part-laco",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "laco_01/part-laco/0",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "laco_01/part-laco/0",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "laco_01/part-laco/1",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "laco_01/part-laco/1",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "laco_01/part-laco/2",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "laco_01/part-laco/2",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "laco_01/part-laco/3",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "laco_01/part-laco/3",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "laco_01/part-laco/4",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "laco_01/part-laco/4",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "laco_01/part-laco/5",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "laco_01/part-laco/5",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "laco_01/part-laco/6",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "laco_01/part-laco/6",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "laco_01/part-laco/7",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "laco_01/part-laco/7",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "laco_01/part-laco/8",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "laco_01/part-laco/8",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "laco_01/part-laco/9",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "laco_01/part-laco/9",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "packed_frame_rgba_exact_crop",
+      "case": "laco_01/part-laco/10",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "crop_retains_all_visible_pixels",
+      "case": "laco_01/part-laco/10",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "unused_sheet_cell_transparent",
+      "case": "laco_01/part-laco/11",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "omitted_authored_frame_transparent",
+      "case": "laco_01/part-laco/11",
+      "passed": true,
+      "details": null
+    },
+    {
+      "category": "receipt_playback_metadata",
+      "case": "laco_01",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "counts": {
+    "passed": 196,
+    "failed": 0,
+    "total": 196,
+    "by_category": {
+      "atlas_count": {
+        "passed": 2,
+        "failed": 0
+      },
+      "atlas_dimensions": {
+        "passed": 2,
+        "failed": 0
+      },
+      "authored_frame_inside_atlas": {
+        "passed": 28,
+        "failed": 0
+      },
+      "clip_frame_count_capacity": {
+        "passed": 4,
+        "failed": 0
+      },
+      "crop_retains_all_visible_pixels": {
+        "passed": 54,
+        "failed": 0
+      },
+      "no_character_clip": {
+        "passed": 2,
+        "failed": 0
+      },
+      "omitted_authored_frame_transparent": {
+        "passed": 2,
+        "failed": 0
+      },
+      "packed_frame_rgba_exact_crop": {
+        "passed": 54,
+        "failed": 0
+      },
+      "receipt_file_hash_and_bytes": {
+        "passed": 16,
+        "failed": 0
+      },
+      "receipt_playback_metadata": {
+        "passed": 2,
+        "failed": 0
+      },
+      "sheet_dimensions": {
+        "passed": 4,
+        "failed": 0
+      },
+      "single_sheet_contract": {
+        "passed": 4,
+        "failed": 0
+      },
+      "unused_sheet_cell_transparent": {
+        "passed": 2,
+        "failed": 0
+      },
+      "zip_crc": {
+        "passed": 2,
+        "failed": 0
+      },
+      "zip_extracted_bytes": {
+        "passed": 8,
+        "failed": 0
+      },
+      "zip_safe_path": {
+        "passed": 8,
+        "failed": 0
+      },
+      "zip_unique_members": {
+        "passed": 2,
+        "failed": 0
+      }
+    }
+  },
+  "limitations": [
+    "Smoke actual trimmed clip29x7 versus working canvas37x16. Alpha is binary0/255 with transparent holes; partial opacity is a presentation choice.",
+    "Lasso has12 authored frames but packed clips11; omitted frame11 (zero-based) is transparent, as is the unused sheet cell.",
+    "Lasso GIF holds repeated frames and stores8 frames; PNG/game-pack metadata is authoritative.",
+    "Only exported assets and metadata audited; no runtime rendering, gameplay, network, or final user approval inferred."
+  ],
+  "files_written_only": [
+    "assets/vfx/INTEGRIDADE_V1_4.json"
+  ]
+}

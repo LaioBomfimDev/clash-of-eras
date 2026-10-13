@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-12",
+  "method": "PixelLab vfx_workbench (editor deterministico gratuito); nenhuma geracao por IA",
+  "ai_generation_calls": 0,
+  "name": "Clash of Eras - Estilhaco vizinhos Elon 01",
+  "effect_id": "38155355-4da8-46af-9b1d-8e09482af254",
+  "step_id": "765c036b-9181-45fc-86e4-24de82e1d4cb",
+  "export_image_id": "7cdc5d7c-e117-43ad-80b2-652546a03a8e",
+  "effect_url": "https://pixellab.ai/create-vfx?effect=38155355-4da8-46af-9b1d-8e09482af254",
+  "download_base": "https://api.pixellab.ai/mcp/pixel-tools/7cdc5d7c-e117-43ad-80b2-652546a03a8e/",
+  "uso": "Acerto da explosao em cada inimigo vizinho (evento splash); origem nos pes da unidade.",
+  "fps": 18,
+  "loop": false,
+  "canvas": {
+    "w": 76,
+    "h": 84
+  },
+  "anchor": {
+    "kind": "origin",
+    "x": 38,
+    "y": 64
+  },
+  "clip": "whole",
+  "clip_frames": 10,
+  "frame": {
+    "w": 65,
+    "h": 67
+  },
+  "offset": {
+    "x": -33,
+    "y": -52
+  },
+  "zip_entries": [
+    "README.txt",
+    "manifest.json",
+    "whole.png"
+  ],
+  "extracted_identical_to_zip": true,
+  "sha256": {
+    "clash-of-eras-estilhaco-vizinhos-elon-01-game.zip": "EC6D55B59DE4608DE28DB1377BF36591E751B47924A4AD9658045059CE28A6CF",
+    "clash-of-eras-estilhaco-vizinhos-elon-01.gif": "935526E2681E94CE28D47D6254442F4F50CDE8B0EFAA188A83580B28BA032544",
+    "clash-of-eras-estilhaco-vizinhos-elon-01.json": "4E66745F0A0A7853750E7FBAD1D4EBE495D9ACE8A9E1610A20D16D5F80E5AC4C",
+    "clash-of-eras-estilhaco-vizinhos-elon-01.png": "429F44E52EE77061F2791BCE4F433F8A53D56D211DEA4D24DAC739BE03B855AC"
+  },
+  "character_embedded": false
+}

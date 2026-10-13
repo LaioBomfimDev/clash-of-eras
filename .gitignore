@@ -1,0 +1,12 @@
+# Godot cache e binários pesados de compilação
+.godot/
+*.tmp
+*.zip
+RelicArena/build/
+RelicArena/.godot/
+captures/
+APKs/*.apk
+APKs/*.idsig
+
+# Mantém a pasta dist/ para deploy estático na Vercel
+!dist/

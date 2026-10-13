@@ -1,0 +1,179 @@
+diff -ru a/client/main.gd b/client/main.gd
+--- a/client/main.gd	2026-10-12 13:15:51.264599900 -0300
++++ b/client/main.gd	2026-10-12 13:15:51.373586300 -0300
+@@ -1350,15 +1350,19 @@
+ 	elif kind == "assassin_hunt":
+ 		effect_kind = "hunt"
+ 		duration = 0.6
+-	elif kind == "rocket_hit" and vfx.has_effect("foguete_01") and not target.is_empty():
++	elif kind == "rocket_hit" and (vfx.has_effect("explosao_02") or vfx.has_effect("foguete_01")) and not target.is_empty():
+ 		effect_kind = "explosion"
+-		library_key = "foguete_01"
+-	elif kind == "explosion" and not vfx.has_effect("foguete_01"):
++		library_key = "explosao_02" if vfx.has_effect("explosao_02") else "foguete_01"
++		if library_key == "explosao_02":
++			# A explosão nova nasce no chão do alvo e acompanha a perspectiva da área real.
++			target_point = Board.project(_ground_of(target))
++			scale = Board.scale_at(_ground_of(target).y)
++	elif kind == "explosion" and not vfx.has_effect("foguete_01") and not vfx.has_effect("explosao_02"):
+ 		effect_kind = "explosion"
+ 		duration = 0.48
+ 		if event.has("cell"):
+ 			target_point = Board.project(Board.ground(_cell(event["cell"])))
+-	elif kind == "smoke_cloud" and not vfx.has_effect("fumaca_01"):
++	elif kind == "smoke_cloud" and not vfx.has_effect("fumaca_01") and not vfx.has_effect("fumaca_02"):
+ 		effect_kind = "smoke_cloud"
+ 		duration = 0.9
+ 		if event.has("cell"):
+@@ -1389,7 +1393,7 @@
+ 	else:
+ 		library_key = ""
+ 	var destination: Vector2 = Board.project(Board.ground(_cell(event.get("to", [])))) + Vector2(0, -21) if kind == "lasso" else target_point
+-	kit_effects.append({"kind": effect_kind, "source_id": int(source.get("id", -1)), "target_id": int(target.get("id", -1)), "from": source_point, "position": target_point, "destination": destination, "life": duration, "duration": duration, "critical": bool(event.get("critical", false)) or kind == "execute", "library_key": library_key, "angle": angle, "scale": scale, "depth": "behind" if library_key == "foguete_01" else "front", "native_knot": kind == "lasso" and vfx.has_effect("laco_01")})
++	kit_effects.append({"kind": effect_kind, "source_id": int(source.get("id", -1)), "target_id": int(target.get("id", -1)), "from": source_point, "position": target_point, "destination": destination, "life": duration, "duration": duration, "critical": bool(event.get("critical", false)) or kind == "execute", "library_key": library_key, "angle": angle, "scale": scale, "depth": "behind" if library_key in ["foguete_01", "explosao_02"] else "front", "native_knot": kind == "lasso" and vfx.has_effect("laco_01")})
+ 	while kit_effects.size() > 40:
+ 		kit_effects.pop_front()
+ 
+@@ -1449,11 +1453,16 @@
+ 	if _phase() != "combat" or float(zone.get("remaining", 0)) <= 0.0:
+ 		return {}
+ 	var elapsed: float = maxf(0.0, float(zone.get("duration", 0)) - float(zone.get("remaining", 0)))
+-	var data: Dictionary = vfx.frame_data("fumaca_01", elapsed)
++	var key: String = "fumaca_02" if vfx.has_effect("fumaca_02") else "fumaca_01"
++	var data: Dictionary = vfx.frame_data(key, elapsed)
+ 	if not data.is_empty():
+-		data["position"] = Board.project(Board.ground(_cell(zone.get("cell", [])))).round()
++		var cell: Vector2i = _cell(zone.get("cell", []))
++		data["position"] = Board.project(Board.ground(cell)).round()
+ 		data["angle"] = 0.0
+-		data["scale"] = 2.0
++		# A nuvem nova já cobre os sete hexágonos do raio 1; a névoa antiga era ampliada 2×.
++		data["scale"] = Board.cell_scale(cell) if key == "fumaca_02" else 2.0
++		if key == "fumaca_02":
++			data["modulate"] = Color(1, 1, 1, 0.85)
+ 		data["zone_id"] = int(zone.get("id", -1))
+ 		data["source_id"] = int(zone.get("source_id", -1))
+ 		data["remaining"] = float(zone.get("remaining", 0))
+@@ -1474,10 +1483,20 @@
+ 		return
+ 	var scale: float = float(data.get("scale", 1.0))
+ 	canvas.draw_set_transform(data["position"], float(data.get("angle", 0.0)), Vector2(scale, scale))
+-	canvas.draw_texture_rect_region(data["texture"], Rect2(data["offset"], data["size"]), data["region"])
++	canvas.draw_texture_rect_region(data["texture"], Rect2(data["offset"], data["size"]), data["region"], data.get("modulate", Color.WHITE))
+ 	canvas.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+ 
+ 
++## Projéteis do pacote: loop pelo relógio visual, girado na direção do voo (base +x).
++func _projectile_vfx_data(key: String, point: Vector2, angle: float) -> Dictionary:
++	var data: Dictionary = vfx.frame_data(key, visual_time)
++	if not data.is_empty():
++		data["position"] = point.round()
++		data["angle"] = angle
++		data["scale"] = 1.0
++	return data
++
++
+ func _draw_library_feedback(canvas: Node2D, depth: String) -> void:
+ 	for effect: Dictionary in kit_effects:
+ 		if str(effect.get("depth", "front")) == depth:
+@@ -1936,7 +1955,11 @@
+ 		var flight_pos: Vector2 = Board.project(p_ground) + Vector2(0, -18 - sin(progress * PI) * (18 if kind == "rocket" else 24))
+ 		var flight_dir: Vector2 = (Board.project(p_to) - Board.project(p_from)).normalized()
+ 		var rot_angle: float = flight_dir.angle() if flight_dir.length_squared() > 0.01 else progress * TAU * 1.5
+-		if kind == "rocket":
++		if kind == "rocket" and vfx.has_effect("foguete_02"):
++			_draw_vfx_frame(units_layer, _projectile_vfx_data("foguete_02", flight_pos, rot_angle))
++		elif kind == "smoke" and vfx.has_effect("anel_fumaca_01"):
++			_draw_vfx_frame(units_layer, _projectile_vfx_data("anel_fumaca_01", flight_pos, rot_angle))
++		elif kind == "rocket":
+ 			units_layer.draw_set_transform(flight_pos, rot_angle, Vector2(1.0, 1.0))
+ 			units_layer.draw_polygon(PackedVector2Array([Vector2(-9, -3), Vector2(4, -3), Vector2(9, 0), Vector2(4, 3), Vector2(-9, 3)]),
+ 				PackedColorArray([Color("e0e0ea"), Color("e0e0ea"), Color("e84034"), Color("e0e0ea"), Color("e0e0ea")]))
+diff -ru a/client/smoke.gd b/client/smoke.gd
+--- a/client/smoke.gd	2026-10-12 13:15:51.299410600 -0300
++++ b/client/smoke.gd	2026-10-12 13:15:51.415974000 -0300
+@@ -196,7 +196,7 @@
+ 
+ 
+ func _check_vfx_contracts(view: MainView) -> void:
+-	for key: String in ["escudo_danca_01", "cura_01", "estocada_01", "foguete_01", "fumaca_01", "laco_01"]:
++	for key: String in ["escudo_danca_01", "cura_01", "estocada_01", "foguete_01", "fumaca_01", "laco_01", "explosao_02", "foguete_02", "fumaca_02", "anel_fumaca_01"]:
+ 		_check(view.vfx.has_effect(key), "pacote PixelLab disponível no cliente: " + key)
+ 	_check(view.overlay_layer.texture_filter == CanvasItem.TEXTURE_FILTER_NEAREST, "efeitos frontais usam filtro nearest")
+ 	var source: Dictionary = view._unit_by_id(1).duplicate(true)
+@@ -228,7 +228,10 @@
+ 	for kind: String in ["rocket_hit", "explosion", "splash"]:
+ 		view._spawn_kit_feedback({"type": kind, "cell": [3, 3], "amount": 10}, source, target)
+ 	if _check(view.kit_effects.size() == 1, "impacto, área e splash produzem somente uma explosão"):
+-		_check(view.kit_effects[0].get("library_key", "") == "foguete_01" and view.kit_effects[0].get("depth", "") == "behind", "explosão nativa fica antes dos corpos")
++		var blast: Dictionary = view.kit_effects[0]
++		_check(blast.get("library_key", "") == "explosao_02" and blast.get("depth", "") == "behind", "explosão nova fica antes dos corpos")
++		_check(blast["position"] == Board.project(view._ground_of(target)) and is_equal_approx(float(blast["scale"]), Board.scale_at(view._ground_of(target).y)), "explosão nova nasce no chão do alvo com a perspectiva da célula")
++		_check(is_equal_approx(float(blast["duration"]), 14.0 / 18.0), "explosão nova usa os 14 quadros e o tempo nativos")
+ 	_check(JSON.stringify(view.session.sim.snapshot()) == before, "efeitos não alteram o estado da simulação")
+ 	view._update_visuals(2.0)
+ 	_check(view.kit_effects.is_empty(), "clips one-shot são descartados após duração")
+@@ -277,8 +280,13 @@
+ 	view.state["combat"] = {"units": [source, target], "zones": [zone]}
+ 	var cloud: Dictionary = view._smoke_vfx_data(zone)
+ 	if _check(not cloud.is_empty(), "zona revelada produz um clip de fumaça"):
+-		_check(cloud["position"] == Board.cell_position(Vector2i(3, 3)).round() and float(cloud["scale"]) == 2.0, "névoa baixa fica a2× no centro da área real")
+-		_check(cloud["frame_index"] == view.vfx.frame_data("fumaca_01", 1.0)["frame_index"], "relógio da fumaça usa duration menos remaining")
++		_check(cloud["position"] == Board.cell_position(Vector2i(3, 3)).round() and is_equal_approx(float(cloud["scale"]), Board.cell_scale(Vector2i(3, 3))), "nuvem nova fica no centro da área real com a perspectiva da célula")
++		_check(cloud["frame_index"] == view.vfx.frame_data("fumaca_02", 1.0)["frame_index"], "relógio da fumaça usa duration menos remaining")
++		_check(cloud.get("modulate", Color.WHITE).a < 1.0, "nuvem nova deixa a grade da área aparecer por baixo")
++	var rocket_frame: Dictionary = view._projectile_vfx_data("foguete_02", Vector2(100.4, 50.6), 0.5)
++	_check(not rocket_frame.is_empty() and rocket_frame["position"] == Vector2(100, 51) and is_equal_approx(float(rocket_frame["angle"]), 0.5) and rocket_frame["offset"] == Vector2(-58, -5), "foguete em voo usa o clip nativo girado na direção do alvo")
++	var ring_frame: Dictionary = view._projectile_vfx_data("anel_fumaca_01", Vector2(10, 10), -1.0)
++	_check(not ring_frame.is_empty() and ring_frame["offset"] == Vector2(-38, -15), "tiro do Snoop usa o anel de fumaça nativo")
+ 	zone["remaining"] = 1.0
+ 	_check(not view._smoke_vfx_data(zone).is_empty(), "fumaça continua após vários ciclos do clip nativo")
+ 	source["alive"] = false
+@@ -419,7 +427,7 @@
+ 				seen[kind] = true
+ 		seen["zone"] = bool(seen["zone"]) or not view.state.get("combat", {}).get("zones", []).is_empty()
+ 		seen["lasso"] = bool(seen["lasso"]) or view.kit_effects.any(func(effect: Dictionary) -> bool: return effect.get("kind", "") == "lasso")
+-		seen["native_rocket"] = bool(seen["native_rocket"]) or view.kit_effects.any(func(effect: Dictionary) -> bool: return effect.get("library_key", "") == "foguete_01")
++		seen["native_rocket"] = bool(seen["native_rocket"]) or view.kit_effects.any(func(effect: Dictionary) -> bool: return effect.get("library_key", "") == "explosao_02")
+ 		var smoke_frames: Array[Dictionary] = view._smoke_vfx_frames()
+ 		seen["native_smoke"] = bool(seen["native_smoke"]) or not smoke_frames.is_empty()
+ 		zones_match = zones_match and smoke_frames.size() == (view.state.get("combat", {}).get("zones", []) as Array).size()
+diff -ru a/tools/capture_preview.gd b/tools/capture_preview.gd
+--- a/tools/capture_preview.gd	2026-10-12 13:15:51.340379300 -0300
++++ b/tools/capture_preview.gd	2026-10-12 13:15:51.451308900 -0300
+@@ -78,6 +78,11 @@
+ 					## Com --ball, para no primeiro quadro em que uma bola está no ar.
+ 					if "--ball" in args and index > 20 and not view.state.get("combat", {}).get("projectiles", []).is_empty():
+ 						break
++					## Com --flight, para quando um foguete e um anel de fumaça estão no ar ao mesmo tempo.
++					if "--flight" in args and index > 20:
++						var flying: Array = view.state.get("combat", {}).get("projectiles", []).map(func(p: Dictionary) -> String: return str(p.get("kind", "")))
++						if "rocket" in flying and "smoke" in flying:
++							break
+ 					if "--vfx" in args and "--result" not in args:
+ 						var keys: Dictionary = {}
+ 						var rocket_peak: bool = false
+@@ -88,11 +93,13 @@
+ 								keys[key] = true
+ 								if key == "foguete_01" and int(effect_data["frame_index"]) in [5, 6, 7]:
+ 									rocket_peak = true
++								if key == "explosao_02" and int(effect_data["frame_index"]) in [4, 5, 6, 7]:
++									rocket_peak = true
+ 						var shield_count: int = 0
+ 						for unit: Dictionary in view.state.get("combat", {}).get("units", []):
+ 							if not view.call("_dance_vfx_data", unit).is_empty():
+ 								shield_count += 1
+-						if keys.size() >= 2 and shield_count > 0 and ("--rocket" not in args or rocket_peak):
++						if keys.size() >= 2 and shield_count > 0 and ("--rocket" not in args or rocket_peak) and "--flight" not in args:
+ 							break
+ 					if "--support-vfx" in args and "--result" not in args:
+ 						var knot_visible: bool = false
+@@ -114,6 +121,8 @@
+ 					mode = "vfx_" + ("resultado" if "--result" in args else "combate")
+ 					if "--rocket" in args:
+ 						mode += "_foguete"
++					if "--flight" in args:
++						mode += "_voo"
+ 				if "--support-vfx" in args:
+ 					mode = "support_" + ("resultado" if "--result" in args else "combate")
+ 	view.call("_refresh")

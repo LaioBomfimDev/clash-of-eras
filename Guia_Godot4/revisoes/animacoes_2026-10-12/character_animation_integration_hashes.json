@@ -1,0 +1,36 @@
+{
+  "results": [
+    {
+      "stderr_bytes": 0,
+      "exit_code": 0,
+      "runner": "res://tests/test_character_animation_integration.gd",
+      "timeout": false
+    },
+    {
+      "stderr_bytes": 0,
+      "exit_code": 0,
+      "runner": "res://client/smoke.gd",
+      "timeout": false
+    }
+  ],
+  "after": [
+    {
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\main.gd",
+      "Hash": "EFAF87FF54E884F69C373A4AD0B38D9FC29688D08B680AA8D21C61FE8F102032"
+    },
+    {
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\character_visuals.gd",
+      "Hash": "A0AB4B309BF846AD7266265E7CEFC18997AC1EC18B03877E8EBD12FC81F0247E"
+    }
+  ],
+  "before": [
+    {
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\main.gd",
+      "Hash": "EFAF87FF54E884F69C373A4AD0B38D9FC29688D08B680AA8D21C61FE8F102032"
+    },
+    {
+      "Path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\client\\character_visuals.gd",
+      "Hash": "A0AB4B309BF846AD7266265E7CEFC18997AC1EC18B03877E8EBD12FC81F0247E"
+    }
+  ]
+}

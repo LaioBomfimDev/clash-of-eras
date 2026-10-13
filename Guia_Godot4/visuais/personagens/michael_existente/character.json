@@ -1,0 +1,29 @@
+{
+  "name": "Michael existente",
+  "date": "2026-10-11",
+  "character_id": "8e001e18-9617-4a67-a326-32af26dc4f24",
+  "reference": "Michael Jackson",
+  "role": "Suporte",
+  "status": "completed",
+  "directions_created": 8,
+  "local_files": [
+    {
+      "direction": "south",
+      "file": "south.png",
+      "origin": "Native get_character(include_preview=true) image block, saved without editing."
+    }
+  ],
+  "requested_size": null,
+  "reported_size": [
+    48,
+    48
+  ],
+  "brief": null,
+  "new_generation": false,
+  "announced_generation_cost": 0,
+  "animations": "Um grupo pré-existente de9quadros por direção; preservado na conta, não exportado nesta etapa.",
+  "names_provisional": true,
+  "final_art_approved": false,
+  "godot_integrated": false,
+  "limitations": "Somente prévia sul salva localmente. Oito direções informadas como concluídas na conta; não foram todas inspecionadas."
+}

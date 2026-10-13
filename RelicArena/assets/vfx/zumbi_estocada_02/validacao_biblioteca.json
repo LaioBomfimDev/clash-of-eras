@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "scope": "isolated two-effect contract validation; no in-game claim",
+  "godot_version": "4.7.2.stable.official.ed1daf0bf",
+  "runner": "res://assets/vfx/zumbi_estocada_02/validar_biblioteca.gd",
+  "command": [
+    "--headless",
+    "--path",
+    "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena",
+    "--script",
+    "res://assets/vfx/zumbi_estocada_02/validar_biblioteca.gd"
+  ],
+  "import_exit_code": 0,
+  "runner_exit_code": 0,
+  "passed": 31,
+  "failed": 0,
+  "log_error_lines": {
+    "godot_import.log": [],
+    "godot_validacao.log": []
+  },
+  "logs": [
+    "godot_import.log",
+    "godot_validacao.log"
+  ],
+  "manifest_effect_count": 15,
+  "manifest_sha256_at_validation": "aad60bdb0e5305a673d3d64d4edf3209c166be12e1c7278cad9170aa284791e4",
+  "effects": [
+    {
+      "key": "zumbi_estocada_critica",
+      "clip": "whole",
+      "frames": 7,
+      "fps": 24,
+      "frame_size": [
+        34,
+        12
+      ],
+      "offset": [
+        -5,
+        -6
+      ],
+      "columns": 3,
+      "rows": 3,
+      "loop": false
+    },
+    {
+      "key": "zumbi_inspiracao",
+      "clip": "part-inspiracao",
+      "frames": 7,
+      "fps": 20,
+      "frame_size": [
+        21,
+        17
+      ],
+      "offset": [
+        -10,
+        -22
+      ],
+      "columns": 3,
+      "rows": 3,
+      "loop": false
+    }
+  ],
+  "shared_runner_modified": false,
+  "runtime_integration_validated": false
+}

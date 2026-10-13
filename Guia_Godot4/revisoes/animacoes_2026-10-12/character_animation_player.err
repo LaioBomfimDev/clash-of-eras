@@ -1,0 +1,4 @@
+SCRIPT ERROR: Parse Error: The member "AnimationPlayer" shadows a native class.
+   at: GDScript::reload (res://tests/test_character_animation_player.gd:6)
+ERROR: Failed to load script "res://tests/test_character_animation_player.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript_resource_format.cpp:46)

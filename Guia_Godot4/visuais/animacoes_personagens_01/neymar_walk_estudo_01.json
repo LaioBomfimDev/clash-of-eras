@@ -1,0 +1,351 @@
+{
+  "pixel_lab_text": [
+    "drawing_id: b2b11fc1-f348-413a-a487-f779fd9675ab\ncanvas 96x96, 8 frames, 800 ms, views: east\nstate: needs_visual_review\nlayers (east): Body - far leg | Body - hidden surfaces | Body - torso | Body - near leg | Body - near arm\nnodes (east): arm, body, far, fill, leg, root\nimages: assets/east/review/full-01.png\n(+2 more evidence images — body-only, change masks, palette: repeat with mode=\"high\", or zoom with --inspect […])\ndownload https://api.pixellab.ai/mcp/pixel-tools/b2b11fc1-f348-413a-a487-f779fd9675ab/: assets/east/animation.gif, assets/east/full.png, assets/east/layers.npz, recipe.json\nnext: draw --drawing b2b11fc1-f348-413a-a487-f779fd9675ab --changes […]"
+  ],
+  "status": "visual_study_not_approved_not_integrated",
+  "reason": "Footwear/lower-leg silhouette still unsuitable for the production walk; body-part cutouts need better anatomy. Reviewed all eight frames in both contact sheets.",
+  "ai_generation_calls": 0,
+  "recipe": {
+    "job": {
+      "canvas": [
+        96,
+        96
+      ],
+      "frame_count": 8,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "views": [
+        {
+          "id": "east",
+          "offset": [
+            14,
+            14
+          ]
+        }
+      ],
+      "columns": 8,
+      "overview_scale": 4,
+      "source_bookends_exact": true,
+      "body_palette_exact": true,
+      "require_clear_border": true
+    },
+    "scene": {
+      "layers": [
+        {
+          "id": "far",
+          "name": "Body - far leg"
+        },
+        {
+          "id": "fill",
+          "name": "Body - hidden surfaces"
+        },
+        {
+          "id": "body",
+          "name": "Body - torso"
+        },
+        {
+          "id": "leg",
+          "name": "Body - near leg"
+        },
+        {
+          "id": "arm",
+          "name": "Body - near arm"
+        }
+      ],
+      "views": {
+        "east": {
+          "selections": {
+            "arm": {
+              "regions": [
+                [
+                  30,
+                  35,
+                  34,
+                  40
+                ],
+                [
+                  32,
+                  41,
+                  36,
+                  47
+                ]
+              ]
+            },
+            "leg": {
+              "regions": [
+                [
+                  29,
+                  50,
+                  40,
+                  63
+                ]
+              ]
+            },
+            "rest": {}
+          },
+          "nodes": {
+            "root": {
+              "layer": "body",
+              "draw": [],
+              "at": [
+                14,
+                14
+              ]
+            },
+            "far": {
+              "layer": "far",
+              "draw": [
+                {
+                  "op": "copy",
+                  "part": "leg"
+                }
+              ],
+              "at": {
+                "node": "root",
+                "point": [
+                  0,
+                  0
+                ]
+              },
+              "pivot": [
+                33,
+                50
+              ]
+            },
+            "fill": {
+              "layer": "fill",
+              "visible": false,
+              "at": {
+                "node": "root",
+                "point": [
+                  0,
+                  0
+                ]
+              },
+              "draw": [
+                {
+                  "op": "rect",
+                  "box": [
+                    31,
+                    35,
+                    34,
+                    39
+                  ],
+                  "color": "#f8cc23ff"
+                },
+                {
+                  "op": "rect",
+                  "box": [
+                    32,
+                    40,
+                    36,
+                    48
+                  ],
+                  "color": "#096760ff"
+                },
+                {
+                  "op": "rect",
+                  "box": [
+                    31,
+                    49,
+                    36,
+                    51
+                  ],
+                  "color": "#096760ff"
+                }
+              ]
+            },
+            "body": {
+              "layer": "body",
+              "draw": [
+                {
+                  "op": "copy",
+                  "part": "rest"
+                }
+              ],
+              "at": {
+                "node": "root",
+                "point": [
+                  0,
+                  0
+                ]
+              }
+            },
+            "leg": {
+              "layer": "leg",
+              "draw": [
+                {
+                  "op": "copy",
+                  "part": "leg"
+                }
+              ],
+              "at": {
+                "node": "root",
+                "point": [
+                  0,
+                  0
+                ]
+              },
+              "pivot": [
+                33,
+                50
+              ]
+            },
+            "arm": {
+              "layer": "arm",
+              "draw": [
+                {
+                  "op": "copy",
+                  "part": "arm"
+                }
+              ],
+              "at": {
+                "node": "root",
+                "point": [
+                  0,
+                  0
+                ]
+              },
+              "pivot": [
+                32,
+                35
+              ]
+            }
+          },
+          "poses": {
+            "step0": {
+              "far": {
+                "angle": 0
+              },
+              "leg": {
+                "angle": 0
+              },
+              "arm": {
+                "angle": 0
+              },
+              "fill": {
+                "visible": false
+              }
+            },
+            "step1": {
+              "far": {
+                "angle": 18
+              },
+              "leg": {
+                "angle": -18
+              },
+              "arm": {
+                "angle": 11
+              },
+              "fill": {
+                "visible": true
+              }
+            },
+            "step2": {
+              "far": {
+                "angle": 30
+              },
+              "leg": {
+                "angle": -30
+              },
+              "arm": {
+                "angle": 18
+              },
+              "fill": {
+                "visible": true
+              }
+            },
+            "step3": {
+              "far": {
+                "angle": 18
+              },
+              "leg": {
+                "angle": -18
+              },
+              "arm": {
+                "angle": 11
+              },
+              "fill": {
+                "visible": true
+              }
+            },
+            "step4": {
+              "far": {
+                "angle": 0
+              },
+              "leg": {
+                "angle": 0
+              },
+              "arm": {
+                "angle": 0
+              },
+              "fill": {
+                "visible": true
+              }
+            },
+            "step5": {
+              "far": {
+                "angle": -18
+              },
+              "leg": {
+                "angle": 18
+              },
+              "arm": {
+                "angle": -11
+              },
+              "fill": {
+                "visible": true
+              }
+            },
+            "step6": {
+              "far": {
+                "angle": -30
+              },
+              "leg": {
+                "angle": 30
+              },
+              "arm": {
+                "angle": -18
+              },
+              "fill": {
+                "visible": true
+              }
+            },
+            "step7": {
+              "far": {
+                "angle": -18
+              },
+              "leg": {
+                "angle": 18
+              },
+              "arm": {
+                "angle": -11
+              },
+              "fill": {
+                "visible": true
+              }
+            }
+          },
+          "frames": [
+            "step0",
+            "step1",
+            "step2",
+            "step3",
+            "step4",
+            "step5",
+            "step6",
+            "step7"
+          ]
+        }
+      }
+    }
+  }
+}

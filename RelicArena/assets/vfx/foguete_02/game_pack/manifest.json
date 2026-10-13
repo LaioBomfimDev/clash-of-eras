@@ -1,0 +1,44 @@
+{
+ "app": "PixelLab VFX Creator",
+ "name": "Clash of Eras - Foguete Elon 02",
+ "fps": 16,
+ "frame_ms": 63,
+ "frames": 8,
+ "loop": true,
+ "canvas": {
+  "w": 84,
+  "h": 28
+ },
+ "anchor": {
+  "kind": "origin",
+  "x": 64,
+  "y": 14
+ },
+ "clips": [
+  {
+   "name": "whole",
+   "title": "the whole effect, no sprite",
+   "depth": "both",
+   "loop": true,
+   "start_frame": 0,
+   "frames": 8,
+   "frame": {
+    "w": 70,
+    "h": 12
+   },
+   "sheets": [
+    {
+     "file": "whole.png",
+     "first_frame": 0,
+     "frames": 8,
+     "columns": 3,
+     "rows": 3
+    }
+   ],
+   "offset": {
+    "x": -58,
+    "y": -5
+   }
+  }
+ ]
+}

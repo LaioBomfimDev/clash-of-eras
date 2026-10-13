@@ -1,0 +1,339 @@
+{
+ "frames": [
+  {
+   "filename": "clash-of-eras-fumaca-charuto-snoop-01 0.png",
+   "frame": {
+    "x": 0,
+    "y": 0,
+    "w": 32,
+    "h": 56
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 32,
+    "h": 56
+   },
+   "sourceSize": {
+    "w": 32,
+    "h": 56
+   },
+   "pivot": {
+    "x": 0.375,
+    "y": 0.8928571428571429
+   },
+   "duration": 100
+  },
+  {
+   "filename": "clash-of-eras-fumaca-charuto-snoop-01 1.png",
+   "frame": {
+    "x": 32,
+    "y": 0,
+    "w": 32,
+    "h": 56
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 32,
+    "h": 56
+   },
+   "sourceSize": {
+    "w": 32,
+    "h": 56
+   },
+   "pivot": {
+    "x": 0.375,
+    "y": 0.8928571428571429
+   },
+   "duration": 100
+  },
+  {
+   "filename": "clash-of-eras-fumaca-charuto-snoop-01 2.png",
+   "frame": {
+    "x": 64,
+    "y": 0,
+    "w": 32,
+    "h": 56
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 32,
+    "h": 56
+   },
+   "sourceSize": {
+    "w": 32,
+    "h": 56
+   },
+   "pivot": {
+    "x": 0.375,
+    "y": 0.8928571428571429
+   },
+   "duration": 100
+  },
+  {
+   "filename": "clash-of-eras-fumaca-charuto-snoop-01 3.png",
+   "frame": {
+    "x": 96,
+    "y": 0,
+    "w": 32,
+    "h": 56
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 32,
+    "h": 56
+   },
+   "sourceSize": {
+    "w": 32,
+    "h": 56
+   },
+   "pivot": {
+    "x": 0.375,
+    "y": 0.8928571428571429
+   },
+   "duration": 100
+  },
+  {
+   "filename": "clash-of-eras-fumaca-charuto-snoop-01 4.png",
+   "frame": {
+    "x": 0,
+    "y": 56,
+    "w": 32,
+    "h": 56
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 32,
+    "h": 56
+   },
+   "sourceSize": {
+    "w": 32,
+    "h": 56
+   },
+   "pivot": {
+    "x": 0.375,
+    "y": 0.8928571428571429
+   },
+   "duration": 100
+  },
+  {
+   "filename": "clash-of-eras-fumaca-charuto-snoop-01 5.png",
+   "frame": {
+    "x": 32,
+    "y": 56,
+    "w": 32,
+    "h": 56
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 32,
+    "h": 56
+   },
+   "sourceSize": {
+    "w": 32,
+    "h": 56
+   },
+   "pivot": {
+    "x": 0.375,
+    "y": 0.8928571428571429
+   },
+   "duration": 100
+  },
+  {
+   "filename": "clash-of-eras-fumaca-charuto-snoop-01 6.png",
+   "frame": {
+    "x": 64,
+    "y": 56,
+    "w": 32,
+    "h": 56
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 32,
+    "h": 56
+   },
+   "sourceSize": {
+    "w": 32,
+    "h": 56
+   },
+   "pivot": {
+    "x": 0.375,
+    "y": 0.8928571428571429
+   },
+   "duration": 100
+  },
+  {
+   "filename": "clash-of-eras-fumaca-charuto-snoop-01 7.png",
+   "frame": {
+    "x": 96,
+    "y": 56,
+    "w": 32,
+    "h": 56
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 32,
+    "h": 56
+   },
+   "sourceSize": {
+    "w": 32,
+    "h": 56
+   },
+   "pivot": {
+    "x": 0.375,
+    "y": 0.8928571428571429
+   },
+   "duration": 100
+  },
+  {
+   "filename": "clash-of-eras-fumaca-charuto-snoop-01 8.png",
+   "frame": {
+    "x": 0,
+    "y": 112,
+    "w": 32,
+    "h": 56
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 32,
+    "h": 56
+   },
+   "sourceSize": {
+    "w": 32,
+    "h": 56
+   },
+   "pivot": {
+    "x": 0.375,
+    "y": 0.8928571428571429
+   },
+   "duration": 100
+  },
+  {
+   "filename": "clash-of-eras-fumaca-charuto-snoop-01 9.png",
+   "frame": {
+    "x": 32,
+    "y": 112,
+    "w": 32,
+    "h": 56
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 32,
+    "h": 56
+   },
+   "sourceSize": {
+    "w": 32,
+    "h": 56
+   },
+   "pivot": {
+    "x": 0.375,
+    "y": 0.8928571428571429
+   },
+   "duration": 100
+  },
+  {
+   "filename": "clash-of-eras-fumaca-charuto-snoop-01 10.png",
+   "frame": {
+    "x": 64,
+    "y": 112,
+    "w": 32,
+    "h": 56
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 32,
+    "h": 56
+   },
+   "sourceSize": {
+    "w": 32,
+    "h": 56
+   },
+   "pivot": {
+    "x": 0.375,
+    "y": 0.8928571428571429
+   },
+   "duration": 100
+  },
+  {
+   "filename": "clash-of-eras-fumaca-charuto-snoop-01 11.png",
+   "frame": {
+    "x": 96,
+    "y": 112,
+    "w": 32,
+    "h": 56
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 32,
+    "h": 56
+   },
+   "sourceSize": {
+    "w": 32,
+    "h": 56
+   },
+   "pivot": {
+    "x": 0.375,
+    "y": 0.8928571428571429
+   },
+   "duration": 100
+  }
+ ],
+ "meta": {
+  "app": "PixelLab VFX Creator",
+  "image": "clash-of-eras-fumaca-charuto-snoop-01.png",
+  "format": "RGBA8888",
+  "size": {
+   "w": 128,
+   "h": 168
+  },
+  "scale": "1",
+  "anchor": {
+   "kind": "origin",
+   "x": 12,
+   "y": 50
+  },
+  "frameTags": [
+   {
+    "name": "clash-of-eras-fumaca-charuto-snoop-01",
+    "from": 0,
+    "to": 11,
+    "direction": "forward"
+   }
+  ]
+ }
+}

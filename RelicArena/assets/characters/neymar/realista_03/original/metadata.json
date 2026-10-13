@@ -1,0 +1,36 @@
+{
+  "group_id": "a4fdc87a-e1f9-4a7a-8799-cdeccf490214",
+  "states": [
+    {
+      "character": {
+        "id": "291232c3-888e-4f25-89c4-c81820353189",
+        "name": "Idle",
+        "prompt": "Recognizable Brazilian football player resembling Neymar Jr., full body adult with natural realistic anatomy, slim athletic torso and normal small head, NOT chibi, NOT cartoon, NOT caricature. Short bleached blond crest with dark sides and short beard. Green and yellow football shirt, dark green shorts, tall white socks, gold football boots and a normal size black and white football beside one foot. Match the scale and restrained pixel rendering of a classic 48px Michael Jackson game sprite: adult body about seven heads tall, visible body roughly 43 pixels high, centered and both feet fully visible. Low top-down elevated arena camera, crisp clustered pixel art, medium shading, selective dark outline, warm upper-left lighting, transparent background, no scenery, no letters, no logos, no glow.",
+        "size": {
+          "width": 68,
+          "height": 68
+        },
+        "template_id": "mannequin",
+        "directions": 8,
+        "view": "low top-down",
+        "created_at": "2026-10-12T04:45:51.310655+00:00"
+      },
+      "folder": "Idle",
+      "frames": {
+        "rotations": {
+          "south": "Idle/rotations/south.png",
+          "south-east": "Idle/rotations/south-east.png",
+          "east": "Idle/rotations/east.png",
+          "north-east": "Idle/rotations/north-east.png",
+          "north": "Idle/rotations/north.png",
+          "north-west": "Idle/rotations/north-west.png",
+          "west": "Idle/rotations/west.png",
+          "south-west": "Idle/rotations/south-west.png"
+        },
+        "animations": {}
+      }
+    }
+  ],
+  "export_version": "3.1",
+  "export_date": "2026-10-12T04:49:45.802651"
+}

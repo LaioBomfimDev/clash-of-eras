@@ -1,0 +1,303 @@
+{
+  "date_utc": "2026-10-12T23:15:19.566903+00:00",
+  "method": "PixelLab vfx_workbench deterministic FREE; no AI generation",
+  "effect_id": "2e362001-68de-4e23-85db-cfc090ce9588",
+  "step_id": "6aed2cf5-f3f1-4ce0-81d7-709d3fb0136e",
+  "export_image_id": "c0920c87-53ee-488c-a4fe-2c7da162b98c",
+  "effect_url": "https://pixellab.ai/create-vfx?effect=2e362001-68de-4e23-85db-cfc090ce9588",
+  "export_base_url": "https://api.pixellab.ai/mcp/pixel-tools/c0920c87-53ee-488c-a4fe-2c7da162b98c/",
+  "ai_generation_calls": 0,
+  "paid_purchases": 0,
+  "character_embedded": false,
+  "runtime_integrated": false,
+  "shared_manifest_modified": true,
+  "gameplay_modified": false,
+  "zip_bytes": 2740,
+  "zip_sha256": "842985205fdac04d8d7c61ba55d2ce1906989f0bffa76fc2077ddcdf1a598a08",
+  "zip_crc_passed": true,
+  "zip_paths_safe": true,
+  "extracted_members": 5,
+  "extracted_bytes": 3666,
+  "extracted_byte_identical": true,
+  "zip_member_checks": [
+    {
+      "path": "whole.png",
+      "bytes": 571,
+      "sha256": "65c5065878835799871ea7c1ba8a051390f6b97267c0f66c08807d0ea595fc43",
+      "byte_identical": true
+    },
+    {
+      "path": "part-risco_critico.png",
+      "bytes": 435,
+      "sha256": "9854143a54215881faf68382a26ad1a0467f7b0a83b8c216a62e5cee3666aa80",
+      "byte_identical": true
+    },
+    {
+      "path": "part-fagulha.png",
+      "bytes": 231,
+      "sha256": "873548d02fe1936e39d6864e52ebc7112e440d86e92f57267ad39a2075071c08",
+      "byte_identical": true
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 1487,
+      "sha256": "7d7afafd80d714631747ef29152d7f1a1cbfc1c2e6bc6c68ca77cf52d9792ad4",
+      "byte_identical": true
+    },
+    {
+      "path": "README.txt",
+      "bytes": 942,
+      "sha256": "3030bb6c509e7759cd342fd0b98dd3968551c657dfd76c4e6886399f751d632c",
+      "byte_identical": true
+    }
+  ],
+  "exported_downloads": [
+    {
+      "path": "original/clash-of-eras-zumbi-estocada-critica02-game.zip",
+      "bytes": 2740,
+      "sha256": "842985205fdac04d8d7c61ba55d2ce1906989f0bffa76fc2077ddcdf1a598a08",
+      "http_status": 200
+    },
+    {
+      "path": "original/clash-of-eras-zumbi-estocada-critica02.gif",
+      "bytes": 761,
+      "sha256": "8e00049c73958215211654f45f9698bfc9f07c813a62a1cbb11bf5f503eb5837",
+      "http_status": 200
+    },
+    {
+      "path": "original/clash-of-eras-zumbi-estocada-critica02.json",
+      "bytes": 3171,
+      "sha256": "632a217dc46a5affe0b9660e18c2633e22334842ad98512f297031e60818be04",
+      "http_status": 200
+    },
+    {
+      "path": "original/clash-of-eras-zumbi-estocada-critica02.png",
+      "bytes": 617,
+      "sha256": "607b462a1abdec09484af2238ac32a84b723e823a7f2ccb2945d8ed67e6d04d4",
+      "http_status": 200
+    }
+  ],
+  "pngs": [
+    {
+      "path": "original/clash-of-eras-zumbi-estocada-critica02.png",
+      "mode": "RGBA",
+      "size": [
+        126,
+        54
+      ]
+    },
+    {
+      "path": "game_pack/part-fagulha.png",
+      "mode": "RGBA",
+      "size": [
+        20,
+        12
+      ]
+    },
+    {
+      "path": "game_pack/part-risco_critico.png",
+      "mode": "RGBA",
+      "size": [
+        90,
+        24
+      ]
+    },
+    {
+      "path": "game_pack/whole.png",
+      "mode": "RGBA",
+      "size": [
+        102,
+        36
+      ]
+    }
+  ],
+  "game_manifest": {
+    "app": "PixelLab VFX Creator",
+    "name": "Clash of Eras - Zumbi Estocada Critica02",
+    "fps": 24,
+    "frame_ms": 42,
+    "frames": 7,
+    "loop": false,
+    "canvas": {
+      "w": 42,
+      "h": 18
+    },
+    "anchor": {
+      "kind": "origin",
+      "x": 8,
+      "y": 9
+    },
+    "clips": [
+      {
+        "name": "whole",
+        "title": "the whole effect, no sprite",
+        "depth": "both",
+        "loop": false,
+        "start_frame": 0,
+        "frames": 7,
+        "frame": {
+          "w": 34,
+          "h": 12
+        },
+        "sheets": [
+          {
+            "file": "whole.png",
+            "first_frame": 0,
+            "frames": 7,
+            "columns": 3,
+            "rows": 3
+          }
+        ],
+        "offset": {
+          "x": -5,
+          "y": -6
+        }
+      },
+      {
+        "name": "part-risco_critico",
+        "title": "the thrust streak part",
+        "role": "impact",
+        "part": "thrust_streak",
+        "depth": "front",
+        "loop": false,
+        "start_frame": 0,
+        "frames": 7,
+        "frame": {
+          "w": 30,
+          "h": 8
+        },
+        "sheets": [
+          {
+            "file": "part-risco_critico.png",
+            "first_frame": 0,
+            "frames": 7,
+            "columns": 3,
+            "rows": 3
+          }
+        ],
+        "offset": {
+          "x": -1,
+          "y": -4
+        }
+      },
+      {
+        "name": "part-fagulha",
+        "title": "the hit star part",
+        "role": "impact",
+        "part": "hit_star",
+        "depth": "front",
+        "loop": false,
+        "start_frame": 1,
+        "frames": 2,
+        "frame": {
+          "w": 10,
+          "h": 12
+        },
+        "sheets": [
+          {
+            "file": "part-fagulha.png",
+            "first_frame": 0,
+            "frames": 2,
+            "columns": 2,
+            "rows": 1
+          }
+        ],
+        "offset": {
+          "x": -5,
+          "y": -6
+        }
+      }
+    ]
+  },
+  "visual_review": {
+    "all_response_frames_reviewed": true,
+    "native_and_enlarged_review": true,
+    "final_user_approval": false,
+    "gameplay_or_balance_tested": false,
+    "notes": "White/gold short lance streak with a small critical glint at the anchor; 7 frames reviewed 1x/4x and all exported parts. Basic estocada_01 unchanged. Default facing +x; rotate full clip and offset in the client. Facing/reach sliders removed after their extreme values clipped the compact canvas. No poison, fire or new gameplay."
+  },
+  "selected_game_clip": "whole",
+  "selected_game_sheet": "game_pack/whole.png",
+  "packed_frames": 7,
+  "packed_frame_size": [
+    34,
+    12
+  ],
+  "offset": {
+    "x": -5,
+    "y": -6
+  },
+  "fps": 24,
+  "loop": false,
+  "start_frame": 0,
+  "authored_frames": 7,
+  "authored_canvas": [
+    42,
+    18
+  ],
+  "frame_validation": [
+    {
+      "clip": "whole",
+      "packed_frames": 7,
+      "start_frame": 0,
+      "frame_size": [
+        34,
+        12
+      ],
+      "offset": {
+        "x": -5,
+        "y": -6
+      },
+      "fps": 24,
+      "loop": false,
+      "sheet_dimensions_valid": true,
+      "unused_cells_transparent": true,
+      "rgba_matches_original": true
+    },
+    {
+      "clip": "part-risco_critico",
+      "packed_frames": 7,
+      "start_frame": 0,
+      "frame_size": [
+        30,
+        8
+      ],
+      "offset": {
+        "x": -1,
+        "y": -4
+      },
+      "fps": 24,
+      "loop": false,
+      "sheet_dimensions_valid": true,
+      "unused_cells_transparent": true,
+      "rgba_matches_original": "separate part; checked dimensions/frames, not compared to composite"
+    },
+    {
+      "clip": "part-fagulha",
+      "packed_frames": 2,
+      "start_frame": 1,
+      "frame_size": [
+        10,
+        12
+      ],
+      "offset": {
+        "x": -5,
+        "y": -6
+      },
+      "fps": 24,
+      "loop": false,
+      "sheet_dimensions_valid": true,
+      "unused_cells_transparent": true,
+      "rgba_matches_original": "separate part; checked dimensions/frames, not compared to composite"
+    }
+  ],
+  "rgba_crops_compared_to_original": 7,
+  "integration_notes": [
+    "This is a critical-hit alternative to the basic estocada_01, not a projectile or a whole-body animation.",
+    "Use whole clip to preserve the glint and streak together. Apply at real spear impact, rotate whole clip to spear direction.",
+    "Whole packed frame34x12; offset(-5,-6); 7frames24fps, about0.292s. No user approval or integrated test."
+  ],
+  "registered_manifest_key": "zumbi_estocada_critica",
+  "runtime_role": "reserved",
+  "user_pilot_visual_approval": true
+}

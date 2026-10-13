@@ -1,0 +1,443 @@
+{
+ "frames": [
+  {
+   "filename": "clash-of-eras-nuvem-fumaca-snoop-02 0.png",
+   "frame": {
+    "x": 0,
+    "y": 0,
+    "w": 236,
+    "h": 172
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 236,
+    "h": 172
+   },
+   "sourceSize": {
+    "w": 236,
+    "h": 172
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.5232558139534884
+   },
+   "duration": 100
+  },
+  {
+   "filename": "clash-of-eras-nuvem-fumaca-snoop-02 1.png",
+   "frame": {
+    "x": 236,
+    "y": 0,
+    "w": 236,
+    "h": 172
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 236,
+    "h": 172
+   },
+   "sourceSize": {
+    "w": 236,
+    "h": 172
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.5232558139534884
+   },
+   "duration": 100
+  },
+  {
+   "filename": "clash-of-eras-nuvem-fumaca-snoop-02 2.png",
+   "frame": {
+    "x": 472,
+    "y": 0,
+    "w": 236,
+    "h": 172
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 236,
+    "h": 172
+   },
+   "sourceSize": {
+    "w": 236,
+    "h": 172
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.5232558139534884
+   },
+   "duration": 100
+  },
+  {
+   "filename": "clash-of-eras-nuvem-fumaca-snoop-02 3.png",
+   "frame": {
+    "x": 708,
+    "y": 0,
+    "w": 236,
+    "h": 172
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 236,
+    "h": 172
+   },
+   "sourceSize": {
+    "w": 236,
+    "h": 172
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.5232558139534884
+   },
+   "duration": 100
+  },
+  {
+   "filename": "clash-of-eras-nuvem-fumaca-snoop-02 4.png",
+   "frame": {
+    "x": 0,
+    "y": 172,
+    "w": 236,
+    "h": 172
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 236,
+    "h": 172
+   },
+   "sourceSize": {
+    "w": 236,
+    "h": 172
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.5232558139534884
+   },
+   "duration": 100
+  },
+  {
+   "filename": "clash-of-eras-nuvem-fumaca-snoop-02 5.png",
+   "frame": {
+    "x": 236,
+    "y": 172,
+    "w": 236,
+    "h": 172
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 236,
+    "h": 172
+   },
+   "sourceSize": {
+    "w": 236,
+    "h": 172
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.5232558139534884
+   },
+   "duration": 100
+  },
+  {
+   "filename": "clash-of-eras-nuvem-fumaca-snoop-02 6.png",
+   "frame": {
+    "x": 472,
+    "y": 172,
+    "w": 236,
+    "h": 172
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 236,
+    "h": 172
+   },
+   "sourceSize": {
+    "w": 236,
+    "h": 172
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.5232558139534884
+   },
+   "duration": 100
+  },
+  {
+   "filename": "clash-of-eras-nuvem-fumaca-snoop-02 7.png",
+   "frame": {
+    "x": 708,
+    "y": 172,
+    "w": 236,
+    "h": 172
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 236,
+    "h": 172
+   },
+   "sourceSize": {
+    "w": 236,
+    "h": 172
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.5232558139534884
+   },
+   "duration": 100
+  },
+  {
+   "filename": "clash-of-eras-nuvem-fumaca-snoop-02 8.png",
+   "frame": {
+    "x": 0,
+    "y": 344,
+    "w": 236,
+    "h": 172
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 236,
+    "h": 172
+   },
+   "sourceSize": {
+    "w": 236,
+    "h": 172
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.5232558139534884
+   },
+   "duration": 100
+  },
+  {
+   "filename": "clash-of-eras-nuvem-fumaca-snoop-02 9.png",
+   "frame": {
+    "x": 236,
+    "y": 344,
+    "w": 236,
+    "h": 172
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 236,
+    "h": 172
+   },
+   "sourceSize": {
+    "w": 236,
+    "h": 172
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.5232558139534884
+   },
+   "duration": 100
+  },
+  {
+   "filename": "clash-of-eras-nuvem-fumaca-snoop-02 10.png",
+   "frame": {
+    "x": 472,
+    "y": 344,
+    "w": 236,
+    "h": 172
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 236,
+    "h": 172
+   },
+   "sourceSize": {
+    "w": 236,
+    "h": 172
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.5232558139534884
+   },
+   "duration": 100
+  },
+  {
+   "filename": "clash-of-eras-nuvem-fumaca-snoop-02 11.png",
+   "frame": {
+    "x": 708,
+    "y": 344,
+    "w": 236,
+    "h": 172
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 236,
+    "h": 172
+   },
+   "sourceSize": {
+    "w": 236,
+    "h": 172
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.5232558139534884
+   },
+   "duration": 100
+  },
+  {
+   "filename": "clash-of-eras-nuvem-fumaca-snoop-02 12.png",
+   "frame": {
+    "x": 0,
+    "y": 516,
+    "w": 236,
+    "h": 172
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 236,
+    "h": 172
+   },
+   "sourceSize": {
+    "w": 236,
+    "h": 172
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.5232558139534884
+   },
+   "duration": 100
+  },
+  {
+   "filename": "clash-of-eras-nuvem-fumaca-snoop-02 13.png",
+   "frame": {
+    "x": 236,
+    "y": 516,
+    "w": 236,
+    "h": 172
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 236,
+    "h": 172
+   },
+   "sourceSize": {
+    "w": 236,
+    "h": 172
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.5232558139534884
+   },
+   "duration": 100
+  },
+  {
+   "filename": "clash-of-eras-nuvem-fumaca-snoop-02 14.png",
+   "frame": {
+    "x": 472,
+    "y": 516,
+    "w": 236,
+    "h": 172
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 236,
+    "h": 172
+   },
+   "sourceSize": {
+    "w": 236,
+    "h": 172
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.5232558139534884
+   },
+   "duration": 100
+  },
+  {
+   "filename": "clash-of-eras-nuvem-fumaca-snoop-02 15.png",
+   "frame": {
+    "x": 708,
+    "y": 516,
+    "w": 236,
+    "h": 172
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 236,
+    "h": 172
+   },
+   "sourceSize": {
+    "w": 236,
+    "h": 172
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.5232558139534884
+   },
+   "duration": 100
+  }
+ ],
+ "meta": {
+  "app": "PixelLab VFX Creator",
+  "image": "clash-of-eras-nuvem-fumaca-snoop-02.png",
+  "format": "RGBA8888",
+  "size": {
+   "w": 944,
+   "h": 688
+  },
+  "scale": "1",
+  "anchor": {
+   "kind": "origin",
+   "x": 118,
+   "y": 90
+  },
+  "frameTags": [
+   {
+    "name": "clash-of-eras-nuvem-fumaca-snoop-02",
+    "from": 0,
+    "to": 15,
+    "direction": "forward"
+   }
+  ]
+ }
+}

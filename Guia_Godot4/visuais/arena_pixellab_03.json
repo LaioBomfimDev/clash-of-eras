@@ -1,0 +1,45 @@
+{
+  "name": "Arena de areia clara — estudo PixelLab 03",
+  "date": "2026-10-11",
+  "timezone": "America/Sao_Paulo",
+  "status": "completed",
+  "job_id": "a6c01c0d-c767-4f18-a0dd-de2cc2a10452",
+  "asset_id": "ab7e2859-84ab-565c-b4cc-5bf91d1f6285",
+  "asset_status": "saved",
+  "model": "pixflux",
+  "charged_generations": 1,
+  "brief": {
+    "description": "Pixel art game background of a SINGLE wide oval medieval battle arena. The one oval sand floor stretches across the entire image from left to right, surrounded by a low continuous stone wall and three rows of empty stone spectator terraces. Viewed from an elevated oblique top-down camera. Full arena visible, horizontally centered, pale cream sand, broad completely empty central playing area. Grey olive stone blocks, tiny teal and burgundy banners on the far wall, dark muted green ground outside. Clean charming retro pixel art, simple readable shapes, warm daylight. No units, no spectators, no text, no interface, no grid. One arena filling the frame.",
+    "width": 384,
+    "height": 216,
+    "view": "low top-down",
+    "detail": "medium detail",
+    "outline": "selective outline",
+    "shading": "medium shading",
+    "no_background": false,
+    "isometric": false,
+    "seed": 10112028
+  },
+  "download_url": "https://api.pixellab.ai/mcp/images/a6c01c0d-c767-4f18-a0dd-de2cc2a10452/download",
+  "local_file": "arena_pixellab_03.png",
+  "visual_review": {
+    "result": "Candidata para revisão do usuário: um único recinto oval, areia clara, centro desobstruído, sem personagens, grade ou interface.",
+    "pending": [
+      "Arquibancadas representadas como paredes em faixas; faltam degraus/assentos contínuos evidentes como na prévia.",
+      "Resolução experimental 384x216: não determina resolução final nem escala dos sprites.",
+      "Encaixe das 64 casas e oclusão pela borda frontal ainda não testados em Godot."
+    ],
+    "prior_attempts": [
+      "arena_pixellab_01.json",
+      "arena_pixellab_02.json"
+    ]
+  },
+  "final_art_approved": false,
+  "godot_integrated": false,
+  "user_feedback": {
+    "approved": false,
+    "date": "2026-10-11",
+    "reason": "Usuário considerou a arena muito ruim e pediu refazer com visão inclinada, usando três referências enviadas. A direção desejada é interior imersivo de coliseu com arquibancadas detalhadas, e não prédio em miniatura visto por fora.",
+    "primary_reference": "referencias/arena_referencia_usuario_02.png"
+  }
+}

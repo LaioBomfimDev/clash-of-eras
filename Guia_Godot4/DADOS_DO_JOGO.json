@@ -1,0 +1,2667 @@
+{
+  "schema": "xadrez-auto-battler-design",
+  "schemaVersion": 1,
+  "sourceVersion": "0.10.1",
+  "date": "2026-10-09",
+  "scope": "Existing gameplay data only. Godot architecture and the future dancer are documented separately.",
+  "board": {
+    "columns": 7,
+    "rows": 8,
+    "totalCells": 56,
+    "homeCells": 28,
+    "fieldLimit": 6,
+    "benchSlots": 8,
+    "indexFormula": "row * 7 + col",
+    "homeRowsZeroBased": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "displayRow1": "player back edge at bottom",
+    "attackDistance": "Chebyshev",
+    "walkingNeighbors": "four orthogonal",
+    "defaultMeleeHomeCell": 24,
+    "defaultRangedHomeCell": 10
+  },
+  "initialState": {
+    "playerHp": 100,
+    "gold": 12,
+    "encounterIndex": 0,
+    "wins": 0,
+    "streak": 0,
+    "team": [],
+    "bench": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "bag": {
+      "blade": 1,
+      "heart": 1,
+      "tome": 0
+    },
+    "nextUid": 1,
+    "shopLocked": false
+  },
+  "shop": {
+    "offerCount": 5,
+    "refreshCost": 2,
+    "maxOffersPerCharacter": 2,
+    "copyStars": 1,
+    "sharedPool": false,
+    "firstGuarantee": [
+      "Tank",
+      "two distinct of Ranger/Caster/Assassin"
+    ],
+    "odds": [
+      {
+        "fromVisibleRound": 1,
+        "toVisibleRound": 5,
+        "normal": 75,
+        "rare": 25,
+        "epic": 0
+      },
+      {
+        "fromVisibleRound": 6,
+        "toVisibleRound": 10,
+        "normal": 55,
+        "rare": 35,
+        "epic": 10
+      },
+      {
+        "fromVisibleRound": 11,
+        "toVisibleRound": 15,
+        "normal": 30,
+        "rare": 50,
+        "epic": 20
+      }
+    ],
+    "seed17OpeningExample": {
+      "seed": 17,
+      "offers": [
+        "Tank",
+        "Ranger",
+        "Assassin",
+        "Ranger",
+        "Tank"
+      ],
+      "rngStateAfterGeneration": 1429761231
+    }
+  },
+  "rarities": {
+    "normal": {
+      "label": "Normal",
+      "cost": 1,
+      "color": "#bcc6cc",
+      "kinds": [
+        "Tank",
+        "Ranger",
+        "Caster",
+        "Assassin"
+      ]
+    },
+    "rare": {
+      "label": "Raro",
+      "cost": 3,
+      "color": "#79c4ff",
+      "kinds": [
+        "Gorilla",
+        "Cowboy",
+        "Witch",
+        "Ninja",
+        "Cobra"
+      ]
+    },
+    "epic": {
+      "label": "Épico",
+      "cost": 5,
+      "color": "#d99bff",
+      "kinds": [
+        "Genie",
+        "RatKing",
+        "David"
+      ]
+    }
+  },
+  "equipment": {
+    "blade": {
+      "label": "Lâmina",
+      "detail": "+1 ataque",
+      "damage": 1
+    },
+    "heart": {
+      "label": "Couraça",
+      "detail": "+10 vida",
+      "hp": 10
+    },
+    "tome": {
+      "label": "Tomo",
+      "detail": "+2 de cura",
+      "healing": 2
+    }
+  },
+  "synergies": {
+    "guardian": {
+      "label": "Guardiões",
+      "thresholds": [
+        2,
+        3
+      ],
+      "bonus": [
+        "+18% vida da equipe",
+        "+30% vida da equipe"
+      ]
+    },
+    "marksman": {
+      "label": "Atiradores",
+      "thresholds": [
+        2
+      ],
+      "bonus": [
+        "Atiradores: intervalo de ataque -25%"
+      ]
+    },
+    "mystic": {
+      "label": "Místicos",
+      "thresholds": [
+        2,
+        3
+      ],
+      "bonus": [
+        "+25% poder das habilidades",
+        "+50% poder das habilidades"
+      ]
+    },
+    "assassin": {
+      "label": "Assassinos",
+      "thresholds": [
+        2
+      ],
+      "bonus": [
+        "Execução: +0,5x multiplicador e salto inicial"
+      ]
+    },
+    "wild": {
+      "label": "Selvagens",
+      "thresholds": [
+        2,
+        3
+      ],
+      "bonus": [
+        "Selvagens: curam 12% do dano",
+        "Selvagens: curam 22% do dano"
+      ]
+    },
+    "ancient": {
+      "label": "Ancestrais",
+      "thresholds": [
+        2,
+        3
+      ],
+      "bonus": [
+        "+15 armadura para a equipe",
+        "+30 armadura para a equipe"
+      ]
+    }
+  },
+  "characters": {
+    "Tank": {
+      "id": "Tank",
+      "label": "Sumô",
+      "playable": true,
+      "role": "tank",
+      "rarity": "normal",
+      "cost": 1,
+      "baseHp": 80,
+      "baseArmor": 0,
+      "attackRangeCells": 1,
+      "attackIntervalSeconds": 2.6,
+      "traits": [
+        "guardian"
+      ],
+      "skillId": "fortify",
+      "skillDescription": "Fôlego: recupera vida e reduz dano",
+      "starExamples": [
+        {
+          "star": 1,
+          "hpMax": 80,
+          "attack": 1,
+          "healingBase": 1,
+          "armor": 0,
+          "attackIntervalSeconds": 2.6,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        },
+        {
+          "star": 2,
+          "hpMax": 120,
+          "attack": 2,
+          "healingBase": 2,
+          "armor": 0,
+          "attackIntervalSeconds": 2.6,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        },
+        {
+          "star": 3,
+          "hpMax": 160,
+          "attack": 4,
+          "healingBase": 3,
+          "armor": 0,
+          "attackIntervalSeconds": 2.6,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        }
+      ]
+    },
+    "Ranger": {
+      "id": "Ranger",
+      "label": "Mosqueteiro",
+      "playable": true,
+      "role": "dps",
+      "rarity": "normal",
+      "cost": 1,
+      "baseHp": 50,
+      "baseArmor": 0,
+      "attackRangeCells": "unlimited",
+      "attackIntervalSeconds": 2.3,
+      "traits": [
+        "marksman"
+      ],
+      "skillId": "volley",
+      "skillDescription": "Rajada: acerta até 3 alvos",
+      "starExamples": [
+        {
+          "star": 1,
+          "hpMax": 50,
+          "attack": 1,
+          "healingBase": 1,
+          "armor": 0,
+          "attackIntervalSeconds": 2.3,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        },
+        {
+          "star": 2,
+          "hpMax": 75,
+          "attack": 2,
+          "healingBase": 2,
+          "armor": 0,
+          "attackIntervalSeconds": 2.3,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        },
+        {
+          "star": 3,
+          "hpMax": 100,
+          "attack": 4,
+          "healingBase": 3,
+          "armor": 0,
+          "attackIntervalSeconds": 2.3,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        }
+      ]
+    },
+    "Caster": {
+      "id": "Caster",
+      "label": "Arcanista",
+      "playable": true,
+      "role": "dps",
+      "rarity": "normal",
+      "cost": 1,
+      "baseHp": 50,
+      "baseArmor": 0,
+      "attackRangeCells": 2,
+      "attackIntervalSeconds": 2.3,
+      "traits": [
+        "mystic"
+      ],
+      "skillId": "nova",
+      "skillDescription": "Nova: explosão em área",
+      "starExamples": [
+        {
+          "star": 1,
+          "hpMax": 50,
+          "attack": 1,
+          "healingBase": 1,
+          "armor": 0,
+          "attackIntervalSeconds": 2.3,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        },
+        {
+          "star": 2,
+          "hpMax": 75,
+          "attack": 2,
+          "healingBase": 2,
+          "armor": 0,
+          "attackIntervalSeconds": 2.3,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        },
+        {
+          "star": 3,
+          "hpMax": 100,
+          "attack": 4,
+          "healingBase": 3,
+          "armor": 0,
+          "attackIntervalSeconds": 2.3,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        }
+      ]
+    },
+    "Assassin": {
+      "id": "Assassin",
+      "label": "Duelista",
+      "playable": true,
+      "role": "dps",
+      "rarity": "normal",
+      "cost": 1,
+      "baseHp": 50,
+      "baseArmor": 0,
+      "attackRangeCells": 1,
+      "attackIntervalSeconds": 2.3,
+      "traits": [
+        "assassin"
+      ],
+      "skillId": "execute",
+      "skillDescription": "Execução: golpe forte em alvo ferido",
+      "starExamples": [
+        {
+          "star": 1,
+          "hpMax": 50,
+          "attack": 1,
+          "healingBase": 1,
+          "armor": 0,
+          "attackIntervalSeconds": 2.3,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 1.0357142857142858,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        },
+        {
+          "star": 2,
+          "hpMax": 75,
+          "attack": 2,
+          "healingBase": 2,
+          "armor": 0,
+          "attackIntervalSeconds": 2.3,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 1.0357142857142858,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        },
+        {
+          "star": 3,
+          "hpMax": 100,
+          "attack": 4,
+          "healingBase": 3,
+          "armor": 0,
+          "attackIntervalSeconds": 2.3,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 1.0357142857142858,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        }
+      ]
+    },
+    "Gorilla": {
+      "id": "Gorilla",
+      "label": "Gorila",
+      "playable": true,
+      "role": "tank",
+      "rarity": "rare",
+      "cost": 3,
+      "baseHp": 80,
+      "baseArmor": 0,
+      "attackRangeCells": 1,
+      "attackIntervalSeconds": 2.6,
+      "traits": [
+        "guardian",
+        "wild"
+      ],
+      "skillId": "slam",
+      "skillDescription": "Impacto: dano em área e atordoamento",
+      "starExamples": [
+        {
+          "star": 1,
+          "hpMax": 80,
+          "attack": 1,
+          "healingBase": 1,
+          "armor": 0,
+          "attackIntervalSeconds": 2.6,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        },
+        {
+          "star": 2,
+          "hpMax": 120,
+          "attack": 2,
+          "healingBase": 2,
+          "armor": 0,
+          "attackIntervalSeconds": 2.6,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        },
+        {
+          "star": 3,
+          "hpMax": 160,
+          "attack": 4,
+          "healingBase": 3,
+          "armor": 0,
+          "attackIntervalSeconds": 2.6,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        }
+      ]
+    },
+    "Cowboy": {
+      "id": "Cowboy",
+      "label": "Pistoleiro",
+      "playable": true,
+      "role": "dps",
+      "rarity": "rare",
+      "cost": 3,
+      "baseHp": 50,
+      "baseArmor": 0,
+      "attackRangeCells": "unlimited",
+      "attackIntervalSeconds": 2.3,
+      "traits": [
+        "marksman"
+      ],
+      "skillId": "aimed",
+      "skillDescription": "Tiro preciso: alto dano à distância",
+      "starExamples": [
+        {
+          "star": 1,
+          "hpMax": 50,
+          "attack": 1,
+          "healingBase": 1,
+          "armor": 0,
+          "attackIntervalSeconds": 2.3,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        },
+        {
+          "star": 2,
+          "hpMax": 75,
+          "attack": 2,
+          "healingBase": 2,
+          "armor": 0,
+          "attackIntervalSeconds": 2.3,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        },
+        {
+          "star": 3,
+          "hpMax": 100,
+          "attack": 4,
+          "healingBase": 3,
+          "armor": 0,
+          "attackIntervalSeconds": 2.3,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        }
+      ]
+    },
+    "Witch": {
+      "id": "Witch",
+      "label": "Bruxa",
+      "playable": true,
+      "role": "dps",
+      "rarity": "rare",
+      "cost": 3,
+      "baseHp": 50,
+      "baseArmor": 0,
+      "attackRangeCells": 2,
+      "attackIntervalSeconds": 2.3,
+      "traits": [
+        "mystic"
+      ],
+      "skillId": "drain",
+      "skillDescription": "Drenagem: dano e recuperação de vida",
+      "starExamples": [
+        {
+          "star": 1,
+          "hpMax": 50,
+          "attack": 1,
+          "healingBase": 1,
+          "armor": 0,
+          "attackIntervalSeconds": 2.3,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        },
+        {
+          "star": 2,
+          "hpMax": 75,
+          "attack": 2,
+          "healingBase": 2,
+          "armor": 0,
+          "attackIntervalSeconds": 2.3,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        },
+        {
+          "star": 3,
+          "hpMax": 100,
+          "attack": 4,
+          "healingBase": 3,
+          "armor": 0,
+          "attackIntervalSeconds": 2.3,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        }
+      ]
+    },
+    "Ninja": {
+      "id": "Ninja",
+      "label": "Ninja",
+      "playable": true,
+      "role": "dps",
+      "rarity": "rare",
+      "cost": 3,
+      "baseHp": 50,
+      "baseArmor": 0,
+      "attackRangeCells": 1,
+      "attackIntervalSeconds": 2,
+      "traits": [
+        "assassin"
+      ],
+      "skillId": "execute",
+      "skillDescription": "Emboscada: salta para a retaguarda",
+      "starExamples": [
+        {
+          "star": 1,
+          "hpMax": 50,
+          "attack": 1,
+          "healingBase": 1,
+          "armor": 0,
+          "attackIntervalSeconds": 2,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 1.0357142857142858,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": true
+        },
+        {
+          "star": 2,
+          "hpMax": 75,
+          "attack": 2,
+          "healingBase": 2,
+          "armor": 0,
+          "attackIntervalSeconds": 2,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 1.0357142857142858,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": true
+        },
+        {
+          "star": 3,
+          "hpMax": 100,
+          "attack": 4,
+          "healingBase": 3,
+          "armor": 0,
+          "attackIntervalSeconds": 2,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 1.0357142857142858,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": true
+        }
+      ]
+    },
+    "Genie": {
+      "id": "Genie",
+      "label": "Gênio",
+      "playable": true,
+      "role": "healer",
+      "rarity": "epic",
+      "cost": 5,
+      "baseHp": 50,
+      "baseArmor": 0,
+      "attackRangeCells": "unlimited",
+      "attackIntervalSeconds": 2.4,
+      "traits": [
+        "mystic",
+        "ancient"
+      ],
+      "skillId": "mend",
+      "skillDescription": "Curandeiro: cura aliados; Desejo cura até 2",
+      "starExamples": [
+        {
+          "star": 1,
+          "hpMax": 50,
+          "attack": 1,
+          "healingBase": 1,
+          "armor": 0,
+          "attackIntervalSeconds": 2.4,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        },
+        {
+          "star": 2,
+          "hpMax": 75,
+          "attack": 2,
+          "healingBase": 2,
+          "armor": 0,
+          "attackIntervalSeconds": 2.4,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        },
+        {
+          "star": 3,
+          "hpMax": 100,
+          "attack": 4,
+          "healingBase": 3,
+          "armor": 0,
+          "attackIntervalSeconds": 2.4,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        }
+      ]
+    },
+    "RatKing": {
+      "id": "RatKing",
+      "label": "Rei dos Ratos",
+      "playable": true,
+      "role": "dps",
+      "rarity": "epic",
+      "cost": 5,
+      "baseHp": 50,
+      "baseArmor": 0,
+      "attackRangeCells": 2,
+      "attackIntervalSeconds": 2.3,
+      "traits": [
+        "wild"
+      ],
+      "skillId": "plague",
+      "skillDescription": "Praga: envenena até 3 inimigos",
+      "starExamples": [
+        {
+          "star": 1,
+          "hpMax": 50,
+          "attack": 1,
+          "healingBase": 1,
+          "armor": 0,
+          "attackIntervalSeconds": 2.3,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        },
+        {
+          "star": 2,
+          "hpMax": 75,
+          "attack": 2,
+          "healingBase": 2,
+          "armor": 0,
+          "attackIntervalSeconds": 2.3,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        },
+        {
+          "star": 3,
+          "hpMax": 100,
+          "attack": 4,
+          "healingBase": 3,
+          "armor": 0,
+          "attackIntervalSeconds": 2.3,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        }
+      ]
+    },
+    "Cobra": {
+      "id": "Cobra",
+      "label": "Cobra Real",
+      "playable": true,
+      "role": "dps",
+      "rarity": "rare",
+      "cost": 3,
+      "baseHp": 50,
+      "baseArmor": 0,
+      "attackRangeCells": 2,
+      "attackIntervalSeconds": 2.3,
+      "traits": [
+        "wild",
+        "ancient"
+      ],
+      "skillId": "venom",
+      "skillDescription": "Veneno: dano contínuo por 3 segundos",
+      "starExamples": [
+        {
+          "star": 1,
+          "hpMax": 50,
+          "attack": 1,
+          "healingBase": 1,
+          "armor": 0,
+          "attackIntervalSeconds": 2.3,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        },
+        {
+          "star": 2,
+          "hpMax": 75,
+          "attack": 2,
+          "healingBase": 2,
+          "armor": 0,
+          "attackIntervalSeconds": 2.3,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        },
+        {
+          "star": 3,
+          "hpMax": 100,
+          "attack": 4,
+          "healingBase": 3,
+          "armor": 0,
+          "attackIntervalSeconds": 2.3,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        }
+      ]
+    },
+    "David": {
+      "id": "David",
+      "label": "Davi de Pedra",
+      "playable": true,
+      "role": "tank",
+      "rarity": "epic",
+      "cost": 5,
+      "baseHp": 80,
+      "baseArmor": 0,
+      "attackRangeCells": 1,
+      "attackIntervalSeconds": 2.6,
+      "traits": [
+        "guardian",
+        "ancient"
+      ],
+      "skillId": "stone",
+      "skillDescription": "Pele de pedra: reduz dano e recupera vida",
+      "starExamples": [
+        {
+          "star": 1,
+          "hpMax": 80,
+          "attack": 1,
+          "healingBase": 1,
+          "armor": 0,
+          "attackIntervalSeconds": 2.6,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        },
+        {
+          "star": 2,
+          "hpMax": 120,
+          "attack": 2,
+          "healingBase": 2,
+          "armor": 0,
+          "attackIntervalSeconds": 2.6,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        },
+        {
+          "star": 3,
+          "hpMax": 160,
+          "attack": 4,
+          "healingBase": 3,
+          "armor": 0,
+          "attackIntervalSeconds": 2.6,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        }
+      ]
+    },
+    "Rat": {
+      "id": "Rat",
+      "label": "Rato",
+      "playable": false,
+      "role": "mob",
+      "rarity": null,
+      "cost": 0,
+      "baseHp": 20,
+      "baseArmor": 0,
+      "attackRangeCells": 1,
+      "attackIntervalSeconds": 2.3,
+      "traits": [],
+      "skillId": "aimed",
+      "skillDescription": "Mordida",
+      "starExamples": [
+        {
+          "star": 1,
+          "hpMax": 20,
+          "attack": 1,
+          "healingBase": 1,
+          "armor": 0,
+          "attackIntervalSeconds": 2.3,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        },
+        {
+          "star": 2,
+          "hpMax": 30,
+          "attack": 2,
+          "healingBase": 2,
+          "armor": 0,
+          "attackIntervalSeconds": 2.3,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        },
+        {
+          "star": 3,
+          "hpMax": 40,
+          "attack": 4,
+          "healingBase": 3,
+          "armor": 0,
+          "attackIntervalSeconds": 2.3,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        }
+      ]
+    },
+    "Serpent": {
+      "id": "Serpent",
+      "label": "Serpente",
+      "playable": false,
+      "role": "mob",
+      "rarity": null,
+      "cost": 0,
+      "baseHp": 30,
+      "baseArmor": 0,
+      "attackRangeCells": 2,
+      "attackIntervalSeconds": 2.3,
+      "traits": [],
+      "skillId": "venom",
+      "skillDescription": "Veneno",
+      "starExamples": [
+        {
+          "star": 1,
+          "hpMax": 30,
+          "attack": 1,
+          "healingBase": 1,
+          "armor": 0,
+          "attackIntervalSeconds": 2.3,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        },
+        {
+          "star": 2,
+          "hpMax": 45,
+          "attack": 2,
+          "healingBase": 2,
+          "armor": 0,
+          "attackIntervalSeconds": 2.3,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        },
+        {
+          "star": 3,
+          "hpMax": 60,
+          "attack": 4,
+          "healingBase": 3,
+          "armor": 0,
+          "attackIntervalSeconds": 2.3,
+          "spellMultiplier": 1,
+          "movementCellsPerSecond": 0.7857142857142857,
+          "executionBonus": 0,
+          "lifesteal": 0,
+          "canInitialJump": false
+        }
+      ]
+    }
+  },
+  "economy": {
+    "initialGold": 12,
+    "baseIncome": 5,
+    "winBonus": 1,
+    "mobWinExtra": 3,
+    "rewardGoldChoice": 4,
+    "interestRule": "floor(gold_before_settlement / 10), uncapped",
+    "interestExamples": [
+      {
+        "gold": 0,
+        "interest": 0
+      },
+      {
+        "gold": 9,
+        "interest": 0
+      },
+      {
+        "gold": 10,
+        "interest": 1
+      },
+      {
+        "gold": 19,
+        "interest": 1
+      },
+      {
+        "gold": 20,
+        "interest": 2
+      },
+      {
+        "gold": 30,
+        "interest": 3
+      },
+      {
+        "gold": 50,
+        "interest": 5
+      },
+      {
+        "gold": 60,
+        "interest": 6
+      },
+      {
+        "gold": 100,
+        "interest": 10
+      }
+    ],
+    "streakRule": "min(3, floor(abs(updated_signed_streak)/2))",
+    "saleValues": {
+      "normal": [
+        {
+          "star": 1,
+          "gold": 1
+        },
+        {
+          "star": 2,
+          "gold": 3
+        },
+        {
+          "star": 3,
+          "gold": 9
+        }
+      ],
+      "rare": [
+        {
+          "star": 1,
+          "gold": 3
+        },
+        {
+          "star": 2,
+          "gold": 9
+        },
+        {
+          "star": 3,
+          "gold": 27
+        }
+      ],
+      "epic": [
+        {
+          "star": 1,
+          "gold": 5
+        },
+        {
+          "star": 2,
+          "gold": 15
+        },
+        {
+          "star": 3,
+          "gold": 45
+        }
+      ]
+    }
+  },
+  "encounters": [
+    {
+      "visibleRound": 1,
+      "encounterIndex": 0,
+      "label": "1-1 • Equipe rival",
+      "type": "team",
+      "chapter": 1,
+      "chapterIndex": 0,
+      "enemyUnits": [
+        {
+          "slot": 0,
+          "characterId": "Tank",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 16,
+          "combatCell": 37,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 80,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.6,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 1,
+          "characterId": "Ranger",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 10,
+          "combatCell": 45,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 50,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        }
+      ]
+    },
+    {
+      "visibleRound": 2,
+      "encounterIndex": 1,
+      "label": "1-2 • Ninho de ratos",
+      "type": "mobs",
+      "chapter": 1,
+      "chapterIndex": 0,
+      "enemyUnits": [
+        {
+          "slot": 0,
+          "characterId": "Rat",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 16,
+          "combatCell": 37,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 20,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 1,
+          "characterId": "Rat",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 17,
+          "combatCell": 38,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 20,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 2,
+          "characterId": "Rat",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 18,
+          "combatCell": 39,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 20,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        }
+      ]
+    },
+    {
+      "visibleRound": 3,
+      "encounterIndex": 2,
+      "label": "1-3 • Equipe rival",
+      "type": "team",
+      "chapter": 1,
+      "chapterIndex": 0,
+      "enemyUnits": [
+        {
+          "slot": 0,
+          "characterId": "Tank",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 16,
+          "combatCell": 37,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 80,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.6,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 1,
+          "characterId": "Witch",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 10,
+          "combatCell": 45,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 50,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 2,
+          "characterId": "Assassin",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 18,
+          "combatCell": 39,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 50,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 1.0357142857142858,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        }
+      ]
+    },
+    {
+      "visibleRound": 4,
+      "encounterIndex": 3,
+      "label": "1-4 • Covil das serpentes",
+      "type": "mobs",
+      "chapter": 1,
+      "chapterIndex": 0,
+      "enemyUnits": [
+        {
+          "slot": 0,
+          "characterId": "Serpent",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 2,
+          "combatCell": 51,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 30,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 1,
+          "characterId": "Serpent",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 10,
+          "combatCell": 45,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 30,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 2,
+          "characterId": "Rat",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 18,
+          "combatCell": 39,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 20,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        }
+      ]
+    },
+    {
+      "visibleRound": 5,
+      "encounterIndex": 4,
+      "label": "1-5 • Equipe rival",
+      "type": "team",
+      "chapter": 1,
+      "chapterIndex": 0,
+      "enemyUnits": [
+        {
+          "slot": 0,
+          "characterId": "Tank",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 16,
+          "combatCell": 37,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 80,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.6,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 1,
+          "characterId": "Cowboy",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 10,
+          "combatCell": 45,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 50,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 2,
+          "characterId": "Caster",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 4,
+          "combatCell": 53,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 50,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 3,
+          "characterId": "Assassin",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 24,
+          "combatCell": 31,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 50,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 1.0357142857142858,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        }
+      ]
+    },
+    {
+      "visibleRound": 6,
+      "encounterIndex": 5,
+      "label": "2-1 • Equipe rival",
+      "type": "team",
+      "chapter": 2,
+      "chapterIndex": 1,
+      "enemyUnits": [
+        {
+          "slot": 0,
+          "characterId": "Gorilla",
+          "stars": 2,
+          "items": [
+            "heart"
+          ],
+          "hpPower": 1,
+          "localHomeCell": 16,
+          "combatCell": 37,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 153,
+            "attack": 2,
+            "healingBase": 2,
+            "armor": 0,
+            "attackIntervalSeconds": 2.6,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 1,
+          "characterId": "Tank",
+          "stars": 2,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 17,
+          "combatCell": 38,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 142,
+            "attack": 2,
+            "healingBase": 2,
+            "armor": 0,
+            "attackIntervalSeconds": 2.6,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 2,
+          "characterId": "Ranger",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 4,
+          "combatCell": 53,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 59,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 1.7249999999999999,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 3,
+          "characterId": "Cowboy",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 9,
+          "combatCell": 44,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 59,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 1.7249999999999999,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        }
+      ]
+    },
+    {
+      "visibleRound": 7,
+      "encounterIndex": 6,
+      "label": "2-2 • Ninho de ratos",
+      "type": "mobs",
+      "chapter": 2,
+      "chapterIndex": 1,
+      "enemyUnits": [
+        {
+          "slot": 0,
+          "characterId": "Rat",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1.4,
+          "localHomeCell": 16,
+          "combatCell": 37,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 28,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 1,
+          "characterId": "Rat",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1.4,
+          "localHomeCell": 17,
+          "combatCell": 38,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 28,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 2,
+          "characterId": "Rat",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1.4,
+          "localHomeCell": 18,
+          "combatCell": 39,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 28,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 3,
+          "characterId": "Rat",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1.4,
+          "localHomeCell": 24,
+          "combatCell": 31,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 28,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        }
+      ]
+    },
+    {
+      "visibleRound": 8,
+      "encounterIndex": 7,
+      "label": "2-3 • Equipe rival",
+      "type": "team",
+      "chapter": 2,
+      "chapterIndex": 1,
+      "enemyUnits": [
+        {
+          "slot": 0,
+          "characterId": "Gorilla",
+          "stars": 2,
+          "items": [
+            "heart"
+          ],
+          "hpPower": 1,
+          "localHomeCell": 16,
+          "combatCell": 37,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 153,
+            "attack": 2,
+            "healingBase": 2,
+            "armor": 0,
+            "attackIntervalSeconds": 2.6,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0.22,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 1,
+          "characterId": "RatKing",
+          "stars": 2,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 10,
+          "combatCell": 45,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 89,
+            "attack": 2,
+            "healingBase": 2,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0.22,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 2,
+          "characterId": "Cobra",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 4,
+          "combatCell": 53,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 59,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0.22,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 3,
+          "characterId": "Witch",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 9,
+          "combatCell": 44,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 59,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 4,
+          "characterId": "Tank",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 17,
+          "combatCell": 38,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 94,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.6,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        }
+      ]
+    },
+    {
+      "visibleRound": 9,
+      "encounterIndex": 8,
+      "label": "2-4 • Covil das serpentes",
+      "type": "mobs",
+      "chapter": 2,
+      "chapterIndex": 1,
+      "enemyUnits": [
+        {
+          "slot": 0,
+          "characterId": "Serpent",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1.4,
+          "localHomeCell": 2,
+          "combatCell": 51,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 42,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 1,
+          "characterId": "Serpent",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1.4,
+          "localHomeCell": 10,
+          "combatCell": 45,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 42,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 2,
+          "characterId": "Rat",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1.4,
+          "localHomeCell": 18,
+          "combatCell": 39,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 28,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 3,
+          "characterId": "Rat",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1.4,
+          "localHomeCell": 16,
+          "combatCell": 37,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 28,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        }
+      ]
+    },
+    {
+      "visibleRound": 10,
+      "encounterIndex": 9,
+      "label": "2-5 • Equipe rival",
+      "type": "team",
+      "chapter": 2,
+      "chapterIndex": 1,
+      "enemyUnits": [
+        {
+          "slot": 0,
+          "characterId": "David",
+          "stars": 2,
+          "items": [
+            "heart"
+          ],
+          "hpPower": 1,
+          "localHomeCell": 16,
+          "combatCell": 37,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 130,
+            "attack": 2,
+            "healingBase": 2,
+            "armor": 15,
+            "attackIntervalSeconds": 2.6,
+            "spellMultiplier": 1.5,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 1,
+          "characterId": "Genie",
+          "stars": 2,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 10,
+          "combatCell": 45,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 75,
+            "attack": 2,
+            "healingBase": 2,
+            "armor": 15,
+            "attackIntervalSeconds": 2.4,
+            "spellMultiplier": 1.5,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 2,
+          "characterId": "Caster",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 4,
+          "combatCell": 53,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 50,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 15,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1.5,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 3,
+          "characterId": "Witch",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 9,
+          "combatCell": 44,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 50,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 15,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1.5,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 4,
+          "characterId": "Ranger",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 3,
+          "combatCell": 52,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 50,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 15,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1.5,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        }
+      ]
+    },
+    {
+      "visibleRound": 11,
+      "encounterIndex": 10,
+      "label": "3-1 • Equipe rival",
+      "type": "team",
+      "chapter": 3,
+      "chapterIndex": 2,
+      "enemyUnits": [
+        {
+          "slot": 0,
+          "characterId": "Gorilla",
+          "stars": 2,
+          "items": [
+            "heart"
+          ],
+          "hpPower": 1,
+          "localHomeCell": 16,
+          "combatCell": 37,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 169,
+            "attack": 2,
+            "healingBase": 2,
+            "armor": 15,
+            "attackIntervalSeconds": 2.6,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 1,
+          "characterId": "David",
+          "stars": 2,
+          "items": [
+            "blade"
+          ],
+          "hpPower": 1,
+          "localHomeCell": 17,
+          "combatCell": 38,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 156,
+            "attack": 3,
+            "healingBase": 2,
+            "armor": 15,
+            "attackIntervalSeconds": 2.6,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 2,
+          "characterId": "Tank",
+          "stars": 2,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 18,
+          "combatCell": 39,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 156,
+            "attack": 2,
+            "healingBase": 2,
+            "armor": 15,
+            "attackIntervalSeconds": 2.6,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 3,
+          "characterId": "Cowboy",
+          "stars": 2,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 9,
+          "combatCell": 44,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 98,
+            "attack": 2,
+            "healingBase": 2,
+            "armor": 15,
+            "attackIntervalSeconds": 1.7249999999999999,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 4,
+          "characterId": "Ranger",
+          "stars": 2,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 3,
+          "combatCell": 52,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 98,
+            "attack": 2,
+            "healingBase": 2,
+            "armor": 15,
+            "attackIntervalSeconds": 1.7249999999999999,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 5,
+          "characterId": "Genie",
+          "stars": 2,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 11,
+          "combatCell": 46,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 98,
+            "attack": 2,
+            "healingBase": 2,
+            "armor": 15,
+            "attackIntervalSeconds": 2.4,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        }
+      ]
+    },
+    {
+      "visibleRound": 12,
+      "encounterIndex": 11,
+      "label": "3-2 • Ninho de ratos",
+      "type": "mobs",
+      "chapter": 3,
+      "chapterIndex": 2,
+      "enemyUnits": [
+        {
+          "slot": 0,
+          "characterId": "Rat",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1.8,
+          "localHomeCell": 16,
+          "combatCell": 37,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 36,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 1,
+          "characterId": "Rat",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1.8,
+          "localHomeCell": 17,
+          "combatCell": 38,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 36,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 2,
+          "characterId": "Rat",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1.8,
+          "localHomeCell": 18,
+          "combatCell": 39,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 36,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 3,
+          "characterId": "Rat",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1.8,
+          "localHomeCell": 24,
+          "combatCell": 31,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 36,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 4,
+          "characterId": "Rat",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1.8,
+          "localHomeCell": 10,
+          "combatCell": 45,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 36,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        }
+      ]
+    },
+    {
+      "visibleRound": 13,
+      "encounterIndex": 12,
+      "label": "3-3 • Equipe rival",
+      "type": "team",
+      "chapter": 3,
+      "chapterIndex": 2,
+      "enemyUnits": [
+        {
+          "slot": 0,
+          "characterId": "Ninja",
+          "stars": 2,
+          "items": [
+            "heart"
+          ],
+          "hpPower": 1,
+          "localHomeCell": 16,
+          "combatCell": 37,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 85,
+            "attack": 2,
+            "healingBase": 2,
+            "armor": 0,
+            "attackIntervalSeconds": 2,
+            "spellMultiplier": 1.5,
+            "movementCellsPerSecond": 1.0357142857142858,
+            "executionBonus": 0.5,
+            "lifesteal": 0,
+            "canInitialJump": true
+          }
+        },
+        {
+          "slot": 1,
+          "characterId": "Assassin",
+          "stars": 2,
+          "items": [
+            "blade"
+          ],
+          "hpPower": 1,
+          "localHomeCell": 17,
+          "combatCell": 38,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 75,
+            "attack": 3,
+            "healingBase": 2,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1.5,
+            "movementCellsPerSecond": 1.0357142857142858,
+            "executionBonus": 0.5,
+            "lifesteal": 0,
+            "canInitialJump": true
+          }
+        },
+        {
+          "slot": 2,
+          "characterId": "Witch",
+          "stars": 2,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 4,
+          "combatCell": 53,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 75,
+            "attack": 2,
+            "healingBase": 2,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1.5,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0.5,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 3,
+          "characterId": "Caster",
+          "stars": 2,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 9,
+          "combatCell": 44,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 75,
+            "attack": 2,
+            "healingBase": 2,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1.5,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0.5,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 4,
+          "characterId": "Genie",
+          "stars": 2,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 3,
+          "combatCell": 52,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 75,
+            "attack": 2,
+            "healingBase": 2,
+            "armor": 0,
+            "attackIntervalSeconds": 2.4,
+            "spellMultiplier": 1.5,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0.5,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 5,
+          "characterId": "Tank",
+          "stars": 2,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 18,
+          "combatCell": 39,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 120,
+            "attack": 2,
+            "healingBase": 2,
+            "armor": 0,
+            "attackIntervalSeconds": 2.6,
+            "spellMultiplier": 1.5,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0.5,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        }
+      ]
+    },
+    {
+      "visibleRound": 14,
+      "encounterIndex": 13,
+      "label": "3-4 • Covil das serpentes",
+      "type": "mobs",
+      "chapter": 3,
+      "chapterIndex": 2,
+      "enemyUnits": [
+        {
+          "slot": 0,
+          "characterId": "Serpent",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1.8,
+          "localHomeCell": 2,
+          "combatCell": 51,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 54,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 1,
+          "characterId": "Serpent",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1.8,
+          "localHomeCell": 10,
+          "combatCell": 45,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 54,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 2,
+          "characterId": "Rat",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1.8,
+          "localHomeCell": 18,
+          "combatCell": 39,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 36,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 3,
+          "characterId": "Rat",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1.8,
+          "localHomeCell": 16,
+          "combatCell": 37,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 36,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 4,
+          "characterId": "Rat",
+          "stars": 1,
+          "items": [],
+          "hpPower": 1.8,
+          "localHomeCell": 17,
+          "combatCell": 38,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 36,
+            "attack": 1,
+            "healingBase": 1,
+            "armor": 0,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        }
+      ]
+    },
+    {
+      "visibleRound": 15,
+      "encounterIndex": 14,
+      "label": "3-5 • Guardiões finais",
+      "type": "team",
+      "chapter": 3,
+      "chapterIndex": 2,
+      "enemyUnits": [
+        {
+          "slot": 0,
+          "characterId": "David",
+          "stars": 2,
+          "items": [
+            "heart"
+          ],
+          "hpPower": 1,
+          "localHomeCell": 16,
+          "combatCell": 37,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 153,
+            "attack": 2,
+            "healingBase": 2,
+            "armor": 30,
+            "attackIntervalSeconds": 2.6,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 1,
+          "characterId": "Gorilla",
+          "stars": 2,
+          "items": [
+            "blade"
+          ],
+          "hpPower": 1,
+          "localHomeCell": 17,
+          "combatCell": 38,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 142,
+            "attack": 3,
+            "healingBase": 2,
+            "armor": 30,
+            "attackIntervalSeconds": 2.6,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0.22,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 2,
+          "characterId": "Genie",
+          "stars": 2,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 4,
+          "combatCell": 53,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 89,
+            "attack": 2,
+            "healingBase": 2,
+            "armor": 30,
+            "attackIntervalSeconds": 2.4,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 3,
+          "characterId": "RatKing",
+          "stars": 2,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 9,
+          "combatCell": 44,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 89,
+            "attack": 2,
+            "healingBase": 2,
+            "armor": 30,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0.22,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 4,
+          "characterId": "Cobra",
+          "stars": 2,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 3,
+          "combatCell": 52,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 89,
+            "attack": 2,
+            "healingBase": 2,
+            "armor": 30,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0.22,
+            "canInitialJump": false
+          }
+        },
+        {
+          "slot": 5,
+          "characterId": "Cowboy",
+          "stars": 2,
+          "items": [],
+          "hpPower": 1,
+          "localHomeCell": 11,
+          "combatCell": 46,
+          "initialStatsWithTeamSynergies": {
+            "hpMax": 89,
+            "attack": 2,
+            "healingBase": 2,
+            "armor": 30,
+            "attackIntervalSeconds": 2.3,
+            "spellMultiplier": 1,
+            "movementCellsPerSecond": 0.7857142857142857,
+            "executionBonus": 0,
+            "lifesteal": 0,
+            "canInitialJump": false
+          }
+        }
+      ]
+    }
+  ],
+  "futureDancer": {
+    "implemented": false,
+    "nameRequested": "Michael Jackson",
+    "canAttack": false,
+    "pulseSeconds": 2,
+    "healFractionOfOwnMaxHp": 0.1,
+    "shieldFractionOfOwnMaxHp": 0.1,
+    "moonwalkCells": [
+      3,
+      4
+    ],
+    "healingAmplification": "undecided",
+    "shieldStackingAndDuration": "undecided"
+  }
+}

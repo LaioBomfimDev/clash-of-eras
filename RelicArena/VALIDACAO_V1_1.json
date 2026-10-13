@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-11",
+  "timezone": "America/Sao_Paulo",
+  "version": "V1.1 local: camera inclinada, HUD translucido estilo TFT, kit novo do Michael, copias/niveis na partida e bola maior",
+  "godot": "4.7.2.stable.official.ed1daf0bf",
+  "import": {
+    "exit_code": 0,
+    "script_errors": 0
+  },
+  "runners": [
+    {"runner": "res://tests/test_simulation.gd", "passed": 189, "failed": 0, "exit_code": 0},
+    {"runner": "res://tests/test_match_session.gd", "passed": 118, "failed": 0, "exit_code": 0},
+    {"runner": "res://tests/test_full_matches.gd", "passed": 715, "failed": 0, "exit_code": 0, "automated_matches": 4},
+    {"runner": "res://client/smoke.gd", "passed": 209, "failed": 0, "exit_code": 0}
+  ],
+  "final_logs": {
+    "script_errors": 0
+  },
+  "window_launch": {
+    "command": "--path RelicArena --resolution 1280x720 --quit-after 240",
+    "exit_code": 0,
+    "script_errors": 0
+  },
+  "michael_kit": {
+    "moonwalk_steps": 3,
+    "shield_refresh_rule": "maior valor entre atual e novo; duracao recomeca; nao acumula",
+    "blocked_step": "dancado no lugar e contado no ciclo",
+    "continuous_heal": "10 HP por segundo, raio 2, valores de teste",
+    "covered_by": "tests/test_simulation.gd::_test_michael_moonwalk e client/smoke.gd"
+  },
+  "visual": {
+    "base_resolution": [1280, 720],
+    "sprite_scale": 1,
+    "arena_backdrop": "assets/arena/coliseu_estudo_02.png a 4x inteiro (copia SHA-256 identica ao estudo PixelLab)",
+    "icons_generated_by_code": 21,
+    "portraits": "AtlasTexture sobre as frentes existentes; nenhum PNG de personagem novo",
+    "captures": [
+      "captures/v1_1_menu.png",
+      "captures/v1_1_beneficio.png",
+      "captures/v1_1_preparacao.png",
+      "captures/v1_1_itens.png",
+      "captures/v1_1_combate.png",
+      "captures/v1_1_resultado.png",
+      "captures/v1_1_niveis.png",
+      "captures/v1_1_niveis_combate.png"
+    ],
+    "inspected": true,
+    "captures_computer_screen": false
+  },
+  "match_levels": {
+    "rule": "2 copias = nivel 2; 3 copias no total = nivel 3; copias gratis",
+    "power_multiplier": [1.0, 1.5, 2.25],
+    "sprite_scale": [1.0, 1.2, 1.44],
+    "level_3_aura": true,
+    "covered_by": "tests/test_match_session.gd::_test_copies_and_levels, tests/test_simulation.gd::_test_match_levels, client/smoke.gd::_check_copies"
+  },
+  "notes": [
+    "Erros de compilacao durante o desenvolvimento (palavra reservada breakpoint, funcao estatica fora da classe interna, rotulo com quebra de linha medido antes da largura) foram corrigidos antes da entrega; nao chegaram a uma versao jogada.",
+    "Fluxos automatizados de interface nao substituem teste humano com mouse ou toque."
+  ],
+  "not_validated": [
+    "partidas humanas",
+    "balanceamento",
+    "celular/toque fisico e tamanhos de toque",
+    "proporcoes 20:9 (projeto usa aspecto mantido com faixas)",
+    "multiplayer/rede",
+    "arte final da arena e da interface",
+    "audicao dos efeitos"
+  ],
+  "paid_generations_this_delivery": 0
+}

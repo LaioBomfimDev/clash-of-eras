@@ -1,0 +1,242 @@
+{
+  "name": "Clash of Eras - Laco01",
+  "date": "2026-10-12",
+  "method": "PixelLab vfx_workbench deterministic FREE editor; custom authored shape/image layers, no AI generation.",
+  "source_role": "Rapunzel target noose/knot only; long dynamic rope stays in client code.",
+  "effect_id": "40e143b2-5dac-43ed-8c68-b8892fccfb69",
+  "step_id": "8f0460f6-0fb9-4090-b6f3-da403d023e6f",
+  "export_image_id": "fd0b489b-8c80-45b6-9c51-1d8d6edde2f3",
+  "effect_url": "https://pixellab.ai/create-vfx?effect=40e143b2-5dac-43ed-8c68-b8892fccfb69",
+  "export_base_url": "https://api.pixellab.ai/mcp/pixel-tools/fd0b489b-8c80-45b6-9c51-1d8d6edde2f3/",
+  "ai_generation_calls": 0,
+  "authored_canvas": [
+    32,
+    28
+  ],
+  "authored_frames": 12,
+  "fps": 16,
+  "nominal_authored_duration_seconds": 0.75,
+  "loop": false,
+  "anchor": {
+    "kind": "origin",
+    "x": 16,
+    "y": 14
+  },
+  "selected_game_clip": "part-laco",
+  "selected_game_sheet": "game_pack/part-laco.png",
+  "selected_clip_depth": "front",
+  "packed_frames": 11,
+  "packed_frame_size": [
+    24,
+    15
+  ],
+  "packed_sheet_size": [
+    96,
+    45
+  ],
+  "packed_columns": 4,
+  "packed_rows": 3,
+  "offset": {
+    "x": -12,
+    "y": -8
+  },
+  "zip_sha256": "9db2a623b867ab01d167fdf6db4fb84afb3713c768fcfcf0553a974be103a63c",
+  "zip_bytes": 3196,
+  "zip_crc_passed": true,
+  "zip_paths_safe": true,
+  "extracted_members": 4,
+  "extracted_bytes": 3851,
+  "extracted_byte_identical": true,
+  "zip_member_checks": [
+    {
+      "path": "whole.png",
+      "byte_identical": true,
+      "sha256": "a818bb7520c4224c15455419f33f78a03f77949cf8dbe690bcdafcce752c2113"
+    },
+    {
+      "path": "part-laco.png",
+      "byte_identical": true,
+      "sha256": "a818bb7520c4224c15455419f33f78a03f77949cf8dbe690bcdafcce752c2113"
+    },
+    {
+      "path": "manifest.json",
+      "byte_identical": true,
+      "sha256": "9b89e0493389b04718077cd87b8e50ecdffea4dbead6aa926417c79486cb8806"
+    },
+    {
+      "path": "README.txt",
+      "byte_identical": true,
+      "sha256": "3030bb6c509e7759cd342fd0b98dd3968551c657dfd76c4e6886399f751d632c"
+    }
+  ],
+  "exported_files": [
+    {
+      "path": "original/clash-of-eras-laco01-game.zip",
+      "bytes": 3196,
+      "sha256": "9db2a623b867ab01d167fdf6db4fb84afb3713c768fcfcf0553a974be103a63c"
+    },
+    {
+      "path": "original/clash-of-eras-laco01.gif",
+      "bytes": 1107,
+      "sha256": "647ff5d05505e2b830c7f87e9b096aac0503c3f4030de2b82801ce3453acdd9d"
+    },
+    {
+      "path": "original/clash-of-eras-laco01.json",
+      "bytes": 4711,
+      "sha256": "83773d490f60da74666b11db3631f02ff023cef866f1977ea2e7e40abe6d2a91"
+    },
+    {
+      "path": "original/clash-of-eras-laco01.png",
+      "bytes": 1091,
+      "sha256": "d46d60a52bbb816e430e83776fb55e66c0b48bdb0bd4b694aa7a04b7beb8a2f4"
+    },
+    {
+      "path": "game_pack/whole.png",
+      "bytes": 963,
+      "sha256": "a818bb7520c4224c15455419f33f78a03f77949cf8dbe690bcdafcce752c2113"
+    },
+    {
+      "path": "game_pack/part-laco.png",
+      "bytes": 963,
+      "sha256": "a818bb7520c4224c15455419f33f78a03f77949cf8dbe690bcdafcce752c2113"
+    },
+    {
+      "path": "game_pack/manifest.json",
+      "bytes": 983,
+      "sha256": "9b89e0493389b04718077cd87b8e50ecdffea4dbead6aa926417c79486cb8806"
+    },
+    {
+      "path": "game_pack/README.txt",
+      "bytes": 942,
+      "sha256": "3030bb6c509e7759cd342fd0b98dd3968551c657dfd76c4e6886399f751d632c"
+    }
+  ],
+  "original_atlas_size": [
+    128,
+    84
+  ],
+  "authored_alpha_bounds": [
+    [
+      4,
+      6,
+      28,
+      21
+    ],
+    [
+      5,
+      6,
+      27,
+      20
+    ],
+    [
+      6,
+      6,
+      28,
+      21
+    ],
+    [
+      6,
+      7,
+      27,
+      21
+    ],
+    [
+      6,
+      7,
+      27,
+      21
+    ],
+    [
+      6,
+      7,
+      27,
+      21
+    ],
+    [
+      6,
+      7,
+      27,
+      21
+    ],
+    [
+      6,
+      7,
+      27,
+      21
+    ],
+    [
+      6,
+      7,
+      28,
+      21
+    ],
+    [
+      6,
+      7,
+      27,
+      20
+    ],
+    [
+      5,
+      6,
+      28,
+      20
+    ],
+    null
+  ],
+  "all_content_within_canvas": true,
+  "last_authored_frame_transparent": true,
+  "packed_clip_pixel_checks": [
+    {
+      "clip": "whole",
+      "frames_compared": 11,
+      "all_rgba_pixels_match_original": true
+    },
+    {
+      "clip": "part-laco",
+      "frames_compared": 11,
+      "all_rgba_pixels_match_original": true
+    }
+  ],
+  "gif_frames": 8,
+  "gif_durations_ms": [
+    60,
+    60,
+    60,
+    310,
+    60,
+    60,
+    60,
+    60
+  ],
+  "gif_total_ms": 730,
+  "format_notes": [
+    "Original authored JSON contains12frames. Game pack trims the final transparent frame, leaving11 per clip. All22 packed RGBA crops are byte-identical to their original atlas crops.",
+    "GIF stores8frames because repeated hold frames are combined into longer durations. Use the game-pack manifest for engine frame count, recuts, offsets and timing.",
+    "whole and part-laco have identical PNG bytes; part-laco declares front depth. No character image exists in the export."
+  ],
+  "visual_review": {
+    "all_12_authored_frames_reviewed_4x_and_1x": true,
+    "export_response_all_frames_reviewed": true,
+    "local_packed_sheet_all_11_frames_reviewed": true,
+    "sequence": "1-2 open loop;3 closes around the target;4-8 holds;9 loosens;10-11 thin rope fragments release;12 transparent.",
+    "palette": [
+      "#6b421f",
+      "#ac7c35",
+      "#dfbc69",
+      "#f0d99a"
+    ],
+    "physical_rope_not_magic_explosion": true,
+    "character_embedded": false,
+    "long_travel_rope_embedded": false,
+    "no_glow_or_particle_burst": true,
+    "notes": "Small gold/brown noose with short knot/tail. Final release fragments are an authored visual suggestion. Duration and placement must follow real lasso/stun state during integration.",
+    "final_user_visual_approval": false
+  },
+  "runtime_integrated": false,
+  "shared_manifest_modified": false,
+  "gameplay_modified": false,
+  "shared_docs_modified": false,
+  "resumable_recipe": "recipe.json",
+  "exported_downloads_http200": 4
+}

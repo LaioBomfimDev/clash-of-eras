@@ -1,0 +1,513 @@
+{
+  "name": "Clash of Eras - Laco01",
+  "notes": "Small physical golden hair/rope noose on target. Close, hold, release. No character, no travelling rope, no magic explosion. Free deterministic authored layers.",
+  "canvas": {
+    "w": 32,
+    "h": 28
+  },
+  "origin": [
+    16,
+    14
+  ],
+  "frames": 12,
+  "fps": 16,
+  "loop": false,
+  "ramps": {
+    "main": [
+      "#6b421f",
+      "#ac7c35",
+      "#dfbc69",
+      "#f0d99a"
+    ]
+  },
+  "tones": 4,
+  "dither": 0,
+  "outline": {
+    "mode": "none"
+  },
+  "layers": [
+    {
+      "id": "rope_edge",
+      "type": "shape",
+      "x": 16,
+      "y": 13,
+      "z": "front",
+      "points": [
+        [
+          10,
+          0
+        ],
+        [
+          9,
+          3
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          -3,
+          6
+        ],
+        [
+          -7,
+          4
+        ],
+        [
+          -10,
+          1
+        ],
+        [
+          -10,
+          -2
+        ],
+        [
+          -7,
+          -5
+        ],
+        [
+          -3,
+          -6
+        ],
+        [
+          2,
+          -6
+        ],
+        [
+          7,
+          -4
+        ],
+        [
+          9,
+          -2
+        ],
+        [
+          10,
+          0
+        ]
+      ],
+      "closed": false,
+      "smooth": 0.1,
+      "scale": {
+        "keys": [
+          [
+            0,
+            1.05
+          ],
+          [
+            0.25,
+            0.8
+          ],
+          [
+            0.7,
+            0.8
+          ],
+          [
+            0.9,
+            1
+          ],
+          [
+            1,
+            1.05
+          ]
+        ],
+        "ease": "in_out"
+      },
+      "reveal": {
+        "keys": [
+          [
+            0,
+            0.65
+          ],
+          [
+            0.22,
+            1
+          ],
+          [
+            0.7,
+            1
+          ],
+          [
+            0.9,
+            0.9
+          ],
+          [
+            1,
+            0.7
+          ]
+        ],
+        "ease": "in_out"
+      },
+      "dissolve": {
+        "keys": [
+          [
+            0,
+            0
+          ],
+          [
+            0.78,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "ease": "linear"
+      },
+      "outline": false,
+      "fill": "flat",
+      "ramp": "main",
+      "group": "laco",
+      "width": 3,
+      "level": 0.1
+    },
+    {
+      "id": "rope_core",
+      "type": "shape",
+      "x": 16,
+      "y": 13,
+      "z": "front",
+      "points": [
+        [
+          10,
+          0
+        ],
+        [
+          9,
+          3
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          -3,
+          6
+        ],
+        [
+          -7,
+          4
+        ],
+        [
+          -10,
+          1
+        ],
+        [
+          -10,
+          -2
+        ],
+        [
+          -7,
+          -5
+        ],
+        [
+          -3,
+          -6
+        ],
+        [
+          2,
+          -6
+        ],
+        [
+          7,
+          -4
+        ],
+        [
+          9,
+          -2
+        ],
+        [
+          10,
+          0
+        ]
+      ],
+      "closed": false,
+      "smooth": 0.1,
+      "scale": {
+        "keys": [
+          [
+            0,
+            1.05
+          ],
+          [
+            0.25,
+            0.8
+          ],
+          [
+            0.7,
+            0.8
+          ],
+          [
+            0.9,
+            1
+          ],
+          [
+            1,
+            1.05
+          ]
+        ],
+        "ease": "in_out"
+      },
+      "reveal": {
+        "keys": [
+          [
+            0,
+            0.65
+          ],
+          [
+            0.22,
+            1
+          ],
+          [
+            0.7,
+            1
+          ],
+          [
+            0.9,
+            0.9
+          ],
+          [
+            1,
+            0.7
+          ]
+        ],
+        "ease": "in_out"
+      },
+      "dissolve": {
+        "keys": [
+          [
+            0,
+            0
+          ],
+          [
+            0.78,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "ease": "linear"
+      },
+      "outline": false,
+      "fill": "flat",
+      "ramp": "main",
+      "group": "laco",
+      "width": 1,
+      "level": 0.78
+    },
+    {
+      "id": "tail_edge",
+      "type": "shape",
+      "x": {
+        "keys": [
+          [
+            0,
+            24.5
+          ],
+          [
+            0.17,
+            24
+          ],
+          [
+            0.65,
+            24
+          ],
+          [
+            1,
+            26
+          ]
+        ],
+        "ease": "in_out"
+      },
+      "y": 13,
+      "z": "front",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          -1,
+          7
+        ]
+      ],
+      "closed": false,
+      "smooth": 0,
+      "width": 3,
+      "fill": "flat",
+      "level": 0.1,
+      "outline": false,
+      "ramp": "main",
+      "life": [
+        0.15,
+        0.98
+      ],
+      "dissolve": {
+        "keys": [
+          [
+            0,
+            0
+          ],
+          [
+            0.73,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "group": "laco"
+    },
+    {
+      "id": "tail_core",
+      "type": "shape",
+      "x": {
+        "keys": [
+          [
+            0,
+            24.5
+          ],
+          [
+            0.17,
+            24
+          ],
+          [
+            0.65,
+            24
+          ],
+          [
+            1,
+            26
+          ]
+        ],
+        "ease": "in_out"
+      },
+      "y": 13,
+      "z": "front",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          -1,
+          7
+        ]
+      ],
+      "closed": false,
+      "smooth": 0,
+      "width": 1,
+      "fill": "flat",
+      "level": 0.78,
+      "outline": false,
+      "ramp": "main",
+      "life": [
+        0.15,
+        0.98
+      ],
+      "dissolve": {
+        "keys": [
+          [
+            0,
+            0
+          ],
+          [
+            0.73,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "group": "laco"
+    },
+    {
+      "id": "knot",
+      "type": "image",
+      "x": {
+        "keys": [
+          [
+            0,
+            24.5
+          ],
+          [
+            0.17,
+            24
+          ],
+          [
+            0.65,
+            24
+          ],
+          [
+            1,
+            26
+          ]
+        ],
+        "ease": "in_out"
+      },
+      "y": 13,
+      "z": "front",
+      "ramp": "main",
+      "pixels": [
+        ".121.",
+        ".232.",
+        "12321",
+        ".232.",
+        ".121."
+      ],
+      "facing": "none",
+      "life": [
+        0.15,
+        0.98
+      ],
+      "dissolve": {
+        "keys": [
+          [
+            0,
+            0
+          ],
+          [
+            0.76,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "group": "laco"
+    }
+  ]
+}

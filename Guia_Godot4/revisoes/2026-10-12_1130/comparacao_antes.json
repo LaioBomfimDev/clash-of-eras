@@ -1,0 +1,3664 @@
+{
+  "checked_utc": "2026-10-12T14:31:45.8936049Z",
+  "baseline": "Guia_Godot4/Clash_of_Eras_V1_4_local.zip",
+  "files": 519,
+  "identical": 516,
+  "differences": [
+    {
+      "path": "Guia_Godot4/CEREBRO.md",
+      "exists": true,
+      "baseline_sha256": "3C224E0381ED842E08EAD583266B9E9BFC55F4D9B8433E60D2CBCB318EF71083",
+      "current_sha256": "CC434B91D50A77F324C820C524142ADAF8C6BDEDFBDD0D1E17DC1F7346B0694A",
+      "identical": false
+    },
+    {
+      "path": "Guia_Godot4/EXECUCAO_CONTINUA.md",
+      "exists": true,
+      "baseline_sha256": "951FC1C38C4C939BEAC9F7102F19A90BFEB4A942B5C2E55A22C2FFEF007326AD",
+      "current_sha256": "457F7744128C331FF4553782CF9C2B9F408AFFD12B6E1354D25AF00C60BC2A0F",
+      "identical": false
+    },
+    {
+      "path": "Guia_Godot4/HISTORICO_DE_BUGS.md",
+      "exists": true,
+      "baseline_sha256": "68930219BD2DE84F30C365D67B08260FC2990EEB69AADF42F8379FDFED966A7A",
+      "current_sha256": "18744613224F41EA4222AA3A042D1C90D297CE0BFDD3B16068B095BFC6837AC7",
+      "identical": false
+    }
+  ],
+  "inventory": [
+    {
+      "path": "AGENTS.md",
+      "exists": true,
+      "baseline_sha256": "B5DC103507212F7E3698215878DF03ED4CB1F2AA1A1A3117804214B0AA3CDA6C",
+      "current_sha256": "B5DC103507212F7E3698215878DF03ED4CB1F2AA1A1A3117804214B0AA3CDA6C",
+      "identical": true
+    },
+    {
+      "path": "Guia_Godot4/CEREBRO.md",
+      "exists": true,
+      "baseline_sha256": "3C224E0381ED842E08EAD583266B9E9BFC55F4D9B8433E60D2CBCB318EF71083",
+      "current_sha256": "CC434B91D50A77F324C820C524142ADAF8C6BDEDFBDD0D1E17DC1F7346B0694A",
+      "identical": false
+    },
+    {
+      "path": "Guia_Godot4/ELENCO_E_KITS_V2.md",
+      "exists": true,
+      "baseline_sha256": "EEC512F71D018A7BB05CDE7A9F4B6661AB67DC5B447B539AC4B0DD5DB7CB54DF",
+      "current_sha256": "EEC512F71D018A7BB05CDE7A9F4B6661AB67DC5B447B539AC4B0DD5DB7CB54DF",
+      "identical": true
+    },
+    {
+      "path": "Guia_Godot4/EXECUCAO_CONTINUA.md",
+      "exists": true,
+      "baseline_sha256": "951FC1C38C4C939BEAC9F7102F19A90BFEB4A942B5C2E55A22C2FFEF007326AD",
+      "current_sha256": "457F7744128C331FF4553782CF9C2B9F408AFFD12B6E1354D25AF00C60BC2A0F",
+      "identical": false
+    },
+    {
+      "path": "Guia_Godot4/HISTORICO_DE_BUGS.md",
+      "exists": true,
+      "baseline_sha256": "68930219BD2DE84F30C365D67B08260FC2990EEB69AADF42F8379FDFED966A7A",
+      "current_sha256": "18744613224F41EA4222AA3A042D1C90D297CE0BFDD3B16068B095BFC6837AC7",
+      "identical": false
+    },
+    {
+      "path": "Guia_Godot4/PERSONAGENS_LOTE_03.md",
+      "exists": true,
+      "baseline_sha256": "46C0F24ECC7582154F3AAC7241BA98196EA16FC38C4BB38CDC08D06C4A90CB20",
+      "current_sha256": "46C0F24ECC7582154F3AAC7241BA98196EA16FC38C4BB38CDC08D06C4A90CB20",
+      "identical": true
+    },
+    {
+      "path": "Guia_Godot4/visuais/personagens_lote_03_execucao.json",
+      "exists": true,
+      "baseline_sha256": "F1C0CC30E0372E20E3F893A2A2123ED199D75AAD6F2510810239E146AE82230A",
+      "current_sha256": "F1C0CC30E0372E20E3F893A2A2123ED199D75AAD6F2510810239E146AE82230A",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/.gitignore",
+      "exists": true,
+      "baseline_sha256": "9DDFAD792B35BC5EF4DB81BF985431A1D3746BE5281195CEDE8F81655A32DA65",
+      "current_sha256": "9DDFAD792B35BC5EF4DB81BF985431A1D3746BE5281195CEDE8F81655A32DA65",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/arena/braseiro.png",
+      "exists": true,
+      "baseline_sha256": "AC68112E711BAE4F84989FFAD8475E62CAF4E3E3D9CD0C288AAB16E4B612C446",
+      "current_sha256": "AC68112E711BAE4F84989FFAD8475E62CAF4E3E3D9CD0C288AAB16E4B612C446",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/arena/coliseu_estudo_02.png",
+      "exists": true,
+      "baseline_sha256": "0230386C5CA0ADFF21B3C2AE2BCA72A7F23C1902729EAA822009F94BB995469F",
+      "current_sha256": "0230386C5CA0ADFF21B3C2AE2BCA72A7F23C1902729EAA822009F94BB995469F",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/arena/props.json",
+      "exists": true,
+      "baseline_sha256": "AD57256C246354FEC3CC70B5FE1892914913DC1451C2DDC664825AD560F4A103",
+      "current_sha256": "AD57256C246354FEC3CC70B5FE1892914913DC1451C2DDC664825AD560F4A103",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/caramelo.png",
+      "exists": true,
+      "baseline_sha256": "3EC4003692D56CD3433F5EC20FB540CD540BCC023D48407874CB949779E610DC",
+      "current_sha256": "3EC4003692D56CD3433F5EC20FB540CD540BCC023D48407874CB949779E610DC",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/barbie/realista_03/exportacao.json",
+      "exists": true,
+      "baseline_sha256": "A9E35D8D6B233F30247A18180B05C76122EFC37FFC2A361951FE0B2598273D26",
+      "current_sha256": "A9E35D8D6B233F30247A18180B05C76122EFC37FFC2A361951FE0B2598273D26",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/barbie/realista_03/original/Idle/rotations/east.png",
+      "exists": true,
+      "baseline_sha256": "D37EAE1737D3A31C4B4CE906D985FA71EA5D52E23A91737F4EF78AF7309D9DA3",
+      "current_sha256": "D37EAE1737D3A31C4B4CE906D985FA71EA5D52E23A91737F4EF78AF7309D9DA3",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/barbie/realista_03/original/Idle/rotations/north-east.png",
+      "exists": true,
+      "baseline_sha256": "B1EA04854AF023711742B8EBFB53E244C49E6C369879E16C3A0013412294A185",
+      "current_sha256": "B1EA04854AF023711742B8EBFB53E244C49E6C369879E16C3A0013412294A185",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/barbie/realista_03/original/Idle/rotations/north-west.png",
+      "exists": true,
+      "baseline_sha256": "FD272FFD6B05DEC8FA0931CC47B1A6D7E028189AE64AD3E8F2A6BB24CDC2EF68",
+      "current_sha256": "FD272FFD6B05DEC8FA0931CC47B1A6D7E028189AE64AD3E8F2A6BB24CDC2EF68",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/barbie/realista_03/original/Idle/rotations/north.png",
+      "exists": true,
+      "baseline_sha256": "72556E675B900B1B5E6BEDDE86A810B2CFAD61B4515E2EA46F7343C1C3D0B6F4",
+      "current_sha256": "72556E675B900B1B5E6BEDDE86A810B2CFAD61B4515E2EA46F7343C1C3D0B6F4",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/barbie/realista_03/original/Idle/rotations/south-east.png",
+      "exists": true,
+      "baseline_sha256": "5B8E56B037BD75C3904C166C7200A849913F2A6C3C8F9E7AA2D5B8C4B1445A79",
+      "current_sha256": "5B8E56B037BD75C3904C166C7200A849913F2A6C3C8F9E7AA2D5B8C4B1445A79",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/barbie/realista_03/original/Idle/rotations/south-west.png",
+      "exists": true,
+      "baseline_sha256": "E053C6AC1DDA3CBA0888FE0D987B3F01543C5627E9C211DF36C0AF113EA18A28",
+      "current_sha256": "E053C6AC1DDA3CBA0888FE0D987B3F01543C5627E9C211DF36C0AF113EA18A28",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/barbie/realista_03/original/Idle/rotations/south.png",
+      "exists": true,
+      "baseline_sha256": "B8A055FC50CBA568C9A85F80651AE5F5ECF2D9C2AB6D29C0218F99E9F9F865BD",
+      "current_sha256": "B8A055FC50CBA568C9A85F80651AE5F5ECF2D9C2AB6D29C0218F99E9F9F865BD",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/barbie/realista_03/original/Idle/rotations/west.png",
+      "exists": true,
+      "baseline_sha256": "F2BF63E8C2778C4FD30446F54B4F67031985CD317C53723991E6DB5422288532",
+      "current_sha256": "F2BF63E8C2778C4FD30446F54B4F67031985CD317C53723991E6DB5422288532",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/barbie/realista_03/original/metadata.json",
+      "exists": true,
+      "baseline_sha256": "41A78EBAAD012CFE938B5721E56BFF2C80C427787A82667C8501D4B4095CCA3A",
+      "current_sha256": "41A78EBAAD012CFE938B5721E56BFF2C80C427787A82667C8501D4B4095CCA3A",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/barbie/realista_03/pixellab_original.zip",
+      "exists": true,
+      "baseline_sha256": "70C57F69D62FA38F9C337B120C9A1BC14BE78F478E1C0E0FDD879E5186B59C12",
+      "current_sha256": "70C57F69D62FA38F9C337B120C9A1BC14BE78F478E1C0E0FDD879E5186B59C12",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/bob_marley/realista_03/exportacao.json",
+      "exists": true,
+      "baseline_sha256": "168806CAED7CC300EABD062C28BF70BCFAC6CAC790B41F0EE5418D7EFF5EF4D5",
+      "current_sha256": "168806CAED7CC300EABD062C28BF70BCFAC6CAC790B41F0EE5418D7EFF5EF4D5",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/bob_marley/realista_03/original/Idle/rotations/east.png",
+      "exists": true,
+      "baseline_sha256": "5334112AD7FAD53BBE2FB84276FC53414B9589A0FD0BCE85E105672EE04AE9B6",
+      "current_sha256": "5334112AD7FAD53BBE2FB84276FC53414B9589A0FD0BCE85E105672EE04AE9B6",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/bob_marley/realista_03/original/Idle/rotations/north-east.png",
+      "exists": true,
+      "baseline_sha256": "069036596AFD24557BB2647B493D355700400C6E599741E26E23297E84290240",
+      "current_sha256": "069036596AFD24557BB2647B493D355700400C6E599741E26E23297E84290240",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/bob_marley/realista_03/original/Idle/rotations/north-west.png",
+      "exists": true,
+      "baseline_sha256": "CBE79BD504555E2BAE2A11D0623F653964279E41EDB1092C933DE7090CE67D52",
+      "current_sha256": "CBE79BD504555E2BAE2A11D0623F653964279E41EDB1092C933DE7090CE67D52",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/bob_marley/realista_03/original/Idle/rotations/north.png",
+      "exists": true,
+      "baseline_sha256": "B3A54487AF466C342A03BF1BADAC30358A8ADA4F30E9FCF3ABE698BC37D7CB70",
+      "current_sha256": "B3A54487AF466C342A03BF1BADAC30358A8ADA4F30E9FCF3ABE698BC37D7CB70",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/bob_marley/realista_03/original/Idle/rotations/south-east.png",
+      "exists": true,
+      "baseline_sha256": "4364B727719E34E569B4D98A5BD327849A4CFA44D93E7022F52F3D472FF2607C",
+      "current_sha256": "4364B727719E34E569B4D98A5BD327849A4CFA44D93E7022F52F3D472FF2607C",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/bob_marley/realista_03/original/Idle/rotations/south-west.png",
+      "exists": true,
+      "baseline_sha256": "CD6EA59EC158DEE579B9F3C7513D34C91730559337674E84491C8A1B2F40C364",
+      "current_sha256": "CD6EA59EC158DEE579B9F3C7513D34C91730559337674E84491C8A1B2F40C364",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/bob_marley/realista_03/original/Idle/rotations/south.png",
+      "exists": true,
+      "baseline_sha256": "05B162A3E5C5F9DF7EB04A983167D60CBE9BC82D76CAD04B360C40CEF3CD4097",
+      "current_sha256": "05B162A3E5C5F9DF7EB04A983167D60CBE9BC82D76CAD04B360C40CEF3CD4097",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/bob_marley/realista_03/original/Idle/rotations/west.png",
+      "exists": true,
+      "baseline_sha256": "5DF227BBB0B40AE92CD36DC2FC7A5FAD4A7A95D43D8E63A2A32856E9E392E713",
+      "current_sha256": "5DF227BBB0B40AE92CD36DC2FC7A5FAD4A7A95D43D8E63A2A32856E9E392E713",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/bob_marley/realista_03/original/metadata.json",
+      "exists": true,
+      "baseline_sha256": "8824D1F28A37686ED764A0D370B29EF3E748DB2F83A5A880F197FE20FA8786B3",
+      "current_sha256": "8824D1F28A37686ED764A0D370B29EF3E748DB2F83A5A880F197FE20FA8786B3",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/bob_marley/realista_03/pixellab_original.zip",
+      "exists": true,
+      "baseline_sha256": "761738C618640F87293B5E04A57D6921EEFB4726CFF8216766D36EADE5CD8432",
+      "current_sha256": "761738C618640F87293B5E04A57D6921EEFB4726CFF8216766D36EADE5CD8432",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/caramelo/original/Idle/rotations/east.png",
+      "exists": true,
+      "baseline_sha256": "BF24BD1C03465C0FC6080111C45EEDEE319B6FA06000CBEF4E8D9EFBCADDF56D",
+      "current_sha256": "BF24BD1C03465C0FC6080111C45EEDEE319B6FA06000CBEF4E8D9EFBCADDF56D",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/caramelo/original/Idle/rotations/north-east.png",
+      "exists": true,
+      "baseline_sha256": "7B098AA70AF2FAA65202105497DC1CDAD52464C6C675AC57FA9FFDAD70FEC98C",
+      "current_sha256": "7B098AA70AF2FAA65202105497DC1CDAD52464C6C675AC57FA9FFDAD70FEC98C",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/caramelo/original/Idle/rotations/north-west.png",
+      "exists": true,
+      "baseline_sha256": "C2076DC41966125920392DC44656DFBA065FA81779F737D26AA60FDD3BABC49C",
+      "current_sha256": "C2076DC41966125920392DC44656DFBA065FA81779F737D26AA60FDD3BABC49C",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/caramelo/original/Idle/rotations/north.png",
+      "exists": true,
+      "baseline_sha256": "5829A1B2D74D2FB5ABCEDFCB892DFECCFDEC51F77C42BDB9E360F5A9287546EF",
+      "current_sha256": "5829A1B2D74D2FB5ABCEDFCB892DFECCFDEC51F77C42BDB9E360F5A9287546EF",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/caramelo/original/Idle/rotations/south-east.png",
+      "exists": true,
+      "baseline_sha256": "843EC9F282F77F72CF080C83BEB606ED8EBD8C46CE88001853EB89EDA6CF3DAB",
+      "current_sha256": "843EC9F282F77F72CF080C83BEB606ED8EBD8C46CE88001853EB89EDA6CF3DAB",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/caramelo/original/Idle/rotations/south-west.png",
+      "exists": true,
+      "baseline_sha256": "C7BBEBC8566EB96A8D280CAA7E65C8AA066CD0BE5B608B2C18D81BA244A59097",
+      "current_sha256": "C7BBEBC8566EB96A8D280CAA7E65C8AA066CD0BE5B608B2C18D81BA244A59097",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/caramelo/original/Idle/rotations/south.png",
+      "exists": true,
+      "baseline_sha256": "3EC4003692D56CD3433F5EC20FB540CD540BCC023D48407874CB949779E610DC",
+      "current_sha256": "3EC4003692D56CD3433F5EC20FB540CD540BCC023D48407874CB949779E610DC",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/caramelo/original/Idle/rotations/west.png",
+      "exists": true,
+      "baseline_sha256": "8D59860792D30077DF5E0EFB8B3ADDC3759FE4C11F08A3E32C8D2B4BCAB0FF5B",
+      "current_sha256": "8D59860792D30077DF5E0EFB8B3ADDC3759FE4C11F08A3E32C8D2B4BCAB0FF5B",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/caramelo/original/metadata.json",
+      "exists": true,
+      "baseline_sha256": "D1A95B0918A5AC27FA8370F6BEFCECEE9A194185FDB9CF1E038A52DB2C8F4823",
+      "current_sha256": "D1A95B0918A5AC27FA8370F6BEFCECEE9A194185FDB9CF1E038A52DB2C8F4823",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/caramelo/pixellab_original.zip",
+      "exists": true,
+      "baseline_sha256": "FEA95670EA22583E2D39BD18716E98E4A3EB2B3DE3536D6BD401A3343884861F",
+      "current_sha256": "FEA95670EA22583E2D39BD18716E98E4A3EB2B3DE3536D6BD401A3343884861F",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/elon/realista_03/exportacao.json",
+      "exists": true,
+      "baseline_sha256": "2989720F25DF71337F409B310BBEC759BA773B0DBCC7EEFE0ECF1AD9D69214FF",
+      "current_sha256": "2989720F25DF71337F409B310BBEC759BA773B0DBCC7EEFE0ECF1AD9D69214FF",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/elon/realista_03/original/Idle/rotations/east.png",
+      "exists": true,
+      "baseline_sha256": "B9BAD23BD9B843424BA4CFCEBCF516043DC2C87863996E6D11C4F67FF1790A86",
+      "current_sha256": "B9BAD23BD9B843424BA4CFCEBCF516043DC2C87863996E6D11C4F67FF1790A86",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/elon/realista_03/original/Idle/rotations/north-east.png",
+      "exists": true,
+      "baseline_sha256": "5E8936BE2C7F904C7A9E14FDC3948075F170E0AAA0F64EE78B34B876741DC2D3",
+      "current_sha256": "5E8936BE2C7F904C7A9E14FDC3948075F170E0AAA0F64EE78B34B876741DC2D3",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/elon/realista_03/original/Idle/rotations/north-west.png",
+      "exists": true,
+      "baseline_sha256": "EAD56FAA80F16A92A0E0FF17F8C119D6FFEDB444E0C43366E252DA3C7989ECFE",
+      "current_sha256": "EAD56FAA80F16A92A0E0FF17F8C119D6FFEDB444E0C43366E252DA3C7989ECFE",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/elon/realista_03/original/Idle/rotations/north.png",
+      "exists": true,
+      "baseline_sha256": "8A0885A4BF63B77E05DCF9B98C40B85B1D3795586D10CC27E725BEBD202D98AB",
+      "current_sha256": "8A0885A4BF63B77E05DCF9B98C40B85B1D3795586D10CC27E725BEBD202D98AB",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/elon/realista_03/original/Idle/rotations/south-east.png",
+      "exists": true,
+      "baseline_sha256": "EF4A50A214F18D8331597B044B0762FE6B7D1E028C618C469F1293E2DA67D4F0",
+      "current_sha256": "EF4A50A214F18D8331597B044B0762FE6B7D1E028C618C469F1293E2DA67D4F0",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/elon/realista_03/original/Idle/rotations/south-west.png",
+      "exists": true,
+      "baseline_sha256": "35A3ACF97AAC8FC02E3801F01FD79C36F87D9532AC82840830085379BDD1E75E",
+      "current_sha256": "35A3ACF97AAC8FC02E3801F01FD79C36F87D9532AC82840830085379BDD1E75E",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/elon/realista_03/original/Idle/rotations/south.png",
+      "exists": true,
+      "baseline_sha256": "D57D3AE2D3EC576485644865ADC29F712DF38F7B96BA2C7DE34FDFD6BD437848",
+      "current_sha256": "D57D3AE2D3EC576485644865ADC29F712DF38F7B96BA2C7DE34FDFD6BD437848",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/elon/realista_03/original/Idle/rotations/west.png",
+      "exists": true,
+      "baseline_sha256": "25D1B75C8353B64C324303DD5953E5B920AE07944FD6B23ED050FD68A31D50ED",
+      "current_sha256": "25D1B75C8353B64C324303DD5953E5B920AE07944FD6B23ED050FD68A31D50ED",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/elon/realista_03/original/metadata.json",
+      "exists": true,
+      "baseline_sha256": "6A46B619632E0B6C90C22EDF12F4603671C37A19A5C0FB603CDEAD38AFF99D54",
+      "current_sha256": "6A46B619632E0B6C90C22EDF12F4603671C37A19A5C0FB603CDEAD38AFF99D54",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/elon/realista_03/pixellab_original.zip",
+      "exists": true,
+      "baseline_sha256": "5D9DC2B443FC9D7A50A90E85B2874A900CE906CAB3CF1883149F041E18742947",
+      "current_sha256": "5D9DC2B443FC9D7A50A90E85B2874A900CE906CAB3CF1883149F041E18742947",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/ken/realista_03/exportacao.json",
+      "exists": true,
+      "baseline_sha256": "AF4E13B3799B40BDA283779918273B2BBBCCBC0F455B3511847B7ABBA6BACABF",
+      "current_sha256": "AF4E13B3799B40BDA283779918273B2BBBCCBC0F455B3511847B7ABBA6BACABF",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/ken/realista_03/original/Idle/rotations/east.png",
+      "exists": true,
+      "baseline_sha256": "42ACF93DFC9461643F8BC701F1F96B49A02CE6A97D990DB1DA5FD0B5C2F3265A",
+      "current_sha256": "42ACF93DFC9461643F8BC701F1F96B49A02CE6A97D990DB1DA5FD0B5C2F3265A",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/ken/realista_03/original/Idle/rotations/north-east.png",
+      "exists": true,
+      "baseline_sha256": "DAB3215F3FD7B79CD4DCF6A3B68F5CB4D4E7C8EBF9DAB519E4D2A490CC962ECF",
+      "current_sha256": "DAB3215F3FD7B79CD4DCF6A3B68F5CB4D4E7C8EBF9DAB519E4D2A490CC962ECF",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/ken/realista_03/original/Idle/rotations/north-west.png",
+      "exists": true,
+      "baseline_sha256": "D9C6E03FDE57B0C208B3065E16F33E130A39C37BA7D3EF05ED515E347CF3C33F",
+      "current_sha256": "D9C6E03FDE57B0C208B3065E16F33E130A39C37BA7D3EF05ED515E347CF3C33F",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/ken/realista_03/original/Idle/rotations/north.png",
+      "exists": true,
+      "baseline_sha256": "C92878AF8423E94DE9281FE47097BA51806AB40F43320DD5BA37F616E338D182",
+      "current_sha256": "C92878AF8423E94DE9281FE47097BA51806AB40F43320DD5BA37F616E338D182",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/ken/realista_03/original/Idle/rotations/south-east.png",
+      "exists": true,
+      "baseline_sha256": "D57C3F5B982BAEA2C7C87627BC2715DBDE4966E50C19C2AC80B7524D462E5C8A",
+      "current_sha256": "D57C3F5B982BAEA2C7C87627BC2715DBDE4966E50C19C2AC80B7524D462E5C8A",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/ken/realista_03/original/Idle/rotations/south-west.png",
+      "exists": true,
+      "baseline_sha256": "3CA4A60FF92FE5F9730AF15F22A1A409B37C2A2DE9A16866E1827FDFB7B64F0A",
+      "current_sha256": "3CA4A60FF92FE5F9730AF15F22A1A409B37C2A2DE9A16866E1827FDFB7B64F0A",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/ken/realista_03/original/Idle/rotations/south.png",
+      "exists": true,
+      "baseline_sha256": "34D5DC37828CCC9D6A654664041FA84E308B50E036E9782A62A9F2280493F393",
+      "current_sha256": "34D5DC37828CCC9D6A654664041FA84E308B50E036E9782A62A9F2280493F393",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/ken/realista_03/original/Idle/rotations/west.png",
+      "exists": true,
+      "baseline_sha256": "CA6C399237B7414DE8048A9902B9265B9B72C63727A98E6544A08E35EB68DE0B",
+      "current_sha256": "CA6C399237B7414DE8048A9902B9265B9B72C63727A98E6544A08E35EB68DE0B",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/ken/realista_03/original/metadata.json",
+      "exists": true,
+      "baseline_sha256": "D1FC5AC9204F48096157199A48280C8063102CFEA6CA24EA29F86D5660BA2637",
+      "current_sha256": "D1FC5AC9204F48096157199A48280C8063102CFEA6CA24EA29F86D5660BA2637",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/ken/realista_03/pixellab_original.zip",
+      "exists": true,
+      "baseline_sha256": "2C4EB55DC54A8913DE1E0E9D492A63032AD6EACFB9C78E0B3D519777F61F124D",
+      "current_sha256": "2C4EB55DC54A8913DE1E0E9D492A63032AD6EACFB9C78E0B3D519777F61F124D",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/lula/realista_03/exportacao.json",
+      "exists": true,
+      "baseline_sha256": "0A79E5A7C9575975A68B5E223FCD89C7A887A7BEB15B3B31F999B2D229D6D8F3",
+      "current_sha256": "0A79E5A7C9575975A68B5E223FCD89C7A887A7BEB15B3B31F999B2D229D6D8F3",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/lula/realista_03/original/Idle/rotations/east.png",
+      "exists": true,
+      "baseline_sha256": "E5FBC74C020A810F462E88BEAAF5910204B67CB1182E34E8E9800D47499628E9",
+      "current_sha256": "E5FBC74C020A810F462E88BEAAF5910204B67CB1182E34E8E9800D47499628E9",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/lula/realista_03/original/Idle/rotations/north-east.png",
+      "exists": true,
+      "baseline_sha256": "5A90AF739E666B13C34CE06FB2F10B1AA214F3D1200855E0E84E0815FB9F1BDA",
+      "current_sha256": "5A90AF739E666B13C34CE06FB2F10B1AA214F3D1200855E0E84E0815FB9F1BDA",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/lula/realista_03/original/Idle/rotations/north-west.png",
+      "exists": true,
+      "baseline_sha256": "F0748DDBE9B962274D49071E42CF537932F04696FB33D65539754EB411CC88E2",
+      "current_sha256": "F0748DDBE9B962274D49071E42CF537932F04696FB33D65539754EB411CC88E2",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/lula/realista_03/original/Idle/rotations/north.png",
+      "exists": true,
+      "baseline_sha256": "B529FF50DA26C66B184C4BF96ED912E622CC77088B57EA2BF477D035F4F9180E",
+      "current_sha256": "B529FF50DA26C66B184C4BF96ED912E622CC77088B57EA2BF477D035F4F9180E",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/lula/realista_03/original/Idle/rotations/south-east.png",
+      "exists": true,
+      "baseline_sha256": "E5663E9DF1742EE475B4848AC614581C76826397262E4564B6D1832B93A37188",
+      "current_sha256": "E5663E9DF1742EE475B4848AC614581C76826397262E4564B6D1832B93A37188",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/lula/realista_03/original/Idle/rotations/south-west.png",
+      "exists": true,
+      "baseline_sha256": "71D6F944E3F6231800DD259CDD661B878601BBE41ABDDC3DEF0C9DACAC72B0D2",
+      "current_sha256": "71D6F944E3F6231800DD259CDD661B878601BBE41ABDDC3DEF0C9DACAC72B0D2",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/lula/realista_03/original/Idle/rotations/south.png",
+      "exists": true,
+      "baseline_sha256": "6F7156EC12712C094EB3429DF6255315CFFEB9F20C5F95749648B45328A34C45",
+      "current_sha256": "6F7156EC12712C094EB3429DF6255315CFFEB9F20C5F95749648B45328A34C45",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/lula/realista_03/original/Idle/rotations/west.png",
+      "exists": true,
+      "baseline_sha256": "C87F6BBF892C1D7703A6BA6E7879625FC885FAD0A9030D69AFEBB837186A06CB",
+      "current_sha256": "C87F6BBF892C1D7703A6BA6E7879625FC885FAD0A9030D69AFEBB837186A06CB",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/lula/realista_03/original/metadata.json",
+      "exists": true,
+      "baseline_sha256": "1BB32D1CD752A820DFCAA985DAF564A416B6830BCA2E3694BA6228E8EBCB1BD1",
+      "current_sha256": "1BB32D1CD752A820DFCAA985DAF564A416B6830BCA2E3694BA6228E8EBCB1BD1",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/lula/realista_03/pixellab_original.zip",
+      "exists": true,
+      "baseline_sha256": "602550884C7711DFEB5C4C2FDE4E8E16A46CDEE5604A81C8888D20F760497D58",
+      "current_sha256": "602550884C7711DFEB5C4C2FDE4E8E16A46CDEE5604A81C8888D20F760497D58",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/manifest.json",
+      "exists": true,
+      "baseline_sha256": "FAF5C4C92E5C16719BCACBD745F2A8E5F496326E2ECACC8A96061E47F6B8E6D5",
+      "current_sha256": "FAF5C4C92E5C16719BCACBD745F2A8E5F496326E2ECACC8A96061E47F6B8E6D5",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/original/Idle/rotations/east.png",
+      "exists": true,
+      "baseline_sha256": "788062E3AA991BF4BECB9118843961F6FA925D35FAA80598CBFAA62F8BDD8BF4",
+      "current_sha256": "788062E3AA991BF4BECB9118843961F6FA925D35FAA80598CBFAA62F8BDD8BF4",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/original/Idle/rotations/north-east.png",
+      "exists": true,
+      "baseline_sha256": "43FE9C4B16BB19C6EF0CF942D6A210FE1C731131DDCEA1F5640CEB0CEDDEC79B",
+      "current_sha256": "43FE9C4B16BB19C6EF0CF942D6A210FE1C731131DDCEA1F5640CEB0CEDDEC79B",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/original/Idle/rotations/north-west.png",
+      "exists": true,
+      "baseline_sha256": "A1D7E1B6E2219E6F252AB6809725A39AAA578432D4FA827C60E18CC3B460C1BE",
+      "current_sha256": "A1D7E1B6E2219E6F252AB6809725A39AAA578432D4FA827C60E18CC3B460C1BE",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/original/Idle/rotations/north.png",
+      "exists": true,
+      "baseline_sha256": "073535D7C9B26FA734E9839069F61ADA90C0B478217AFEC6D82F93B2BD58A8CE",
+      "current_sha256": "073535D7C9B26FA734E9839069F61ADA90C0B478217AFEC6D82F93B2BD58A8CE",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/original/Idle/rotations/south-east.png",
+      "exists": true,
+      "baseline_sha256": "AEB75084D15D48F8C4B4B5916BC4D8C955AE05C7622634288A10600CADBE0402",
+      "current_sha256": "AEB75084D15D48F8C4B4B5916BC4D8C955AE05C7622634288A10600CADBE0402",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/original/Idle/rotations/south-west.png",
+      "exists": true,
+      "baseline_sha256": "010C8CF5341D8EDC2E96E6933099D11ADBE138CB07F1C4BD572335F7C1AE2EA6",
+      "current_sha256": "010C8CF5341D8EDC2E96E6933099D11ADBE138CB07F1C4BD572335F7C1AE2EA6",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/original/Idle/rotations/south.png",
+      "exists": true,
+      "baseline_sha256": "125A5588C3FA2E16179D32E98F1DC7DF69155631076C47074D2303209EE6DC69",
+      "current_sha256": "125A5588C3FA2E16179D32E98F1DC7DF69155631076C47074D2303209EE6DC69",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/original/Idle/rotations/west.png",
+      "exists": true,
+      "baseline_sha256": "3832D872EEAA31DDFB0CCA8CF8EA89EC98B3E3A91CF0FD56CD0CC98136E0FF93",
+      "current_sha256": "3832D872EEAA31DDFB0CCA8CF8EA89EC98B3E3A91CF0FD56CD0CC98136E0FF93",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/original/metadata.json",
+      "exists": true,
+      "baseline_sha256": "6A8D29412AA34A41CE53F4F605F1A46863EC2F1457866A45D2C283134BD74305",
+      "current_sha256": "6A8D29412AA34A41CE53F4F605F1A46863EC2F1457866A45D2C283134BD74305",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/pixellab_original.zip",
+      "exists": true,
+      "baseline_sha256": "E979D458AFA85C061794F17A39CB72EADBF967973B677FE088DED548CF998ADD",
+      "current_sha256": "E979D458AFA85C061794F17A39CB72EADBF967973B677FE088DED548CF998ADD",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/realista_03/exportacao.json",
+      "exists": true,
+      "baseline_sha256": "4F8348C4679C40A057397307CC948325A2238E2BDC45B81CE2802D04EDB43F95",
+      "current_sha256": "4F8348C4679C40A057397307CC948325A2238E2BDC45B81CE2802D04EDB43F95",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/realista_03/original/Idle/rotations/east.png",
+      "exists": true,
+      "baseline_sha256": "5C09271E8E01BCC70D1702B471F21B752429C2AFB1BAB34F48931412C110B1D6",
+      "current_sha256": "5C09271E8E01BCC70D1702B471F21B752429C2AFB1BAB34F48931412C110B1D6",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/realista_03/original/Idle/rotations/north-east.png",
+      "exists": true,
+      "baseline_sha256": "07E7849BBEAB836AE9C2C2538B3306C2C93976DE70BD812E27D5AB79D0583FF4",
+      "current_sha256": "07E7849BBEAB836AE9C2C2538B3306C2C93976DE70BD812E27D5AB79D0583FF4",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/realista_03/original/Idle/rotations/north-west.png",
+      "exists": true,
+      "baseline_sha256": "2C71BF84A20ECBC2A8429B40064FB4DFF7F9985ED8E03A36102ECA5E745C0C24",
+      "current_sha256": "2C71BF84A20ECBC2A8429B40064FB4DFF7F9985ED8E03A36102ECA5E745C0C24",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/realista_03/original/Idle/rotations/north.png",
+      "exists": true,
+      "baseline_sha256": "016E462C24D26B4A2764077C98A6ED5B8B3F0364FE4A794634934D9E48E809F6",
+      "current_sha256": "016E462C24D26B4A2764077C98A6ED5B8B3F0364FE4A794634934D9E48E809F6",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/realista_03/original/Idle/rotations/south-east.png",
+      "exists": true,
+      "baseline_sha256": "FADE3CA05AFD4305D071A923088B066556884FE3F7AE66B57B017CAAB4619942",
+      "current_sha256": "FADE3CA05AFD4305D071A923088B066556884FE3F7AE66B57B017CAAB4619942",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/realista_03/original/Idle/rotations/south-west.png",
+      "exists": true,
+      "baseline_sha256": "C0D8F9FC8A55D573B3CF70616EDF12E55F3672BD6D3EF035DAAFF75E9A299D19",
+      "current_sha256": "C0D8F9FC8A55D573B3CF70616EDF12E55F3672BD6D3EF035DAAFF75E9A299D19",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/realista_03/original/Idle/rotations/south.png",
+      "exists": true,
+      "baseline_sha256": "390B6C533B480629638D325588D3628E2CAC01E16245B6A437616A40BB54595D",
+      "current_sha256": "390B6C533B480629638D325588D3628E2CAC01E16245B6A437616A40BB54595D",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/realista_03/original/Idle/rotations/west.png",
+      "exists": true,
+      "baseline_sha256": "ED937185D0A032BDA954FD1EA0EA15E1E09DE6310EC499BAA995474AA9927247",
+      "current_sha256": "ED937185D0A032BDA954FD1EA0EA15E1E09DE6310EC499BAA995474AA9927247",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/realista_03/original/metadata.json",
+      "exists": true,
+      "baseline_sha256": "D278C4D34D8ED315CA9C0A5EFB23C28C6772B2C3217F004EBE439BC93101A44A",
+      "current_sha256": "D278C4D34D8ED315CA9C0A5EFB23C28C6772B2C3217F004EBE439BC93101A44A",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/realista_03/pixellab_original.zip",
+      "exists": true,
+      "baseline_sha256": "098A3DB51C5731E73F48E83F41C21778A2DDAB73D2659F98B44EFB085BA97B45",
+      "current_sha256": "098A3DB51C5731E73F48E83F41C21778A2DDAB73D2659F98B44EFB085BA97B45",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/original/Idle/rotations/east.png",
+      "exists": true,
+      "baseline_sha256": "DB594B32D95D3098FE29B8EDB263E002D48C59962FEC9A6BF6A6DD841B4B2812",
+      "current_sha256": "DB594B32D95D3098FE29B8EDB263E002D48C59962FEC9A6BF6A6DD841B4B2812",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/original/Idle/rotations/north-east.png",
+      "exists": true,
+      "baseline_sha256": "12C184E079BB384F6329AD437C5C0B00652F1D1C2A60B81ADC45165CF0E1590D",
+      "current_sha256": "12C184E079BB384F6329AD437C5C0B00652F1D1C2A60B81ADC45165CF0E1590D",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/original/Idle/rotations/north-west.png",
+      "exists": true,
+      "baseline_sha256": "10595126EBB655ECA8A10CE995BBCE1383AF83D865338DE740E5A5D2628F7146",
+      "current_sha256": "10595126EBB655ECA8A10CE995BBCE1383AF83D865338DE740E5A5D2628F7146",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/original/Idle/rotations/north.png",
+      "exists": true,
+      "baseline_sha256": "23316AB291CBCE8D0B0DBA9C3F1BC042E68345C073897848C370684A0EAC8B7F",
+      "current_sha256": "23316AB291CBCE8D0B0DBA9C3F1BC042E68345C073897848C370684A0EAC8B7F",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/original/Idle/rotations/south-east.png",
+      "exists": true,
+      "baseline_sha256": "6AAB2ABA4578B5FADCA611D01DD4D306E216E923227CB89D02B0D44C406F0705",
+      "current_sha256": "6AAB2ABA4578B5FADCA611D01DD4D306E216E923227CB89D02B0D44C406F0705",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/original/Idle/rotations/south-west.png",
+      "exists": true,
+      "baseline_sha256": "9D8327661D54F1E9FDA7139184498530B00E37D3692F2A23D13F8D9D6596B2D7",
+      "current_sha256": "9D8327661D54F1E9FDA7139184498530B00E37D3692F2A23D13F8D9D6596B2D7",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/original/Idle/rotations/south.png",
+      "exists": true,
+      "baseline_sha256": "615B36C0FFF72B1717F9F8E71A8FB07FFE824D647CEFE3BF4AD5772EE3298085",
+      "current_sha256": "615B36C0FFF72B1717F9F8E71A8FB07FFE824D647CEFE3BF4AD5772EE3298085",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/original/Idle/rotations/west.png",
+      "exists": true,
+      "baseline_sha256": "417EB7DA202525BA5131877365870A0FF3EBAB8874F8DC9A8F62D77E0DA79209",
+      "current_sha256": "417EB7DA202525BA5131877365870A0FF3EBAB8874F8DC9A8F62D77E0DA79209",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/original/metadata.json",
+      "exists": true,
+      "baseline_sha256": "5A2C8FC1F63D0E040394B51EF600FE79DB413213223AEB708E2A5156969384E8",
+      "current_sha256": "5A2C8FC1F63D0E040394B51EF600FE79DB413213223AEB708E2A5156969384E8",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/pixellab_original.zip",
+      "exists": true,
+      "baseline_sha256": "649829420D837FBEFA18F4374AC83DA8AA16917E33842FA3AF607866B1599B4F",
+      "current_sha256": "649829420D837FBEFA18F4374AC83DA8AA16917E33842FA3AF607866B1599B4F",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/realista_03/exportacao.json",
+      "exists": true,
+      "baseline_sha256": "5CFFDDF882655AFA6B10F5A116959360D45003203319D2E0FEAEED77F4B00A20",
+      "current_sha256": "5CFFDDF882655AFA6B10F5A116959360D45003203319D2E0FEAEED77F4B00A20",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/realista_03/original/Idle/rotations/east.png",
+      "exists": true,
+      "baseline_sha256": "E77392C127BB3DF6026E5747C4AC920F0BBC865EADD8350DA997BC8F5C4989AD",
+      "current_sha256": "E77392C127BB3DF6026E5747C4AC920F0BBC865EADD8350DA997BC8F5C4989AD",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/realista_03/original/Idle/rotations/north-east.png",
+      "exists": true,
+      "baseline_sha256": "1C763873039BCBD1191DE75BCBBE4F73F7E63503C12A368D642F67DB31367591",
+      "current_sha256": "1C763873039BCBD1191DE75BCBBE4F73F7E63503C12A368D642F67DB31367591",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/realista_03/original/Idle/rotations/north-west.png",
+      "exists": true,
+      "baseline_sha256": "007010F1BE1D43AD583FCB7C895B26C15731CD91ACA292347A36A218C57A1111",
+      "current_sha256": "007010F1BE1D43AD583FCB7C895B26C15731CD91ACA292347A36A218C57A1111",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/realista_03/original/Idle/rotations/north.png",
+      "exists": true,
+      "baseline_sha256": "DF58FDC65B6E4013CEE25B35AB9E6A2625819CACAA05593389C409CFAE9D55C4",
+      "current_sha256": "DF58FDC65B6E4013CEE25B35AB9E6A2625819CACAA05593389C409CFAE9D55C4",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/realista_03/original/Idle/rotations/south-east.png",
+      "exists": true,
+      "baseline_sha256": "BE5DB5A1D36861685ED24F9318F4DA7F7807BD26AF9329E78FD2715CA8D91E76",
+      "current_sha256": "BE5DB5A1D36861685ED24F9318F4DA7F7807BD26AF9329E78FD2715CA8D91E76",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/realista_03/original/Idle/rotations/south-west.png",
+      "exists": true,
+      "baseline_sha256": "54432C361B0EE80A1B04D0102B865A1C608F9A92C2A4D1ADCA6E90E6D88E3346",
+      "current_sha256": "54432C361B0EE80A1B04D0102B865A1C608F9A92C2A4D1ADCA6E90E6D88E3346",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/realista_03/original/Idle/rotations/south.png",
+      "exists": true,
+      "baseline_sha256": "9E7701E09BFE5F18FED0AD3DC3623AB9F16FD33B7AAEB3FE4EECF051E8EBBFAA",
+      "current_sha256": "9E7701E09BFE5F18FED0AD3DC3623AB9F16FD33B7AAEB3FE4EECF051E8EBBFAA",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/realista_03/original/Idle/rotations/west.png",
+      "exists": true,
+      "baseline_sha256": "44991553AA10AD9866A80494EDBE7A4A43B414A060F05B4B47D3AC8BF0944B99",
+      "current_sha256": "44991553AA10AD9866A80494EDBE7A4A43B414A060F05B4B47D3AC8BF0944B99",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/realista_03/original/metadata.json",
+      "exists": true,
+      "baseline_sha256": "A058C1F8ABD13A6CD3BC90C0D0063B1CB1FFE3E36B4876BAC88677A212DE4CD9",
+      "current_sha256": "A058C1F8ABD13A6CD3BC90C0D0063B1CB1FFE3E36B4876BAC88677A212DE4CD9",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/realista_03/pixellab_original.zip",
+      "exists": true,
+      "baseline_sha256": "C13B8E3BBA80A0C289CF02C8238C2CFC22B629D12F01ECC5123DC286FF1CBA52",
+      "current_sha256": "C13B8E3BBA80A0C289CF02C8238C2CFC22B629D12F01ECC5123DC286FF1CBA52",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/provisorio/barbie.png",
+      "exists": true,
+      "baseline_sha256": "C3A8FF3B09E938788A760AA21D918383C4A7BE18110D9517935D8BCE33C41A38",
+      "current_sha256": "C3A8FF3B09E938788A760AA21D918383C4A7BE18110D9517935D8BCE33C41A38",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/provisorio/bob_marley.png",
+      "exists": true,
+      "baseline_sha256": "33FD8D02FFD69FDDFC4CBAA84518F56A3636B97D1E776B5DAA004DC19BA4FE41",
+      "current_sha256": "33FD8D02FFD69FDDFC4CBAA84518F56A3636B97D1E776B5DAA004DC19BA4FE41",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/provisorio/caramelo.png",
+      "exists": true,
+      "baseline_sha256": "7FBE993A8AD3E10448F3A1CDBD0F82EBC6E8B40AE8B93049610BA1BE03FA1DB8",
+      "current_sha256": "7FBE993A8AD3E10448F3A1CDBD0F82EBC6E8B40AE8B93049610BA1BE03FA1DB8",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/provisorio/cleopatra.png",
+      "exists": true,
+      "baseline_sha256": "BE4E4749421005A6513E285A274C1AF312D1C92B6C80A63C45D16B0F0AEE21F3",
+      "current_sha256": "BE4E4749421005A6513E285A274C1AF312D1C92B6C80A63C45D16B0F0AEE21F3",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/provisorio/einstein.png",
+      "exists": true,
+      "baseline_sha256": "1C58D65CC6F17356566D0533E634F35B03269D49F52444FD46A9A2A18FEF6B27",
+      "current_sha256": "1C58D65CC6F17356566D0533E634F35B03269D49F52444FD46A9A2A18FEF6B27",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/provisorio/elon.png",
+      "exists": true,
+      "baseline_sha256": "F835E1904C90678600C1DCB3E2EC951FD5A325625766BA6D625B342A9FAAF5FF",
+      "current_sha256": "F835E1904C90678600C1DCB3E2EC951FD5A325625766BA6D625B342A9FAAF5FF",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/provisorio/julio_cesar.png",
+      "exists": true,
+      "baseline_sha256": "80E874B2ED87D898903C1632C1AD5E1BB09EAFA9DE8E9ABAF436BB31C01B37AC",
+      "current_sha256": "80E874B2ED87D898903C1632C1AD5E1BB09EAFA9DE8E9ABAF436BB31C01B37AC",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/provisorio/ken.png",
+      "exists": true,
+      "baseline_sha256": "86C0DC3746F9B7BD7562A1BEB51796A188F88832A014422BC2301BA512D11E80",
+      "current_sha256": "86C0DC3746F9B7BD7562A1BEB51796A188F88832A014422BC2301BA512D11E80",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/provisorio/lula.png",
+      "exists": true,
+      "baseline_sha256": "79151E888123747B2293918379ACF8C6B02A8E2617030D5DE638666576E3C85F",
+      "current_sha256": "79151E888123747B2293918379ACF8C6B02A8E2617030D5DE638666576E3C85F",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/provisorio/napoleao.png",
+      "exists": true,
+      "baseline_sha256": "21BB09896F65BADB94668951758866492847AF19C6AAB56326CFF3D8E3706FA9",
+      "current_sha256": "21BB09896F65BADB94668951758866492847AF19C6AAB56326CFF3D8E3706FA9",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/provisorio/rapunzel.png",
+      "exists": true,
+      "baseline_sha256": "B5D196197820E134F573F8AB082E7A6141B887C133A547CB926E53D5253AB79B",
+      "current_sha256": "B5D196197820E134F573F8AB082E7A6141B887C133A547CB926E53D5253AB79B",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/provisorio/snoop.png",
+      "exists": true,
+      "baseline_sha256": "36E79464BD3938D1547E4407AED5C0634D6B92F3768943860C67787DC8BB79DB",
+      "current_sha256": "36E79464BD3938D1547E4407AED5C0634D6B92F3768943860C67787DC8BB79DB",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/provisorio/zumbi.png",
+      "exists": true,
+      "baseline_sha256": "15D4A853432F7E8B8592A5939B78B7F9A5AAF93711F168FB99C84E67C7E69E9A",
+      "current_sha256": "15D4A853432F7E8B8592A5939B78B7F9A5AAF93711F168FB99C84E67C7E69E9A",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/rapunzel/realista_03/exportacao.json",
+      "exists": true,
+      "baseline_sha256": "4AD4EB988BDBA02D1B9DF1B7ADE854891F13348568DC32C5D49E79297421EBD8",
+      "current_sha256": "4AD4EB988BDBA02D1B9DF1B7ADE854891F13348568DC32C5D49E79297421EBD8",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/rapunzel/realista_03/original/Idle/rotations/east.png",
+      "exists": true,
+      "baseline_sha256": "7BD8F3EDAD89BE19A1ECDED67405A62388E589061DD352597715B78C9C4FCA6E",
+      "current_sha256": "7BD8F3EDAD89BE19A1ECDED67405A62388E589061DD352597715B78C9C4FCA6E",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/rapunzel/realista_03/original/Idle/rotations/north-east.png",
+      "exists": true,
+      "baseline_sha256": "F09ABD9FE790386B910B3EED6592CFD19921E992DD0FBC537856C437ECE2880B",
+      "current_sha256": "F09ABD9FE790386B910B3EED6592CFD19921E992DD0FBC537856C437ECE2880B",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/rapunzel/realista_03/original/Idle/rotations/north-west.png",
+      "exists": true,
+      "baseline_sha256": "6CF085D9E73652FB9D8F72016AF40877630FB67D541A25F60381F4EB937AF612",
+      "current_sha256": "6CF085D9E73652FB9D8F72016AF40877630FB67D541A25F60381F4EB937AF612",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/rapunzel/realista_03/original/Idle/rotations/north.png",
+      "exists": true,
+      "baseline_sha256": "B418DC953B3684FFC7CFC284364691C29CDD22E226AAEA24A862FFD57C91B797",
+      "current_sha256": "B418DC953B3684FFC7CFC284364691C29CDD22E226AAEA24A862FFD57C91B797",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/rapunzel/realista_03/original/Idle/rotations/south-east.png",
+      "exists": true,
+      "baseline_sha256": "E549ADECD88E8FA1B379C7955DA5D690F29BBD2C111ED1731D01CF9B93F87D37",
+      "current_sha256": "E549ADECD88E8FA1B379C7955DA5D690F29BBD2C111ED1731D01CF9B93F87D37",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/rapunzel/realista_03/original/Idle/rotations/south-west.png",
+      "exists": true,
+      "baseline_sha256": "000FB30454B276921AC2B9FBD813E0C3A2AA4B4722D8CB34FF925FAB3877EEF4",
+      "current_sha256": "000FB30454B276921AC2B9FBD813E0C3A2AA4B4722D8CB34FF925FAB3877EEF4",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/rapunzel/realista_03/original/Idle/rotations/south.png",
+      "exists": true,
+      "baseline_sha256": "8E996696DC366A79509A76B8399BC484C1537201C8CA8F14F31080225A3A8D24",
+      "current_sha256": "8E996696DC366A79509A76B8399BC484C1537201C8CA8F14F31080225A3A8D24",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/rapunzel/realista_03/original/Idle/rotations/west.png",
+      "exists": true,
+      "baseline_sha256": "E162FB39FDFAC01430E0A427210D0DAFBD301B3BC617AFC5930171B2D45DB29D",
+      "current_sha256": "E162FB39FDFAC01430E0A427210D0DAFBD301B3BC617AFC5930171B2D45DB29D",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/rapunzel/realista_03/original/metadata.json",
+      "exists": true,
+      "baseline_sha256": "B26C1CD6E3143C9F70EA0021DDABE582EF243DEF77E78A9C3ECAD3D78377FAB2",
+      "current_sha256": "B26C1CD6E3143C9F70EA0021DDABE582EF243DEF77E78A9C3ECAD3D78377FAB2",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/rapunzel/realista_03/pixellab_original.zip",
+      "exists": true,
+      "baseline_sha256": "95632CDD155FD04FEDBC3F55CDBB52280E4A047F3E82064D7DF250654B7954AA",
+      "current_sha256": "95632CDD155FD04FEDBC3F55CDBB52280E4A047F3E82064D7DF250654B7954AA",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/snoop/realista_03/exportacao.json",
+      "exists": true,
+      "baseline_sha256": "1F5320CC7F74BAD3D78DF50B8D8654CD15229C812731574F0652F985E40A41A0",
+      "current_sha256": "1F5320CC7F74BAD3D78DF50B8D8654CD15229C812731574F0652F985E40A41A0",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/snoop/realista_03/original/Idle/rotations/east.png",
+      "exists": true,
+      "baseline_sha256": "C18B809E59DBF7D8BBD06059F19AE3403349AB58DC24FDD779E6BBECF1B48279",
+      "current_sha256": "C18B809E59DBF7D8BBD06059F19AE3403349AB58DC24FDD779E6BBECF1B48279",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/snoop/realista_03/original/Idle/rotations/north-east.png",
+      "exists": true,
+      "baseline_sha256": "F80076A3F0AC1FD0FB3AAADC4F7D65387DCF4E174C8F22D551DF0BA6A6DF7C83",
+      "current_sha256": "F80076A3F0AC1FD0FB3AAADC4F7D65387DCF4E174C8F22D551DF0BA6A6DF7C83",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/snoop/realista_03/original/Idle/rotations/north-west.png",
+      "exists": true,
+      "baseline_sha256": "CBD39F52B9D126E96BD003452CCC9BCDC629CFF1AF8BAC69DECE7A29CC0EAF91",
+      "current_sha256": "CBD39F52B9D126E96BD003452CCC9BCDC629CFF1AF8BAC69DECE7A29CC0EAF91",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/snoop/realista_03/original/Idle/rotations/north.png",
+      "exists": true,
+      "baseline_sha256": "C5D70A5B849432B9CD11D582F3F8046BBBFFA0D162372DD36C1C01AB926FC9D0",
+      "current_sha256": "C5D70A5B849432B9CD11D582F3F8046BBBFFA0D162372DD36C1C01AB926FC9D0",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/snoop/realista_03/original/Idle/rotations/south-east.png",
+      "exists": true,
+      "baseline_sha256": "C11204556875D78B46294DE4BB8885F9EA6CDFA0F011846E40479267877FE7F8",
+      "current_sha256": "C11204556875D78B46294DE4BB8885F9EA6CDFA0F011846E40479267877FE7F8",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/snoop/realista_03/original/Idle/rotations/south-west.png",
+      "exists": true,
+      "baseline_sha256": "E3AA812324BDF0FE62C773C80301641A0850FFCF717DF908D9AF15C44EB5D624",
+      "current_sha256": "E3AA812324BDF0FE62C773C80301641A0850FFCF717DF908D9AF15C44EB5D624",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/snoop/realista_03/original/Idle/rotations/south.png",
+      "exists": true,
+      "baseline_sha256": "8065BF0995DEE5B6E5F6EF7BEE8AABED4FAAE364E4108CEA912AED970CD5B48B",
+      "current_sha256": "8065BF0995DEE5B6E5F6EF7BEE8AABED4FAAE364E4108CEA912AED970CD5B48B",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/snoop/realista_03/original/Idle/rotations/west.png",
+      "exists": true,
+      "baseline_sha256": "FA637EFF87A05C150900B53CF473A4D1E341A6F4000412C2CC0024477BEDC006",
+      "current_sha256": "FA637EFF87A05C150900B53CF473A4D1E341A6F4000412C2CC0024477BEDC006",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/snoop/realista_03/original/metadata.json",
+      "exists": true,
+      "baseline_sha256": "11D63E6639C164BDC43284E0C3FB40176E0CC223FB46E9775D234D2B874DC6D6",
+      "current_sha256": "11D63E6639C164BDC43284E0C3FB40176E0CC223FB46E9775D234D2B874DC6D6",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/snoop/realista_03/pixellab_original.zip",
+      "exists": true,
+      "baseline_sha256": "68A0FBA6C402A7A3BC57228528771695266FA8C70852FB3C1A997371C2BB0EEB",
+      "current_sha256": "68A0FBA6C402A7A3BC57228528771695266FA8C70852FB3C1A997371C2BB0EEB",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/zumbi/original/Idle/rotations/east.png",
+      "exists": true,
+      "baseline_sha256": "04789A481F7200B89498FAA17BB142BFE7B9DE0CA9234D73CDEA073F9A5FDF81",
+      "current_sha256": "04789A481F7200B89498FAA17BB142BFE7B9DE0CA9234D73CDEA073F9A5FDF81",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/zumbi/original/Idle/rotations/north-east.png",
+      "exists": true,
+      "baseline_sha256": "5CAA8F6C8F32C7D5E851D3014C96FAE6F6420D81400475195C81D1E3D3C4A1AB",
+      "current_sha256": "5CAA8F6C8F32C7D5E851D3014C96FAE6F6420D81400475195C81D1E3D3C4A1AB",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/zumbi/original/Idle/rotations/north-west.png",
+      "exists": true,
+      "baseline_sha256": "E910A145F0874624BB624C78C1F86526EBECE4CE0EEF2ECD2FF44B1D7BE4DB96",
+      "current_sha256": "E910A145F0874624BB624C78C1F86526EBECE4CE0EEF2ECD2FF44B1D7BE4DB96",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/zumbi/original/Idle/rotations/north.png",
+      "exists": true,
+      "baseline_sha256": "328DB6066C9DFEE119B2153C9C3673BDA72F02C56555EB8F1AAEF7BBF487EC6A",
+      "current_sha256": "328DB6066C9DFEE119B2153C9C3673BDA72F02C56555EB8F1AAEF7BBF487EC6A",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/zumbi/original/Idle/rotations/south-east.png",
+      "exists": true,
+      "baseline_sha256": "7A573436924AA2F61EB025455BDCA306E735170462E2B50AF0FB4FA624F9EA2F",
+      "current_sha256": "7A573436924AA2F61EB025455BDCA306E735170462E2B50AF0FB4FA624F9EA2F",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/zumbi/original/Idle/rotations/south-west.png",
+      "exists": true,
+      "baseline_sha256": "A7DFF98F2CF2F504BCEDA5850EE8AFDFEA2B5FF473FE616553A1E89B51B2F004",
+      "current_sha256": "A7DFF98F2CF2F504BCEDA5850EE8AFDFEA2B5FF473FE616553A1E89B51B2F004",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/zumbi/original/Idle/rotations/south.png",
+      "exists": true,
+      "baseline_sha256": "4AA0A31CF77B0D915638A0A29626EC5E41BE7DBC8A4A65F1AE82B649F9D3D14C",
+      "current_sha256": "4AA0A31CF77B0D915638A0A29626EC5E41BE7DBC8A4A65F1AE82B649F9D3D14C",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/zumbi/original/Idle/rotations/west.png",
+      "exists": true,
+      "baseline_sha256": "B136895688A2E2A5C14D35A0848D0F4008C65CB7C00F1B761283C1965674B43D",
+      "current_sha256": "B136895688A2E2A5C14D35A0848D0F4008C65CB7C00F1B761283C1965674B43D",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/zumbi/original/metadata.json",
+      "exists": true,
+      "baseline_sha256": "E9B80D955E226111C1AF76ACBC3221344A08B2DEB1890163CC5AB08841525E9A",
+      "current_sha256": "E9B80D955E226111C1AF76ACBC3221344A08B2DEB1890163CC5AB08841525E9A",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/characters/zumbi/pixellab_original.zip",
+      "exists": true,
+      "baseline_sha256": "A1EDD420D77C7E037C92FDF48A04AA5A47F5A1150C3B11996677E4BF95AC301F",
+      "current_sha256": "A1EDD420D77C7E037C92FDF48A04AA5A47F5A1150C3B11996677E4BF95AC301F",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/heart.png",
+      "exists": true,
+      "baseline_sha256": "1D72C557ED0A588CE5C6727264F64856E8CDEEE5638AF53BFB2A776B79D51413",
+      "current_sha256": "1D72C557ED0A588CE5C6727264F64856E8CDEEE5638AF53BFB2A776B79D51413",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/manifest.json",
+      "exists": true,
+      "baseline_sha256": "924EE06924E5367C91039C9DFDF01CF3476AAAECA1DE11D1DC19FE9FD954687D",
+      "current_sha256": "924EE06924E5367C91039C9DFDF01CF3476AAAECA1DE11D1DC19FE9FD954687D",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/dancer_in_a_white_vi/rotations/east.png",
+      "exists": true,
+      "baseline_sha256": "692767DE50C544B52978660C0545C9B0CDF07A23610A54F299F3DF3A2D91363D",
+      "current_sha256": "692767DE50C544B52978660C0545C9B0CDF07A23610A54F299F3DF3A2D91363D",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/dancer_in_a_white_vi/rotations/north-east.png",
+      "exists": true,
+      "baseline_sha256": "6B4C81005368B944637DB898D5A38480D257CE7A6FE0697161CEEC975E567CA2",
+      "current_sha256": "6B4C81005368B944637DB898D5A38480D257CE7A6FE0697161CEEC975E567CA2",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/dancer_in_a_white_vi/rotations/north-west.png",
+      "exists": true,
+      "baseline_sha256": "1B87C7ED3911D37AAD71BF64F1AE295F207CF2BC632CD9ED0E205975364B99BE",
+      "current_sha256": "1B87C7ED3911D37AAD71BF64F1AE295F207CF2BC632CD9ED0E205975364B99BE",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/dancer_in_a_white_vi/rotations/north.png",
+      "exists": true,
+      "baseline_sha256": "6C89884027EAE3CAAE7EC5B9F5161695A4B466B97EA5E6D8B2C435FFBFC5E7A4",
+      "current_sha256": "6C89884027EAE3CAAE7EC5B9F5161695A4B466B97EA5E6D8B2C435FFBFC5E7A4",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/dancer_in_a_white_vi/rotations/south-east.png",
+      "exists": true,
+      "baseline_sha256": "D461F329AF18C34681A15B84AFD222651770BBEE93E545BD00FD2E7104FE9C40",
+      "current_sha256": "D461F329AF18C34681A15B84AFD222651770BBEE93E545BD00FD2E7104FE9C40",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/dancer_in_a_white_vi/rotations/south-west.png",
+      "exists": true,
+      "baseline_sha256": "5C10588ED2F47DF712718B3548A740419E921C66D931B52723D3606C78F8EFBF",
+      "current_sha256": "5C10588ED2F47DF712718B3548A740419E921C66D931B52723D3606C78F8EFBF",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/dancer_in_a_white_vi/rotations/south.png",
+      "exists": true,
+      "baseline_sha256": "9FBFC42BBAEB020216F23E18E3848DAED80D1839B9086AF86C8B6A76062D61A5",
+      "current_sha256": "9FBFC42BBAEB020216F23E18E3848DAED80D1839B9086AF86C8B6A76062D61A5",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/dancer_in_a_white_vi/rotations/west.png",
+      "exists": true,
+      "baseline_sha256": "7323708FD4C8000AA397AA172E4443AAD41A5D5B3566A22D64CBC964F236C318",
+      "current_sha256": "7323708FD4C8000AA397AA172E4443AAD41A5D5B3566A22D64CBC964F236C318",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_000.png",
+      "exists": true,
+      "baseline_sha256": "A8E85A3262FD1F7BEF44D14F9B3AC6F068ABFB2412A7BB12EE67AC6F211927B1",
+      "current_sha256": "A8E85A3262FD1F7BEF44D14F9B3AC6F068ABFB2412A7BB12EE67AC6F211927B1",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_001.png",
+      "exists": true,
+      "baseline_sha256": "556AA8F04BA0544A30CC6985658549A21EB70122D023C7A88B4C1F6CA8CCED03",
+      "current_sha256": "556AA8F04BA0544A30CC6985658549A21EB70122D023C7A88B4C1F6CA8CCED03",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_002.png",
+      "exists": true,
+      "baseline_sha256": "21C9F552E202D49FFE730F45CF324A41D5FA21AE2BAC680615F8D481658F912A",
+      "current_sha256": "21C9F552E202D49FFE730F45CF324A41D5FA21AE2BAC680615F8D481658F912A",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_003.png",
+      "exists": true,
+      "baseline_sha256": "61FC3BEBA723B2E8DE9ECA9E2B774EA86D498FCE4ADE031CDB42B1D78B194F83",
+      "current_sha256": "61FC3BEBA723B2E8DE9ECA9E2B774EA86D498FCE4ADE031CDB42B1D78B194F83",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_004.png",
+      "exists": true,
+      "baseline_sha256": "F17087DB0A53D63ECEEB424CE7277DE502F33E7DF2A62FDC1155E3414319D0F2",
+      "current_sha256": "F17087DB0A53D63ECEEB424CE7277DE502F33E7DF2A62FDC1155E3414319D0F2",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_005.png",
+      "exists": true,
+      "baseline_sha256": "036895DA8D4E1E792243F29EFFC19095C6A3D8D7FBD7D6F82C794F88E2C40A6B",
+      "current_sha256": "036895DA8D4E1E792243F29EFFC19095C6A3D8D7FBD7D6F82C794F88E2C40A6B",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_006.png",
+      "exists": true,
+      "baseline_sha256": "AC988831FC3B66A4002A0A00698EBE49B6844D87A1AE824372CFD5BD6C4A9443",
+      "current_sha256": "AC988831FC3B66A4002A0A00698EBE49B6844D87A1AE824372CFD5BD6C4A9443",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_007.png",
+      "exists": true,
+      "baseline_sha256": "B39C3A402AD04CE3A94818783DDF220FBE05761007845EA3CDEDE4F6C3DE3CDF",
+      "current_sha256": "B39C3A402AD04CE3A94818783DDF220FBE05761007845EA3CDEDE4F6C3DE3CDF",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_008.png",
+      "exists": true,
+      "baseline_sha256": "DF360A0FD22E230A3082F5E9D7EB3CC1C629C456AB31944FBD3BA412EE0F0DC1",
+      "current_sha256": "DF360A0FD22E230A3082F5E9D7EB3CC1C629C456AB31944FBD3BA412EE0F0DC1",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_000.png",
+      "exists": true,
+      "baseline_sha256": "72EE6BB65B4CE9EC256A56B5FA41973CACF34447DC7CC911A2FE3C663DAFD988",
+      "current_sha256": "72EE6BB65B4CE9EC256A56B5FA41973CACF34447DC7CC911A2FE3C663DAFD988",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_001.png",
+      "exists": true,
+      "baseline_sha256": "E1C4E45782B30A0AFBD5B7A570A2AA9CF3F287F4606503BE70D247F16FBDB408",
+      "current_sha256": "E1C4E45782B30A0AFBD5B7A570A2AA9CF3F287F4606503BE70D247F16FBDB408",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_002.png",
+      "exists": true,
+      "baseline_sha256": "80BA570967A74CE94DBFF529F49B66D568FC4D8C0BB5017A9565084574502012",
+      "current_sha256": "80BA570967A74CE94DBFF529F49B66D568FC4D8C0BB5017A9565084574502012",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_003.png",
+      "exists": true,
+      "baseline_sha256": "FDA088F09656D0DA758B406B2CAA6236DA660605BEB0C334145F1C76F504C844",
+      "current_sha256": "FDA088F09656D0DA758B406B2CAA6236DA660605BEB0C334145F1C76F504C844",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_004.png",
+      "exists": true,
+      "baseline_sha256": "A506AB5840B68AAFFC6A89D7907B9CCEFE684E4BD9244E2ABFCCECF80180C4F0",
+      "current_sha256": "A506AB5840B68AAFFC6A89D7907B9CCEFE684E4BD9244E2ABFCCECF80180C4F0",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_005.png",
+      "exists": true,
+      "baseline_sha256": "C68539E136CC1E80DC8877CCDC36951DE8A3F6F44574A195BC69968AC9C5B560",
+      "current_sha256": "C68539E136CC1E80DC8877CCDC36951DE8A3F6F44574A195BC69968AC9C5B560",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_006.png",
+      "exists": true,
+      "baseline_sha256": "DEAB1237ECACF3C91BB582C3AC39F9F704CD975F36DA99F0550011B9C5A64818",
+      "current_sha256": "DEAB1237ECACF3C91BB582C3AC39F9F704CD975F36DA99F0550011B9C5A64818",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_007.png",
+      "exists": true,
+      "baseline_sha256": "60EE39F278408E2A77C72D1CEA7D461E0F47A0BE58F02519DA32EE41762FED81",
+      "current_sha256": "60EE39F278408E2A77C72D1CEA7D461E0F47A0BE58F02519DA32EE41762FED81",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_008.png",
+      "exists": true,
+      "baseline_sha256": "018998608F3CDB0CC45FA3EF47464B755D162828AAE6B59B374D3A98777CB7F2",
+      "current_sha256": "018998608F3CDB0CC45FA3EF47464B755D162828AAE6B59B374D3A98777CB7F2",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_000.png",
+      "exists": true,
+      "baseline_sha256": "B504730C45050F9069147D28BDFFDD2006FE4F5D6256CF0AD8C1E4DD896AD986",
+      "current_sha256": "B504730C45050F9069147D28BDFFDD2006FE4F5D6256CF0AD8C1E4DD896AD986",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_001.png",
+      "exists": true,
+      "baseline_sha256": "2E8408A6B619B38325D050E2EB082EE33879AC897E524F299B85B73E3066EBD7",
+      "current_sha256": "2E8408A6B619B38325D050E2EB082EE33879AC897E524F299B85B73E3066EBD7",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_002.png",
+      "exists": true,
+      "baseline_sha256": "BFF419F408393A07F8DE3ED52B351E69DD4CB02D5BCA1D340AA5D87BF8D425EC",
+      "current_sha256": "BFF419F408393A07F8DE3ED52B351E69DD4CB02D5BCA1D340AA5D87BF8D425EC",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_003.png",
+      "exists": true,
+      "baseline_sha256": "15C64854FCC416ECC3CE2BDD35C2857A7AD5E8D149D01BF2E888FEA5EEF6F32E",
+      "current_sha256": "15C64854FCC416ECC3CE2BDD35C2857A7AD5E8D149D01BF2E888FEA5EEF6F32E",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_004.png",
+      "exists": true,
+      "baseline_sha256": "2D4F20F0F181BAB85E7535093E1BFEA7892F1AC7F26EEC0C184DD2F5E837B5EE",
+      "current_sha256": "2D4F20F0F181BAB85E7535093E1BFEA7892F1AC7F26EEC0C184DD2F5E837B5EE",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_005.png",
+      "exists": true,
+      "baseline_sha256": "AAF9C1AAF8B3E23B55E2E6E13902AA2DC93D6203DF91842E243211B88F14F556",
+      "current_sha256": "AAF9C1AAF8B3E23B55E2E6E13902AA2DC93D6203DF91842E243211B88F14F556",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_006.png",
+      "exists": true,
+      "baseline_sha256": "C7306BCB34AB26E5F8C8CCD5F13FAD81606E8934C42B377224CF48692BB8673F",
+      "current_sha256": "C7306BCB34AB26E5F8C8CCD5F13FAD81606E8934C42B377224CF48692BB8673F",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_007.png",
+      "exists": true,
+      "baseline_sha256": "747E13EB707A107FF303824796573F633351DE713DA0436A9FA1DEB9E863BB22",
+      "current_sha256": "747E13EB707A107FF303824796573F633351DE713DA0436A9FA1DEB9E863BB22",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_008.png",
+      "exists": true,
+      "baseline_sha256": "D82A59305C79D6A260B626D9F4E68F0BB1C03BF031BB3E6CCDBFE25A4DCD1B99",
+      "current_sha256": "D82A59305C79D6A260B626D9F4E68F0BB1C03BF031BB3E6CCDBFE25A4DCD1B99",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_000.png",
+      "exists": true,
+      "baseline_sha256": "5BAD17B176AD961783052039C6B45B48F834E88BCA5CBC953ED98CDBC7C64E98",
+      "current_sha256": "5BAD17B176AD961783052039C6B45B48F834E88BCA5CBC953ED98CDBC7C64E98",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_001.png",
+      "exists": true,
+      "baseline_sha256": "AFE0747466AC048698A77F98521324A27C711998B55A55A96EB47CA74906C878",
+      "current_sha256": "AFE0747466AC048698A77F98521324A27C711998B55A55A96EB47CA74906C878",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_002.png",
+      "exists": true,
+      "baseline_sha256": "26BCE6496E1FC167EABA62AB0680DA63017B711995F81BBA5F031FBA782A57FB",
+      "current_sha256": "26BCE6496E1FC167EABA62AB0680DA63017B711995F81BBA5F031FBA782A57FB",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_003.png",
+      "exists": true,
+      "baseline_sha256": "B20DC20D3B1C2265EF3FB857DB19967A83DF4E3B84886AAA98D642A98CFB63E6",
+      "current_sha256": "B20DC20D3B1C2265EF3FB857DB19967A83DF4E3B84886AAA98D642A98CFB63E6",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_004.png",
+      "exists": true,
+      "baseline_sha256": "BF0C307FEF1131CF47BB3176EAA6059573977F53276DBFA1464CB0ACA5370769",
+      "current_sha256": "BF0C307FEF1131CF47BB3176EAA6059573977F53276DBFA1464CB0ACA5370769",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_005.png",
+      "exists": true,
+      "baseline_sha256": "8D129D92C01131FC033325E3D0D918472D1E9CF1D7B891065D5AD0FCE9111441",
+      "current_sha256": "8D129D92C01131FC033325E3D0D918472D1E9CF1D7B891065D5AD0FCE9111441",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_006.png",
+      "exists": true,
+      "baseline_sha256": "01A963A8E53727AE7C587A5B88E7B323C029A99CF4FD9A40A41C9C223110439F",
+      "current_sha256": "01A963A8E53727AE7C587A5B88E7B323C029A99CF4FD9A40A41C9C223110439F",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_007.png",
+      "exists": true,
+      "baseline_sha256": "09941D85D578C374B56378B4DF94AD9D232A56D5EBC415103993D5E25BE914D2",
+      "current_sha256": "09941D85D578C374B56378B4DF94AD9D232A56D5EBC415103993D5E25BE914D2",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_008.png",
+      "exists": true,
+      "baseline_sha256": "1CFF5DCD3B9E0D2F19614CD04DB4D691D690FCEB78984BF1D561B451C13F2A72",
+      "current_sha256": "1CFF5DCD3B9E0D2F19614CD04DB4D691D690FCEB78984BF1D561B451C13F2A72",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_000.png",
+      "exists": true,
+      "baseline_sha256": "0C115667A27F823B06969FCA2A329B7E1E38588488B65EA94FC97EB3DA8DC7F9",
+      "current_sha256": "0C115667A27F823B06969FCA2A329B7E1E38588488B65EA94FC97EB3DA8DC7F9",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_001.png",
+      "exists": true,
+      "baseline_sha256": "945D652F222D3050C0BF34FEB04797709CB1CE004D01E99A5E4E00F821A31330",
+      "current_sha256": "945D652F222D3050C0BF34FEB04797709CB1CE004D01E99A5E4E00F821A31330",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_002.png",
+      "exists": true,
+      "baseline_sha256": "5AF58DD24813E776A6A9167BE3285AA5E12523D4206218B423977BE1A8AB30B0",
+      "current_sha256": "5AF58DD24813E776A6A9167BE3285AA5E12523D4206218B423977BE1A8AB30B0",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_003.png",
+      "exists": true,
+      "baseline_sha256": "4CA2349FC5BA8D7BC04CF9B72D803E5A4C3348B4F007F24A8D301943FB0868F9",
+      "current_sha256": "4CA2349FC5BA8D7BC04CF9B72D803E5A4C3348B4F007F24A8D301943FB0868F9",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_004.png",
+      "exists": true,
+      "baseline_sha256": "1C3BFA1260A207B152AEE9D5B92FC3EAA09300A7042A255CFF6E06C038B74EAB",
+      "current_sha256": "1C3BFA1260A207B152AEE9D5B92FC3EAA09300A7042A255CFF6E06C038B74EAB",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_005.png",
+      "exists": true,
+      "baseline_sha256": "28AB109C245C24F0269137EBBEDC952566D382CFDFFB14CFFA268ACCB4F4AD68",
+      "current_sha256": "28AB109C245C24F0269137EBBEDC952566D382CFDFFB14CFFA268ACCB4F4AD68",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_006.png",
+      "exists": true,
+      "baseline_sha256": "0742AAEB3BD43E184DE70F85120501EA8991015C064B76843FA48C8A72234A47",
+      "current_sha256": "0742AAEB3BD43E184DE70F85120501EA8991015C064B76843FA48C8A72234A47",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_007.png",
+      "exists": true,
+      "baseline_sha256": "343D51ED2B6093E6752638AD500352E1C95F93E7DA352A7AD89C4D56B4E1EE28",
+      "current_sha256": "343D51ED2B6093E6752638AD500352E1C95F93E7DA352A7AD89C4D56B4E1EE28",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_008.png",
+      "exists": true,
+      "baseline_sha256": "CD11B5C48682226227948B7973E3E447B7D7B2D8436D61C3026CF55BFAB8DE1B",
+      "current_sha256": "CD11B5C48682226227948B7973E3E447B7D7B2D8436D61C3026CF55BFAB8DE1B",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_000.png",
+      "exists": true,
+      "baseline_sha256": "770A4119862F364F222D649BC929F74C6141461565FC4A00B3678DB7F72731A3",
+      "current_sha256": "770A4119862F364F222D649BC929F74C6141461565FC4A00B3678DB7F72731A3",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_001.png",
+      "exists": true,
+      "baseline_sha256": "028C802BAF07082438ECF2FFFDE3008FEBB648C8E06E891B315422C3680177D8",
+      "current_sha256": "028C802BAF07082438ECF2FFFDE3008FEBB648C8E06E891B315422C3680177D8",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_002.png",
+      "exists": true,
+      "baseline_sha256": "B227FBCB749119FDF04A3CF3F3EA9731268DAB1D764FBB98D1CDA2D81ED11CEC",
+      "current_sha256": "B227FBCB749119FDF04A3CF3F3EA9731268DAB1D764FBB98D1CDA2D81ED11CEC",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_003.png",
+      "exists": true,
+      "baseline_sha256": "E00AA83673075021C6DB1EE1A8BAAB907B3311C4A1FF4E07848865E722134BB4",
+      "current_sha256": "E00AA83673075021C6DB1EE1A8BAAB907B3311C4A1FF4E07848865E722134BB4",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_004.png",
+      "exists": true,
+      "baseline_sha256": "A4037BDE1F34EC2B473D980FE410BC58A48C6A01FF37C6621BB7EA6B58400404",
+      "current_sha256": "A4037BDE1F34EC2B473D980FE410BC58A48C6A01FF37C6621BB7EA6B58400404",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_005.png",
+      "exists": true,
+      "baseline_sha256": "B829897C61DC59C8DA61D19E8651AA3F1805F4256A557690BD89F9F870B06DBC",
+      "current_sha256": "B829897C61DC59C8DA61D19E8651AA3F1805F4256A557690BD89F9F870B06DBC",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_006.png",
+      "exists": true,
+      "baseline_sha256": "3E726A2B314611DE2E5F2A43C4F588D9F53D4E511866B0FE426C74CA7AACF55E",
+      "current_sha256": "3E726A2B314611DE2E5F2A43C4F588D9F53D4E511866B0FE426C74CA7AACF55E",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_007.png",
+      "exists": true,
+      "baseline_sha256": "57EA198B879293343C3A14BDEB85FB25BF88F2B7BE14ABE311CAB97597A53C81",
+      "current_sha256": "57EA198B879293343C3A14BDEB85FB25BF88F2B7BE14ABE311CAB97597A53C81",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_008.png",
+      "exists": true,
+      "baseline_sha256": "852C5B58C124ED612408066424E50F1D8C02D07CD9A70FB36A7F034BA6FC4B8C",
+      "current_sha256": "852C5B58C124ED612408066424E50F1D8C02D07CD9A70FB36A7F034BA6FC4B8C",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_000.png",
+      "exists": true,
+      "baseline_sha256": "393DD9D80B1F8E187CC338829CB01DB3E14BB69C8A86CA4521A84D82C4C222E9",
+      "current_sha256": "393DD9D80B1F8E187CC338829CB01DB3E14BB69C8A86CA4521A84D82C4C222E9",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_001.png",
+      "exists": true,
+      "baseline_sha256": "E2B5E2903C05E2804C6C593F79FD1F87AEDAF558E5B0CB081108EA0CAAC714F8",
+      "current_sha256": "E2B5E2903C05E2804C6C593F79FD1F87AEDAF558E5B0CB081108EA0CAAC714F8",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_002.png",
+      "exists": true,
+      "baseline_sha256": "D94965D75B568F7A02329DCD05F89FD914C1124A586DC5A8C67E024B9399D8B3",
+      "current_sha256": "D94965D75B568F7A02329DCD05F89FD914C1124A586DC5A8C67E024B9399D8B3",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_003.png",
+      "exists": true,
+      "baseline_sha256": "3EBEA29890A52EE17B2D24F639DD458A960400B42CE8AFA837E498C14F4AFC50",
+      "current_sha256": "3EBEA29890A52EE17B2D24F639DD458A960400B42CE8AFA837E498C14F4AFC50",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_004.png",
+      "exists": true,
+      "baseline_sha256": "CE37A716F52933C41158BDF17F40144961CD57C25B3C412DB2BBC776B6DF53FE",
+      "current_sha256": "CE37A716F52933C41158BDF17F40144961CD57C25B3C412DB2BBC776B6DF53FE",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_005.png",
+      "exists": true,
+      "baseline_sha256": "642CF9A7291632E4DBC405227CD73F41DDAE443D5E42A8785F65570461AEB85A",
+      "current_sha256": "642CF9A7291632E4DBC405227CD73F41DDAE443D5E42A8785F65570461AEB85A",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_006.png",
+      "exists": true,
+      "baseline_sha256": "E20B720A9276F3DA6E165F7EA5C460304601B9B24012E7252CC75F155EE25924",
+      "current_sha256": "E20B720A9276F3DA6E165F7EA5C460304601B9B24012E7252CC75F155EE25924",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_007.png",
+      "exists": true,
+      "baseline_sha256": "1F20E5918D5D0C1F5E9D6321513C39DB88DC4669886F84DE89ED960D65173F27",
+      "current_sha256": "1F20E5918D5D0C1F5E9D6321513C39DB88DC4669886F84DE89ED960D65173F27",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_008.png",
+      "exists": true,
+      "baseline_sha256": "0D89F78EFE5B16E48E0E48533954C5E8A4A8A3401F5537DA7B8A3CCC08537B03",
+      "current_sha256": "0D89F78EFE5B16E48E0E48533954C5E8A4A8A3401F5537DA7B8A3CCC08537B03",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_000.png",
+      "exists": true,
+      "baseline_sha256": "C4E545B3F5891B81D0ED9921CAB4F880049660674652936F459052155CEA3B36",
+      "current_sha256": "C4E545B3F5891B81D0ED9921CAB4F880049660674652936F459052155CEA3B36",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_001.png",
+      "exists": true,
+      "baseline_sha256": "025EB188B0CF000D214E84AB6CE91BC689BF69C2D4DF25E3638F6DA82A711599",
+      "current_sha256": "025EB188B0CF000D214E84AB6CE91BC689BF69C2D4DF25E3638F6DA82A711599",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_002.png",
+      "exists": true,
+      "baseline_sha256": "E1B2029FB9449F275D1885F9E3E9E0308BA535D7F163EDA60AB08BDF3DEDE8B0",
+      "current_sha256": "E1B2029FB9449F275D1885F9E3E9E0308BA535D7F163EDA60AB08BDF3DEDE8B0",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_003.png",
+      "exists": true,
+      "baseline_sha256": "C7B473E3C12D713A6B1C712D62E186A85EBCA6E1B641A024B1CC49F929289881",
+      "current_sha256": "C7B473E3C12D713A6B1C712D62E186A85EBCA6E1B641A024B1CC49F929289881",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_004.png",
+      "exists": true,
+      "baseline_sha256": "E45A3FB719A57DA1D88CC182F407C8B97764C293D4D3C70A4E49ABA6655FBDD1",
+      "current_sha256": "E45A3FB719A57DA1D88CC182F407C8B97764C293D4D3C70A4E49ABA6655FBDD1",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_005.png",
+      "exists": true,
+      "baseline_sha256": "69B03729214E4EB9AC95E03AA07B4A1981760F7D0E34010FCFE9315E8F7128C8",
+      "current_sha256": "69B03729214E4EB9AC95E03AA07B4A1981760F7D0E34010FCFE9315E8F7128C8",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_006.png",
+      "exists": true,
+      "baseline_sha256": "13D80D5314FF3E991C253369E4B156E0B25779AC1BE0A2ADBB1F1DBF9D03ECEE",
+      "current_sha256": "13D80D5314FF3E991C253369E4B156E0B25779AC1BE0A2ADBB1F1DBF9D03ECEE",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_007.png",
+      "exists": true,
+      "baseline_sha256": "D84093CCFF7999D35C81FDD244910FD32E98B8ED2270A8150666FBA2AB470390",
+      "current_sha256": "D84093CCFF7999D35C81FDD244910FD32E98B8ED2270A8150666FBA2AB470390",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_008.png",
+      "exists": true,
+      "baseline_sha256": "A28826BAAF75860731218C9F007F49DA9CCFF12D98F71EC6E8194890904F2FE1",
+      "current_sha256": "A28826BAAF75860731218C9F007F49DA9CCFF12D98F71EC6E8194890904F2FE1",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/rotations/east.png",
+      "exists": true,
+      "baseline_sha256": "F98F6BD2D54FD475C98E8C06F5FE7B142A9508E556B929B3475DBB6D169FA540",
+      "current_sha256": "F98F6BD2D54FD475C98E8C06F5FE7B142A9508E556B929B3475DBB6D169FA540",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/rotations/north-east.png",
+      "exists": true,
+      "baseline_sha256": "CB2BBEF483E35BF0F67B993490A46555182F0A421AAC4649D916D07DED6C2172",
+      "current_sha256": "CB2BBEF483E35BF0F67B993490A46555182F0A421AAC4649D916D07DED6C2172",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/rotations/north-west.png",
+      "exists": true,
+      "baseline_sha256": "F8D4F42BAA1BA6A0F0A6D66E93D66278491445B74E2F40B4A141A14F6CC9C4B2",
+      "current_sha256": "F8D4F42BAA1BA6A0F0A6D66E93D66278491445B74E2F40B4A141A14F6CC9C4B2",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/rotations/north.png",
+      "exists": true,
+      "baseline_sha256": "52987E608E653931084C6DA8F897BFA17169A2CD6BCC89967FB237A4724BD9A7",
+      "current_sha256": "52987E608E653931084C6DA8F897BFA17169A2CD6BCC89967FB237A4724BD9A7",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/rotations/south-east.png",
+      "exists": true,
+      "baseline_sha256": "B1022F789ADF12410B9CD4B3982FE60C920FE8AE956D1BA2165257A5C0B9E85A",
+      "current_sha256": "B1022F789ADF12410B9CD4B3982FE60C920FE8AE956D1BA2165257A5C0B9E85A",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/rotations/south-west.png",
+      "exists": true,
+      "baseline_sha256": "DE42D0CD8B3175F32B48B9E663A4C72F02F2B0203718873B7F24122CCF868620",
+      "current_sha256": "DE42D0CD8B3175F32B48B9E663A4C72F02F2B0203718873B7F24122CCF868620",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/rotations/south.png",
+      "exists": true,
+      "baseline_sha256": "FE2F3AB36B9DB2534D9E73A207586D08CC59A4A92E1E417688E22842B3C473E5",
+      "current_sha256": "FE2F3AB36B9DB2534D9E73A207586D08CC59A4A92E1E417688E22842B3C473E5",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/rotations/west.png",
+      "exists": true,
+      "baseline_sha256": "8E2F6547FF669E49DA2137984065D97158BDCEBBD292CD3BA8F3F74873ECDDDC",
+      "current_sha256": "8E2F6547FF669E49DA2137984065D97158BDCEBBD292CD3BA8F3F74873ECDDDC",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/original/metadata.json",
+      "exists": true,
+      "baseline_sha256": "A38B57907CC90FF92DC9E6F2B9C0B544BAD8DF08BCECA1A01FC2A171176ADC0A",
+      "current_sha256": "A38B57907CC90FF92DC9E6F2B9C0B544BAD8DF08BCECA1A01FC2A171176ADC0A",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/michael/pixellab_original.zip",
+      "exists": true,
+      "baseline_sha256": "78EBE8A8936F3991DE869963765E85E1B5EA5DAE29F2E62BDFAED08573643555",
+      "current_sha256": "78EBE8A8936F3991DE869963765E85E1B5EA5DAE29F2E62BDFAED08573643555",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/neymar.png",
+      "exists": true,
+      "baseline_sha256": "E8F6731E55554285C936D8F72204B87258089BD6B43847401A5BAF85FA0A5F34",
+      "current_sha256": "E8F6731E55554285C936D8F72204B87258089BD6B43847401A5BAF85FA0A5F34",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/obama.png",
+      "exists": true,
+      "baseline_sha256": "048BF9568C5A09FCD45F13BEB0A963C9341784E3466665643046DB66E4843590",
+      "current_sha256": "048BF9568C5A09FCD45F13BEB0A963C9341784E3466665643046DB66E4843590",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/ORIGEM.md",
+      "exists": true,
+      "baseline_sha256": "1D4ADB8EE6EA799E28AC5CD644D461EEBEC42A9CC8C297D98C05FA3B0109CCB3",
+      "current_sha256": "1D4ADB8EE6EA799E28AC5CD644D461EEBEC42A9CC8C297D98C05FA3B0109CCB3",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/fx_ball.png",
+      "exists": true,
+      "baseline_sha256": "53944792E31F94A875150B0B0EEDEDD0432259A3DBFF5B33D142E791E850CBB5",
+      "current_sha256": "53944792E31F94A875150B0B0EEDEDD0432259A3DBFF5B33D142E791E850CBB5",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/item_blade.png",
+      "exists": true,
+      "baseline_sha256": "06B1C208BDAE86C935E3E6EFD42B8CE4B326DB7CCE1496EA276B7AE51CF0ADBC",
+      "current_sha256": "06B1C208BDAE86C935E3E6EFD42B8CE4B326DB7CCE1496EA276B7AE51CF0ADBC",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/item_boots.png",
+      "exists": true,
+      "baseline_sha256": "3258479337AC2D26093663BF41E9A0AA2E39409C29205F725D08E8B82BD3FA43",
+      "current_sha256": "3258479337AC2D26093663BF41E9A0AA2E39409C29205F725D08E8B82BD3FA43",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/item_charm.png",
+      "exists": true,
+      "baseline_sha256": "8DB3857EAD1336C7A20B7A0C051BF009AEEAEEBC73644D077CE797AE3EC496F8",
+      "current_sha256": "8DB3857EAD1336C7A20B7A0C051BF009AEEAEEBC73644D077CE797AE3EC496F8",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/item_great_blade.png",
+      "exists": true,
+      "baseline_sha256": "945784A7B77B23DDFEAECBF73D4450D3BB7243C29A739543E10251E425FA9527",
+      "current_sha256": "945784A7B77B23DDFEAECBF73D4450D3BB7243C29A739543E10251E425FA9527",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/item_guard_vest.png",
+      "exists": true,
+      "baseline_sha256": "4E8421CDC65F43BB2821BD94BFB6852EAA8A8994A8D9EB7B33089548ED70387B",
+      "current_sha256": "4E8421CDC65F43BB2821BD94BFB6852EAA8A8994A8D9EB7B33089548ED70387B",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/item_plate.png",
+      "exists": true,
+      "baseline_sha256": "31957DC82C32988B6CEF2A18183E0A0261F79BCE59FC7A4D610D12552E8DD2F7",
+      "current_sha256": "31957DC82C32988B6CEF2A18183E0A0261F79BCE59FC7A4D610D12552E8DD2F7",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/item_vest.png",
+      "exists": true,
+      "baseline_sha256": "9E9A62340420F7594864A9135A6D8273A2A60F0C64316FC8EA0E9D11D26104E3",
+      "current_sha256": "9E9A62340420F7594864A9135A6D8273A2A60F0C64316FC8EA0E9D11D26104E3",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/item_ward.png",
+      "exists": true,
+      "baseline_sha256": "3655CC010BCFA45C320A01C6383E023E20097602A80060BCE1E40189F09D9192",
+      "current_sha256": "3655CC010BCFA45C320A01C6383E023E20097602A80060BCE1E40189F09D9192",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/syn_apoio.png",
+      "exists": true,
+      "baseline_sha256": "31EED1D153EBA64A32D52F17DB5F9536FC005DD256372981EB4AC9A9487EB0D0",
+      "current_sha256": "31EED1D153EBA64A32D52F17DB5F9536FC005DD256372981EB4AC9A9487EB0D0",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/syn_atacantes.png",
+      "exists": true,
+      "baseline_sha256": "F5EBEB4EEB2521CF7CB596B60DD7547987CFEFEBC20A314290814C5B1687BDE3",
+      "current_sha256": "F5EBEB4EEB2521CF7CB596B60DD7547987CFEFEBC20A314290814C5B1687BDE3",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/syn_atiradores.png",
+      "exists": true,
+      "baseline_sha256": "F9EEB8A29BE6D6F16D3E063FACFC2EE6399DC5657CADB702DCDE2CC41CA8B687",
+      "current_sha256": "F9EEB8A29BE6D6F16D3E063FACFC2EE6399DC5657CADB702DCDE2CC41CA8B687",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/syn_vanguarda.png",
+      "exists": true,
+      "baseline_sha256": "20DBACFDBFAC615BE133C83F4FD5F0FBE7BAF19A5C99222A2C5D1D2241C38C26",
+      "current_sha256": "20DBACFDBFAC615BE133C83F4FD5F0FBE7BAF19A5C99222A2C5D1D2241C38C26",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/ui_coin.png",
+      "exists": true,
+      "baseline_sha256": "0FFCB97E787AC1E21C874ADEFC869460F0CA567D2B52AD813995EFA587BA73D0",
+      "current_sha256": "0FFCB97E787AC1E21C874ADEFC869460F0CA567D2B52AD813995EFA587BA73D0",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/ui_expand.png",
+      "exists": true,
+      "baseline_sha256": "6556637BC510AEE984774F380C6F8B874235B6B5C046B5ED86509DAE04AC7CA5",
+      "current_sha256": "6556637BC510AEE984774F380C6F8B874235B6B5C046B5ED86509DAE04AC7CA5",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/ui_fight.png",
+      "exists": true,
+      "baseline_sha256": "58AFDBCF972BF3B24FDB2D1EF2C9AF47D5EF9AA7618DE380ACCEA5FE00E67DED",
+      "current_sha256": "58AFDBCF972BF3B24FDB2D1EF2C9AF47D5EF9AA7618DE380ACCEA5FE00E67DED",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/ui_menu.png",
+      "exists": true,
+      "baseline_sha256": "965EC703BDB2BCE12B8124E571D55DE18032683E7AAF206B8B169941B072C5F3",
+      "current_sha256": "965EC703BDB2BCE12B8124E571D55DE18032683E7AAF206B8B169941B072C5F3",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/ui_refresh.png",
+      "exists": true,
+      "baseline_sha256": "566156C47718DCDDEB67C4D48FC54482B7E738AE7D217EFB2AE866394B28BC67",
+      "current_sha256": "566156C47718DCDDEB67C4D48FC54482B7E738AE7D217EFB2AE866394B28BC67",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/ui_scroll.png",
+      "exists": true,
+      "baseline_sha256": "0C54E34656FFD906C3720615A274261D31D636B940351B76992A3C5F941DC618",
+      "current_sha256": "0C54E34656FFD906C3720615A274261D31D636B940351B76992A3C5F941DC618",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/ui_sound.png",
+      "exists": true,
+      "baseline_sha256": "DF78C105A46F467733E73AAE1B4A463F9A79A0B3FF9F683BE96428A3BF5C8087",
+      "current_sha256": "DF78C105A46F467733E73AAE1B4A463F9A79A0B3FF9F683BE96428A3BF5C8087",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/ui_star.png",
+      "exists": true,
+      "baseline_sha256": "22E6D28F2F5CB41BC35A9470C40DB81E1503FC1F433A6324628111602DABDBCC",
+      "current_sha256": "22E6D28F2F5CB41BC35A9470C40DB81E1503FC1F433A6324628111602DABDBCC",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/cura_01/game_pack/manifest.json",
+      "exists": true,
+      "baseline_sha256": "7C8C5BFAB5402C18FEEE2B518A5A1402B279AF9EA3A1F09F9911C7F9E3200485",
+      "current_sha256": "7C8C5BFAB5402C18FEEE2B518A5A1402B279AF9EA3A1F09F9911C7F9E3200485",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/cura_01/game_pack/part-cura.png",
+      "exists": true,
+      "baseline_sha256": "C409F99313692B3BCE0D7325259EC6C86F9CD0555027451FB69B8F0C062F25BA",
+      "current_sha256": "C409F99313692B3BCE0D7325259EC6C86F9CD0555027451FB69B8F0C062F25BA",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/cura_01/game_pack/README.txt",
+      "exists": true,
+      "baseline_sha256": "3030BB6C509E7759CD342FD0B98DD3968551C657DFD76C4E6886399F751D632C",
+      "current_sha256": "3030BB6C509E7759CD342FD0B98DD3968551C657DFD76C4E6886399F751D632C",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/cura_01/game_pack/whole.png",
+      "exists": true,
+      "baseline_sha256": "C409F99313692B3BCE0D7325259EC6C86F9CD0555027451FB69B8F0C062F25BA",
+      "current_sha256": "C409F99313692B3BCE0D7325259EC6C86F9CD0555027451FB69B8F0C062F25BA",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/cura_01/original/clash-of-eras-cura01-game.zip",
+      "exists": true,
+      "baseline_sha256": "6F4807093C66042DEB90F4BA4BE93CABFA87EC21161F838FF9A2336531814B41",
+      "current_sha256": "6F4807093C66042DEB90F4BA4BE93CABFA87EC21161F838FF9A2336531814B41",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/cura_01/original/clash-of-eras-cura01.gif",
+      "exists": true,
+      "baseline_sha256": "F008C640DC6A4B623CC6949DED7698183919A4797EAC08D16EFF45375118A82C",
+      "current_sha256": "F008C640DC6A4B623CC6949DED7698183919A4797EAC08D16EFF45375118A82C",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/cura_01/original/clash-of-eras-cura01.json",
+      "exists": true,
+      "baseline_sha256": "EA7FF3D09DF3AE05E49F2AA05E299349B4B8CB34494BA13DE64B8C3D1EF83138",
+      "current_sha256": "EA7FF3D09DF3AE05E49F2AA05E299349B4B8CB34494BA13DE64B8C3D1EF83138",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/cura_01/original/clash-of-eras-cura01.png",
+      "exists": true,
+      "baseline_sha256": "D0F15E4B5C2E6D7AB02BC79EFFAD61A9001E024D023966CFC36F072018F74800",
+      "current_sha256": "D0F15E4B5C2E6D7AB02BC79EFFAD61A9001E024D023966CFC36F072018F74800",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/cura_01/VALIDACAO.json",
+      "exists": true,
+      "baseline_sha256": "741025B0433908450A79E6D880A9FB8FB3462C2E340A6DF9FCAC0E633D40E59A",
+      "current_sha256": "741025B0433908450A79E6D880A9FB8FB3462C2E340A6DF9FCAC0E633D40E59A",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/escudo_danca_01/exportacao.json",
+      "exists": true,
+      "baseline_sha256": "EC0776A3BC0E88C11C37F2ABDE5489041B3D557E7B177C4C0D523559E2378622",
+      "current_sha256": "EC0776A3BC0E88C11C37F2ABDE5489041B3D557E7B177C4C0D523559E2378622",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/escudo_danca_01/original/front.png",
+      "exists": true,
+      "baseline_sha256": "FCDF1D9B1DAD1B1D31A9C85E105475C0C7933813E16CF68420201020B09BFDFB",
+      "current_sha256": "FCDF1D9B1DAD1B1D31A9C85E105475C0C7933813E16CF68420201020B09BFDFB",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/escudo_danca_01/original/manifest.json",
+      "exists": true,
+      "baseline_sha256": "FFD8624EB2B168715950915D2E565CB63F03BC315951719003F8ED1C41032E2C",
+      "current_sha256": "FFD8624EB2B168715950915D2E565CB63F03BC315951719003F8ED1C41032E2C",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/escudo_danca_01/original/part-bubble_shield.png",
+      "exists": true,
+      "baseline_sha256": "FCDF1D9B1DAD1B1D31A9C85E105475C0C7933813E16CF68420201020B09BFDFB",
+      "current_sha256": "FCDF1D9B1DAD1B1D31A9C85E105475C0C7933813E16CF68420201020B09BFDFB",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/escudo_danca_01/original/README.txt",
+      "exists": true,
+      "baseline_sha256": "3030BB6C509E7759CD342FD0B98DD3968551C657DFD76C4E6886399F751D632C",
+      "current_sha256": "3030BB6C509E7759CD342FD0B98DD3968551C657DFD76C4E6886399F751D632C",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/escudo_danca_01/original/whole-with-sprite.png",
+      "exists": true,
+      "baseline_sha256": "AD511B0704A78E25A0DD7F29C1991A0ADDB47DA502CE440EB88A8545EAB8D9B9",
+      "current_sha256": "AD511B0704A78E25A0DD7F29C1991A0ADDB47DA502CE440EB88A8545EAB8D9B9",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/escudo_danca_01/original/whole.png",
+      "exists": true,
+      "baseline_sha256": "FCDF1D9B1DAD1B1D31A9C85E105475C0C7933813E16CF68420201020B09BFDFB",
+      "current_sha256": "FCDF1D9B1DAD1B1D31A9C85E105475C0C7933813E16CF68420201020B09BFDFB",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/escudo_danca_01/pixellab_original.zip",
+      "exists": true,
+      "baseline_sha256": "8669913F30D6DCB25A8D0D8DB8B16EEE7C1A6E547F28AF8BD876637FA9717074",
+      "current_sha256": "8669913F30D6DCB25A8D0D8DB8B16EEE7C1A6E547F28AF8BD876637FA9717074",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/estocada_01/clash-of-eras-estocada01-game.zip",
+      "exists": true,
+      "baseline_sha256": "BF6DA9A9273DAEDA999DD03CC751434ACA81D08132CADAAA0139849D54719F92",
+      "current_sha256": "BF6DA9A9273DAEDA999DD03CC751434ACA81D08132CADAAA0139849D54719F92",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/estocada_01/manifest.json",
+      "exists": true,
+      "baseline_sha256": "34EEE62A63C90D0C91FCAC52696E7F480579DADA984138A2685A2E0BC683C792",
+      "current_sha256": "34EEE62A63C90D0C91FCAC52696E7F480579DADA984138A2685A2E0BC683C792",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/estocada_01/ORIGEM.md",
+      "exists": true,
+      "baseline_sha256": "AC4FED62CDC657F0E7E5BCAF29EB4CF4C9A62BFCC6DFA967203F3FC91D2B5C27",
+      "current_sha256": "AC4FED62CDC657F0E7E5BCAF29EB4CF4C9A62BFCC6DFA967203F3FC91D2B5C27",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/estocada_01/part-estocada.png",
+      "exists": true,
+      "baseline_sha256": "369F95115AD7D40744CC1BA0682ED03CAFCA94C0CE287FF60989D4FC422FFF3D",
+      "current_sha256": "369F95115AD7D40744CC1BA0682ED03CAFCA94C0CE287FF60989D4FC422FFF3D",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/estocada_01/README.txt",
+      "exists": true,
+      "baseline_sha256": "3030BB6C509E7759CD342FD0B98DD3968551C657DFD76C4E6886399F751D632C",
+      "current_sha256": "3030BB6C509E7759CD342FD0B98DD3968551C657DFD76C4E6886399F751D632C",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/estocada_01/whole.png",
+      "exists": true,
+      "baseline_sha256": "369F95115AD7D40744CC1BA0682ED03CAFCA94C0CE287FF60989D4FC422FFF3D",
+      "current_sha256": "369F95115AD7D40744CC1BA0682ED03CAFCA94C0CE287FF60989D4FC422FFF3D",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/foguete_01/clash-of-eras-impacto-foguete01-game.zip",
+      "exists": true,
+      "baseline_sha256": "21A14FDAB200EFD058F00B3A4AE038C987B3CC83F762163F54BC0F70D3BCDC16",
+      "current_sha256": "21A14FDAB200EFD058F00B3A4AE038C987B3CC83F762163F54BC0F70D3BCDC16",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/foguete_01/clash-of-eras-impacto-foguete01.gif",
+      "exists": true,
+      "baseline_sha256": "5CAEF4E0CEE09D14BE676C92FAFB35256A9ECEC6B5891910C4850F6F2384BB38",
+      "current_sha256": "5CAEF4E0CEE09D14BE676C92FAFB35256A9ECEC6B5891910C4850F6F2384BB38",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/foguete_01/clash-of-eras-impacto-foguete01.json",
+      "exists": true,
+      "baseline_sha256": "3A665F87C3751D0363BBF3BEDF8EE814A1F29A60005EF9E96083CF90A8AD5311",
+      "current_sha256": "3A665F87C3751D0363BBF3BEDF8EE814A1F29A60005EF9E96083CF90A8AD5311",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/foguete_01/clash-of-eras-impacto-foguete01.png",
+      "exists": true,
+      "baseline_sha256": "87FDF3A2B7E8AADE44FE8F4E95841F10A6AAE3191CFC687ED606F1AE43F2CEE4",
+      "current_sha256": "87FDF3A2B7E8AADE44FE8F4E95841F10A6AAE3191CFC687ED606F1AE43F2CEE4",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/foguete_01/game_pack/manifest.json",
+      "exists": true,
+      "baseline_sha256": "8112167B5704C31D63818D260E0FA8E3A5E0603B787E9766D89C0D983C30AB00",
+      "current_sha256": "8112167B5704C31D63818D260E0FA8E3A5E0603B787E9766D89C0D983C30AB00",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/foguete_01/game_pack/part-fire_blast.png",
+      "exists": true,
+      "baseline_sha256": "C981BA9271FA3ADE55A27F0205143A89F169FBB4C8AC6BB1DBFE3BC4DE7C4BA2",
+      "current_sha256": "C981BA9271FA3ADE55A27F0205143A89F169FBB4C8AC6BB1DBFE3BC4DE7C4BA2",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/foguete_01/game_pack/README.txt",
+      "exists": true,
+      "baseline_sha256": "3030BB6C509E7759CD342FD0B98DD3968551C657DFD76C4E6886399F751D632C",
+      "current_sha256": "3030BB6C509E7759CD342FD0B98DD3968551C657DFD76C4E6886399F751D632C",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/foguete_01/game_pack/whole.png",
+      "exists": true,
+      "baseline_sha256": "C981BA9271FA3ADE55A27F0205143A89F169FBB4C8AC6BB1DBFE3BC4DE7C4BA2",
+      "current_sha256": "C981BA9271FA3ADE55A27F0205143A89F169FBB4C8AC6BB1DBFE3BC4DE7C4BA2",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/foguete_01/review.json",
+      "exists": true,
+      "baseline_sha256": "0A8A6655860118598A7F2852D80578E8ABA50F8F3860B7D2C9742B8D4D5AA78A",
+      "current_sha256": "0A8A6655860118598A7F2852D80578E8ABA50F8F3860B7D2C9742B8D4D5AA78A",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/fumaca_01/clash-of-eras-fumaca01-game.zip",
+      "exists": true,
+      "baseline_sha256": "DE71BF96731BC8C47AC6AE33BDB0028D06A1047A2A03E6557C5CC8F84D4057EC",
+      "current_sha256": "DE71BF96731BC8C47AC6AE33BDB0028D06A1047A2A03E6557C5CC8F84D4057EC",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/fumaca_01/clash-of-eras-fumaca01.gif",
+      "exists": true,
+      "baseline_sha256": "BC61CFAAC6BF27BCC065F25BA40DB1BF810CA7450EBA1EC4D1375132A253581E",
+      "current_sha256": "BC61CFAAC6BF27BCC065F25BA40DB1BF810CA7450EBA1EC4D1375132A253581E",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/fumaca_01/clash-of-eras-fumaca01.json",
+      "exists": true,
+      "baseline_sha256": "FA308686B45CC7B11FD56FDB5CC1D114474CA1B057FAF7E5D30E048C8BD6750C",
+      "current_sha256": "FA308686B45CC7B11FD56FDB5CC1D114474CA1B057FAF7E5D30E048C8BD6750C",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/fumaca_01/clash-of-eras-fumaca01.png",
+      "exists": true,
+      "baseline_sha256": "C2A9B57584D34147E1114C0A77ABF0A4A7DD8DAA9F9552CD430F1EDA294C4B8D",
+      "current_sha256": "C2A9B57584D34147E1114C0A77ABF0A4A7DD8DAA9F9552CD430F1EDA294C4B8D",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/fumaca_01/estado.json",
+      "exists": true,
+      "baseline_sha256": "CB71868643E1D85B22184C8D868C1638EC946AD208CAE9C5AC4A8EB9282E9FB5",
+      "current_sha256": "CB71868643E1D85B22184C8D868C1638EC946AD208CAE9C5AC4A8EB9282E9FB5",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/fumaca_01/ORIGEM.json",
+      "exists": true,
+      "baseline_sha256": "217F4522A06A522291053ECFD577B2876DE9EBD3D146C4A3761E78A95F5FB8D4",
+      "current_sha256": "217F4522A06A522291053ECFD577B2876DE9EBD3D146C4A3761E78A95F5FB8D4",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/fumaca_01/original/manifest.json",
+      "exists": true,
+      "baseline_sha256": "6BBCB723A61CF66D46F41C4EC519F26B09292B56838B83D6AD499623D269E905",
+      "current_sha256": "6BBCB723A61CF66D46F41C4EC519F26B09292B56838B83D6AD499623D269E905",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/fumaca_01/original/part-fumaca.png",
+      "exists": true,
+      "baseline_sha256": "BE0930A9D03414B76158616F2EFCC7910C8E4EC8F147F362C6746D34F0330E1A",
+      "current_sha256": "BE0930A9D03414B76158616F2EFCC7910C8E4EC8F147F362C6746D34F0330E1A",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/fumaca_01/original/README.txt",
+      "exists": true,
+      "baseline_sha256": "3030BB6C509E7759CD342FD0B98DD3968551C657DFD76C4E6886399F751D632C",
+      "current_sha256": "3030BB6C509E7759CD342FD0B98DD3968551C657DFD76C4E6886399F751D632C",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/fumaca_01/original/whole.png",
+      "exists": true,
+      "baseline_sha256": "BE0930A9D03414B76158616F2EFCC7910C8E4EC8F147F362C6746D34F0330E1A",
+      "current_sha256": "BE0930A9D03414B76158616F2EFCC7910C8E4EC8F147F362C6746D34F0330E1A",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/INTEGRIDADE_V1_4.json",
+      "exists": true,
+      "baseline_sha256": "0663D1EB1CF8708D7BCBCCF1699D465E37E89C49F11BFDC0C167756D2DEC1C3C",
+      "current_sha256": "0663D1EB1CF8708D7BCBCCF1699D465E37E89C49F11BFDC0C167756D2DEC1C3C",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/INTEGRIDADE.json",
+      "exists": true,
+      "baseline_sha256": "CE3D92A855F10F0019E43CF27512D7C4BC1CDE85DE066B7196780803673AD868",
+      "current_sha256": "CE3D92A855F10F0019E43CF27512D7C4BC1CDE85DE066B7196780803673AD868",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/laco_01/estado.json",
+      "exists": true,
+      "baseline_sha256": "18B2A02181535F3974990DE3DB65E16D817D66611A09F2F3F90E0BFB047AD0BB",
+      "current_sha256": "18B2A02181535F3974990DE3DB65E16D817D66611A09F2F3F90E0BFB047AD0BB",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/laco_01/exportacao.json",
+      "exists": true,
+      "baseline_sha256": "22BBE37098B4FC0356B5E3EC2B408C1D031EC50F6E947F4F2AB0E7D80DB0652D",
+      "current_sha256": "22BBE37098B4FC0356B5E3EC2B408C1D031EC50F6E947F4F2AB0E7D80DB0652D",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/laco_01/game_pack/manifest.json",
+      "exists": true,
+      "baseline_sha256": "9B89E0493389B04718077CD87B8E50ECDFFEA4DBEAD6AA926417C79486CB8806",
+      "current_sha256": "9B89E0493389B04718077CD87B8E50ECDFFEA4DBEAD6AA926417C79486CB8806",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/laco_01/game_pack/part-laco.png",
+      "exists": true,
+      "baseline_sha256": "A818BB7520C4224C15455419F33F78A03F77949CF8DBE690BCDAFCCE752C2113",
+      "current_sha256": "A818BB7520C4224C15455419F33F78A03F77949CF8DBE690BCDAFCCE752C2113",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/laco_01/game_pack/README.txt",
+      "exists": true,
+      "baseline_sha256": "3030BB6C509E7759CD342FD0B98DD3968551C657DFD76C4E6886399F751D632C",
+      "current_sha256": "3030BB6C509E7759CD342FD0B98DD3968551C657DFD76C4E6886399F751D632C",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/laco_01/game_pack/whole.png",
+      "exists": true,
+      "baseline_sha256": "A818BB7520C4224C15455419F33F78A03F77949CF8DBE690BCDAFCCE752C2113",
+      "current_sha256": "A818BB7520C4224C15455419F33F78A03F77949CF8DBE690BCDAFCCE752C2113",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/laco_01/original/clash-of-eras-laco01-game.zip",
+      "exists": true,
+      "baseline_sha256": "9DB2A623B867AB01D167FDF6DB4FB84AFB3713C768FCFCF0553A974BE103A63C",
+      "current_sha256": "9DB2A623B867AB01D167FDF6DB4FB84AFB3713C768FCFCF0553A974BE103A63C",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/laco_01/original/clash-of-eras-laco01.gif",
+      "exists": true,
+      "baseline_sha256": "647FF5D05505E2B830C7F87E9B096AAC0503C3F4030DE2B82801CE3453ACDD9D",
+      "current_sha256": "647FF5D05505E2B830C7F87E9B096AAC0503C3F4030DE2B82801CE3453ACDD9D",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/laco_01/original/clash-of-eras-laco01.json",
+      "exists": true,
+      "baseline_sha256": "83773D490F60DA74666B11DB3631F02FF023CEF866F1977EA2E7E40ABE6D2A91",
+      "current_sha256": "83773D490F60DA74666B11DB3631F02FF023CEF866F1977EA2E7E40ABE6D2A91",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/laco_01/original/clash-of-eras-laco01.png",
+      "exists": true,
+      "baseline_sha256": "D46D60A52BBB816E430E83776FB55E66C0B48BDB0BD4B694AA7A04B7BEB8A2F4",
+      "current_sha256": "D46D60A52BBB816E430E83776FB55E66C0B48BDB0BD4B694AA7A04B7BEB8A2F4",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/laco_01/recipe.json",
+      "exists": true,
+      "baseline_sha256": "C10120B47CCED4E9996D645D4741C7F05417697F5C41889D05D76EB9F62FAA4E",
+      "current_sha256": "C10120B47CCED4E9996D645D4741C7F05417697F5C41889D05D76EB9F62FAA4E",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/manifest.json",
+      "exists": true,
+      "baseline_sha256": "6D9B583EEA08E07EF9EC3D88B7C50A56C3954206BD5A67911308AFC2440AED9F",
+      "current_sha256": "6D9B583EEA08E07EF9EC3D88B7C50A56C3954206BD5A67911308AFC2440AED9F",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/vfx/README.md",
+      "exists": true,
+      "baseline_sha256": "A5E340CCC059D6D69E764989FA74B0C6B49A9CC926F46D41C86E34FA361156E9",
+      "current_sha256": "A5E340CCC059D6D69E764989FA74B0C6B49A9CC926F46D41C86E34FA361156E9",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/assets/zumbi.png",
+      "exists": true,
+      "baseline_sha256": "4AA0A31CF77B0D915638A0A29626EC5E41BE7DBC8A4A65F1AE82B649F9D3D14C",
+      "current_sha256": "4AA0A31CF77B0D915638A0A29626EC5E41BE7DBC8A4A65F1AE82B649F9D3D14C",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/combate.png",
+      "exists": true,
+      "baseline_sha256": "B5CD9A986DCAE4DCE8B54D1E3B74CDF519CAEE4F3D53D40147D006EE13129C2E",
+      "current_sha256": "B5CD9A986DCAE4DCE8B54D1E3B74CDF519CAEE4F3D53D40147D006EE13129C2E",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/integridade_lote_03.json",
+      "exists": true,
+      "baseline_sha256": "CA0865E9A6007C0E3C173C771CB8A3176695D97E366918E7FE334A44AD8A76E5",
+      "current_sha256": "CA0865E9A6007C0E3C173C771CB8A3176695D97E366918E7FE334A44AD8A76E5",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/lote_03_direcoes.json",
+      "exists": true,
+      "baseline_sha256": "697DD6E748F0B151AAE2AC3C8467E65773BD006351E7B0E47696F82BB68345E0",
+      "current_sha256": "697DD6E748F0B151AAE2AC3C8467E65773BD006351E7B0E47696F82BB68345E0",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/lote_03_direcoes.png",
+      "exists": true,
+      "baseline_sha256": "195F6454AE127B5903B46D20C5B8BC817AB396DBBDF962C2B54630E8D4D4CECE",
+      "current_sha256": "195F6454AE127B5903B46D20C5B8BC817AB396DBBDF962C2B54630E8D4D4CECE",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/lote_03_elenco.png",
+      "exists": true,
+      "baseline_sha256": "E0305E56647DEC8E67F60B342898D1DDE818D103DBC486F5C59C19D10699CB6A",
+      "current_sha256": "E0305E56647DEC8E67F60B342898D1DDE818D103DBC486F5C59C19D10699CB6A",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/preparacao.png",
+      "exists": true,
+      "baseline_sha256": "B82525731F33794C46ECC4887B224547150C8916566BD31AF2EECAA31861A493",
+      "current_sha256": "B82525731F33794C46ECC4887B224547150C8916566BD31AF2EECAA31861A493",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_1_beneficio.png",
+      "exists": true,
+      "baseline_sha256": "67C8AFC358E4C33C6F2C0FEA3D8CAE8EEFCC4B37CF981CFD79034D077BCB2D47",
+      "current_sha256": "67C8AFC358E4C33C6F2C0FEA3D8CAE8EEFCC4B37CF981CFD79034D077BCB2D47",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_1_combate.png",
+      "exists": true,
+      "baseline_sha256": "D4A4CF13CD4F4A29C4FA64244EF0107507040FAE9D2D36E37989F65794626E33",
+      "current_sha256": "D4A4CF13CD4F4A29C4FA64244EF0107507040FAE9D2D36E37989F65794626E33",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_1_itens.png",
+      "exists": true,
+      "baseline_sha256": "337CDFEDA543A7ADFD0C20A4D09A5A69C3F381EAAC19E3640D6E9344334F50F4",
+      "current_sha256": "337CDFEDA543A7ADFD0C20A4D09A5A69C3F381EAAC19E3640D6E9344334F50F4",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_1_menu.png",
+      "exists": true,
+      "baseline_sha256": "C303176ABC751E1B7AF64F58393332327AFFF745D350C19E56B5152FF398E023",
+      "current_sha256": "C303176ABC751E1B7AF64F58393332327AFFF745D350C19E56B5152FF398E023",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_1_niveis_combate.png",
+      "exists": true,
+      "baseline_sha256": "9F5497154F8F68146552B27F832EFF092CC19215A8FF6B8FAD1F027A2B481D58",
+      "current_sha256": "9F5497154F8F68146552B27F832EFF092CC19215A8FF6B8FAD1F027A2B481D58",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_1_niveis.png",
+      "exists": true,
+      "baseline_sha256": "2FD9E8E5801BD5F3893B983915DFDAA638004E9BA1EC878147A6666AD811BF3A",
+      "current_sha256": "2FD9E8E5801BD5F3893B983915DFDAA638004E9BA1EC878147A6666AD811BF3A",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_1_preparacao.png",
+      "exists": true,
+      "baseline_sha256": "C518D2CA055C814B8CE6ABC749DF7C403D53029D495BDF29DC5837184CD30EAF",
+      "current_sha256": "C518D2CA055C814B8CE6ABC749DF7C403D53029D495BDF29DC5837184CD30EAF",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_1_resultado.png",
+      "exists": true,
+      "baseline_sha256": "0D1516CC4CA6CF659AA361B38FC752B0AA4C7DFAE93F8F8999BAD5772A40EED6",
+      "current_sha256": "0D1516CC4CA6CF659AA361B38FC752B0AA4C7DFAE93F8F8999BAD5772A40EED6",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_1_variacoes.png",
+      "exists": true,
+      "baseline_sha256": "D2200A975CD1110B6C83029C4203C0B9FB4989AAE86E1CD41575B587F338FD55",
+      "current_sha256": "D2200A975CD1110B6C83029C4203C0B9FB4989AAE86E1CD41575B587F338FD55",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_beneficio.json",
+      "exists": true,
+      "baseline_sha256": "40FCF6DAC731F5D265570F814366766745B4AB3BAC02FEC5AFEA977A33FF1679",
+      "current_sha256": "40FCF6DAC731F5D265570F814366766745B4AB3BAC02FEC5AFEA977A33FF1679",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_beneficio.png",
+      "exists": true,
+      "baseline_sha256": "0E09CF79EDA133380E6765BBBEDE2F5CEEC41C4871CD288EF5FBCF7E4CDA9710",
+      "current_sha256": "0E09CF79EDA133380E6765BBBEDE2F5CEEC41C4871CD288EF5FBCF7E4CDA9710",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_capture_beneficio.err",
+      "exists": true,
+      "baseline_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "current_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_capture_beneficio.log",
+      "exists": true,
+      "baseline_sha256": "793E63536960B06E0C0150A647742BFD96BE34FE24F2DC167E25A31A30B81675",
+      "current_sha256": "793E63536960B06E0C0150A647742BFD96BE34FE24F2DC167E25A31A30B81675",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_capture_itens.err",
+      "exists": true,
+      "baseline_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "current_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_capture_itens.log",
+      "exists": true,
+      "baseline_sha256": "84BAF138B1CEAD90E56B836DD8DB85ADEC7CAD3571DFDF55EC306E9E423A97F4",
+      "current_sha256": "84BAF138B1CEAD90E56B836DD8DB85ADEC7CAD3571DFDF55EC306E9E423A97F4",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_capture_lote03combate.err",
+      "exists": true,
+      "baseline_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "current_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_capture_lote03combate.log",
+      "exists": true,
+      "baseline_sha256": "B1655512A1D42D0E4169F6FD637CC4624B41D6A07521E6F22A18DB8FA1C6F487",
+      "current_sha256": "B1655512A1D42D0E4169F6FD637CC4624B41D6A07521E6F22A18DB8FA1C6F487",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_capture_lote03resultado.err",
+      "exists": true,
+      "baseline_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "current_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_capture_lote03resultado.log",
+      "exists": true,
+      "baseline_sha256": "8117ACB433D7B632F63ADB0BDB26FBDC1E644B4B0579332C6F6288628CBDF065",
+      "current_sha256": "8117ACB433D7B632F63ADB0BDB26FBDC1E644B4B0579332C6F6288628CBDF065",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_capture_menu.err",
+      "exists": true,
+      "baseline_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "current_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_capture_menu.log",
+      "exists": true,
+      "baseline_sha256": "0CDEB95616CF41C861B7E891EABF2C2E2AD7ABA8C5317A06828E7CF9BCCCDC69",
+      "current_sha256": "0CDEB95616CF41C861B7E891EABF2C2E2AD7ABA8C5317A06828E7CF9BCCCDC69",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_capture_preparacao.err",
+      "exists": true,
+      "baseline_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "current_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_capture_preparacao.log",
+      "exists": true,
+      "baseline_sha256": "74F404A63EED0744A9B72E2DE31ABC7D70702C99E376B7D524F1D32DFD8DB271",
+      "current_sha256": "74F404A63EED0744A9B72E2DE31ABC7D70702C99E376B7D524F1D32DFD8DB271",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_itens.json",
+      "exists": true,
+      "baseline_sha256": "AA91099C937AC57EA9803B7EC3AE497A0190A45B97620444DF0301B3176BB380",
+      "current_sha256": "AA91099C937AC57EA9803B7EC3AE497A0190A45B97620444DF0301B3176BB380",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_itens.png",
+      "exists": true,
+      "baseline_sha256": "D49AE803A43667A214042EFE8D18EB32A6525D358078B662FE60D1704C8D0571",
+      "current_sha256": "D49AE803A43667A214042EFE8D18EB32A6525D358078B662FE60D1704C8D0571",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_lote03_combate.json",
+      "exists": true,
+      "baseline_sha256": "37AE015D19EC75D1A997D59EE145D4793A2E297AD0FAC214AB33199E6891BD83",
+      "current_sha256": "37AE015D19EC75D1A997D59EE145D4793A2E297AD0FAC214AB33199E6891BD83",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_lote03_combate.png",
+      "exists": true,
+      "baseline_sha256": "8D0B0DC367AFF2C65790FE18FE506360702D390C813EF288FC11DD0CEF199BC9",
+      "current_sha256": "8D0B0DC367AFF2C65790FE18FE506360702D390C813EF288FC11DD0CEF199BC9",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_lote03_resultado_antes_Ken.png",
+      "exists": true,
+      "baseline_sha256": "E7C155EAB86C6EEEC0F760E804CF82BBD46A537CC05A4DB2D0BE39D08D78F950",
+      "current_sha256": "E7C155EAB86C6EEEC0F760E804CF82BBD46A537CC05A4DB2D0BE39D08D78F950",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_lote03_resultado.json",
+      "exists": true,
+      "baseline_sha256": "692B866244091E683737C782B6BE0309AD9E571CD006D27CDBCC6017FE39A683",
+      "current_sha256": "692B866244091E683737C782B6BE0309AD9E571CD006D27CDBCC6017FE39A683",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_lote03_resultado.png",
+      "exists": true,
+      "baseline_sha256": "AF2A810B1847E517814578BC95A3377DD44D032340B6B9CB29FFA8CDCC36D361",
+      "current_sha256": "AF2A810B1847E517814578BC95A3377DD44D032340B6B9CB29FFA8CDCC36D361",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_menu.json",
+      "exists": true,
+      "baseline_sha256": "0264936AE8F54F6FE0DFDBBBDEFB1D9ED23ED235E889B6388F4A023499B6AD19",
+      "current_sha256": "0264936AE8F54F6FE0DFDBBBDEFB1D9ED23ED235E889B6388F4A023499B6AD19",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_menu.png",
+      "exists": true,
+      "baseline_sha256": "299D0B0343C3A19EE1047C505955189E55ADE63BB3ECB91893C26B92DBE98168",
+      "current_sha256": "299D0B0343C3A19EE1047C505955189E55ADE63BB3ECB91893C26B92DBE98168",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_partidas_final.log",
+      "exists": true,
+      "baseline_sha256": "A1AA56EB7C9866260AC842EA6805F4AC0EFF63879AFB14F6EA901186B6B2C6A2",
+      "current_sha256": "A1AA56EB7C9866260AC842EA6805F4AC0EFF63879AFB14F6EA901186B6B2C6A2",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_preparacao.json",
+      "exists": true,
+      "baseline_sha256": "AA91099C937AC57EA9803B7EC3AE497A0190A45B97620444DF0301B3176BB380",
+      "current_sha256": "AA91099C937AC57EA9803B7EC3AE497A0190A45B97620444DF0301B3176BB380",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_preparacao.png",
+      "exists": true,
+      "baseline_sha256": "0F071E81E660B9F987A8B248FC98BA72E13DB7335B92CDBA535BBB7B18F63EE7",
+      "current_sha256": "0F071E81E660B9F987A8B248FC98BA72E13DB7335B92CDBA535BBB7B18F63EE7",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_session_final.log",
+      "exists": true,
+      "baseline_sha256": "EC52793289E7F12DF9484AF8F6A82B2F023353ED6A941065D9808AA0F139DC4B",
+      "current_sha256": "EC52793289E7F12DF9484AF8F6A82B2F023353ED6A941065D9808AA0F139DC4B",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_simulacao_final.log",
+      "exists": true,
+      "baseline_sha256": "86F84071FC19D340DD06C1EE79A0B41CC5212FAF054188D7196AF155825971AC",
+      "current_sha256": "86F84071FC19D340DD06C1EE79A0B41CC5212FAF054188D7196AF155825971AC",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_smoke_headless.log",
+      "exists": true,
+      "baseline_sha256": "9A2EF52CC4F0864A0565C496A87581E307FCAABBF6E5FEC558AE54AD49943F77",
+      "current_sha256": "9A2EF52CC4F0864A0565C496A87581E307FCAABBF6E5FEC558AE54AD49943F77",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_smoke_opengl.err",
+      "exists": true,
+      "baseline_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "current_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_2_smoke_opengl.log",
+      "exists": true,
+      "baseline_sha256": "54801FC532C8F642691AEC0EAC014BC29662BBB87CA7AEF97A4B066F4F8EBF21",
+      "current_sha256": "54801FC532C8F642691AEC0EAC014BC29662BBB87CA7AEF97A4B066F4F8EBF21",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_3_capture_foguete.err",
+      "exists": true,
+      "baseline_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "current_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_3_capture_foguete.log",
+      "exists": true,
+      "baseline_sha256": "2ED6E451659116F294FD11B75D9FA389CC37FC5F4214EE69D99130E012BA143F",
+      "current_sha256": "2ED6E451659116F294FD11B75D9FA389CC37FC5F4214EE69D99130E012BA143F",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_3_capture_vfx.err",
+      "exists": true,
+      "baseline_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "current_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_3_capture_vfx.log",
+      "exists": true,
+      "baseline_sha256": "01E2BA6760968112C41C0CCAA970B6F21D2DE3B7DFB3E4A4F26E722E96B65A38",
+      "current_sha256": "01E2BA6760968112C41C0CCAA970B6F21D2DE3B7DFB3E4A4F26E722E96B65A38",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_3_full_matches.err",
+      "exists": true,
+      "baseline_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "current_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_3_full_matches.log",
+      "exists": true,
+      "baseline_sha256": "A1AA56EB7C9866260AC842EA6805F4AC0EFF63879AFB14F6EA901186B6B2C6A2",
+      "current_sha256": "A1AA56EB7C9866260AC842EA6805F4AC0EFF63879AFB14F6EA901186B6B2C6A2",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_3_import_final.log",
+      "exists": true,
+      "baseline_sha256": "E970B3DDB734FC8A8D4F5AA139093068174D15641FFB213A8F1EC47BADA6100B",
+      "current_sha256": "E970B3DDB734FC8A8D4F5AA139093068174D15641FFB213A8F1EC47BADA6100B",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_3_import.log",
+      "exists": true,
+      "baseline_sha256": "D9F3209FEFB7C5462E9157A78FEEE64ABB887F0C67EFEF08499CE162A4500063",
+      "current_sha256": "D9F3209FEFB7C5462E9157A78FEEE64ABB887F0C67EFEF08499CE162A4500063",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_3_regras_preservadas.json",
+      "exists": true,
+      "baseline_sha256": "7899C0411E0B2A0144BCA2B1553C3C8527085989A8DB07AE10DB022CC80C3513",
+      "current_sha256": "7899C0411E0B2A0144BCA2B1553C3C8527085989A8DB07AE10DB022CC80C3513",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_3_session.err",
+      "exists": true,
+      "baseline_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "current_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_3_session.log",
+      "exists": true,
+      "baseline_sha256": "EC52793289E7F12DF9484AF8F6A82B2F023353ED6A941065D9808AA0F139DC4B",
+      "current_sha256": "EC52793289E7F12DF9484AF8F6A82B2F023353ED6A941065D9808AA0F139DC4B",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_3_simulation.err",
+      "exists": true,
+      "baseline_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "current_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_3_simulation.log",
+      "exists": true,
+      "baseline_sha256": "86F84071FC19D340DD06C1EE79A0B41CC5212FAF054188D7196AF155825971AC",
+      "current_sha256": "86F84071FC19D340DD06C1EE79A0B41CC5212FAF054188D7196AF155825971AC",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_3_smoke_headless.log",
+      "exists": true,
+      "baseline_sha256": "674729056315A1C15F19FA386A804941C751A75EF3E912A8DAC4D980F22E5AFE",
+      "current_sha256": "674729056315A1C15F19FA386A804941C751A75EF3E912A8DAC4D980F22E5AFE",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_3_smoke_opengl.err",
+      "exists": true,
+      "baseline_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "current_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_3_smoke_opengl.log",
+      "exists": true,
+      "baseline_sha256": "7DA09EBE4FCC430A6A6AE30C234C3C37A8B81EBECDEF7F884165C32DA0E8BB2B",
+      "current_sha256": "7DA09EBE4FCC430A6A6AE30C234C3C37A8B81EBECDEF7F884165C32DA0E8BB2B",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_3_vfx_combate_foguete.json",
+      "exists": true,
+      "baseline_sha256": "917EEE8C8C50E33A3615EA3530D9BD67486501813A46DC2441BA2C75753D14C0",
+      "current_sha256": "917EEE8C8C50E33A3615EA3530D9BD67486501813A46DC2441BA2C75753D14C0",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_3_vfx_combate_foguete.png",
+      "exists": true,
+      "baseline_sha256": "C233D1A0D3A0046FFB4A6A1E121E66C5C4B6E7A29894A46237A8A7F2608639DA",
+      "current_sha256": "C233D1A0D3A0046FFB4A6A1E121E66C5C4B6E7A29894A46237A8A7F2608639DA",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_3_vfx_combate.json",
+      "exists": true,
+      "baseline_sha256": "01F77E62901DAE07152E6C26958866C1A3D82FC6C8FFC08485428836A63B96D2",
+      "current_sha256": "01F77E62901DAE07152E6C26958866C1A3D82FC6C8FFC08485428836A63B96D2",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_3_vfx_combate.png",
+      "exists": true,
+      "baseline_sha256": "29B8780B100A8463AC64F8EFE99E42B6F851044515661F8DB7798BDDEDA5AC3E",
+      "current_sha256": "29B8780B100A8463AC64F8EFE99E42B6F851044515661F8DB7798BDDEDA5AC3E",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_3_vfx_import.log",
+      "exists": true,
+      "baseline_sha256": "0F04B78E947D9146D5A8BE67A465D6B6A7D5C5E10F23C662E25D13A6C5591444",
+      "current_sha256": "0F04B78E947D9146D5A8BE67A465D6B6A7D5C5E10F23C662E25D13A6C5591444",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_3_vfx_library.log",
+      "exists": true,
+      "baseline_sha256": "7D0A3BC7BF8B6326682112314B2D516E45AD67122EA59A0CCE22A683C76A029B",
+      "current_sha256": "7D0A3BC7BF8B6326682112314B2D516E45AD67122EA59A0CCE22A683C76A029B",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_bug017_capture_parse.log",
+      "exists": true,
+      "baseline_sha256": "83CF0B082206AF2AA236C83064FBCFA76BE1E00A4AA3558574B2F65965D9481C",
+      "current_sha256": "83CF0B082206AF2AA236C83064FBCFA76BE1E00A4AA3558574B2F65965D9481C",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_bug017_repro_antes.json",
+      "exists": true,
+      "baseline_sha256": "97C63C5D3EAC9220B77DBBD0AAF44CB2D06022DEA22C831FE0EDF35E7451A7BA",
+      "current_sha256": "97C63C5D3EAC9220B77DBBD0AAF44CB2D06022DEA22C831FE0EDF35E7451A7BA",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_bug017_repro_antes.log",
+      "exists": true,
+      "baseline_sha256": "6222D8B59F6738CB179BE6895D84CBBA121E98BDDA2C7C08982DF555A9FB9400",
+      "current_sha256": "6222D8B59F6738CB179BE6895D84CBBA121E98BDDA2C7C08982DF555A9FB9400",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_bug017_repro_depois.json",
+      "exists": true,
+      "baseline_sha256": "12CA35159F4F92331B0926A6896D9CE94E2444AB96579BB310D2DFB61EE79C65",
+      "current_sha256": "12CA35159F4F92331B0926A6896D9CE94E2444AB96579BB310D2DFB61EE79C65",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_bug017_repro_depois.log",
+      "exists": true,
+      "baseline_sha256": "4959B7BE4B0CB18CA663FCFC410107B02DCEDE003E3B33EA1473499A9F30B047",
+      "current_sha256": "4959B7BE4B0CB18CA663FCFC410107B02DCEDE003E3B33EA1473499A9F30B047",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_bug017_smoke_parse.log",
+      "exists": true,
+      "baseline_sha256": "83CF0B082206AF2AA236C83064FBCFA76BE1E00A4AA3558574B2F65965D9481C",
+      "current_sha256": "83CF0B082206AF2AA236C83064FBCFA76BE1E00A4AA3558574B2F65965D9481C",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_capture_parse.log",
+      "exists": true,
+      "baseline_sha256": "83CF0B082206AF2AA236C83064FBCFA76BE1E00A4AA3558574B2F65965D9481C",
+      "current_sha256": "83CF0B082206AF2AA236C83064FBCFA76BE1E00A4AA3558574B2F65965D9481C",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_capture_preparation.err",
+      "exists": true,
+      "baseline_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "current_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_capture_preparation.log",
+      "exists": true,
+      "baseline_sha256": "1BC443F14B3691F6437221A49E896AFDA77D933060681AD772FA46D0FDA13C06",
+      "current_sha256": "1BC443F14B3691F6437221A49E896AFDA77D933060681AD772FA46D0FDA13C06",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_capture_support.err",
+      "exists": true,
+      "baseline_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "current_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_capture_support.log",
+      "exists": true,
+      "baseline_sha256": "0D3C5B5FA31D1C502889A65907D4D8EBD65525B543FB265B7860C20E4991DC92",
+      "current_sha256": "0D3C5B5FA31D1C502889A65907D4D8EBD65525B543FB265B7860C20E4991DC92",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_final_operations.json",
+      "exists": true,
+      "baseline_sha256": "6362686E9E6E8F0DC962A007300A42BF56B7D122948EE2F1ADF05CFA883AB6DE",
+      "current_sha256": "6362686E9E6E8F0DC962A007300A42BF56B7D122948EE2F1ADF05CFA883AB6DE",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_full_matches.err",
+      "exists": true,
+      "baseline_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "current_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_full_matches.log",
+      "exists": true,
+      "baseline_sha256": "A1AA56EB7C9866260AC842EA6805F4AC0EFF63879AFB14F6EA901186B6B2C6A2",
+      "current_sha256": "A1AA56EB7C9866260AC842EA6805F4AC0EFF63879AFB14F6EA901186B6B2C6A2",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_import_final.err",
+      "exists": true,
+      "baseline_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "current_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_import_final.log",
+      "exists": true,
+      "baseline_sha256": "B9473818B7692F48778DF2E5E30A2053341A47DDFB69E12E030B1DEA51AD2022",
+      "current_sha256": "B9473818B7692F48778DF2E5E30A2053341A47DDFB69E12E030B1DEA51AD2022",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_import_inicial.log",
+      "exists": true,
+      "baseline_sha256": "A8AA65CDA038677604912E77874C9048DBC79C7EB4A7D0221C9B3E7628E13F36",
+      "current_sha256": "A8AA65CDA038677604912E77874C9048DBC79C7EB4A7D0221C9B3E7628E13F36",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_regras_preservadas.json",
+      "exists": true,
+      "baseline_sha256": "A490E6D866529DDD6BCF12938A589DA48CF9AB547D51AAE3D916D0D88D28B9F0",
+      "current_sha256": "A490E6D866529DDD6BCF12938A589DA48CF9AB547D51AAE3D916D0D88D28B9F0",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_runners.json",
+      "exists": true,
+      "baseline_sha256": "6B0A63A4795F0B6C94E4470F92AC67B1689D1E4559B23C7FCE6805213F817C4B",
+      "current_sha256": "6B0A63A4795F0B6C94E4470F92AC67B1689D1E4559B23C7FCE6805213F817C4B",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_session.err",
+      "exists": true,
+      "baseline_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "current_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_session.log",
+      "exists": true,
+      "baseline_sha256": "EC52793289E7F12DF9484AF8F6A82B2F023353ED6A941065D9808AA0F139DC4B",
+      "current_sha256": "EC52793289E7F12DF9484AF8F6A82B2F023353ED6A941065D9808AA0F139DC4B",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_simulation.err",
+      "exists": true,
+      "baseline_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "current_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_simulation.log",
+      "exists": true,
+      "baseline_sha256": "86F84071FC19D340DD06C1EE79A0B41CC5212FAF054188D7196AF155825971AC",
+      "current_sha256": "86F84071FC19D340DD06C1EE79A0B41CC5212FAF054188D7196AF155825971AC",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_smoke_headless_inicial.log",
+      "exists": true,
+      "baseline_sha256": "D799317176B3B1245EBAB1F2EB5CB61C54AC0C0B73A1806512032915C7A25B09",
+      "current_sha256": "D799317176B3B1245EBAB1F2EB5CB61C54AC0C0B73A1806512032915C7A25B09",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_smoke_headless.err",
+      "exists": true,
+      "baseline_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "current_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_smoke_headless.log",
+      "exists": true,
+      "baseline_sha256": "B110705304D076CA526E77593E30967020FD1E5DE163302698508E8B7CC96F54",
+      "current_sha256": "B110705304D076CA526E77593E30967020FD1E5DE163302698508E8B7CC96F54",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_smoke_opengl_inicial.log",
+      "exists": true,
+      "baseline_sha256": "1E58E077EAA15CF323432A1803ABBCE538153760F75A48AEE9E838938D8ED7F6",
+      "current_sha256": "1E58E077EAA15CF323432A1803ABBCE538153760F75A48AEE9E838938D8ED7F6",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_smoke_opengl.err",
+      "exists": true,
+      "baseline_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "current_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_smoke_opengl.log",
+      "exists": true,
+      "baseline_sha256": "BBC2AC5264F37974A62505455F038AE3395338C7DD6EF5C63F8A9D7AFE94B526",
+      "current_sha256": "BBC2AC5264F37974A62505455F038AE3395338C7DD6EF5C63F8A9D7AFE94B526",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_smoke_parse.log",
+      "exists": true,
+      "baseline_sha256": "83CF0B082206AF2AA236C83064FBCFA76BE1E00A4AA3558574B2F65965D9481C",
+      "current_sha256": "83CF0B082206AF2AA236C83064FBCFA76BE1E00A4AA3558574B2F65965D9481C",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_support_combate_antes_alinhar_fio.json",
+      "exists": true,
+      "baseline_sha256": "10B2539AC0258178D5861751582B33B22449853CE63B6F7BAC19AC9343B7C8AB",
+      "current_sha256": "10B2539AC0258178D5861751582B33B22449853CE63B6F7BAC19AC9343B7C8AB",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_support_combate_antes_alinhar_fio.png",
+      "exists": true,
+      "baseline_sha256": "CC079C9CEDBEFFBAF0BD9A3AFEE8FC5B0F2776FD69900EF2725578DD95E10442",
+      "current_sha256": "CC079C9CEDBEFFBAF0BD9A3AFEE8FC5B0F2776FD69900EF2725578DD95E10442",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_support_combate.json",
+      "exists": true,
+      "baseline_sha256": "633A2FAB1E2652A58B2279C6C169923A41D2E902BAD50C7D409E983D97ACDFE6",
+      "current_sha256": "633A2FAB1E2652A58B2279C6C169923A41D2E902BAD50C7D409E983D97ACDFE6",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_support_combate.png",
+      "exists": true,
+      "baseline_sha256": "9550CE52173380A925B03EAAC8472AC3B31D424F6C18E9D7206069AD35576C56",
+      "current_sha256": "9550CE52173380A925B03EAAC8472AC3B31D424F6C18E9D7206069AD35576C56",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_support_preparacao.json",
+      "exists": true,
+      "baseline_sha256": "A7365CE74CCF74EE5711A1D906A6B723279DFB3FC751A8E5AB718FFEE0B6F262",
+      "current_sha256": "A7365CE74CCF74EE5711A1D906A6B723279DFB3FC751A8E5AB718FFEE0B6F262",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_support_preparacao.png",
+      "exists": true,
+      "baseline_sha256": "89B8AF66DEBB36A3586F2A053DE96E0B09281F4A841FC29BA74772DAD3EDE367",
+      "current_sha256": "89B8AF66DEBB36A3586F2A053DE96E0B09281F4A841FC29BA74772DAD3EDE367",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_vfx_library.err",
+      "exists": true,
+      "baseline_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "current_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_4_vfx_library.log",
+      "exists": true,
+      "baseline_sha256": "5D1C84181618ACE4AFF36F401C7CCA87B980F009DEEF6ECE57DA878FF5264683",
+      "current_sha256": "5D1C84181618ACE4AFF36F401C7CCA87B980F009DEEF6ECE57DA878FF5264683",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_beneficio.png",
+      "exists": true,
+      "baseline_sha256": "3CA2AD1B86F9B38EC28C221650D70D1C54B7D11941DC39EDF3FAFCAFA5D017BB",
+      "current_sha256": "3CA2AD1B86F9B38EC28C221650D70D1C54B7D11941DC39EDF3FAFCAFA5D017BB",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_bolsa.png",
+      "exists": true,
+      "baseline_sha256": "D6BBF8B7EABF03595F165C7FAE81974C8B90CBAD7E6054AF96C26DCBF3ACA259",
+      "current_sha256": "D6BBF8B7EABF03595F165C7FAE81974C8B90CBAD7E6054AF96C26DCBF3ACA259",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_combate.png",
+      "exists": true,
+      "baseline_sha256": "FD9FE45AB6357419E121891B3F9372531ABC8F8007BCFD8AE512CB11334F23DF",
+      "current_sha256": "FD9FE45AB6357419E121891B3F9372531ABC8F8007BCFD8AE512CB11334F23DF",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_menu.png",
+      "exists": true,
+      "baseline_sha256": "83CA6B15108B63F52690D10A81D2FA2BACD4515D9F740CD2C58084A0EA9F1F69",
+      "current_sha256": "83CA6B15108B63F52690D10A81D2FA2BACD4515D9F740CD2C58084A0EA9F1F69",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_play.log",
+      "exists": true,
+      "baseline_sha256": "374B7303B2074A57F34A9CD8AFFEFA8AA518AD43FBB75A5FFF13F3046139BBDD",
+      "current_sha256": "374B7303B2074A57F34A9CD8AFFEFA8AA518AD43FBB75A5FFF13F3046139BBDD",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_preparacao.png",
+      "exists": true,
+      "baseline_sha256": "C927F5570291719698501E4E165AD0152E36D6A5AB3F9891C16C18425252A237",
+      "current_sha256": "C927F5570291719698501E4E165AD0152E36D6A5AB3F9891C16C18425252A237",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/captures/v1_resultado.png",
+      "exists": true,
+      "baseline_sha256": "5038E41639C39E7BC9A0C0885E29FEDD32B6C59C5312F7FAC8F029D06D887739",
+      "current_sha256": "5038E41639C39E7BC9A0C0885E29FEDD32B6C59C5312F7FAC8F029D06D887739",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/client/board_projection.gd",
+      "exists": true,
+      "baseline_sha256": "71C4C152BBC59E6E3D2892D11096500D5B00FE23C0D86204091D7CE210FF155D",
+      "current_sha256": "71C4C152BBC59E6E3D2892D11096500D5B00FE23C0D86204091D7CE210FF155D",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/client/board_projection.gd.uid",
+      "exists": true,
+      "baseline_sha256": "72270573E9F7055F57AA8B314257ED27B7407ABF74C5A62F12A44FD9AE1A47C1",
+      "current_sha256": "72270573E9F7055F57AA8B314257ED27B7407ABF74C5A62F12A44FD9AE1A47C1",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/client/character_visuals.gd",
+      "exists": true,
+      "baseline_sha256": "7F2B42CCAE65542D88EB82BE09ABAE20F34D33A697304EC2743FB3BFF60FF028",
+      "current_sha256": "7F2B42CCAE65542D88EB82BE09ABAE20F34D33A697304EC2743FB3BFF60FF028",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/client/character_visuals.gd.uid",
+      "exists": true,
+      "baseline_sha256": "1D413388583EB94710B0C83B823CEC0C39D20E6600BB916B44C6B57F325E7B0A",
+      "current_sha256": "1D413388583EB94710B0C83B823CEC0C39D20E6600BB916B44C6B57F325E7B0A",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/client/main.gd",
+      "exists": true,
+      "baseline_sha256": "AB165C893B0CC641960E79FC94CA151C636A1AAFBC7E668CCF170E471312133F",
+      "current_sha256": "AB165C893B0CC641960E79FC94CA151C636A1AAFBC7E668CCF170E471312133F",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/client/main.gd.uid",
+      "exists": true,
+      "baseline_sha256": "5C96609661394CAB0E3AB75BEF3C341F98AC45FA8F8097F5D71B31BF90278853",
+      "current_sha256": "5C96609661394CAB0E3AB75BEF3C341F98AC45FA8F8097F5D71B31BF90278853",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/client/pixel_scale.gdshader",
+      "exists": true,
+      "baseline_sha256": "DB00D12EC1ACFA180F27F727A2B9E4266AF2419EE93F696E49ECB9EC4864BE62",
+      "current_sha256": "DB00D12EC1ACFA180F27F727A2B9E4266AF2419EE93F696E49ECB9EC4864BE62",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/client/pixel_scale.gdshader.uid",
+      "exists": true,
+      "baseline_sha256": "F7A0AF8ED647C77B7115B22498EB9CC03F2798CF3F9B63354D3DA17027504228",
+      "current_sha256": "F7A0AF8ED647C77B7115B22498EB9CC03F2798CF3F9B63354D3DA17027504228",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/client/prototype_audio.gd",
+      "exists": true,
+      "baseline_sha256": "C63B5048BE1F357A977946256102A82C49D2807DA268ADD1D59021F8F9D2A6DC",
+      "current_sha256": "C63B5048BE1F357A977946256102A82C49D2807DA268ADD1D59021F8F9D2A6DC",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/client/prototype_audio.gd.uid",
+      "exists": true,
+      "baseline_sha256": "583791BA74DEB06A13EB23F2CA326BBE3CB7DD2FF83740650BDFC48C547DB429",
+      "current_sha256": "583791BA74DEB06A13EB23F2CA326BBE3CB7DD2FF83740650BDFC48C547DB429",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/client/smoke.gd",
+      "exists": true,
+      "baseline_sha256": "DC2B48A96182C33F07C175531DF8075CE9C0AD33663AB8C66D208ED43D25D7C0",
+      "current_sha256": "DC2B48A96182C33F07C175531DF8075CE9C0AD33663AB8C66D208ED43D25D7C0",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/client/smoke.gd.uid",
+      "exists": true,
+      "baseline_sha256": "A927B146E4356DD471F0E06C3450C227B16C1BCE8849FB66AB60EFE92DE11444",
+      "current_sha256": "A927B146E4356DD471F0E06C3450C227B16C1BCE8849FB66AB60EFE92DE11444",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/client/ui_kit.gd",
+      "exists": true,
+      "baseline_sha256": "93D1A57A03BB2156D9D1F982D9B2B766446C43B7DE59E673014667B59D7C0891",
+      "current_sha256": "93D1A57A03BB2156D9D1F982D9B2B766446C43B7DE59E673014667B59D7C0891",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/client/ui_kit.gd.uid",
+      "exists": true,
+      "baseline_sha256": "95004126E5955DAEE5B7C68CE3EE441B5C7345C0063F643218E4924EB2862093",
+      "current_sha256": "95004126E5955DAEE5B7C68CE3EE441B5C7345C0063F643218E4924EB2862093",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/client/vfx_library.gd",
+      "exists": true,
+      "baseline_sha256": "DC3F9C7EE7FDCF9823E89460493B75BE0E427B5B91B1DCEB6F05EEC33548DF63",
+      "current_sha256": "DC3F9C7EE7FDCF9823E89460493B75BE0E427B5B91B1DCEB6F05EEC33548DF63",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/client/vfx_library.gd.uid",
+      "exists": true,
+      "baseline_sha256": "B0BB80F24E1C8F169660267179686DB79AF9275630AA60C7F028902D93CACAFB",
+      "current_sha256": "B0BB80F24E1C8F169660267179686DB79AF9275630AA60C7F028902D93CACAFB",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/data/character_catalog.gd",
+      "exists": true,
+      "baseline_sha256": "BE0490F89454AEB22AA2D7576BCD7DFCDD6B9C07192C6B8A8FCF453358606A87",
+      "current_sha256": "BE0490F89454AEB22AA2D7576BCD7DFCDD6B9C07192C6B8A8FCF453358606A87",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/data/character_catalog.gd.uid",
+      "exists": true,
+      "baseline_sha256": "EBC769A11C85731140FCAD85295B8C202C0385FAE949500B9C2FD9F14BBA092E",
+      "current_sha256": "EBC769A11C85731140FCAD85295B8C202C0385FAE949500B9C2FD9F14BBA092E",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/data/debug_characters.json",
+      "exists": true,
+      "baseline_sha256": "E9ECC9284910E476212361D9B1B7A18E144D8D6ECEEEA8B28A7CBFA6CE024C39",
+      "current_sha256": "E9ECC9284910E476212361D9B1B7A18E144D8D6ECEEEA8B28A7CBFA6CE024C39",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/data/item_catalog.gd",
+      "exists": true,
+      "baseline_sha256": "D805D3924F6B4F67F725ADBCD1DBD8B56085CC7B1C8AF090CA77B730A25CA85F",
+      "current_sha256": "D805D3924F6B4F67F725ADBCD1DBD8B56085CC7B1C8AF090CA77B730A25CA85F",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/data/item_catalog.gd.uid",
+      "exists": true,
+      "baseline_sha256": "E0E13DE91A762EDEA2B7FD219FDDC6C04766300CC710FD582DF85D7852487F49",
+      "current_sha256": "E0E13DE91A762EDEA2B7FD219FDDC6C04766300CC710FD582DF85D7852487F49",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/data/unit_spec.gd",
+      "exists": true,
+      "baseline_sha256": "1FE84766BA64BF80A433CEF5141FCDA898BFADC72673FE1B5E5C1B5EA9A0D858",
+      "current_sha256": "1FE84766BA64BF80A433CEF5141FCDA898BFADC72673FE1B5E5C1B5EA9A0D858",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/data/unit_spec.gd.uid",
+      "exists": true,
+      "baseline_sha256": "1A3F7B0217B7FFB20AA8AF6C748B76E52EBF80CC8CBD3D47BFEB38F7B262023F",
+      "current_sha256": "1A3F7B0217B7FFB20AA8AF6C748B76E52EBF80CC8CBD3D47BFEB38F7B262023F",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/INICIAR_JOGO.cmd",
+      "exists": true,
+      "baseline_sha256": "CC77820F16A5E116344B74A1AB958D7FC0315EF9944839377503471FE580EA33",
+      "current_sha256": "CC77820F16A5E116344B74A1AB958D7FC0315EF9944839377503471FE580EA33",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/main.tscn",
+      "exists": true,
+      "baseline_sha256": "3F3AE81822CDAE6DFC8895DC6795654629A9FF89551FF952B09D8AEC4D77A0D2",
+      "current_sha256": "3F3AE81822CDAE6DFC8895DC6795654629A9FF89551FF952B09D8AEC4D77A0D2",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/project.godot",
+      "exists": true,
+      "baseline_sha256": "FE4F368E669732CA1CB40D63E359B02F902F8C4D6D1EA9876CD77E9F891AB98A",
+      "current_sha256": "FE4F368E669732CA1CB40D63E359B02F902F8C4D6D1EA9876CD77E9F891AB98A",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/README.md",
+      "exists": true,
+      "baseline_sha256": "1060B0AAF6EA38CB31944058B388813EF5C9E01E05BE84512006278E088B4B0F",
+      "current_sha256": "1060B0AAF6EA38CB31944058B388813EF5C9E01E05BE84512006278E088B4B0F",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/simulation/arena_simulation.gd",
+      "exists": true,
+      "baseline_sha256": "613C6864CD9CEC1A775D4F26D612BCB10804E5912C2FD12BAB2C2A3E0175E48E",
+      "current_sha256": "613C6864CD9CEC1A775D4F26D612BCB10804E5912C2FD12BAB2C2A3E0175E48E",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/simulation/arena_simulation.gd.uid",
+      "exists": true,
+      "baseline_sha256": "FB1B6BC5BF50E1B191E36AD2E988C26FACE8D6958B9F5E1AC02F301EA0D7D496",
+      "current_sha256": "FB1B6BC5BF50E1B191E36AD2E988C26FACE8D6958B9F5E1AC02F301EA0D7D496",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/simulation/ball_projectile.gd",
+      "exists": true,
+      "baseline_sha256": "96BAFF92B9FED02D82216DAF997963EBBC6F67FB87FAE237F96664BEBE5F3583",
+      "current_sha256": "96BAFF92B9FED02D82216DAF997963EBBC6F67FB87FAE237F96664BEBE5F3583",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/simulation/ball_projectile.gd.uid",
+      "exists": true,
+      "baseline_sha256": "0FF946BC915B9222E362949A0CFCB1AE4B273E2CAA0F7310A016AEC1470FF2DE",
+      "current_sha256": "0FF946BC915B9222E362949A0CFCB1AE4B273E2CAA0F7310A016AEC1470FF2DE",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/simulation/hex_grid.gd",
+      "exists": true,
+      "baseline_sha256": "3C724AA0829BB284279F074136E9B8F4574B4EE2CBDE600CB61A28BF190B069E",
+      "current_sha256": "3C724AA0829BB284279F074136E9B8F4574B4EE2CBDE600CB61A28BF190B069E",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/simulation/hex_grid.gd.uid",
+      "exists": true,
+      "baseline_sha256": "FEE285082A6DEFB5231D59211047FA22EE70D84E0498AA9CEADEB413D467B16E",
+      "current_sha256": "FEE285082A6DEFB5231D59211047FA22EE70D84E0498AA9CEADEB413D467B16E",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/simulation/match_session.gd",
+      "exists": true,
+      "baseline_sha256": "44F57E291E56A8BD7EA3819D62B5AE770B5CCEE78F8C7304D24DF9C443FCDC31",
+      "current_sha256": "44F57E291E56A8BD7EA3819D62B5AE770B5CCEE78F8C7304D24DF9C443FCDC31",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/simulation/match_session.gd.uid",
+      "exists": true,
+      "baseline_sha256": "A9CE974ADE4256BF3F31CE47667569629BB0C394AF49DBAF88DEAC8763716C63",
+      "current_sha256": "A9CE974ADE4256BF3F31CE47667569629BB0C394AF49DBAF88DEAC8763716C63",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/simulation/README.md",
+      "exists": true,
+      "baseline_sha256": "002BABD416FFF4961F2DB1CA007E1F1CD6D612871050B9F9CADB8E8946D3FAF9",
+      "current_sha256": "002BABD416FFF4961F2DB1CA007E1F1CD6D612871050B9F9CADB8E8946D3FAF9",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/simulation/unit_state.gd",
+      "exists": true,
+      "baseline_sha256": "3AF3835E2C6D1B56E7DEE17CCC4E046CEC4EF62BC9600E1B520F3968EA9619A7",
+      "current_sha256": "3AF3835E2C6D1B56E7DEE17CCC4E046CEC4EF62BC9600E1B520F3968EA9619A7",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/simulation/unit_state.gd.uid",
+      "exists": true,
+      "baseline_sha256": "0ADB33A1C888B26CB6D17A99896BD6348BE89006D94A9DAEC2EB4882DF753E33",
+      "current_sha256": "0ADB33A1C888B26CB6D17A99896BD6348BE89006D94A9DAEC2EB4882DF753E33",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/tests/test_full_matches.gd",
+      "exists": true,
+      "baseline_sha256": "BFC25D652AD38EC08786D6BDC9D8AEF9E01E83706A36ED17D39877567A6CD466",
+      "current_sha256": "BFC25D652AD38EC08786D6BDC9D8AEF9E01E83706A36ED17D39877567A6CD466",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/tests/test_full_matches.gd.uid",
+      "exists": true,
+      "baseline_sha256": "1F785F46B9C4EB16FEC1BBA5B09DC9C359B075175EBCE4024431238EBE3D8F11",
+      "current_sha256": "1F785F46B9C4EB16FEC1BBA5B09DC9C359B075175EBCE4024431238EBE3D8F11",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/tests/test_match_session.gd",
+      "exists": true,
+      "baseline_sha256": "D9DF08BB6AE3A8D2090561D79A613AA4B3ADDC999D8E412A978450892C825ABA",
+      "current_sha256": "D9DF08BB6AE3A8D2090561D79A613AA4B3ADDC999D8E412A978450892C825ABA",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/tests/test_match_session.gd.uid",
+      "exists": true,
+      "baseline_sha256": "F889BB20E4967FB46D6F089A69FA83349B04066F59A5C5BCED3E190429A5BF94",
+      "current_sha256": "F889BB20E4967FB46D6F089A69FA83349B04066F59A5C5BCED3E190429A5BF94",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/tests/test_simulation.gd",
+      "exists": true,
+      "baseline_sha256": "6B220E4B3BB7EAB5CD3E6B5451E692988A5FB9A60189F1E439127059C3DDAB89",
+      "current_sha256": "6B220E4B3BB7EAB5CD3E6B5451E692988A5FB9A60189F1E439127059C3DDAB89",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/tests/test_simulation.gd.uid",
+      "exists": true,
+      "baseline_sha256": "3D1929453A79B75462D94E961934DD6D8BF3FE079E127808C99E8208474A06E7",
+      "current_sha256": "3D1929453A79B75462D94E961934DD6D8BF3FE079E127808C99E8208474A06E7",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/tests/test_vfx_library.gd",
+      "exists": true,
+      "baseline_sha256": "24B960A79BBA23CE6378B63A0CAFB0D61CA9033C4346C17E2D4E9ADA801435CA",
+      "current_sha256": "24B960A79BBA23CE6378B63A0CAFB0D61CA9033C4346C17E2D4E9ADA801435CA",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/tests/test_vfx_library.gd.uid",
+      "exists": true,
+      "baseline_sha256": "3C9875A490A61BB1A7649D942B25D3A38DCF6955FB2DC377950E74C8325A2FDB",
+      "current_sha256": "3C9875A490A61BB1A7649D942B25D3A38DCF6955FB2DC377950E74C8325A2FDB",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/tools/capture_art_batch.gd",
+      "exists": true,
+      "baseline_sha256": "6A63C3E69BDE283BD5A8E6FAC033EEF2AEFC1BE6E24D10F3AA89AF367C391D67",
+      "current_sha256": "6A63C3E69BDE283BD5A8E6FAC033EEF2AEFC1BE6E24D10F3AA89AF367C391D67",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/tools/capture_art_batch.gd.uid",
+      "exists": true,
+      "baseline_sha256": "2D068116844943A49D7A62B32A6FF71AF7084F46A5E78B0CE4A330C64F6FB7F1",
+      "current_sha256": "2D068116844943A49D7A62B32A6FF71AF7084F46A5E78B0CE4A330C64F6FB7F1",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/tools/capture_preview.gd",
+      "exists": true,
+      "baseline_sha256": "0511667C169E6A02E9688EE5820F1DB219966B72390AFF95DE90573525BA32E9",
+      "current_sha256": "0511667C169E6A02E9688EE5820F1DB219966B72390AFF95DE90573525BA32E9",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/tools/capture_preview.gd.uid",
+      "exists": true,
+      "baseline_sha256": "F4E17A9DF41CD452A0B0CC4A99E5CDA5D62B40E2DD2160D6DA8C06C61B850890",
+      "current_sha256": "F4E17A9DF41CD452A0B0CC4A99E5CDA5D62B40E2DD2160D6DA8C06C61B850890",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/tools/capture_roster.gd",
+      "exists": true,
+      "baseline_sha256": "1F3D3DA9B3A098EEAABB2926EF35AD90BB9871B9F83BE811124F3C811E54A88A",
+      "current_sha256": "1F3D3DA9B3A098EEAABB2926EF35AD90BB9871B9F83BE811124F3C811E54A88A",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/tools/capture_roster.gd.uid",
+      "exists": true,
+      "baseline_sha256": "98A474C1F0F38B8D98B91AF71515F3BF226A9622BC915F928145A5E78963E52E",
+      "current_sha256": "98A474C1F0F38B8D98B91AF71515F3BF226A9622BC915F928145A5E78963E52E",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/tools/capture_variations.gd",
+      "exists": true,
+      "baseline_sha256": "B8763864624CC4D61A1689A4B821834C8FCE87427F4440F43B10708C435AC37E",
+      "current_sha256": "B8763864624CC4D61A1689A4B821834C8FCE87427F4440F43B10708C435AC37E",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/tools/capture_variations.gd.uid",
+      "exists": true,
+      "baseline_sha256": "6D944435F0A49B6FFF00113C6FE773A656BB3CA2626BEBCF9B6506A8462DFC4C",
+      "current_sha256": "6D944435F0A49B6FFF00113C6FE773A656BB3CA2626BEBCF9B6506A8462DFC4C",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/tools/exportar_pixellab.ps1",
+      "exists": true,
+      "baseline_sha256": "3B840303262A742C59292BE985AF942A7CA8BF9A154293C675362EC1208CE58C",
+      "current_sha256": "3B840303262A742C59292BE985AF942A7CA8BF9A154293C675362EC1208CE58C",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/tools/gerar_icones.py",
+      "exists": true,
+      "baseline_sha256": "C3A59E8E1B9D9F4239A849150223B76BE18EBB3A1EBA02DEF20FE21D20C66EF3",
+      "current_sha256": "C3A59E8E1B9D9F4239A849150223B76BE18EBB3A1EBA02DEF20FE21D20C66EF3",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/tools/gerar_provisorios.py",
+      "exists": true,
+      "baseline_sha256": "19C6A631A1419CE331DE997D770F53C6D703C65B18F7180109035D25EF4283D6",
+      "current_sha256": "19C6A631A1419CE331DE997D770F53C6D703C65B18F7180109035D25EF4283D6",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/tools/registrar_pixellab.ps1",
+      "exists": true,
+      "baseline_sha256": "A3B75853ECC9A4852637014D4B9AE77A6C8DBD2E5F1BF1D9A6B788398CE0F545",
+      "current_sha256": "A3B75853ECC9A4852637014D4B9AE77A6C8DBD2E5F1BF1D9A6B788398CE0F545",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/tools/repro_lasso_endpoint.gd",
+      "exists": true,
+      "baseline_sha256": "A3D514E16A66AF0B2D07062FAD30830A2283FE970E238E5403EAA4B08167994E",
+      "current_sha256": "A3D514E16A66AF0B2D07062FAD30830A2283FE970E238E5403EAA4B08167994E",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/tools/repro_lasso_endpoint.gd.uid",
+      "exists": true,
+      "baseline_sha256": "59D3D7E1236A8D0C63092A639185946BD92EEFB9C96C1A26AA03FAA8B4B8EA89",
+      "current_sha256": "59D3D7E1236A8D0C63092A639185946BD92EEFB9C96C1A26AA03FAA8B4B8EA89",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/tools/verificar_originais.ps1",
+      "exists": true,
+      "baseline_sha256": "28D3C41A8E203801E9CB72C8B88114ABDFB812780D33D18040C0DC2C58D148CE",
+      "current_sha256": "28D3C41A8E203801E9CB72C8B88114ABDFB812780D33D18040C0DC2C58D148CE",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/VALIDACAO_01.json",
+      "exists": true,
+      "baseline_sha256": "26EF829955B24D68820315B19D08F61F5C66AF2A3C1969695377B307198391EB",
+      "current_sha256": "26EF829955B24D68820315B19D08F61F5C66AF2A3C1969695377B307198391EB",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/VALIDACAO_V1_1.json",
+      "exists": true,
+      "baseline_sha256": "71DBEDC74137AF84955985AF9C0281C90F79308ADB8BF9D8FF298904BC0C6C3D",
+      "current_sha256": "71DBEDC74137AF84955985AF9C0281C90F79308ADB8BF9D8FF298904BC0C6C3D",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/VALIDACAO_V1_2.json",
+      "exists": true,
+      "baseline_sha256": "62511B93C689AA67F098555CC9B28A644B4011CE7C4A154460F88B74CF92474E",
+      "current_sha256": "62511B93C689AA67F098555CC9B28A644B4011CE7C4A154460F88B74CF92474E",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/VALIDACAO_V1_3.json",
+      "exists": true,
+      "baseline_sha256": "384C3348FFA2E3950F1380B8C5565EAD868AEDB83941662BCD8F33FD0EA668D6",
+      "current_sha256": "384C3348FFA2E3950F1380B8C5565EAD868AEDB83941662BCD8F33FD0EA668D6",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/VALIDACAO_V1_4.json",
+      "exists": true,
+      "baseline_sha256": "50AC3D4AA25316091480B531391134CD44A194F3D13877BA32F3B8163C53F283",
+      "current_sha256": "50AC3D4AA25316091480B531391134CD44A194F3D13877BA32F3B8163C53F283",
+      "identical": true
+    },
+    {
+      "path": "RelicArena/VALIDACAO_V1.json",
+      "exists": true,
+      "baseline_sha256": "F71F02C05694676395B92C73020A3D94ACF4A55F60AB80CE953D478B13E8B5FF",
+      "current_sha256": "F71F02C05694676395B92C73020A3D94ACF4A55F60AB80CE953D478B13E8B5FF",
+      "identical": true
+    }
+  ]
+}

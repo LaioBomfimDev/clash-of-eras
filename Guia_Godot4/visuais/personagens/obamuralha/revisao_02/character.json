@@ -1,0 +1,754 @@
+{
+  "date": "2026-10-11",
+  "reference": "Barack Obama",
+  "work_name": "Obamuralha",
+  "role": "Tanque",
+  "status": "refined_south_only",
+  "source_character_id": "9a2a0a13-3fca-4dd6-a685-94d312c75bb2",
+  "source_preview": "../south.png",
+  "workbench_source": "71c5d498-898e-48d9-a0a7-7d60eb44a402",
+  "workbench_result": "412eb447-9f62-47bb-ab26-bc026ff3b0c6",
+  "gallery_id": "90cfa9a6-9dd9-49d4-8289-a89ae640bce7",
+  "canvas": [
+    68,
+    68
+  ],
+  "visible_bbox": [
+    22,
+    9,
+    59,
+    56
+  ],
+  "face_core_unchanged": true,
+  "cost_generations": 0,
+  "original_preserved": true,
+  "source_character_rotations_modified": false,
+  "pending": "Aplicar refinamento às outras sete direções; aprovação artística; animações.",
+  "edits": [
+    {
+      "operation": "select_mask",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "name": "shape0",
+      "selector": {
+        "kind": "polygon",
+        "points": [
+          [
+            25,
+            28
+          ],
+          [
+            30,
+            27
+          ],
+          [
+            31,
+            30
+          ],
+          [
+            31,
+            41
+          ],
+          [
+            26,
+            43
+          ],
+          [
+            23,
+            38
+          ],
+          [
+            22,
+            31
+          ]
+        ]
+      },
+      "reason": "Ombreira e manga maiores"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "mask": "shape0",
+      "points": [
+        [
+          34,
+          34
+        ]
+      ],
+      "size": 64,
+      "shape": "square",
+      "color": "#070504",
+      "reason": "Ombreira e manga maiores"
+    },
+    {
+      "operation": "select_mask",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "name": "shape2",
+      "selector": {
+        "kind": "polygon",
+        "points": [
+          [
+            25,
+            29
+          ],
+          [
+            29,
+            28
+          ],
+          [
+            30,
+            31
+          ],
+          [
+            30,
+            40
+          ],
+          [
+            27,
+            41
+          ],
+          [
+            24,
+            37
+          ],
+          [
+            23,
+            32
+          ]
+        ]
+      },
+      "reason": "Terno amplo preservando gravata"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "mask": "shape2",
+      "points": [
+        [
+          34,
+          34
+        ]
+      ],
+      "size": 64,
+      "shape": "square",
+      "color": "#31365f",
+      "reason": "Terno amplo preservando gravata"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "points": [
+        [
+          24,
+          31
+        ],
+        [
+          27,
+          30
+        ]
+      ],
+      "color": "#48537f",
+      "size": 1,
+      "shape": "square",
+      "reason": "Luz da ombreira"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "points": [
+        [
+          25,
+          35
+        ],
+        [
+          27,
+          38
+        ]
+      ],
+      "color": "#161522",
+      "size": 2,
+      "shape": "square",
+      "reason": "Dobra da manga"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "points": [
+        [
+          25,
+          39
+        ],
+        [
+          26,
+          41
+        ]
+      ],
+      "color": "#ae765d",
+      "size": 3,
+      "shape": "square",
+      "reason": "Punho visível"
+    },
+    {
+      "operation": "select_mask",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "name": "shape7",
+      "selector": {
+        "kind": "polygon",
+        "points": [
+          [
+            36,
+            27
+          ],
+          [
+            41,
+            28
+          ],
+          [
+            45,
+            31
+          ],
+          [
+            44,
+            38
+          ],
+          [
+            39,
+            42
+          ],
+          [
+            36,
+            40
+          ]
+        ]
+      },
+      "reason": "Ombro oposto mais largo"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "mask": "shape7",
+      "points": [
+        [
+          34,
+          34
+        ]
+      ],
+      "size": 64,
+      "shape": "square",
+      "color": "#070504",
+      "reason": "Ombro oposto mais largo"
+    },
+    {
+      "operation": "select_mask",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "name": "shape9",
+      "selector": {
+        "kind": "polygon",
+        "points": [
+          [
+            37,
+            29
+          ],
+          [
+            40,
+            29
+          ],
+          [
+            43,
+            32
+          ],
+          [
+            42,
+            37
+          ],
+          [
+            38,
+            40
+          ]
+        ]
+      },
+      "reason": "Volume do terno"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "mask": "shape9",
+      "points": [
+        [
+          34,
+          34
+        ]
+      ],
+      "size": 64,
+      "shape": "square",
+      "color": "#31365f",
+      "reason": "Volume do terno"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "points": [
+        [
+          44,
+          30
+        ],
+        [
+          44,
+          27
+        ],
+        [
+          52,
+          27
+        ],
+        [
+          52,
+          30
+        ]
+      ],
+      "color": "#070504",
+      "size": 3,
+      "shape": "square",
+      "reason": "Alça de pasta gigante"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "points": [
+        [
+          44,
+          29
+        ],
+        [
+          44,
+          27
+        ],
+        [
+          52,
+          27
+        ],
+        [
+          52,
+          29
+        ]
+      ],
+      "color": "#48537f",
+      "size": 1,
+      "shape": "square",
+      "reason": "Metal da alça"
+    },
+    {
+      "operation": "select_mask",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "name": "shape13",
+      "selector": {
+        "kind": "polygon",
+        "points": [
+          [
+            41,
+            30
+          ],
+          [
+            55,
+            30
+          ],
+          [
+            58,
+            33
+          ],
+          [
+            58,
+            51
+          ],
+          [
+            56,
+            54
+          ],
+          [
+            41,
+            54
+          ],
+          [
+            39,
+            51
+          ],
+          [
+            39,
+            33
+          ]
+        ]
+      },
+      "reason": "Pasta-escudo enorme e legível"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "mask": "shape13",
+      "points": [
+        [
+          34,
+          34
+        ]
+      ],
+      "size": 64,
+      "shape": "square",
+      "color": "#070504",
+      "reason": "Pasta-escudo enorme e legível"
+    },
+    {
+      "operation": "select_mask",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "name": "shape15",
+      "selector": {
+        "kind": "polygon",
+        "points": [
+          [
+            42,
+            31
+          ],
+          [
+            54,
+            31
+          ],
+          [
+            56,
+            33
+          ],
+          [
+            56,
+            50
+          ],
+          [
+            54,
+            52
+          ],
+          [
+            42,
+            52
+          ],
+          [
+            41,
+            50
+          ],
+          [
+            41,
+            34
+          ]
+        ]
+      },
+      "reason": "Superfície da pasta"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "mask": "shape15",
+      "points": [
+        [
+          34,
+          34
+        ]
+      ],
+      "size": 64,
+      "shape": "square",
+      "color": "#31365f",
+      "reason": "Superfície da pasta"
+    },
+    {
+      "operation": "select_mask",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "name": "shape17",
+      "selector": {
+        "kind": "polygon",
+        "points": [
+          [
+            55,
+            33
+          ],
+          [
+            56,
+            34
+          ],
+          [
+            56,
+            50
+          ],
+          [
+            54,
+            52
+          ],
+          [
+            42,
+            52
+          ],
+          [
+            42,
+            50
+          ],
+          [
+            54,
+            50
+          ]
+        ]
+      },
+      "reason": "Espessura e sombra da pasta"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "mask": "shape17",
+      "points": [
+        [
+          34,
+          34
+        ]
+      ],
+      "size": 64,
+      "shape": "square",
+      "color": "#161522",
+      "reason": "Espessura e sombra da pasta"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "points": [
+        [
+          43,
+          33
+        ],
+        [
+          53,
+          33
+        ]
+      ],
+      "color": "#48537f",
+      "size": 1,
+      "shape": "square",
+      "reason": "Aresta superior da pasta"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "points": [
+        [
+          42,
+          34
+        ],
+        [
+          42,
+          48
+        ]
+      ],
+      "color": "#48537f",
+      "size": 1,
+      "shape": "square",
+      "reason": "Aresta lateral"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "points": [
+        [
+          44,
+          35
+        ],
+        [
+          44,
+          48
+        ]
+      ],
+      "color": "#161522",
+      "size": 1,
+      "shape": "square",
+      "reason": "Faixa de reforço"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "points": [
+        [
+          53,
+          35
+        ],
+        [
+          53,
+          48
+        ]
+      ],
+      "color": "#161522",
+      "size": 1,
+      "shape": "square",
+      "reason": "Faixa de reforço"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "points": [
+        [
+          47,
+          39
+        ],
+        [
+          50,
+          39
+        ],
+        [
+          50,
+          43
+        ],
+        [
+          47,
+          43
+        ],
+        [
+          47,
+          39
+        ]
+      ],
+      "color": "#070504",
+      "size": 1,
+      "shape": "square",
+      "reason": "Contorno do fecho"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "points": [
+        [
+          48,
+          40
+        ],
+        [
+          49,
+          40
+        ],
+        [
+          49,
+          42
+        ],
+        [
+          48,
+          42
+        ]
+      ],
+      "color": "#d5d4d8",
+      "size": 1,
+      "shape": "square",
+      "reason": "Fecho de metal claro"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "points": [
+        [
+          43,
+          34
+        ],
+        [
+          43,
+          34
+        ]
+      ],
+      "color": "#d5d4d8",
+      "size": 1,
+      "shape": "square",
+      "reason": "Rebite superior"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "points": [
+        [
+          54,
+          49
+        ],
+        [
+          54,
+          49
+        ]
+      ],
+      "color": "#48537f",
+      "size": 1,
+      "shape": "square",
+      "reason": "Rebite inferior"
+    }
+  ]
+}

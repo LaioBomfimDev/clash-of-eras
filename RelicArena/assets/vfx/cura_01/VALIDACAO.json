@@ -1,0 +1,181 @@
+{
+  "name": "Clash of Eras - Cura01",
+  "method": "PixelLab vfx_workbench deterministic free renderer; no AI generation calls",
+  "effect_id": "bdb4529f-f006-4df7-aa7f-b8257d577e08",
+  "step_id": "168f77b4-6ef2-4003-98dd-f3fb3039e01c",
+  "export_image_id": "f91a4295-da33-4b2d-9531-7166ef81d79c",
+  "effect_url": "https://pixellab.ai/create-vfx?effect=bdb4529f-f006-4df7-aa7f-b8257d577e08",
+  "export_base_url": "https://api.pixellab.ai/mcp/pixel-tools/f91a4295-da33-4b2d-9531-7166ef81d79c/",
+  "authored_canvas": [
+    28,
+    32
+  ],
+  "authored_frames": 12,
+  "fps": 16,
+  "anchor": [
+    14,
+    26
+  ],
+  "authored_alpha_bounds": [
+    [
+      5,
+      22,
+      22,
+      29
+    ],
+    [
+      5,
+      19,
+      24,
+      28
+    ],
+    [
+      5,
+      18,
+      24,
+      27
+    ],
+    [
+      5,
+      15,
+      24,
+      28
+    ],
+    [
+      5,
+      13,
+      24,
+      26
+    ],
+    [
+      5,
+      11,
+      24,
+      24
+    ],
+    [
+      5,
+      9,
+      24,
+      22
+    ],
+    [
+      5,
+      8,
+      24,
+      21
+    ],
+    [
+      5,
+      7,
+      24,
+      19
+    ],
+    [
+      5,
+      6,
+      24,
+      18
+    ],
+    [
+      5,
+      6,
+      24,
+      18
+    ],
+    null
+  ],
+  "last_authored_frame_transparent": true,
+  "packed_clips": [
+    {
+      "name": "whole",
+      "frames_checked": 11,
+      "frame_size": [
+        19,
+        23
+      ],
+      "offset": {
+        "x": -9,
+        "y": -20
+      },
+      "pixels_match_original": true
+    },
+    {
+      "name": "part-cura",
+      "frames_checked": 11,
+      "frame_size": [
+        19,
+        23
+      ],
+      "offset": {
+        "x": -9,
+        "y": -20
+      },
+      "pixels_match_original": true
+    }
+  ],
+  "gif_frames": 11,
+  "gif_durations_ms": [
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    120,
+    60
+  ],
+  "gif_total_ms": 720,
+  "zip_crc": "passed",
+  "zip_paths_safe": true,
+  "extracted_hashes_match_zip": true,
+  "all_exported_frames_visually_reviewed_1x_and_3x": true,
+  "sprite_embedded": false,
+  "ai_generation_calls": 0,
+  "gameplay_integration": false,
+  "files": [
+    {
+      "path": "game_pack/manifest.json",
+      "bytes": 983,
+      "sha256": "7c8c5bfab5402c18feee2b518a5a1402b279af9ea3a1f09f9911c7f9e3200485"
+    },
+    {
+      "path": "game_pack/part-cura.png",
+      "bytes": 604,
+      "sha256": "c409f99313692b3bce0d7325259ec6c86f9cd0555027451fb69b8f0c062f25ba"
+    },
+    {
+      "path": "game_pack/README.txt",
+      "bytes": 942,
+      "sha256": "3030bb6c509e7759cd342fd0b98dd3968551c657dfd76c4e6886399f751d632c"
+    },
+    {
+      "path": "game_pack/whole.png",
+      "bytes": 604,
+      "sha256": "c409f99313692b3bce0d7325259ec6c86f9cd0555027451fb69b8f0c062f25ba"
+    },
+    {
+      "path": "original/clash-of-eras-cura01-game.zip",
+      "bytes": 2480,
+      "sha256": "6f4807093c66042deb90f4ba4be93cabfa87ec21161f838ff9a2336531814b41"
+    },
+    {
+      "path": "original/clash-of-eras-cura01.gif",
+      "bytes": 1040,
+      "sha256": "f008c640dc6a4b623cc6949ded7698183919a4797eac08d16eff45375118a82c"
+    },
+    {
+      "path": "original/clash-of-eras-cura01.json",
+      "bytes": 4747,
+      "sha256": "ea7ff3d09df3ae05e49f2aa05e299349b4b8cb34494ba13de64b8c3d1ef83138"
+    },
+    {
+      "path": "original/clash-of-eras-cura01.png",
+      "bytes": 608,
+      "sha256": "d0f15e4b5c2e6d7ab02bc79effad61a9001e024d023966cfc36f072018f74800"
+    }
+  ]
+}

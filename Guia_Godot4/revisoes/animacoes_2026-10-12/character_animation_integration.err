@@ -1,0 +1,14 @@
+ERROR: FAIL: fallback preserves current exact idle loader
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/test_character_animation_integration.gd:156)
+       [1] _run (res://tests/test_character_animation_integration.gd:46)
+SCRIPT ERROR: Cannot call method 'get_width' on a null value.
+   at: anchor_for (res://client/character_visuals.gd:213)
+   GDScript backtrace (most recent call first):
+       [0] anchor_for (res://client/character_visuals.gd:213)
+       [1] _run (res://tests/test_character_animation_integration.gd:47)
+SCRIPT ERROR: Invalid access to property or key 'animation_state' on a base object of type 'Dictionary'.
+   at: _run (res://tests/test_character_animation_integration.gd:56)
+   GDScript backtrace (most recent call first):
+       [0] _run (res://tests/test_character_animation_integration.gd:56)

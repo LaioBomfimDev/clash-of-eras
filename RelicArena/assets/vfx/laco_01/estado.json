@@ -1,0 +1,48 @@
+{
+  "state": "integrated_validated_V1_4",
+  "method": "PixelLab deterministic free vfx_workbench only",
+  "step_id": "8f0460f6-0fb9-4090-b6f3-da403d023e6f",
+  "name": "Clash of Eras - Laco01",
+  "request": "Small gold noose/knot on Rapunzel target, no character, no full travel rope",
+  "part_reference_reviewed": "shockwave_ring; all8frames inspected; too explosive to use unchanged",
+  "ai_generation_calls": 0,
+  "exported": true,
+  "canvas": [
+    32,
+    28
+  ],
+  "frames": 12,
+  "fps": 16,
+  "loop": false,
+  "frames_reviewed_4x": 12,
+  "visual_notes": "All12 authored frames reviewed at1x/4x and exported;11 packed frames validated. Original receipt retains export-time state.",
+  "frames_reviewed_1x": 12,
+  "all_frames_reviewed": true,
+  "effect_id": "40e143b2-5dac-43ed-8c68-b8892fccfb69",
+  "export_image_id": "fd0b489b-8c80-45b6-9c51-1d8d6edde2f3",
+  "effect_url": "https://pixellab.ai/create-vfx?effect=40e143b2-5dac-43ed-8c68-b8892fccfb69",
+  "export_base_url": "https://api.pixellab.ai/mcp/pixel-tools/fd0b489b-8c80-45b6-9c51-1d8d6edde2f3/",
+  "zip_crc_passed": true,
+  "zip_paths_safe": true,
+  "extracted_files_byte_identical": true,
+  "downloaded_files": 8,
+  "receipt": "exportacao.json",
+  "packed_frames": 11,
+  "packed_clip": "part-laco",
+  "packed_frame_size": [
+    24,
+    15
+  ],
+  "offset": {
+    "x": -12,
+    "y": -8
+  },
+  "zip_sha256": "9db2a623b867ab01d167fdf6db4fb84afb3713c768fcfcf0553a974be103a63c",
+  "runtime_integrated": false,
+  "integration": {
+    "version": "V1.4",
+    "runtime_integrated": true,
+    "validation": "res://VALIDACAO_V1_4.json",
+    "final_user_art_approval": false
+  }
+}

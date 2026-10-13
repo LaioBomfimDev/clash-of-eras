@@ -1,0 +1,21 @@
+{
+  "DADOS_DO_JOGO.json": "c982a7e1adf67020832dccfdb86585fa426d3804e118209753afd3e9b9b7cd1d",
+  "exportar_dados.mjs": "5573c737f655bfb88186ef1b8e6070dba26a4569bab18a5b7d2c9843609d3818",
+  "gerar_layout.py": "fc27c0186abe0995db389fbf67e878026eb1105a2d6ababcfbefb8542e9138cf",
+  "GUIA_COMPLETO.md": "196de28843782f779c6951ba4300e23a23d5edacb7de367940cf63108febf33f",
+  "LAYOUT_REFERENCIA.svg": "78830f6cd007afebc99da28906610111b000357cd7551f8c5f5b7372cbece581",
+  "LEIA_PRIMEIRO.md": "631bc6c2f7ca15caec5f2f8b143c1d11e34a888dee6c9b3171f6b13d8b875d9c",
+  "PROMPT_PARA_PROXIMA_LLM.md": "021bc0e2bbd6461f4001ac6e45ebe7b9947a8b80a5e2173d371781a345d154f2",
+  "referencias/src/tft-core.mjs": "03a53d10ba62f78b1ca82af91dee199cc4476d872bcb21c301be2371d1ada689",
+  "referencias/src/tft-hud.mjs": "227f6427d18718a8ac0f4752a744fab4c2476de08e82ff72206098b4fd2755dd",
+  "referencias/src/tft-save.mjs": "ede635fdae5d71450581c8f6ed042f5d602daed0598af5f2974f23c1f032c2f7",
+  "referencias/tests/combat-grid-baseline.json": "bbadc4295c50ac944c1b26c05dbd9a4ba2cec99ec434d0f44a30b502d621965b",
+  "referencias/tests/combat-regression.mjs": "1c9374e8f851a156ec6534a7845dae2a45cc9e0806c31db66702443e3836298b",
+  "referencias/tests/combat-signature.mjs": "c1fa7266c87910be1be986a14d03c8a95cd87fbbdd9d06808742376e884eabf3",
+  "referencias/tests/grid-and-drag.mjs": "009f40bd95fb283e6882869d1e20e099c70e411ffe7139b9b0dc2b2a30fecb07",
+  "referencias/tests/hud.mjs": "426621e72a22de3868159a3dff7ead5c152bb7b1c76862d4845249edf546d2e4",
+  "referencias/tests/persistence.mjs": "765070b47002ceebf86181571dcbee26721b61ee5803d5e2159b8e9ccfc1b026",
+  "referencias/tests/reserve-and-balance.mjs": "5d48928ed8bd7e294696606e8c4dd119fea9cedf644c70fbf11f80d79d456727",
+  "referencias/tests/shop-and-fusion.mjs": "f0fb78c5a95f28afd93d4e6cf97cf9a16bdd9204f9106a2689f6b39aaf5af9d0",
+  "VERIFICACAO.json": "b60a98944be3e3f3265d568808d5501a32ee1baf4f1cdfdbfd83caf5651607c4"
+}

@@ -1,0 +1,36 @@
+{
+  "group_id": "44f4c97a-c079-487a-9afb-d4cfa55a7525",
+  "states": [
+    {
+      "character": {
+        "id": "9a2a0a13-3fca-4dd6-a685-94d312c75bb2",
+        "name": "Idle",
+        "prompt": "An unmistakably recognizable absurd exaggerated caricature of Barack Obama as a melee tank in a funny pixel art arena game. Middle-aged Black man with warm brown skin, elongated face, comically prominent ears, raised eyebrows, confident broad crooked smile, close-cropped black hair with gray at the sides. Wears a ridiculously oversized navy blue presidential suit with gigantic square padded shoulders, white shirt, bright red tie and polished black shoes. His signature accessory is an enormous heavy rectangular dark-blue metal briefcase held as a shield, with a plain gold clasp and no markings, almost half as big as he is. Big head and massive shoulder silhouette; humorous imposing defensive stance, clearly recognizable as the real person exaggerated. Crisp pixel clusters, restrained palette, medium shading and clean dark selective outline, warm light from upper left, readable at 48px, low top-down slightly elevated camera matching an inclined auto-battler arena. Single full body with both shoes grounded, shield and ears fully inside the canvas, transparent background, no text, no scenery, no aura, no particles.",
+        "size": {
+          "width": 68,
+          "height": 68
+        },
+        "template_id": "mannequin",
+        "directions": 8,
+        "view": "low top-down",
+        "created_at": "2026-10-11T15:59:41.749044+00:00"
+      },
+      "folder": "Idle",
+      "frames": {
+        "rotations": {
+          "south": "Idle/rotations/south.png",
+          "south-east": "Idle/rotations/south-east.png",
+          "east": "Idle/rotations/east.png",
+          "north-east": "Idle/rotations/north-east.png",
+          "north": "Idle/rotations/north.png",
+          "north-west": "Idle/rotations/north-west.png",
+          "west": "Idle/rotations/west.png",
+          "south-west": "Idle/rotations/south-west.png"
+        },
+        "animations": {}
+      }
+    }
+  ],
+  "export_version": "3.1",
+  "export_date": "2026-10-11T20:27:38.434241"
+}

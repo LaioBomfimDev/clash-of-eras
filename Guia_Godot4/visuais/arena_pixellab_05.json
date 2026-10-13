@@ -1,0 +1,32 @@
+{
+  "name": "Arena — tentativa Pixflux 05",
+  "date": "2026-10-11",
+  "model": "pixflux",
+  "job_id": "4d5b6413-8130-44e6-af48-bfdeb9d87c80",
+  "asset_id": "e9bd94ca-e543-5868-99a2-12c8aae6d561",
+  "status": "completed",
+  "asset_status": "saved",
+  "charged_generations": 1,
+  "brief": {
+    "description": "A richly detailed pixel art background showing the EMPTY INTERIOR of a monumental medieval colosseum. Close elevated oblique view INTO the arena, preserving the reference camera and the sweeping curved seating. Many wide empty sandstone bench tiers climb high behind the arena and up both sides, beyond the image edges. Clearly lit seat tops and dark vertical step faces, recessed arched tunnels, radial stair aisles, weathered stone and draped teal and burgundy banners on walls. Foreground parapet cropped by the bottom edge. The central oval is ENTIRELY VACANT continuous pale cream sand, broad and smooth, with a few natural wind marks and warm diagonal sunlight. Nothing stands on the sand. Entire canvas is a cinematic architectural environment, with atmosphere and layered shadows, highly polished crisp pixel-art clusters. Blank natural architecture at every corner and along every border. No characters, people, labels, letters, numerals, logo, interface panels, colored circles, flags on the floor, board, tiles, grid or geometric markings. No isolated miniature exterior building.",
+    "init_image_url": "upload:e5986e63-5680-4ef4-8877-613e0d654835",
+    "init_image_strength": 75,
+    "width": 352,
+    "height": 196,
+    "detail": "highly detailed",
+    "outline": "selective outline",
+    "shading": "detailed shading",
+    "view": "low top-down",
+    "no_background": false,
+    "seed": 10112030
+  },
+  "local_file": "arena_pixellab_05.png",
+  "review": {
+    "decision": "Rejeitada na inspeção técnica.",
+    "observation": "PNG 352x196 inteiramente preto: canais RGB têm mínimos e máximos iguais a zero.",
+    "cause": "Desconhecida; o serviço retornou completed e cobrou uma geração.",
+    "validation": "Pillow: PNG válido; extrema RGB ((0,0),(0,0),(0,0))."
+  },
+  "final_art_approved": false,
+  "godot_integrated": false
+}

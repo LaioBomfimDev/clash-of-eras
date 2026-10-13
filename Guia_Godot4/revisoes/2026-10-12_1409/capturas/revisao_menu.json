@@ -1,0 +1,66 @@
+{
+	"effects": [],
+	"elapsed": 0.0,
+	"lasso_wires": [],
+	"native_clouds": [],
+	"native_dance_shield_ids": [],
+	"native_vfx": [],
+	"phase": "menu",
+	"project_name": "Clash of Eras - protótipo local",
+	"projectiles": [],
+	"props": [
+		{
+			"foot": [
+				298.105499267578,
+				402.972961425781
+			],
+			"ground": [
+				-4.80000019073486,
+				1.0
+			],
+			"outside_grid": true,
+			"path": "res://assets/arena/braseiro.png"
+		},
+		{
+			"foot": [
+				997.89453125,
+				402.972961425781
+			],
+			"ground": [
+				4.80000019073486,
+				1.0
+			],
+			"outside_grid": true,
+			"path": "res://assets/arena/braseiro.png"
+		},
+		{
+			"foot": [
+				347.258026123047,
+				254.491348266602
+			],
+			"ground": [
+				-4.80000019073486,
+				5.0
+			],
+			"outside_grid": true,
+			"path": "res://assets/arena/braseiro.png"
+		},
+		{
+			"foot": [
+				948.742004394531,
+				254.491348266602
+			],
+			"ground": [
+				4.80000019073486,
+				5.0
+			],
+			"outside_grid": true,
+			"path": "res://assets/arena/braseiro.png"
+		}
+	],
+	"viewport": [
+		1280,
+		720
+	],
+	"visual_pulls": []
+}

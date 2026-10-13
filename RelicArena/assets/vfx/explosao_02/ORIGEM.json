@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-12",
+  "method": "PixelLab vfx_workbench (editor deterministico gratuito); nenhuma geracao por IA",
+  "ai_generation_calls": 0,
+  "name": "Clash of Eras - Explosao foguete Elon 02",
+  "effect_id": "ad3e2033-0e1c-49a6-810d-c403821693fb",
+  "step_id": "45b670f7-5a83-4a02-9c41-7ecb7d196768",
+  "export_image_id": "cab0e5bb-c5ad-47e4-96a2-b348c7271411",
+  "effect_url": "https://pixellab.ai/create-vfx?effect=ad3e2033-0e1c-49a6-810d-c403821693fb",
+  "download_base": "https://api.pixellab.ai/mcp/pixel-tools/cab0e5bb-c5ad-47e4-96a2-b348c7271411/",
+  "uso": "Impacto do foguete do Elon (substitui foguete_01 quando presente).",
+  "fps": 18,
+  "loop": false,
+  "canvas": {
+    "w": 160,
+    "h": 152
+  },
+  "anchor": {
+    "kind": "origin",
+    "x": 80,
+    "y": 108
+  },
+  "clip": "whole",
+  "clip_frames": 14,
+  "frame": {
+    "w": 131,
+    "h": 103
+  },
+  "offset": {
+    "x": -75,
+    "y": -68
+  },
+  "zip_entries": [
+    "README.txt",
+    "manifest.json",
+    "whole.png"
+  ],
+  "extracted_identical_to_zip": true,
+  "sha256": {
+    "clash-of-eras-explosao-foguete-elon-02-game.zip": "9FA2C575D6DB2C3F256599692340C6D1CB9086F7A33625034D9E3FC2E6A0B006",
+    "clash-of-eras-explosao-foguete-elon-02.gif": "A1A450B775B2DF0488BFB8B72158D5D114EBA66F654D2A862D34BD44268918D6",
+    "clash-of-eras-explosao-foguete-elon-02.json": "80036301670B0287353E485F7A6CAD51253CA864AD382138C4B71F7C2E9A0F0C",
+    "clash-of-eras-explosao-foguete-elon-02.png": "DC96226D9CB5EB1E876399120B2810295770400FF1494DDD87A1DE79C7DB3733"
+  },
+  "character_embedded": false
+}

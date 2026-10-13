@@ -1,0 +1,235 @@
+{
+ "frames": [
+  {
+   "filename": "clash-of-eras-foguete-elon-02 0.png",
+   "frame": {
+    "x": 0,
+    "y": 0,
+    "w": 84,
+    "h": 28
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 84,
+    "h": 28
+   },
+   "sourceSize": {
+    "w": 84,
+    "h": 28
+   },
+   "pivot": {
+    "x": 0.7619047619047619,
+    "y": 0.5
+   },
+   "duration": 63
+  },
+  {
+   "filename": "clash-of-eras-foguete-elon-02 1.png",
+   "frame": {
+    "x": 84,
+    "y": 0,
+    "w": 84,
+    "h": 28
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 84,
+    "h": 28
+   },
+   "sourceSize": {
+    "w": 84,
+    "h": 28
+   },
+   "pivot": {
+    "x": 0.7619047619047619,
+    "y": 0.5
+   },
+   "duration": 63
+  },
+  {
+   "filename": "clash-of-eras-foguete-elon-02 2.png",
+   "frame": {
+    "x": 168,
+    "y": 0,
+    "w": 84,
+    "h": 28
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 84,
+    "h": 28
+   },
+   "sourceSize": {
+    "w": 84,
+    "h": 28
+   },
+   "pivot": {
+    "x": 0.7619047619047619,
+    "y": 0.5
+   },
+   "duration": 63
+  },
+  {
+   "filename": "clash-of-eras-foguete-elon-02 3.png",
+   "frame": {
+    "x": 0,
+    "y": 28,
+    "w": 84,
+    "h": 28
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 84,
+    "h": 28
+   },
+   "sourceSize": {
+    "w": 84,
+    "h": 28
+   },
+   "pivot": {
+    "x": 0.7619047619047619,
+    "y": 0.5
+   },
+   "duration": 63
+  },
+  {
+   "filename": "clash-of-eras-foguete-elon-02 4.png",
+   "frame": {
+    "x": 84,
+    "y": 28,
+    "w": 84,
+    "h": 28
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 84,
+    "h": 28
+   },
+   "sourceSize": {
+    "w": 84,
+    "h": 28
+   },
+   "pivot": {
+    "x": 0.7619047619047619,
+    "y": 0.5
+   },
+   "duration": 63
+  },
+  {
+   "filename": "clash-of-eras-foguete-elon-02 5.png",
+   "frame": {
+    "x": 168,
+    "y": 28,
+    "w": 84,
+    "h": 28
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 84,
+    "h": 28
+   },
+   "sourceSize": {
+    "w": 84,
+    "h": 28
+   },
+   "pivot": {
+    "x": 0.7619047619047619,
+    "y": 0.5
+   },
+   "duration": 63
+  },
+  {
+   "filename": "clash-of-eras-foguete-elon-02 6.png",
+   "frame": {
+    "x": 0,
+    "y": 56,
+    "w": 84,
+    "h": 28
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 84,
+    "h": 28
+   },
+   "sourceSize": {
+    "w": 84,
+    "h": 28
+   },
+   "pivot": {
+    "x": 0.7619047619047619,
+    "y": 0.5
+   },
+   "duration": 63
+  },
+  {
+   "filename": "clash-of-eras-foguete-elon-02 7.png",
+   "frame": {
+    "x": 84,
+    "y": 56,
+    "w": 84,
+    "h": 28
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 84,
+    "h": 28
+   },
+   "sourceSize": {
+    "w": 84,
+    "h": 28
+   },
+   "pivot": {
+    "x": 0.7619047619047619,
+    "y": 0.5
+   },
+   "duration": 63
+  }
+ ],
+ "meta": {
+  "app": "PixelLab VFX Creator",
+  "image": "clash-of-eras-foguete-elon-02.png",
+  "format": "RGBA8888",
+  "size": {
+   "w": 252,
+   "h": 84
+  },
+  "scale": "1",
+  "anchor": {
+   "kind": "origin",
+   "x": 64,
+   "y": 14
+  },
+  "frameTags": [
+   {
+    "name": "clash-of-eras-foguete-elon-02",
+    "from": 0,
+    "to": 7,
+    "direction": "forward"
+   }
+  ]
+ }
+}

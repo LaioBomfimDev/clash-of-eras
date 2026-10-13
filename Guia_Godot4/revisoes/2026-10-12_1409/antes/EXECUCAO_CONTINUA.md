@@ -1,0 +1,63 @@
+# Continuação do projeto
+
+Checkpoint atualizado em 2026-10-12: **V1.4 visual local validada**, com seis efeitos gratuitos integrados e fio da Rapunzel alinhado. Nove bases de personagens e um braseiro da V1.2 permanecem ativos. Saldo de gerações MCP esgotado. Leia primeiro `CEREBRO.md` e a tabela atual do lote 03. Este arquivo coordena o trabalho; não altera regras aprovadas.
+
+## Autorização atual
+
+O usuário pediu refinar habilidades, melhorar mapa e produzir muitos personagens no PixelLab, em proporção adulta realista como o Michael existente, sem caricatura/chibi. Autorizou usar as gerações disponíveis e continuar depois dos limites. Não comprar créditos, mudar assinatura nem contornar limites. Não registrar segredos.
+
+Há uma retomada automática neste chat a cada duas horas, ID `continuar-clash-of-eras`. Evitar duplicá-la. Continuar também manualmente quando o usuário voltar. Não produzir trabalho redundante apenas para consumir quota.
+
+## Fila de arte e checkpoint
+
+O diário canônico de IDs e estados é `visuais/personagens_lote_03_execucao.json`. Consultá-lo e concluir/exportar trabalhos pendentes **antes** de criar outro. Conta trial: **uma geração por vez**; consultar `get_character` e aguardar conclusão. Não insistir em chamadas concorrentes rejeitadas.
+
+- Concluídos/exportados/integrados e oito direções inspecionadas: Neymar, Obama, Barbie, Ken, Elon, Snoop, Lula, Bob Marley e Rapunzel. **72 PNGs novos originais** em `RelicArena/assets/characters/<chave>/realista_03/original/`, selecionados no manifesto. IDs/hashes no diário e em cada `exportacao.json`.
+- **Pendente de aplicar (2026-10-12):** `RelicArena/tools/vfx_habilidades_02.patch` liga os efeitos novos (explosão, foguete, nuvem, anel) em `client/main.gd`, `client/smoke.gd` e `tools/capture_preview.gd`. Aplicar só quando ninguém estiver editando `main.gd`: `patch -p1 --dry-run` dentro de `RelicArena`, depois sem `--dry-run`, e rodar os seis testes. Os assets e o manifesto já estão no projeto, e os efeitos antigos continuam como reserva.
+- **Geração de personagens pausada até o aviso do usuário** sobre a nova chave do PixelLab.
+- **Fila substituída em 2026-10-12:** o usuário mudou a direção (sprites maiores, corpo real, objeto-marca exagerado). **Não gerar Caramelo/Zumbi a 48 px no estilo antigo.** A próxima geração segue [PERSONAGENS_LOTE_04.md](PERSONAGENS_LOTE_04.md): conceito de teste do Snoop primeiro, e só depois de o usuário aprovar os objetos propostos. Não duplicar os nove já concluídos. Cleópatra/Jack não entram nesta etapa.
+- Mapa: braseiro transparente 32 × 48 concluído, `f9e42bec-c4b1-45ee-8299-a080200c0f1b`, exportado intacto e colocado em quatro pontos externos à grade. Estandarte fica para saldo posterior. Não gerar novamente a arena inteira nesta etapa.
+- Animações de caminhada/ataque depois de validar os personagens base; templates cobram por direção. Preservar as 72 imagens de dança e 16 rotações do Michael.
+
+Saldo MCP final: **0 gerações, $0, trial**, contador usado 39/total40 (transcrever campos do serviço sem inferir uma geração restante pela subtração). O bônus diário de cinco que apareceu anteriormente na conta **não foi confirmado como utilizável no MCP**: a tentativa do Caramelo retornou `no generations or credits remaining`, e a ajuda oficial não documenta consulta separada. Reconsultar `get_balance` na próxima retomada. Se zero e sem créditos, não chamar geração nem repetir a recusa; só avançar trabalho independente útil. Não comprar, mudar plano ou usar outro caminho para contornar o limite.
+
+Standard 48/8 direções custa 1 geração; a API retorna canvas 68×68 por padding. Usar preset `realistic_male`/`realistic_female`, não `chibi`; cão quadrúpede com template `dog`. Conferir corpo visível e pé, não só tamanho do canvas. Após os dois pendentes, priorizar animações de ataque/movimento; depois estudar artes de Júlio César e outras referências já citadas pelo usuário, sem incluí-las automaticamente no catálogo jogável.
+
+Não há geração de IA pendente neste checkpoint. Separadamente, o `vfx_workbench` é documentado pelo próprio PixelLab como editor determinístico gratuito, sem geração nem cobrança. Escudo, cura, estocada, impacto de foguete, fumaça e nó do laço estão exportados, revisados e **integrados na V1.4**; inventário em `RelicArena/assets/vfx/manifest.json`. Com saldo zero, é possível fazer trabalho útil no editor gratuito; isso não autoriza outra rota de geração por IA para contornar quota.
+
+Integração concluída: clips sem personagem ligados aos eventos reais, sem repetir explosão em cada alvo vizinho. Cura acompanha alvo e sai na morte; uma por alvo. Escudo acompanha `dance_shield`, distinto da mala; mensagem numérica só na unidade inspecionada. Recortes/tempo originais preservados, duas capturas conferidas, limpeza nas transições testada. Nunca usar `whole-with-sprite` como efeito runtime.
+
+**Retomada concluída (2026-10-12):** nenhuma geração enviada. Biblioteca/recibos concluídos, quatro ZIPs e 18 arquivos extraídos íntegros. Snapshot V1.2 em `Clash_of_Eras_V1_2_antes_VFX.zip` (428 arquivos verificados). `client/vfx_library.gd` e runner próprio: 61/0; simulação 297/0, Session 135/0, quatro partidas 816/0, cliente 321/0 headless e 321/0 OpenGL; saídas 0 e logs finais limpos. Todos os 18 arquivos de dados/simulação iguais ao snapshot. Código/capturas congelados; registro em `RelicArena/VALIDACAO_V1_3.json`. Um erro de assinatura de desenho ocorreu no import inicial e foi corrigido durante implementação; `v1_3_import.log` foi preservado, mas a evidência válida é `v1_3_import_final.log` e os runners finais. Não confundir log inicial com falha da versão final.
+
+Próxima retomada: consultar saldo uma vez; se disponível, terminar Caramelo e Zumbi realistas antes de novos personagens/animações. Se continuar zero, não repetir geração recusada. Fumaça/laço já concluídos; não refazer esse lote. Trabalho independente possível: revisar legibilidade do combate e pequenas melhorias de arena/interface com os assets existentes, somente quando houver objetivo concreto. Não acrescentar personagens/skills ao catálogo sem definir seu kit; não alterar balanceamento ou produzir arte redundante para ocupar tempo. Preservar a V1.4 jogável.
+
+Pacote da entrega salvo em `Clash_of_Eras_V1_3_local.zip`: 455 arquivos, zero divergências/alterações durante o empacotamento; SHA-256 e inventário no recibo `.zip.json`. O registro do erro de compilação intermediário foi acrescentado posteriormente ao histórico como BUG-016; a versão final permanece validada.
+
+## Integração e proteção do trabalho
+
+Houve mudanças em paralelo no projeto: catálogo atual com 11 heróis e Ken como invocação; kits novos adicionados por outra sessão e preservados. **Usuário confirmou em 2026-10-12 que há outra IA trabalhando neste projeto.** Identidade/escopo atual não informados; pergunta de divisão de trabalho enviada, ainda sem resposta. Não presumir que o cliente, a simulação ou os manifestos têm editor exclusivo. Não reverter nem substituir arquivos inteiros com versões antigas. Releia imediatamente antes de editar e faça alterações pontuais; priorize arquivos separados e interrompa a escrita do arquivo específico se perceber alterações simultâneas. Isso não pausa a retomada automática. Preserve cópias gratuitas/níveis 1–3, 1280×720, Michael moonwalk+escudo+cura, privacidade e correções do histórico. Verificação histórica V1.2: simulação 297, Session 135, quatro partidas 816, cliente 289 headless e 289 OpenGL; zero falhas e logs limpos. BUG-013/014/015 corrigidos; detalhes em `RelicArena/VALIDACAO_V1_2.json`. A validação atual V1.4 está no fim deste checkpoint. Sem teste humano, aparelho ou rede.
+
+Guarde cada ZIP e PNG original. Use apenas endpoint oficial de download retornado pelo PixelLab, validando caminhos do ZIP antes de extrair. Exportar novos ao lado dos antigos, em `realista_03`; atualize o manifesto somente após inspeção. `assets/characters/manifest.json` seleciona a arte ativa. Registre IDs, hashes, contagem de arquivos e avaliações reais.
+
+Manifesto opcional da arena: `RelicArena/assets/arena/props.json`, formato `{ "props": [{ "path": "res://assets/arena/braseiro.png", "ground": [-4.8, 1.0], "anchor": [16,46], "scale": 1.0 }] }`. Profundidade 0 frente, ~6 fundo; colocar props fora do tabuleiro.
+
+### Arrastar e soltar (Claude, 2026-10-12, V1.5)
+
+Pedido do usuário: arrastar heróis (campo, reserva, troca) e itens até heróis, mantendo toques/botões. Implementado em **arquivo separado** `RelicArena/client/drag_controller.gd` para evitar conflito. Ligações pontuais em `client/main.gd`: `const DragController`, `var drag`, `drag = DragController.install(self)` em `_ready` e o esmaecimento do herói arrastado em `_prepare_frame`. Textos de dica da preparação foram atualizados (não dizem mais "só toque"). Não remover esses ganchos ao editar o cliente. Teste próprio `tests/test_drag_and_drop.gd` (17/0 headless e OpenGL, eventos reais via `push_input(event, true)`); capturas `captures/v1_5_arrastar_heroi.png` e `_item.png`. Nenhum arquivo de dados/simulação foi alterado nesta entrega.
+
+## Validação
+
+Godot console: `C:/Users/m/Downloads/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64_console.exe`. Projeto `RelicArena`.
+
+Após código/importação: executar testes de simulação, sessão, partidas completas e smoke da interface. Inspecionar logs além do exit code; captura pelo viewport do Godot, sem navegar em HTML local anteriormente bloqueado. Registrar resultados concretos. Não tratar sprites em oito direções como oito animações nem alegar rede pronta.
+
+Atualizar este checkpoint ao concluir cada lote. Se apenas saldo/limite impedir avanço, preservar fila e ficar silencioso até mudança; avisar entrega, falha nova ou decisão necessária.
+
+
+### Retomada concluída — heartbeat 13:02 UTC de 2026-10-12
+
+Saldo nativo reconfirmado 0 gerações/$0; nenhuma geração de IA enviada. Lote gratuito exportado/revisado: `assets/vfx/fumaca_01` (efeito `76cb7b84-c9d2-484f-8847-c1e56b6a166b`, recibo `ORIGEM.json`) e `assets/vfx/laco_01` (efeito `40e143b2-5dac-43ed-8c68-b8892fccfb69`, recibo `exportacao.json`). Ambos têm `estado.json`; não gerar/exportar novamente. Auditoria dos dois: 196 verificações, zero falhas, oito arquivos extraídos idênticos e 54 recortes RGBA conferidos (`INTEGRIDADE_V1_4.json`).
+
+Integração V1.4 concluída. Simulação 297/0, Session 135/0, quatro partidas 816/0, biblioteca 88/0; cliente final **370/0 headless e 370/0 OpenGL**, depois da correção geométrica. Saídas 0 e importação/logs finais limpos. Os 18 arquivos de dados/simulação são iguais ao snapshot V1.3. Capturas finais `v1_4_support_combate.png/.json` e `v1_4_support_preparacao.png/.json` vistas; combate real tem fumaça/nó/puxão, preparação sem efeitos ou inimigos atuais.
+
+**BUG-017 corrigido e registrado:** corpo/nó e ponta do fio usavam curvas distintas; a ondulação deslocava também a origem. Fixture Godot mediu antes 65,6483 px na ponta/4,8760 px na origem e depois 0 px nas seis amostras. Desenho agora prende as duas extremidades às posições visuais. Captura final de luta real aos 2,6 s também registra erro 0; núcleo preservado. Evidências antes/depois e captura anterior mantidas. Logs iniciais de UI 359/0 foram preservados, mas a validação final é 370/0. Registro em `RelicArena/VALIDACAO_V1_4.json`. V1.3 permanece recuperável em `Clash_of_Eras_V1_3_local.zip`. Snapshot desta entrega: `Clash_of_Eras_V1_4_local.zip`; hashes, quantidade e conferência dos arquivos ficam no recibo `.zip.json`.

@@ -1,0 +1,189 @@
+{
+  "date": "2026-10-12",
+  "latest_review": {
+    "report": "Guia_Godot4/revisoes/2026-10-12_1409/REVISAO.md",
+    "state": "current_folder_reviewed_after_V1_5_V1_6",
+    "ai_generation_calls": 0,
+    "pixellab_calls": 0,
+    "queue_notice": "The old pending 48px replacements below are historical. Current character production follows PERSONAGENS_LOTE_04.md and waits for the user's updated-access notice. Do not resubmit the old Caramelo/Zumbi requests.",
+    "available_vfx_not_runtime": ["explosao_02", "foguete_02", "fumaca_02", "anel_fumaca_01", "charuto_01"],
+    "runtime_patch_pending": "RelicArena/tools/vfx_habilidades_02.patch"
+  },
+  "scope": "Authorized realistic proportions replacement and roster expansion",
+  "generations_before": 10,
+  "daily_bonus_before": 5,
+  "jobs": [
+    {
+      "key": "neymar",
+      "reference": "Neymar Jr.",
+      "requested_size": 48,
+      "requested_directions": 8,
+      "status": "integrated_reviewed_8_directions",
+      "response": "id: 291232c3-888e-4f25-89c4-c81820353189\nname: Clash of Eras — Neymar realista 48\nmode: standard (1 generation)\ndirections: 8\nbody: humanoid\nsize: ~48px character on a 68x68px canvas (standard mode adds ~40% so animations fit)\nstyle: medium shading, selective outline, high detail\nstatus: processing (~3-5 minutes)\n\nhint: get_character(character_id=\"291232c3-888e-4f25-89c4-c81820353189\")",
+      "character_id": "291232c3-888e-4f25-89c4-c81820353189",
+      "sha256": "098A3DB51C5731E73F48E83F41C21778A2DDAB73D2659F98B44EFB085BA97B45",
+      "png_count": 8
+    },
+    {
+      "key": "obama",
+      "reference": "Barack Obama",
+      "requested_size": 48,
+      "requested_directions": 8,
+      "status": "failed_submission",
+      "response": "error: rate limit exceeded — max concurrent jobs reached. Wait ~3-5 min or check list_characters().\n\nFree plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once)."
+    },
+    {
+      "key": "obama",
+      "reference": "Barack Obama",
+      "character_id": "d0c3bcfa-e7ee-4f64-aa3c-ce5e72a3fe78",
+      "requested_size": 48,
+      "requested_directions": 8,
+      "status": "integrated_reviewed_8_directions",
+      "response": "id: d0c3bcfa-e7ee-4f64-aa3c-ce5e72a3fe78\nname: Clash of Eras — Obama realista 48\nmode: standard (1 generation)\ndirections: 8\nbody: humanoid\nsize: ~48px character on a 68x68px canvas (standard mode adds ~40% so animations fit)\nstyle: medium shading, selective outline, high detail\nstatus: processing (~3-5 minutes)\n\nhint: get_character(character_id=\"d0c3bcfa-e7ee-4f64-aa3c-ce5e72a3fe78\")",
+      "sha256": "C13B8E3BBA80A0C289CF02C8238C2CFC22B629D12F01ECC5123DC286FF1CBA52",
+      "png_count": 8
+    },
+    {
+      "key": "barbie",
+      "reference": "Barbie",
+      "requested_size": 48,
+      "requested_directions": 8,
+      "status": "integrated_reviewed_8_directions",
+      "character_id": "8cce0cc9-9e8f-4a0c-bddf-69fa85fabbdd",
+      "sha256": "70C57F69D62FA38F9C337B120C9A1BC14BE78F478E1C0E0FDD879E5186B59C12",
+      "png_count": 8
+    },
+    {
+      "key": "ken",
+      "reference": "Ken",
+      "requested_size": 48,
+      "requested_directions": 8,
+      "status": "integrated_reviewed_8_directions",
+      "character_id": "6ee036bc-198c-42dc-93a5-f2083142861f",
+      "sha256": "2C4EB55DC54A8913DE1E0E9D492A63032AD6EACFB9C78E0B3D519777F61F124D",
+      "png_count": 8
+    },
+    {
+      "key": "braseiro",
+      "type": "map_object",
+      "width": 32,
+      "height": 48,
+      "status": "integrated_reviewed",
+      "object_id": "f9e42bec-c4b1-45ee-8299-a080200c0f1b",
+      "sha256": "AC68112E711BAE4F84989FFAD8475E62CAF4E3E3D9CD0C288AAB16E4B612C446"
+    },
+    {
+      "key": "elon",
+      "reference": "Elon Musk",
+      "requested_size": 48,
+      "requested_directions": 8,
+      "status": "integrated_reviewed_8_directions",
+      "character_id": "8634c766-2b2f-4166-961b-1ea182b56419",
+      "sha256": "5D9DC2B443FC9D7A50A90E85B2874A900CE906CAB3CF1883149F041E18742947",
+      "png_count": 8
+    },
+    {
+      "key": "snoop",
+      "reference": "Snoop Dogg",
+      "requested_size": 48,
+      "requested_directions": 8,
+      "status": "integrated_reviewed_8_directions",
+      "character_id": "80bd8c1a-4f93-4fa7-a4e6-a85eeb8dc556",
+      "sha256": "68A0FBA6C402A7A3BC57228528771695266FA8C70852FB3C1A997371C2BB0EEB",
+      "png_count": 8
+    },
+    {
+      "key": "lula",
+      "reference": "Lula",
+      "requested_size": 48,
+      "requested_directions": 8,
+      "status": "integrated_reviewed_8_directions",
+      "character_id": "2436503e-0400-44cf-9edf-4f16366eb29e",
+      "sha256": "602550884C7711DFEB5C4C2FDE4E8E16A46CDEE5604A81C8888D20F760497D58",
+      "png_count": 8
+    },
+    {
+      "key": "bob_marley",
+      "reference": "Bob Marley",
+      "requested_size": 48,
+      "requested_directions": 8,
+      "status": "integrated_reviewed_8_directions",
+      "character_id": "b7d93d38-f6e1-44e1-b663-746f0b01ac88",
+      "sha256": "761738C618640F87293B5E04A57D6921EEFB4726CFF8216766D36EADE5CD8432",
+      "png_count": 8
+    },
+    {
+      "key": "rapunzel",
+      "reference": "Rapunzel (conto)",
+      "requested_size": 48,
+      "requested_directions": 8,
+      "status": "integrated_reviewed_8_directions",
+      "character_id": "6820ab38-635e-4d0d-8e78-231af6cf37ec",
+      "sha256": "95632CDD155FD04FEDBC3F55CDBB52280E4A047F3E82064D7DF250654B7954AA",
+      "png_count": 8
+    },
+    {
+      "key": "caramelo",
+      "reference": "Vira-lata caramelo",
+      "requested_size": 48,
+      "requested_directions": 8,
+      "status": "failed_submission_no_generations",
+      "character_id": null,
+      "response": "error: no generations or credits remaining. check get_balance() for details"
+    }
+  ],
+  "balance_after": {
+    "generations_total": 40,
+    "daily_bonus_mcp_confirmed": false,
+    "generations_used": 39,
+    "credits_usd": 0,
+    "subscription": "trial",
+    "generations_remaining": 0
+  },
+  "completed_character_exports": 9,
+  "new_character_pngs": 72,
+  "pending": [
+    "caramelo_realistic",
+    "zumbi_realistic",
+    "movement_and_combat_animation_batches"
+  ],
+  "balance_checks": [
+    {
+      "generations_remaining": 0,
+      "source": "get_balance native MCP",
+      "subscription": "trial",
+      "action": "No generation submitted; integrate already exported free VFX",
+      "credits_usd": 0,
+      "generations_used": 39,
+      "generations_total": 40,
+      "utc": "2026-10-12T11:03:03.4491611Z"
+    },
+    {
+      "source": "get_balance native MCP, heartbeat 13:02",
+      "subscription": "trial",
+      "generations_remaining": 0,
+      "generations_used": 39,
+      "generations_total": 40,
+      "credits_usd": 0,
+      "action": "No AI generation submitted; next deterministic free VFX batch fumaca_01/laco_01",
+      "heartbeat_utc": "2026-10-12T13:02:17.744Z",
+      "recorded_utc": "2026-10-12T13:12:05Z"
+    }
+  ],
+  "latest_free_vfx_batch": {
+    "version": "V1.4",
+    "state": "integrated_validated",
+    "effects": [
+      "fumaca_01",
+      "laco_01"
+    ],
+    "inventory": "RelicArena/assets/vfx/manifest.json",
+    "receipts": [
+      "RelicArena/assets/vfx/fumaca_01/ORIGEM.json",
+      "RelicArena/assets/vfx/laco_01/exportacao.json"
+    ],
+    "validation": "RelicArena/VALIDACAO_V1_4.json",
+    "ai_generation_calls": 0,
+    "paid_purchases": 0
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "group_id": "11e1b17c-126a-478b-a074-8c7177c71b4a",
+  "states": [
+    {
+      "character": {
+        "id": "80bd8c1a-4f93-4fa7-a4e6-a85eeb8dc556",
+        "name": "Idle",
+        "prompt": "Tall very slim adult rapper resembling Snoop Dogg, realistic male anatomy, long normal limbs, small natural head, about seven heads tall. Long black braids, thin moustache and goatee, dark sunglasses, blue tracksuit with plain white side stripes, white sneakers. Holds a small microphone in one hand, relaxed confident ranged fighter stance, no visible smoke yet. NOT chibi, NOT cartoon, NOT caricature. Detailed restrained pixel art consistent with a classic 48px Michael Jackson game sprite, full body centered, both feet inside canvas, adult visible height around 43px. Low top-down elevated arena camera, crisp clustered pixels, selective dark outline, medium shading, warm upper-left lighting. Transparent background, no scene, text, brand logos, particles or glow.",
+        "size": {
+          "width": 68,
+          "height": 68
+        },
+        "template_id": "mannequin",
+        "directions": 8,
+        "view": "low top-down",
+        "created_at": "2026-10-12T05:16:43.835223+00:00"
+      },
+      "folder": "Idle",
+      "frames": {
+        "rotations": {
+          "south": "Idle/rotations/south.png",
+          "south-east": "Idle/rotations/south-east.png",
+          "east": "Idle/rotations/east.png",
+          "north-east": "Idle/rotations/north-east.png",
+          "north": "Idle/rotations/north.png",
+          "north-west": "Idle/rotations/north-west.png",
+          "west": "Idle/rotations/west.png",
+          "south-west": "Idle/rotations/south-west.png"
+        },
+        "animations": {}
+      }
+    }
+  ],
+  "export_version": "3.1",
+  "export_date": "2026-10-12T05:18:29.347011"
+}

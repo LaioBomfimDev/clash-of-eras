@@ -1,0 +1,9 @@
+{
+  "source": "PixelLab original map object f9e42bec-c4b1-45ee-8299-a080200c0f1b; no image editing",
+  "props": [
+    {"path":"res://assets/arena/braseiro.png","ground":[-4.8,1.0],"anchor":[16,46],"scale":1.0},
+    {"path":"res://assets/arena/braseiro.png","ground":[4.8,1.0],"anchor":[16,46],"scale":1.0},
+    {"path":"res://assets/arena/braseiro.png","ground":[-4.8,5.0],"anchor":[16,46],"scale":1.0},
+    {"path":"res://assets/arena/braseiro.png","ground":[4.8,5.0],"anchor":[16,46],"scale":1.0}
+  ]
+}

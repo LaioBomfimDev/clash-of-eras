@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-12",
+  "method": "PixelLab vfx_workbench (editor deterministico gratuito); nenhuma geracao por IA",
+  "ai_generation_calls": 0,
+  "name": "Clash of Eras - Fumaca charuto Snoop 01",
+  "effect_id": "351d9e3f-66f9-4d9d-b091-94c1122a4c8a",
+  "step_id": "a96958c4-b650-40fe-96d0-d3ed80a965f3",
+  "export_image_id": "7b84b8a2-f8a6-415d-a70c-53b326bafd33",
+  "effect_url": "https://pixellab.ai/create-vfx?effect=351d9e3f-66f9-4d9d-b091-94c1122a4c8a",
+  "download_base": "https://api.pixellab.ai/mcp/pixel-tools/7b84b8a2-f8a6-415d-a70c-53b326bafd33/",
+  "uso": "Brasa e fumaca da ponta do charuto; reservado para o Snoop do lote 04 (nao integrado).",
+  "fps": 10,
+  "loop": true,
+  "canvas": {
+    "w": 32,
+    "h": 56
+  },
+  "anchor": {
+    "kind": "origin",
+    "x": 12,
+    "y": 50
+  },
+  "clip": "whole",
+  "clip_frames": 12,
+  "frame": {
+    "w": 15,
+    "h": 46
+  },
+  "offset": {
+    "x": -4,
+    "y": -42
+  },
+  "zip_entries": [
+    "README.txt",
+    "manifest.json",
+    "whole.png"
+  ],
+  "extracted_identical_to_zip": true,
+  "sha256": {
+    "clash-of-eras-fumaca-charuto-snoop-01-game.zip": "BDFA3CA63E752734CEC1909F36AECD680E65DE16342A12C2DB5AADACB49CC31A",
+    "clash-of-eras-fumaca-charuto-snoop-01.gif": "5066AC5387F9A7106F996D70285BF2D2373B9E100AABB72D5FA3517285E68485",
+    "clash-of-eras-fumaca-charuto-snoop-01.json": "2C5F9345222CE538220E1771569B6CF08D03B83CD78321E0311C3812525B76F3",
+    "clash-of-eras-fumaca-charuto-snoop-01.png": "BF275166B3D3AECC710ACD7C7FE9434BC0959889563BE70C6CD44C0B75727417"
+  },
+  "character_embedded": false
+}

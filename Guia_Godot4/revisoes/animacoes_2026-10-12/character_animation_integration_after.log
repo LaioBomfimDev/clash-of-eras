@@ -1,0 +1,5 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+CLIENT_PHASE: menu; rodada 1; vidas [4, 4]
+CLIENT_READY: Clash of Eras protótipo local; lobby de boas-vindas; 30 FPS; compêndio de heróis
+CHARACTER ANIMATION INTEGRATION TESTS: 21 passed, 0 failed

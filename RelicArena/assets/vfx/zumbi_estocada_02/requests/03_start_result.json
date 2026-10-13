@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "effect step: 7337c030-561d-4b1b-b71b-8d418989f02c\nfrom: a new effect (the first add_part starts it)\nnext: vfx_workbench(argv=['7337c030-561d-4b1b-b71b-8d418989f02c', 'add_part', '{\"name\": \"<part>\"}']) · vfx_workbench(argv=['describe', 'parts']) · vfx_workbench(argv=['7337c030-561d-4b1b-b71b-8d418989f02c', 'export', '--name', '<name>']) — keep mode=\"high\"\n\nreview before your next call: say what you see in the frames — does it read at 1x, start -> peak -> end (or a loop with no jump), anything cut off at the edges, muddy colours, is the sprite still readable — then choose: set_part or render with a patch (a defect you saw), get_part (unsure what a part can do), or export. Put that reasoning in `notes`."
+    }
+  ],
+  "isError": false
+}

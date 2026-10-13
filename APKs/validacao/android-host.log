@@ -1,0 +1,8 @@
+--------- beginning of main
+10-12 16:39:35.308  2476  2734 I godot   : Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+10-12 16:39:47.680  2476  2734 I godot   : OpenGL API OpenGL ES 3.1 (4.5.0 Core Profile Context 26.8.1.260806) - Compatibility - Using Device: Google (ATI Technologies Inc.) - Android Emulator OpenGL ES Translator (AMD Radeon(TM) Graphics)
+10-12 16:39:47.863  2476  2734 E godot   : ERROR: Condition "res != ((SLuint32) 0x00000000)" is true.
+10-12 16:39:47.863  2476  2734 E godot   :    at: start (platform/android/audio_driver_opensl.cpp:158)
+10-12 16:39:47.866  2476  2734 I godot   : 
+10-12 16:39:59.234  2476  2734 I godot   : CLIENT_PHASE: menu; rodada 1; vidas [4, 4]
+10-12 16:39:59.235  2476  2734 I godot   : CLIENT_READY: Clash of Eras V1.4 local; lobby de boas-vindas; 30 FPS; compêndio de heróis

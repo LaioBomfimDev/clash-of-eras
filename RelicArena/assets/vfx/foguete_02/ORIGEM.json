@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-12",
+  "method": "PixelLab vfx_workbench (editor deterministico gratuito); nenhuma geracao por IA",
+  "ai_generation_calls": 0,
+  "name": "Clash of Eras - Foguete Elon 02",
+  "effect_id": "b16c4f92-6173-401e-9328-bd5933cf04fa",
+  "step_id": "6c514ef3-4e65-4e10-83c7-9994cfa2faee",
+  "export_image_id": "2f14c651-9043-4f16-8239-e127398e89b7",
+  "effect_url": "https://pixellab.ai/create-vfx?effect=b16c4f92-6173-401e-9328-bd5933cf04fa",
+  "download_base": "https://api.pixellab.ai/mcp/pixel-tools/2f14c651-9043-4f16-8239-e127398e89b7/",
+  "uso": "Projetil do Elon em voo; direcao base +x, origem no centro do foguete.",
+  "fps": 16,
+  "loop": true,
+  "canvas": {
+    "w": 84,
+    "h": 28
+  },
+  "anchor": {
+    "kind": "origin",
+    "x": 64,
+    "y": 14
+  },
+  "clip": "whole",
+  "clip_frames": 8,
+  "frame": {
+    "w": 70,
+    "h": 12
+  },
+  "offset": {
+    "x": -58,
+    "y": -5
+  },
+  "zip_entries": [
+    "README.txt",
+    "manifest.json",
+    "whole.png"
+  ],
+  "extracted_identical_to_zip": true,
+  "sha256": {
+    "clash-of-eras-foguete-elon-02-game.zip": "F0F207D85FA49AB86B25EA58FDA47F51BFCC679EBF2B0F4D17F14835FFF29DA5",
+    "clash-of-eras-foguete-elon-02.gif": "156E8D0E679EE0CFA72C694895350D1BCD4A645AC7F20B30AED13D88E75BEDA3",
+    "clash-of-eras-foguete-elon-02.json": "D05702CE4C29E8F3B27C564C8898552C75DCA70858C930941D6956C145CFFF01",
+    "clash-of-eras-foguete-elon-02.png": "6B18ED8121E7FC85FC790D4DD0188AA50BA3F02EF4951EAE83748425EB1EF0A2"
+  },
+  "character_embedded": false
+}

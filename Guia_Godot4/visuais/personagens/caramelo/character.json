@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-11",
+  "reference": "Vira-lata Caramelo",
+  "work_name": "Caramelo Relâmpago",
+  "role": "Assassino",
+  "status": "completed",
+  "character_id": "82eace58-7128-4f15-97ce-1944a5702428",
+  "group_id": "7816204e-ee6d-4f60-8c16-d0eecac92d27",
+  "requested_size": 48,
+  "reported_size": 68,
+  "directions_completed": 8,
+  "local_files": [
+    "south.png"
+  ],
+  "local_directions": 1,
+  "animations_created": 0,
+  "announced_generation_cost": 1,
+  "brief": {
+    "mode": "standard",
+    "n_directions": 8,
+    "size": 48,
+    "view": "low top-down",
+    "outline": "selective outline",
+    "shading": "medium shading",
+    "detail": "high detail",
+    "name": "Relic Arena — Caramelo Relâmpago",
+    "body_type": "quadruped",
+    "proportions": "Quadruped street dog caricature with a disproportionately large expressive head, short compact body, agile thin legs and oversized signature collar. All paws and tail visible within the canvas.",
+    "description": "Funny strongly caricatured Brazilian caramel mixed-breed street dog, a compact agile quadruped melee assassin. Huge expressive head, one floppy ear and one upright ear, mischievous grin, big black nose, caramel gold fur, bright red bandana with oversized knot, ridiculously large chunky golden dog-tag collar. Short thin running legs and curled tail; bold clear silhouette. Crisp clustered pixels, 48x48 canvas, upper-left lighting, selective dark outline, restrained medium shading, low top-down elevated arena view. Whole dog centered with four paws grounded, transparent background, no text, no scenery, no aura.",
+    "template": "dog"
+  },
+  "pending": "Aprovação artística, exagero dos acessórios, exportação das demais direções e animações.",
+  "names_final_approved": false,
+  "godot_integration": false,
+  "directions_inspected": [
+    "south",
+    "south-west",
+    "west",
+    "north-west",
+    "north",
+    "north-east",
+    "east",
+    "south-east"
+  ],
+  "export_incident": "Export de ID inspect retornou404; só sul local entregue pelo MCP. Nenhuma URL alternativa tentada."
+}

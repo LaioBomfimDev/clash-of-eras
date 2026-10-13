@@ -1,0 +1,36 @@
+{
+  "group_id": "cd808234-f25b-4e1a-bb24-1dca0a120549",
+  "states": [
+    {
+      "character": {
+        "id": "6820ab38-635e-4d0d-8e78-231af6cf37ec",
+        "name": "Idle",
+        "prompt": "Adult fairy-tale woman Rapunzel from the Grimm tale, realistic adult female anatomy with naturally small head and normal limbs, about seven heads tall. Extremely long thick golden braid reaching the floor beside her feet, small simple white flowers in hair, modest pale green medieval linen dress with long sleeves and brown leather belt, flat cream shoes. Holds the end of her braid loosely like a lasso, poised supportive stance. Original folk-tale clothing, NOT any animated-film costume. NOT chibi, NOT cartoon, NOT caricature. Restrained detailed pixel art consistent with a classic 48px Michael Jackson sprite, centered full body with feet and entire braid inside canvas, visible adult height around 43px. Low top-down elevated arena camera, crisp clustered pixels, medium shading, selective dark outline, warm upper-left light. Transparent background, no scene, text, logos, glow or particles.",
+        "size": {
+          "width": 68,
+          "height": 68
+        },
+        "template_id": "mannequin",
+        "directions": 8,
+        "view": "low top-down",
+        "created_at": "2026-10-12T05:21:53.342062+00:00"
+      },
+      "folder": "Idle",
+      "frames": {
+        "rotations": {
+          "south": "Idle/rotations/south.png",
+          "south-east": "Idle/rotations/south-east.png",
+          "east": "Idle/rotations/east.png",
+          "north-east": "Idle/rotations/north-east.png",
+          "north": "Idle/rotations/north.png",
+          "north-west": "Idle/rotations/north-west.png",
+          "west": "Idle/rotations/west.png",
+          "south-west": "Idle/rotations/south-west.png"
+        },
+        "animations": {}
+      }
+    }
+  ],
+  "export_version": "3.1",
+  "export_date": "2026-10-12T05:27:18.437872"
+}

@@ -1,0 +1,371 @@
+{
+  "name": "Clash of Eras - Fumaca01",
+  "created_at_utc": "2026-10-12T13:15:42.959117+00:00",
+  "method": "PixelLab vfx_workbench deterministic free editor; no AI create/animate calls or purchases",
+  "ids": {
+    "start_step": "521bf26e-7362-4062-9a08-e7e65be7c2df",
+    "first_render_step": "87c1eb0e-7c67-45c5-b4e3-43eeccfd8eda",
+    "final_step": "8f84d327-304c-4164-83da-9770e270874e",
+    "effect": "76cb7b84-c9d2-484f-8847-c1e56b6a166b",
+    "export_image": "d5746abe-e8db-4ceb-8dcf-0ad03bdd0b3d"
+  },
+  "effect_url": "https://pixellab.ai/create-vfx?effect=76cb7b84-c9d2-484f-8847-c1e56b6a166b",
+  "downloads": {
+    "clash-of-eras-fumaca01-game.zip": "https://api.pixellab.ai/mcp/pixel-tools/d5746abe-e8db-4ceb-8dcf-0ad03bdd0b3d/clash-of-eras-fumaca01-game.zip",
+    "clash-of-eras-fumaca01.json": "https://api.pixellab.ai/mcp/pixel-tools/d5746abe-e8db-4ceb-8dcf-0ad03bdd0b3d/clash-of-eras-fumaca01.json",
+    "clash-of-eras-fumaca01.png": "https://api.pixellab.ai/mcp/pixel-tools/d5746abe-e8db-4ceb-8dcf-0ad03bdd0b3d/clash-of-eras-fumaca01.png",
+    "clash-of-eras-fumaca01.gif": "https://api.pixellab.ai/mcp/pixel-tools/d5746abe-e8db-4ceb-8dcf-0ad03bdd0b3d/clash-of-eras-fumaca01.gif"
+  },
+  "archive_validation": {
+    "entries": [
+      "whole.png",
+      "part-fumaca.png",
+      "manifest.json",
+      "README.txt"
+    ],
+    "all_paths_checked_under_extraction_directory_before_extraction": true,
+    "extraction_directory": "original"
+  },
+  "settings": {
+    "part": "frost_mist",
+    "id": "fumaca",
+    "role": "linger",
+    "size": 0.32,
+    "amount_glints": 0,
+    "speed": 1,
+    "thickness": 0.7,
+    "palette_requested": [
+      "#4b5963",
+      "#6f7e88",
+      "#95a3ac",
+      "#b7c0c8"
+    ]
+  },
+  "playback": {
+    "clip": "part-fumaca",
+    "original_manifest": "original/manifest.json",
+    "sheet": "original/part-fumaca.png",
+    "frames": 16,
+    "fps": 10,
+    "loop": true,
+    "duration_seconds": 1.6,
+    "frame_pixels": [
+      29,
+      7
+    ],
+    "sheet_pixels": [
+      116,
+      28
+    ],
+    "canvas_pixels": [
+      37,
+      16
+    ],
+    "offset": [
+      -13,
+      -3
+    ],
+    "anchor": [
+      18,
+      6
+    ],
+    "sprite_embedded": false
+  },
+  "review": {
+    "all_16_frames_reviewed": true,
+    "first_render_defect": "Right-edge clipping in frames1–11, warned by tool. Repaired via render fit_canvas; final warnings none.",
+    "visual": "Low sparse blue-gray ground mist, no glints or embedded character; all16 frames retain mist and empty holes. Last and first have similar density/height; no blank loop frame.",
+    "root_review": "Parent inspected local sheet and approved for TESTE integration before receipt completion.",
+    "technical": "All16 extracted frames exactly match corresponding crop of the official full atlas. Actual cropped clip29x7 is smaller than37x16 working canvas; full exported canvas contains no cut content outside that crop.",
+    "transparency": "Alpha is binary0/255 with clear holes, not partial-alpha pixels. Engine alpha modulation can lower opacity while keeping source unchanged.",
+    "limits": [
+      "Working canvas37x16 is within approximate width request, but actual trimmed mist is29x7; retain exported metadata as authority.",
+      "Only isolated asset/editor preview reviewed, not final in-game legibility.",
+      "No character was composited for this export.",
+      "No gameplay, aggregated manifest, UI or shared documentation changed."
+    ]
+  },
+  "integration_proposal": {
+    "status": "TESTE, not gameplay rule",
+    "layer": "Below character bodies, at authoritative smoke zone center; preserve nearest filtering and exact offset.",
+    "playback": "Loop1.6s only while core smoke zone exists; remove immediately when zone expires or round resets.",
+    "opacity": "Optional alpha modulation around0.6–0.75 in presentation if source looks too solid; source pixels remain original.",
+    "scale": "Start at integer scale1 or2 and review in arena; do not stretch source to hex-radius as a rule."
+  },
+  "frame_checks": [
+    {
+      "index": 0,
+      "bounds": [
+        1,
+        0,
+        29,
+        6
+      ],
+      "nontransparent_pixels": 81,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "exact_crop_of_full_original": true
+    },
+    {
+      "index": 1,
+      "bounds": [
+        0,
+        0,
+        29,
+        6
+      ],
+      "nontransparent_pixels": 84,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "exact_crop_of_full_original": true
+    },
+    {
+      "index": 2,
+      "bounds": [
+        0,
+        0,
+        29,
+        7
+      ],
+      "nontransparent_pixels": 84,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "exact_crop_of_full_original": true
+    },
+    {
+      "index": 3,
+      "bounds": [
+        0,
+        0,
+        29,
+        6
+      ],
+      "nontransparent_pixels": 77,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "exact_crop_of_full_original": true
+    },
+    {
+      "index": 4,
+      "bounds": [
+        3,
+        0,
+        28,
+        7
+      ],
+      "nontransparent_pixels": 82,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "exact_crop_of_full_original": true
+    },
+    {
+      "index": 5,
+      "bounds": [
+        4,
+        0,
+        28,
+        6
+      ],
+      "nontransparent_pixels": 76,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "exact_crop_of_full_original": true
+    },
+    {
+      "index": 6,
+      "bounds": [
+        2,
+        0,
+        28,
+        6
+      ],
+      "nontransparent_pixels": 75,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "exact_crop_of_full_original": true
+    },
+    {
+      "index": 7,
+      "bounds": [
+        3,
+        0,
+        27,
+        6
+      ],
+      "nontransparent_pixels": 75,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "exact_crop_of_full_original": true
+    },
+    {
+      "index": 8,
+      "bounds": [
+        3,
+        0,
+        27,
+        6
+      ],
+      "nontransparent_pixels": 75,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "exact_crop_of_full_original": true
+    },
+    {
+      "index": 9,
+      "bounds": [
+        4,
+        0,
+        27,
+        6
+      ],
+      "nontransparent_pixels": 74,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "exact_crop_of_full_original": true
+    },
+    {
+      "index": 10,
+      "bounds": [
+        3,
+        0,
+        26,
+        6
+      ],
+      "nontransparent_pixels": 73,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "exact_crop_of_full_original": true
+    },
+    {
+      "index": 11,
+      "bounds": [
+        3,
+        0,
+        26,
+        6
+      ],
+      "nontransparent_pixels": 73,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "exact_crop_of_full_original": true
+    },
+    {
+      "index": 12,
+      "bounds": [
+        1,
+        0,
+        26,
+        6
+      ],
+      "nontransparent_pixels": 69,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "exact_crop_of_full_original": true
+    },
+    {
+      "index": 13,
+      "bounds": [
+        0,
+        0,
+        26,
+        6
+      ],
+      "nontransparent_pixels": 72,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "exact_crop_of_full_original": true
+    },
+    {
+      "index": 14,
+      "bounds": [
+        0,
+        0,
+        29,
+        7
+      ],
+      "nontransparent_pixels": 72,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "exact_crop_of_full_original": true
+    },
+    {
+      "index": 15,
+      "bounds": [
+        1,
+        0,
+        29,
+        6
+      ],
+      "nontransparent_pixels": 75,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "exact_crop_of_full_original": true
+    }
+  ],
+  "files": {
+    "clash-of-eras-fumaca01-game.zip": {
+      "bytes": 3918,
+      "sha256": "de71bf96731bc8c47ac6ae33bdb0028d06a1047a2a03e6557c5cc8f84d4057ec"
+    },
+    "clash-of-eras-fumaca01.gif": {
+      "bytes": 1733,
+      "sha256": "bc61cfaac6bf27bcc065f25ba40db1bf810ca7450eba1ec4d1375132a253581e"
+    },
+    "clash-of-eras-fumaca01.json": {
+      "bytes": 6489,
+      "sha256": "fa308686b45cc7b11fd56fdb5cc1d114474ca1b057faf7e5d30e048c8bd6750c"
+    },
+    "clash-of-eras-fumaca01.png": {
+      "bytes": 1479,
+      "sha256": "c2a9b57584d34147e1114c0a77abf0a4a7dd8daa9f9552cd430f1eda294c4b8d"
+    },
+    "original/manifest.json": {
+      "bytes": 1035,
+      "sha256": "6bbcb723a61cf66d46f41c4ec519f26b09292b56838b83d6ad499623d269e905"
+    },
+    "original/part-fumaca.png": {
+      "bytes": 1315,
+      "sha256": "be0930a9d03414b76158616f2efcc7910c8e4ec8f147f362c6746d34f0330e1a"
+    },
+    "original/README.txt": {
+      "bytes": 942,
+      "sha256": "3030bb6c509e7759cd342fd0b98dd3968551c657dfd76c4e6886399f751d632c"
+    },
+    "original/whole.png": {
+      "bytes": 1315,
+      "sha256": "be0930a9d03414b76158616f2efcc7910c8e4ec8f147f362c6746d34f0330e1a"
+    }
+  }
+}

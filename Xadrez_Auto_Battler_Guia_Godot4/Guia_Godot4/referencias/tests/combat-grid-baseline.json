@@ -1,0 +1,4501 @@
+{
+  "version": "0.8",
+  "cases": [
+    {
+      "round": 0,
+      "profile": 0,
+      "left": [
+        {
+          "kind": "Tank",
+          "id": 1,
+          "star": 1,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Ranger",
+          "id": 2,
+          "star": 1,
+          "items": [],
+          "x": 0,
+          "y": -350
+        }
+      ],
+      "right": [
+        {
+          "kind": "Tank",
+          "uid": 100,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Ranger",
+          "uid": 101,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -820,
+          "id": 101
+        }
+      ],
+      "sha256": "2850bf5a5759e9822c0b5b1cb1b08fac901d5f7c8143ae17536d6afc52fb73e0",
+      "combatSHA256": "fa29c4c082303fd9399d9da2fb8893fbaf3f199f35ca5fe4053b3af0bb5d6f84"
+    },
+    {
+      "round": 0,
+      "profile": 1,
+      "left": [
+        {
+          "kind": "Gorilla",
+          "id": 1,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Cowboy",
+          "id": 2,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "Witch",
+          "id": 3,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "Ninja",
+          "id": 4,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "Genie",
+          "id": 5,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "RatKing",
+          "id": 6,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "Tank",
+          "uid": 100,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Ranger",
+          "uid": 101,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -820,
+          "id": 101
+        }
+      ],
+      "sha256": "08605be585145f01a76eb647ac32018c6ed4714d902f28e341c913227489f893",
+      "combatSHA256": "5dd98dc4b71398ca0f9a5330d762b77c1b7b43a01c7ef7289d861692997902a9"
+    },
+    {
+      "round": 0,
+      "profile": 2,
+      "left": [
+        {
+          "kind": "Genie",
+          "id": 1,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "RatKing",
+          "id": 2,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "Cobra",
+          "id": 3,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "David",
+          "id": 4,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "Tank",
+          "id": 5,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "Ranger",
+          "id": 6,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "Tank",
+          "uid": 100,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Ranger",
+          "uid": 101,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -820,
+          "id": 101
+        }
+      ],
+      "sha256": "4af54c9669abc8753ce72037e15656519db6265d62edce43810ef54c47feaa54",
+      "combatSHA256": "66ea54dc0a8b3b2b5f6cf9f93df8da3b41ea1598a62d808a9a9c674f60fa36e9"
+    },
+    {
+      "round": 1,
+      "profile": 0,
+      "left": [
+        {
+          "kind": "Ranger",
+          "id": 1,
+          "star": 1,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Caster",
+          "id": 2,
+          "star": 1,
+          "items": [],
+          "x": 0,
+          "y": -350
+        }
+      ],
+      "right": [
+        {
+          "kind": "Rat",
+          "uid": 100,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Rat",
+          "uid": 101,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -330,
+          "id": 101
+        },
+        {
+          "kind": "Rat",
+          "uid": 102,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -330,
+          "id": 102
+        }
+      ],
+      "sha256": "08bcb9828ddc7cb2a0abef70f5e2bffac2834d6c6ffcf9a2f3730f73c8f1aefd",
+      "combatSHA256": "fe7c55122511458b2750dc4f36d9a2002e6539d4a304cc6e8d25f7036ca17cd1"
+    },
+    {
+      "round": 1,
+      "profile": 1,
+      "left": [
+        {
+          "kind": "Cowboy",
+          "id": 1,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Witch",
+          "id": 2,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "Ninja",
+          "id": 3,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "Genie",
+          "id": 4,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "RatKing",
+          "id": 5,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "Cobra",
+          "id": 6,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "Rat",
+          "uid": 100,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Rat",
+          "uid": 101,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -330,
+          "id": 101
+        },
+        {
+          "kind": "Rat",
+          "uid": 102,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -330,
+          "id": 102
+        }
+      ],
+      "sha256": "26d70235e00a6ca8a9f66fd8db7ca84dd843e635210d986b07aff572894356e8",
+      "combatSHA256": "782e4de867b05029969b6953c76575195701174a0a3be2f86f98e56dbfdffef5"
+    },
+    {
+      "round": 1,
+      "profile": 2,
+      "left": [
+        {
+          "kind": "RatKing",
+          "id": 1,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Cobra",
+          "id": 2,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "David",
+          "id": 3,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "Tank",
+          "id": 4,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "Ranger",
+          "id": 5,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "Caster",
+          "id": 6,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "Rat",
+          "uid": 100,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Rat",
+          "uid": 101,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -330,
+          "id": 101
+        },
+        {
+          "kind": "Rat",
+          "uid": 102,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -330,
+          "id": 102
+        }
+      ],
+      "sha256": "9877a26f109b310ffe99368354e1a49d7884a2911ddc75f7a93179b6894d4a2a",
+      "combatSHA256": "37fce754ba1f42649e80bac7f7379a3509820cc496239fa9608bf8b5843d38df"
+    },
+    {
+      "round": 2,
+      "profile": 0,
+      "left": [
+        {
+          "kind": "Caster",
+          "id": 1,
+          "star": 1,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Assassin",
+          "id": 2,
+          "star": 1,
+          "items": [],
+          "x": 0,
+          "y": -350
+        }
+      ],
+      "right": [
+        {
+          "kind": "Tank",
+          "uid": 100,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Witch",
+          "uid": 101,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -820,
+          "id": 101
+        },
+        {
+          "kind": "Assassin",
+          "uid": 102,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -330,
+          "id": 102
+        }
+      ],
+      "sha256": "2e09f51d9f9b6e51bb799caba3df6ca42163c536e207c4fef6b070880e42e3fe",
+      "combatSHA256": "23801d7e5085d1e79a8c8792be42682dd492bd879d1159a9baa153210ced6151"
+    },
+    {
+      "round": 2,
+      "profile": 1,
+      "left": [
+        {
+          "kind": "Witch",
+          "id": 1,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Ninja",
+          "id": 2,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "Genie",
+          "id": 3,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "RatKing",
+          "id": 4,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "Cobra",
+          "id": 5,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "David",
+          "id": 6,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "Tank",
+          "uid": 100,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Witch",
+          "uid": 101,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -820,
+          "id": 101
+        },
+        {
+          "kind": "Assassin",
+          "uid": 102,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -330,
+          "id": 102
+        }
+      ],
+      "sha256": "fec8b22bb636b26640bd21a798a4bb376dc6ce5866f32ffbb5ab7edf346eb70c",
+      "combatSHA256": "514a333f15240beffe38f835d01429b3c5031ffa2483f0721c2dbac53aaff8a6"
+    },
+    {
+      "round": 2,
+      "profile": 2,
+      "left": [
+        {
+          "kind": "Cobra",
+          "id": 1,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "David",
+          "id": 2,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "Tank",
+          "id": 3,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "Ranger",
+          "id": 4,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "Caster",
+          "id": 5,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "Assassin",
+          "id": 6,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "Tank",
+          "uid": 100,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Witch",
+          "uid": 101,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -820,
+          "id": 101
+        },
+        {
+          "kind": "Assassin",
+          "uid": 102,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -330,
+          "id": 102
+        }
+      ],
+      "sha256": "0dbf1e7e5c24beeb80cff631d5052440254b6cc478b0bb393ae56799e5431d2c",
+      "combatSHA256": "96c9adc90560a6b69fedb09c97e54fc70caf84f63352423267d692e14510aec1"
+    },
+    {
+      "round": 3,
+      "profile": 0,
+      "left": [
+        {
+          "kind": "Assassin",
+          "id": 1,
+          "star": 1,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Gorilla",
+          "id": 2,
+          "star": 1,
+          "items": [],
+          "x": 0,
+          "y": -350
+        }
+      ],
+      "right": [
+        {
+          "kind": "Serpent",
+          "uid": 100,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -880,
+          "id": 100
+        },
+        {
+          "kind": "Serpent",
+          "uid": 101,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -820,
+          "id": 101
+        },
+        {
+          "kind": "Rat",
+          "uid": 102,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -330,
+          "id": 102
+        }
+      ],
+      "sha256": "567a669c6e1eb61e068ac3154dca9cf726eb3112a1629465f23dc642c72a63ee",
+      "combatSHA256": "e1804496caee88080cb74af80d6eddb55bb6ca4c12a08cf09d35da250692d6bd"
+    },
+    {
+      "round": 3,
+      "profile": 1,
+      "left": [
+        {
+          "kind": "Ninja",
+          "id": 1,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Genie",
+          "id": 2,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "RatKing",
+          "id": 3,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "Cobra",
+          "id": 4,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "David",
+          "id": 5,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "Tank",
+          "id": 6,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "Serpent",
+          "uid": 100,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -880,
+          "id": 100
+        },
+        {
+          "kind": "Serpent",
+          "uid": 101,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -820,
+          "id": 101
+        },
+        {
+          "kind": "Rat",
+          "uid": 102,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -330,
+          "id": 102
+        }
+      ],
+      "sha256": "cf6d4e6677eab173827bc24f60409f7c67ba06938a4def4a9ea9d17c5a06e87a",
+      "combatSHA256": "ef395081d5404426eae4ddcd2a1986539dc0eceda67e70778b58ceb804810b0c"
+    },
+    {
+      "round": 3,
+      "profile": 2,
+      "left": [
+        {
+          "kind": "David",
+          "id": 1,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Tank",
+          "id": 2,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "Ranger",
+          "id": 3,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "Caster",
+          "id": 4,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "Assassin",
+          "id": 5,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "Gorilla",
+          "id": 6,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "Serpent",
+          "uid": 100,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -880,
+          "id": 100
+        },
+        {
+          "kind": "Serpent",
+          "uid": 101,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -820,
+          "id": 101
+        },
+        {
+          "kind": "Rat",
+          "uid": 102,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -330,
+          "id": 102
+        }
+      ],
+      "sha256": "85b13441c2236c569f657f8997b9869d4f8f3d1ed7e4dce058391c0547c54808",
+      "combatSHA256": "41a52ea033b84d0178ca2450679cbb32a72ae7f08e0dc78443ae56dd3f8af7bc"
+    },
+    {
+      "round": 4,
+      "profile": 0,
+      "left": [
+        {
+          "kind": "Gorilla",
+          "id": 1,
+          "star": 1,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Cowboy",
+          "id": 2,
+          "star": 1,
+          "items": [],
+          "x": 0,
+          "y": -350
+        }
+      ],
+      "right": [
+        {
+          "kind": "Tank",
+          "uid": 100,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Cowboy",
+          "uid": 101,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -820,
+          "id": 101
+        },
+        {
+          "kind": "Caster",
+          "uid": 102,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -880,
+          "id": 102
+        },
+        {
+          "kind": "Assassin",
+          "uid": 103,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -560,
+          "id": 103
+        }
+      ],
+      "sha256": "93656923cbbe25c03487eb579694605bccc8329282158d89457922001a6c2299",
+      "combatSHA256": "a35608b90116fded61a6230caec4122640ec6029fa35c830179d4f44045f27b5"
+    },
+    {
+      "round": 4,
+      "profile": 1,
+      "left": [
+        {
+          "kind": "Genie",
+          "id": 1,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "RatKing",
+          "id": 2,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "Cobra",
+          "id": 3,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "David",
+          "id": 4,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "Tank",
+          "id": 5,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "Ranger",
+          "id": 6,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "Tank",
+          "uid": 100,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Cowboy",
+          "uid": 101,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -820,
+          "id": 101
+        },
+        {
+          "kind": "Caster",
+          "uid": 102,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -880,
+          "id": 102
+        },
+        {
+          "kind": "Assassin",
+          "uid": 103,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -560,
+          "id": 103
+        }
+      ],
+      "sha256": "d74aae7bfe8b8e3c143f32e3f86afccb8a3c83f3e22ab19257bc380a6d21fe7b",
+      "combatSHA256": "52a021f97804b4655d36e0a7fe7a05b8969a98ed7a5767b810ad605da0f00b86"
+    },
+    {
+      "round": 4,
+      "profile": 2,
+      "left": [
+        {
+          "kind": "Tank",
+          "id": 1,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Ranger",
+          "id": 2,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "Caster",
+          "id": 3,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "Assassin",
+          "id": 4,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "Gorilla",
+          "id": 5,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "Cowboy",
+          "id": 6,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "Tank",
+          "uid": 100,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Cowboy",
+          "uid": 101,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -820,
+          "id": 101
+        },
+        {
+          "kind": "Caster",
+          "uid": 102,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -880,
+          "id": 102
+        },
+        {
+          "kind": "Assassin",
+          "uid": 103,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -560,
+          "id": 103
+        }
+      ],
+      "sha256": "85a6892b90baa7a9de33a17ea7ad4d7ebf4af900555d2db73e56b00d09875770",
+      "combatSHA256": "5160ae8a43e9e2a31b409c65748045ad9c2e7fc90e7f9eb99b38a4f1ad316b1e"
+    },
+    {
+      "round": 5,
+      "profile": 0,
+      "left": [
+        {
+          "kind": "Cowboy",
+          "id": 1,
+          "star": 1,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Witch",
+          "id": 2,
+          "star": 1,
+          "items": [],
+          "x": 0,
+          "y": -350
+        }
+      ],
+      "right": [
+        {
+          "kind": "Gorilla",
+          "uid": 100,
+          "star": 2,
+          "power": 1,
+          "items": [
+            "heart"
+          ],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Tank",
+          "uid": 101,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -330,
+          "id": 101
+        },
+        {
+          "kind": "Ranger",
+          "uid": 102,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -880,
+          "id": 102
+        },
+        {
+          "kind": "Cowboy",
+          "uid": 103,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -820,
+          "id": 103
+        }
+      ],
+      "sha256": "fedff357dccbaf56543a6d3cf3ed3ac8162c635b9626e71be744ea8bb3748e99",
+      "combatSHA256": "142169739b660b73741423419b55d02f8e1e0a165af4ff934e29daf9134e7624"
+    },
+    {
+      "round": 5,
+      "profile": 1,
+      "left": [
+        {
+          "kind": "RatKing",
+          "id": 1,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Cobra",
+          "id": 2,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "David",
+          "id": 3,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "Tank",
+          "id": 4,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "Ranger",
+          "id": 5,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "Caster",
+          "id": 6,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "Gorilla",
+          "uid": 100,
+          "star": 2,
+          "power": 1,
+          "items": [
+            "heart"
+          ],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Tank",
+          "uid": 101,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -330,
+          "id": 101
+        },
+        {
+          "kind": "Ranger",
+          "uid": 102,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -880,
+          "id": 102
+        },
+        {
+          "kind": "Cowboy",
+          "uid": 103,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -820,
+          "id": 103
+        }
+      ],
+      "sha256": "3522d4e689adcad6aafe59ee21ad94b6468d2180dc839026b229994df62c861b",
+      "combatSHA256": "5cbd874393922de111665a98a500b80f4dcf9b7776861f0e0f168900e90b105f"
+    },
+    {
+      "round": 5,
+      "profile": 2,
+      "left": [
+        {
+          "kind": "Ranger",
+          "id": 1,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Caster",
+          "id": 2,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "Assassin",
+          "id": 3,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "Gorilla",
+          "id": 4,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "Cowboy",
+          "id": 5,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "Witch",
+          "id": 6,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "Gorilla",
+          "uid": 100,
+          "star": 2,
+          "power": 1,
+          "items": [
+            "heart"
+          ],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Tank",
+          "uid": 101,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -330,
+          "id": 101
+        },
+        {
+          "kind": "Ranger",
+          "uid": 102,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -880,
+          "id": 102
+        },
+        {
+          "kind": "Cowboy",
+          "uid": 103,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -820,
+          "id": 103
+        }
+      ],
+      "sha256": "32c66f5d4376abeaab81bd47a6ee3c440ac0406c8633dca4ee021686216a9221",
+      "combatSHA256": "ecfaccc9a1e758d6d75503e06149073908070f1283436f5426090e68bc609ef8"
+    },
+    {
+      "round": 6,
+      "profile": 0,
+      "left": [
+        {
+          "kind": "Witch",
+          "id": 1,
+          "star": 1,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Ninja",
+          "id": 2,
+          "star": 1,
+          "items": [],
+          "x": 0,
+          "y": -350
+        }
+      ],
+      "right": [
+        {
+          "kind": "Rat",
+          "uid": 100,
+          "star": 1,
+          "power": 1.4,
+          "items": [],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Rat",
+          "uid": 101,
+          "star": 1,
+          "power": 1.4,
+          "items": [],
+          "x": 0,
+          "y": -330,
+          "id": 101
+        },
+        {
+          "kind": "Rat",
+          "uid": 102,
+          "star": 1,
+          "power": 1.4,
+          "items": [],
+          "x": 360,
+          "y": -330,
+          "id": 102
+        },
+        {
+          "kind": "Rat",
+          "uid": 103,
+          "star": 1,
+          "power": 1.4,
+          "items": [],
+          "x": -360,
+          "y": -560,
+          "id": 103
+        }
+      ],
+      "sha256": "50d143d376214fa176c853040c4c2469a54a5a319e488ef1bc353ccb03c3883c",
+      "combatSHA256": "a0f717924298c194ae0ae63aed91f00a428cc7105fd8d894697503ae084b7791"
+    },
+    {
+      "round": 6,
+      "profile": 1,
+      "left": [
+        {
+          "kind": "Cobra",
+          "id": 1,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "David",
+          "id": 2,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "Tank",
+          "id": 3,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "Ranger",
+          "id": 4,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "Caster",
+          "id": 5,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "Assassin",
+          "id": 6,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "Rat",
+          "uid": 100,
+          "star": 1,
+          "power": 1.4,
+          "items": [],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Rat",
+          "uid": 101,
+          "star": 1,
+          "power": 1.4,
+          "items": [],
+          "x": 0,
+          "y": -330,
+          "id": 101
+        },
+        {
+          "kind": "Rat",
+          "uid": 102,
+          "star": 1,
+          "power": 1.4,
+          "items": [],
+          "x": 360,
+          "y": -330,
+          "id": 102
+        },
+        {
+          "kind": "Rat",
+          "uid": 103,
+          "star": 1,
+          "power": 1.4,
+          "items": [],
+          "x": -360,
+          "y": -560,
+          "id": 103
+        }
+      ],
+      "sha256": "ea4437e64c36b373bf1932af1c90b1f24cd823c928659311ed00cbb29535d1ab",
+      "combatSHA256": "c6e1eaf3e4793d0815f1922cb5cf985ce9e3f737c0adae77cc8688348288e4e5"
+    },
+    {
+      "round": 6,
+      "profile": 2,
+      "left": [
+        {
+          "kind": "Caster",
+          "id": 1,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Assassin",
+          "id": 2,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "Gorilla",
+          "id": 3,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "Cowboy",
+          "id": 4,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "Witch",
+          "id": 5,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "Ninja",
+          "id": 6,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "Rat",
+          "uid": 100,
+          "star": 1,
+          "power": 1.4,
+          "items": [],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Rat",
+          "uid": 101,
+          "star": 1,
+          "power": 1.4,
+          "items": [],
+          "x": 0,
+          "y": -330,
+          "id": 101
+        },
+        {
+          "kind": "Rat",
+          "uid": 102,
+          "star": 1,
+          "power": 1.4,
+          "items": [],
+          "x": 360,
+          "y": -330,
+          "id": 102
+        },
+        {
+          "kind": "Rat",
+          "uid": 103,
+          "star": 1,
+          "power": 1.4,
+          "items": [],
+          "x": -360,
+          "y": -560,
+          "id": 103
+        }
+      ],
+      "sha256": "b212f004c4ca7d0fdc3017f63c62a8c3fa425e7803a19d2dc998073627dc1f76",
+      "combatSHA256": "70163d38598a77a7f080f3832cddf7e9ee1b9217cb1fa0b96c4df81fc0f74d2e"
+    },
+    {
+      "round": 7,
+      "profile": 0,
+      "left": [
+        {
+          "kind": "Ninja",
+          "id": 1,
+          "star": 1,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Genie",
+          "id": 2,
+          "star": 1,
+          "items": [],
+          "x": 0,
+          "y": -350
+        }
+      ],
+      "right": [
+        {
+          "kind": "Gorilla",
+          "uid": 100,
+          "star": 2,
+          "power": 1,
+          "items": [
+            "heart"
+          ],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "RatKing",
+          "uid": 101,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -820,
+          "id": 101
+        },
+        {
+          "kind": "Cobra",
+          "uid": 102,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -880,
+          "id": 102
+        },
+        {
+          "kind": "Witch",
+          "uid": 103,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -820,
+          "id": 103
+        },
+        {
+          "kind": "Tank",
+          "uid": 104,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -560,
+          "id": 104
+        }
+      ],
+      "sha256": "8fef2a82fc5f768e6ef10af4b0182d674c964dbd8ccbf59f301c57c5227933c7",
+      "combatSHA256": "5b03925d5f6ada9064f7bf89c3f7259fb9ff90184358a75105396e7eff78adb3"
+    },
+    {
+      "round": 7,
+      "profile": 1,
+      "left": [
+        {
+          "kind": "David",
+          "id": 1,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Tank",
+          "id": 2,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "Ranger",
+          "id": 3,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "Caster",
+          "id": 4,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "Assassin",
+          "id": 5,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "Gorilla",
+          "id": 6,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "Gorilla",
+          "uid": 100,
+          "star": 2,
+          "power": 1,
+          "items": [
+            "heart"
+          ],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "RatKing",
+          "uid": 101,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -820,
+          "id": 101
+        },
+        {
+          "kind": "Cobra",
+          "uid": 102,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -880,
+          "id": 102
+        },
+        {
+          "kind": "Witch",
+          "uid": 103,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -820,
+          "id": 103
+        },
+        {
+          "kind": "Tank",
+          "uid": 104,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -560,
+          "id": 104
+        }
+      ],
+      "sha256": "27d477ee59a937d232b28349157c7cc466917d792adfa56467ae5e952f6894d0",
+      "combatSHA256": "720284999824c32cffacce030af6ab828863bb367d8787befd062d01bbce94c3"
+    },
+    {
+      "round": 7,
+      "profile": 2,
+      "left": [
+        {
+          "kind": "Assassin",
+          "id": 1,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Gorilla",
+          "id": 2,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "Cowboy",
+          "id": 3,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "Witch",
+          "id": 4,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "Ninja",
+          "id": 5,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "Genie",
+          "id": 6,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "Gorilla",
+          "uid": 100,
+          "star": 2,
+          "power": 1,
+          "items": [
+            "heart"
+          ],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "RatKing",
+          "uid": 101,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -820,
+          "id": 101
+        },
+        {
+          "kind": "Cobra",
+          "uid": 102,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -880,
+          "id": 102
+        },
+        {
+          "kind": "Witch",
+          "uid": 103,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -820,
+          "id": 103
+        },
+        {
+          "kind": "Tank",
+          "uid": 104,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -560,
+          "id": 104
+        }
+      ],
+      "sha256": "78b4983b7f719f31ce55d4f2e5b8048949ed527fdc6db1cb3b59b993636fdd5a",
+      "combatSHA256": "5b397d52b8c1d3e8c649681188fe48e405e8c61d48bcbdfd186ee5478cdb09f4"
+    },
+    {
+      "round": 8,
+      "profile": 0,
+      "left": [
+        {
+          "kind": "Genie",
+          "id": 1,
+          "star": 1,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "RatKing",
+          "id": 2,
+          "star": 1,
+          "items": [],
+          "x": 0,
+          "y": -350
+        }
+      ],
+      "right": [
+        {
+          "kind": "Serpent",
+          "uid": 100,
+          "star": 1,
+          "power": 1.4,
+          "items": [],
+          "x": -360,
+          "y": -880,
+          "id": 100
+        },
+        {
+          "kind": "Serpent",
+          "uid": 101,
+          "star": 1,
+          "power": 1.4,
+          "items": [],
+          "x": 0,
+          "y": -820,
+          "id": 101
+        },
+        {
+          "kind": "Rat",
+          "uid": 102,
+          "star": 1,
+          "power": 1.4,
+          "items": [],
+          "x": 360,
+          "y": -330,
+          "id": 102
+        },
+        {
+          "kind": "Rat",
+          "uid": 103,
+          "star": 1,
+          "power": 1.4,
+          "items": [],
+          "x": -360,
+          "y": -560,
+          "id": 103
+        }
+      ],
+      "sha256": "4529d4fa07c5008913aef1cac148ebc0504be4de5bf66fe8c2cccd2d8a97be0b",
+      "combatSHA256": "58797004788fe57b89e816a4791fb9d93dd4dc673f070099569a679eee31bd28"
+    },
+    {
+      "round": 8,
+      "profile": 1,
+      "left": [
+        {
+          "kind": "Tank",
+          "id": 1,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Ranger",
+          "id": 2,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "Caster",
+          "id": 3,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "Assassin",
+          "id": 4,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "Gorilla",
+          "id": 5,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "Cowboy",
+          "id": 6,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "Serpent",
+          "uid": 100,
+          "star": 1,
+          "power": 1.4,
+          "items": [],
+          "x": -360,
+          "y": -880,
+          "id": 100
+        },
+        {
+          "kind": "Serpent",
+          "uid": 101,
+          "star": 1,
+          "power": 1.4,
+          "items": [],
+          "x": 0,
+          "y": -820,
+          "id": 101
+        },
+        {
+          "kind": "Rat",
+          "uid": 102,
+          "star": 1,
+          "power": 1.4,
+          "items": [],
+          "x": 360,
+          "y": -330,
+          "id": 102
+        },
+        {
+          "kind": "Rat",
+          "uid": 103,
+          "star": 1,
+          "power": 1.4,
+          "items": [],
+          "x": -360,
+          "y": -560,
+          "id": 103
+        }
+      ],
+      "sha256": "a4d1992e372fff5cd4e8c54c09d82b77e1d5918e63955d3356b240bb8bac7800",
+      "combatSHA256": "3d44b8a631a491007cff71ea3cdb36f75b450e2b735edd2c5f00e0e1a32a45d9"
+    },
+    {
+      "round": 8,
+      "profile": 2,
+      "left": [
+        {
+          "kind": "Gorilla",
+          "id": 1,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Cowboy",
+          "id": 2,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "Witch",
+          "id": 3,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "Ninja",
+          "id": 4,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "Genie",
+          "id": 5,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "RatKing",
+          "id": 6,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "Serpent",
+          "uid": 100,
+          "star": 1,
+          "power": 1.4,
+          "items": [],
+          "x": -360,
+          "y": -880,
+          "id": 100
+        },
+        {
+          "kind": "Serpent",
+          "uid": 101,
+          "star": 1,
+          "power": 1.4,
+          "items": [],
+          "x": 0,
+          "y": -820,
+          "id": 101
+        },
+        {
+          "kind": "Rat",
+          "uid": 102,
+          "star": 1,
+          "power": 1.4,
+          "items": [],
+          "x": 360,
+          "y": -330,
+          "id": 102
+        },
+        {
+          "kind": "Rat",
+          "uid": 103,
+          "star": 1,
+          "power": 1.4,
+          "items": [],
+          "x": -360,
+          "y": -560,
+          "id": 103
+        }
+      ],
+      "sha256": "ef479662948c0bd6d05511fdd4da7dea7034a470633a27b7d4cfc6f3addd34da",
+      "combatSHA256": "cbbc6b288e004bd9344f6881ad047b37039f4133b0f34e0e9ca51e476ee2d723"
+    },
+    {
+      "round": 9,
+      "profile": 0,
+      "left": [
+        {
+          "kind": "RatKing",
+          "id": 1,
+          "star": 1,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Cobra",
+          "id": 2,
+          "star": 1,
+          "items": [],
+          "x": 0,
+          "y": -350
+        }
+      ],
+      "right": [
+        {
+          "kind": "David",
+          "uid": 100,
+          "star": 2,
+          "power": 1,
+          "items": [
+            "heart"
+          ],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Genie",
+          "uid": 101,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -820,
+          "id": 101
+        },
+        {
+          "kind": "Caster",
+          "uid": 102,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -880,
+          "id": 102
+        },
+        {
+          "kind": "Witch",
+          "uid": 103,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -820,
+          "id": 103
+        },
+        {
+          "kind": "Ranger",
+          "uid": 104,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -880,
+          "id": 104
+        }
+      ],
+      "sha256": "6e1b73b59a6e94f11735735a548f18759682457287299b8b1139ae13a5e0cfe7",
+      "combatSHA256": "0fdc85547710f61ead3a34f260be4138c2aba5e3ed621482b5f47e3873e7a0bd"
+    },
+    {
+      "round": 9,
+      "profile": 1,
+      "left": [
+        {
+          "kind": "Ranger",
+          "id": 1,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Caster",
+          "id": 2,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "Assassin",
+          "id": 3,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "Gorilla",
+          "id": 4,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "Cowboy",
+          "id": 5,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "Witch",
+          "id": 6,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "David",
+          "uid": 100,
+          "star": 2,
+          "power": 1,
+          "items": [
+            "heart"
+          ],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Genie",
+          "uid": 101,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -820,
+          "id": 101
+        },
+        {
+          "kind": "Caster",
+          "uid": 102,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -880,
+          "id": 102
+        },
+        {
+          "kind": "Witch",
+          "uid": 103,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -820,
+          "id": 103
+        },
+        {
+          "kind": "Ranger",
+          "uid": 104,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -880,
+          "id": 104
+        }
+      ],
+      "sha256": "1cf042d37923c212ed1eeca4575b110db21333211040746de3584189b71e1bd5",
+      "combatSHA256": "3e90b26bffbc5c0dfee70779e774aa7c2d51c0d0149960c66bc73d6721a82adb"
+    },
+    {
+      "round": 9,
+      "profile": 2,
+      "left": [
+        {
+          "kind": "Cowboy",
+          "id": 1,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Witch",
+          "id": 2,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "Ninja",
+          "id": 3,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "Genie",
+          "id": 4,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "RatKing",
+          "id": 5,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "Cobra",
+          "id": 6,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "David",
+          "uid": 100,
+          "star": 2,
+          "power": 1,
+          "items": [
+            "heart"
+          ],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Genie",
+          "uid": 101,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -820,
+          "id": 101
+        },
+        {
+          "kind": "Caster",
+          "uid": 102,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -880,
+          "id": 102
+        },
+        {
+          "kind": "Witch",
+          "uid": 103,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -820,
+          "id": 103
+        },
+        {
+          "kind": "Ranger",
+          "uid": 104,
+          "star": 1,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -880,
+          "id": 104
+        }
+      ],
+      "sha256": "d83a4484e9668c941ef25a5c25cd377d4c8cbd193a22ca686d6262461a05e4b5",
+      "combatSHA256": "62acfdeac65001550e4e409b7b4ed6792164c0f35d66e2c0158e49d5251b1ed8"
+    },
+    {
+      "round": 10,
+      "profile": 0,
+      "left": [
+        {
+          "kind": "Cobra",
+          "id": 1,
+          "star": 1,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "David",
+          "id": 2,
+          "star": 1,
+          "items": [],
+          "x": 0,
+          "y": -350
+        }
+      ],
+      "right": [
+        {
+          "kind": "Gorilla",
+          "uid": 100,
+          "star": 2,
+          "power": 1,
+          "items": [
+            "heart"
+          ],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "David",
+          "uid": 101,
+          "star": 2,
+          "power": 1,
+          "items": [
+            "blade"
+          ],
+          "x": 0,
+          "y": -330,
+          "id": 101
+        },
+        {
+          "kind": "Tank",
+          "uid": 102,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -330,
+          "id": 102
+        },
+        {
+          "kind": "Cowboy",
+          "uid": 103,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -820,
+          "id": 103
+        },
+        {
+          "kind": "Ranger",
+          "uid": 104,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -880,
+          "id": 104
+        },
+        {
+          "kind": "Genie",
+          "uid": 105,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -820,
+          "id": 105
+        }
+      ],
+      "sha256": "0357cd67c90b889c09e1cb37dd74baf2bf1f26b9e5d42ce52b251be6ce16a14b",
+      "combatSHA256": "c0f0b32c081fe8fa5459bb69661f5c3a775949f666a596771c28b782c000b60b"
+    },
+    {
+      "round": 10,
+      "profile": 1,
+      "left": [
+        {
+          "kind": "Caster",
+          "id": 1,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Assassin",
+          "id": 2,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "Gorilla",
+          "id": 3,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "Cowboy",
+          "id": 4,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "Witch",
+          "id": 5,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "Ninja",
+          "id": 6,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "Gorilla",
+          "uid": 100,
+          "star": 2,
+          "power": 1,
+          "items": [
+            "heart"
+          ],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "David",
+          "uid": 101,
+          "star": 2,
+          "power": 1,
+          "items": [
+            "blade"
+          ],
+          "x": 0,
+          "y": -330,
+          "id": 101
+        },
+        {
+          "kind": "Tank",
+          "uid": 102,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -330,
+          "id": 102
+        },
+        {
+          "kind": "Cowboy",
+          "uid": 103,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -820,
+          "id": 103
+        },
+        {
+          "kind": "Ranger",
+          "uid": 104,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -880,
+          "id": 104
+        },
+        {
+          "kind": "Genie",
+          "uid": 105,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -820,
+          "id": 105
+        }
+      ],
+      "sha256": "a2042027bdb50a29070dc6bea4abf0b657074efe20ca8ad2fd498cadab711141",
+      "combatSHA256": "32374f02f0ad53c57efdc9969acddcacdc5d0074c17a70792a6aef31bb1d4c15"
+    },
+    {
+      "round": 10,
+      "profile": 2,
+      "left": [
+        {
+          "kind": "Witch",
+          "id": 1,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Ninja",
+          "id": 2,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "Genie",
+          "id": 3,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "RatKing",
+          "id": 4,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "Cobra",
+          "id": 5,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "David",
+          "id": 6,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "Gorilla",
+          "uid": 100,
+          "star": 2,
+          "power": 1,
+          "items": [
+            "heart"
+          ],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "David",
+          "uid": 101,
+          "star": 2,
+          "power": 1,
+          "items": [
+            "blade"
+          ],
+          "x": 0,
+          "y": -330,
+          "id": 101
+        },
+        {
+          "kind": "Tank",
+          "uid": 102,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -330,
+          "id": 102
+        },
+        {
+          "kind": "Cowboy",
+          "uid": 103,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -820,
+          "id": 103
+        },
+        {
+          "kind": "Ranger",
+          "uid": 104,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -880,
+          "id": 104
+        },
+        {
+          "kind": "Genie",
+          "uid": 105,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -820,
+          "id": 105
+        }
+      ],
+      "sha256": "3912938c58e06c13feddbe28310ec8b9491b6ac236f062239d6d1240ea9d970c",
+      "combatSHA256": "32c376e9738ee33d3bd956007ea55cc2cf209dac0cce30fe212021fce00ef7d3"
+    },
+    {
+      "round": 11,
+      "profile": 0,
+      "left": [
+        {
+          "kind": "David",
+          "id": 1,
+          "star": 1,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Tank",
+          "id": 2,
+          "star": 1,
+          "items": [],
+          "x": 0,
+          "y": -350
+        }
+      ],
+      "right": [
+        {
+          "kind": "Rat",
+          "uid": 100,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Rat",
+          "uid": 101,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": 0,
+          "y": -330,
+          "id": 101
+        },
+        {
+          "kind": "Rat",
+          "uid": 102,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": 360,
+          "y": -330,
+          "id": 102
+        },
+        {
+          "kind": "Rat",
+          "uid": 103,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": -360,
+          "y": -560,
+          "id": 103
+        },
+        {
+          "kind": "Rat",
+          "uid": 104,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": 0,
+          "y": -560,
+          "id": 104
+        }
+      ],
+      "sha256": "3c5001026b31560450cf9dfe38179058b1f99f16f3c29b247fe7ba73eea87150",
+      "combatSHA256": "91294865899c070c6b7583a3fd9cd79dbcc14185109c1b154e3496366fe33da2"
+    },
+    {
+      "round": 11,
+      "profile": 1,
+      "left": [
+        {
+          "kind": "Assassin",
+          "id": 1,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Gorilla",
+          "id": 2,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "Cowboy",
+          "id": 3,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "Witch",
+          "id": 4,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "Ninja",
+          "id": 5,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "Genie",
+          "id": 6,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "Rat",
+          "uid": 100,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Rat",
+          "uid": 101,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": 0,
+          "y": -330,
+          "id": 101
+        },
+        {
+          "kind": "Rat",
+          "uid": 102,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": 360,
+          "y": -330,
+          "id": 102
+        },
+        {
+          "kind": "Rat",
+          "uid": 103,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": -360,
+          "y": -560,
+          "id": 103
+        },
+        {
+          "kind": "Rat",
+          "uid": 104,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": 0,
+          "y": -560,
+          "id": 104
+        }
+      ],
+      "sha256": "1ea59de99f0651735f2f87beed99ffb393db49e726879789367bf6a8840ce507",
+      "combatSHA256": "b70ecd65285c1fa5f8bbddbaa70c7a6d4dee9167e2526ead905c7d3bab7e3f53"
+    },
+    {
+      "round": 11,
+      "profile": 2,
+      "left": [
+        {
+          "kind": "Ninja",
+          "id": 1,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Genie",
+          "id": 2,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "RatKing",
+          "id": 3,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "Cobra",
+          "id": 4,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "David",
+          "id": 5,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "Tank",
+          "id": 6,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "Rat",
+          "uid": 100,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Rat",
+          "uid": 101,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": 0,
+          "y": -330,
+          "id": 101
+        },
+        {
+          "kind": "Rat",
+          "uid": 102,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": 360,
+          "y": -330,
+          "id": 102
+        },
+        {
+          "kind": "Rat",
+          "uid": 103,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": -360,
+          "y": -560,
+          "id": 103
+        },
+        {
+          "kind": "Rat",
+          "uid": 104,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": 0,
+          "y": -560,
+          "id": 104
+        }
+      ],
+      "sha256": "16b3a0869c9fd1629701c3fc21de6a8e1610ff2fab09ae646d3a5facfd8cd2da",
+      "combatSHA256": "fbeaee9ae82f703d14b03815c3f3f3c9333989e8911e772134fb582fa8b3b2b1"
+    },
+    {
+      "round": 12,
+      "profile": 0,
+      "left": [
+        {
+          "kind": "Tank",
+          "id": 1,
+          "star": 1,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Ranger",
+          "id": 2,
+          "star": 1,
+          "items": [],
+          "x": 0,
+          "y": -350
+        }
+      ],
+      "right": [
+        {
+          "kind": "Ninja",
+          "uid": 100,
+          "star": 2,
+          "power": 1,
+          "items": [
+            "heart"
+          ],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Assassin",
+          "uid": 101,
+          "star": 2,
+          "power": 1,
+          "items": [
+            "blade"
+          ],
+          "x": 0,
+          "y": -330,
+          "id": 101
+        },
+        {
+          "kind": "Witch",
+          "uid": 102,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -880,
+          "id": 102
+        },
+        {
+          "kind": "Caster",
+          "uid": 103,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -820,
+          "id": 103
+        },
+        {
+          "kind": "Genie",
+          "uid": 104,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -880,
+          "id": 104
+        },
+        {
+          "kind": "Tank",
+          "uid": 105,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -560,
+          "id": 105
+        }
+      ],
+      "sha256": "55f6cfb15a9f5da6e238168cdea2a414680ba9ea6c213e6d8cc64d0e263e57a9",
+      "combatSHA256": "6d28397ea30e41c2471a533f4e44b3293d072c538152afeea2a4bae6cc746414"
+    },
+    {
+      "round": 12,
+      "profile": 1,
+      "left": [
+        {
+          "kind": "Gorilla",
+          "id": 1,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Cowboy",
+          "id": 2,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "Witch",
+          "id": 3,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "Ninja",
+          "id": 4,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "Genie",
+          "id": 5,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "RatKing",
+          "id": 6,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "Ninja",
+          "uid": 100,
+          "star": 2,
+          "power": 1,
+          "items": [
+            "heart"
+          ],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Assassin",
+          "uid": 101,
+          "star": 2,
+          "power": 1,
+          "items": [
+            "blade"
+          ],
+          "x": 0,
+          "y": -330,
+          "id": 101
+        },
+        {
+          "kind": "Witch",
+          "uid": 102,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -880,
+          "id": 102
+        },
+        {
+          "kind": "Caster",
+          "uid": 103,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -820,
+          "id": 103
+        },
+        {
+          "kind": "Genie",
+          "uid": 104,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -880,
+          "id": 104
+        },
+        {
+          "kind": "Tank",
+          "uid": 105,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -560,
+          "id": 105
+        }
+      ],
+      "sha256": "46b9d5e8c222f6354bfed6441d8f17278388e6decf10343b2058bbf3c4652df3",
+      "combatSHA256": "585d6341e8724fa44673453912096b17c4e4fdd4b029369fe191d9a6434e7491"
+    },
+    {
+      "round": 12,
+      "profile": 2,
+      "left": [
+        {
+          "kind": "Genie",
+          "id": 1,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "RatKing",
+          "id": 2,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "Cobra",
+          "id": 3,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "David",
+          "id": 4,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "Tank",
+          "id": 5,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "Ranger",
+          "id": 6,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "Ninja",
+          "uid": 100,
+          "star": 2,
+          "power": 1,
+          "items": [
+            "heart"
+          ],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Assassin",
+          "uid": 101,
+          "star": 2,
+          "power": 1,
+          "items": [
+            "blade"
+          ],
+          "x": 0,
+          "y": -330,
+          "id": 101
+        },
+        {
+          "kind": "Witch",
+          "uid": 102,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -880,
+          "id": 102
+        },
+        {
+          "kind": "Caster",
+          "uid": 103,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -820,
+          "id": 103
+        },
+        {
+          "kind": "Genie",
+          "uid": 104,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -880,
+          "id": 104
+        },
+        {
+          "kind": "Tank",
+          "uid": 105,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -560,
+          "id": 105
+        }
+      ],
+      "sha256": "a28ab17090e4c60d17570d05d93b5473a711cc437884a158fbf57ec55fa0d43e",
+      "combatSHA256": "c0bca86b6d45d9eecae6f73975f1f5295e54089b394c302782f8e1bf52c6a2df"
+    },
+    {
+      "round": 13,
+      "profile": 0,
+      "left": [
+        {
+          "kind": "Ranger",
+          "id": 1,
+          "star": 1,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Caster",
+          "id": 2,
+          "star": 1,
+          "items": [],
+          "x": 0,
+          "y": -350
+        }
+      ],
+      "right": [
+        {
+          "kind": "Serpent",
+          "uid": 100,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": -360,
+          "y": -880,
+          "id": 100
+        },
+        {
+          "kind": "Serpent",
+          "uid": 101,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": 0,
+          "y": -820,
+          "id": 101
+        },
+        {
+          "kind": "Rat",
+          "uid": 102,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": 360,
+          "y": -330,
+          "id": 102
+        },
+        {
+          "kind": "Rat",
+          "uid": 103,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": -360,
+          "y": -560,
+          "id": 103
+        },
+        {
+          "kind": "Rat",
+          "uid": 104,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": 0,
+          "y": -560,
+          "id": 104
+        }
+      ],
+      "sha256": "6f0c4bf5ccac669388540012fef7ca58953328f1d676b4605280de9238cc5749",
+      "combatSHA256": "1f54d70cf54441f288c9be2d26fec4f2e58a5720caa0ead6bed9834c740981f1"
+    },
+    {
+      "round": 13,
+      "profile": 1,
+      "left": [
+        {
+          "kind": "Cowboy",
+          "id": 1,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Witch",
+          "id": 2,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "Ninja",
+          "id": 3,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "Genie",
+          "id": 4,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "RatKing",
+          "id": 5,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "Cobra",
+          "id": 6,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "Serpent",
+          "uid": 100,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": -360,
+          "y": -880,
+          "id": 100
+        },
+        {
+          "kind": "Serpent",
+          "uid": 101,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": 0,
+          "y": -820,
+          "id": 101
+        },
+        {
+          "kind": "Rat",
+          "uid": 102,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": 360,
+          "y": -330,
+          "id": 102
+        },
+        {
+          "kind": "Rat",
+          "uid": 103,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": -360,
+          "y": -560,
+          "id": 103
+        },
+        {
+          "kind": "Rat",
+          "uid": 104,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": 0,
+          "y": -560,
+          "id": 104
+        }
+      ],
+      "sha256": "5277521d4415eda72f62ee048e028c6209842875a3e977a415711b5da79be54c",
+      "combatSHA256": "d20d16828f8073a8212edcd429e35b9ef6a09c0d2dfce193a5e239df60871967"
+    },
+    {
+      "round": 13,
+      "profile": 2,
+      "left": [
+        {
+          "kind": "RatKing",
+          "id": 1,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Cobra",
+          "id": 2,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "David",
+          "id": 3,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "Tank",
+          "id": 4,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "Ranger",
+          "id": 5,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "Caster",
+          "id": 6,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "Serpent",
+          "uid": 100,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": -360,
+          "y": -880,
+          "id": 100
+        },
+        {
+          "kind": "Serpent",
+          "uid": 101,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": 0,
+          "y": -820,
+          "id": 101
+        },
+        {
+          "kind": "Rat",
+          "uid": 102,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": 360,
+          "y": -330,
+          "id": 102
+        },
+        {
+          "kind": "Rat",
+          "uid": 103,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": -360,
+          "y": -560,
+          "id": 103
+        },
+        {
+          "kind": "Rat",
+          "uid": 104,
+          "star": 1,
+          "power": 1.8,
+          "items": [],
+          "x": 0,
+          "y": -560,
+          "id": 104
+        }
+      ],
+      "sha256": "89012e989bbcd3477cb1df6242b52420d23ac402c3e0db5a2719b2f0f5e59bdc",
+      "combatSHA256": "0ea945734465f21e43aa01264f7c5d188d5f4291a100c6276696f3be853a950a"
+    },
+    {
+      "round": 14,
+      "profile": 0,
+      "left": [
+        {
+          "kind": "Caster",
+          "id": 1,
+          "star": 1,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Assassin",
+          "id": 2,
+          "star": 1,
+          "items": [],
+          "x": 0,
+          "y": -350
+        }
+      ],
+      "right": [
+        {
+          "kind": "David",
+          "uid": 100,
+          "star": 2,
+          "power": 1,
+          "items": [
+            "heart"
+          ],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Gorilla",
+          "uid": 101,
+          "star": 2,
+          "power": 1,
+          "items": [
+            "blade"
+          ],
+          "x": 0,
+          "y": -330,
+          "id": 101
+        },
+        {
+          "kind": "Genie",
+          "uid": 102,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -880,
+          "id": 102
+        },
+        {
+          "kind": "RatKing",
+          "uid": 103,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -820,
+          "id": 103
+        },
+        {
+          "kind": "Cobra",
+          "uid": 104,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -880,
+          "id": 104
+        },
+        {
+          "kind": "Cowboy",
+          "uid": 105,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -820,
+          "id": 105
+        }
+      ],
+      "sha256": "bbc59f955f45d7835c3c4639cc89b4cb77a1f5cc8ac2e9cbe98c4d2b79a779fd",
+      "combatSHA256": "5e72b412f286e3394eecf5eb2658c45b4d6456b65caafc201f6b2c57879c0735"
+    },
+    {
+      "round": 14,
+      "profile": 1,
+      "left": [
+        {
+          "kind": "Witch",
+          "id": 1,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "Ninja",
+          "id": 2,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "Genie",
+          "id": 3,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "RatKing",
+          "id": 4,
+          "star": 2,
+          "items": [],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "Cobra",
+          "id": 5,
+          "star": 2,
+          "items": [],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "David",
+          "id": 6,
+          "star": 2,
+          "items": [],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "David",
+          "uid": 100,
+          "star": 2,
+          "power": 1,
+          "items": [
+            "heart"
+          ],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Gorilla",
+          "uid": 101,
+          "star": 2,
+          "power": 1,
+          "items": [
+            "blade"
+          ],
+          "x": 0,
+          "y": -330,
+          "id": 101
+        },
+        {
+          "kind": "Genie",
+          "uid": 102,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -880,
+          "id": 102
+        },
+        {
+          "kind": "RatKing",
+          "uid": 103,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -820,
+          "id": 103
+        },
+        {
+          "kind": "Cobra",
+          "uid": 104,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -880,
+          "id": 104
+        },
+        {
+          "kind": "Cowboy",
+          "uid": 105,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -820,
+          "id": 105
+        }
+      ],
+      "sha256": "62c8fc2ffc32773d24cbbfca8bfdae9bd724cb378cc905626d729068689ed9bf",
+      "combatSHA256": "a8cf648bb567784e391d490ce8e88acc74e815253009188b2c1ffd0b6e56755f"
+    },
+    {
+      "round": 14,
+      "profile": 2,
+      "left": [
+        {
+          "kind": "Cobra",
+          "id": 1,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -350
+        },
+        {
+          "kind": "David",
+          "id": 2,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -350
+        },
+        {
+          "kind": "Tank",
+          "id": 3,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -350
+        },
+        {
+          "kind": "Ranger",
+          "id": 4,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": -340,
+          "y": -850
+        },
+        {
+          "kind": "Caster",
+          "id": 5,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 0,
+          "y": -850
+        },
+        {
+          "kind": "Assassin",
+          "id": 6,
+          "star": 3,
+          "items": [
+            "blade",
+            "heart",
+            "tome"
+          ],
+          "x": 340,
+          "y": -850
+        }
+      ],
+      "right": [
+        {
+          "kind": "David",
+          "uid": 100,
+          "star": 2,
+          "power": 1,
+          "items": [
+            "heart"
+          ],
+          "x": -360,
+          "y": -330,
+          "id": 100
+        },
+        {
+          "kind": "Gorilla",
+          "uid": 101,
+          "star": 2,
+          "power": 1,
+          "items": [
+            "blade"
+          ],
+          "x": 0,
+          "y": -330,
+          "id": 101
+        },
+        {
+          "kind": "Genie",
+          "uid": 102,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -880,
+          "id": 102
+        },
+        {
+          "kind": "RatKing",
+          "uid": 103,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": -360,
+          "y": -820,
+          "id": 103
+        },
+        {
+          "kind": "Cobra",
+          "uid": 104,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 0,
+          "y": -880,
+          "id": 104
+        },
+        {
+          "kind": "Cowboy",
+          "uid": 105,
+          "star": 2,
+          "power": 1,
+          "items": [],
+          "x": 360,
+          "y": -820,
+          "id": 105
+        }
+      ],
+      "sha256": "4b5b694cb2837fe0dacf703509777cb724e019a457e1d0ccecebd237d832d951",
+      "combatSHA256": "9e43a200fb1141758e1ae8df8c600882e27ef7750b320a40b9f99df4f1c9990a"
+    }
+  ],
+  "signatureFormat": "Full combat excluding shop metadata, captured from v0.5 backup before shop changes",
+  "reason": "Intentional square movement/range replacement; independent occupancy and damage cadence tests pass."
+}

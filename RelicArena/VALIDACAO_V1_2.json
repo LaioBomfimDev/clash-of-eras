@@ -1,0 +1,181 @@
+{
+  "date": "2026-10-12",
+  "timezone": "America/Sao_Paulo",
+  "version": "V1.2 local — roster expansion, realistic PixelLab batch and refined kits",
+  "godot": "4.7.2.stable.official.ed1daf0bf",
+  "runners": [
+    {
+      "runner": "res://tests/test_simulation.gd",
+      "passed": 297,
+      "failed": 0,
+      "exit_code": 0,
+      "log": "captures/v1_2_simulacao_final.log"
+    },
+    {
+      "runner": "res://tests/test_match_session.gd",
+      "passed": 135,
+      "failed": 0,
+      "exit_code": 0,
+      "log": "captures/v1_2_session_final.log"
+    },
+    {
+      "runner": "res://tests/test_full_matches.gd",
+      "passed": 816,
+      "failed": 0,
+      "exit_code": 0,
+      "automated_matches": 4,
+      "log": "captures/v1_2_partidas_final.log"
+    },
+    {
+      "runner": "res://client/smoke.gd",
+      "renderer": "headless",
+      "passed": 289,
+      "failed": 0,
+      "exit_code": 0,
+      "log": "captures/v1_2_smoke_headless.log"
+    },
+    {
+      "runner": "res://client/smoke.gd",
+      "renderer": "OpenGL",
+      "passed": 289,
+      "failed": 0,
+      "exit_code": 0,
+      "log": "captures/v1_2_smoke_opengl.log"
+    }
+  ],
+  "final_logs": {
+    "script_errors": 0,
+    "warnings_found": 0,
+    "checked_pattern": "ERROR|SCRIPT ERROR|FAILED|Parse Error|WARNING"
+  },
+  "matches": [
+    {
+      "seed": 1,
+      "rounds": 5,
+      "lives": [
+        0,
+        4
+      ],
+      "winner": 1
+    },
+    {
+      "seed": 2,
+      "rounds": 4,
+      "lives": [
+        5,
+        0
+      ],
+      "winner": 0
+    },
+    {
+      "seed": 77,
+      "rounds": 5,
+      "lives": [
+        4,
+        0
+      ],
+      "winner": 0
+    },
+    {
+      "seed": 20261011,
+      "rounds": 8,
+      "lives": [
+        1,
+        0
+      ],
+      "winner": 0
+    }
+  ],
+  "gameplay": {
+    "recruitable_heroes": 11,
+    "summons": [
+      "ken"
+    ],
+    "new_kits": [
+      "barbie",
+      "elon",
+      "snoop",
+      "lula",
+      "bob_marley",
+      "rapunzel"
+    ],
+    "refinements": [
+      "caramelo opening hunt",
+      "obama briefcase refresh",
+      "neymar kick and ricochet-ending feedback",
+      "zumbi next-critical multiplier feedback"
+    ],
+    "preserved": [
+      "michael 3 moonwalk steps, team shield and small continuous healing",
+      "free copies and match levels1-3",
+      "preparation privacy",
+      "item economy and round life loss"
+    ],
+    "fixes_this_pass": [
+      "BUG-013",
+      "BUG-014",
+      "BUG-015"
+    ]
+  },
+  "art": {
+    "new_character_exports": 9,
+    "new_character_pngs": 72,
+    "characters": [
+      "neymar",
+      "obama",
+      "barbie",
+      "ken",
+      "elon",
+      "snoop",
+      "lula",
+      "bob_marley",
+      "rapunzel"
+    ],
+    "directions_each": 8,
+    "character_animations_generated": 0,
+    "old_michael_frames": 72,
+    "old_michael_rotations": 16,
+    "original_files_verified": 81,
+    "changed_original_files": 0,
+    "map_object_id": "f9e42bec-c4b1-45ee-8299-a080200c0f1b",
+    "map_object_dimensions": [
+      32,
+      48
+    ],
+    "map_instances": 4,
+    "footprints_outside_grid": true,
+    "pending_realistic_replacements": [
+      "caramelo",
+      "zumbi"
+    ],
+    "balance_after": {
+      "generations_remaining": 0,
+      "credits_usd": 0
+    }
+  },
+  "captures": {
+    "viewport": [
+      1280,
+      720
+    ],
+    "files": [
+      "captures/v1_2_preparacao.png",
+      "captures/v1_2_lote03_combate.png",
+      "captures/v1_2_lote03_resultado.png",
+      "captures/v1_2_menu.png",
+      "captures/v1_2_beneficio.png",
+      "captures/v1_2_itens.png",
+      "captures/lote_03_elenco.png",
+      "captures/lote_03_direcoes.png"
+    ],
+    "inspected": true,
+    "captures_computer_screen": false,
+    "result_before_fix": "captures/v1_2_lote03_resultado_antes_Ken.png"
+  },
+  "limits": [
+    "Local bot prototype, no multiplayer server implemented",
+    "No real mobile-device or human balance test",
+    "New eight-direction poses and procedural presentation are not newly generated character animations",
+    "Additional free VFX library assets are tracked separately from this gameplay validation"
+  ]
+}

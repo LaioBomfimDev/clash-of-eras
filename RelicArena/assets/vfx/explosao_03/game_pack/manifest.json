@@ -1,0 +1,44 @@
+{
+ "app": "PixelLab VFX Creator",
+ "name": "Clash of Eras - Explosao grande Elon 03",
+ "fps": 18,
+ "frame_ms": 56,
+ "frames": 19,
+ "loop": false,
+ "canvas": {
+  "w": 300,
+  "h": 268
+ },
+ "anchor": {
+  "kind": "origin",
+  "x": 150,
+  "y": 182
+ },
+ "clips": [
+  {
+   "name": "whole",
+   "title": "the whole effect, no sprite",
+   "depth": "both",
+   "loop": false,
+   "start_frame": 0,
+   "frames": 17,
+   "frame": {
+    "w": 240,
+    "h": 207
+   },
+   "sheets": [
+    {
+     "file": "whole.png",
+     "first_frame": 0,
+     "frames": 17,
+     "columns": 5,
+     "rows": 4
+    }
+   ],
+   "offset": {
+    "x": -120,
+    "y": -132
+   }
+  }
+ ]
+}

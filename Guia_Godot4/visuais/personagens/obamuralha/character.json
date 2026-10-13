@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-11",
+  "reference": "Barack Obama",
+  "work_name": "Obamuralha",
+  "role": "Tanque",
+  "status": "completed",
+  "character_id": "9a2a0a13-3fca-4dd6-a685-94d312c75bb2",
+  "group_id": "44f4c97a-c079-487a-9afb-d4cfa55a7525",
+  "requested_size": 48,
+  "reported_size": 68,
+  "directions_completed": 8,
+  "local_files": [
+    "south.png"
+  ],
+  "local_directions": 1,
+  "animations_created": 0,
+  "announced_generation_cost": 1,
+  "brief": {
+    "mode": "standard",
+    "n_directions": 8,
+    "size": 48,
+    "view": "low top-down",
+    "outline": "selective outline",
+    "shading": "medium shading",
+    "detail": "high detail",
+    "name": "Relic Arena — Obamuralha",
+    "body_type": "humanoid",
+    "proportions": "{\"type\":\"preset\",\"name\":\"chibi\"}",
+    "description": "An unmistakably recognizable absurd exaggerated caricature of Barack Obama as a melee tank in a funny pixel art arena game. Middle-aged Black man with warm brown skin, elongated face, comically prominent ears, raised eyebrows, confident broad crooked smile, close-cropped black hair with gray at the sides. Wears a ridiculously oversized navy blue presidential suit with gigantic square padded shoulders, white shirt, bright red tie and polished black shoes. His signature accessory is an enormous heavy rectangular dark-blue metal briefcase held as a shield, with a plain gold clasp and no markings, almost half as big as he is. Big head and massive shoulder silhouette; humorous imposing defensive stance, clearly recognizable as the real person exaggerated. Crisp pixel clusters, restrained palette, medium shading and clean dark selective outline, warm light from upper left, readable at 48px, low top-down slightly elevated camera matching an inclined auto-battler arena. Single full body with both shoes grounded, shield and ears fully inside the canvas, transparent background, no text, no scenery, no aura, no particles."
+  },
+  "review": "Silhueta de terno legível, mas ombros e pasta-escudo ficaram menores que o briefing. Reforçar leitura de tanque numa próxima revisão.",
+  "names_final_approved": false,
+  "godot_integration": false
+}

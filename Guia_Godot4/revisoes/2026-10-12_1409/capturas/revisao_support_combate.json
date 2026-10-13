@@ -1,0 +1,156 @@
+{
+	"effects": [
+		"bleed",
+		"lasso_knot",
+		"lasso",
+		"ball_impact"
+	],
+	"elapsed": 2.6,
+	"lasso_wires": [
+		{
+			"body": [
+				491.492431640625,
+				264.045349121094
+			],
+			"source_error_px": 0.0,
+			"source_id": 111,
+			"target_id": 10,
+			"tip": [
+				491.492431640625,
+				264.045349121094
+			],
+			"tip_error_px": 0.0
+		}
+	],
+	"native_clouds": [
+		{
+			"cell": [
+				1,
+				3
+			],
+			"duration": 3.0,
+			"frame": 4,
+			"native_drawn": true,
+			"radius": 1,
+			"remaining": 2.55,
+			"scale": 2.0,
+			"source_id": 8,
+			"zone_id": 3
+		}
+	],
+	"native_dance_shield_ids": [
+		101,
+		103,
+		105,
+		111
+	],
+	"native_vfx": [
+		{
+			"depth": "front",
+			"frame": 2,
+			"key": "laco_01",
+			"kind": "lasso_knot",
+			"position": [
+				491.0,
+				264.0
+			],
+			"target_id": 10
+		}
+	],
+	"phase": "combat",
+	"project_name": "Clash of Eras - protótipo local",
+	"projectiles": [
+		{
+			"critical": false,
+			"damage_type": "physical",
+			"flight_duration": 0.12,
+			"flight_left": 0.12,
+			"from_cell": [
+				2,
+				2
+			],
+			"id": 9,
+			"impacts": 1,
+			"kind": "ball",
+			"primary_id": 9,
+			"raw_damage": 45.1,
+			"secondary_id": 8,
+			"source_id": 101,
+			"target_id": 8,
+			"to_cell": [
+				2,
+				3
+			],
+			"total_impacts": 3
+		}
+	],
+	"props": [
+		{
+			"foot": [
+				298.105499267578,
+				402.972961425781
+			],
+			"ground": [
+				-4.80000019073486,
+				1.0
+			],
+			"outside_grid": true,
+			"path": "res://assets/arena/braseiro.png"
+		},
+		{
+			"foot": [
+				997.89453125,
+				402.972961425781
+			],
+			"ground": [
+				4.80000019073486,
+				1.0
+			],
+			"outside_grid": true,
+			"path": "res://assets/arena/braseiro.png"
+		},
+		{
+			"foot": [
+				347.258026123047,
+				254.491348266602
+			],
+			"ground": [
+				-4.80000019073486,
+				5.0
+			],
+			"outside_grid": true,
+			"path": "res://assets/arena/braseiro.png"
+		},
+		{
+			"foot": [
+				948.742004394531,
+				254.491348266602
+			],
+			"ground": [
+				4.80000019073486,
+				5.0
+			],
+			"outside_grid": true,
+			"path": "res://assets/arena/braseiro.png"
+		}
+	],
+	"viewport": [
+		1280,
+		720
+	],
+	"visual_pulls": [
+		{
+			"duration": 0.3,
+			"from": [
+				0.75,
+				3.46410155296326
+			],
+			"remaining": 0.15,
+			"target_id": 10,
+			"to": [
+				-3.75,
+				4.33012676239014
+			]
+		}
+	]
+}

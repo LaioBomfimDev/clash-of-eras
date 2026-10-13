@@ -1,0 +1,221 @@
+{
+  "date": "2026-10-12",
+  "version": "V1.3 local visual",
+  "godot": "4.7.2.stable.official.ed1daf0bf",
+  "baseline_validation": "VALIDACAO_V1_2.json",
+  "changes": [
+    "Four original PixelLab VFX clips integrated into existing combat events and real dance shield state",
+    "One positive-heal clip per target; follows movement, removed on death/inactivity",
+    "Rocket impact once per primary hit, behind bodies; no duplicate per splash",
+    "Native thrust replaces procedural Zumbi feedback",
+    "Shield amount text limited to inspected unit; protection bars preserved",
+    "Presentation cleanup verified on transitions"
+  ],
+  "runners": [
+    {
+      "exit_code": 0,
+      "runner": "res://tests/test_simulation.gd",
+      "passed": 297,
+      "log": "captures/v1_3_simulation.log",
+      "failed": 0
+    },
+    {
+      "exit_code": 0,
+      "runner": "res://tests/test_match_session.gd",
+      "passed": 135,
+      "log": "captures/v1_3_session.log",
+      "failed": 0
+    },
+    {
+      "log": "captures/v1_3_full_matches.log",
+      "exit_code": 0,
+      "passed": 816,
+      "failed": 0,
+      "runner": "res://tests/test_full_matches.gd",
+      "automated_matches": 4
+    },
+    {
+      "exit_code": 0,
+      "runner": "res://tests/test_vfx_library.gd",
+      "passed": 61,
+      "log": "captures/v1_3_vfx_library.log",
+      "failed": 0
+    },
+    {
+      "renderer": "headless",
+      "log": "captures/v1_3_smoke_headless.log",
+      "exit_code": 0,
+      "passed": 321,
+      "failed": 0,
+      "runner": "res://client/smoke.gd"
+    },
+    {
+      "renderer": "OpenGL",
+      "log": "captures/v1_3_smoke_opengl.log",
+      "exit_code": 0,
+      "passed": 321,
+      "failed": 0,
+      "runner": "res://client/smoke.gd"
+    }
+  ],
+  "final_logs": {
+    "checked": [
+      "v1_3_import_final.log",
+      "v1_3_vfx_library.log",
+      "v1_3_simulation.log",
+      "v1_3_session.log",
+      "v1_3_full_matches.log",
+      "v1_3_smoke_headless.log",
+      "v1_3_smoke_opengl.log",
+      "v1_3_capture_vfx.log",
+      "v1_3_capture_foguete.log"
+    ],
+    "nonempty_stderr_files": 0,
+    "initial_import_note": "An implementation-time draw_texture_rect_region argument-order error was fixed; v1_3_import.log preserved, final import and runners clean",
+    "import_exit_code": 0,
+    "diagnostic_lines": 0
+  },
+  "rules": {
+    "comparison": "captures/v1_3_regras_preservadas.json",
+    "changed_files": [],
+    "preserved": true,
+    "matching_files": 18,
+    "gameplay_bugs_fixed_this_resume": [],
+    "presentation_bug_fixed_during_implementation": "BUG-016; draw_texture_rect_region argument order; not a V1.2 gameplay regression"
+  },
+  "art": {
+    "library_manifest": "assets/vfx/manifest.json",
+    "pending_realistic_replacements": [
+      "caramelo",
+      "zumbi"
+    ],
+    "extracted_files_byte_identical": 18,
+    "directional_pngs_in_previous_batch": 72,
+    "integrated_effects": 4,
+    "new_character_exports_this_resume": 0,
+    "balance_reconfirmed": {
+      "generations_remaining": 0,
+      "credits_usd": 0
+    },
+    "original_zip_packages_checked": 4,
+    "paid_purchases_this_resume": 0,
+    "integrity_report": "assets/vfx/INTEGRIDADE.json",
+    "ai_generations_this_resume": 0,
+    "character_exports_in_previous_batch": 9
+  },
+  "captures": [
+    {
+      "image": "captures/v1_3_vfx_combate.png",
+      "metadata": "captures/v1_3_vfx_combate.json",
+      "viewport": [
+        1280,
+        720
+      ],
+      "elapsed": 2.05,
+      "active_native_effects": [
+        {
+          "depth": "front",
+          "frame": 1,
+          "key": "cura_01",
+          "position": [
+            757.0,
+            230.0
+          ],
+          "target_id": 101
+        },
+        {
+          "depth": "front",
+          "frame": 1,
+          "key": "cura_01",
+          "position": [
+            728.0,
+            258.0
+          ],
+          "target_id": 105
+        },
+        {
+          "depth": "front",
+          "frame": 1,
+          "key": "estocada_01",
+          "position": [
+            419.0,
+            269.0
+          ],
+          "target_id": 186
+        }
+      ],
+      "protected_units": 11,
+      "inspected": true,
+      "computer_screen_capture": false
+    },
+    {
+      "image": "captures/v1_3_vfx_combate_foguete.png",
+      "metadata": "captures/v1_3_vfx_combate_foguete.json",
+      "viewport": [
+        1280,
+        720
+      ],
+      "elapsed": 3.95,
+      "active_native_effects": [
+        {
+          "depth": "behind",
+          "frame": 5,
+          "key": "foguete_01",
+          "position": [
+            499.0,
+            285.0
+          ],
+          "target_id": 109
+        },
+        {
+          "depth": "front",
+          "frame": 3,
+          "key": "estocada_01",
+          "position": [
+            419.0,
+            269.0
+          ],
+          "target_id": 186
+        }
+      ],
+      "protected_units": 8,
+      "inspected": true,
+      "computer_screen_capture": false
+    }
+  ],
+  "source_hashes": [
+    {
+      "path": "client/main.gd",
+      "sha256": "3DACC6BDBF95F5853122C9E3FE29957DDAEFC648A690007A39281374780B5FF6"
+    },
+    {
+      "path": "client/smoke.gd",
+      "sha256": "EBA3047423ED0AABE8C787960F532D08490594CA15894EA91C273DED2A86CF62"
+    },
+    {
+      "path": "client/vfx_library.gd",
+      "sha256": "DC3F9C7EE7FDCF9823E89460493B75BE0E427B5B91B1DCEB6F05EEC33548DF63"
+    },
+    {
+      "path": "tests/test_vfx_library.gd",
+      "sha256": "D3BAB410F2B3969CF7BCFDF646301677B898040261203D14C9322D0CB6B88622"
+    },
+    {
+      "path": "tools/capture_preview.gd",
+      "sha256": "EC41EEE0163830200E0D7016C23319B69DEAFB8F6C18AE83590C48695CEA3CB2"
+    }
+  ],
+  "recoverable_baseline": {
+    "byte_mismatches": 0,
+    "zip": "../Guia_Godot4/Clash_of_Eras_V1_2_antes_VFX.zip",
+    "files": 428,
+    "sha256": "FB3668B93C8C4FD76DFAB27FAFF55589226B6C4063EFCA9BDD3E1CA1A3316A7C"
+  },
+  "limits": [
+    "Local bot only; no server or network validation",
+    "No human balancing, real mobile-device or performance test",
+    "Existing character poses remain eight directions; no new character walk/attack animation generated",
+    "The rocket center is partially occluded by the target body, matching native behind depth; flame edge is visible",
+    "No final user art approval implied"
+  ]
+}

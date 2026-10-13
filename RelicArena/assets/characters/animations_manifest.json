@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "note": "Pilot real PixelLab frames, only reviewed directions. No simulation timing control.",
+  "characters": {
+    "zumbi": {
+      "states": {
+        "walk": {
+          "loop": true,
+          "fps": 12,
+          "directions": {
+            "east": {
+              "frames": [
+                "res://assets/characters/zumbi/animacoes_01/exports/walk_east_02/original/Idle/animations/walk_ground_v2/east/frame_000.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/walk_east_02/original/Idle/animations/walk_ground_v2/east/frame_001.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/walk_east_02/original/Idle/animations/walk_ground_v2/east/frame_002.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/walk_east_02/original/Idle/animations/walk_ground_v2/east/frame_003.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/walk_east_02/original/Idle/animations/walk_ground_v2/east/frame_004.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/walk_east_02/original/Idle/animations/walk_ground_v2/east/frame_005.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/walk_east_02/original/Idle/animations/walk_ground_v2/east/frame_006.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/walk_east_02/original/Idle/animations/walk_ground_v2/east/frame_007.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/walk_east_02/original/Idle/animations/walk_ground_v2/east/frame_008.png"
+              ],
+              "review": "pilot accepted; spear occlusion/loop shading require refinement",
+              "source_job": "f789806a-20c2-4b68-b2b2-edaaf9f21316",
+              "source_animation": "walk_ground_v2",
+              "anchor": [
+                64,
+                149
+              ]
+            }
+          }
+        },
+        "attack": {
+          "loop": false,
+          "fps": 10,
+          "directions": {
+            "east": {
+              "frames": [
+                "res://assets/characters/zumbi/animacoes_01/exports/attack_east_02/frame_000.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/attack_east_02/frame_001.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/attack_east_02/frame_002.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/attack_east_02/frame_003.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/attack_east_02/frame_004.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/attack_east_02/frame_005.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/attack_east_02/frame_006.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/attack_east_02/frame_007.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/attack_east_02/frame_008.png"
+              ],
+              "review": "refined frontal spear thrust, horizontal anchor",
+              "source_job": "03489e7e-80b1-4cab-a0c7-cb2ea85ade13",
+              "source_animation": "spear_thrust_v2",
+              "anchor": [
+                107,
+                143
+              ]
+            }
+          }
+        },
+        "skill": {
+          "loop": false,
+          "fps": 10,
+          "directions": {
+            "east": {
+              "frames": [
+                "res://assets/characters/zumbi/animacoes_01/exports/skill_east_01/frame_000.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/skill_east_01/frame_001.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/skill_east_01/frame_002.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/skill_east_01/frame_003.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/skill_east_01/frame_004.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/skill_east_01/frame_005.png",
+                "res://assets/characters/zumbi/animacoes_01/exports/skill_east_01/frame_006.png"
+              ],
+              "review": "inspirational battle cry and leadership rally gesture",
+              "source_job": "6828b770-06dd-4ec7-9400-de3e06abfc0a",
+              "source_animation": "skill_rally_v1",
+              "anchor": [
+                84,
+                151
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

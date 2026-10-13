@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-11",
+  "timezone": "America/Sao_Paulo",
+  "godot": "4.7.2.stable.official.ed1daf0bf",
+  "import": {
+    "exit_code": 0,
+    "script_errors": 0
+  },
+  "simulation": {
+    "runner": "res://tests/test_simulation.gd",
+    "passed": 90,
+    "failed": 0,
+    "exit_code": 0
+  },
+  "client": {
+    "runner": "res://client/smoke.gd",
+    "passed": 86,
+    "failed": 0,
+    "exit_code": 0
+  },
+  "copied_assets": {
+    "count": 5,
+    "sha256_equal_to_sources": true
+  },
+  "viewport": {
+    "renderer": "OpenGL 3.3 Compatibility",
+    "files": [
+      "captures/preparacao.png",
+      "captures/combate.png"
+    ],
+    "inspected": true,
+    "exit_codes": [
+      0,
+      0
+    ]
+  },
+  "not_validated": [
+    "20 partidas humanas",
+    "balanceamento",
+    "celular/toque físico",
+    "multiplayer/rede",
+    "coleção/monetização"
+  ],
+  "paid_generations_this_delivery": 0
+}

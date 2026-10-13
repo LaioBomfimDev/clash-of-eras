@@ -1,0 +1,156 @@
+{
+  "group_id": "132d650f-e528-4308-86f0-69879a7f1c31",
+  "states": [
+    {
+      "character": {
+        "id": "8e001e18-9617-4a67-a326-32af26dc4f24",
+        "name": "Idle",
+        "prompt": "michael jackson classic dan\u00e7ando e dan\u00e7ando moonwalker",
+        "size": {
+          "width": 48,
+          "height": 48
+        },
+        "template_id": "mannequin",
+        "directions": 8,
+        "view": "low top-down",
+        "created_at": "2026-10-09T17:53:34.230816+00:00"
+      },
+      "folder": "Idle",
+      "frames": {
+        "rotations": {
+          "south": "Idle/rotations/south.png",
+          "south-east": "Idle/rotations/south-east.png",
+          "east": "Idle/rotations/east.png",
+          "north-east": "Idle/rotations/north-east.png",
+          "north": "Idle/rotations/north.png",
+          "north-west": "Idle/rotations/north-west.png",
+          "west": "Idle/rotations/west.png",
+          "south-west": "Idle/rotations/south-west.png"
+        },
+        "animations": {
+          "The_subject_performs_the_classic_moonwalk_slide_rh": {
+            "south-west": [
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_000.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_001.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_002.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_003.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_004.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_005.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_006.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_007.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_008.png"
+            ],
+            "south-east": [
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_000.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_001.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_002.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_003.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_004.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_005.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_006.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_007.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_008.png"
+            ],
+            "east": [
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_000.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_001.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_002.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_003.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_004.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_005.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_006.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_007.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_008.png"
+            ],
+            "south": [
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_000.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_001.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_002.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_003.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_004.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_005.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_006.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_007.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_008.png"
+            ],
+            "north-west": [
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_000.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_001.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_002.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_003.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_004.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_005.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_006.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_007.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_008.png"
+            ],
+            "north-east": [
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_000.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_001.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_002.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_003.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_004.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_005.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_006.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_007.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_008.png"
+            ],
+            "west": [
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_000.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_001.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_002.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_003.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_004.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_005.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_006.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_007.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_008.png"
+            ],
+            "north": [
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_000.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_001.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_002.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_003.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_004.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_005.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_006.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_007.png",
+              "Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_008.png"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "character": {
+        "id": "c0d687db-d402-46a8-a2a8-500635e56329",
+        "name": "dancer in a white vi",
+        "prompt": "michael jackson classic dan\u00e7ando e dan\u00e7ando moonwalker",
+        "size": {
+          "width": 48,
+          "height": 48
+        },
+        "template_id": "mannequin",
+        "directions": 8,
+        "view": "low top-down",
+        "created_at": "2026-10-09T19:51:50.707131+00:00"
+      },
+      "folder": "dancer_in_a_white_vi",
+      "frames": {
+        "rotations": {
+          "south": "dancer_in_a_white_vi/rotations/south.png",
+          "south-east": "dancer_in_a_white_vi/rotations/south-east.png",
+          "east": "dancer_in_a_white_vi/rotations/east.png",
+          "north-east": "dancer_in_a_white_vi/rotations/north-east.png",
+          "north": "dancer_in_a_white_vi/rotations/north.png",
+          "north-west": "dancer_in_a_white_vi/rotations/north-west.png",
+          "west": "dancer_in_a_white_vi/rotations/west.png",
+          "south-west": "dancer_in_a_white_vi/rotations/south-west.png"
+        },
+        "animations": {}
+      }
+    }
+  ],
+  "export_version": "3.1",
+  "export_date": "2026-10-11T19:19:36.906347"
+}

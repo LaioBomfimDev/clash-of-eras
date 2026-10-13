@@ -1,0 +1,47 @@
+{
+  "zip_crc_paths_and_extracted_bytes_valid": true,
+  "zip_sha256": "7aa4558d748bd58830c793d6f6091feb3cacd5e07c1ea9fb2cab5853c94ebe95",
+  "files": 4,
+  "bytes": 2961,
+  "rgba_crops_compared_to_original": 14,
+  "clips": [
+    {
+      "clip": "whole",
+      "packed_frames": 7,
+      "start_frame": 2,
+      "frame_size": [
+        21,
+        17
+      ],
+      "offset": {
+        "x": -10,
+        "y": -22
+      },
+      "fps": 20,
+      "loop": false,
+      "sheet_dimensions_valid": true,
+      "unused_cells_transparent": true,
+      "rgba_matches_original": true
+    },
+    {
+      "clip": "part-inspiracao",
+      "packed_frames": 7,
+      "start_frame": 2,
+      "frame_size": [
+        21,
+        17
+      ],
+      "offset": {
+        "x": -10,
+        "y": -22
+      },
+      "fps": 20,
+      "loop": false,
+      "sheet_dimensions_valid": true,
+      "unused_cells_transparent": true,
+      "rgba_matches_original": true
+    }
+  ],
+  "result": "passed",
+  "gameplay_tested": false
+}

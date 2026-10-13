@@ -1,0 +1,11 @@
+{
+  "character_id": "6a5ec045-5930-4955-a684-ef864e5607b9",
+  "mode": "v3",
+  "action_description": "Seamless in-place walking cycle facing east. Full articulated human walk with alternating left and right steps, clear knee bending, heel contact, toe push-off and counter-swing of the free arm. Hold the spear firmly in one hand with a small natural shoulder and elbow motion; the long spear remains rigid and recognizable. Both legs must move independently and feet contact the same flat ground baseline. Remove the presentation rock completely: no rock, pedestal, floor, floating debris or sliding stone anywhere in the clip. Keep the torso at stable size, no whole-sprite sliding, no camera motion, no zoom, no silhouette scaling. Transparent background. Begin and end at matching stride phases, 8 coherent animation frames.",
+  "frame_count": 8,
+  "animation_name": "walk_ground_v1",
+  "directions": [
+    "east"
+  ],
+  "keep_first_frame": false
+}

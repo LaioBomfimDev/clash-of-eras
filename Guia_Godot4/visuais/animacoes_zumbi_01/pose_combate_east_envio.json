@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: ee1735f5-1b75-4b9a-802e-b1040c49582c\njob_id: ee1735f5-1b75-4b9a-802e-b1040c49582c\nmodel: pixen\nedit: Change only the stance: remove the stone under his raised foot and lower that leg so BOTH bare feet stand naturally on the SAME flat ground line. Keep exact same dark-skinned muscular warrior identity, face, scars, beige trousers, ankle shackles, waist dagger, long spear, adult proportions, pixel detail, east facing direction and 128x128 framing. No rock, pedestal, ground texture, new props, background, glow or shadow. Transparent background.\nsource: 128x128px\nsize: 128x128px\ntransparent: True\nseed: 20261012\nasset_id: 55556cea-28d7-5522-9d49-3f1078717448\nasset_status: pending (saved when generation completes)\ncost: 1 generation\nstatus: processing (~10-40s)\n\nhint: get_image(job_id=\"ee1735f5-1b75-4b9a-802e-b1040c49582c\")"
+    }
+  ],
+  "isError": false
+}

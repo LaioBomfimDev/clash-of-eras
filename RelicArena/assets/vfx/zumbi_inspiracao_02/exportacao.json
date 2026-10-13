@@ -1,0 +1,242 @@
+{
+  "date_utc": "2026-10-12T23:15:24.755141+00:00",
+  "method": "PixelLab vfx_workbench deterministic FREE; no AI generation",
+  "effect_id": "6313f6b8-a969-405c-b435-38f58a8817cd",
+  "step_id": "f44e7e92-191f-42f1-a9d0-7b401b445dea",
+  "export_image_id": "3c944447-93b6-403c-9623-9da1412bd427",
+  "effect_url": "https://pixellab.ai/create-vfx?effect=6313f6b8-a969-405c-b435-38f58a8817cd",
+  "export_base_url": "https://api.pixellab.ai/mcp/pixel-tools/3c944447-93b6-403c-9623-9da1412bd427/",
+  "ai_generation_calls": 0,
+  "paid_purchases": 0,
+  "character_embedded": false,
+  "runtime_integrated": false,
+  "shared_manifest_modified": true,
+  "gameplay_modified": false,
+  "zip_bytes": 2302,
+  "zip_sha256": "7aa4558d748bd58830c793d6f6091feb3cacd5e07c1ea9fb2cab5853c94ebe95",
+  "zip_crc_passed": true,
+  "zip_paths_safe": true,
+  "extracted_members": 4,
+  "extracted_bytes": 2961,
+  "extracted_byte_identical": true,
+  "zip_member_checks": [
+    {
+      "path": "whole.png",
+      "bytes": 504,
+      "sha256": "813e1924b72dac7fc28e28a780b1523ac962d2a34c3432660634ed0d7c43cc61",
+      "byte_identical": true
+    },
+    {
+      "path": "part-inspiracao.png",
+      "bytes": 504,
+      "sha256": "813e1924b72dac7fc28e28a780b1523ac962d2a34c3432660634ed0d7c43cc61",
+      "byte_identical": true
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 1011,
+      "sha256": "e5410a5dcd79170e62573d4747ebe8a4c55a7687701059d05d32ccb2c328192d",
+      "byte_identical": true
+    },
+    {
+      "path": "README.txt",
+      "bytes": 942,
+      "sha256": "3030bb6c509e7759cd342fd0b98dd3968551c657dfd76c4e6886399f751d632c",
+      "byte_identical": true
+    }
+  ],
+  "exported_downloads": [
+    {
+      "path": "original/clash-of-eras-zumbi-inspiracao02-game.zip",
+      "bytes": 2302,
+      "sha256": "7aa4558d748bd58830c793d6f6091feb3cacd5e07c1ea9fb2cab5853c94ebe95",
+      "http_status": 200
+    },
+    {
+      "path": "original/clash-of-eras-zumbi-inspiracao02.gif",
+      "bytes": 960,
+      "sha256": "823835b7e962d28699b96ae81ff048e540199d5c8f97ab943f7f664de3d4eddd",
+      "http_status": 200
+    },
+    {
+      "path": "original/clash-of-eras-zumbi-inspiracao02.json",
+      "bytes": 4903,
+      "sha256": "0a18cd0436f4159e476e4983bb2ab514329c1126191f5702bfaa489761fbf02b",
+      "http_status": 200
+    },
+    {
+      "path": "original/clash-of-eras-zumbi-inspiracao02.png",
+      "bytes": 590,
+      "sha256": "ba2ecb2bbc4512d36b42e52ed63eed474e76a994448b787e7e2f20b6f769af86",
+      "http_status": 200
+    }
+  ],
+  "pngs": [
+    {
+      "path": "original/clash-of-eras-zumbi-inspiracao02.png",
+      "mode": "RGBA",
+      "size": [
+        128,
+        96
+      ]
+    },
+    {
+      "path": "game_pack/part-inspiracao.png",
+      "mode": "RGBA",
+      "size": [
+        63,
+        51
+      ]
+    },
+    {
+      "path": "game_pack/whole.png",
+      "mode": "RGBA",
+      "size": [
+        63,
+        51
+      ]
+    }
+  ],
+  "game_manifest": {
+    "app": "PixelLab VFX Creator",
+    "name": "Clash of Eras - Zumbi Inspiracao02",
+    "fps": 20,
+    "frame_ms": 50,
+    "frames": 12,
+    "loop": false,
+    "canvas": {
+      "w": 32,
+      "h": 32
+    },
+    "anchor": {
+      "kind": "origin",
+      "x": 16,
+      "y": 28
+    },
+    "clips": [
+      {
+        "name": "whole",
+        "title": "the whole effect, no sprite",
+        "depth": "both",
+        "loop": false,
+        "start_frame": 2,
+        "frames": 7,
+        "frame": {
+          "w": 21,
+          "h": 17
+        },
+        "sheets": [
+          {
+            "file": "whole.png",
+            "first_frame": 0,
+            "frames": 7,
+            "columns": 3,
+            "rows": 3
+          }
+        ],
+        "offset": {
+          "x": -10,
+          "y": -22
+        }
+      },
+      {
+        "name": "part-inspiracao",
+        "title": "the inspiracao part",
+        "depth": "front",
+        "loop": false,
+        "start_frame": 2,
+        "frames": 7,
+        "frame": {
+          "w": 21,
+          "h": 17
+        },
+        "sheets": [
+          {
+            "file": "part-inspiracao.png",
+            "first_frame": 0,
+            "frames": 7,
+            "columns": 3,
+            "rows": 3
+          }
+        ],
+        "offset": {
+          "x": -10,
+          "y": -22
+        }
+      }
+    ]
+  },
+  "visual_review": {
+    "all_response_frames_reviewed": true,
+    "native_and_enlarged_review": true,
+    "final_user_approval": false,
+    "gameplay_or_balance_tested": false,
+    "notes": "Two fixed-separated gold/white up-arrows rise; central critical glint in authored frames4-6. All12authored frames reviewed1x/4x and export; blank authored1-2/10-12 are intentional entry/exit. Game-pack trims these and retains7visible frames. Small buff feedback, no permanent aura, ring/area, fire or character."
+  },
+  "selected_game_clip": "part-inspiracao",
+  "selected_game_sheet": "game_pack/part-inspiracao.png",
+  "packed_frames": 7,
+  "packed_frame_size": [
+    21,
+    17
+  ],
+  "offset": {
+    "x": -10,
+    "y": -22
+  },
+  "fps": 20,
+  "loop": false,
+  "start_frame": 2,
+  "authored_frames": 12,
+  "authored_canvas": [
+    32,
+    32
+  ],
+  "frame_validation": [
+    {
+      "clip": "whole",
+      "packed_frames": 7,
+      "start_frame": 2,
+      "frame_size": [
+        21,
+        17
+      ],
+      "offset": {
+        "x": -10,
+        "y": -22
+      },
+      "fps": 20,
+      "loop": false,
+      "sheet_dimensions_valid": true,
+      "unused_cells_transparent": true,
+      "rgba_matches_original": true
+    },
+    {
+      "clip": "part-inspiracao",
+      "packed_frames": 7,
+      "start_frame": 2,
+      "frame_size": [
+        21,
+        17
+      ],
+      "offset": {
+        "x": -10,
+        "y": -22
+      },
+      "fps": 20,
+      "loop": false,
+      "sheet_dimensions_valid": true,
+      "unused_cells_transparent": true,
+      "rgba_matches_original": true
+    }
+  ],
+  "rgba_crops_compared_to_original": 14,
+  "integration_notes": [
+    "Feedback for the existing collective critical/attack-speed buff only; it does not grant or calculate buffs.",
+    "Use part-inspiracao at each actual affected ally when the buff is applied; do not invent a new radius or refresh rule.",
+    "Original12frames20fps; packed7frames20fps, about0.35s, start_frame2 and offset(-10,-22). Preserve manifest timing if synchronizing the original sequence."
+  ],
+  "registered_manifest_key": "zumbi_inspiracao",
+  "runtime_role": "reserved",
+  "user_pilot_visual_approval": true
+}

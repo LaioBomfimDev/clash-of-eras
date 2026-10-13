@@ -1,0 +1,32 @@
+{
+  "name": "Arena de areia clara — estudo PixelLab 01",
+  "date": "2026-10-11",
+  "timezone": "America/Sao_Paulo",
+  "authorization": "Usuário aprovou a base da prévia e pediu a versão em pixel art pelo PixelLab.",
+  "status": "completed",
+  "job_id": "f8547533-4fbd-4169-8319-40e920c8616f",
+  "asset_id": "834c8f82-e953-54e6-90ea-f41e5f0f76a9",
+  "model": "pixen",
+  "cost_reported_generations": 1,
+  "brief": {
+    "description": "Pixel art game environment background for a fast fantasy auto-battler. A complete wide oval medieval battle coliseum, viewed from a fixed elevated oblique low top-down camera, symmetrical left-to-right, centered in a very wide landscape composition. The whole arena must be visible with comfortable small margins, including the near rim. A huge uninterrupted pale cream LIGHT SAND fighting floor occupies most of the image, an empty smooth ellipse with very subtle sparse sand texture and very little visual noise, wide enough for an eight-by-eight tactical hex board that will be drawn separately. Around the floor are three clearly stepped concentric rows of EMPTY stone spectator terraces, continuous carved stone benches like an old coliseum, no individual chairs, no spectators. Chunky warm grey and muted olive medieval masonry, occasional darker stone seams, readable depth and restrained highlights. The near-side low stone rim is short so it does not hide the fighting floor. Tiny muted teal and burgundy cloth banners only on the outer masonry, no writing or insignia. A calm dark desaturated forest-green ground surrounds the coliseum. Friendly exaggerated game-art architecture, crisp hand-crafted pixel clusters, consistent pixel size, limited harmonious palette, warm daylight from upper left, simple stepped shadows, polished retro pixel-art environment. The center remains completely empty for battle units. Environment only: no characters, no NPCs, no crowd, no weapons, no objects on the sand, no hexagons or grid painted into the floor, no HUD, no shop, no buttons, no text, no lettering, no logo, no perspective horizon, no sky. Not a photograph or 3D render, no blur, no smooth gradients, no antialiasing.",
+    "width": 768,
+    "height": 324,
+    "view": "low top-down",
+    "detail": "medium detail",
+    "outline": "selective outline",
+    "no_background": false,
+    "seed": 10112026
+  },
+  "purpose": "Primeiro estudo do cenário; sem grade incorporada, interface ou personagens. Resolução experimental, sem integração Godot.",
+  "final_art_approved": false,
+  "charged_generations": 1,
+  "asset_status": "saved",
+  "download_url": "https://api.pixellab.ai/mcp/images/f8547533-4fbd-4169-8319-40e920c8616f/download",
+  "local_file": "arena_pixellab_01.png",
+  "visual_review": {
+    "result": "Não selecionada para a arena: geração trouxe dois coliseus lado a lado.",
+    "retained": "Tentativa original preservada. Nenhum asset existente foi substituído.",
+    "next_attempt_job_id": "29f57669-2054-4ba9-8d60-4f5795f8806e"
+  }
+}

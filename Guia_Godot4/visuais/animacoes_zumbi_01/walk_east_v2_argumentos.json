@@ -1,0 +1,13 @@
+{
+  "mode": "v3",
+  "action_description": "Complete seamless in-place EAST-facing human walking cycle, returning to the identical starting stance after one full left-and-right stride. The starting and ending pictures show the exact same warrior with BOTH feet on level ground and NO stone. Animate alternating legs with knee bend, heel lift and toe push-off, and counter-swing of the free arm. Keep the spear firmly gripped and nearly upright, with natural shoulder/elbow movement. Preserve the exact adult muscular body, dark skin, scars, beige trousers, ankle cuffs, waist dagger and detailed pixel shading. Feet stay on one ground baseline, torso stays centered and the same height. No forward translation, no camera motion, no zoom, no rock, platform, ground strip, background, new props or special effects. This must loop smoothly, not walk away from the pose.",
+  "character_id": "6a5ec045-5930-4955-a684-ef864e5607b9",
+  "custom_start_frame_url": "https://api.pixellab.ai/mcp/pixel-tools/2a6325bf-ac24-49c7-881a-24e47b7a3adb/image.png",
+  "keep_first_frame": true,
+  "directions": [
+    "east"
+  ],
+  "animation_name": "walk_ground_v2",
+  "frame_count": 8,
+  "end_frame_url": "https://api.pixellab.ai/mcp/pixel-tools/2a6325bf-ac24-49c7-881a-24e47b7a3adb/image.png"
+}

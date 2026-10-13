@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-11",
+  "reference": "Neymar Jr.",
+  "work_name": "Neydrama",
+  "role": "DPS à distância",
+  "status": "frontal_revision_completed",
+  "source_character_id": "fcc05054-6672-4efb-b417-f49cffcc7b7f",
+  "source_direction": "south",
+  "source_inspect_id": "b32b7fca-46a3-4e95-90c0-79d623f8e255",
+  "first_edit_id": "3ec68878-6187-452b-98f4-140b3bf3e5ef",
+  "final_edit_id": "a459f961-58dc-4ebd-8704-a971e117c91f",
+  "gallery_id": "e00b0d24-0daf-45ac-a5be-2d7878825524",
+  "gallery_target": "gallery:new",
+  "native_canvas": [
+    68,
+    68
+  ],
+  "local_file": "south.png",
+  "preserved_original": "../south.png",
+  "operations": "operations.json",
+  "export_url": "https://api.pixellab.ai/mcp/pixel-tools/a459f961-58dc-4ebd-8704-a971e117c91f/image.png",
+  "editing_method": "pixelart_workbench edit: uma passagem e um reparo de leitura dos gomos da bola",
+  "requested_changes": [
+    "Preservar rosto, cabelo e uniforme",
+    "Bola de futebol de 13 pixels de largura",
+    "Chuteira dourada de 18 pixels de largura",
+    "Pés e bola apoiados em y=54, sem reescalar a tela"
+  ],
+  "inspected_direction": "south",
+  "inspection_scale": 6,
+  "other_seven_directions": "pending: não receberam o refinamento",
+  "original_character_overwritten": false,
+  "animations_created": 0,
+  "ai_generation_calls": 0,
+  "credit_purchase": false,
+  "art_approved_by_user": false,
+  "godot_integration": false,
+  "artistic_limits": [
+    "Somente a frente sul recebeu os acessórios ampliados; as outras sete direções ainda divergem.",
+    "Chuteira propositalmente desproporcional; silhueta e reconhecimento dependem de avaliação do usuário.",
+    "A bola tem gomos simplificados para leitura na grade de 13 pixels.",
+    "Nenhum teste em navegador, celular ou Godot."
+  ]
+}
+

@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-12",
+  "author": "Claude (sessão de efeitos de habilidade)",
+  "request": "Usuário: começar as animações das habilidades (fumaça do Snoop, foguete do Elon com explosões) e depois aumentar visualmente as explosões do Elon para ver todo o impacto real.",
+  "ai_generation_calls": 0,
+  "method": "PixelLab vfx_workbench (editor determinístico gratuito); downloads pelo endpoint oficial; ZIPs conferidos antes de extrair",
+  "baseline": "Pasta revisada às 14:09 por outra sessão (cliente 370/0) e snapshot Guia_Godot4/Clash_of_Eras_revisao_2026-10-12_1409.zip, ambos anteriores a esta integração",
+  "changes": {
+    "assets": ["assets/vfx/explosao_03", "assets/vfx/estilhaco_01", "assets/vfx/explosao_02", "assets/vfx/foguete_02", "assets/vfx/fumaca_02", "assets/vfx/anel_fumaca_01", "assets/vfx/charuto_01 (reservado)"],
+    "manifest": "assets/vfx/manifest.json com 13 efeitos e campo runtime_role (active/fallback/reserved)",
+    "client": [
+      "client/main.gd: tools/vfx_habilidades_02.patch aplicado (foguete e anel em voo, nuvem do Snoop translúcida com perspectiva)",
+      "client/main.gd: impacto do foguete usa explosao_03 (preferência explosao_03 > explosao_02 > foguete_01), no chão do alvo, na frente dos corpos com alfa 0,88",
+      "client/main.gd: cada evento splash ganha estilhaco_01 nos pés do vizinho atingido",
+      "client/main.gd: evento explosion acende por 0,9 s exatamente os hexágonos do raio recebido",
+      "client/main.gd: tremor de 0,3 s e até 5 px inteiros no mundo; HUD no CanvasLayer não treme; zera fora do combate e no menu"
+    ],
+    "tests": ["tests/test_vfx_library.gd (13 efeitos; cadência de loop independente do fps)", "client/smoke.gd (contratos novos de explosão, splash, área, tremor, projéteis e nuvem)", "tools/capture_preview.gd (--flight e pico da explosao_03)"],
+    "rules_or_balance": "nenhuma mudança em simulação, dados, dano, raio ou economia"
+  },
+  "contract_change": "O contrato anterior 'sem repetir explosão em cada alvo vizinho' foi substituído a pedido do usuário: o vizinho atingido mostra só o próprio estouro pequeno, nunca outra explosão grande.",
+  "runners": [
+    {"runner": "res://tests/test_vfx_library.gd", "renderer": "headless", "exit_code": 0, "summary": "183 passed, 0 failed"},
+    {"runner": "res://tests/test_simulation.gd", "renderer": "headless", "exit_code": 0, "summary": "297 passed, 0 failed"},
+    {"runner": "res://tests/test_match_session.gd", "renderer": "headless", "exit_code": 0, "summary": "155 passed, 0 failed"},
+    {"runner": "res://tests/test_full_matches.gd", "renderer": "headless", "exit_code": 0, "summary": "4 automated matches, 668 passed, 0 failed"},
+    {"runner": "res://tests/test_drag_and_drop.gd", "renderer": "headless", "exit_code": 0, "summary": "17 passed, 0 failed"},
+    {"runner": "res://tests/test_lobby_ui.gd", "renderer": "headless", "exit_code": 0, "summary": "27 passed, 0 failed"},
+    {"runner": "res://tests/test_review_contracts.gd", "renderer": "headless", "exit_code": 0, "summary": "4 passed, 0 failed"},
+    {"runner": "res://client/smoke.gd", "renderer": "headless", "exit_code": 0, "summary": "388 passed, 0 failed"},
+    {"runner": "res://client/smoke.gd", "renderer": "OpenGL", "exit_code": 0, "summary": "388 passed, 0 failed"}
+  ],
+  "intermediate_failures": "Primeira execução do cliente: 385/2. As duas falhas vinham da verificação antiga de que splash não gera efeito (a segunda era consequência dela). A verificação foi atualizada para o contrato novo; não é bug do jogo.",
+  "captures_inspected": [
+    "captures/v1_7_vfx_combate_foguete.png (explosao_03 no quadro 7, estilhaços nos vizinhos)",
+    "captures/v1_7_vfx_combate_voo.png (foguete_02 e anel_fumaca_01 no ar)"
+  ],
+  "not_done": "Sem teste humano, celular ou medição de desempenho; tremor não tem opção de desligar nas configurações."
+}

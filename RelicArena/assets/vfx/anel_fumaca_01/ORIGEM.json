@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-12",
+  "method": "PixelLab vfx_workbench (editor deterministico gratuito); nenhuma geracao por IA",
+  "ai_generation_calls": 0,
+  "name": "Clash of Eras - Anel fumaca Snoop 01",
+  "effect_id": "32e5565c-610d-4ab6-95cf-ff967dc191b5",
+  "step_id": "87ec92f4-52bf-438e-98ce-582593317aea",
+  "export_image_id": "9c182ce8-96ed-4a59-a755-637d36b6e748",
+  "effect_url": "https://pixellab.ai/create-vfx?effect=32e5565c-610d-4ab6-95cf-ff967dc191b5",
+  "download_base": "https://api.pixellab.ai/mcp/pixel-tools/9c182ce8-96ed-4a59-a755-637d36b6e748/",
+  "uso": "Tiro basico do Snoop em voo; direcao base +x, origem no centro do anel.",
+  "fps": 16,
+  "loop": true,
+  "canvas": {
+    "w": 64,
+    "h": 40
+  },
+  "anchor": {
+    "kind": "origin",
+    "x": 46,
+    "y": 20
+  },
+  "clip": "whole",
+  "clip_frames": 8,
+  "frame": {
+    "w": 49,
+    "h": 30
+  },
+  "offset": {
+    "x": -38,
+    "y": -15
+  },
+  "zip_entries": [
+    "README.txt",
+    "manifest.json",
+    "whole.png"
+  ],
+  "extracted_identical_to_zip": true,
+  "sha256": {
+    "clash-of-eras-anel-fumaca-snoop-01-game.zip": "7C74629803D1C68B17DDFC51804E639F3A186B25AA0B0D10D19B15F156E83F92",
+    "clash-of-eras-anel-fumaca-snoop-01.gif": "5EEB489D29D784649D9164B403F9E2EFD158C0A9296845E1C189F47BF14A6D8A",
+    "clash-of-eras-anel-fumaca-snoop-01.json": "7CB2BEEC24BB21B3A4E7325D46BEF978D0E221D5124C1097E33B0E375D7C1998",
+    "clash-of-eras-anel-fumaca-snoop-01.png": "A21916C7656328C7A5518BE746DD64A5B112A4686DBCE77319562536F0E6ACA9"
+  },
+  "character_embedded": false
+}

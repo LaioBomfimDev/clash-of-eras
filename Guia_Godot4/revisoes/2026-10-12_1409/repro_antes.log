@@ -1,0 +1,10 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+SNAPSHOT_ALIAS: multiplier=9.0; max_copies=99
+CLIENT_PHASE: menu; rodada 1; vidas [4, 4]
+CLIENT_READY: Clash of Eras V1.4 local; lobby de boas-vindas; 30 FPS; compêndio de heróis
+CLIENT_PHASE: benefit; rodada 1; vidas [4, 4]
+CLIENT_PHASE: preparation; rodada 1; vidas [4, 4]
+CLIENT_PHASE: combat; rodada 1; vidas [4, 4]
+DRAWER_SYNERGY: phase=combat; killed_id=7; frozen=2; preview=1; label=Atiradores · 1 membros
+REVIEW REGRESSIONS: 2 passed, 2 failed

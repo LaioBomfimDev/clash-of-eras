@@ -1,0 +1,13 @@
+{
+  "source": "PixelLab deterministic VFX workbench (free; not AI generation)",
+  "effect_id": "23968870-beb2-442e-bbea-1cc8593fc21a",
+  "step_id": "08033c2c-377f-4ce3-b7ac-0d8a25f1e605",
+  "image_id": "4121cbc9-7a18-4934-a9cb-9294a04ed40d",
+  "download": "https://api.pixellab.ai/mcp/pixel-tools/4121cbc9-7a18-4934-a9cb-9294a04ed40d/clash-of-eras-escudo-da-danca-01-game.zip",
+  "sha256": "8669913F30D6DCB25A8D0D8DB8B16EEE7C1A6E547F28AF8BD876637FA9717074",
+  "frames": 12,
+  "fps": 10,
+  "character_embedded_in_game_clip": false,
+  "runtime_clip": "part-bubble_shield",
+  "integration": "asset library; runtime still uses existing shield presentation"
+}

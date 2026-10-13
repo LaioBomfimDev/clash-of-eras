@@ -1,0 +1,13 @@
+{
+  "character_id": "6a5ec045-5930-4955-a684-ef864e5607b9",
+  "mode": "v3",
+  "animation_name": "spear_thrust_v2",
+  "directions": [
+    "east"
+  ],
+  "frame_count": 8,
+  "keep_first_frame": true,
+  "custom_start_frame_url": "upload:e8f49f59-6724-4de1-a6e6-8ae071d5e920",
+  "end_frame_url": "upload:e8f49f59-6724-4de1-a6e6-8ae071d5e920",
+  "action_description": "EAST-facing fast, powerful spear thrust attack, one complete action returning to the identical starting stance. The starting stance shows the warrior holding the spear horizontally at waist height with the wide silver blade pointing to the right (east). In the attack: lunge forward, drive the spear straight horizontally to the right (east) to pierce the enemy, and smoothly retract back into the exact horizontal ready stance. The spear blade MUST STAY CONSTANTLY POINTING FORWARD TO THE RIGHT (east) throughout all frames, never flipping, inverting or rotating backwards. Both feet stay on the ground line, natural body articulation. Same muscular dark-skinned warrior, beige pants, ankle shackles, single waist dagger. Transparent background, no effects, rock, ground line or extra weapons."
+}

@@ -1,0 +1,71 @@
+{
+ "app": "PixelLab VFX Creator",
+ "name": "Clash of Eras - Impacto foguete01",
+ "fps": 24,
+ "frame_ms": 42,
+ "frames": 12,
+ "loop": false,
+ "canvas": {
+  "w": 34,
+  "h": 34
+ },
+ "anchor": {
+  "kind": "origin",
+  "x": 17,
+  "y": 17
+ },
+ "clips": [
+  {
+   "name": "whole",
+   "title": "the whole effect, no sprite",
+   "depth": "both",
+   "loop": false,
+   "start_frame": 0,
+   "frames": 11,
+   "frame": {
+    "w": 26,
+    "h": 26
+   },
+   "sheets": [
+    {
+     "file": "whole.png",
+     "first_frame": 0,
+     "frames": 11,
+     "columns": 4,
+     "rows": 3
+    }
+   ],
+   "offset": {
+    "x": -13,
+    "y": -13
+   }
+  },
+  {
+   "name": "part-fire_blast",
+   "title": "the fire blast part",
+   "role": "impact",
+   "part": "fire_blast",
+   "depth": "behind",
+   "loop": false,
+   "start_frame": 0,
+   "frames": 11,
+   "frame": {
+    "w": 26,
+    "h": 26
+   },
+   "sheets": [
+    {
+     "file": "part-fire_blast.png",
+     "first_frame": 0,
+     "frames": 11,
+     "columns": 4,
+     "rows": 3
+    }
+   ],
+   "offset": {
+    "x": -13,
+    "y": -13
+   }
+  }
+ ]
+}

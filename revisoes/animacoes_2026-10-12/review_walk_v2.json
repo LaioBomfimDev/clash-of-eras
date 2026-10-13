@@ -1,0 +1,275 @@
+{
+  "reviewed_at_utc": "2026-10-12T23:23:52.748709+00:00",
+  "decision": "accepted_as_east_only_pilot_for_local_integration_test",
+  "final_user_approval": false,
+  "scope": "Read-only visual inspection of all9native frames and current idle east reference; PIL measurements. No generation, PNG edits, Godot execution, main/visuals/manifest changes.",
+  "source_folder": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\walk_east_02\\original\\Idle\\animations\\walk_ground_v2\\east",
+  "frames_seen": 9,
+  "frames": [
+    {
+      "index": 0,
+      "path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\walk_east_02\\original\\Idle\\animations\\walk_ground_v2\\east\\frame_000.png",
+      "sha256": "7c06948777f9628d5d7df33084fedaeab645e7be51e500bcb4551d8518185474",
+      "canvas": [
+        128,
+        180
+      ],
+      "alpha_bounds": [
+        49,
+        26,
+        80,
+        149
+      ],
+      "alpha_height": 123,
+      "baseline_exclusive": 149,
+      "foot_bottom_strip_centroid": [
+        64.252,
+        145.165
+      ],
+      "seen_individually_with_view_image": true,
+      "visual_notes": "Pose inicial em perfil; pernas livres, sem pedra; lança parcialmente oculta atrás da cabeça."
+    },
+    {
+      "index": 1,
+      "path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\walk_east_02\\original\\Idle\\animations\\walk_ground_v2\\east\\frame_001.png",
+      "sha256": "77fb357c1f5032c9d0c8d2b074fd83d98740d3e1e99be64027d92223a5079c1b",
+      "canvas": [
+        128,
+        180
+      ],
+      "alpha_bounds": [
+        39,
+        27,
+        91,
+        149
+      ],
+      "alpha_height": 122,
+      "baseline_exclusive": 149,
+      "foot_bottom_strip_centroid": [
+        59.841,
+        145.018
+      ],
+      "seen_individually_with_view_image": true,
+      "visual_notes": "Abertura da passada; braço e joelhos mudam de pose, não apenas deslocamento do sprite."
+    },
+    {
+      "index": 2,
+      "path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\walk_east_02\\original\\Idle\\animations\\walk_ground_v2\\east\\frame_002.png",
+      "sha256": "f57f8d8ce4192b17d3667233ce8c7abbbed71ae2b5cecf5b59126838fec97527",
+      "canvas": [
+        128,
+        180
+      ],
+      "alpha_bounds": [
+        26,
+        29,
+        93,
+        149
+      ],
+      "alpha_height": 120,
+      "baseline_exclusive": 149,
+      "foot_bottom_strip_centroid": [
+        59.976,
+        144.393
+      ],
+      "seen_individually_with_view_image": true,
+      "visual_notes": "Passada estendida; pés separados e uma perna dobrada. Lâmina parcialmente atrás da cabeça."
+    },
+    {
+      "index": 3,
+      "path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\walk_east_02\\original\\Idle\\animations\\walk_ground_v2\\east\\frame_003.png",
+      "sha256": "70ebac28b5c432ddcba79c2fa2712d1ed170906401863ccbfad81e94c150bec2",
+      "canvas": [
+        128,
+        180
+      ],
+      "alpha_bounds": [
+        32,
+        27,
+        83,
+        147
+      ],
+      "alpha_height": 120,
+      "baseline_exclusive": 147,
+      "foot_bottom_strip_centroid": [
+        62.748,
+        142.687
+      ],
+      "seen_individually_with_view_image": true,
+      "visual_notes": "Fechamento/passagem de perna; base fica2px acima do máximo da sequência."
+    },
+    {
+      "index": 4,
+      "path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\walk_east_02\\original\\Idle\\animations\\walk_ground_v2\\east\\frame_004.png",
+      "sha256": "76ae5d6b454acd85cd8fa892342a3845cd39161ec66e11c13b636a198381e637",
+      "canvas": [
+        128,
+        180
+      ],
+      "alpha_bounds": [
+        46,
+        27,
+        83,
+        149
+      ],
+      "alpha_height": 122,
+      "baseline_exclusive": 149,
+      "foot_bottom_strip_centroid": [
+        63.585,
+        144.723
+      ],
+      "seen_individually_with_view_image": true,
+      "visual_notes": "Pose de passagem oposta; lança passa a ser visível à frente da cabeça."
+    },
+    {
+      "index": 5,
+      "path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\walk_east_02\\original\\Idle\\animations\\walk_ground_v2\\east\\frame_005.png",
+      "sha256": "5e6ed1a5e589c6f2c857a4ff04a72356d9ae0d9532b82cb66cdb48c8a6515c7d",
+      "canvas": [
+        128,
+        180
+      ],
+      "alpha_bounds": [
+        32,
+        28,
+        95,
+        148
+      ],
+      "alpha_height": 120,
+      "baseline_exclusive": 148,
+      "foot_bottom_strip_centroid": [
+        67.589,
+        143.581
+      ],
+      "seen_individually_with_view_image": true,
+      "visual_notes": "Segunda abertura de passada; braços/torso contrabalançam. Lança lê maior à frente."
+    },
+    {
+      "index": 6,
+      "path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\walk_east_02\\original\\Idle\\animations\\walk_ground_v2\\east\\frame_006.png",
+      "sha256": "52830d239fdafe3e5e0f050d5437dfcf2788acbecdbd1bd88e04b3a3d74e929b",
+      "canvas": [
+        128,
+        180
+      ],
+      "alpha_bounds": [
+        26,
+        28,
+        94,
+        149
+      ],
+      "alpha_height": 121,
+      "baseline_exclusive": 149,
+      "foot_bottom_strip_centroid": [
+        74.385,
+        144.754
+      ],
+      "seen_individually_with_view_image": true,
+      "visual_notes": "Segunda passada estendida; pernas e braços distintos do primeiro extremo."
+    },
+    {
+      "index": 7,
+      "path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\walk_east_02\\original\\Idle\\animations\\walk_ground_v2\\east\\frame_007.png",
+      "sha256": "7c88ae91d8262bbade0822e60f716ca93980e1dc32090ad0e0ba8368839a9303",
+      "canvas": [
+        128,
+        180
+      ],
+      "alpha_bounds": [
+        34,
+        27,
+        84,
+        149
+      ],
+      "alpha_height": 122,
+      "baseline_exclusive": 149,
+      "foot_bottom_strip_centroid": [
+        70.278,
+        145.185
+      ],
+      "seen_individually_with_view_image": true,
+      "visual_notes": "Fechamento para retornar à pose inicial; lança ainda visível à frente."
+    },
+    {
+      "index": 8,
+      "path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\zumbi\\animacoes_01\\exports\\walk_east_02\\original\\Idle\\animations\\walk_ground_v2\\east\\frame_008.png",
+      "sha256": "c955d6ae40214ce816b94a7ea47ad1ab845510b2fa58bff0d81d696c039175bb",
+      "canvas": [
+        128,
+        180
+      ],
+      "alpha_bounds": [
+        49,
+        26,
+        80,
+        149
+      ],
+      "alpha_height": 123,
+      "baseline_exclusive": 149,
+      "foot_bottom_strip_centroid": [
+        64.252,
+        145.165
+      ],
+      "seen_individually_with_view_image": true,
+      "visual_notes": "Pose final quase igual à inicial; pernas livres, sem pedra; pequenas diferenças de sombreamento."
+    }
+  ],
+  "reference": {
+    "path": "C:\\Users\\m\\Documents\\Relic Arena MY\\RelicArena\\assets\\characters\\zumbi\\grande_04\\original\\Idle\\rotations\\east.png",
+    "sha256": "14946ed92b07268f81009ab45f5760e8181bf598d88fbb459b0005d0036d30cb",
+    "canvas": [
+      128,
+      128
+    ],
+    "alpha_bounds": [
+      45,
+      0,
+      80,
+      127
+    ],
+    "seen_with_view_image": true
+  },
+  "findings": {
+    "real_movement": "Alternating bent/extended legs and counter-moving arms across000–007; not a static sprite translated by code.",
+    "stone": "No visible stone in any of the9frames; both endpoint poses use free legs.",
+    "identity": "Dark skin, muscular bare torso, short hair, cream trousers, red waist sash, ankle chains and spear remain recognizable. No obvious extra limb in these static inspections.",
+    "weapon_caveat": "Spear blade is occluded behind the head in000–003and008, then visible in front in004–007. Apparent blade length/position changes substantially; acceptable for a pilot, needs polish before final art approval.",
+    "registration": "Alpha top26..29and bottom-exclusive147..149. Fixed baseline149 leaves0..2px of natural rise. Do not derive anchor separately from each frame bbox.",
+    "loop": "000and008have nearly identical silhouette/pose, but shading differs; sequential static review does not prove smooth real-time playback.",
+    "loop_rgba_changed_pixels_008_to_000": 191,
+    "loop_alpha_changed_pixels_008_to_000": 3,
+    "adjacent_rgba_changed_pixels": [
+      2663,
+      2674,
+      2740,
+      2849,
+      3053,
+      2850,
+      3376,
+      2896
+    ]
+  },
+  "suggested_anchor": {
+    "value": [
+      64,
+      149
+    ],
+    "units": "native canvas pixels",
+    "rule": "One fixed anchor for this entire east clip, using canvas horizontal centre and maximum foot baseline; no per-frame recenter/rescale."
+  },
+  "suggested_playback_test": {
+    "frames": "Keep native files unchanged. First test full sequence at8–10FPS; if duplicate endpoint causes a hitch, compare manifest playback000–007versus000–008without changing PNGs.",
+    "verify_in_game": [
+      "Foot baseline during movement/interpolation",
+      "Loop hand/spear transition007→008→000→001",
+      "Idle→walk identity and anchoring",
+      "Level scaling1/1.2/1.44",
+      "Weapon growth atN2/N3requires separate clip decision; not supplied by this pilot"
+    ]
+  },
+  "limitations": [
+    "Only east walk_ground_v2 was reviewed; other directions and attack not approved by this review.",
+    "Static frame inspection and metrics only; no Godot playback or human/mobile test.",
+    "Pilot acceptance does not approve final size, anatomy, weapon continuity or art."
+  ]
+}

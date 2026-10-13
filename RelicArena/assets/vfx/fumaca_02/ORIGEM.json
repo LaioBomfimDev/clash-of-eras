@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-12",
+  "method": "PixelLab vfx_workbench (editor deterministico gratuito); nenhuma geracao por IA",
+  "ai_generation_calls": 0,
+  "name": "Clash of Eras - Nuvem fumaca Snoop 02",
+  "effect_id": "babfac7e-4ab2-4afc-a097-edf23c3f7416",
+  "step_id": "9fc27e68-af8a-433c-8081-b65999e7ff86",
+  "export_image_id": "b047c9e4-2934-47a4-9a1c-b493c035b3d4",
+  "effect_url": "https://pixellab.ai/create-vfx?effect=babfac7e-4ab2-4afc-a097-edf23c3f7416",
+  "download_base": "https://api.pixellab.ai/mcp/pixel-tools/b047c9e4-2934-47a4-9a1c-b493c035b3d4/",
+  "uso": "Zona de fumaca do Snoop (raio 1); origem no centro do hexagono central.",
+  "fps": 10,
+  "loop": true,
+  "canvas": {
+    "w": 236,
+    "h": 172
+  },
+  "anchor": {
+    "kind": "origin",
+    "x": 118,
+    "y": 90
+  },
+  "clip": "whole",
+  "clip_frames": 16,
+  "frame": {
+    "w": 222,
+    "h": 131
+  },
+  "offset": {
+    "x": -110,
+    "y": -62
+  },
+  "zip_entries": [
+    "README.txt",
+    "manifest.json",
+    "whole.png"
+  ],
+  "extracted_identical_to_zip": true,
+  "sha256": {
+    "clash-of-eras-nuvem-fumaca-snoop-02-game.zip": "E33180908F945F9BE5B4AE59BE2C2ED654C1BE667A456B1F84009B9B68015B0D",
+    "clash-of-eras-nuvem-fumaca-snoop-02.gif": "A5DBB044860542EE0B6561ED79780FE19A3DAC9F1B33ECD16648498A19698500",
+    "clash-of-eras-nuvem-fumaca-snoop-02.json": "452B1A2F8183BE0104494DFD984A6D42765C47C22D298CE252A19A0FA38FAFE4",
+    "clash-of-eras-nuvem-fumaca-snoop-02.png": "054672F7EE2CF4507390367069BE099933CB7FB640362C526C1A87932AF51A31"
+  },
+  "character_embedded": false
+}

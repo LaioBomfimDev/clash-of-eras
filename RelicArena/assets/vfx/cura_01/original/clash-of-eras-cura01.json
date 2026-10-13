@@ -1,0 +1,339 @@
+{
+ "frames": [
+  {
+   "filename": "clash-of-eras-cura01 0.png",
+   "frame": {
+    "x": 0,
+    "y": 0,
+    "w": 28,
+    "h": 32
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 28,
+    "h": 32
+   },
+   "sourceSize": {
+    "w": 28,
+    "h": 32
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.8125
+   },
+   "duration": 63
+  },
+  {
+   "filename": "clash-of-eras-cura01 1.png",
+   "frame": {
+    "x": 28,
+    "y": 0,
+    "w": 28,
+    "h": 32
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 28,
+    "h": 32
+   },
+   "sourceSize": {
+    "w": 28,
+    "h": 32
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.8125
+   },
+   "duration": 63
+  },
+  {
+   "filename": "clash-of-eras-cura01 2.png",
+   "frame": {
+    "x": 56,
+    "y": 0,
+    "w": 28,
+    "h": 32
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 28,
+    "h": 32
+   },
+   "sourceSize": {
+    "w": 28,
+    "h": 32
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.8125
+   },
+   "duration": 63
+  },
+  {
+   "filename": "clash-of-eras-cura01 3.png",
+   "frame": {
+    "x": 84,
+    "y": 0,
+    "w": 28,
+    "h": 32
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 28,
+    "h": 32
+   },
+   "sourceSize": {
+    "w": 28,
+    "h": 32
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.8125
+   },
+   "duration": 63
+  },
+  {
+   "filename": "clash-of-eras-cura01 4.png",
+   "frame": {
+    "x": 0,
+    "y": 32,
+    "w": 28,
+    "h": 32
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 28,
+    "h": 32
+   },
+   "sourceSize": {
+    "w": 28,
+    "h": 32
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.8125
+   },
+   "duration": 63
+  },
+  {
+   "filename": "clash-of-eras-cura01 5.png",
+   "frame": {
+    "x": 28,
+    "y": 32,
+    "w": 28,
+    "h": 32
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 28,
+    "h": 32
+   },
+   "sourceSize": {
+    "w": 28,
+    "h": 32
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.8125
+   },
+   "duration": 63
+  },
+  {
+   "filename": "clash-of-eras-cura01 6.png",
+   "frame": {
+    "x": 56,
+    "y": 32,
+    "w": 28,
+    "h": 32
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 28,
+    "h": 32
+   },
+   "sourceSize": {
+    "w": 28,
+    "h": 32
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.8125
+   },
+   "duration": 63
+  },
+  {
+   "filename": "clash-of-eras-cura01 7.png",
+   "frame": {
+    "x": 84,
+    "y": 32,
+    "w": 28,
+    "h": 32
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 28,
+    "h": 32
+   },
+   "sourceSize": {
+    "w": 28,
+    "h": 32
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.8125
+   },
+   "duration": 63
+  },
+  {
+   "filename": "clash-of-eras-cura01 8.png",
+   "frame": {
+    "x": 0,
+    "y": 64,
+    "w": 28,
+    "h": 32
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 28,
+    "h": 32
+   },
+   "sourceSize": {
+    "w": 28,
+    "h": 32
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.8125
+   },
+   "duration": 63
+  },
+  {
+   "filename": "clash-of-eras-cura01 9.png",
+   "frame": {
+    "x": 28,
+    "y": 64,
+    "w": 28,
+    "h": 32
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 28,
+    "h": 32
+   },
+   "sourceSize": {
+    "w": 28,
+    "h": 32
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.8125
+   },
+   "duration": 63
+  },
+  {
+   "filename": "clash-of-eras-cura01 10.png",
+   "frame": {
+    "x": 56,
+    "y": 64,
+    "w": 28,
+    "h": 32
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 28,
+    "h": 32
+   },
+   "sourceSize": {
+    "w": 28,
+    "h": 32
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.8125
+   },
+   "duration": 63
+  },
+  {
+   "filename": "clash-of-eras-cura01 11.png",
+   "frame": {
+    "x": 84,
+    "y": 64,
+    "w": 28,
+    "h": 32
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 28,
+    "h": 32
+   },
+   "sourceSize": {
+    "w": 28,
+    "h": 32
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.8125
+   },
+   "duration": 63
+  }
+ ],
+ "meta": {
+  "app": "PixelLab VFX Creator",
+  "image": "clash-of-eras-cura01.png",
+  "format": "RGBA8888",
+  "size": {
+   "w": 112,
+   "h": 96
+  },
+  "scale": "1",
+  "anchor": {
+   "kind": "origin",
+   "x": 14,
+   "y": 26
+  },
+  "frameTags": [
+   {
+    "name": "clash-of-eras-cura01",
+    "from": 0,
+    "to": 11,
+    "direction": "forward"
+   }
+  ]
+ }
+}

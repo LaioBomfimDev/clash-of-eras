@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-11",
+  "native_canvas": [
+    68,
+    68
+  ],
+  "output_alpha_bbox": [
+    12,
+    6,
+    53,
+    55
+  ],
+  "bottom_padding": 13,
+  "changed_pixels": 240,
+  "changes_outside_accessory_regions": 0,
+  "face_hair_jersey_unchanged": true,
+  "alpha_binary": true,
+  "source_sha256": "125a5588c3fa2e16179d32e98f1dc7df69155631076c47074d2303209ee6dc69",
+  "output_sha256": "e8f6731e55554285c936d8f72204b87258089bd6b43847401a5baf85fa0a5f34",
+  "official_export": "passed",
+  "inspected_at_scale": 6,
+  "inspected_directions": [
+    "south"
+  ],
+  "browser_tested": false,
+  "godot_tested": false
+}

@@ -1,0 +1,106 @@
+{
+  "date": "2026-10-13",
+  "scope": "Articulated Zumbi animation pilot, attack thrust, and skill rally integration",
+  "character_id": "6a5ec045-5930-4955-a684-ef864e5607b9",
+  "original_character_id": "47e44cf4-8365-4c14-8d6f-15ff0fbc4498",
+  "official_mcp_endpoint": "https://api.pixellab.ai/mcp",
+  "credential_logged": false,
+  "account_before": {
+    "subscription": "trial",
+    "generations_remaining": 27,
+    "daily_bonus": 5,
+    "credits_usd": 0
+  },
+  "account_after": {
+    "subscription": "trial",
+    "generations_remaining": 19,
+    "daily_bonus": 5,
+    "credits_usd": 0
+  },
+  "jobs": [
+    {
+      "status": "completed",
+      "cost": 0.25,
+      "pixel_equal_to_supplied_inputs": 8,
+      "input_reference": "juncao_DE.png and seven original rotations",
+      "kind": "import_existing_8_views"
+    },
+    {
+      "exported_files": 17,
+      "job_id": "992af6cf-b971-404b-891c-8c3bd22a78a0",
+      "export": "RelicArena/assets/characters/zumbi/animacoes_01/exports/walk_east_01",
+      "kind": "walk_east_v1",
+      "status": "exported_reviewed_rejected_not_integrated",
+      "animation_group_id": "432c8443-eea7-4ccc-afce-cec74ebf1228",
+      "archive_mismatches": 0,
+      "reason": "Stone follows first steps and shrinks; sequence walks away from statue pose instead of a seamless in-place stride.",
+      "cost": 4,
+      "frames": 8
+    },
+    {
+      "original_local": "pose_combate_east.png",
+      "status": "completed_reviewed_floor_cleaned_with_free_pixel_tools",
+      "clean_image_id": "2a6325bf-ac24-49c7-881a-24e47b7a3adb",
+      "clean_local": "pose_combate_east_limpa.png",
+      "cost": 1,
+      "job_id": "ee1735f5-1b75-4b9a-802e-b1040c49582c",
+      "kind": "grounded_east_start_pose",
+      "pixels_erased": 682
+    },
+    {
+      "kind": "walk_east_v2",
+      "status": "completed_reviewed_integrated",
+      "job_id": "f789806a-20c2-4b68-b2b2-edaaf9f21316",
+      "animation_group_id": "5145ab56-6a4d-41be-8dbd-794779858625",
+      "frames": 9,
+      "cost": 3,
+      "custom_start_and_end": "same grounded 128px image, no stone",
+      "export": "RelicArena/assets/characters/zumbi/animacoes_01/exports/walk_east_02",
+      "anchor": [
+        64,
+        149
+      ],
+      "review": "All 9 frames inspected; grounded stride, articulated legs and arms."
+    },
+    {
+      "cost": 3,
+      "job_id": "5a59a792-5b8a-49d9-ab0a-f6169f801cd2",
+      "frames": 9,
+      "custom_start_and_end": "same clean grounded stance",
+      "status": "rejected_superseded_by_v2",
+      "kind": "attack_east_v1",
+      "animation_group_id": "fcb651d7-9416-4a32-bd4f-dc04ed363646",
+      "reason": "Spear flipped in intermediate frames."
+    },
+    {
+      "kind": "spear_thrust_v2",
+      "status": "completed_reviewed_integrated",
+      "job_id": "03489e7e-80b1-4cab-a0c7-cb2ea85ade13",
+      "animation_group_id": "17a8c667-bd7b-4cda-8924-2e69ad58fa4b",
+      "frames": 9,
+      "cost": 5,
+      "custom_start_and_end": "pose_lanca_horizontal (160x128)",
+      "export": "RelicArena/assets/characters/zumbi/animacoes_01/exports/attack_east_02",
+      "anchor": [
+        107,
+        143
+      ],
+      "review": "Frontal spear thrust with horizontal anchor; spear blade firmly points East throughout; zero flips; clean recovery."
+    },
+    {
+      "kind": "skill_rally_v1",
+      "status": "completed_reviewed_integrated",
+      "job_id": "6828b770-06dd-4ec7-9400-de3e06abfc0a",
+      "animation_group_id": "ccfe3127-876a-42c1-833f-59811be39e89",
+      "frames": 7,
+      "cost": 3,
+      "custom_start_and_end": "pose_combate_east_limpa (128x128)",
+      "export": "RelicArena/assets/characters/zumbi/animacoes_01/exports/skill_east_01",
+      "anchor": [
+        84,
+        151
+      ],
+      "review": "Inspirational battle cry / leadership rally gesture raising fist and spear high; chest proud; seamless return to stance."
+    }
+  ]
+}

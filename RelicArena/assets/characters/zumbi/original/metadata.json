@@ -1,0 +1,36 @@
+{
+  "group_id": "7b9e86f3-b54a-4a22-8ab7-f5b4501426e7",
+  "states": [
+    {
+      "character": {
+        "id": "7129a655-427d-4ca9-84bb-13ad3ddd4682",
+        "name": "Idle",
+        "prompt": "Rotate this exact south-facing Zumbalh\u00e3o warrior sprite into eight coherent arena views. Preserve his recognizable large afro head, brown skin, face, bright red headband with oversized side knot, broad bare chest and muscular arms, red shorts and gold belt, dark sandals, and the giant broad pale metal spear with thick wooden shaft held at his side. Keep this reference's pixel scale, crisp clusters, colors, line weight and proportions consistently in all directions. Low top-down arena camera, grounded feet, full weapon inside canvas, transparent background, no text, no glow, no added scenery.",
+        "size": {
+          "width": 68,
+          "height": 68
+        },
+        "template_id": "mannequin",
+        "directions": 8,
+        "view": "low top-down",
+        "created_at": "2026-10-11T16:03:33.400365+00:00"
+      },
+      "folder": "Idle",
+      "frames": {
+        "rotations": {
+          "south": "Idle/rotations/south.png",
+          "south-east": "Idle/rotations/south-east.png",
+          "east": "Idle/rotations/east.png",
+          "north-east": "Idle/rotations/north-east.png",
+          "north": "Idle/rotations/north.png",
+          "north-west": "Idle/rotations/north-west.png",
+          "west": "Idle/rotations/west.png",
+          "south-west": "Idle/rotations/south-west.png"
+        },
+        "animations": {}
+      }
+    }
+  ],
+  "export_version": "3.1",
+  "export_date": "2026-10-11T20:27:46.408632"
+}

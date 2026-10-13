@@ -1,0 +1,231 @@
+{
+  "name": "Clash of Eras - Zumbi Inspiracao02",
+  "notes": "Brief gold/white upward chevrons and one critical glint; collective critical/attack-speed buff feedback only. No character, fire, poison, damage-area or persistent aura.",
+  "canvas": {
+    "w": 32,
+    "h": 32
+  },
+  "origin": [
+    16,
+    28
+  ],
+  "frames": 12,
+  "fps": 20,
+  "loop": false,
+  "ramps": {
+    "main": [
+      "#7d693a",
+      "#c7a65a",
+      "#f1d98b",
+      "#fff4d3"
+    ]
+  },
+  "tones": 4,
+  "dither": 0,
+  "outline": {
+    "mode": "none"
+  },
+  "layers": [
+    {
+      "id": "seta_esquerda",
+      "type": "image",
+      "x": 9,
+      "y": {
+        "keys": [
+          [
+            0,
+            24
+          ],
+          [
+            0.25,
+            19
+          ],
+          [
+            0.75,
+            10
+          ],
+          [
+            1,
+            6
+          ]
+        ],
+        "ease": "out"
+      },
+      "z": "front",
+      "ramp": "main",
+      "pixels": [
+        "...2...",
+        "..232..",
+        ".23432.",
+        "1234321",
+        "..232..",
+        "..232.."
+      ],
+      "facing": "none",
+      "life": [
+        0.08,
+        0.92
+      ],
+      "dissolve": {
+        "keys": [
+          [
+            0,
+            0.7
+          ],
+          [
+            0.14,
+            0
+          ],
+          [
+            0.65,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "ease": "linear"
+      },
+      "group": "inspiracao"
+    },
+    {
+      "id": "seta_direita",
+      "type": "image",
+      "x": 23,
+      "y": {
+        "keys": [
+          [
+            0,
+            24
+          ],
+          [
+            0.25,
+            19
+          ],
+          [
+            0.75,
+            10
+          ],
+          [
+            1,
+            6
+          ]
+        ],
+        "ease": "out"
+      },
+      "z": "front",
+      "ramp": "main",
+      "pixels": [
+        "...2...",
+        "..232..",
+        ".23432.",
+        "1234321",
+        "..232..",
+        "..232.."
+      ],
+      "facing": "none",
+      "life": [
+        0.08,
+        0.92
+      ],
+      "dissolve": {
+        "keys": [
+          [
+            0,
+            0.7
+          ],
+          [
+            0.14,
+            0
+          ],
+          [
+            0.65,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "ease": "linear"
+      },
+      "group": "inspiracao"
+    },
+    {
+      "id": "brilho_critico",
+      "type": "image",
+      "x": 16,
+      "y": {
+        "from": 18,
+        "to": 12,
+        "ease": "out"
+      },
+      "z": "front",
+      "ramp": "main",
+      "pixels": [
+        "..3..",
+        ".232.",
+        "33433",
+        ".232.",
+        "..3.."
+      ],
+      "facing": "none",
+      "life": [
+        0.17,
+        0.64
+      ],
+      "dissolve": {
+        "keys": [
+          [
+            0,
+            0.8
+          ],
+          [
+            0.2,
+            0
+          ],
+          [
+            0.55,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "group": "inspiracao"
+    }
+  ],
+  "core": [
+    "seta_esquerda",
+    "seta_direita",
+    "brilho_critico"
+  ],
+  "controls": [
+    {
+      "id": "inspiracao_colour",
+      "label": "Cor da inspiracao",
+      "type": "ramp",
+      "value": [
+        "#7d693a",
+        "#c7a65a",
+        "#f1d98b",
+        "#fff4d3"
+      ],
+      "binds": [
+        "ramps.main"
+      ]
+    },
+    {
+      "id": "brilho",
+      "label": "Brilho de critico",
+      "type": "toggle",
+      "value": true,
+      "binds": [
+        "layers.brilho_critico.enabled"
+      ]
+    }
+  ]
+}

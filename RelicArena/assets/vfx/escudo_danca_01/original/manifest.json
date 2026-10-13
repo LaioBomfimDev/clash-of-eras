@@ -1,0 +1,121 @@
+{
+ "app": "PixelLab VFX Creator",
+ "name": "Clash of Eras \u2014 Escudo da danca 01",
+ "fps": 10,
+ "frame_ms": 100,
+ "frames": 12,
+ "loop": true,
+ "canvas": {
+  "w": 49,
+  "h": 49
+ },
+ "anchor": {
+  "kind": "feet",
+  "x": 24,
+  "y": 46
+ },
+ "clips": [
+  {
+   "name": "whole",
+   "title": "the whole effect, no sprite",
+   "depth": "both",
+   "loop": true,
+   "start_frame": 0,
+   "frames": 12,
+   "frame": {
+    "w": 43,
+    "h": 43
+   },
+   "sheets": [
+    {
+     "file": "whole.png",
+     "first_frame": 0,
+     "frames": 12,
+     "columns": 4,
+     "rows": 3
+    }
+   ],
+   "offset": {
+    "x": -21,
+    "y": -43
+   }
+  },
+  {
+   "name": "whole-with-sprite",
+   "title": "the whole effect with the sprite in it",
+   "depth": "both",
+   "loop": true,
+   "start_frame": 0,
+   "frames": 12,
+   "frame": {
+    "w": 43,
+    "h": 43
+   },
+   "sheets": [
+    {
+     "file": "whole-with-sprite.png",
+     "first_frame": 0,
+     "frames": 12,
+     "columns": 4,
+     "rows": 3
+    }
+   ],
+   "offset": {
+    "x": -21,
+    "y": -43
+   }
+  },
+  {
+   "name": "front",
+   "title": "everything in front of the sprite",
+   "depth": "front",
+   "loop": true,
+   "start_frame": 0,
+   "frames": 12,
+   "frame": {
+    "w": 43,
+    "h": 43
+   },
+   "sheets": [
+    {
+     "file": "front.png",
+     "first_frame": 0,
+     "frames": 12,
+     "columns": 4,
+     "rows": 3
+    }
+   ],
+   "offset": {
+    "x": -21,
+    "y": -43
+   }
+  },
+  {
+   "name": "part-bubble_shield",
+   "title": "the bubble shield part",
+   "role": "linger",
+   "part": "bubble_shield",
+   "depth": "both",
+   "loop": true,
+   "start_frame": 0,
+   "frames": 12,
+   "frame": {
+    "w": 43,
+    "h": 43
+   },
+   "sheets": [
+    {
+     "file": "part-bubble_shield.png",
+     "first_frame": 0,
+     "frames": 12,
+     "columns": 4,
+     "rows": 3
+    }
+   ],
+   "offset": {
+    "x": -21,
+    "y": -43
+   }
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "inspect",
+    "https://api.pixellab.ai/mcp/images/ee1735f5-1b75-4b9a-802e-b1040c49582c/download",
+    "--region",
+    "15,108,106,127"
+  ],
+  "notes": "Both feet are now grounded and the warrior is coherent. Inspect only the unwanted floor strip below the feet, then erase that strip while preserving every warrior pixel.",
+  "mode": "high"
+}

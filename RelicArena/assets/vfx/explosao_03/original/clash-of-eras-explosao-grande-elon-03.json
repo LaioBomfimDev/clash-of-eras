@@ -1,0 +1,521 @@
+{
+ "frames": [
+  {
+   "filename": "clash-of-eras-explosao-grande-elon-03 0.png",
+   "frame": {
+    "x": 0,
+    "y": 0,
+    "w": 300,
+    "h": 268
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 300,
+    "h": 268
+   },
+   "sourceSize": {
+    "w": 300,
+    "h": 268
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.6791044776119403
+   },
+   "duration": 56
+  },
+  {
+   "filename": "clash-of-eras-explosao-grande-elon-03 1.png",
+   "frame": {
+    "x": 300,
+    "y": 0,
+    "w": 300,
+    "h": 268
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 300,
+    "h": 268
+   },
+   "sourceSize": {
+    "w": 300,
+    "h": 268
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.6791044776119403
+   },
+   "duration": 56
+  },
+  {
+   "filename": "clash-of-eras-explosao-grande-elon-03 2.png",
+   "frame": {
+    "x": 600,
+    "y": 0,
+    "w": 300,
+    "h": 268
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 300,
+    "h": 268
+   },
+   "sourceSize": {
+    "w": 300,
+    "h": 268
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.6791044776119403
+   },
+   "duration": 56
+  },
+  {
+   "filename": "clash-of-eras-explosao-grande-elon-03 3.png",
+   "frame": {
+    "x": 900,
+    "y": 0,
+    "w": 300,
+    "h": 268
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 300,
+    "h": 268
+   },
+   "sourceSize": {
+    "w": 300,
+    "h": 268
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.6791044776119403
+   },
+   "duration": 56
+  },
+  {
+   "filename": "clash-of-eras-explosao-grande-elon-03 4.png",
+   "frame": {
+    "x": 1200,
+    "y": 0,
+    "w": 300,
+    "h": 268
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 300,
+    "h": 268
+   },
+   "sourceSize": {
+    "w": 300,
+    "h": 268
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.6791044776119403
+   },
+   "duration": 56
+  },
+  {
+   "filename": "clash-of-eras-explosao-grande-elon-03 5.png",
+   "frame": {
+    "x": 0,
+    "y": 268,
+    "w": 300,
+    "h": 268
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 300,
+    "h": 268
+   },
+   "sourceSize": {
+    "w": 300,
+    "h": 268
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.6791044776119403
+   },
+   "duration": 56
+  },
+  {
+   "filename": "clash-of-eras-explosao-grande-elon-03 6.png",
+   "frame": {
+    "x": 300,
+    "y": 268,
+    "w": 300,
+    "h": 268
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 300,
+    "h": 268
+   },
+   "sourceSize": {
+    "w": 300,
+    "h": 268
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.6791044776119403
+   },
+   "duration": 56
+  },
+  {
+   "filename": "clash-of-eras-explosao-grande-elon-03 7.png",
+   "frame": {
+    "x": 600,
+    "y": 268,
+    "w": 300,
+    "h": 268
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 300,
+    "h": 268
+   },
+   "sourceSize": {
+    "w": 300,
+    "h": 268
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.6791044776119403
+   },
+   "duration": 56
+  },
+  {
+   "filename": "clash-of-eras-explosao-grande-elon-03 8.png",
+   "frame": {
+    "x": 900,
+    "y": 268,
+    "w": 300,
+    "h": 268
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 300,
+    "h": 268
+   },
+   "sourceSize": {
+    "w": 300,
+    "h": 268
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.6791044776119403
+   },
+   "duration": 56
+  },
+  {
+   "filename": "clash-of-eras-explosao-grande-elon-03 9.png",
+   "frame": {
+    "x": 1200,
+    "y": 268,
+    "w": 300,
+    "h": 268
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 300,
+    "h": 268
+   },
+   "sourceSize": {
+    "w": 300,
+    "h": 268
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.6791044776119403
+   },
+   "duration": 56
+  },
+  {
+   "filename": "clash-of-eras-explosao-grande-elon-03 10.png",
+   "frame": {
+    "x": 0,
+    "y": 536,
+    "w": 300,
+    "h": 268
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 300,
+    "h": 268
+   },
+   "sourceSize": {
+    "w": 300,
+    "h": 268
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.6791044776119403
+   },
+   "duration": 56
+  },
+  {
+   "filename": "clash-of-eras-explosao-grande-elon-03 11.png",
+   "frame": {
+    "x": 300,
+    "y": 536,
+    "w": 300,
+    "h": 268
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 300,
+    "h": 268
+   },
+   "sourceSize": {
+    "w": 300,
+    "h": 268
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.6791044776119403
+   },
+   "duration": 56
+  },
+  {
+   "filename": "clash-of-eras-explosao-grande-elon-03 12.png",
+   "frame": {
+    "x": 600,
+    "y": 536,
+    "w": 300,
+    "h": 268
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 300,
+    "h": 268
+   },
+   "sourceSize": {
+    "w": 300,
+    "h": 268
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.6791044776119403
+   },
+   "duration": 56
+  },
+  {
+   "filename": "clash-of-eras-explosao-grande-elon-03 13.png",
+   "frame": {
+    "x": 900,
+    "y": 536,
+    "w": 300,
+    "h": 268
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 300,
+    "h": 268
+   },
+   "sourceSize": {
+    "w": 300,
+    "h": 268
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.6791044776119403
+   },
+   "duration": 56
+  },
+  {
+   "filename": "clash-of-eras-explosao-grande-elon-03 14.png",
+   "frame": {
+    "x": 1200,
+    "y": 536,
+    "w": 300,
+    "h": 268
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 300,
+    "h": 268
+   },
+   "sourceSize": {
+    "w": 300,
+    "h": 268
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.6791044776119403
+   },
+   "duration": 56
+  },
+  {
+   "filename": "clash-of-eras-explosao-grande-elon-03 15.png",
+   "frame": {
+    "x": 0,
+    "y": 804,
+    "w": 300,
+    "h": 268
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 300,
+    "h": 268
+   },
+   "sourceSize": {
+    "w": 300,
+    "h": 268
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.6791044776119403
+   },
+   "duration": 56
+  },
+  {
+   "filename": "clash-of-eras-explosao-grande-elon-03 16.png",
+   "frame": {
+    "x": 300,
+    "y": 804,
+    "w": 300,
+    "h": 268
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 300,
+    "h": 268
+   },
+   "sourceSize": {
+    "w": 300,
+    "h": 268
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.6791044776119403
+   },
+   "duration": 56
+  },
+  {
+   "filename": "clash-of-eras-explosao-grande-elon-03 17.png",
+   "frame": {
+    "x": 600,
+    "y": 804,
+    "w": 300,
+    "h": 268
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 300,
+    "h": 268
+   },
+   "sourceSize": {
+    "w": 300,
+    "h": 268
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.6791044776119403
+   },
+   "duration": 56
+  },
+  {
+   "filename": "clash-of-eras-explosao-grande-elon-03 18.png",
+   "frame": {
+    "x": 900,
+    "y": 804,
+    "w": 300,
+    "h": 268
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 300,
+    "h": 268
+   },
+   "sourceSize": {
+    "w": 300,
+    "h": 268
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.6791044776119403
+   },
+   "duration": 56
+  }
+ ],
+ "meta": {
+  "app": "PixelLab VFX Creator",
+  "image": "clash-of-eras-explosao-grande-elon-03.png",
+  "format": "RGBA8888",
+  "size": {
+   "w": 1500,
+   "h": 1072
+  },
+  "scale": "1",
+  "anchor": {
+   "kind": "origin",
+   "x": 150,
+   "y": 182
+  },
+  "frameTags": [
+   {
+    "name": "clash-of-eras-explosao-grande-elon-03",
+    "from": 0,
+    "to": 18,
+    "direction": "forward"
+   }
+  ]
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "app": "PixelLab VFX Creator",
+ "name": "Clash of Eras - Nuvem fumaca Snoop 02",
+ "fps": 10,
+ "frame_ms": 100,
+ "frames": 16,
+ "loop": true,
+ "canvas": {
+  "w": 236,
+  "h": 172
+ },
+ "anchor": {
+  "kind": "origin",
+  "x": 118,
+  "y": 90
+ },
+ "clips": [
+  {
+   "name": "whole",
+   "title": "the whole effect, no sprite",
+   "depth": "both",
+   "loop": true,
+   "start_frame": 0,
+   "frames": 16,
+   "frame": {
+    "w": 222,
+    "h": 131
+   },
+   "sheets": [
+    {
+     "file": "whole.png",
+     "first_frame": 0,
+     "frames": 16,
+     "columns": 4,
+     "rows": 4
+    }
+   ],
+   "offset": {
+    "x": -110,
+    "y": -62
+   }
+  }
+ ]
+}

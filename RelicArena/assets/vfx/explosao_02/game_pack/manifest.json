@@ -1,0 +1,44 @@
+{
+ "app": "PixelLab VFX Creator",
+ "name": "Clash of Eras - Explosao foguete Elon 02",
+ "fps": 18,
+ "frame_ms": 56,
+ "frames": 15,
+ "loop": false,
+ "canvas": {
+  "w": 160,
+  "h": 152
+ },
+ "anchor": {
+  "kind": "origin",
+  "x": 80,
+  "y": 108
+ },
+ "clips": [
+  {
+   "name": "whole",
+   "title": "the whole effect, no sprite",
+   "depth": "both",
+   "loop": false,
+   "start_frame": 0,
+   "frames": 14,
+   "frame": {
+    "w": 131,
+    "h": 103
+   },
+   "sheets": [
+    {
+     "file": "whole.png",
+     "first_frame": 0,
+     "frames": 14,
+     "columns": 4,
+     "rows": 4
+    }
+   ],
+   "offset": {
+    "x": -75,
+    "y": -68
+   }
+  }
+ ]
+}

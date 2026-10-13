@@ -1,0 +1,10 @@
+ERROR: FAIL: alterar test_config do snapshot preserva regras autoritativas
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (C:/Users/m/Documents/Relic Arena MY/Guia_Godot4/revisoes/2026-10-12_1409/repro_revisao.gd:15)
+       [1] _run (C:/Users/m/Documents/Relic Arena MY/Guia_Godot4/revisoes/2026-10-12_1409/repro_revisao.gd:25)
+ERROR: FAIL: gaveta mostra membros da formação congelada durante combate
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (C:/Users/m/Documents/Relic Arena MY/Guia_Godot4/revisoes/2026-10-12_1409/repro_revisao.gd:15)
+       [1] _run (C:/Users/m/Documents/Relic Arena MY/Guia_Godot4/revisoes/2026-10-12_1409/repro_revisao.gd:59)

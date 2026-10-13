@@ -1,0 +1,192 @@
+{
+  "date": "2026-10-11",
+  "scope": "Static artifact verification; no browser, Godot, gameplay or animation tests.",
+  "pngs": [
+    {
+      "path": "ui/vida_coracao.png",
+      "size": [
+        16,
+        16
+      ],
+      "visible_bbox": [
+        1,
+        2,
+        15,
+        14
+      ],
+      "sha256": "1d72c557ed0a588ce5c6727264f64856e8cdeee5638af53bfb2a776b79d51413"
+    },
+    {
+      "path": "personagens/caramelo/south.png",
+      "size": [
+        68,
+        68
+      ],
+      "visible_bbox": [
+        23,
+        10,
+        45,
+        51
+      ],
+      "sha256": "3ec4003692d56cd3433f5ec20fb540cd540bcc023d48407874cb949779e610dc"
+    },
+    {
+      "path": "personagens/michael_existente/south.png",
+      "size": [
+        48,
+        48
+      ],
+      "visible_bbox": [
+        8,
+        3,
+        36,
+        46
+      ],
+      "sha256": "fe2f3ab36b9db2534d9e73a207586d08cc59a4a92e1e417688e22842b3c473e5"
+    },
+    {
+      "path": "personagens/neydrama/revisao_02/south.png",
+      "size": [
+        68,
+        68
+      ],
+      "visible_bbox": [
+        12,
+        6,
+        53,
+        55
+      ],
+      "sha256": "e8f6731e55554285c936d8f72204b87258089bd6b43847401a5baf85fa0a5f34"
+    },
+    {
+      "path": "personagens/neydrama/south.png",
+      "size": [
+        68,
+        68
+      ],
+      "visible_bbox": [
+        26,
+        6,
+        42,
+        55
+      ],
+      "sha256": "125a5588c3fa2e16179d32e98f1dc7df69155631076c47074d2303209ee6dc69"
+    },
+    {
+      "path": "personagens/obamuralha/revisao_02/south.png",
+      "size": [
+        68,
+        68
+      ],
+      "visible_bbox": [
+        22,
+        9,
+        59,
+        56
+      ],
+      "sha256": "048bf9568c5a09fcd45f13beb0a963c9341784e3466665643046db66e4843590"
+    },
+    {
+      "path": "personagens/obamuralha/south.png",
+      "size": [
+        68,
+        68
+      ],
+      "visible_bbox": [
+        22,
+        9,
+        47,
+        56
+      ],
+      "sha256": "615b36c0fff72b1717f9f8e71a8fb07ffe824d647cefe3bf4ad5772ee3298085"
+    },
+    {
+      "path": "personagens/zumbalhao/revisao_02/rotacoes/south.png",
+      "size": [
+        68,
+        68
+      ],
+      "visible_bbox": [
+        15,
+        6,
+        52,
+        55
+      ],
+      "sha256": "4aa0a31cf77b0d915638a0a29626ec5e41be7dbc8a4a65f1ae82b649f9d3d14c"
+    },
+    {
+      "path": "personagens/zumbalhao/revisao_02/rotacoes/west.png",
+      "size": [
+        68,
+        68
+      ],
+      "visible_bbox": [
+        25,
+        3,
+        50,
+        57
+      ],
+      "sha256": "b136895688a2e2a5c14d35a0848d0f4008c65cb7c00f1b761283c1965674b43d"
+    },
+    {
+      "path": "personagens/zumbalhao/revisao_02/south.png",
+      "size": [
+        68,
+        68
+      ],
+      "visible_bbox": [
+        15,
+        6,
+        52,
+        55
+      ],
+      "sha256": "1b2bd1f75ea9d4d1d73b7a46ea372c56a97309d77c5682283a72c653cd43f386"
+    },
+    {
+      "path": "personagens/zumbalhao/south.png",
+      "size": [
+        68,
+        68
+      ],
+      "visible_bbox": [
+        20,
+        7,
+        44,
+        55
+      ],
+      "sha256": "d2f7b0bfba48509d24af66d6884e3ae13b18be411484a6ac7eb1e830dfdb66f0"
+    }
+  ],
+  "html": [
+    {
+      "path": "interface_estudo_01.html",
+      "javascript_syntax": "passed",
+      "local_references": "passed",
+      "unique_ids": "passed"
+    },
+    {
+      "path": "personagens_lote_01.html",
+      "javascript_syntax": "passed",
+      "local_references": "passed",
+      "unique_ids": "passed"
+    }
+  ],
+  "originals_preserved": [
+    "personagens/michael_existente/south.png",
+    "personagens/zumbalhao/south.png"
+  ],
+  "zumbi_reference_visible_pixels_and_alpha": "unchanged",
+  "obama_neymar_face_cores": "unchanged",
+  "gallery": {
+    "characters": 5,
+    "previews_including_originals": 9,
+    "feet_alignment": "passed"
+  },
+  "json_files_parsed": 16,
+  "markdown_local_links": "passed",
+  "not_tested": [
+    "Browser/device rendering and interaction",
+    "Complete local export of8rotations",
+    "Animations, combat, networking and balance"
+  ]
+}

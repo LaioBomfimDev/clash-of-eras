@@ -1,0 +1,66 @@
+{
+  "data": "2026-10-09",
+  "base_consultada": "0.10.1",
+  "destino": "novo projeto Godot 4",
+  "entrega": "guia e referencias de logica, sem projeto Godot criado",
+  "jogo_antigo_aberto": false,
+  "instalacao_antiga_alterada": false,
+  "verificacoes": {
+    "testes_portaveis": [
+      {
+        "teste": "hud",
+        "comando": "node referencias/tests/hud.mjs",
+        "resultado": "passou",
+        "saida": "PASS: permanent HUD, purchases/select, formation-preserving swaps, reserve actions avoid field rebuilds, equipment labels/conservation, invalid and combat actions, single reward collection."
+      },
+      {
+        "teste": "persistence",
+        "comando": "node referencias/tests/persistence.mjs",
+        "resultado": "passou",
+        "saida": "PASS: local checkpoints, exact RNG, two-slot corruption fallback, schema/capacity/UID/cell/items validation, no native IDs/replay, combat rollback and pending reward, payload <4 KB."
+      },
+      {
+        "teste": "shop-and-fusion",
+        "comando": "node referencias/tests/shop-and-fusion.mjs",
+        "resultado": "passou",
+        "saida": "{\n  \"passed\": true,\n  \"distribution\": [\n    {\n      \"round\": 1,\n      \"percent\": {\n        \"normal\": 74.75,\n        \"rare\": 25.25,\n        \"epic\": 0\n      }\n    },\n    {\n      \"round\": 6,\n      \"percent\": {\n        \"normal\": 54.91,\n        \"rare\": 35.13,\n        \"epic\": 9.96\n      }\n    },\n    {\n      \"round\": 11,\n      \"percent\": {\n        \"normal\": 29.93,\n        \"rare\": 50.07,\n        \"epic\": 20.01\n      }\n    }\n  ],\n  \"mixedActions\": 1500,\n  \"checks\": \"Rarities/prices, opening/refresh/lock, full-capacity purchase, automatic/cascading fusions, positions, selection, conserved copies/items, sales and uncapped interest.\"\n}"
+      },
+      {
+        "teste": "reserve-and-balance",
+        "comando": "node referencias/tests/reserve-and-balance.mjs",
+        "resultado": "passou",
+        "saida": "PASS: 12 base-health/damage profiles, star/item growth, all 8 reserve slots, full-capacity swaps, item conservation, field-only synergies, healer, attack cadence and delayed floating-damage input."
+      },
+      {
+        "teste": "grid-and-drag",
+        "comando": "node referencias/tests/grid-and-drag.mjs",
+        "resultado": "passou",
+        "saida": "PASS: atomic drag/swap/sale, 8 bench slots, range 1/2/infinity; 60 crowded combats, 1060 exclusive steps, 15015 attacks, 85 safe jumps, 370 released squares. Game never opened."
+      },
+      {
+        "teste": "combat-regression",
+        "comando": "node referencias/tests/combat-regression.mjs",
+        "resultado": "passou",
+        "saida": "PASS: 45 grid timelines remain deterministic, including every reservation, position, range, hit, heal, death and outcome; persistent formations unchanged."
+      }
+    ],
+    "dados": "14 tipos, 12 jogaveis, 2 mobs, 15 encontros, probabilidades, juros e casas exclusivas dos adversarios conferidos",
+    "referencias": "11 arquivos copiados e comparados byte a byte com a fonte consultada",
+    "documentos": "links locais resolvidos e UTF-8 sem caracteres de substituicao",
+    "svg": "XML valido; diagrama documental, sem validacao visual dentro de jogo",
+    "instalacao_antiga": "GameAssembly.dll e resources.assets conferidos contra o recibo instalado, sem alteracao"
+  },
+  "limites": [
+    "Nao ha implementacao Godot, scripts GDScript ou arte final nesta entrega.",
+    "2D/2.5D e pixel art sao propostas discutidas, nao estilo final confirmado.",
+    "Michael Jackson e requisito futuro, com pendencias de balanceamento e sem implementacao.",
+    "Testes executam apenas a logica JS propria; nao certificam estabilidade, aparencia ou FPS no Godot.",
+    "Nenhum asset, DLL ou executavel do cliente antigo foi incluido."
+  ],
+  "fontes_oficiais_godot_consultadas": [
+    "https://docs.godotengine.org/en/stable/classes/class_tilemaplayer.html",
+    "https://docs.godotengine.org/en/stable/classes/class_control.html",
+    "https://docs.godotengine.org/en/stable/tutorials/io/saving_games.html",
+    "https://docs.godotengine.org/en/stable/tutorials/rendering/renderers.html"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Arena — revisão com referência 04",
+  "date": "2026-10-11",
+  "status": "completed",
+  "model": "pixflux",
+  "job_id": "f5d354df-296a-469e-bde5-41413239390d",
+  "asset_id": "4845d112-c03d-5f3e-a4bd-c9829db03c03",
+  "asset_status": "saved",
+  "charged_generations": 1,
+  "brief": {
+    "description": "Richly detailed pixel art INTERIOR battle scene, viewed from an elevated oblique camera INSIDE a monumental medieval colosseum. Match the reference's camera, framing, broad concentric EMPTY stone spectator terraces and deep perspective. Grand stepped seating rises behind the field and along both sides and continues beyond the image edges, with many wide horizontal seats and dark vertical step faces. Stone stair aisles and recessed arched tunnels create architectural depth. Foreground stone parapet is cropped by the bottom edge. Warm pale golden cream sand fills the wide center, smooth and completely EMPTY, softly lit by warm diagonal afternoon sunlight; preserve space for the battle board. Handcrafted pixel clusters, warm textured sandstone, layered shadows, teal and burgundy hanging cloth banners, a few small orange wall torches. Immersive close full-scene game environment, not a small isolated building or a full exterior footprint. Remove ALL reference HUD, title, logo, frame, letters, numbers, hexagons, grid lines, colored markers, flags standing on the floor, characters and people. Replace them with continuous clean sand or matching stone terraces. No spectators, no gameplay objects, no sky, no grass around the exterior. One single arena interior, architecture concentrated at edges, crisp polished pixel art.",
+    "init_image_url": "upload:e5986e63-5680-4ef4-8877-613e0d654835",
+    "init_image_strength": 150,
+    "width": 352,
+    "height": 196,
+    "detail": "highly detailed",
+    "outline": "selective outline",
+    "shading": "detailed shading",
+    "view": "low top-down",
+    "no_background": false,
+    "seed": 10112029
+  },
+  "local_file": "arena_pixellab_04.png",
+  "reference": {
+    "original_file": "referencias/arena_referencia_usuario_02.png",
+    "unzoom_job_id": "950f6419-4fb9-42ef-b71e-789890defca6",
+    "recovered_dimensions": [
+      351,
+      195
+    ],
+    "input_file": "referencias/arena_referencia_02_canvas_352x196.png",
+    "preparation": "Uma coluna e uma linha transparentes adicionadas para compatibilidade, sem reescala e com os 68445 pixels originais conferidos."
+  },
+  "review": {
+    "decision": "Não selecionada para cenário separado.",
+    "positive": "Interior inclinado e arquibancadas em níveis mais próximos da referência.",
+    "problem": "Preservou personagens, marcações e textos de interface da referência.",
+    "next_attempt_job_id": "4d5b6413-8130-44e6-af48-bfdeb9d87c80"
+  },
+  "final_art_approved": false,
+  "godot_integrated": false
+}

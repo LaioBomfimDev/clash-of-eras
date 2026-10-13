@@ -1,0 +1,209 @@
+{
+ "frames": [
+  {
+   "filename": "clash-of-eras-zumbi-estocada-critica02 0.png",
+   "frame": {
+    "x": 0,
+    "y": 0,
+    "w": 42,
+    "h": 18
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 42,
+    "h": 18
+   },
+   "sourceSize": {
+    "w": 42,
+    "h": 18
+   },
+   "pivot": {
+    "x": 0.19047619047619047,
+    "y": 0.5
+   },
+   "duration": 42
+  },
+  {
+   "filename": "clash-of-eras-zumbi-estocada-critica02 1.png",
+   "frame": {
+    "x": 42,
+    "y": 0,
+    "w": 42,
+    "h": 18
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 42,
+    "h": 18
+   },
+   "sourceSize": {
+    "w": 42,
+    "h": 18
+   },
+   "pivot": {
+    "x": 0.19047619047619047,
+    "y": 0.5
+   },
+   "duration": 42
+  },
+  {
+   "filename": "clash-of-eras-zumbi-estocada-critica02 2.png",
+   "frame": {
+    "x": 84,
+    "y": 0,
+    "w": 42,
+    "h": 18
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 42,
+    "h": 18
+   },
+   "sourceSize": {
+    "w": 42,
+    "h": 18
+   },
+   "pivot": {
+    "x": 0.19047619047619047,
+    "y": 0.5
+   },
+   "duration": 42
+  },
+  {
+   "filename": "clash-of-eras-zumbi-estocada-critica02 3.png",
+   "frame": {
+    "x": 0,
+    "y": 18,
+    "w": 42,
+    "h": 18
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 42,
+    "h": 18
+   },
+   "sourceSize": {
+    "w": 42,
+    "h": 18
+   },
+   "pivot": {
+    "x": 0.19047619047619047,
+    "y": 0.5
+   },
+   "duration": 42
+  },
+  {
+   "filename": "clash-of-eras-zumbi-estocada-critica02 4.png",
+   "frame": {
+    "x": 42,
+    "y": 18,
+    "w": 42,
+    "h": 18
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 42,
+    "h": 18
+   },
+   "sourceSize": {
+    "w": 42,
+    "h": 18
+   },
+   "pivot": {
+    "x": 0.19047619047619047,
+    "y": 0.5
+   },
+   "duration": 42
+  },
+  {
+   "filename": "clash-of-eras-zumbi-estocada-critica02 5.png",
+   "frame": {
+    "x": 84,
+    "y": 18,
+    "w": 42,
+    "h": 18
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 42,
+    "h": 18
+   },
+   "sourceSize": {
+    "w": 42,
+    "h": 18
+   },
+   "pivot": {
+    "x": 0.19047619047619047,
+    "y": 0.5
+   },
+   "duration": 42
+  },
+  {
+   "filename": "clash-of-eras-zumbi-estocada-critica02 6.png",
+   "frame": {
+    "x": 0,
+    "y": 36,
+    "w": 42,
+    "h": 18
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 42,
+    "h": 18
+   },
+   "sourceSize": {
+    "w": 42,
+    "h": 18
+   },
+   "pivot": {
+    "x": 0.19047619047619047,
+    "y": 0.5
+   },
+   "duration": 42
+  }
+ ],
+ "meta": {
+  "app": "PixelLab VFX Creator",
+  "image": "clash-of-eras-zumbi-estocada-critica02.png",
+  "format": "RGBA8888",
+  "size": {
+   "w": 126,
+   "h": 54
+  },
+  "scale": "1",
+  "anchor": {
+   "kind": "origin",
+   "x": 8,
+   "y": 9
+  },
+  "frameTags": [
+   {
+    "name": "clash-of-eras-zumbi-estocada-critica02",
+    "from": 0,
+    "to": 6,
+    "direction": "forward"
+   }
+  ]
+ }
+}

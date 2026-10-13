@@ -1,0 +1,58 @@
+[
+  {
+    "runner": "tests/test_simulation.gd",
+    "exit_code": 0,
+    "stderr_bytes": 0,
+    "stdout": "test_simulation.log",
+    "stderr": "test_simulation.stderr.log"
+  },
+  {
+    "runner": "tests/test_match_session.gd",
+    "exit_code": 0,
+    "stderr_bytes": 0,
+    "stdout": "test_match_session.log",
+    "stderr": "test_match_session.stderr.log"
+  },
+  {
+    "runner": "tests/test_full_matches.gd",
+    "exit_code": 0,
+    "stderr_bytes": 0,
+    "stdout": "test_full_matches.log",
+    "stderr": "test_full_matches.stderr.log"
+  },
+  {
+    "runner": "tests/test_vfx_library.gd",
+    "exit_code": 0,
+    "stderr_bytes": 0,
+    "stdout": "test_vfx_library.log",
+    "stderr": "test_vfx_library.stderr.log"
+  },
+  {
+    "runner": "tests/test_drag_and_drop.gd",
+    "exit_code": 0,
+    "stderr_bytes": 0,
+    "stdout": "test_drag_and_drop.log",
+    "stderr": "test_drag_and_drop.stderr.log"
+  },
+  {
+    "runner": "tests/test_lobby_ui.gd",
+    "exit_code": 0,
+    "stderr_bytes": 0,
+    "stdout": "test_lobby_ui.log",
+    "stderr": "test_lobby_ui.stderr.log"
+  },
+  {
+    "runner": "tests/test_review_contracts.gd",
+    "exit_code": 0,
+    "stderr_bytes": 0,
+    "stdout": "test_review_contracts.log",
+    "stderr": "test_review_contracts.stderr.log"
+  },
+  {
+    "runner": "client/smoke.gd",
+    "exit_code": 0,
+    "stderr_bytes": 0,
+    "stdout": "smoke.log",
+    "stderr": "smoke.stderr.log"
+  }
+]

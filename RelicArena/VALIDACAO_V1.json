@@ -1,0 +1,113 @@
+{
+  "date": "2026-10-11",
+  "timezone": "America/Sao_Paulo",
+  "version": "V1 local jogavel",
+  "godot": "4.7.2.stable.official.ed1daf0bf",
+  "import": {
+    "exit_code": 0,
+    "script_errors": 0
+  },
+  "runners": [
+    {
+      "runner": "res://tests/test_simulation.gd",
+      "passed": 155,
+      "failed": 0,
+      "exit_code": 0
+    },
+    {
+      "runner": "res://tests/test_match_session.gd",
+      "passed": 78,
+      "failed": 0,
+      "exit_code": 0
+    },
+    {
+      "runner": "res://tests/test_full_matches.gd",
+      "passed": 666,
+      "failed": 0,
+      "exit_code": 0,
+      "automated_matches": 4,
+      "seeds": [
+        1,
+        2,
+        77,
+        20261011
+      ],
+      "rounds": [
+        5,
+        5,
+        6,
+        4
+      ]
+    },
+    {
+      "runner": "res://client/smoke.gd",
+      "passed": 152,
+      "failed": 0,
+      "exit_code": 0
+    }
+  ],
+  "final_logs": {
+    "script_errors": 0,
+    "resource_leak_warnings": 0
+  },
+  "michael_assets": {
+    "source": "Official PixelLab get_character download export",
+    "character_id": "8e001e18-9617-4a67-a326-32af26dc4f24",
+    "archive_bytes": 137305,
+    "archive_sha256": "78EBE8A8936F3991DE869963765E85E1B5EA5DAE29F2E62BDFAED08573643555",
+    "original_files_verified_against_zip": 89,
+    "sha256_mismatches": 0,
+    "pngs": 88,
+    "dance_frames": 72,
+    "directions": 8,
+    "frames_per_direction": 9,
+    "rotation_sets": 2,
+    "rotation_pngs": 16,
+    "pixels_modified": false
+  },
+  "viewport": {
+    "renderer": "OpenGL 3.3 Compatibility / AMD Radeon Graphics",
+    "files": [
+      "captures/v1_menu.png",
+      "captures/v1_beneficio.png",
+      "captures/v1_preparacao.png",
+      "captures/v1_bolsa.png",
+      "captures/v1_combate.png",
+      "captures/v1_resultado.png"
+    ],
+    "final_exit_codes": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "final_script_errors": 0,
+    "inspected": true,
+    "captures_computer_screen": false
+  },
+  "fixed_issues": [
+    "BUG-004",
+    "BUG-005",
+    "BUG-006",
+    "BUG-007",
+    "BUG-008",
+    "BUG-009"
+  ],
+  "notes": [
+    "An earlier result capture returned exit 0 with a bleed death script error; fixed and repeated with clean final log.",
+    "Four automated matches and scripted UI flows are not human playtests.",
+    "Audio PCM generation/toggle checked; no audible verification."
+  ],
+  "not_validated": [
+    "20 partidas humanas",
+    "balanceamento",
+    "celular/toque fisico",
+    "multiplayer/rede",
+    "colecao/pagamentos",
+    "arte final da arena",
+    "audicao dos efeitos"
+  ],
+  "paid_generations_this_delivery": 0
+}

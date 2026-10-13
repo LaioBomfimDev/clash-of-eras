@@ -1,0 +1,29 @@
+{
+  "name": "Arena de areia clara — estudo PixelLab 02",
+  "date": "2026-10-11",
+  "timezone": "America/Sao_Paulo",
+  "status": "completed",
+  "job_id": "29f57669-2054-4ba9-8d60-4f5795f8806e",
+  "asset_id": "98cf5c22-43d1-5240-880b-d7e071a746c3",
+  "asset_status": "saved",
+  "model": "pixen",
+  "charged_generations": 1,
+  "brief": {
+    "description": "ONE SINGLE medieval stone colosseum arena, one building only, centered and filling almost the entire landscape canvas. A single very broad horizontal oval of pale cream sand, much wider than deep, with a huge clean empty fighting area. Three stepped concentric rows of empty stone spectator benches surround this ONE oval, no chairs and no crowd. Fixed elevated oblique low top-down game camera, entire near and far rims visible, short front rim. Warm grey and muted olive stone blocks, a few teal and burgundy cloth banners on the perimeter only. Dark desaturated green ground visible just at the outer corners. Crisp polished pixel art game background, deliberate clean pixel clusters and restrained warm daylight shading. Minimal sand texture, high readability for battle sprites. Single continuous scene, no split screen, no repeated buildings, no second arena, no sprite sheet, no people, no characters, no text, no UI, no grid, no obstacles, no sky. One colosseum seen from above, not a 3D render.",
+    "width": 640,
+    "height": 360,
+    "view": "low top-down",
+    "detail": "medium detail",
+    "outline": "selective outline",
+    "no_background": false,
+    "seed": 10112027
+  },
+  "download_url": "https://api.pixellab.ai/mcp/images/29f57669-2054-4ba9-8d60-4f5795f8806e/download",
+  "local_file": "arena_pixellab_02.png",
+  "visual_review": {
+    "result": "Não selecionada: repetiu dois coliseus lado a lado, com perspectiva mais alta nas paredes.",
+    "cause": "Não determinada. Alterar prompt e proporção não resolveu essa observação.",
+    "next_attempt_job_id": "a6c01c0d-c767-4f18-a0dd-de2cc2a10452"
+  },
+  "final_art_approved": false
+}

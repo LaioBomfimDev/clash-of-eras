@@ -1,0 +1,305 @@
+{
+  "date": "2026-10-12",
+  "recorded_utc": "2026-10-12T13:42:05.4671574Z",
+  "version": "V1.4 local visual",
+  "godot": "4.7.2.stable.official.ed1daf0bf",
+  "baseline_validation": "VALIDACAO_V1_3.json",
+  "changes": [
+    "PixelLab smoke loop tied to revealed live zones, behind bodies; real hex-radius preserved",
+    "PixelLab rope knot follows lasso target and stops on death/inactivity/stun end/clip end",
+    "BUG-017: actual rope endpoints follow source and target visual positions; sway remains inside",
+    "Previous four VFX retained; no economy, character attributes or combat rules changed"
+  ],
+  "runners": [
+    {
+      "runner": "res://tests/test_simulation.gd",
+      "renderer": "headless",
+      "passed": 297,
+      "failed": 0,
+      "exit_code": 0,
+      "log": "captures/v1_4_simulation.log",
+      "stderr": "captures/v1_4_simulation.err"
+    },
+    {
+      "runner": "res://tests/test_match_session.gd",
+      "renderer": "headless",
+      "passed": 135,
+      "failed": 0,
+      "exit_code": 0,
+      "log": "captures/v1_4_session.log",
+      "stderr": "captures/v1_4_session.err"
+    },
+    {
+      "runner": "res://tests/test_full_matches.gd",
+      "renderer": "headless",
+      "passed": 816,
+      "failed": 0,
+      "exit_code": 0,
+      "log": "captures/v1_4_full_matches.log",
+      "stderr": "captures/v1_4_full_matches.err"
+    },
+    {
+      "runner": "res://tests/test_vfx_library.gd",
+      "renderer": "headless",
+      "passed": 88,
+      "failed": 0,
+      "exit_code": 0,
+      "log": "captures/v1_4_vfx_library.log",
+      "stderr": "captures/v1_4_vfx_library.err"
+    },
+    {
+      "runner": "res://client/smoke.gd",
+      "renderer": "headless",
+      "passed": 370,
+      "failed": 0,
+      "exit_code": 0,
+      "log": "captures/v1_4_smoke_headless.log",
+      "stderr": "captures/v1_4_smoke_headless.err"
+    },
+    {
+      "runner": "res://client/smoke.gd",
+      "renderer": "OpenGL",
+      "passed": 370,
+      "failed": 0,
+      "exit_code": 0,
+      "log": "captures/v1_4_smoke_opengl.log",
+      "stderr": "captures/v1_4_smoke_opengl.err"
+    }
+  ],
+  "final_logs": {
+    "checked": [
+      "v1_4_import_final.log",
+      "v1_4_simulation.log",
+      "v1_4_session.log",
+      "v1_4_full_matches.log",
+      "v1_4_vfx_library.log",
+      "v1_4_smoke_headless.log",
+      "v1_4_smoke_opengl.log",
+      "v1_4_capture_support.log",
+      "v1_4_capture_preparation.log",
+      "v1_4_bug017_repro_depois.log"
+    ],
+    "diagnostic_lines": 0,
+    "nonempty_stderr_files": 0,
+    "import_exit_code": 0,
+    "initial_ui_note": "359/0 before geometry regression; preserved *_inicial.log. Final client is370/0."
+  },
+  "rules": {
+    "comparison": "captures/v1_4_regras_preservadas.json",
+    "preserved": true,
+    "matching_files": 18,
+    "changed_files": [],
+    "baseline": "../Guia_Godot4/Clash_of_Eras_V1_3_local.zip"
+  },
+  "bug017": {
+    "before": "captures/v1_4_bug017_repro_antes.json",
+    "after": "captures/v1_4_bug017_repro_depois.json",
+    "fixture": "Presentation-only, six0.05s samples; not image segmentation",
+    "before_max_tip_px": 65.6482849121094,
+    "before_max_source_px": 4.87595558166504,
+    "after_max_tip_px": 0.0,
+    "after_max_source_px": 0.0,
+    "core_unchanged": true,
+    "failures": 0,
+    "actual_capture_errors": [
+      {
+        "body": [
+          480.336364746094,
+          272.874572753906
+        ],
+        "source_error_px": 0.0,
+        "source_id": 111,
+        "target_id": 10,
+        "tip": [
+          480.336364746094,
+          272.874572753906
+        ],
+        "tip_error_px": 0.0
+      }
+    ]
+  },
+  "art": {
+    "library_manifest": "assets/vfx/manifest.json",
+    "integrated_effects": 6,
+    "new_effect_exports": 2,
+    "new_character_exports": 0,
+    "ai_generation_calls": 0,
+    "purchases": 0,
+    "credits_usd": 0,
+    "generations_remaining": 0,
+    "pending_realistic_replacements": [
+      "caramelo",
+      "zumbi"
+    ],
+    "new_packages_integrity": "assets/vfx/INTEGRIDADE_V1_4.json",
+    "new_audit_checks": 196,
+    "new_audit_failures": 0,
+    "extracted_new_files": 8,
+    "new_rgba_crops_compared": 54,
+    "original_zip_hashes": [
+      {
+        "key": "escudo_danca_01",
+        "sha256": "8669913F30D6DCB25A8D0D8DB8B16EEE7C1A6E547F28AF8BD876637FA9717074",
+        "matches_manifest": true
+      },
+      {
+        "key": "cura_01",
+        "sha256": "6F4807093C66042DEB90F4BA4BE93CABFA87EC21161F838FF9A2336531814B41",
+        "matches_manifest": true
+      },
+      {
+        "key": "estocada_01",
+        "sha256": "BF6DA9A9273DAEDA999DD03CC751434ACA81D08132CADAAA0139849D54719F92",
+        "matches_manifest": true
+      },
+      {
+        "key": "foguete_01",
+        "sha256": "21A14FDAB200EFD058F00B3A4AE038C987B3CC83F762163F54BC0F70D3BCDC16",
+        "matches_manifest": true
+      },
+      {
+        "key": "fumaca_01",
+        "sha256": "DE71BF96731BC8C47AC6AE33BDB0028D06A1047A2A03E6557C5CC8F84D4057EC",
+        "matches_manifest": true
+      },
+      {
+        "key": "laco_01",
+        "sha256": "9DB2A623B867AB01D167FDF6DB4FB84AFB3713C768FCFCF0553A974BE103A63C",
+        "matches_manifest": true
+      }
+    ],
+    "previous_four_package_audit": "assets/vfx/INTEGRIDADE.json"
+  },
+  "captures": [
+    {
+      "image": "captures/v1_4_support_combate.png",
+      "metadata": "captures/v1_4_support_combate.json",
+      "inspected": true,
+      "viewport": [
+        1280,
+        720
+      ],
+      "elapsed": 2.6,
+      "native_clouds": [
+        {
+          "cell": [
+            1,
+            3
+          ],
+          "duration": 3.0,
+          "frame": 4,
+          "native_drawn": true,
+          "radius": 1,
+          "remaining": 2.55,
+          "scale": 2.0,
+          "source_id": 8,
+          "zone_id": 3
+        }
+      ],
+      "native_vfx": [
+        {
+          "depth": "front",
+          "frame": 10,
+          "key": "cura_01",
+          "kind": "heal",
+          "position": [
+            499.0,
+            288.0
+          ],
+          "target_id": 102
+        },
+        {
+          "depth": "front",
+          "frame": 10,
+          "key": "cura_01",
+          "kind": "heal",
+          "position": [
+            570.0,
+            230.0
+          ],
+          "target_id": 105
+        },
+        {
+          "depth": "front",
+          "frame": 2,
+          "key": "laco_01",
+          "kind": "lasso_knot",
+          "position": [
+            480.0,
+            273.0
+          ],
+          "target_id": 10
+        }
+      ],
+      "pulls": [
+        {
+          "duration": 0.3,
+          "from": [
+            0.25,
+            2.5980761051178
+          ],
+          "remaining": 0.15,
+          "target_id": 10,
+          "to": [
+            -3.75,
+            4.33012676239014
+          ]
+        }
+      ]
+    },
+    {
+      "image": "captures/v1_4_support_preparacao.png",
+      "metadata": "captures/v1_4_support_preparacao.json",
+      "inspected": true,
+      "viewport": [
+        1280,
+        720
+      ],
+      "phase": "preparation",
+      "combat_effects_visible": 0
+    }
+  ],
+  "source_hashes": [
+    {
+      "path": "client/main.gd",
+      "sha256": "AB165C893B0CC641960E79FC94CA151C636A1AAFBC7E668CCF170E471312133F"
+    },
+    {
+      "path": "client/smoke.gd",
+      "sha256": "DC2B48A96182C33F07C175531DF8075CE9C0AD33663AB8C66D208ED43D25D7C0"
+    },
+    {
+      "path": "client/vfx_library.gd",
+      "sha256": "DC3F9C7EE7FDCF9823E89460493B75BE0E427B5B91B1DCEB6F05EEC33548DF63"
+    },
+    {
+      "path": "tests/test_vfx_library.gd",
+      "sha256": "24B960A79BBA23CE6378B63A0CAFB0D61CA9033C4346C17E2D4E9ADA801435CA"
+    },
+    {
+      "path": "tools/capture_preview.gd",
+      "sha256": "0511667C169E6A02E9688EE5820F1DB219966B72390AFF95DE90573525BA32E9"
+    },
+    {
+      "path": "tools/repro_lasso_endpoint.gd",
+      "sha256": "A3D514E16A66AF0B2D07062FAD30830A2283FE970E238E5403EAA4B08167994E"
+    },
+    {
+      "path": "assets/vfx/manifest.json",
+      "sha256": "6D9B583EEA08E07EF9EC3D88B7C50A56C3954206BD5A67911308AFC2440AED9F"
+    }
+  ],
+  "limits": [
+    "Local bot only; no server/network/mobile-device/performance validation",
+    "No human balancing or final user art approval",
+    "No new character walking/attack animations; Caramelo and Zumbi still provisional",
+    "Smoke is a compact ground mist at2x; hex overlay, not image size, indicates actual radius",
+    "Original receipts record export-time state; aggregate manifest records current integration"
+  ],
+  "recoverable_baseline": {
+    "zip": "../Guia_Godot4/Clash_of_Eras_V1_3_local.zip",
+    "sha256": "163FAF7D2A8A247859FEAE82E84D78C4FC001E25B6C7ADD9615D45F8F98F39EA",
+    "files": 455
+  },
+  "current_snapshot_receipt": "../Guia_Godot4/Clash_of_Eras_V1_4_local.zip.json"
+}

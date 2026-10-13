@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "error: a subject description and starting pose only apply to pixminimax animations"
+    }
+  ],
+  "isError": true
+}

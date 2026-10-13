@@ -1,0 +1,13 @@
+{
+  "character_id": "6a5ec045-5930-4955-a684-ef864e5607b9",
+  "mode": "v3",
+  "animation_name": "spear_thrust_v1",
+  "directions": [
+    "east"
+  ],
+  "frame_count": 8,
+  "keep_first_frame": true,
+  "custom_start_frame_url": "https://api.pixellab.ai/mcp/pixel-tools/2a6325bf-ac24-49c7-881a-24e47b7a3adb/image.png",
+  "end_frame_url": "https://api.pixellab.ai/mcp/pixel-tools/2a6325bf-ac24-49c7-881a-24e47b7a3adb/image.png",
+  "action_description": "EAST-facing fast spear thrust and recovery in place, one complete attack returning to the identical starting stance. In the first animated pose, step a little and drive the spear forward horizontally to the right, then retract with bent elbow and shoulder, regain balance and return the spear upright. Strong visible articulation of spear arm, free arm, hips and bent knees. Same detailed adult muscular warrior, dark skin, scars, beige trousers, ankle cuffs and ONE waist dagger. ONE rigid straight spear with its wide metal blade at its far tip, firmly held throughout. Preserve body height, face and pixel shading, keep feet near one ground baseline and torso centered. No camera motion, zoom, rock, ground strip, background, extra weapons, detached body parts, magic, flashes or trails. Transparent background. Crisp consistent pixels."
+}

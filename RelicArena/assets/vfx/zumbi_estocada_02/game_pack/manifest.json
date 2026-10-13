@@ -1,0 +1,98 @@
+{
+ "app": "PixelLab VFX Creator",
+ "name": "Clash of Eras - Zumbi Estocada Critica02",
+ "fps": 24,
+ "frame_ms": 42,
+ "frames": 7,
+ "loop": false,
+ "canvas": {
+  "w": 42,
+  "h": 18
+ },
+ "anchor": {
+  "kind": "origin",
+  "x": 8,
+  "y": 9
+ },
+ "clips": [
+  {
+   "name": "whole",
+   "title": "the whole effect, no sprite",
+   "depth": "both",
+   "loop": false,
+   "start_frame": 0,
+   "frames": 7,
+   "frame": {
+    "w": 34,
+    "h": 12
+   },
+   "sheets": [
+    {
+     "file": "whole.png",
+     "first_frame": 0,
+     "frames": 7,
+     "columns": 3,
+     "rows": 3
+    }
+   ],
+   "offset": {
+    "x": -5,
+    "y": -6
+   }
+  },
+  {
+   "name": "part-risco_critico",
+   "title": "the thrust streak part",
+   "role": "impact",
+   "part": "thrust_streak",
+   "depth": "front",
+   "loop": false,
+   "start_frame": 0,
+   "frames": 7,
+   "frame": {
+    "w": 30,
+    "h": 8
+   },
+   "sheets": [
+    {
+     "file": "part-risco_critico.png",
+     "first_frame": 0,
+     "frames": 7,
+     "columns": 3,
+     "rows": 3
+    }
+   ],
+   "offset": {
+    "x": -1,
+    "y": -4
+   }
+  },
+  {
+   "name": "part-fagulha",
+   "title": "the hit star part",
+   "role": "impact",
+   "part": "hit_star",
+   "depth": "front",
+   "loop": false,
+   "start_frame": 1,
+   "frames": 2,
+   "frame": {
+    "w": 10,
+    "h": 12
+   },
+   "sheets": [
+    {
+     "file": "part-fagulha.png",
+     "first_frame": 0,
+     "frames": 2,
+     "columns": 2,
+     "rows": 1
+    }
+   ],
+   "offset": {
+    "x": -5,
+    "y": -6
+   }
+  }
+ ]
+}

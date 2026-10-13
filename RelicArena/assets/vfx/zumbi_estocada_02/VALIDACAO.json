@@ -1,0 +1,65 @@
+{
+  "zip_crc_paths_and_extracted_bytes_valid": true,
+  "zip_sha256": "842985205fdac04d8d7c61ba55d2ce1906989f0bffa76fc2077ddcdf1a598a08",
+  "files": 5,
+  "bytes": 3666,
+  "rgba_crops_compared_to_original": 7,
+  "clips": [
+    {
+      "clip": "whole",
+      "packed_frames": 7,
+      "start_frame": 0,
+      "frame_size": [
+        34,
+        12
+      ],
+      "offset": {
+        "x": -5,
+        "y": -6
+      },
+      "fps": 24,
+      "loop": false,
+      "sheet_dimensions_valid": true,
+      "unused_cells_transparent": true,
+      "rgba_matches_original": true
+    },
+    {
+      "clip": "part-risco_critico",
+      "packed_frames": 7,
+      "start_frame": 0,
+      "frame_size": [
+        30,
+        8
+      ],
+      "offset": {
+        "x": -1,
+        "y": -4
+      },
+      "fps": 24,
+      "loop": false,
+      "sheet_dimensions_valid": true,
+      "unused_cells_transparent": true,
+      "rgba_matches_original": "separate part; checked dimensions/frames, not compared to composite"
+    },
+    {
+      "clip": "part-fagulha",
+      "packed_frames": 2,
+      "start_frame": 1,
+      "frame_size": [
+        10,
+        12
+      ],
+      "offset": {
+        "x": -5,
+        "y": -6
+      },
+      "fps": 24,
+      "loop": false,
+      "sheet_dimensions_valid": true,
+      "unused_cells_transparent": true,
+      "rgba_matches_original": "separate part; checked dimensions/frames, not compared to composite"
+    }
+  ],
+  "result": "passed",
+  "gameplay_tested": false
+}

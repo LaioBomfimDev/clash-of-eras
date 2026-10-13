@@ -1,0 +1,36 @@
+{
+  "group_id": "4c867d10-7a58-4283-8e8a-d291cce7a2e5",
+  "states": [
+    {
+      "character": {
+        "id": "8634c766-2b2f-4166-961b-1ea182b56419",
+        "name": "Idle",
+        "prompt": "Adult man resembling Elon Musk, tall realistic male proportions, naturally small head and normal limb lengths, about seven heads tall. Short dark swept hair, black T-shirt, dark jacket and trousers, practical boots, holding a compact metallic rocket launcher across the chest with a small red rocket visible. Calm ranged fighter stance. NOT chibi, NOT cartoon, NOT caricature. Restrained pixel art matching a classic 48px Michael Jackson sprite, visible adult height around 43px. Centered full body, both feet and launcher inside canvas. Low top-down elevated arena camera, crisp clustered pixels, medium shading, selective dark outline, upper-left warm lighting. Transparent background, no text, brand logos, scene, glow or explosion.",
+        "size": {
+          "width": 68,
+          "height": 68
+        },
+        "template_id": "mannequin",
+        "directions": 8,
+        "view": "low top-down",
+        "created_at": "2026-10-12T05:11:38.535791+00:00"
+      },
+      "folder": "Idle",
+      "frames": {
+        "rotations": {
+          "south": "Idle/rotations/south.png",
+          "south-east": "Idle/rotations/south-east.png",
+          "east": "Idle/rotations/east.png",
+          "north-east": "Idle/rotations/north-east.png",
+          "north": "Idle/rotations/north.png",
+          "north-west": "Idle/rotations/north-west.png",
+          "west": "Idle/rotations/west.png",
+          "south-west": "Idle/rotations/south-west.png"
+        },
+        "animations": {}
+      }
+    }
+  ],
+  "export_version": "3.1",
+  "export_date": "2026-10-12T05:16:45.885186"
+}

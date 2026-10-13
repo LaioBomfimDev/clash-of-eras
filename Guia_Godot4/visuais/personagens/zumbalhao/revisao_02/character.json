@@ -1,0 +1,1033 @@
+{
+  "date": "2026-10-11",
+  "reference": "Zumbi dos Palmares",
+  "work_name": "Zumbalhão",
+  "role": "Dano corpo a corpo",
+  "status": "refined_south_only",
+  "source_character_id": "40cff10a-fe31-472e-8bd8-94246e5f341e",
+  "source_preview": "../south.png",
+  "workbench_source": "abbcdb62-c43f-4024-913d-8846e58242e7",
+  "workbench_result": "1cb1fa33-8ba4-4518-9210-f8b645de867c",
+  "gallery_id": "096fe9a6-10de-47f7-b96e-80a5f117a46d",
+  "canvas": [
+    68,
+    68
+  ],
+  "visible_bbox": [
+    15,
+    6,
+    52,
+    55
+  ],
+  "changed_pixels": 517,
+  "face_core_unchanged": true,
+  "feet_unchanged": true,
+  "cost_generations": 0,
+  "original_preserved": true,
+  "source_character_rotations_modified": false,
+  "pending": "Inspecionar rotações concluídas, aprovar acabamento e criar animações; original preservado.",
+  "edits": [
+    {
+      "operation": "select_mask",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "name": "clear0",
+      "selector": {
+        "kind": "rectangle",
+        "region": [
+          20,
+          7,
+          25,
+          30
+        ]
+      },
+      "reason": "Retirar lâmina fina anterior"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "mask": "clear0",
+      "points": [
+        [
+          34,
+          34
+        ]
+      ],
+      "size": 64,
+      "shape": "square",
+      "mode": "erase",
+      "reason": "Retirar lâmina fina anterior"
+    },
+    {
+      "operation": "select_mask",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "name": "clear2",
+      "selector": {
+        "kind": "rectangle",
+        "region": [
+          25,
+          29,
+          44,
+          47
+        ]
+      },
+      "reason": "Redesenhar corpo mais largo sem mudar rosto e pés"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "mask": "clear2",
+      "points": [
+        [
+          34,
+          34
+        ]
+      ],
+      "size": 64,
+      "shape": "square",
+      "mode": "erase",
+      "reason": "Redesenhar corpo mais largo sem mudar rosto e pés"
+    },
+    {
+      "operation": "select_mask",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "name": "shape4",
+      "selector": {
+        "kind": "polygon",
+        "points": [
+          [
+            42,
+            14
+          ],
+          [
+            47,
+            13
+          ],
+          [
+            51,
+            16
+          ],
+          [
+            48,
+            19
+          ],
+          [
+            51,
+            24
+          ],
+          [
+            46,
+            23
+          ],
+          [
+            43,
+            18
+          ]
+        ]
+      },
+      "reason": "Faixa com nó e pontas legíveis"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "mask": "shape4",
+      "points": [
+        [
+          34,
+          34
+        ]
+      ],
+      "size": 64,
+      "shape": "square",
+      "color": "#040201",
+      "reason": "Faixa com nó e pontas legíveis"
+    },
+    {
+      "operation": "select_mask",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "name": "shape6",
+      "selector": {
+        "kind": "polygon",
+        "points": [
+          [
+            43,
+            15
+          ],
+          [
+            47,
+            14
+          ],
+          [
+            49,
+            16
+          ],
+          [
+            46,
+            18
+          ],
+          [
+            49,
+            22
+          ],
+          [
+            46,
+            21
+          ],
+          [
+            44,
+            17
+          ]
+        ]
+      },
+      "reason": "Preservar vermelho da faixa"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "mask": "shape6",
+      "points": [
+        [
+          34,
+          34
+        ]
+      ],
+      "size": 64,
+      "shape": "square",
+      "color": "#d6180f",
+      "reason": "Preservar vermelho da faixa"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "points": [
+        [
+          46,
+          15
+        ],
+        [
+          47,
+          16
+        ]
+      ],
+      "color": "#f3d52a",
+      "size": 1,
+      "shape": "square",
+      "reason": "Realce discreto do nó"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "points": [
+        [
+          21,
+          18
+        ],
+        [
+          27,
+          41
+        ],
+        [
+          27,
+          49
+        ]
+      ],
+      "color": "#040201",
+      "size": 4,
+      "shape": "square",
+      "reason": "Cabo largo separado do corpo"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "points": [
+        [
+          21,
+          18
+        ],
+        [
+          27,
+          41
+        ],
+        [
+          27,
+          48
+        ]
+      ],
+      "color": "#7d3f2a",
+      "size": 2,
+      "shape": "square",
+      "reason": "Madeira com espessura legível"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "points": [
+        [
+          21,
+          19
+        ],
+        [
+          26,
+          40
+        ]
+      ],
+      "color": "#b46c4d",
+      "size": 1,
+      "shape": "square",
+      "reason": "Luz do cabo"
+    },
+    {
+      "operation": "select_mask",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "name": "shape12",
+      "selector": {
+        "kind": "polygon",
+        "points": [
+          [
+            18,
+            6
+          ],
+          [
+            24,
+            10
+          ],
+          [
+            26,
+            16
+          ],
+          [
+            24,
+            21
+          ],
+          [
+            20,
+            23
+          ],
+          [
+            16,
+            19
+          ],
+          [
+            15,
+            12
+          ]
+        ]
+      },
+      "reason": "Lâmina grande com contorno contínuo"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "mask": "shape12",
+      "points": [
+        [
+          34,
+          34
+        ]
+      ],
+      "size": 64,
+      "shape": "square",
+      "color": "#040201",
+      "reason": "Lâmina grande com contorno contínuo"
+    },
+    {
+      "operation": "select_mask",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "name": "shape14",
+      "selector": {
+        "kind": "polygon",
+        "points": [
+          [
+            18,
+            8
+          ],
+          [
+            23,
+            11
+          ],
+          [
+            24,
+            16
+          ],
+          [
+            22,
+            20
+          ],
+          [
+            20,
+            21
+          ],
+          [
+            17,
+            18
+          ],
+          [
+            17,
+            12
+          ]
+        ]
+      },
+      "reason": "Lâmina na paleta original"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "mask": "shape14",
+      "points": [
+        [
+          34,
+          34
+        ]
+      ],
+      "size": 64,
+      "shape": "square",
+      "color": "#292827",
+      "reason": "Lâmina na paleta original"
+    },
+    {
+      "operation": "select_mask",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "name": "shape16",
+      "selector": {
+        "kind": "polygon",
+        "points": [
+          [
+            18,
+            9
+          ],
+          [
+            21,
+            12
+          ],
+          [
+            22,
+            17
+          ],
+          [
+            20,
+            20
+          ],
+          [
+            18,
+            17
+          ]
+        ]
+      },
+      "reason": "Lâmina clara destacada na areia"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "mask": "shape16",
+      "points": [
+        [
+          34,
+          34
+        ]
+      ],
+      "size": 64,
+      "shape": "square",
+      "color": "#e0e0e3",
+      "reason": "Lâmina clara destacada na areia"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "points": [
+        [
+          20,
+          22
+        ],
+        [
+          23,
+          21
+        ]
+      ],
+      "color": "#f3d52a",
+      "size": 2,
+      "shape": "square",
+      "reason": "Encaixe dourado da lança"
+    },
+    {
+      "operation": "select_mask",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "name": "shape19",
+      "selector": {
+        "kind": "polygon",
+        "points": [
+          [
+            29,
+            29
+          ],
+          [
+            38,
+            29
+          ],
+          [
+            42,
+            32
+          ],
+          [
+            44,
+            38
+          ],
+          [
+            44,
+            44
+          ],
+          [
+            40,
+            45
+          ],
+          [
+            38,
+            42
+          ],
+          [
+            28,
+            42
+          ],
+          [
+            26,
+            45
+          ],
+          [
+            23,
+            44
+          ],
+          [
+            24,
+            38
+          ],
+          [
+            25,
+            33
+          ]
+        ]
+      },
+      "reason": "Ombros e braços largos"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "mask": "shape19",
+      "points": [
+        [
+          34,
+          34
+        ]
+      ],
+      "size": 64,
+      "shape": "square",
+      "color": "#040201",
+      "reason": "Ombros e braços largos"
+    },
+    {
+      "operation": "select_mask",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "name": "shape21",
+      "selector": {
+        "kind": "polygon",
+        "points": [
+          [
+            29,
+            30
+          ],
+          [
+            37,
+            30
+          ],
+          [
+            40,
+            33
+          ],
+          [
+            40,
+            39
+          ],
+          [
+            38,
+            41
+          ],
+          [
+            28,
+            41
+          ],
+          [
+            27,
+            36
+          ],
+          [
+            27,
+            33
+          ]
+        ]
+      },
+      "reason": "Massa do tronco"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "mask": "shape21",
+      "points": [
+        [
+          34,
+          34
+        ]
+      ],
+      "size": 64,
+      "shape": "square",
+      "color": "#b46c4d",
+      "reason": "Massa do tronco"
+    },
+    {
+      "operation": "select_mask",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "name": "shape23",
+      "selector": {
+        "kind": "polygon",
+        "points": [
+          [
+            38,
+            32
+          ],
+          [
+            41,
+            33
+          ],
+          [
+            43,
+            39
+          ],
+          [
+            43,
+            42
+          ],
+          [
+            40,
+            43
+          ],
+          [
+            39,
+            38
+          ]
+        ]
+      },
+      "reason": "Braço em sombra"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "mask": "shape23",
+      "points": [
+        [
+          34,
+          34
+        ]
+      ],
+      "size": 64,
+      "shape": "square",
+      "color": "#7d3f2a",
+      "reason": "Braço em sombra"
+    },
+    {
+      "operation": "select_mask",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "name": "shape25",
+      "selector": {
+        "kind": "polygon",
+        "points": [
+          [
+            26,
+            33
+          ],
+          [
+            28,
+            33
+          ],
+          [
+            28,
+            38
+          ],
+          [
+            26,
+            43
+          ],
+          [
+            24,
+            42
+          ],
+          [
+            25,
+            38
+          ]
+        ]
+      },
+      "reason": "Braço esquerdo mais forte"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "mask": "shape25",
+      "points": [
+        [
+          34,
+          34
+        ]
+      ],
+      "size": 64,
+      "shape": "square",
+      "color": "#b46c4d",
+      "reason": "Braço esquerdo mais forte"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "points": [
+        [
+          25,
+          39
+        ],
+        [
+          25,
+          42
+        ]
+      ],
+      "color": "#a96145",
+      "size": 2,
+      "shape": "square",
+      "reason": "Sombra no braço"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "points": [
+        [
+          30,
+          33
+        ],
+        [
+          33,
+          34
+        ]
+      ],
+      "color": "#7d3f2a",
+      "size": 1,
+      "shape": "square",
+      "reason": "Separar peitoral"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "points": [
+        [
+          35,
+          34
+        ],
+        [
+          38,
+          33
+        ]
+      ],
+      "color": "#7d3f2a",
+      "size": 1,
+      "shape": "square",
+      "reason": "Separar peitoral"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "points": [
+        [
+          34,
+          36
+        ],
+        [
+          34,
+          38
+        ]
+      ],
+      "color": "#a96145",
+      "size": 1,
+      "shape": "square",
+      "reason": "Sombra do tronco"
+    },
+    {
+      "operation": "select_mask",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "name": "shape31",
+      "selector": {
+        "kind": "polygon",
+        "points": [
+          [
+            27,
+            40
+          ],
+          [
+            40,
+            40
+          ],
+          [
+            41,
+            47
+          ],
+          [
+            36,
+            48
+          ],
+          [
+            34,
+            45
+          ],
+          [
+            32,
+            48
+          ],
+          [
+            27,
+            47
+          ]
+        ]
+      },
+      "reason": "Shorts com duas pernas claras"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "mask": "shape31",
+      "points": [
+        [
+          34,
+          34
+        ]
+      ],
+      "size": 64,
+      "shape": "square",
+      "color": "#040201",
+      "reason": "Shorts com duas pernas claras"
+    },
+    {
+      "operation": "select_mask",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "name": "shape33",
+      "selector": {
+        "kind": "polygon",
+        "points": [
+          [
+            28,
+            41
+          ],
+          [
+            39,
+            41
+          ],
+          [
+            40,
+            46
+          ],
+          [
+            36,
+            46
+          ],
+          [
+            34,
+            43
+          ],
+          [
+            32,
+            46
+          ],
+          [
+            28,
+            46
+          ]
+        ]
+      },
+      "reason": "Preservar roupa vermelha"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "mask": "shape33",
+      "points": [
+        [
+          34,
+          34
+        ]
+      ],
+      "size": 64,
+      "shape": "square",
+      "color": "#d6180f",
+      "reason": "Preservar roupa vermelha"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "points": [
+        [
+          37,
+          43
+        ],
+        [
+          38,
+          46
+        ]
+      ],
+      "color": "#8a0f08",
+      "size": 2,
+      "shape": "square",
+      "reason": "Volume nos shorts"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "points": [
+        [
+          28,
+          40
+        ],
+        [
+          39,
+          40
+        ]
+      ],
+      "color": "#f3d52a",
+      "size": 1,
+      "shape": "square",
+      "reason": "Cinto característico"
+    },
+    {
+      "operation": "brush",
+      "layer": "image",
+      "frames": [
+        1
+      ],
+      "points": [
+        [
+          27,
+          41
+        ],
+        [
+          26,
+          43
+        ]
+      ],
+      "color": "#b46c4d",
+      "size": 2,
+      "shape": "square",
+      "reason": "Mão segura a lança"
+    }
+  ],
+  "eight_direction_character_id": "7129a655-427d-4ca9-84bb-13ad3ddd4682",
+  "eight_direction_metadata": "rotacoes/character.json"
+}

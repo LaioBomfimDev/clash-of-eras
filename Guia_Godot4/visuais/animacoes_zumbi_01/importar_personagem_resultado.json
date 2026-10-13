@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 6a5ec045-5930-4955-a684-ef864e5607b9\nname: Clash of Eras - Zumbi aprovado animacoes\nmode: v3 import (0.25 generations, all 8 directions yours, nothing generated)\nbody: humanoid\nsize: 128x128px\nview: low top-down\nstyle: from reference image (outline/detail hints ignored)\nstatus: processing (~3-5 min)\n\nhint: get_character(character_id=\"6a5ec045-5930-4955-a684-ef864e5607b9\")"
+    }
+  ],
+  "isError": false
+}

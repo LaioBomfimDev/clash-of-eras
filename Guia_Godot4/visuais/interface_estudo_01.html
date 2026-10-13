@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Relic Arena — estudo de interface 01</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,sans-serif;background:#10171b;color:#eee9d9}
+*{box-sizing:border-box}body{margin:0;padding:20px}main{max-width:1440px;margin:auto}
+h1{font-size:23px;margin:0 0 7px}p{line-height:1.5;margin:8px 0}a{color:#9ce1dc}
+.toolbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:18px 0}
+button,select{font:inherit;color:inherit;background:#203337;border:1px solid #887b5d;border-radius:5px;padding:10px;cursor:pointer}
+button:hover{background:#30474b}button:focus-visible,select:focus-visible{outline:3px solid #f1d47c;outline-offset:2px}
+button[aria-selected="true"],button[aria-pressed="true"]{border:2px solid #f1d47c;background:#334341}
+.notice{font-size:13px;color:#b9c9c8}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:16px;align-items:start}
+.screen{position:relative;aspect-ratio:16/9;background:#17191c;border:1px solid #817558;overflow:hidden}
+.screen.wide{aspect-ratio:20/9}.background{position:absolute;inset:0 0 25%;width:100%;height:75%;object-fit:cover;object-position:center 65%;image-rendering:pixelated}
+.panel{background:#14292beF;border:1px solid #9b8960;color:#fff4d7;box-shadow:0 2px 5px #0008}
+.team{position:absolute;top:3%;width:21%;min-height:56px;display:grid;gap:5px;padding:8px;font-size:12px;text-align:left}
+.team.me{left:2%}.team.enemy{right:2%;text-align:right}.lives{display:flex;align-items:center;gap:5px}.lives img{width:16px;height:16px;image-rendering:pixelated}.enemy .lives{justify-content:flex-end}
+.round{position:absolute;top:2%;left:37%;width:26%;padding:6px;text-align:center;font-size:12px}
+.round strong{display:block;font-size:16px;margin-bottom:4px}
+.traits{position:absolute;top:22%;left:1.5%;width:15%;padding:7px;font-size:11px}
+.traits h2{font-size:12px;margin:0 0 7px}.traits button{display:block;width:100%;padding:8px 3px;margin:5px 0;font-size:11px;text-align:left}
+.traits.compact{width:8%}.traits.compact .trait-name{display:none}.traits.compact h2{display:none}
+.field{position:absolute;left:23%;top:29%;width:57%;height:41%;overflow:visible}
+.field polygon{fill:#f1ddb384;stroke:#fff5ce;stroke-width:.55}
+.field polygon.own{fill:#95bdbb65}.field polygon.chosen{fill:#e5c769d9;stroke:#263e42;stroke-width:1.4}
+.field polygon[role="button"]{cursor:pointer}.field polygon:focus{outline:none;stroke:#fff;stroke-width:2}
+.bottom{position:absolute;bottom:0;left:0;right:0;height:25%;min-height:125px;display:grid;grid-template-columns:16% 18% 1fr;gap:7px;padding:8px;background:#10191dee;border-top:1px solid #9b8960}
+.bag{padding:6px}.bag h2{font-size:11px;margin:0 0 5px}.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+.slots button{padding:6px 0;font-size:11px;background:#203132}.actions{display:grid;gap:5px;align-content:center}.actions button{font-size:11px;padding:8px 4px;min-height:37px}
+.offers{min-width:0;display:flex;flex-direction:column;gap:5px}.shop-head{display:flex;gap:7px;align-items:center;justify-content:space-between;font-size:10px}
+.shop-label{font-size:11px;color:#f1d47c}.wallet{color:#e1d09c;white-space:nowrap}
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;flex:1}
+.card{text-align:left;display:flex;flex-direction:column;justify-content:space-between;padding:7px;font-size:11px;min-width:0}
+.card span{color:#a7c0bc;font-size:10px}.card small{color:#f1d47c}
+.card img{width:32px;height:32px;object-fit:contain;align-self:center;image-rendering:pixelated}
+.inspector{padding:16px;background:#192329;border:1px solid #405153;border-radius:7px}
+.inspector h2{font-size:18px;margin:0 0 10px}.inspector p{font-size:14px}.status{margin-top:15px;padding-top:12px;border-top:1px solid #405153;color:#a9d4d0}
+.legend{font-size:13px;color:#afbebc;margin-top:12px}.screen.combat .bottom{height:12%;min-height:52px;display:block}
+.screen.combat .bottom>section{display:none}.combat-note{display:none;font-size:13px;text-align:center;padding:10px}
+.screen.combat .combat-note{display:block}.screen.combat .field{height:47%}
+@media(max-width:1050px){.workspace{grid-template-columns:1fr}.inspector{min-height:145px}.toolbar{font-size:13px}.team{font-size:11px}.wallet{display:none}}
+</style>
+</head>
+<body><main>
+<h1>Relic Arena · estudo de interface</h1>
+<p>Referência de organização: loja embaixo, sinergias à esquerda e estado da rodada no topo.</p>
+<p class="notice">ESTUDO TÉCNICO · painéis provisórios · sem compras, sorteios ou combate · arte final da interface prevista no PixelLab.</p>
+<div class="toolbar">
+<label>Moldura <select id="format"><option value="normal">PC / paisagem 16:9</option><option value="wide">Paisagem ampla 20:9</option></select></label>
+<button id="phase" type="button">Ver proposta durante combate</button>
+<button id="toggle-traits" type="button" aria-pressed="false">Recolher sinergias</button>
+<a href="../INTERFACE_PROPOSTA_01.md">Ler proposta completa</a>
+<a href="referencias/arena_interface_referencia_usuario_04.png">Ver referência do usuário</a>
+<a href="personagens_lote_01.html">Ver personagens do PixelLab</a>
+</div>
+<div class="workspace">
+<div class="screen" id="screen" aria-label="Estudo esquemático da interface em paisagem">
+<img class="background" src="arena_referencia_limpa_02.png" alt="Estudo de coliseu com arquibancadas vazias e areia clara, editado no PixelLab">
+<button class="team me panel" data-info="own"><strong>SUA EQUIPE</strong><span class="lives" role="img" aria-label="Quatro vidas"><img src="ui/vida_coracao.png" alt="" width="16" height="16"><img src="ui/vida_coracao.png" alt="" width="16" height="16"><img src="ui/vida_coracao.png" alt="" width="16" height="16"><img src="ui/vida_coracao.png" alt="" width="16" height="16"></span></button>
+<button class="team enemy panel" data-info="enemy"><strong>OPONENTE</strong><span class="lives" role="img" aria-label="Quatro vidas"><img src="ui/vida_coracao.png" alt="" width="16" height="16"><img src="ui/vida_coracao.png" alt="" width="16" height="16"><img src="ui/vida_coracao.png" alt="" width="16" height="16"><img src="ui/vida_coracao.png" alt="" width="16" height="16"></span></button>
+<div class="round panel"><strong id="phase-label">PREPARAÇÃO</strong><span>Rodada — · tempo a definir</span></div>
+<aside class="traits panel" id="traits"><h2>SINERGIAS</h2>
+<button data-info="traits"><span class="trait-name">Grupo A · </span>2 / ?</button>
+<button data-info="traits"><span class="trait-name">Grupo B · </span>1 / ?</button>
+<button data-info="traits"><span class="trait-name">Grupo C · </span>1 / ?</button>
+</aside>
+<svg class="field" id="field" viewBox="88 68 175 108" aria-label="Tabuleiro de estudo, oito colunas e oito fileiras"></svg>
+<div class="bottom">
+<section class="bag panel"><h2>BOLSA · exemplo</h2><div class="slots">
+<button data-info="bag" aria-label="Espaço ilustrativo de item 1">1</button><button data-info="bag" aria-label="Espaço ilustrativo de item 2">2</button><button data-info="bag" aria-label="Espaço ilustrativo de item 3">3</button><button data-info="bag" aria-label="Espaço ilustrativo de item 4">4</button><button data-info="bag" aria-label="Espaço ilustrativo de item 5">5</button><button data-info="bag" aria-label="Espaço ilustrativo de item 6">6</button>
+</div></section>
+<section class="actions"><button id="refresh-shop" type="button" title="Valor de teste; nenhuma moeda é cobrada neste estudo">Atualizar loja · 2 moedas</button><button data-info="capacity">Ampliar equipe</button></section>
+<section class="offers"><div class="shop-head"><strong class="shop-label">LOJA · ITENS + HERÓIS</strong><span class="wallet">Moedas — · Equipe — / —</span></div><div id="cards" class="cards"></div></section>
+<p class="combat-note">COMBATE · recolhimento da loja é uma proposta · sem intervenção ativa definida</p>
+</div>
+</div>
+<aside class="inspector" aria-live="polite"><h2 id="detail-title">Como usar este estudo</h2><p id="detail-text">Selecione painéis, ofertas e casas para consultar as funções propostas. Atualizar loja alterna exemplos de itens e heróis juntos. Nada é comprado ou recrutado.</p><p class="status" id="status">Início com 3 ou 4 heróis, ainda a decidir. Personagens grátis; moedas para itens e capacidade.</p></aside>
+</div>
+<p class="legend">Os 64 hexágonos e os controles são marcações de estudo. Dois itens, dois heróis, seis espaços e grupos A/B/C são exemplos; quantidades finais não estão definidas. Renovar a loja por 2 moedas é um valor de teste, sujeito a ajuste; o botão alterna conjuntos fixos, sem sorteio ou cobrança real. As molduras não simulam um aparelho físico; toque e renderização ainda precisam de revisão.</p>
+</main>
+<script>
+"use strict";
+const CELLS = [{"r":0,"c":0,"points":[[159,76],[163,80],[158,85],[149,84],[145,79],[150,75]]},{"r":0,"c":1,"points":[[172,80],[176,86],[170,89],[162,89],[158,85],[163,80]]},{"r":0,"c":2,"points":[[185,86],[189,90],[183,95],[175,94],[170,89],[176,86]]},{"r":0,"c":3,"points":[[198,91],[202,96],[196,100],[187,100],[183,95],[189,90]]},{"r":0,"c":4,"points":[[211,96],[215,101],[209,105],[200,105],[196,100],[202,96]]},{"r":0,"c":5,"points":[[224,102],[228,106],[222,111],[213,110],[209,105],[215,101]]},{"r":0,"c":6,"points":[[236,107],[241,112],[235,115],[226,115],[222,111],[228,106]]},{"r":0,"c":7,"points":[[249,112],[253,116],[248,121],[239,121],[235,115],[241,112]]},{"r":1,"c":0,"points":[[158,85],[162,89],[156,93],[147,93],[143,89],[149,84]]},{"r":1,"c":1,"points":[[170,89],[175,94],[169,99],[160,98],[156,93],[162,89]]},{"r":1,"c":2,"points":[[183,95],[187,100],[182,104],[173,103],[169,99],[175,94]]},{"r":1,"c":3,"points":[[196,100],[200,105],[195,109],[186,109],[182,104],[187,100]]},{"r":1,"c":4,"points":[[209,105],[213,110],[208,115],[199,114],[195,109],[200,105]]},{"r":1,"c":5,"points":[[222,111],[226,115],[222,120],[212,119],[208,115],[213,110]]},{"r":1,"c":6,"points":[[235,115],[239,121],[234,125],[225,125],[222,120],[226,115]]},{"r":1,"c":7,"points":[[248,121],[252,126],[247,130],[238,129],[234,125],[239,121]]},{"r":2,"c":0,"points":[[143,89],[147,93],[142,97],[133,97],[129,92],[134,88]]},{"r":2,"c":1,"points":[[156,93],[160,98],[155,102],[146,102],[142,97],[147,93]]},{"r":2,"c":2,"points":[[169,99],[173,103],[168,108],[159,107],[155,102],[160,98]]},{"r":2,"c":3,"points":[[182,104],[186,109],[181,113],[172,113],[168,108],[173,103]]},{"r":2,"c":4,"points":[[195,109],[199,114],[194,118],[185,118],[181,113],[186,109]]},{"r":2,"c":5,"points":[[208,115],[212,119],[207,124],[197,123],[194,118],[199,114]]},{"r":2,"c":6,"points":[[222,120],[225,125],[220,129],[210,129],[207,124],[212,119]]},{"r":2,"c":7,"points":[[234,125],[238,129],[233,134],[223,134],[220,129],[225,125]]},{"r":3,"c":0,"points":[[142,97],[146,102],[141,106],[131,106],[128,102],[133,97]]},{"r":3,"c":1,"points":[[155,102],[159,107],[154,112],[144,111],[141,106],[146,102]]},{"r":3,"c":2,"points":[[168,108],[172,113],[167,117],[157,116],[154,112],[159,107]]},{"r":3,"c":3,"points":[[181,113],[185,118],[180,122],[170,122],[167,117],[172,113]]},{"r":3,"c":4,"points":[[194,118],[197,123],[193,128],[183,127],[180,122],[185,118]]},{"r":3,"c":5,"points":[[207,124],[210,129],[206,133],[196,132],[193,128],[197,123]]},{"r":3,"c":6,"points":[[220,129],[223,134],[219,138],[209,138],[206,133],[210,129]]},{"r":3,"c":7,"points":[[233,134],[236,139],[231,143],[222,142],[219,138],[223,134]]},{"r":4,"c":0,"points":[[128,102],[131,106],[127,110],[117,110],[114,105],[119,101]]},{"r":4,"c":1,"points":[[141,106],[144,111],[140,115],[130,115],[127,110],[131,106]]},{"r":4,"c":2,"points":[[154,112],[157,116],[153,121],[143,120],[140,115],[144,111]]},{"r":4,"c":3,"points":[[167,117],[170,122],[165,126],[156,126],[153,121],[157,116]]},{"r":4,"c":4,"points":[[180,122],[183,127],[178,131],[169,131],[165,126],[170,122]]},{"r":4,"c":5,"points":[[193,128],[196,132],[191,137],[182,136],[178,131],[183,127]]},{"r":4,"c":6,"points":[[206,133],[209,138],[204,142],[195,142],[191,137],[196,132]]},{"r":4,"c":7,"points":[[219,138],[222,142],[217,147],[208,147],[204,142],[209,138]]},{"r":5,"c":0,"points":[[127,110],[130,115],[125,119],[116,119],[112,115],[117,110]]},{"r":5,"c":1,"points":[[140,115],[143,120],[138,125],[129,124],[125,119],[130,115]]},{"r":5,"c":2,"points":[[153,121],[156,126],[151,130],[142,129],[138,125],[143,120]]},{"r":5,"c":3,"points":[[165,126],[169,131],[164,135],[155,135],[151,130],[156,126]]},{"r":5,"c":4,"points":[[178,131],[182,136],[177,141],[168,140],[164,135],[169,131]]},{"r":5,"c":5,"points":[[191,137],[195,142],[190,146],[181,145],[177,141],[182,136]]},{"r":5,"c":6,"points":[[204,142],[208,147],[203,151],[194,151],[190,146],[195,142]]},{"r":5,"c":7,"points":[[217,147],[221,152],[216,156],[207,155],[203,151],[208,147]]},{"r":6,"c":0,"points":[[112,115],[116,119],[111,123],[102,123],[98,118],[103,114]]},{"r":6,"c":1,"points":[[125,119],[129,124],[124,129],[115,129],[111,123],[116,119]]},{"r":6,"c":2,"points":[[138,125],[142,129],[137,134],[128,133],[124,129],[129,124]]},{"r":6,"c":3,"points":[[151,130],[155,135],[150,139],[141,139],[137,134],[142,129]]},{"r":6,"c":4,"points":[[164,135],[168,140],[163,144],[154,144],[150,139],[155,135]]},{"r":6,"c":5,"points":[[177,141],[181,145],[175,150],[167,149],[163,144],[168,140]]},{"r":6,"c":6,"points":[[190,146],[194,151],[188,155],[180,155],[175,150],[181,145]]},{"r":6,"c":7,"points":[[203,151],[207,155],[201,160],[192,159],[188,155],[194,151]]},{"r":7,"c":0,"points":[[111,123],[115,129],[109,132],[101,132],[97,128],[102,123]]},{"r":7,"c":1,"points":[[124,129],[128,133],[122,138],[114,137],[109,132],[115,129]]},{"r":7,"c":2,"points":[[137,134],[141,139],[135,143],[126,142],[122,138],[128,133]]},{"r":7,"c":3,"points":[[150,139],[154,144],[148,148],[139,148],[135,143],[141,139]]},{"r":7,"c":4,"points":[[163,144],[167,149],[161,154],[152,153],[148,148],[154,144]]},{"r":7,"c":5,"points":[[175,150],[180,155],[174,158],[165,158],[161,154],[167,149]]},{"r":7,"c":6,"points":[[188,155],[192,159],[187,164],[178,164],[174,158],[180,155]]},{"r":7,"c":7,"points":[[201,160],[205,165],[200,169],[191,169],[187,164],[192,159]]}];
+const screen = document.getElementById("screen");
+const field = document.getElementById("field");
+const details = {
+own: ["Sua equipe", "Quatro corações representam as quatro vidas do jogador. A capacidade mostra quantas unidades podem entrar em campo; não é o nível da carta fora da partida."],
+enemy: ["Formação da rodada anterior", "Proposta: abrir o histórico permitido, com a rodada identificada. Na primeira rodada ainda não há formação anterior. Mudanças atuais e inventário privado não são exibidos neste estudo."],
+traits: ["Detalhes de sinergia", "Proposta: tocar abre efeito, membros e próximo patamar. Grupos A/B/C são marcadores; os grupos e números finais serão definidos depois."],
+bag: ["Bolsa de itens", "Proposta: selecionar um item, consultar efeito e receita, selecionar uma unidade e confirmar a aplicação. O tamanho da bolsa e os limites continuam pendentes."],
+refresh: ["Atualizar loja conjunta", "Valor de teste: 2 moedas por renovação, sujeito a ajuste. Itens e heróis do deck aparecem juntos. Neste estudo o botão apenas alterna três conjuntos fixos, sem sorteio ou cobrança real. Limites de renovação e quantidade de heróis recrutáveis por renovação/rodada continuam pendentes."],
+capacity: ["Ampliar equipe", "Comprar mais uma vaga com moedas, apresentando preço e novo limite antes de confirmar. Custos e teto ainda são hipóteses. O nível da carta continua fora da partida."]
+};
+function showInfo(title, text) {
+ document.getElementById("detail-title").textContent = title;
+ document.getElementById("detail-text").textContent = text;
+}
+document.querySelectorAll("[data-info]").forEach(button => {
+ button.addEventListener("click", () => showInfo(...details[button.dataset.info]));
+});
+const SHOP_EXAMPLES = [
+ [{name:"Item A",kind:"item"},{name:"Michael Jackson",kind:"hero",role:"Suporte",image:"personagens/michael_existente/south.png"},{name:"Item B",kind:"item"},{name:"Caramelo",kind:"hero",role:"Assassino",image:"personagens/caramelo/south.png"}],
+ [{name:"Zumbi dos Palmares",kind:"hero",role:"Dano corpo a corpo",image:"personagens/zumbalhao/revisao_02/south.png"},{name:"Item C",kind:"item"},{name:"Barack Obama",kind:"hero",role:"Tanque",image:"personagens/obamuralha/revisao_02/south.png"},{name:"Item D",kind:"item"}],
+ [{name:"Item E",kind:"item"},{name:"Neymar Jr.",kind:"hero",role:"DPS à distância",image:"personagens/neydrama/revisao_02/south.png"},{name:"Item F",kind:"item"},{name:"Michael Jackson",kind:"hero",role:"Suporte",image:"personagens/michael_existente/south.png"}]
+];
+let shopExampleIndex = 0;
+function renderCards() {
+ const cards = document.getElementById("cards"); cards.replaceChildren();
+ SHOP_EXAMPLES[shopExampleIndex].forEach(offer => {
+  const isItem=offer.kind==="item";
+  const button=document.createElement("button"); button.type="button"; button.className="card";
+  const title=document.createElement("strong"); title.textContent=offer.name;
+  const subtitle=document.createElement("span"); subtitle.textContent=isItem?"ITEM · efeito a definir":"HERÓI · "+offer.role;
+  const cost=document.createElement("small"); cost.textContent=isItem?"Preço a definir":"GRÁTIS";
+  button.append(title);
+  if(offer.image){const portrait=document.createElement("img");portrait.src=offer.image;portrait.alt="Prévia sul do personagem no PixelLab";button.append(portrait);}
+  button.append(subtitle,cost);
+  button.addEventListener("click",()=>showInfo(offer.name,isItem?"Oferta ilustrativa de item na loja conjunta. Efeito, preço e receita serão definidos. Nenhuma compra foi realizada.":"Herói gratuito oferecido junto dos itens. Você pode escolher incorporá-lo ou ignorá-lo. Limite de recrutamento e destino com o campo cheio ainda precisam ser definidos; entrar em campo exige vaga. Nenhuma unidade foi concedida."));
+  cards.append(button);
+ });
+}
+document.getElementById("refresh-shop").addEventListener("click",()=>{
+ shopExampleIndex=(shopExampleIndex+1)%SHOP_EXAMPLES.length;
+ renderCards(); showInfo(...details.refresh);
+});
+for (const cell of CELLS) {
+ const p=document.createElementNS("http://www.w3.org/2000/svg","polygon");
+ p.setAttribute("points",cell.points.map(point=>point.join(",")).join(" "));
+ const own=cell.r>=4; p.classList.toggle("own",own);
+ p.setAttribute("role","button"); p.setAttribute("tabindex","0");
+ p.setAttribute("aria-label","Casa "+(cell.r+1)+":"+(cell.c+1)+(own?", área própria":", área adversária"));
+ const select=()=>{field.querySelectorAll(".chosen").forEach(el=>el.classList.remove("chosen"));p.classList.add("chosen");showInfo(own?"Casa da sua preparação":"Casa adversária",own?"Proposta: selecionar uma unidade e tocar no destino dentro das quatro fileiras próprias. Casas ocupadas e reserva ainda precisam de regras. Este clique apenas destaca a casa.":"Esta casa não pertence à sua área de preparação. O estudo permite inspecioná-la, sem posicionar unidades ou mostrar informação privada.");};
+ p.addEventListener("click",select);p.addEventListener("keydown",event=>{if(event.key==="Enter"||event.key===" "){event.preventDefault();select();}});
+ field.append(p);
+}
+document.getElementById("format").addEventListener("change",event=>screen.classList.toggle("wide",event.target.value==="wide"));
+document.getElementById("toggle-traits").addEventListener("click",event=>{
+ const compact=document.getElementById("traits").classList.toggle("compact");
+ event.currentTarget.setAttribute("aria-pressed",String(compact));
+ event.currentTarget.textContent=compact?"Expandir sinergias":"Recolher sinergias";
+});
+document.getElementById("phase").addEventListener("click",event=>{
+ const combat=screen.classList.toggle("combat");
+ document.getElementById("phase-label").textContent=combat?"COMBATE":"PREPARAÇÃO";
+ event.currentTarget.textContent=combat?"Voltar à preparação":"Ver proposta durante combate";
+ showInfo("Troca de fase ilustrativa", "A loja recolhida no combate é uma proposta de leitura. Não há relógio, economia ou simulação de combate neste arquivo.");
+});
+renderCards();
+</script>
+</body></html>

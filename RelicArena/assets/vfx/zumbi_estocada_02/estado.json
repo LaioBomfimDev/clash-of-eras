@@ -1,0 +1,17 @@
+{
+  "state": "exported_validated",
+  "step_id": "6aed2cf5-f3f1-4ce0-81d7-709d3fb0136e",
+  "method": "PixelLab vfx_workbench deterministic free editor",
+  "ai_generation_calls": 0,
+  "shared_manifest_modified": true,
+  "gameplay_modified": false,
+  "last_response": "requests\\10_export_result.json",
+  "effect_id": "2e362001-68de-4e23-85db-cfc090ce9588",
+  "export_image_id": "c0920c87-53ee-488c-a4fe-2c7da162b98c",
+  "effect_url": "https://pixellab.ai/create-vfx?effect=2e362001-68de-4e23-85db-cfc090ce9588",
+  "receipt": "exportacao.json",
+  "zip_sha256": "842985205fdac04d8d7c61ba55d2ce1906989f0bffa76fc2077ddcdf1a598a08",
+  "manifest_registered": true,
+  "manifest_key": "zumbi_estocada_critica",
+  "runtime_integrated": false
+}

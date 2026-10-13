@@ -1,0 +1,36 @@
+{
+  "group_id": "7816204e-ee6d-4f60-8c16-d0eecac92d27",
+  "states": [
+    {
+      "character": {
+        "id": "82eace58-7128-4f15-97ce-1944a5702428",
+        "name": "Idle",
+        "prompt": "Funny strongly caricatured Brazilian caramel mixed-breed street dog, a compact agile quadruped melee assassin. Huge expressive head, one floppy ear and one upright ear, mischievous grin, big black nose, caramel gold fur, bright red bandana with oversized knot, ridiculously large chunky golden dog-tag collar. Short thin running legs and curled tail; bold clear silhouette. Crisp clustered pixels, 48x48 canvas, upper-left lighting, selective dark outline, restrained medium shading, low top-down elevated arena view. Whole dog centered with four paws grounded, transparent background, no text, no scenery, no aura.",
+        "size": {
+          "width": 68,
+          "height": 68
+        },
+        "template_id": "dog",
+        "directions": 8,
+        "view": "low top-down",
+        "created_at": "2026-10-11T15:57:17.915262+00:00"
+      },
+      "folder": "Idle",
+      "frames": {
+        "rotations": {
+          "south": "Idle/rotations/south.png",
+          "south-east": "Idle/rotations/south-east.png",
+          "east": "Idle/rotations/east.png",
+          "north-east": "Idle/rotations/north-east.png",
+          "north": "Idle/rotations/north.png",
+          "north-west": "Idle/rotations/north-west.png",
+          "west": "Idle/rotations/west.png",
+          "south-west": "Idle/rotations/south-west.png"
+        },
+        "animations": {}
+      }
+    }
+  ],
+  "export_version": "3.1",
+  "export_date": "2026-10-11T20:27:38.352830"
+}

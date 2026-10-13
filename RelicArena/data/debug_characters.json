@@ -1,0 +1,276 @@
+{
+  "notice": "Todos os atributos abaixo são valores temporários de laboratório, sem balanceamento aprovado. As regras adicionais estão descritas em simulation/README.md.",
+  "match_levels": {
+    "notice": "Nível na partida por cópias, escolhido pelo usuário em 2026-10-11: 2 cópias = nível 2, 3 cópias = nível 3. Multiplicadores de vida/dano/poder do kit são valores de teste (opção Moderado). Não confundir com o nível da carta fora da partida.",
+    "copies_for_level": [
+      1,
+      2,
+      3
+    ],
+    "power_multiplier": [
+      1.0,
+      1.5,
+      2.25
+    ]
+  },
+  "characters": {
+    "neymar": {
+      "display_name": "Neymar",
+      "max_hp": 460.0,
+      "attack_damage": 41.0,
+      "armor": 9.0,
+      "resist": 12.0,
+      "damage_type": "physical",
+      "synergy_tags": [
+        "atacantes",
+        "atiradores"
+      ],
+      "attack_range": 3,
+      "attacks_per_second": 1.25,
+      "move_interval": 0.45,
+      "crit_chance": 0.1,
+      "crit_multiplier": 1.6,
+      "projectile_seconds_per_hex": 0.12,
+      "projectile_min_seconds": 0.12,
+      "projectile_max_impacts": 3,
+      "projectile_kind": "ball",
+      "rarity": "rare"
+    },
+    "caramelo": {
+      "display_name": "Caramelo",
+      "max_hp": 520.0,
+      "attack_damage": 35.0,
+      "armor": 12.0,
+      "resist": 8.0,
+      "damage_type": "physical",
+      "synergy_tags": [
+        "atacantes"
+      ],
+      "attack_range": 1,
+      "attacks_per_second": 1.3,
+      "move_interval": 0.26,
+      "crit_chance": 0.2,
+      "crit_multiplier": 1.7,
+      "bleed_damage_per_tick": 9.0,
+      "bleed_duration": 3.0,
+      "bleed_tick_interval": 1.0,
+      "execute_threshold": 0.1,
+      "assassin_opening_duration": 5.0,
+      "rarity": "common"
+    },
+    "obama": {
+      "display_name": "Obama",
+      "max_hp": 1000.0,
+      "attack_damage": 30.0,
+      "armor": 38.0,
+      "resist": 24.0,
+      "damage_type": "physical",
+      "synergy_tags": [
+        "vanguarda"
+      ],
+      "attack_range": 1,
+      "attacks_per_second": 0.7,
+      "move_interval": 0.55,
+      "crit_chance": 0.05,
+      "crit_multiplier": 1.5,
+      "initial_shield": 230.0,
+      "briefcase_guard_amount": 120.0,
+      "briefcase_guard_interval": 5.0,
+      "rarity": "epic"
+    },
+    "zumbi": {
+      "display_name": "Zumbi",
+      "max_hp": 680.0,
+      "attack_damage": 46.0,
+      "armor": 20.0,
+      "resist": 15.0,
+      "damage_type": "physical",
+      "synergy_tags": [
+        "atacantes",
+        "apoio"
+      ],
+      "attack_range": 1,
+      "attacks_per_second": 1.0,
+      "move_interval": 0.38,
+      "crit_chance": 0.18,
+      "crit_multiplier": 1.6,
+      "team_attack_speed_bonus": 0.15,
+      "team_crit_bonus": 0.1,
+      "crit_growth_per_hit": 0.12,
+      "crit_growth_cap": 1.2,
+      "rarity": "common"
+    },
+    "michael": {
+      "display_name": "Michael",
+      "max_hp": 490.0,
+      "attack_damage": 0.0,
+      "armor": 8.0,
+      "resist": 24.0,
+      "damage_type": "magic",
+      "synergy_tags": [
+        "apoio",
+        "atiradores"
+      ],
+      "attack_range": 3,
+      "attacks_per_second": 0.8,
+      "move_interval": 0.45,
+      "crit_chance": 0.08,
+      "crit_multiplier": 1.5,
+      "heal_amount": 10.0,
+      "heal_interval": 1.0,
+      "heal_range": 2,
+      "moonwalk_steps": 3,
+      "moonwalk_step_duration": 0.55,
+      "moonwalk_pause_duration": 1.2,
+      "dance_shield_amount": 120.0,
+      "dance_shield_duration": 4.0,
+      "rarity": "epic"
+    },
+    "barbie": {
+      "display_name": "Barbie",
+      "max_hp": 900.0,
+      "attack_damage": 32.0,
+      "armor": 34.0,
+      "resist": 26.0,
+      "damage_type": "physical",
+      "synergy_tags": [
+        "vanguarda"
+      ],
+      "attack_range": 1,
+      "attacks_per_second": 0.75,
+      "move_interval": 0.5,
+      "crit_chance": 0.05,
+      "crit_multiplier": 1.5,
+      "summon_key": "ken",
+      "guardian_damage_bonus": 0.3,
+      "rarity": "epic"
+    },
+    "elon": {
+      "display_name": "Elon",
+      "max_hp": 480.0,
+      "attack_damage": 52.0,
+      "armor": 10.0,
+      "resist": 14.0,
+      "damage_type": "physical",
+      "synergy_tags": [
+        "atiradores"
+      ],
+      "attack_range": 4,
+      "attacks_per_second": 0.7,
+      "move_interval": 0.5,
+      "crit_chance": 0.1,
+      "crit_multiplier": 1.5,
+      "projectile_kind": "rocket",
+      "projectile_seconds_per_hex": 0.14,
+      "projectile_min_seconds": 0.2,
+      "splash_radius": 1,
+      "splash_ratio": 0.5,
+      "rarity": "legendary"
+    },
+    "snoop": {
+      "display_name": "Snoop",
+      "max_hp": 470.0,
+      "attack_damage": 30.0,
+      "armor": 8.0,
+      "resist": 18.0,
+      "damage_type": "magic",
+      "synergy_tags": [
+        "atiradores"
+      ],
+      "attack_range": 3,
+      "attacks_per_second": 0.9,
+      "move_interval": 0.45,
+      "crit_chance": 0.08,
+      "crit_multiplier": 1.5,
+      "projectile_kind": "smoke",
+      "projectile_seconds_per_hex": 0.16,
+      "projectile_min_seconds": 0.2,
+      "smoke_radius": 1,
+      "smoke_duration": 3.0,
+      "smoke_damage_per_tick": 6.0,
+      "smoke_tick_interval": 0.5,
+      "smoke_miss_chance": 0.15,
+      "rarity": "rare"
+    },
+    "lula": {
+      "display_name": "Lula",
+      "max_hp": 950.0,
+      "attack_damage": 34.0,
+      "armor": 36.0,
+      "resist": 30.0,
+      "damage_type": "physical",
+      "synergy_tags": [
+        "vanguarda"
+      ],
+      "attack_range": 1,
+      "attacks_per_second": 0.7,
+      "move_interval": 0.55,
+      "crit_chance": 0.05,
+      "crit_multiplier": 1.5,
+      "revive_ratio": 0.4,
+      "rarity": "common"
+    },
+    "bob_marley": {
+      "display_name": "Bob Marley",
+      "max_hp": 520.0,
+      "attack_damage": 22.0,
+      "armor": 10.0,
+      "resist": 24.0,
+      "damage_type": "magic",
+      "synergy_tags": [
+        "apoio"
+      ],
+      "attack_range": 3,
+      "attacks_per_second": 0.8,
+      "move_interval": 0.45,
+      "crit_chance": 0.05,
+      "crit_multiplier": 1.5,
+      "aura_radius_by_level": [
+        2,
+        3,
+        4
+      ],
+      "aura_ally_speed_bonus": 0.2,
+      "aura_enemy_slow": 0.2,
+      "rarity": "rare"
+    },
+    "rapunzel": {
+      "display_name": "Rapunzel",
+      "max_hp": 540.0,
+      "attack_damage": 28.0,
+      "armor": 12.0,
+      "resist": 18.0,
+      "damage_type": "physical",
+      "synergy_tags": [
+        "apoio"
+      ],
+      "attack_range": 2,
+      "attacks_per_second": 0.85,
+      "move_interval": 0.45,
+      "crit_chance": 0.08,
+      "crit_multiplier": 1.5,
+      "lasso_first_delay": 2.5,
+      "lasso_cooldown": 7.0,
+      "lasso_stun": 1.0,
+      "lasso_damage": 40.0,
+      "rarity": "legendary"
+    }
+  },
+  "summons": {
+    "notice": "Invocações não entram no deck nem na loja. Ken é invocado pela Barbie (decisão do usuário, 2026-10-11); números de teste.",
+    "ken": {
+      "display_name": "Ken",
+      "max_hp": 650.0,
+      "attack_damage": 18.0,
+      "armor": 30.0,
+      "resist": 20.0,
+      "damage_type": "physical",
+      "synergy_tags": [],
+      "attack_range": 1,
+      "attacks_per_second": 0.8,
+      "move_interval": 0.45,
+      "crit_chance": 0.0,
+      "crit_multiplier": 1.5
+    }
+  }
+}

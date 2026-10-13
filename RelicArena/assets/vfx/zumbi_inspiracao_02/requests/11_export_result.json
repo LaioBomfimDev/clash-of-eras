@@ -1,0 +1,14 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "saved to My effects: 'Clash of Eras - Zumbi Inspiracao02' (effect id 6313f6b8-a969-405c-b435-38f58a8817cd); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=6313f6b8-a969-405c-b435-38f58a8817cd\n32x32, 12 frames @ 20 fps, plays once; anchor (origin) at 16,28\ndownload https://api.pixellab.ai/mcp/pixel-tools/3c944447-93b6-403c-9623-9da1412bd427/: clash-of-eras-zumbi-inspiracao02-game.zip, clash-of-eras-zumbi-inspiracao02.gif, clash-of-eras-zumbi-inspiracao02.json, clash-of-eras-zumbi-inspiracao02.png\nthe game pack: one sheet per piece (the whole effect, behind and in front of the sprite, each part) + manifest.json (what each clip is and where it goes: anchor + offset) + README.txt\nimage id: 3c944447-93b6-403c-9623-9da1412bd427 (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['f44e7e92-191f-42f1-a9d0-7b401b445dea', 'export', '--name', \"Clash of Eras - Zumbi Inspiracao02\", '--replace', '6313f6b8-a969-405c-b435-38f58a8817cd']) · vfx_workbench(argv=['start', '--effect', '6313f6b8-a969-405c-b435-38f58a8817cd']) — keep mode=\"high\"\n\nreview before your next call: say what you see in the frames — does it read at 1x, start -> peak -> end (or a loop with no jump), anything cut off at the edges, muddy colours, is the sprite still readable — then choose: set_part or render with a patch (a defect you saw), get_part (unsure what a part can do), or export. Put that reasoning in `notes`."
+    },
+    {
+      "type": "image",
+      "data": "iVBORw0KGgoAAAANSUhEUgAAAIAAAABgCAYAAADVenpJAAACFUlEQVR4nO3bzW0aURAA4CHK2RTgApC4IZ9IBa6BDlIAx5w4UgAdbA2uAE6WD5EsUYALwMp9c4iwwMn+/7CB77sggWb12DfzWKSZCAAAAAAAAGCYDvt12iT+S1sLoX+7ZJGevtYxam859OlY+Xf3j/H+9hQREePJ0n5eo6wK3yWL9LBfp3mfd7uyG1H3RraxAUWbnPUMUBRHSXVvZBsbcLxG+utnpWtVifMQmGOXLNLpwyzu7h9j+jArXdF14079+P7tnzFZ79eN+1p1Ybci70auNtvMh626cZ+tNtvRarONXRLpNCJen19ivkgK46vGSYAMfW3ApUmAgfuTPElvcQAAAAAAAAAA9KDLrmRNoSVcui28TmNp2TgJUKDrDShzjS67kv+LBMj7AnnDkU0r8BbawgefAHmVlDcc2bQC+9qALKvNdjRfJKPX55d4f3v66C4uai2vGte4K/iwX6ddDSWeVVJE7JJIjy3Wp8OR04g47Gcf68iLK+tW2sJLnQBFw4ddDCcWVdJ4sjzL8uPmt1WBQzFfJKPxZDmqmkR14/6SNeN22K/P5s8+/xa3NZxoOLJbuSdA3sNMVgUWxbXNTHwzmQlQ5ig9Hi+nx0zbR/DFj8Bbd8nxaLo3+L+BAAAAAAAAAAAAQHsuOR1LtwqbQi85HUv3ag+GdBFH/xoNhrQZx0AZDLluBkMAAAAAAAAAAAAArsBvdhg+hKUVpXwAAAAASUVORK5CYII=",
+      "mimeType": "image/png"
+    }
+  ],
+  "isError": false
+}

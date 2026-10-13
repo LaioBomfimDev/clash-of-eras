@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Relic Arena · estudo de layout 01</title>
+  <style>
+    :root{font-family:"Segoe UI",system-ui,sans-serif;color:#252c2a;background:#eeeae2;--teal:#427f7b;--coral:#bd7569;--line:#d5d0c6;--muted:#707771}
+    *{box-sizing:border-box}body{margin:0}button,input,select{font:inherit}button,select,input{accent-color:var(--teal)}button,select{cursor:pointer}button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #75a9a3;outline-offset:4px}
+    .page{max-width:1600px;margin:auto;padding:28px 34px 22px}.eyebrow{font-size:11px;letter-spacing:.17em;text-transform:uppercase;color:#70746d;font-weight:650;margin:0 0 8px}.heading{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:22px}h1{font-family:Georgia,serif;font-size:35px;letter-spacing:-.045em;font-weight:500;margin:0}.intro{margin:7px 0 0;font-size:13px;color:var(--muted)}.tag{border:1px solid #d8c7a8;color:#7c6747;background:#f5ecd9;border-radius:30px;font-size:12px;padding:9px 15px;white-space:nowrap}
+    .workspace{display:grid;grid-template-columns:224px minmax(0,1fr);gap:24px;align-items:start}.controls{background:#f8f6f1;border:1px solid var(--line);border-radius:15px;padding:20px}.controls h2{font-size:14px;font-weight:650;margin:0 0 19px}.field{margin-bottom:21px}.field>label,.field-label{display:block;font-size:12px;font-weight:600;margin:0 0 8px}.field small{display:block;color:var(--muted);font-size:11px;line-height:1.5;margin-top:8px}select{width:100%;border:1px solid #cec9be;background:#fffdf8;padding:10px 11px;border-radius:8px;color:#38413b;font-size:12px}input[type=range]{width:100%;margin:4px 0}.range-label{display:flex;justify-content:space-between;gap:8px}.range-label output{font-weight:400;color:#69756b;font-size:11px}.toggle{display:flex;align-items:center;gap:9px;font-size:12px;margin:13px 0;cursor:pointer}.toggle input{width:15px;height:15px;margin:0}.divider{border:0;border-top:1px solid #ded9cf;margin:18px 0}.reset{border:1px solid #cbc9bf;border-radius:9px;background:transparent;width:100%;padding:10px;font-size:12px;color:#536159}.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11px;color:#73796e;margin-top:16px}.legend span{display:flex;align-items:center;gap:6px}.dot{width:7px;height:7px;border-radius:50%;display:inline-block}.dot.own{background:var(--teal)}.dot.enemy{background:var(--coral)}
+    .preview{min-width:0}.preview-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:0 2px 10px;font-size:11px;color:#697368}.preview-top strong{font-size:12px;color:#44564b;font-weight:600}.game-frame{--ratio:16/9;aspect-ratio:var(--ratio);width:100%;position:relative;background:#192b2a;border:6px solid #273734;border-radius:15px;overflow:hidden;box-shadow:0 17px 40px #29332a16;display:grid;grid-template-rows:10% minmax(0,1fr) 22%;grid-template-columns:minmax(0,1fr)}
+    .hud{display:flex;align-items:center;justify-content:space-between;padding:0 24px;background:#213735;color:#dce5dc;gap:10px;z-index:1;border-bottom:1px solid #ffffff0c;min-height:0}.player{display:flex;align-items:center;gap:10px;font-size:clamp(9px,.9vw,12px)}.player:last-child{flex-direction:row-reverse}.player-medallion{display:flex;justify-content:center;align-items:center;border:1px solid #6b9c95;color:#a5d0c6;border-radius:50%;width:27px;height:27px;font-weight:600}.player.enemy .player-medallion{border-color:#ac796e;color:#e6a99b}.player-name{font-size:10px;letter-spacing:.07em;text-transform:uppercase}.lives{display:flex;gap:4px;margin-top:5px}.life{width:6px;height:6px;border-radius:50%;background:#83b2a2}.enemy .life{background:#d49a88}.hud-center{font-size:9px;letter-spacing:.15em;text-transform:uppercase;text-align:center;color:#adc2b5}.hud-center span{display:block;font-size:8px;letter-spacing:.08em;color:#79968a;margin-top:4px}
+    .arena-wrap{position:relative;min-height:0;overflow:hidden;background:radial-gradient(ellipse at 50% 48%,#344b42 0,#233c34 60%,#1e342e 100%)}.arena-wrap svg{display:block;width:100%;height:100%}.arena-stamp{position:absolute;bottom:7px;left:12px;font-size:8px;color:#c1d1bd8c;letter-spacing:.1em;text-transform:uppercase;pointer-events:none}.shop{background:#213735;display:flex;gap:10px;align-items:stretch;padding:11px 17px;border-top:1px solid #6b7c650c;min-height:0;z-index:1}.placeholder{border:1px dashed #637b6c66;border-radius:8px;padding:10px 12px;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:5px;color:#c3d1c2}.placeholder strong{font-size:clamp(9px,.95vw,12px);font-weight:550}.placeholder span{font-size:clamp(8px,.8vw,10px);color:#7f9989;line-height:1.4}.offers{flex:2.1;background:linear-gradient(100deg,#344b3e40,#213735)}.inventory{flex:1.1}.capacity{flex:1}.proposal-pill{display:inline-block;font-size:8px;letter-spacing:.08em;text-transform:uppercase;color:#b9a67a;margin-bottom:2px}
+    .game-frame.side-shop{grid-template-rows:10% minmax(0,1fr);grid-template-columns:minmax(0,1fr) 24%}.side-shop .hud{grid-column:1 / -1}.side-shop .shop{grid-column:2;grid-row:2;flex-direction:column;padding:12px;border-top:0;border-left:1px solid #526d5c33;gap:10px}.side-shop .placeholder{flex:1}.side-shop .offers{flex:1.7}.side-shop .placeholder span{font-size:9px}.side-shop .placeholder strong{font-size:11px}.side-shop .arena-wrap{grid-column:1;grid-row:2}
+    .preview-bottom{display:flex;justify-content:space-between;gap:15px;font-size:11px;color:#6d796f;margin:14px 2px 0}.selection{font-variant-numeric:tabular-nums;color:#47685b}.notes{margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:19px 0 0;border-top:1px solid var(--line)}.notes h3{font-size:11px;margin:0 0 7px;color:#576254;font-weight:650}.notes p{margin:0;color:#7a7e72;font-size:11px;line-height:1.65}.page-foot{margin-top:22px;font-size:10px;color:#929487;line-height:1.5}
+    .hex{cursor:crosshair;transition:fill-opacity .12s,stroke .12s;outline:none}.hex:hover,.hex:focus-visible{fill:#fff5d5!important;fill-opacity:.65!important;stroke:#fff7da!important;stroke-opacity:1!important;stroke-width:2.4!important}.coordinate{font:11px "Segoe UI",sans-serif;fill:#715d40;text-anchor:middle;dominant-baseline:central;pointer-events:none}.marker{pointer-events:none}.grid-off .hex{stroke-opacity:0!important}.grid-off .hex:hover,.grid-off .hex:focus-visible{stroke-opacity:1!important}.coords-off .coordinate{display:none}.markers-off #markers{display:none}.zones-off .hex{fill-opacity:0!important}.zones-off #centerline{display:none}.boundary-label{font:9px "Segoe UI",sans-serif;letter-spacing:2px;fill:#ac9b77;text-anchor:middle}
+    @media(max-width:1100px){.page{padding:23px}.workspace{grid-template-columns:190px minmax(0,1fr);gap:18px}.controls{padding:16px}.hud{padding:0 14px}.shop{padding:8px 10px;gap:7px}.placeholder{padding:8px}.player-medallion{width:22px;height:22px}.player-name{font-size:8px}.lives{gap:3px}.life{width:5px;height:5px}}
+    @media(max-width:850px){.workspace{grid-template-columns:1fr}.controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px 18px;order:2}.controls h2{grid-column:1 / -1;margin:0}.controls .field{margin:0}.controls .divider{display:none}.checks{grid-column:1 / 3}.reset{align-self:end}.legend{grid-column:1 / -1;margin:0}.notes{gap:14px}.preview{order:1}.heading{margin-bottom:18px}h1{font-size:30px}.preview-top{font-size:10px}.player-name{font-size:8px}.hud-center{font-size:8px}}
+    @media(max-width:520px){.page{padding:15px 10px}.heading{align-items:flex-start;gap:10px}h1{font-size:26px}.intro{font-size:11px;line-height:1.6}.tag{font-size:9px;padding:7px 9px}.controls{grid-template-columns:1fr 1fr}.checks{grid-column:1}.legend{font-size:10px}.notes{grid-template-columns:1fr;gap:13px}.game-frame{border-width:3px;border-radius:9px}.hud{padding:0 7px}.player-medallion{display:none}.player{gap:0}.player-name{font-size:7px}.hud-center{font-size:7px;letter-spacing:.05em}.hud-center span{display:none}.lives{margin-top:3px;gap:3px}.life{width:3px;height:3px}.shop{padding:5px;gap:4px}.placeholder{padding:5px;border-radius:5px;gap:3px}.placeholder strong{font-size:7px}.placeholder span{display:none}.proposal-pill{font-size:6px;letter-spacing:0}.preview-bottom{font-size:9px}.arena-stamp{font-size:5px;bottom:4px;left:6px}.side-shop .shop{padding:6px;gap:5px}.side-shop .placeholder strong{font-size:7px}.side-shop .placeholder span{display:none}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="heading">
+      <div><p class="eyebrow">Relic Arena · estudo visual 01</p><h1>Arena de areia</h1><p class="intro">Um rascunho para acertar espaço, perspectiva e escala.</p></div>
+      <span class="tag">Areia clara · paisagem</span>
+    </header>
+    <div class="workspace">
+      <aside class="controls" aria-label="Controles do estudo visual">
+        <h2>Compare o enquadramento</h2>
+        <div class="field"><label for="format">Formato da tela</label><select id="format"><option value="16/9">PC / celular · 16:9</option><option value="20/9">Celular largo · 20:9</option><option value="19.5/9">Celular · 19,5:9</option></select><small>Exemplos de proporção. A resolução final continua aberta.</small></div>
+        <div class="field"><label for="shop-position">Área da loja</label><select id="shop-position"><option value="bottom">Na faixa inferior</option><option value="side">Na lateral direita</option></select><small>Posição proposta para comparar o espaço disponível.</small></div>
+        <div class="field"><label class="range-label" for="tilt"><span>Altura da visão</span><output id="tilt-value">Média</output></label><input id="tilt" type="range" min="0" max="100" value="67"><small>Mais baixa à esquerda; mais alta à direita.</small></div>
+        <div class="field"><label class="range-label" for="scale"><span>Tamanho dos marcadores</span><output id="scale-value">100%</output></label><input id="scale" type="range" min="75" max="140" value="100"><small>Silhuetas abstratas, sem definir a escala final dos sprites.</small></div>
+        <hr class="divider">
+        <div class="checks"><label class="toggle"><input id="grid" type="checkbox" checked>Grade de hexágonos</label><label class="toggle"><input id="zones" type="checkbox" checked>Áreas de preparação</label><label class="toggle"><input id="coords" type="checkbox">Coordenadas das casas</label><label class="toggle"><input id="units" type="checkbox" checked>Marcadores de escala</label></div>
+        <button class="reset" id="reset" type="button">Restaurar visualização</button>
+        <div class="legend"><span><i class="dot own"></i>Seu lado</span><span><i class="dot enemy"></i>Oponente</span></div>
+      </aside>
+      <section class="preview" aria-label="Rascunho da arena">
+        <div class="preview-top"><strong>8 × 8 hexágonos</strong><span>4 fileiras por jogador · 64 casas</span></div>
+        <div class="game-frame" id="game-frame">
+          <div class="hud">
+            <div class="player"><div class="player-medallion">A</div><div><div class="player-name">Sua equipe</div><div class="lives" aria-label="Quatro vidas"><i class="life"></i><i class="life"></i><i class="life"></i><i class="life"></i></div></div></div>
+            <div class="hud-center">Preparação<span>Estudo de composição visual</span></div>
+            <div class="player enemy"><div class="player-medallion">B</div><div><div class="player-name">Oponente</div><div class="lives" aria-label="Quatro vidas"><i class="life"></i><i class="life"></i><i class="life"></i><i class="life"></i></div></div></div>
+          </div>
+          <div class="arena-wrap coords-off" id="arena-wrap">
+            <svg id="arena" viewBox="0 0 1280 540" role="img" aria-labelledby="arena-title arena-description">
+              <title id="arena-title">Coliseu vazio, areia clara e tabuleiro de 64 hexágonos</title><desc id="arena-description">Quatro fileiras de preparação por lado. Marcadores ilustrativos de escala, sem combate ou regras de capacidade.</desc>
+              <defs>
+                <linearGradient id="stone" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#8a8d7b"/><stop offset="1" stop-color="#515e50"/></linearGradient>
+                <linearGradient id="sand" x1="0" y1="0" x2="0.15" y2="1"><stop stop-color="#e5d3a6"/><stop offset="1" stop-color="#f1dfb7"/></linearGradient>
+                <linearGradient id="outerstone" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#596d5b"/><stop offset="1" stop-color="#364c3e"/></linearGradient>
+              </defs>
+              <ellipse cx="640" cy="288" rx="621" ry="242" fill="#12251d" opacity=".32"/>
+              <ellipse cx="640" cy="268" rx="619" ry="252" fill="url(#outerstone)" stroke="#a4a68d" stroke-width="3"/>
+              <ellipse cx="640" cy="268" rx="603" ry="244" fill="none" stroke="#79866f" stroke-width="11"/>
+              <ellipse cx="640" cy="270" rx="582" ry="235" fill="none" stroke="#425b49" stroke-width="8"/>
+              <ellipse cx="640" cy="270" rx="569" ry="226" fill="url(#stone)" stroke="#a5a58c" stroke-width="2"/>
+              <g id="stone-seams" stroke="#3c5142" stroke-width="2.5" opacity=".45"></g>
+              <ellipse cx="640" cy="274" rx="554" ry="216" fill="#b6aa80" stroke="#747a60" stroke-width="6"/>
+              <ellipse cx="640" cy="270" rx="550" ry="215" fill="url(#sand)" stroke="#f2e1b5" stroke-width="2"/>
+              <path d="M 181 348 Q 640 498 1099 348" fill="none" stroke="#cfbc8d" stroke-width="1.4" opacity=".35"/>
+              <path d="M 239 170 Q 640 61 1041 170" fill="none" stroke="#c6b484" stroke-width="1.2" opacity=".3"/>
+              <text class="boundary-label" x="640" y="79">ARQUIBANCADAS VAZIAS</text>
+              <g id="hexes"></g><g id="centerline"></g><g id="coordinates"></g><g id="markers"></g>
+            </svg>
+            <div class="arena-stamp">Esquema de proporções · arte final pelo PixelLab</div>
+          </div>
+          <div class="shop" aria-label="Áreas de interface propostas">
+            <div class="placeholder offers"><div class="proposal-pill">Área proposta</div><strong>Loja / ofertas</strong><span>Quantidade e conteúdo ainda serão definidos.</span></div>
+            <div class="placeholder inventory"><div class="proposal-pill">Área proposta</div><strong>Bolsa de itens</strong><span>Sem fixar número de espaços.</span></div>
+            <div class="placeholder capacity"><div class="proposal-pill">Área proposta</div><strong>Moedas e capacidade</strong><span>Custos e valores continuam em estudo.</span></div>
+          </div>
+        </div>
+        <div class="preview-bottom"><span>Marcadores ilustrativos; quantidade não define a equipe.</span><span class="selection" id="selection" aria-live="polite">Explore uma casa</span></div>
+        <div class="notes"><div><h3>Decisões confirmadas</h3><p>Areia clara, tela deitada, tabuleiro 8×8 e arquibancadas vazias neste início.</p></div><div><h3>O que comparar</h3><p>Leitura das casas, altura dos personagens e espaço da arena com loja embaixo ou ao lado.</p></div><div><h3>Ainda em estudo</h3><p>Escala dos sprites, interface, recrutamento e reserva. O rascunho não fecha essas regras.</p></div></div>
+      </section>
+    </div>
+    <footer class="page-foot">Estudo de layout local. Sem combate, compras ou geração de assets. Não é uma cena do Godot nem arte final.</footer>
+  </main>
+  <script>
+    'use strict';
+    const NS='http://www.w3.org/2000/svg';
+    const $=id=>document.getElementById(id);
+    const radius=50, dx=Math.sqrt(3)*radius, dy=1.5*radius;
+    const midX=dx*7.5/2, midY=dy*7/2;
+    const state={tilt:.4606,scale:1};
+    const specimenPositions=[{r:0,c:1},{r:1,c:5},{r:2,c:3},{r:3,c:6},{r:4,c:1},{r:5,c:4},{r:6,c:2},{r:7,c:6}];
+    function element(tag,attributes={},text){const e=document.createElementNS(NS,tag);for(const [k,v]of Object.entries(attributes))e.setAttribute(k,String(v));if(text!==undefined)e.textContent=text;return e;}
+    function project(x,y){const depth=(y+radius)/(7*dy+2*radius);const perspective=.84+.20*depth;return {x:640+(x-midX)*perspective,y:270+(y-midY)*state.tilt};}
+    function center(r,c){return {x:dx*(c+.5*(r%2)),y:dy*r};}
+    function hexPoints(r,c){const origin=center(r,c);return Array.from({length:6},(_,i)=>{const a=(60*i-90)*Math.PI/180;return project(origin.x+radius*Math.cos(a),origin.y+radius*Math.sin(a));});}
+    function marker(specimen,index){const origin=center(specimen.r,specimen.c),p=project(origin.x,origin.y);const enemy=specimen.r<4;const tone=enemy?'#bb7868':'#4b8983';const depth=.87+.14*specimen.r/7;const group=element('g',{class:'marker',transform:`translate(${p.x},${p.y}) scale(${state.scale*depth})`,'data-foot-x':p.x,'data-foot-y':p.y,'data-cell':`${String.fromCharCode(65+specimen.r)}${specimen.c+1}`});group.append(element('ellipse',{cx:0,cy:1,rx:19,ry:7,fill:'#77684c',opacity:.18}));group.append(element('ellipse',{cx:0,cy:0,rx:18,ry:7,fill:'none',stroke:tone,'stroke-width':2,opacity:.8}));group.append(element('path',{d:'M-11 -26 L-8 -4 L-2 -4 L0 -20 L3 -4 L9 -4 L11 -27 Z',fill:'#394942'}));group.append(element('path',{d:'M-11 -46 Q0 -51 11 -46 L15 -26 Q0 -18 -15 -26 Z',fill:tone,stroke:'#f1e1bc','stroke-width':1.4}));group.append(element('path',{d:'M-12 -44 L-20 -29 M12 -44 L20 -29',fill:'none',stroke:'#47554a','stroke-width':6,'stroke-linecap':'round'}));group.append(element('circle',{cx:0,cy:-59,r:12,fill:'#dac79a',stroke:'#4a594a','stroke-width':2}));group.append(element('text',{x:0,y:-33,'text-anchor':'middle','font-size':10,'font-family':'Segoe UI, sans-serif','font-weight':600,fill:'#f8edcf'},enemy?'B':'A'));if(index===6){group.append(element('path',{d:'M-10 -68 L-13 -81 L-4 -75 L0 -86 L5 -75 L13 -81 L10 -68 Z',fill:'#bca05c',stroke:'#f2d895','stroke-width':1.4}));}return group;}
+    function update(){
+      $('game-frame').style.setProperty('--ratio',$('format').value);
+      $('game-frame').classList.toggle('side-shop',$('shop-position').value==='side');
+      const wrap=$('arena-wrap');wrap.classList.toggle('grid-off',!$('grid').checked);wrap.classList.toggle('zones-off',!$('zones').checked);wrap.classList.toggle('coords-off',!$('coords').checked);wrap.classList.toggle('markers-off',!$('units').checked);
+      state.tilt=.34+Number($('tilt').value)*.0018;state.scale=Number($('scale').value)/100;
+      $('tilt-value').textContent=Number($('tilt').value)<34?'Baixa':Number($('tilt').value)>75?'Alta':'Média';$('scale-value').textContent=$('scale').value+'%';
+      const hexes=$('hexes'),labels=$('coordinates');hexes.replaceChildren();labels.replaceChildren();
+      for(let r=0;r<8;r++){for(let c=0;c<8;c++){const id=String.fromCharCode(65+r)+(c+1),own=r>=4;const points=hexPoints(r,c),origin=center(r,c),p=project(origin.x,origin.y);const polygon=element('polygon',{points:points.map(pt=>`${pt.x.toFixed(3)},${pt.y.toFixed(3)}`).join(' '),class:'hex','data-row':r,'data-col':c,'data-side':own?'own':'enemy','data-cell':id,fill:own?'#468d82':'#be796c','fill-opacity':.065,stroke:'#967e54','stroke-width':1.2,'stroke-opacity':.38,tabindex:0,'aria-label':`Casa ${id}, ${own?'seu lado':'lado do oponente'}`});const show=()=>{$('selection').textContent=`${id} · ${own?'sua preparação':'preparação adversária'}`;};polygon.addEventListener('pointerenter',show);polygon.addEventListener('focus',show);polygon.addEventListener('pointerleave',()=>{$('selection').textContent='Explore uma casa';});hexes.append(polygon);labels.append(element('text',{class:'coordinate',x:p.x,y:p.y},id));}}
+      const left=project(-53,midY),right=project(dx*7.5+53,midY);$('centerline').replaceChildren(element('line',{x1:left.x,y1:left.y,x2:right.x,y2:right.y,stroke:'#a6956a','stroke-width':1.4,'stroke-dasharray':'7 7',opacity:.6}));
+      $('markers').replaceChildren(...specimenPositions.map(marker));
+    }
+    for(let i=0;i<52;i++){const angle=(i*360/52)*Math.PI/180;const p1={x:640+571*Math.cos(angle),y:270+228*Math.sin(angle)},p2={x:640+615*Math.cos(angle),y:270+249*Math.sin(angle)};$('stone-seams').append(element('line',{x1:p1.x,y1:p1.y,x2:p2.x,y2:p2.y}));}
+    for(const id of ['format','shop-position','tilt','scale','grid','zones','coords','units'])$(id).addEventListener('input',update);
+    $('reset').addEventListener('click',()=>{$('format').value='16/9';$('shop-position').value='bottom';$('tilt').value='67';$('scale').value='100';$('grid').checked=true;$('zones').checked=true;$('coords').checked=false;$('units').checked=true;$('selection').textContent='Explore uma casa';update();});
+    update();
+  </script>
+</body>
+</html>

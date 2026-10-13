@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-11",
+  "reference": "Zumbi dos Palmares",
+  "work_name": "Zumbalhão revisão02",
+  "role": "Dano corpo a corpo",
+  "status": "completed",
+  "character_id": "7129a655-427d-4ca9-84bb-13ad3ddd4682",
+  "group_id": "7b9e86f3-b54a-4a22-8ab7-f5b4501426e7",
+  "mode": "v3 reference",
+  "reported_size": 68,
+  "reference_file": "../south.png",
+  "directions_completed": 8,
+  "local_directions": 2,
+  "local_files": [
+    "south.png",
+    "west.png"
+  ],
+  "animations_created": 0,
+  "announced_generation_cost": 1,
+  "help_cost_estimate": 2,
+  "brief": {
+    "mode": "v3",
+    "n_directions": 8,
+    "body_type": "humanoid",
+    "view": "low top-down",
+    "outline": "selective outline",
+    "detail": "high detail",
+    "name": "Relic Arena — Zumbalhão revisão 02",
+    "reference_image_base64": "[local: south.png; not persisted as inline data]",
+    "description": "Rotate this exact south-facing Zumbalhão warrior sprite into eight coherent arena views. Preserve his recognizable large afro head, brown skin, face, bright red headband with oversized side knot, broad bare chest and muscular arms, red shorts and gold belt, dark sandals, and the giant broad pale metal spear with thick wooden shaft held at his side. Keep this reference's pixel scale, crisp clusters, colors, line weight and proportions consistently in all directions. Low top-down arena camera, grounded feet, full weapon inside canvas, transparent background, no text, no glow, no added scenery."
+  },
+  "original_character_preserved": true,
+  "names_final_approved": false,
+  "godot_integration": false,
+  "south_reference_visible_pixels_unchanged": true,
+  "south_reference_alpha_unchanged": true,
+  "south_transparent_rgb_differences": 3642,
+  "directions_inspected": [
+    "south",
+    "south-west",
+    "west",
+    "north-west",
+    "north",
+    "north-east",
+    "east",
+    "south-east"
+  ],
+  "review": "Oito direções inspecionadas. Lâmina oeste corrigida e reinspecionada após aplicação; cabo e nó nos demais perfis continuam em revisão artística.",
+  "modified_rotations": [
+    "west"
+  ],
+  "west_fix_metadata": "../west_refinamento.json"
+}

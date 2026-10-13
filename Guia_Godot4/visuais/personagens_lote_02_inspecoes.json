@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-11",
+  "method": "PixelLab pixelart_workbench inspect, scale4",
+  "scope": "Inspeção visual estática de oito direções por personagem; não testa animação ou combate.",
+  "caramelo": {
+    "character_id": "82eace58-7128-4f15-97ce-1944a5702428",
+    "directions": {
+      "south": "3e939d01-f6e8-4e80-b43c-89e6ef7fbafb",
+      "south-west": "15122fe2-b469-46c7-9ecb-ad273b2df003",
+      "west": "33cc28f9-c625-4b8b-ab30-6224d02e1347",
+      "north-west": "2cb90607-3e35-472c-880e-61298966f994",
+      "north": "9fa80738-d929-4f9d-a2bd-2d55023901f2",
+      "north-east": "1155541c-0831-49e6-b6fc-3c81a82edb62",
+      "east": "a223372c-8098-4aa0-b4a6-1060d965df72",
+      "south-east": "34117e10-39e8-4e48-a002-166c41445b34"
+    },
+    "review": "Identidade de cachorro caramelo com bandana vermelha e medalha amarela consistente. Orelhas erguidas e acessório discreto não cumprem todo briefing.",
+    "local_directions": [
+      "south"
+    ]
+  },
+  "zumbi_refined": {
+    "character_id": "7129a655-427d-4ca9-84bb-13ad3ddd4682",
+    "directions": {
+      "south": "63c0b0ed-1bd1-4bb6-9eb6-a0d8a74963d1",
+      "south-west": "65d25f8a-53df-4016-8c0b-fbb940a66920",
+      "west": "9efe35df-36f1-4cd2-8bc9-48bff3f3fa4a",
+      "north-west": "9324c9fe-9cca-47d8-ac8c-d1342ec37040",
+      "north": "b3b68d52-a4c7-4087-ad57-fafb91ecc788",
+      "north-east": "bb4ffe4e-d723-41b8-b0a9-bff30f86ddb4",
+      "east": "76098a03-a6bc-49fc-a1ea-0b7907d9a7e8",
+      "south-east": "39dfddbd-3667-4769-8b54-957e3d8a2e24"
+    },
+    "review_before_west_fix": "Identidade geral mantida. Lâmina larga na frente/costas, mas quase escondida no oeste. Cabo diagonal longo em perfis e nó menos legível: continuidade deve continuar em revisão.",
+    "west_fix_metadata": "personagens/zumbalhao/revisao_02/west_refinamento.json",
+    "west_fix_result": "Aplicado e reinspecionado nativamente em6x; lâmina e cabo legíveis,86pixels adicionados sem alterar pixels originais visíveis."
+  }
+}

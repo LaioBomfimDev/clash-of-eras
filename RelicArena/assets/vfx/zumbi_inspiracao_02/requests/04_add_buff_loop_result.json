@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "error: effect step 6ee6f678-1d55-4839-9385-27abb71a5531 unchanged.\nerror: role is one of ['cast', 'projectile', 'impact', 'linger', 'ambient']: its beat when the user exports the effect for a game (cast = on the caster, projectile = flies, impact = where it lands, linger = after the impact, ambient = runs throughout)\nnext: fix that and try again (your working recipe is unchanged)"
+    }
+  ],
+  "isError": true
+}

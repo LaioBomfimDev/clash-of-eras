@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-11",
+  "scope": "Refinamento dos rascunhos e ampliação do núcleo de personagens, conforme pedido do usuário.",
+  "previous_batch": "personagens_lote_01.json",
+  "gallery": "personagens_lote_01.html",
+  "status": "Bases criadas, aprovação artística e animações pendentes.",
+  "preservation": "Michael, personagens do lote anterior e manifestos preservados. Somente o oeste do novo Zumbi V3 foi corrigido, com backup/undo.",
+  "characters": [
+    {
+      "reference": "Michael Jackson",
+      "role": "Suporte",
+      "status": "existing_preserved",
+      "character_id": "8e001e18-9617-4a67-a326-32af26dc4f24",
+      "preview": "personagens/michael_existente/south.png",
+      "metadata": "personagens/michael_existente/character.json",
+      "new_generation": false
+    },
+    {
+      "reference": "Zumbi dos Palmares",
+      "work_name": "Zumbalhão",
+      "role": "Dano corpo a corpo",
+      "status": "refined_reference_and_rotations_completed",
+      "original_character_id": "40cff10a-fe31-472e-8bd8-94246e5f341e",
+      "character_id": "7129a655-427d-4ca9-84bb-13ad3ddd4682",
+      "preview": "personagens/zumbalhao/revisao_02/south.png",
+      "metadata": "personagens/zumbalhao/revisao_02/rotacoes/character.json",
+      "exact_edit_metadata": "personagens/zumbalhao/revisao_02/character.json",
+      "directions_created": 8,
+      "directions_inspected": 8,
+      "local_directions": 2,
+      "reference_visible_pixels_preserved": true,
+      "reference_alpha_preserved": true,
+      "announced_generation_cost": 1,
+      "west_preview": "personagens/zumbalhao/revisao_02/rotacoes/west.png",
+      "west_fix_metadata": "personagens/zumbalhao/revisao_02/west_refinamento.json",
+      "review": "Oito direções inspecionadas; lâmina do oeste corrigida gratuitamente, aplicada e reinspecionada. Outros perfis em revisão artística."
+    },
+    {
+      "reference": "Vira-lata Caramelo",
+      "work_name": "Caramelo Relâmpago",
+      "role": "Assassino",
+      "status": "completed",
+      "character_id": "82eace58-7128-4f15-97ce-1944a5702428",
+      "preview": "personagens/caramelo/south.png",
+      "metadata": "personagens/caramelo/character.json",
+      "directions_created": 8,
+      "directions_inspected": 8,
+      "local_directions": 1,
+      "announced_generation_cost": 1,
+      "review": "Bandana e medalha consistentes nos ângulos. Orelhas ambas erguidas e acessório ainda discreto frente ao briefing."
+    },
+    {
+      "reference": "Barack Obama",
+      "work_name": "Obamuralha",
+      "role": "Tanque",
+      "status": "base_completed_south_refined",
+      "character_id": "9a2a0a13-3fca-4dd6-a685-94d312c75bb2",
+      "preview": "personagens/obamuralha/revisao_02/south.png",
+      "metadata": "personagens/obamuralha/character.json",
+      "refinement_metadata": "personagens/obamuralha/revisao_02/character.json",
+      "directions_created": 8,
+      "directions_inspected": 1,
+      "refined_directions": 1,
+      "local_directions": 1,
+      "announced_generation_cost": 1,
+      "review": "Frente com ombreiras maiores e pasta-escudo gigante; sete direções ainda na base original."
+    },
+    {
+      "reference": "Neymar Jr.",
+      "work_name": "Neydrama",
+      "role": "DPS à distância",
+      "status": "base_completed_south_refined",
+      "character_id": "fcc05054-6672-4efb-b417-f49cffcc7b7f",
+      "preview": "personagens/neydrama/revisao_02/south.png",
+      "metadata": "personagens/neydrama/character.json",
+      "refinement_metadata": "personagens/neydrama/revisao_02/character.json",
+      "directions_created": 8,
+      "directions_inspected": 1,
+      "refined_directions": 1,
+      "local_directions": 1,
+      "announced_generation_cost": 1,
+      "review": "Frente com bola13px e chuteira18px; rosto/cabelo/uniforme preservados. Sete direções ainda na base original."
+    }
+  ],
+  "pixel_edits": {
+    "generations": 0,
+    "zumbi_gallery": "096fe9a6-10de-47f7-b96e-80a5f117a46d",
+    "obama_gallery": "90cfa9a6-9dd9-49d4-8289-a89ae640bce7",
+    "neymar_gallery": "e00b0d24-0daf-45ac-a5be-2d7878825524"
+  },
+  "billing": {
+    "before": {
+      "remaining": 14,
+      "used": 25,
+      "credits": 0,
+      "subscription": "trial"
+    },
+    "after": {
+      "remaining": 10,
+      "used": 29,
+      "credits": 0,
+      "subscription": "trial"
+    },
+    "observed_delta": 4,
+    "announced_total": 4,
+    "v3_reference_help_estimate": 2,
+    "v3_reference_creation_announcement": 1
+  },
+  "technical_limits": {
+    "new_standard_requested_size": 48,
+    "new_standard_returned_size": 68,
+    "reason_for_difference": "Não determinada.",
+    "resized_pngs": false,
+    "new_animations_created": 0,
+    "godot_implemented": false,
+    "browser_tested": false,
+    "export_note": "Export image.png de ID inspect de Caramelo retornou404; demais direções inspecionadas, sem rotas alternativas. Exports de edições exatas funcionaram."
+  },
+  "validation_report": "personagens_lote_02_validacao.json",
+  "pending": [
+    "Aprovação artística e nomes finais",
+    "Refinamento nas sete direções restantes de Obama e Neymar",
+    "Exportação completa das rotações",
+    "Uniformização da escala visível para a arena",
+    "Animações de ataque, movimento, vitória e derrota"
+  ],
+  "inspection_report": "personagens_lote_02_inspecoes.json"
+}

@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "error: effect step 6ee6f678-1d55-4839-9385-27abb71a5531 unchanged.\nerror: the effect loops, so it has no start: a part in a loop runs the whole time (leave start/end out)\nnext: fix that and try again (your working recipe is unchanged)"
+    }
+  ],
+  "isError": true
+}

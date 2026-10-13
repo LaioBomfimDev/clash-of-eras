@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-11",
+  "scope": "Verificacao estatica; sem navegador ou Godot.",
+  "pngs": [
+    {
+      "path": "ui/vida_coracao.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "RGBA",
+      "visible_bbox": [
+        1,
+        2,
+        15,
+        14
+      ],
+      "sha256": "1d72c557ed0a588ce5c6727264f64856e8cdeee5638af53bfb2a776b79d51413"
+    },
+    {
+      "path": "personagens/michael_existente/south.png",
+      "size": [
+        48,
+        48
+      ],
+      "mode": "RGBA",
+      "visible_bbox": [
+        8,
+        3,
+        36,
+        46
+      ],
+      "sha256": "fe2f3ab36b9db2534d9e73a207586d08cc59a4a92e1e417688e22842b3c473e5"
+    },
+    {
+      "path": "personagens/zumbalhao/south.png",
+      "size": [
+        68,
+        68
+      ],
+      "mode": "RGBA",
+      "visible_bbox": [
+        20,
+        7,
+        44,
+        55
+      ],
+      "sha256": "d2f7b0bfba48509d24af66d6884e3ae13b18be411484a6ac7eb1e830dfdb66f0"
+    }
+  ],
+  "html": [
+    {
+      "path": "interface_estudo_01.html",
+      "javascript_syntax": "passed",
+      "local_references": "passed",
+      "unique_ids": "passed",
+      "heart_icons": 8
+    },
+    {
+      "path": "personagens_lote_01.html",
+      "javascript_syntax": "passed",
+      "local_references": "passed",
+      "unique_ids": "passed",
+      "heart_icons": 0
+    }
+  ],
+  "json_files": [
+    "Guia_Godot4\\visuais\\personagens_lote_01.json",
+    "Guia_Godot4\\visuais\\ui\\vida_coracao.json",
+    "Guia_Godot4\\visuais\\personagens\\michael_existente\\character.json",
+    "Guia_Godot4\\visuais\\personagens\\zumbalhao\\character.json"
+  ],
+  "markdown_links": [
+    {
+      "path": "CEREBRO.md",
+      "local_links": "passed"
+    },
+    {
+      "path": "INTERFACE_PROPOSTA_01.md",
+      "local_links": "passed"
+    },
+    {
+      "path": "HISTORICO_DE_BUGS.md",
+      "local_links": "passed"
+    }
+  ],
+  "not_tested": [
+    "Browser rendering and device interaction",
+    "Directions other than south",
+    "Existing animation frames",
+    "Gameplay, networking and balance"
+  ]
+}

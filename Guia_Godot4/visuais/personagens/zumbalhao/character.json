@@ -1,0 +1,41 @@
+{
+  "name": "Zumbalhão",
+  "date": "2026-10-11",
+  "character_id": "40cff10a-fe31-472e-8bd8-94246e5f341e",
+  "reference": "Zumbi dos Palmares",
+  "role": "Dano corpo a corpo",
+  "status": "completed",
+  "directions_created": 8,
+  "local_files": [
+    {
+      "direction": "south",
+      "file": "south.png",
+      "origin": "Native get_character(include_preview=true) image block, saved without editing."
+    }
+  ],
+  "requested_size": 48,
+  "reported_size": [
+    68,
+    68
+  ],
+  "brief": {
+    "mode": "standard",
+    "n_directions": 8,
+    "size": 48,
+    "view": "low top-down",
+    "outline": "selective outline",
+    "shading": "medium shading",
+    "detail": "high detail",
+    "name": "Relic Arena — Zumbalhão",
+    "body_type": "humanoid",
+    "proportions": "{\"type\":\"preset\",\"name\":\"chibi\"}",
+    "description": "An instantly recognizable exaggerated heroic caricature inspired by Zumbi dos Palmares for a Brazilian pixel art arena game, a fierce close-range damage warrior. Adult Black Brazilian man with deep brown skin, strong proud face, enormous expressive eyebrows, thick black afro hair tied by a vivid red headband, fearless grin. Extremely broad muscular shoulders with bare forearms, simple earthy brown and ochre cloth clothing, red waist sash, sturdy dark sandals. His signature accessory is one comically oversized broad-bladed short spear with a wooden shaft, almost as tall as his body, readable as a single bold weapon shape. Powerful grounded ready stance, funny exaggerated head and weapon while retaining a dignified formidable personality. Crisp pixel clusters, restrained warm earth palette, medium shading, clean dark selective outline, warm upper-left lighting. Low top-down full-body sprite viewed from a slightly elevated arena camera; feet aligned on a shared ground plane. Entire body, afro and spear inside 48px canvas, transparent background, no scenery, no lettering, no aura or particles."
+  },
+  "new_generation": true,
+  "announced_generation_cost": 1,
+  "animations": "Nenhuma gerada nesta etapa.",
+  "names_provisional": true,
+  "final_art_approved": false,
+  "godot_integrated": false,
+  "limitations": "Somente prévia sul salva localmente. Oito direções informadas como concluídas na conta; não foram todas inspecionadas."
+}

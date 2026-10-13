@@ -1,0 +1,13 @@
+{
+  "character_id": "6a5ec045-5930-4955-a684-ef864e5607b9",
+  "mode": "v3",
+  "animation_name": "skill_rally_v1",
+  "directions": [
+    "east"
+  ],
+  "frame_count": 6,
+  "keep_first_frame": true,
+  "custom_start_frame_url": "upload:b3f0d51d-974a-4bfa-abc2-3bac6183f1a0",
+  "end_frame_url": "upload:b3f0d51d-974a-4bfa-abc2-3bac6183f1a0",
+  "action_description": "EAST-facing imposing leadership battle-cry gesture, one complete action returning to the identical starting stance. The start and end stance shows the warrior standing upright on level ground holding his spear. In the action: he firmly raises his right arm and lifts the spear high up into the air in a triumphant rally gesture inspiring his allies, chest proud and head held high with warrior determination, then lowers his arm and spear smoothly back into the starting ready stance. The spear blade stays pointing upward throughout the lift and lower. Strong natural articulation of arms, shoulders, chest and grounded feet. Same adult muscular warrior, dark skin, scars, beige trousers, ankle cuffs, single waist dagger. Transparent background, no effects, rock, ground line or extra weapons."
+}

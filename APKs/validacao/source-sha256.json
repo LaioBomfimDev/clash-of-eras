@@ -1,0 +1,1454 @@
+[
+  {
+    "path": "export_presets.cfg",
+    "sha256": "FC2C1B3327DFAD214A07CCAD08768AB4C908A06AD8F8341E95FBBB53441FC641"
+  },
+  {
+    "path": "main.tscn",
+    "sha256": "3F3AE81822CDAE6DFC8895DC6795654629A9FF89551FF952B09D8AEC4D77A0D2"
+  },
+  {
+    "path": "project.godot",
+    "sha256": "F3538043B837E1DD1A4FE7D26F430C612A70F1425EA7CFA08DD1921C5A817FE8"
+  },
+  {
+    "path": "VALIDACAO_01.json",
+    "sha256": "26EF829955B24D68820315B19D08F61F5C66AF2A3C1969695377B307198391EB"
+  },
+  {
+    "path": "VALIDACAO_V1_1.json",
+    "sha256": "71DBEDC74137AF84955985AF9C0281C90F79308ADB8BF9D8FF298904BC0C6C3D"
+  },
+  {
+    "path": "VALIDACAO_V1_2.json",
+    "sha256": "62511B93C689AA67F098555CC9B28A644B4011CE7C4A154460F88B74CF92474E"
+  },
+  {
+    "path": "VALIDACAO_V1_3.json",
+    "sha256": "384C3348FFA2E3950F1380B8C5565EAD868AEDB83941662BCD8F33FD0EA668D6"
+  },
+  {
+    "path": "VALIDACAO_V1_4.json",
+    "sha256": "50AC3D4AA25316091480B531391134CD44A194F3D13877BA32F3B8163C53F283"
+  },
+  {
+    "path": "VALIDACAO_V1.json",
+    "sha256": "F71F02C05694676395B92C73020A3D94ACF4A55F60AB80CE953D478B13E8B5FF"
+  },
+  {
+    "path": "assets/caramelo.png",
+    "sha256": "3EC4003692D56CD3433F5EC20FB540CD540BCC023D48407874CB949779E610DC"
+  },
+  {
+    "path": "assets/heart.png",
+    "sha256": "1D72C557ED0A588CE5C6727264F64856E8CDEEE5638AF53BFB2A776B79D51413"
+  },
+  {
+    "path": "assets/neymar.png",
+    "sha256": "E8F6731E55554285C936D8F72204B87258089BD6B43847401A5BAF85FA0A5F34"
+  },
+  {
+    "path": "assets/obama.png",
+    "sha256": "048BF9568C5A09FCD45F13BEB0A963C9341784E3466665643046DB66E4843590"
+  },
+  {
+    "path": "assets/zumbi.png",
+    "sha256": "4AA0A31CF77B0D915638A0A29626EC5E41BE7DBC8A4A65F1AE82B649F9D3D14C"
+  },
+  {
+    "path": "assets/arena/braseiro.png",
+    "sha256": "AC68112E711BAE4F84989FFAD8475E62CAF4E3E3D9CD0C288AAB16E4B612C446"
+  },
+  {
+    "path": "assets/arena/coliseu_estudo_02.png",
+    "sha256": "0230386C5CA0ADFF21B3C2AE2BCA72A7F23C1902729EAA822009F94BB995469F"
+  },
+  {
+    "path": "assets/arena/props.json",
+    "sha256": "AD57256C246354FEC3CC70B5FE1892914913DC1451C2DDC664825AD560F4A103"
+  },
+  {
+    "path": "assets/characters/manifest.json",
+    "sha256": "FAF5C4C92E5C16719BCACBD745F2A8E5F496326E2ECACC8A96061E47F6B8E6D5"
+  },
+  {
+    "path": "assets/characters/barbie/realista_03/exportacao.json",
+    "sha256": "A9E35D8D6B233F30247A18180B05C76122EFC37FFC2A361951FE0B2598273D26"
+  },
+  {
+    "path": "assets/characters/barbie/realista_03/original/metadata.json",
+    "sha256": "41A78EBAAD012CFE938B5721E56BFF2C80C427787A82667C8501D4B4095CCA3A"
+  },
+  {
+    "path": "assets/characters/barbie/realista_03/original/Idle/rotations/east.png",
+    "sha256": "D37EAE1737D3A31C4B4CE906D985FA71EA5D52E23A91737F4EF78AF7309D9DA3"
+  },
+  {
+    "path": "assets/characters/barbie/realista_03/original/Idle/rotations/north-east.png",
+    "sha256": "B1EA04854AF023711742B8EBFB53E244C49E6C369879E16C3A0013412294A185"
+  },
+  {
+    "path": "assets/characters/barbie/realista_03/original/Idle/rotations/north-west.png",
+    "sha256": "FD272FFD6B05DEC8FA0931CC47B1A6D7E028189AE64AD3E8F2A6BB24CDC2EF68"
+  },
+  {
+    "path": "assets/characters/barbie/realista_03/original/Idle/rotations/north.png",
+    "sha256": "72556E675B900B1B5E6BEDDE86A810B2CFAD61B4515E2EA46F7343C1C3D0B6F4"
+  },
+  {
+    "path": "assets/characters/barbie/realista_03/original/Idle/rotations/south-east.png",
+    "sha256": "5B8E56B037BD75C3904C166C7200A849913F2A6C3C8F9E7AA2D5B8C4B1445A79"
+  },
+  {
+    "path": "assets/characters/barbie/realista_03/original/Idle/rotations/south-west.png",
+    "sha256": "E053C6AC1DDA3CBA0888FE0D987B3F01543C5627E9C211DF36C0AF113EA18A28"
+  },
+  {
+    "path": "assets/characters/barbie/realista_03/original/Idle/rotations/south.png",
+    "sha256": "B8A055FC50CBA568C9A85F80651AE5F5ECF2D9C2AB6D29C0218F99E9F9F865BD"
+  },
+  {
+    "path": "assets/characters/barbie/realista_03/original/Idle/rotations/west.png",
+    "sha256": "F2BF63E8C2778C4FD30446F54B4F67031985CD317C53723991E6DB5422288532"
+  },
+  {
+    "path": "assets/characters/bob_marley/realista_03/exportacao.json",
+    "sha256": "168806CAED7CC300EABD062C28BF70BCFAC6CAC790B41F0EE5418D7EFF5EF4D5"
+  },
+  {
+    "path": "assets/characters/bob_marley/realista_03/original/metadata.json",
+    "sha256": "8824D1F28A37686ED764A0D370B29EF3E748DB2F83A5A880F197FE20FA8786B3"
+  },
+  {
+    "path": "assets/characters/bob_marley/realista_03/original/Idle/rotations/east.png",
+    "sha256": "5334112AD7FAD53BBE2FB84276FC53414B9589A0FD0BCE85E105672EE04AE9B6"
+  },
+  {
+    "path": "assets/characters/bob_marley/realista_03/original/Idle/rotations/north-east.png",
+    "sha256": "069036596AFD24557BB2647B493D355700400C6E599741E26E23297E84290240"
+  },
+  {
+    "path": "assets/characters/bob_marley/realista_03/original/Idle/rotations/north-west.png",
+    "sha256": "CBE79BD504555E2BAE2A11D0623F653964279E41EDB1092C933DE7090CE67D52"
+  },
+  {
+    "path": "assets/characters/bob_marley/realista_03/original/Idle/rotations/north.png",
+    "sha256": "B3A54487AF466C342A03BF1BADAC30358A8ADA4F30E9FCF3ABE698BC37D7CB70"
+  },
+  {
+    "path": "assets/characters/bob_marley/realista_03/original/Idle/rotations/south-east.png",
+    "sha256": "4364B727719E34E569B4D98A5BD327849A4CFA44D93E7022F52F3D472FF2607C"
+  },
+  {
+    "path": "assets/characters/bob_marley/realista_03/original/Idle/rotations/south-west.png",
+    "sha256": "CD6EA59EC158DEE579B9F3C7513D34C91730559337674E84491C8A1B2F40C364"
+  },
+  {
+    "path": "assets/characters/bob_marley/realista_03/original/Idle/rotations/south.png",
+    "sha256": "05B162A3E5C5F9DF7EB04A983167D60CBE9BC82D76CAD04B360C40CEF3CD4097"
+  },
+  {
+    "path": "assets/characters/bob_marley/realista_03/original/Idle/rotations/west.png",
+    "sha256": "5DF227BBB0B40AE92CD36DC2FC7A5FAD4A7A95D43D8E63A2A32856E9E392E713"
+  },
+  {
+    "path": "assets/characters/caramelo/original/metadata.json",
+    "sha256": "D1A95B0918A5AC27FA8370F6BEFCECEE9A194185FDB9CF1E038A52DB2C8F4823"
+  },
+  {
+    "path": "assets/characters/caramelo/original/Idle/rotations/east.png",
+    "sha256": "BF24BD1C03465C0FC6080111C45EEDEE319B6FA06000CBEF4E8D9EFBCADDF56D"
+  },
+  {
+    "path": "assets/characters/caramelo/original/Idle/rotations/north-east.png",
+    "sha256": "7B098AA70AF2FAA65202105497DC1CDAD52464C6C675AC57FA9FFDAD70FEC98C"
+  },
+  {
+    "path": "assets/characters/caramelo/original/Idle/rotations/north-west.png",
+    "sha256": "C2076DC41966125920392DC44656DFBA065FA81779F737D26AA60FDD3BABC49C"
+  },
+  {
+    "path": "assets/characters/caramelo/original/Idle/rotations/north.png",
+    "sha256": "5829A1B2D74D2FB5ABCEDFCB892DFECCFDEC51F77C42BDB9E360F5A9287546EF"
+  },
+  {
+    "path": "assets/characters/caramelo/original/Idle/rotations/south-east.png",
+    "sha256": "843EC9F282F77F72CF080C83BEB606ED8EBD8C46CE88001853EB89EDA6CF3DAB"
+  },
+  {
+    "path": "assets/characters/caramelo/original/Idle/rotations/south-west.png",
+    "sha256": "C7BBEBC8566EB96A8D280CAA7E65C8AA066CD0BE5B608B2C18D81BA244A59097"
+  },
+  {
+    "path": "assets/characters/caramelo/original/Idle/rotations/south.png",
+    "sha256": "3EC4003692D56CD3433F5EC20FB540CD540BCC023D48407874CB949779E610DC"
+  },
+  {
+    "path": "assets/characters/caramelo/original/Idle/rotations/west.png",
+    "sha256": "8D59860792D30077DF5E0EFB8B3ADDC3759FE4C11F08A3E32C8D2B4BCAB0FF5B"
+  },
+  {
+    "path": "assets/characters/elon/realista_03/exportacao.json",
+    "sha256": "2989720F25DF71337F409B310BBEC759BA773B0DBCC7EEFE0ECF1AD9D69214FF"
+  },
+  {
+    "path": "assets/characters/elon/realista_03/original/metadata.json",
+    "sha256": "6A46B619632E0B6C90C22EDF12F4603671C37A19A5C0FB603CDEAD38AFF99D54"
+  },
+  {
+    "path": "assets/characters/elon/realista_03/original/Idle/rotations/east.png",
+    "sha256": "B9BAD23BD9B843424BA4CFCEBCF516043DC2C87863996E6D11C4F67FF1790A86"
+  },
+  {
+    "path": "assets/characters/elon/realista_03/original/Idle/rotations/north-east.png",
+    "sha256": "5E8936BE2C7F904C7A9E14FDC3948075F170E0AAA0F64EE78B34B876741DC2D3"
+  },
+  {
+    "path": "assets/characters/elon/realista_03/original/Idle/rotations/north-west.png",
+    "sha256": "EAD56FAA80F16A92A0E0FF17F8C119D6FFEDB444E0C43366E252DA3C7989ECFE"
+  },
+  {
+    "path": "assets/characters/elon/realista_03/original/Idle/rotations/north.png",
+    "sha256": "8A0885A4BF63B77E05DCF9B98C40B85B1D3795586D10CC27E725BEBD202D98AB"
+  },
+  {
+    "path": "assets/characters/elon/realista_03/original/Idle/rotations/south-east.png",
+    "sha256": "EF4A50A214F18D8331597B044B0762FE6B7D1E028C618C469F1293E2DA67D4F0"
+  },
+  {
+    "path": "assets/characters/elon/realista_03/original/Idle/rotations/south-west.png",
+    "sha256": "35A3ACF97AAC8FC02E3801F01FD79C36F87D9532AC82840830085379BDD1E75E"
+  },
+  {
+    "path": "assets/characters/elon/realista_03/original/Idle/rotations/south.png",
+    "sha256": "D57D3AE2D3EC576485644865ADC29F712DF38F7B96BA2C7DE34FDFD6BD437848"
+  },
+  {
+    "path": "assets/characters/elon/realista_03/original/Idle/rotations/west.png",
+    "sha256": "25D1B75C8353B64C324303DD5953E5B920AE07944FD6B23ED050FD68A31D50ED"
+  },
+  {
+    "path": "assets/characters/ken/realista_03/exportacao.json",
+    "sha256": "AF4E13B3799B40BDA283779918273B2BBBCCBC0F455B3511847B7ABBA6BACABF"
+  },
+  {
+    "path": "assets/characters/ken/realista_03/original/metadata.json",
+    "sha256": "D1FC5AC9204F48096157199A48280C8063102CFEA6CA24EA29F86D5660BA2637"
+  },
+  {
+    "path": "assets/characters/ken/realista_03/original/Idle/rotations/east.png",
+    "sha256": "42ACF93DFC9461643F8BC701F1F96B49A02CE6A97D990DB1DA5FD0B5C2F3265A"
+  },
+  {
+    "path": "assets/characters/ken/realista_03/original/Idle/rotations/north-east.png",
+    "sha256": "DAB3215F3FD7B79CD4DCF6A3B68F5CB4D4E7C8EBF9DAB519E4D2A490CC962ECF"
+  },
+  {
+    "path": "assets/characters/ken/realista_03/original/Idle/rotations/north-west.png",
+    "sha256": "D9C6E03FDE57B0C208B3065E16F33E130A39C37BA7D3EF05ED515E347CF3C33F"
+  },
+  {
+    "path": "assets/characters/ken/realista_03/original/Idle/rotations/north.png",
+    "sha256": "C92878AF8423E94DE9281FE47097BA51806AB40F43320DD5BA37F616E338D182"
+  },
+  {
+    "path": "assets/characters/ken/realista_03/original/Idle/rotations/south-east.png",
+    "sha256": "D57C3F5B982BAEA2C7C87627BC2715DBDE4966E50C19C2AC80B7524D462E5C8A"
+  },
+  {
+    "path": "assets/characters/ken/realista_03/original/Idle/rotations/south-west.png",
+    "sha256": "3CA4A60FF92FE5F9730AF15F22A1A409B37C2A2DE9A16866E1827FDFB7B64F0A"
+  },
+  {
+    "path": "assets/characters/ken/realista_03/original/Idle/rotations/south.png",
+    "sha256": "34D5DC37828CCC9D6A654664041FA84E308B50E036E9782A62A9F2280493F393"
+  },
+  {
+    "path": "assets/characters/ken/realista_03/original/Idle/rotations/west.png",
+    "sha256": "CA6C399237B7414DE8048A9902B9265B9B72C63727A98E6544A08E35EB68DE0B"
+  },
+  {
+    "path": "assets/characters/lula/realista_03/exportacao.json",
+    "sha256": "0A79E5A7C9575975A68B5E223FCD89C7A887A7BEB15B3B31F999B2D229D6D8F3"
+  },
+  {
+    "path": "assets/characters/lula/realista_03/original/metadata.json",
+    "sha256": "1BB32D1CD752A820DFCAA985DAF564A416B6830BCA2E3694BA6228E8EBCB1BD1"
+  },
+  {
+    "path": "assets/characters/lula/realista_03/original/Idle/rotations/east.png",
+    "sha256": "E5FBC74C020A810F462E88BEAAF5910204B67CB1182E34E8E9800D47499628E9"
+  },
+  {
+    "path": "assets/characters/lula/realista_03/original/Idle/rotations/north-east.png",
+    "sha256": "5A90AF739E666B13C34CE06FB2F10B1AA214F3D1200855E0E84E0815FB9F1BDA"
+  },
+  {
+    "path": "assets/characters/lula/realista_03/original/Idle/rotations/north-west.png",
+    "sha256": "F0748DDBE9B962274D49071E42CF537932F04696FB33D65539754EB411CC88E2"
+  },
+  {
+    "path": "assets/characters/lula/realista_03/original/Idle/rotations/north.png",
+    "sha256": "B529FF50DA26C66B184C4BF96ED912E622CC77088B57EA2BF477D035F4F9180E"
+  },
+  {
+    "path": "assets/characters/lula/realista_03/original/Idle/rotations/south-east.png",
+    "sha256": "E5663E9DF1742EE475B4848AC614581C76826397262E4564B6D1832B93A37188"
+  },
+  {
+    "path": "assets/characters/lula/realista_03/original/Idle/rotations/south-west.png",
+    "sha256": "71D6F944E3F6231800DD259CDD661B878601BBE41ABDDC3DEF0C9DACAC72B0D2"
+  },
+  {
+    "path": "assets/characters/lula/realista_03/original/Idle/rotations/south.png",
+    "sha256": "6F7156EC12712C094EB3429DF6255315CFFEB9F20C5F95749648B45328A34C45"
+  },
+  {
+    "path": "assets/characters/lula/realista_03/original/Idle/rotations/west.png",
+    "sha256": "C87F6BBF892C1D7703A6BA6E7879625FC885FAD0A9030D69AFEBB837186A06CB"
+  },
+  {
+    "path": "assets/characters/neymar/original/metadata.json",
+    "sha256": "6A8D29412AA34A41CE53F4F605F1A46863EC2F1457866A45D2C283134BD74305"
+  },
+  {
+    "path": "assets/characters/neymar/original/Idle/rotations/east.png",
+    "sha256": "788062E3AA991BF4BECB9118843961F6FA925D35FAA80598CBFAA62F8BDD8BF4"
+  },
+  {
+    "path": "assets/characters/neymar/original/Idle/rotations/north-east.png",
+    "sha256": "43FE9C4B16BB19C6EF0CF942D6A210FE1C731131DDCEA1F5640CEB0CEDDEC79B"
+  },
+  {
+    "path": "assets/characters/neymar/original/Idle/rotations/north-west.png",
+    "sha256": "A1D7E1B6E2219E6F252AB6809725A39AAA578432D4FA827C60E18CC3B460C1BE"
+  },
+  {
+    "path": "assets/characters/neymar/original/Idle/rotations/north.png",
+    "sha256": "073535D7C9B26FA734E9839069F61ADA90C0B478217AFEC6D82F93B2BD58A8CE"
+  },
+  {
+    "path": "assets/characters/neymar/original/Idle/rotations/south-east.png",
+    "sha256": "AEB75084D15D48F8C4B4B5916BC4D8C955AE05C7622634288A10600CADBE0402"
+  },
+  {
+    "path": "assets/characters/neymar/original/Idle/rotations/south-west.png",
+    "sha256": "010C8CF5341D8EDC2E96E6933099D11ADBE138CB07F1C4BD572335F7C1AE2EA6"
+  },
+  {
+    "path": "assets/characters/neymar/original/Idle/rotations/south.png",
+    "sha256": "125A5588C3FA2E16179D32E98F1DC7DF69155631076C47074D2303209EE6DC69"
+  },
+  {
+    "path": "assets/characters/neymar/original/Idle/rotations/west.png",
+    "sha256": "3832D872EEAA31DDFB0CCA8CF8EA89EC98B3E3A91CF0FD56CD0CC98136E0FF93"
+  },
+  {
+    "path": "assets/characters/neymar/realista_03/exportacao.json",
+    "sha256": "4F8348C4679C40A057397307CC948325A2238E2BDC45B81CE2802D04EDB43F95"
+  },
+  {
+    "path": "assets/characters/neymar/realista_03/original/metadata.json",
+    "sha256": "D278C4D34D8ED315CA9C0A5EFB23C28C6772B2C3217F004EBE439BC93101A44A"
+  },
+  {
+    "path": "assets/characters/neymar/realista_03/original/Idle/rotations/east.png",
+    "sha256": "5C09271E8E01BCC70D1702B471F21B752429C2AFB1BAB34F48931412C110B1D6"
+  },
+  {
+    "path": "assets/characters/neymar/realista_03/original/Idle/rotations/north-east.png",
+    "sha256": "07E7849BBEAB836AE9C2C2538B3306C2C93976DE70BD812E27D5AB79D0583FF4"
+  },
+  {
+    "path": "assets/characters/neymar/realista_03/original/Idle/rotations/north-west.png",
+    "sha256": "2C71BF84A20ECBC2A8429B40064FB4DFF7F9985ED8E03A36102ECA5E745C0C24"
+  },
+  {
+    "path": "assets/characters/neymar/realista_03/original/Idle/rotations/north.png",
+    "sha256": "016E462C24D26B4A2764077C98A6ED5B8B3F0364FE4A794634934D9E48E809F6"
+  },
+  {
+    "path": "assets/characters/neymar/realista_03/original/Idle/rotations/south-east.png",
+    "sha256": "FADE3CA05AFD4305D071A923088B066556884FE3F7AE66B57B017CAAB4619942"
+  },
+  {
+    "path": "assets/characters/neymar/realista_03/original/Idle/rotations/south-west.png",
+    "sha256": "C0D8F9FC8A55D573B3CF70616EDF12E55F3672BD6D3EF035DAAFF75E9A299D19"
+  },
+  {
+    "path": "assets/characters/neymar/realista_03/original/Idle/rotations/south.png",
+    "sha256": "390B6C533B480629638D325588D3628E2CAC01E16245B6A437616A40BB54595D"
+  },
+  {
+    "path": "assets/characters/neymar/realista_03/original/Idle/rotations/west.png",
+    "sha256": "ED937185D0A032BDA954FD1EA0EA15E1E09DE6310EC499BAA995474AA9927247"
+  },
+  {
+    "path": "assets/characters/obama/original/metadata.json",
+    "sha256": "5A2C8FC1F63D0E040394B51EF600FE79DB413213223AEB708E2A5156969384E8"
+  },
+  {
+    "path": "assets/characters/obama/original/Idle/rotations/east.png",
+    "sha256": "DB594B32D95D3098FE29B8EDB263E002D48C59962FEC9A6BF6A6DD841B4B2812"
+  },
+  {
+    "path": "assets/characters/obama/original/Idle/rotations/north-east.png",
+    "sha256": "12C184E079BB384F6329AD437C5C0B00652F1D1C2A60B81ADC45165CF0E1590D"
+  },
+  {
+    "path": "assets/characters/obama/original/Idle/rotations/north-west.png",
+    "sha256": "10595126EBB655ECA8A10CE995BBCE1383AF83D865338DE740E5A5D2628F7146"
+  },
+  {
+    "path": "assets/characters/obama/original/Idle/rotations/north.png",
+    "sha256": "23316AB291CBCE8D0B0DBA9C3F1BC042E68345C073897848C370684A0EAC8B7F"
+  },
+  {
+    "path": "assets/characters/obama/original/Idle/rotations/south-east.png",
+    "sha256": "6AAB2ABA4578B5FADCA611D01DD4D306E216E923227CB89D02B0D44C406F0705"
+  },
+  {
+    "path": "assets/characters/obama/original/Idle/rotations/south-west.png",
+    "sha256": "9D8327661D54F1E9FDA7139184498530B00E37D3692F2A23D13F8D9D6596B2D7"
+  },
+  {
+    "path": "assets/characters/obama/original/Idle/rotations/south.png",
+    "sha256": "615B36C0FFF72B1717F9F8E71A8FB07FFE824D647CEFE3BF4AD5772EE3298085"
+  },
+  {
+    "path": "assets/characters/obama/original/Idle/rotations/west.png",
+    "sha256": "417EB7DA202525BA5131877365870A0FF3EBAB8874F8DC9A8F62D77E0DA79209"
+  },
+  {
+    "path": "assets/characters/obama/realista_03/exportacao.json",
+    "sha256": "5CFFDDF882655AFA6B10F5A116959360D45003203319D2E0FEAEED77F4B00A20"
+  },
+  {
+    "path": "assets/characters/obama/realista_03/original/metadata.json",
+    "sha256": "A058C1F8ABD13A6CD3BC90C0D0063B1CB1FFE3E36B4876BAC88677A212DE4CD9"
+  },
+  {
+    "path": "assets/characters/obama/realista_03/original/Idle/rotations/east.png",
+    "sha256": "E77392C127BB3DF6026E5747C4AC920F0BBC865EADD8350DA997BC8F5C4989AD"
+  },
+  {
+    "path": "assets/characters/obama/realista_03/original/Idle/rotations/north-east.png",
+    "sha256": "1C763873039BCBD1191DE75BCBBE4F73F7E63503C12A368D642F67DB31367591"
+  },
+  {
+    "path": "assets/characters/obama/realista_03/original/Idle/rotations/north-west.png",
+    "sha256": "007010F1BE1D43AD583FCB7C895B26C15731CD91ACA292347A36A218C57A1111"
+  },
+  {
+    "path": "assets/characters/obama/realista_03/original/Idle/rotations/north.png",
+    "sha256": "DF58FDC65B6E4013CEE25B35AB9E6A2625819CACAA05593389C409CFAE9D55C4"
+  },
+  {
+    "path": "assets/characters/obama/realista_03/original/Idle/rotations/south-east.png",
+    "sha256": "BE5DB5A1D36861685ED24F9318F4DA7F7807BD26AF9329E78FD2715CA8D91E76"
+  },
+  {
+    "path": "assets/characters/obama/realista_03/original/Idle/rotations/south-west.png",
+    "sha256": "54432C361B0EE80A1B04D0102B865A1C608F9A92C2A4D1ADCA6E90E6D88E3346"
+  },
+  {
+    "path": "assets/characters/obama/realista_03/original/Idle/rotations/south.png",
+    "sha256": "9E7701E09BFE5F18FED0AD3DC3623AB9F16FD33B7AAEB3FE4EECF051E8EBBFAA"
+  },
+  {
+    "path": "assets/characters/obama/realista_03/original/Idle/rotations/west.png",
+    "sha256": "44991553AA10AD9866A80494EDBE7A4A43B414A060F05B4B47D3AC8BF0944B99"
+  },
+  {
+    "path": "assets/characters/provisorio/barbie.png",
+    "sha256": "C3A8FF3B09E938788A760AA21D918383C4A7BE18110D9517935D8BCE33C41A38"
+  },
+  {
+    "path": "assets/characters/provisorio/bob_marley.png",
+    "sha256": "33FD8D02FFD69FDDFC4CBAA84518F56A3636B97D1E776B5DAA004DC19BA4FE41"
+  },
+  {
+    "path": "assets/characters/provisorio/caramelo.png",
+    "sha256": "7FBE993A8AD3E10448F3A1CDBD0F82EBC6E8B40AE8B93049610BA1BE03FA1DB8"
+  },
+  {
+    "path": "assets/characters/provisorio/cleopatra.png",
+    "sha256": "BE4E4749421005A6513E285A274C1AF312D1C92B6C80A63C45D16B0F0AEE21F3"
+  },
+  {
+    "path": "assets/characters/provisorio/einstein.png",
+    "sha256": "1C58D65CC6F17356566D0533E634F35B03269D49F52444FD46A9A2A18FEF6B27"
+  },
+  {
+    "path": "assets/characters/provisorio/elon.png",
+    "sha256": "F835E1904C90678600C1DCB3E2EC951FD5A325625766BA6D625B342A9FAAF5FF"
+  },
+  {
+    "path": "assets/characters/provisorio/julio_cesar.png",
+    "sha256": "80E874B2ED87D898903C1632C1AD5E1BB09EAFA9DE8E9ABAF436BB31C01B37AC"
+  },
+  {
+    "path": "assets/characters/provisorio/ken.png",
+    "sha256": "86C0DC3746F9B7BD7562A1BEB51796A188F88832A014422BC2301BA512D11E80"
+  },
+  {
+    "path": "assets/characters/provisorio/lula.png",
+    "sha256": "79151E888123747B2293918379ACF8C6B02A8E2617030D5DE638666576E3C85F"
+  },
+  {
+    "path": "assets/characters/provisorio/napoleao.png",
+    "sha256": "21BB09896F65BADB94668951758866492847AF19C6AAB56326CFF3D8E3706FA9"
+  },
+  {
+    "path": "assets/characters/provisorio/rapunzel.png",
+    "sha256": "B5D196197820E134F573F8AB082E7A6141B887C133A547CB926E53D5253AB79B"
+  },
+  {
+    "path": "assets/characters/provisorio/snoop.png",
+    "sha256": "36E79464BD3938D1547E4407AED5C0634D6B92F3768943860C67787DC8BB79DB"
+  },
+  {
+    "path": "assets/characters/provisorio/zumbi.png",
+    "sha256": "15D4A853432F7E8B8592A5939B78B7F9A5AAF93711F168FB99C84E67C7E69E9A"
+  },
+  {
+    "path": "assets/characters/rapunzel/realista_03/exportacao.json",
+    "sha256": "4AD4EB988BDBA02D1B9DF1B7ADE854891F13348568DC32C5D49E79297421EBD8"
+  },
+  {
+    "path": "assets/characters/rapunzel/realista_03/original/metadata.json",
+    "sha256": "B26C1CD6E3143C9F70EA0021DDABE582EF243DEF77E78A9C3ECAD3D78377FAB2"
+  },
+  {
+    "path": "assets/characters/rapunzel/realista_03/original/Idle/rotations/east.png",
+    "sha256": "7BD8F3EDAD89BE19A1ECDED67405A62388E589061DD352597715B78C9C4FCA6E"
+  },
+  {
+    "path": "assets/characters/rapunzel/realista_03/original/Idle/rotations/north-east.png",
+    "sha256": "F09ABD9FE790386B910B3EED6592CFD19921E992DD0FBC537856C437ECE2880B"
+  },
+  {
+    "path": "assets/characters/rapunzel/realista_03/original/Idle/rotations/north-west.png",
+    "sha256": "6CF085D9E73652FB9D8F72016AF40877630FB67D541A25F60381F4EB937AF612"
+  },
+  {
+    "path": "assets/characters/rapunzel/realista_03/original/Idle/rotations/north.png",
+    "sha256": "B418DC953B3684FFC7CFC284364691C29CDD22E226AAEA24A862FFD57C91B797"
+  },
+  {
+    "path": "assets/characters/rapunzel/realista_03/original/Idle/rotations/south-east.png",
+    "sha256": "E549ADECD88E8FA1B379C7955DA5D690F29BBD2C111ED1731D01CF9B93F87D37"
+  },
+  {
+    "path": "assets/characters/rapunzel/realista_03/original/Idle/rotations/south-west.png",
+    "sha256": "000FB30454B276921AC2B9FBD813E0C3A2AA4B4722D8CB34FF925FAB3877EEF4"
+  },
+  {
+    "path": "assets/characters/rapunzel/realista_03/original/Idle/rotations/south.png",
+    "sha256": "8E996696DC366A79509A76B8399BC484C1537201C8CA8F14F31080225A3A8D24"
+  },
+  {
+    "path": "assets/characters/rapunzel/realista_03/original/Idle/rotations/west.png",
+    "sha256": "E162FB39FDFAC01430E0A427210D0DAFBD301B3BC617AFC5930171B2D45DB29D"
+  },
+  {
+    "path": "assets/characters/snoop/realista_03/exportacao.json",
+    "sha256": "1F5320CC7F74BAD3D78DF50B8D8654CD15229C812731574F0652F985E40A41A0"
+  },
+  {
+    "path": "assets/characters/snoop/realista_03/original/metadata.json",
+    "sha256": "11D63E6639C164BDC43284E0C3FB40176E0CC223FB46E9775D234D2B874DC6D6"
+  },
+  {
+    "path": "assets/characters/snoop/realista_03/original/Idle/rotations/east.png",
+    "sha256": "C18B809E59DBF7D8BBD06059F19AE3403349AB58DC24FDD779E6BBECF1B48279"
+  },
+  {
+    "path": "assets/characters/snoop/realista_03/original/Idle/rotations/north-east.png",
+    "sha256": "F80076A3F0AC1FD0FB3AAADC4F7D65387DCF4E174C8F22D551DF0BA6A6DF7C83"
+  },
+  {
+    "path": "assets/characters/snoop/realista_03/original/Idle/rotations/north-west.png",
+    "sha256": "CBD39F52B9D126E96BD003452CCC9BCDC629CFF1AF8BAC69DECE7A29CC0EAF91"
+  },
+  {
+    "path": "assets/characters/snoop/realista_03/original/Idle/rotations/north.png",
+    "sha256": "C5D70A5B849432B9CD11D582F3F8046BBBFFA0D162372DD36C1C01AB926FC9D0"
+  },
+  {
+    "path": "assets/characters/snoop/realista_03/original/Idle/rotations/south-east.png",
+    "sha256": "C11204556875D78B46294DE4BB8885F9EA6CDFA0F011846E40479267877FE7F8"
+  },
+  {
+    "path": "assets/characters/snoop/realista_03/original/Idle/rotations/south-west.png",
+    "sha256": "E3AA812324BDF0FE62C773C80301641A0850FFCF717DF908D9AF15C44EB5D624"
+  },
+  {
+    "path": "assets/characters/snoop/realista_03/original/Idle/rotations/south.png",
+    "sha256": "8065BF0995DEE5B6E5F6EF7BEE8AABED4FAAE364E4108CEA912AED970CD5B48B"
+  },
+  {
+    "path": "assets/characters/snoop/realista_03/original/Idle/rotations/west.png",
+    "sha256": "FA637EFF87A05C150900B53CF473A4D1E341A6F4000412C2CC0024477BEDC006"
+  },
+  {
+    "path": "assets/characters/zumbi/original/metadata.json",
+    "sha256": "E9B80D955E226111C1AF76ACBC3221344A08B2DEB1890163CC5AB08841525E9A"
+  },
+  {
+    "path": "assets/characters/zumbi/original/Idle/rotations/east.png",
+    "sha256": "04789A481F7200B89498FAA17BB142BFE7B9DE0CA9234D73CDEA073F9A5FDF81"
+  },
+  {
+    "path": "assets/characters/zumbi/original/Idle/rotations/north-east.png",
+    "sha256": "5CAA8F6C8F32C7D5E851D3014C96FAE6F6420D81400475195C81D1E3D3C4A1AB"
+  },
+  {
+    "path": "assets/characters/zumbi/original/Idle/rotations/north-west.png",
+    "sha256": "E910A145F0874624BB624C78C1F86526EBECE4CE0EEF2ECD2FF44B1D7BE4DB96"
+  },
+  {
+    "path": "assets/characters/zumbi/original/Idle/rotations/north.png",
+    "sha256": "328DB6066C9DFEE119B2153C9C3673BDA72F02C56555EB8F1AAEF7BBF487EC6A"
+  },
+  {
+    "path": "assets/characters/zumbi/original/Idle/rotations/south-east.png",
+    "sha256": "7A573436924AA2F61EB025455BDCA306E735170462E2B50AF0FB4FA624F9EA2F"
+  },
+  {
+    "path": "assets/characters/zumbi/original/Idle/rotations/south-west.png",
+    "sha256": "A7DFF98F2CF2F504BCEDA5850EE8AFDFEA2B5FF473FE616553A1E89B51B2F004"
+  },
+  {
+    "path": "assets/characters/zumbi/original/Idle/rotations/south.png",
+    "sha256": "4AA0A31CF77B0D915638A0A29626EC5E41BE7DBC8A4A65F1AE82B649F9D3D14C"
+  },
+  {
+    "path": "assets/characters/zumbi/original/Idle/rotations/west.png",
+    "sha256": "B136895688A2E2A5C14D35A0848D0F4008C65CB7C00F1B761283C1965674B43D"
+  },
+  {
+    "path": "assets/michael/manifest.json",
+    "sha256": "924EE06924E5367C91039C9DFDF01CF3476AAAECA1DE11D1DC19FE9FD954687D"
+  },
+  {
+    "path": "assets/michael/original/metadata.json",
+    "sha256": "A38B57907CC90FF92DC9E6F2B9C0B544BAD8DF08BCECA1A01FC2A171176ADC0A"
+  },
+  {
+    "path": "assets/michael/original/dancer_in_a_white_vi/rotations/east.png",
+    "sha256": "692767DE50C544B52978660C0545C9B0CDF07A23610A54F299F3DF3A2D91363D"
+  },
+  {
+    "path": "assets/michael/original/dancer_in_a_white_vi/rotations/north-east.png",
+    "sha256": "6B4C81005368B944637DB898D5A38480D257CE7A6FE0697161CEEC975E567CA2"
+  },
+  {
+    "path": "assets/michael/original/dancer_in_a_white_vi/rotations/north-west.png",
+    "sha256": "1B87C7ED3911D37AAD71BF64F1AE295F207CF2BC632CD9ED0E205975364B99BE"
+  },
+  {
+    "path": "assets/michael/original/dancer_in_a_white_vi/rotations/north.png",
+    "sha256": "6C89884027EAE3CAAE7EC5B9F5161695A4B466B97EA5E6D8B2C435FFBFC5E7A4"
+  },
+  {
+    "path": "assets/michael/original/dancer_in_a_white_vi/rotations/south-east.png",
+    "sha256": "D461F329AF18C34681A15B84AFD222651770BBEE93E545BD00FD2E7104FE9C40"
+  },
+  {
+    "path": "assets/michael/original/dancer_in_a_white_vi/rotations/south-west.png",
+    "sha256": "5C10588ED2F47DF712718B3548A740419E921C66D931B52723D3606C78F8EFBF"
+  },
+  {
+    "path": "assets/michael/original/dancer_in_a_white_vi/rotations/south.png",
+    "sha256": "9FBFC42BBAEB020216F23E18E3848DAED80D1839B9086AF86C8B6A76062D61A5"
+  },
+  {
+    "path": "assets/michael/original/dancer_in_a_white_vi/rotations/west.png",
+    "sha256": "7323708FD4C8000AA397AA172E4443AAD41A5D5B3566A22D64CBC964F236C318"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_000.png",
+    "sha256": "A8E85A3262FD1F7BEF44D14F9B3AC6F068ABFB2412A7BB12EE67AC6F211927B1"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_001.png",
+    "sha256": "556AA8F04BA0544A30CC6985658549A21EB70122D023C7A88B4C1F6CA8CCED03"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_002.png",
+    "sha256": "21C9F552E202D49FFE730F45CF324A41D5FA21AE2BAC680615F8D481658F912A"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_003.png",
+    "sha256": "61FC3BEBA723B2E8DE9ECA9E2B774EA86D498FCE4ADE031CDB42B1D78B194F83"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_004.png",
+    "sha256": "F17087DB0A53D63ECEEB424CE7277DE502F33E7DF2A62FDC1155E3414319D0F2"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_005.png",
+    "sha256": "036895DA8D4E1E792243F29EFFC19095C6A3D8D7FBD7D6F82C794F88E2C40A6B"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_006.png",
+    "sha256": "AC988831FC3B66A4002A0A00698EBE49B6844D87A1AE824372CFD5BD6C4A9443"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_007.png",
+    "sha256": "B39C3A402AD04CE3A94818783DDF220FBE05761007845EA3CDEDE4F6C3DE3CDF"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_008.png",
+    "sha256": "DF360A0FD22E230A3082F5E9D7EB3CC1C629C456AB31944FBD3BA412EE0F0DC1"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_000.png",
+    "sha256": "5BAD17B176AD961783052039C6B45B48F834E88BCA5CBC953ED98CDBC7C64E98"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_001.png",
+    "sha256": "AFE0747466AC048698A77F98521324A27C711998B55A55A96EB47CA74906C878"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_002.png",
+    "sha256": "26BCE6496E1FC167EABA62AB0680DA63017B711995F81BBA5F031FBA782A57FB"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_003.png",
+    "sha256": "B20DC20D3B1C2265EF3FB857DB19967A83DF4E3B84886AAA98D642A98CFB63E6"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_004.png",
+    "sha256": "BF0C307FEF1131CF47BB3176EAA6059573977F53276DBFA1464CB0ACA5370769"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_005.png",
+    "sha256": "8D129D92C01131FC033325E3D0D918472D1E9CF1D7B891065D5AD0FCE9111441"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_006.png",
+    "sha256": "01A963A8E53727AE7C587A5B88E7B323C029A99CF4FD9A40A41C9C223110439F"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_007.png",
+    "sha256": "09941D85D578C374B56378B4DF94AD9D232A56D5EBC415103993D5E25BE914D2"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_008.png",
+    "sha256": "1CFF5DCD3B9E0D2F19614CD04DB4D691D690FCEB78984BF1D561B451C13F2A72"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_000.png",
+    "sha256": "72EE6BB65B4CE9EC256A56B5FA41973CACF34447DC7CC911A2FE3C663DAFD988"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_001.png",
+    "sha256": "E1C4E45782B30A0AFBD5B7A570A2AA9CF3F287F4606503BE70D247F16FBDB408"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_002.png",
+    "sha256": "80BA570967A74CE94DBFF529F49B66D568FC4D8C0BB5017A9565084574502012"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_003.png",
+    "sha256": "FDA088F09656D0DA758B406B2CAA6236DA660605BEB0C334145F1C76F504C844"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_004.png",
+    "sha256": "A506AB5840B68AAFFC6A89D7907B9CCEFE684E4BD9244E2ABFCCECF80180C4F0"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_005.png",
+    "sha256": "C68539E136CC1E80DC8877CCDC36951DE8A3F6F44574A195BC69968AC9C5B560"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_006.png",
+    "sha256": "DEAB1237ECACF3C91BB582C3AC39F9F704CD975F36DA99F0550011B9C5A64818"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_007.png",
+    "sha256": "60EE39F278408E2A77C72D1CEA7D461E0F47A0BE58F02519DA32EE41762FED81"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_008.png",
+    "sha256": "018998608F3CDB0CC45FA3EF47464B755D162828AAE6B59B374D3A98777CB7F2"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_000.png",
+    "sha256": "B504730C45050F9069147D28BDFFDD2006FE4F5D6256CF0AD8C1E4DD896AD986"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_001.png",
+    "sha256": "2E8408A6B619B38325D050E2EB082EE33879AC897E524F299B85B73E3066EBD7"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_002.png",
+    "sha256": "BFF419F408393A07F8DE3ED52B351E69DD4CB02D5BCA1D340AA5D87BF8D425EC"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_003.png",
+    "sha256": "15C64854FCC416ECC3CE2BDD35C2857A7AD5E8D149D01BF2E888FEA5EEF6F32E"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_004.png",
+    "sha256": "2D4F20F0F181BAB85E7535093E1BFEA7892F1AC7F26EEC0C184DD2F5E837B5EE"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_005.png",
+    "sha256": "AAF9C1AAF8B3E23B55E2E6E13902AA2DC93D6203DF91842E243211B88F14F556"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_006.png",
+    "sha256": "C7306BCB34AB26E5F8C8CCD5F13FAD81606E8934C42B377224CF48692BB8673F"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_007.png",
+    "sha256": "747E13EB707A107FF303824796573F633351DE713DA0436A9FA1DEB9E863BB22"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_008.png",
+    "sha256": "D82A59305C79D6A260B626D9F4E68F0BB1C03BF031BB3E6CCDBFE25A4DCD1B99"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_000.png",
+    "sha256": "393DD9D80B1F8E187CC338829CB01DB3E14BB69C8A86CA4521A84D82C4C222E9"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_001.png",
+    "sha256": "E2B5E2903C05E2804C6C593F79FD1F87AEDAF558E5B0CB081108EA0CAAC714F8"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_002.png",
+    "sha256": "D94965D75B568F7A02329DCD05F89FD914C1124A586DC5A8C67E024B9399D8B3"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_003.png",
+    "sha256": "3EBEA29890A52EE17B2D24F639DD458A960400B42CE8AFA837E498C14F4AFC50"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_004.png",
+    "sha256": "CE37A716F52933C41158BDF17F40144961CD57C25B3C412DB2BBC776B6DF53FE"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_005.png",
+    "sha256": "642CF9A7291632E4DBC405227CD73F41DDAE443D5E42A8785F65570461AEB85A"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_006.png",
+    "sha256": "E20B720A9276F3DA6E165F7EA5C460304601B9B24012E7252CC75F155EE25924"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_007.png",
+    "sha256": "1F20E5918D5D0C1F5E9D6321513C39DB88DC4669886F84DE89ED960D65173F27"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_008.png",
+    "sha256": "0D89F78EFE5B16E48E0E48533954C5E8A4A8A3401F5537DA7B8A3CCC08537B03"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_000.png",
+    "sha256": "0C115667A27F823B06969FCA2A329B7E1E38588488B65EA94FC97EB3DA8DC7F9"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_001.png",
+    "sha256": "945D652F222D3050C0BF34FEB04797709CB1CE004D01E99A5E4E00F821A31330"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_002.png",
+    "sha256": "5AF58DD24813E776A6A9167BE3285AA5E12523D4206218B423977BE1A8AB30B0"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_003.png",
+    "sha256": "4CA2349FC5BA8D7BC04CF9B72D803E5A4C3348B4F007F24A8D301943FB0868F9"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_004.png",
+    "sha256": "1C3BFA1260A207B152AEE9D5B92FC3EAA09300A7042A255CFF6E06C038B74EAB"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_005.png",
+    "sha256": "28AB109C245C24F0269137EBBEDC952566D382CFDFFB14CFFA268ACCB4F4AD68"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_006.png",
+    "sha256": "0742AAEB3BD43E184DE70F85120501EA8991015C064B76843FA48C8A72234A47"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_007.png",
+    "sha256": "343D51ED2B6093E6752638AD500352E1C95F93E7DA352A7AD89C4D56B4E1EE28"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_008.png",
+    "sha256": "CD11B5C48682226227948B7973E3E447B7D7B2D8436D61C3026CF55BFAB8DE1B"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_000.png",
+    "sha256": "770A4119862F364F222D649BC929F74C6141461565FC4A00B3678DB7F72731A3"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_001.png",
+    "sha256": "028C802BAF07082438ECF2FFFDE3008FEBB648C8E06E891B315422C3680177D8"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_002.png",
+    "sha256": "B227FBCB749119FDF04A3CF3F3EA9731268DAB1D764FBB98D1CDA2D81ED11CEC"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_003.png",
+    "sha256": "E00AA83673075021C6DB1EE1A8BAAB907B3311C4A1FF4E07848865E722134BB4"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_004.png",
+    "sha256": "A4037BDE1F34EC2B473D980FE410BC58A48C6A01FF37C6621BB7EA6B58400404"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_005.png",
+    "sha256": "B829897C61DC59C8DA61D19E8651AA3F1805F4256A557690BD89F9F870B06DBC"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_006.png",
+    "sha256": "3E726A2B314611DE2E5F2A43C4F588D9F53D4E511866B0FE426C74CA7AACF55E"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_007.png",
+    "sha256": "57EA198B879293343C3A14BDEB85FB25BF88F2B7BE14ABE311CAB97597A53C81"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_008.png",
+    "sha256": "852C5B58C124ED612408066424E50F1D8C02D07CD9A70FB36A7F034BA6FC4B8C"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_000.png",
+    "sha256": "C4E545B3F5891B81D0ED9921CAB4F880049660674652936F459052155CEA3B36"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_001.png",
+    "sha256": "025EB188B0CF000D214E84AB6CE91BC689BF69C2D4DF25E3638F6DA82A711599"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_002.png",
+    "sha256": "E1B2029FB9449F275D1885F9E3E9E0308BA535D7F163EDA60AB08BDF3DEDE8B0"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_003.png",
+    "sha256": "C7B473E3C12D713A6B1C712D62E186A85EBCA6E1B641A024B1CC49F929289881"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_004.png",
+    "sha256": "E45A3FB719A57DA1D88CC182F407C8B97764C293D4D3C70A4E49ABA6655FBDD1"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_005.png",
+    "sha256": "69B03729214E4EB9AC95E03AA07B4A1981760F7D0E34010FCFE9315E8F7128C8"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_006.png",
+    "sha256": "13D80D5314FF3E991C253369E4B156E0B25779AC1BE0A2ADBB1F1DBF9D03ECEE"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_007.png",
+    "sha256": "D84093CCFF7999D35C81FDD244910FD32E98B8ED2270A8150666FBA2AB470390"
+  },
+  {
+    "path": "assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_008.png",
+    "sha256": "A28826BAAF75860731218C9F007F49DA9CCFF12D98F71EC6E8194890904F2FE1"
+  },
+  {
+    "path": "assets/michael/original/Idle/rotations/east.png",
+    "sha256": "F98F6BD2D54FD475C98E8C06F5FE7B142A9508E556B929B3475DBB6D169FA540"
+  },
+  {
+    "path": "assets/michael/original/Idle/rotations/north-east.png",
+    "sha256": "CB2BBEF483E35BF0F67B993490A46555182F0A421AAC4649D916D07DED6C2172"
+  },
+  {
+    "path": "assets/michael/original/Idle/rotations/north-west.png",
+    "sha256": "F8D4F42BAA1BA6A0F0A6D66E93D66278491445B74E2F40B4A141A14F6CC9C4B2"
+  },
+  {
+    "path": "assets/michael/original/Idle/rotations/north.png",
+    "sha256": "52987E608E653931084C6DA8F897BFA17169A2CD6BCC89967FB237A4724BD9A7"
+  },
+  {
+    "path": "assets/michael/original/Idle/rotations/south-east.png",
+    "sha256": "B1022F789ADF12410B9CD4B3982FE60C920FE8AE956D1BA2165257A5C0B9E85A"
+  },
+  {
+    "path": "assets/michael/original/Idle/rotations/south-west.png",
+    "sha256": "DE42D0CD8B3175F32B48B9E663A4C72F02F2B0203718873B7F24122CCF868620"
+  },
+  {
+    "path": "assets/michael/original/Idle/rotations/south.png",
+    "sha256": "FE2F3AB36B9DB2534D9E73A207586D08CC59A4A92E1E417688E22842B3C473E5"
+  },
+  {
+    "path": "assets/michael/original/Idle/rotations/west.png",
+    "sha256": "8E2F6547FF669E49DA2137984065D97158BDCEBBD292CD3BA8F3F74873ECDDDC"
+  },
+  {
+    "path": "assets/ui/lobby_background.png",
+    "sha256": "EFC5ECA93CF00C3DB17049ED4121BB882B531863FFA74CC570028514AD909DC5"
+  },
+  {
+    "path": "assets/ui/icons/fx_ball.png",
+    "sha256": "53944792E31F94A875150B0B0EEDEDD0432259A3DBFF5B33D142E791E850CBB5"
+  },
+  {
+    "path": "assets/ui/icons/item_blade.png",
+    "sha256": "06B1C208BDAE86C935E3E6EFD42B8CE4B326DB7CCE1496EA276B7AE51CF0ADBC"
+  },
+  {
+    "path": "assets/ui/icons/item_boots.png",
+    "sha256": "3258479337AC2D26093663BF41E9A0AA2E39409C29205F725D08E8B82BD3FA43"
+  },
+  {
+    "path": "assets/ui/icons/item_charm.png",
+    "sha256": "8DB3857EAD1336C7A20B7A0C051BF009AEEAEEBC73644D077CE797AE3EC496F8"
+  },
+  {
+    "path": "assets/ui/icons/item_great_blade.png",
+    "sha256": "945784A7B77B23DDFEAECBF73D4450D3BB7243C29A739543E10251E425FA9527"
+  },
+  {
+    "path": "assets/ui/icons/item_guard_vest.png",
+    "sha256": "4E8421CDC65F43BB2821BD94BFB6852EAA8A8994A8D9EB7B33089548ED70387B"
+  },
+  {
+    "path": "assets/ui/icons/item_plate.png",
+    "sha256": "31957DC82C32988B6CEF2A18183E0A0261F79BCE59FC7A4D610D12552E8DD2F7"
+  },
+  {
+    "path": "assets/ui/icons/item_vest.png",
+    "sha256": "9E9A62340420F7594864A9135A6D8273A2A60F0C64316FC8EA0E9D11D26104E3"
+  },
+  {
+    "path": "assets/ui/icons/item_ward.png",
+    "sha256": "3655CC010BCFA45C320A01C6383E023E20097602A80060BCE1E40189F09D9192"
+  },
+  {
+    "path": "assets/ui/icons/syn_apoio.png",
+    "sha256": "31EED1D153EBA64A32D52F17DB5F9536FC005DD256372981EB4AC9A9487EB0D0"
+  },
+  {
+    "path": "assets/ui/icons/syn_atacantes.png",
+    "sha256": "F5EBEB4EEB2521CF7CB596B60DD7547987CFEFEBC20A314290814C5B1687BDE3"
+  },
+  {
+    "path": "assets/ui/icons/syn_atiradores.png",
+    "sha256": "F9EEB8A29BE6D6F16D3E063FACFC2EE6399DC5657CADB702DCDE2CC41CA8B687"
+  },
+  {
+    "path": "assets/ui/icons/syn_vanguarda.png",
+    "sha256": "20DBACFDBFAC615BE133C83F4FD5F0FBE7BAF19A5C99222A2C5D1D2241C38C26"
+  },
+  {
+    "path": "assets/ui/icons/ui_coin.png",
+    "sha256": "0FFCB97E787AC1E21C874ADEFC869460F0CA567D2B52AD813995EFA587BA73D0"
+  },
+  {
+    "path": "assets/ui/icons/ui_expand.png",
+    "sha256": "6556637BC510AEE984774F380C6F8B874235B6B5C046B5ED86509DAE04AC7CA5"
+  },
+  {
+    "path": "assets/ui/icons/ui_fight.png",
+    "sha256": "58AFDBCF972BF3B24FDB2D1EF2C9AF47D5EF9AA7618DE380ACCEA5FE00E67DED"
+  },
+  {
+    "path": "assets/ui/icons/ui_menu.png",
+    "sha256": "965EC703BDB2BCE12B8124E571D55DE18032683E7AAF206B8B169941B072C5F3"
+  },
+  {
+    "path": "assets/ui/icons/ui_refresh.png",
+    "sha256": "566156C47718DCDDEB67C4D48FC54482B7E738AE7D217EFB2AE866394B28BC67"
+  },
+  {
+    "path": "assets/ui/icons/ui_scroll.png",
+    "sha256": "0C54E34656FFD906C3720615A274261D31D636B940351B76992A3C5F941DC618"
+  },
+  {
+    "path": "assets/ui/icons/ui_sound.png",
+    "sha256": "DF78C105A46F467733E73AAE1B4A463F9A79A0B3FF9F683BE96428A3BF5C8087"
+  },
+  {
+    "path": "assets/ui/icons/ui_star.png",
+    "sha256": "22E6D28F2F5CB41BC35A9470C40DB81E1503FC1F433A6324628111602DABDBCC"
+  },
+  {
+    "path": "assets/vfx/INTEGRIDADE_V1_4.json",
+    "sha256": "0663D1EB1CF8708D7BCBCCF1699D465E37E89C49F11BFDC0C167756D2DEC1C3C"
+  },
+  {
+    "path": "assets/vfx/INTEGRIDADE.json",
+    "sha256": "CE3D92A855F10F0019E43CF27512D7C4BC1CDE85DE066B7196780803673AD868"
+  },
+  {
+    "path": "assets/vfx/manifest.json",
+    "sha256": "305A94C32EC66818CA333CC4F80E382928473586890CDA8D7774DC8E3BFDBC44"
+  },
+  {
+    "path": "assets/vfx/anel_fumaca_01/ORIGEM.json",
+    "sha256": "0EEB8EB9F378FAF719FADA34A002BCCEE75B1A2451C555FB4CC0CDB2B987E0DA"
+  },
+  {
+    "path": "assets/vfx/anel_fumaca_01/game_pack/manifest.json",
+    "sha256": "4009DB94AE4B50DD6A9B713C1F351225DB4724FEF37724164B26A1FE143C0216"
+  },
+  {
+    "path": "assets/vfx/anel_fumaca_01/game_pack/whole.png",
+    "sha256": "B14AD486E1A0084009B2FCD63CF6D1D7219325FE633ADBA7A2DA54C630CE2535"
+  },
+  {
+    "path": "assets/vfx/anel_fumaca_01/original/clash-of-eras-anel-fumaca-snoop-01.json",
+    "sha256": "7CB2BEEC24BB21B3A4E7325D46BEF978D0E221D5124C1097E33B0E375D7C1998"
+  },
+  {
+    "path": "assets/vfx/anel_fumaca_01/original/clash-of-eras-anel-fumaca-snoop-01.png",
+    "sha256": "A21916C7656328C7A5518BE746DD64A5B112A4686DBCE77319562536F0E6ACA9"
+  },
+  {
+    "path": "assets/vfx/charuto_01/ORIGEM.json",
+    "sha256": "0FA33F607F0B06D9464954E4F05E041BDD77C9F024A8E19534174FE4A85FFC93"
+  },
+  {
+    "path": "assets/vfx/charuto_01/game_pack/manifest.json",
+    "sha256": "53650A8D02A562DAF80B5A656F9551B6D383E2FE38EDDE1CA1B44772FDD75DF3"
+  },
+  {
+    "path": "assets/vfx/charuto_01/game_pack/whole.png",
+    "sha256": "561B0B5F9FE3F62BEDCA094CF19E3960880FA25025D31CA2398D0E48EF5B38B0"
+  },
+  {
+    "path": "assets/vfx/charuto_01/original/clash-of-eras-fumaca-charuto-snoop-01.json",
+    "sha256": "2C5F9345222CE538220E1771569B6CF08D03B83CD78321E0311C3812525B76F3"
+  },
+  {
+    "path": "assets/vfx/charuto_01/original/clash-of-eras-fumaca-charuto-snoop-01.png",
+    "sha256": "BF275166B3D3AECC710ACD7C7FE9434BC0959889563BE70C6CD44C0B75727417"
+  },
+  {
+    "path": "assets/vfx/cura_01/VALIDACAO.json",
+    "sha256": "741025B0433908450A79E6D880A9FB8FB3462C2E340A6DF9FCAC0E633D40E59A"
+  },
+  {
+    "path": "assets/vfx/cura_01/game_pack/manifest.json",
+    "sha256": "7C8C5BFAB5402C18FEEE2B518A5A1402B279AF9EA3A1F09F9911C7F9E3200485"
+  },
+  {
+    "path": "assets/vfx/cura_01/game_pack/part-cura.png",
+    "sha256": "C409F99313692B3BCE0D7325259EC6C86F9CD0555027451FB69B8F0C062F25BA"
+  },
+  {
+    "path": "assets/vfx/cura_01/game_pack/whole.png",
+    "sha256": "C409F99313692B3BCE0D7325259EC6C86F9CD0555027451FB69B8F0C062F25BA"
+  },
+  {
+    "path": "assets/vfx/cura_01/original/clash-of-eras-cura01.json",
+    "sha256": "EA7FF3D09DF3AE05E49F2AA05E299349B4B8CB34494BA13DE64B8C3D1EF83138"
+  },
+  {
+    "path": "assets/vfx/cura_01/original/clash-of-eras-cura01.png",
+    "sha256": "D0F15E4B5C2E6D7AB02BC79EFFAD61A9001E024D023966CFC36F072018F74800"
+  },
+  {
+    "path": "assets/vfx/escudo_danca_01/exportacao.json",
+    "sha256": "EC0776A3BC0E88C11C37F2ABDE5489041B3D557E7B177C4C0D523559E2378622"
+  },
+  {
+    "path": "assets/vfx/escudo_danca_01/original/front.png",
+    "sha256": "FCDF1D9B1DAD1B1D31A9C85E105475C0C7933813E16CF68420201020B09BFDFB"
+  },
+  {
+    "path": "assets/vfx/escudo_danca_01/original/manifest.json",
+    "sha256": "FFD8624EB2B168715950915D2E565CB63F03BC315951719003F8ED1C41032E2C"
+  },
+  {
+    "path": "assets/vfx/escudo_danca_01/original/part-bubble_shield.png",
+    "sha256": "FCDF1D9B1DAD1B1D31A9C85E105475C0C7933813E16CF68420201020B09BFDFB"
+  },
+  {
+    "path": "assets/vfx/escudo_danca_01/original/whole-with-sprite.png",
+    "sha256": "AD511B0704A78E25A0DD7F29C1991A0ADDB47DA502CE440EB88A8545EAB8D9B9"
+  },
+  {
+    "path": "assets/vfx/escudo_danca_01/original/whole.png",
+    "sha256": "FCDF1D9B1DAD1B1D31A9C85E105475C0C7933813E16CF68420201020B09BFDFB"
+  },
+  {
+    "path": "assets/vfx/estocada_01/manifest.json",
+    "sha256": "34EEE62A63C90D0C91FCAC52696E7F480579DADA984138A2685A2E0BC683C792"
+  },
+  {
+    "path": "assets/vfx/estocada_01/part-estocada.png",
+    "sha256": "369F95115AD7D40744CC1BA0682ED03CAFCA94C0CE287FF60989D4FC422FFF3D"
+  },
+  {
+    "path": "assets/vfx/estocada_01/whole.png",
+    "sha256": "369F95115AD7D40744CC1BA0682ED03CAFCA94C0CE287FF60989D4FC422FFF3D"
+  },
+  {
+    "path": "assets/vfx/explosao_02/ORIGEM.json",
+    "sha256": "C1FB921AEFFDBADD1AB75E3A5CC5F73F5BEC7DAA26F54FDEAF07CD9E2025A3C8"
+  },
+  {
+    "path": "assets/vfx/explosao_02/game_pack/manifest.json",
+    "sha256": "80E853128194979E7C23FE07598AFBAB3D88C3437E5C0E00B34151D1381908D0"
+  },
+  {
+    "path": "assets/vfx/explosao_02/game_pack/whole.png",
+    "sha256": "DA8B1C4472EA14785A09EE83F119E1C2426B8C6251122E266BDEDC344E4D1923"
+  },
+  {
+    "path": "assets/vfx/explosao_02/original/clash-of-eras-explosao-foguete-elon-02.json",
+    "sha256": "80036301670B0287353E485F7A6CAD51253CA864AD382138C4B71F7C2E9A0F0C"
+  },
+  {
+    "path": "assets/vfx/explosao_02/original/clash-of-eras-explosao-foguete-elon-02.png",
+    "sha256": "DC96226D9CB5EB1E876399120B2810295770400FF1494DDD87A1DE79C7DB3733"
+  },
+  {
+    "path": "assets/vfx/foguete_01/clash-of-eras-impacto-foguete01.json",
+    "sha256": "3A665F87C3751D0363BBF3BEDF8EE814A1F29A60005EF9E96083CF90A8AD5311"
+  },
+  {
+    "path": "assets/vfx/foguete_01/clash-of-eras-impacto-foguete01.png",
+    "sha256": "87FDF3A2B7E8AADE44FE8F4E95841F10A6AAE3191CFC687ED606F1AE43F2CEE4"
+  },
+  {
+    "path": "assets/vfx/foguete_01/review.json",
+    "sha256": "0A8A6655860118598A7F2852D80578E8ABA50F8F3860B7D2C9742B8D4D5AA78A"
+  },
+  {
+    "path": "assets/vfx/foguete_01/game_pack/manifest.json",
+    "sha256": "8112167B5704C31D63818D260E0FA8E3A5E0603B787E9766D89C0D983C30AB00"
+  },
+  {
+    "path": "assets/vfx/foguete_01/game_pack/part-fire_blast.png",
+    "sha256": "C981BA9271FA3ADE55A27F0205143A89F169FBB4C8AC6BB1DBFE3BC4DE7C4BA2"
+  },
+  {
+    "path": "assets/vfx/foguete_01/game_pack/whole.png",
+    "sha256": "C981BA9271FA3ADE55A27F0205143A89F169FBB4C8AC6BB1DBFE3BC4DE7C4BA2"
+  },
+  {
+    "path": "assets/vfx/foguete_02/ORIGEM.json",
+    "sha256": "A313C4A5355F734597F5C2B26F23B3EA9E441DA23048EEBD2615A5D606617DF4"
+  },
+  {
+    "path": "assets/vfx/foguete_02/game_pack/manifest.json",
+    "sha256": "29F355E895BDA0362ABE906B50AC2E41B5E003735F10FD44B1454B058F02838C"
+  },
+  {
+    "path": "assets/vfx/foguete_02/game_pack/whole.png",
+    "sha256": "90FA26C1A0870CD992602EE0805CC5A8ED551BF008D01B758AE1E210201A5486"
+  },
+  {
+    "path": "assets/vfx/foguete_02/original/clash-of-eras-foguete-elon-02.json",
+    "sha256": "D05702CE4C29E8F3B27C564C8898552C75DCA70858C930941D6956C145CFFF01"
+  },
+  {
+    "path": "assets/vfx/foguete_02/original/clash-of-eras-foguete-elon-02.png",
+    "sha256": "6B18ED8121E7FC85FC790D4DD0188AA50BA3F02EF4951EAE83748425EB1EF0A2"
+  },
+  {
+    "path": "assets/vfx/fumaca_01/clash-of-eras-fumaca01.json",
+    "sha256": "FA308686B45CC7B11FD56FDB5CC1D114474CA1B057FAF7E5D30E048C8BD6750C"
+  },
+  {
+    "path": "assets/vfx/fumaca_01/clash-of-eras-fumaca01.png",
+    "sha256": "C2A9B57584D34147E1114C0A77ABF0A4A7DD8DAA9F9552CD430F1EDA294C4B8D"
+  },
+  {
+    "path": "assets/vfx/fumaca_01/estado.json",
+    "sha256": "CB71868643E1D85B22184C8D868C1638EC946AD208CAE9C5AC4A8EB9282E9FB5"
+  },
+  {
+    "path": "assets/vfx/fumaca_01/ORIGEM.json",
+    "sha256": "217F4522A06A522291053ECFD577B2876DE9EBD3D146C4A3761E78A95F5FB8D4"
+  },
+  {
+    "path": "assets/vfx/fumaca_01/original/manifest.json",
+    "sha256": "6BBCB723A61CF66D46F41C4EC519F26B09292B56838B83D6AD499623D269E905"
+  },
+  {
+    "path": "assets/vfx/fumaca_01/original/part-fumaca.png",
+    "sha256": "BE0930A9D03414B76158616F2EFCC7910C8E4EC8F147F362C6746D34F0330E1A"
+  },
+  {
+    "path": "assets/vfx/fumaca_01/original/whole.png",
+    "sha256": "BE0930A9D03414B76158616F2EFCC7910C8E4EC8F147F362C6746D34F0330E1A"
+  },
+  {
+    "path": "assets/vfx/fumaca_02/ORIGEM.json",
+    "sha256": "E20E6298D219E1027868167055945FA688FB22F278A40F0FE15586067FE4F459"
+  },
+  {
+    "path": "assets/vfx/fumaca_02/game_pack/manifest.json",
+    "sha256": "B90A1ADC2CF5CE339B37EE04D565F6919967092D6A2C7018AE6591D001098561"
+  },
+  {
+    "path": "assets/vfx/fumaca_02/game_pack/whole.png",
+    "sha256": "C76963ECFE9D112E891ED7ADE6E0C422BFE42B145D0B2129481C7291C4AC7A8C"
+  },
+  {
+    "path": "assets/vfx/fumaca_02/original/clash-of-eras-nuvem-fumaca-snoop-02.json",
+    "sha256": "452B1A2F8183BE0104494DFD984A6D42765C47C22D298CE252A19A0FA38FAFE4"
+  },
+  {
+    "path": "assets/vfx/fumaca_02/original/clash-of-eras-nuvem-fumaca-snoop-02.png",
+    "sha256": "054672F7EE2CF4507390367069BE099933CB7FB640362C526C1A87932AF51A31"
+  },
+  {
+    "path": "assets/vfx/laco_01/estado.json",
+    "sha256": "18B2A02181535F3974990DE3DB65E16D817D66611A09F2F3F90E0BFB047AD0BB"
+  },
+  {
+    "path": "assets/vfx/laco_01/exportacao.json",
+    "sha256": "22BBE37098B4FC0356B5E3EC2B408C1D031EC50F6E947F4F2AB0E7D80DB0652D"
+  },
+  {
+    "path": "assets/vfx/laco_01/recipe.json",
+    "sha256": "C10120B47CCED4E9996D645D4741C7F05417697F5C41889D05D76EB9F62FAA4E"
+  },
+  {
+    "path": "assets/vfx/laco_01/game_pack/manifest.json",
+    "sha256": "9B89E0493389B04718077CD87B8E50ECDFFEA4DBEAD6AA926417C79486CB8806"
+  },
+  {
+    "path": "assets/vfx/laco_01/game_pack/part-laco.png",
+    "sha256": "A818BB7520C4224C15455419F33F78A03F77949CF8DBE690BCDAFCCE752C2113"
+  },
+  {
+    "path": "assets/vfx/laco_01/game_pack/whole.png",
+    "sha256": "A818BB7520C4224C15455419F33F78A03F77949CF8DBE690BCDAFCCE752C2113"
+  },
+  {
+    "path": "assets/vfx/laco_01/original/clash-of-eras-laco01.json",
+    "sha256": "83773D490F60DA74666B11DB3631F02FF023CEF866F1977EA2E7E40ABE6D2A91"
+  },
+  {
+    "path": "assets/vfx/laco_01/original/clash-of-eras-laco01.png",
+    "sha256": "D46D60A52BBB816E430E83776FB55E66C0B48BDB0BD4B694AA7A04B7BEB8A2F4"
+  },
+  {
+    "path": "client/board_projection.gd",
+    "sha256": "71C4C152BBC59E6E3D2892D11096500D5B00FE23C0D86204091D7CE210FF155D"
+  },
+  {
+    "path": "client/character_visuals.gd",
+    "sha256": "7F2B42CCAE65542D88EB82BE09ABAE20F34D33A697304EC2743FB3BFF60FF028"
+  },
+  {
+    "path": "client/drag_controller.gd",
+    "sha256": "7E17299F4551D545F5BB274DA0AB6664FD415151F9A8EBF5A1543CABC9FD86BB"
+  },
+  {
+    "path": "client/main.gd",
+    "sha256": "2EC74FF2ED0D0ED88A3125736B44F0A3CCBB09691EBB2FEA2F6BFF24418E47FC"
+  },
+  {
+    "path": "client/pixel_scale.gdshader",
+    "sha256": "DB00D12EC1ACFA180F27F727A2B9E4266AF2419EE93F696E49ECB9EC4864BE62"
+  },
+  {
+    "path": "client/prototype_audio.gd",
+    "sha256": "C63B5048BE1F357A977946256102A82C49D2807DA268ADD1D59021F8F9D2A6DC"
+  },
+  {
+    "path": "client/smoke.gd",
+    "sha256": "6052E9AD3D085D9C68B97A80B4D9B7EB926D91190E445D5C30AE97F916EEFA58"
+  },
+  {
+    "path": "client/ui_kit.gd",
+    "sha256": "93D1A57A03BB2156D9D1F982D9B2B766446C43B7DE59E673014667B59D7C0891"
+  },
+  {
+    "path": "client/vfx_library.gd",
+    "sha256": "DC3F9C7EE7FDCF9823E89460493B75BE0E427B5B91B1DCEB6F05EEC33548DF63"
+  },
+  {
+    "path": "data/character_catalog.gd",
+    "sha256": "BE0490F89454AEB22AA2D7576BCD7DFCDD6B9C07192C6B8A8FCF453358606A87"
+  },
+  {
+    "path": "data/debug_characters.json",
+    "sha256": "E9ECC9284910E476212361D9B1B7A18E144D8D6ECEEEA8B28A7CBFA6CE024C39"
+  },
+  {
+    "path": "data/item_catalog.gd",
+    "sha256": "D805D3924F6B4F67F725ADBCD1DBD8B56085CC7B1C8AF090CA77B730A25CA85F"
+  },
+  {
+    "path": "data/unit_spec.gd",
+    "sha256": "1FE84766BA64BF80A433CEF5141FCDA898BFADC72673FE1B5E5C1B5EA9A0D858"
+  },
+  {
+    "path": "simulation/arena_simulation.gd",
+    "sha256": "613C6864CD9CEC1A775D4F26D612BCB10804E5912C2FD12BAB2C2A3E0175E48E"
+  },
+  {
+    "path": "simulation/ball_projectile.gd",
+    "sha256": "96BAFF92B9FED02D82216DAF997963EBBC6F67FB87FAE237F96664BEBE5F3583"
+  },
+  {
+    "path": "simulation/hex_grid.gd",
+    "sha256": "3C724AA0829BB284279F074136E9B8F4574B4EE2CBDE600CB61A28BF190B069E"
+  },
+  {
+    "path": "simulation/match_session.gd",
+    "sha256": "D7D7A6F9230BD7016143AB5965A01AF271BA90057488A6D080BBABF6A8DA1633"
+  },
+  {
+    "path": "simulation/unit_state.gd",
+    "sha256": "3AF3835E2C6D1B56E7DEE17CCC4E046CEC4EF62BC9600E1B520F3968EA9619A7"
+  },
+  {
+    "path": "tests/test_drag_and_drop.gd",
+    "sha256": "AD7474FDE42FA15030B55D28C048B01C4227E9E93BE67C5D04C2BB21EA22D982"
+  },
+  {
+    "path": "tests/test_full_matches.gd",
+    "sha256": "BFC25D652AD38EC08786D6BDC9D8AEF9E01E83706A36ED17D39877567A6CD466"
+  },
+  {
+    "path": "tests/test_lobby_ui.gd",
+    "sha256": "09B21459A3AF23551B5D7D4A3B7E34D75C6CFD02BC239D64BFB4B4D16053D473"
+  },
+  {
+    "path": "tests/test_match_session.gd",
+    "sha256": "C7602C34AC5E63162E444C10FD86AFB1C8F8369CF1E67642A5EEF4699B707906"
+  },
+  {
+    "path": "tests/test_simulation.gd",
+    "sha256": "6B220E4B3BB7EAB5CD3E6B5451E692988A5FB9A60189F1E439127059C3DDAB89"
+  },
+  {
+    "path": "tests/test_vfx_library.gd",
+    "sha256": "A7333F1205477CD8867761BE5D677BDC4D130709D7DDE6BE1E41AF02DB9EF1EC"
+  },
+  {
+    "path": "tools/capture_art_batch.gd",
+    "sha256": "6A63C3E69BDE283BD5A8E6FAC033EEF2AEFC1BE6E24D10F3AA89AF367C391D67"
+  },
+  {
+    "path": "tools/capture_drag.gd",
+    "sha256": "3C03DD110A1ED3358B16E1C9AC8C929A6F903CF88A4AC860E1015B6D11E2403B"
+  },
+  {
+    "path": "tools/capture_preview.gd",
+    "sha256": "E44F20CA9977BDD0833EFC1E57F02AE1259882602E091141538A210E677BA852"
+  },
+  {
+    "path": "tools/capture_roster.gd",
+    "sha256": "1F3D3DA9B3A098EEAABB2926EF35AD90BB9871B9F83BE811124F3C811E54A88A"
+  },
+  {
+    "path": "tools/capture_variations.gd",
+    "sha256": "B8763864624CC4D61A1689A4B821834C8FCE87427F4440F43B10708C435AC37E"
+  },
+  {
+    "path": "tools/repro_lasso_endpoint.gd",
+    "sha256": "A3D514E16A66AF0B2D07062FAD30830A2283FE970E238E5403EAA4B08167994E"
+  }
+]

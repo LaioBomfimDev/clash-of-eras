@@ -1,0 +1,11 @@
+{
+  "character_id": "47e44cf4-8365-4c14-8d6f-15ff0fbc4498",
+  "character_key": "zumbi",
+  "art_batch": "grande_04",
+  "download": "https://api.pixellab.ai/mcp/characters/47e44cf4-8365-4c14-8d6f-15ff0fbc4498/download",
+  "sha256": "0932326373C5BE24B7AFCCC3D05528F696F6F90ADD97C00D7B5B39EFBFB9ABA5",
+  "png_count": 8,
+  "originals_modified": false,
+  "reference": "conceitos/juncao_DE.png (conceito D editado a mao: pele do E, lamina maior, corrente cortada, sem sombra do chao)",
+  "generations": "conceitos 5 (pixen) + rotacoes v3 2"
+}

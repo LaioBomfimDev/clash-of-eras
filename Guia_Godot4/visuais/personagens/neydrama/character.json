@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-11",
+  "reference": "Neymar Jr.",
+  "work_name": "Neydrama",
+  "role": "DPS à distância",
+  "status": "completed",
+  "character_id": "fcc05054-6672-4efb-b417-f49cffcc7b7f",
+  "group_id": "7de20497-d314-43f8-8eb1-117d600657ff",
+  "requested_size": 48,
+  "reported_size": 68,
+  "directions_completed": 8,
+  "local_files": [
+    "south.png"
+  ],
+  "local_directions": 1,
+  "animations_created": 0,
+  "announced_generation_cost": 1,
+  "brief": {
+    "mode": "standard",
+    "n_directions": 8,
+    "size": 48,
+    "view": "low top-down",
+    "outline": "selective outline",
+    "shading": "medium shading",
+    "detail": "high detail",
+    "body_type": "humanoid",
+    "proportions": "{\"type\":\"preset\",\"name\":\"chibi\"}",
+    "name": "Relic Arena — Neydrama",
+    "description": "Clearly recognizable exaggerated caricature of Neymar Jr., Brazilian football superstar as a funny ranged damage character in a pixel-art auto battler. Huge expressive head, tan skin, mischievous confident smile, short dark beard, bleached blond crest hairstyle with dark sides, small agile athletic body. Green football shirt and shorts with yellow trim, NO logos or lettering. One comically enormous golden football boot on his kicking foot, and one clearly readable football resting beside it. Relaxed cocky ready stance, not midair. Football boot is the signature accessory, face remains visible. Crisp chunky pixel clusters, selective dark outline, medium shading, restrained palette, upper-left light, low top-down elevated arena camera, full body centered within requested48x48, both feet grounded, transparent background, no scenery, no glow or particles."
+  },
+  "review": "Cabelo loiro e uniforme verde legíveis. Bola e chuteira ficaram menores que o briefing; não considerar acessório final aprovado.",
+  "names_final_approved": false,
+  "godot_integration": false
+}

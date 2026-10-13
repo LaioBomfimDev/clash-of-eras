@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: clash-of-eras-server
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: 8910

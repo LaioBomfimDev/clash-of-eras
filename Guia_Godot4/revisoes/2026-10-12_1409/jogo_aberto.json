@@ -1,0 +1,11 @@
+{
+  "pid": 29164,
+  "started_utc": "2026-10-12T17:14:04.4256864Z",
+  "project": "RelicArena",
+  "args": [
+    "--path",
+    "\"C:/Users/m/Documents/Relic Arena MY/RelicArena\"",
+    "--log-file",
+    "\"C:/Users/m/Documents/Relic Arena MY/Guia_Godot4/revisoes/2026-10-12_1409/jogo_aberto.log\""
+  ]
+}

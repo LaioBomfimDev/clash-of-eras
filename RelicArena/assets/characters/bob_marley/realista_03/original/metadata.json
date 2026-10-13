@@ -1,0 +1,36 @@
+{
+  "group_id": "d3904b04-f86c-4c4c-8078-7ca5f1d0e0ef",
+  "states": [
+    {
+      "character": {
+        "id": "b7d93d38-f6e1-44e1-b663-746f0b01ac88",
+        "name": "Idle",
+        "prompt": "Adult Jamaican reggae musician resembling Bob Marley, slim realistic male anatomy, naturally small head and normal long limbs, about seven heads tall. Long dark dreadlocks, short beard, small knitted red yellow green cap, worn blue denim jacket over plain cream shirt, dark trousers, brown shoes. Holding a warm wooden acoustic guitar in front at a natural playing height, gentle focused stance. NOT chibi, NOT cartoon, NOT caricature. Restrained detailed pixel art consistent with a classic 48px Michael Jackson game sprite, visible adult height around 43px, centered full body with both feet and guitar fully inside canvas. Low top-down elevated arena view, crisp clustered pixels, medium shading, selective dark outline, warm upper-left light. Transparent background, no text, brand logos, scene, smoke, glow or musical particles.",
+        "size": {
+          "width": 68,
+          "height": 68
+        },
+        "template_id": "mannequin",
+        "directions": 8,
+        "view": "low top-down",
+        "created_at": "2026-10-12T05:20:12.059479+00:00"
+      },
+      "folder": "Idle",
+      "frames": {
+        "rotations": {
+          "south": "Idle/rotations/south.png",
+          "south-east": "Idle/rotations/south-east.png",
+          "east": "Idle/rotations/east.png",
+          "north-east": "Idle/rotations/north-east.png",
+          "north": "Idle/rotations/north.png",
+          "north-west": "Idle/rotations/north-west.png",
+          "west": "Idle/rotations/west.png",
+          "south-west": "Idle/rotations/south-west.png"
+        },
+        "animations": {}
+      }
+    }
+  ],
+  "export_version": "3.1",
+  "export_date": "2026-10-12T05:21:55.421931"
+}

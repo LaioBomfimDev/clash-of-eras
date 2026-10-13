@@ -1,0 +1,1274 @@
+{
+  "date": "2026-10-11",
+  "reference": "Zumbi dos Palmares",
+  "work_name": "Zumbalhão",
+  "character_id": "7129a655-427d-4ca9-84bb-13ad3ddd4682",
+  "direction": "west",
+  "source_inspection_id": "9efe35df-36f1-4cd2-8bc9-48bff3f3fa4a",
+  "original_preserved_gallery_id": "3c592b44-a1e4-4748-a3ea-fe9505de660d",
+  "first_edit_id": "d7e0b580-3b14-41fd-88bf-0e54903b392c",
+  "final_edit_id": "8f7b050a-0068-4fd6-8c98-6ae30e838390",
+  "final_gallery_id": "62aab996-fe20-4a26-bd0b-cef46932cab9",
+  "applied_target": "character:7129a655-427d-4ca9-84bb-13ad3ddd4682:west",
+  "apply_tool_changed_pixels": 86,
+  "undo": {
+    "tool": "save_to_asset",
+    "arguments": {
+      "image": "1a186229-3e4b-43e4-ae9a-091998fa82d7",
+      "target": "character:7129a655-427d-4ca9-84bb-13ad3ddd4682:west"
+    }
+  },
+  "inspection_after_apply": {
+    "subject": "character:7129a655-427d-4ca9-84bb-13ad3ddd4682:west",
+    "result_id": "49798a0d-2469-45a0-90b5-bd6fb0feb7d5",
+    "scale": 6,
+    "status": "inspected: lâmina branca larga e cabo visível atrás da cabeça"
+  },
+  "export_url": "https://api.pixellab.ai/mcp/pixel-tools/8f7b050a-0068-4fd6-8c98-6ae30e838390/image.png",
+  "local_file": "rotacoes/west.png",
+  "native_canvas": [
+    68,
+    68
+  ],
+  "review": {
+    "problem": "No perfil oeste, a lâmina quase desaparecia atrás da cabeça, em contraste com o leste.",
+    "first_pass": "Lâmina branca ampliada acima da cabeça, mas a inspeção sugeriu um adereço no cabelo; não aplicada ao personagem.",
+    "second_pass": "Restaurados integralmente os pixels da primeira tentativa; nova lâmina e cabo desenhados atrás da cabeça usando somente a transparência original.",
+    "result": "Lâmina branca legível e conexão pelo cabo visível. Cabeça, rosto, roupa, pés e demais pixels visíveis originais preservados pela máscara.",
+    "limits": [
+      "Cabo fica parcialmente oculto pela cabeça/faixa; nenhuma pose de ataque foi validada.",
+      "Aprovação artística final pendente.",
+      "Somente oeste foi alterado; os outros sete ângulos não foram reinspecionados depois desta correção.",
+      "Sem teste em navegador, dispositivo ou Godot."
+    ]
+  },
+  "scope": {
+    "original_zumbi_40cff10a_unchanged": true,
+    "michael_unchanged": true,
+    "other_seven_directions_unchanged": true,
+    "character_canvas_rescaled": false,
+    "ai_generation_calls": 0
+  },
+  "operations": [
+    {
+      "input_id": "9efe35df-36f1-4cd2-8bc9-48bff3f3fa4a",
+      "output_id": "d7e0b580-3b14-41fd-88bf-0e54903b392c",
+      "changes": [
+        {
+          "operation": "patch_pixels",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "pixels": [
+            [
+              37,
+              1,
+              "#04020100",
+              "#040201ff"
+            ],
+            [
+              36,
+              2,
+              "#04020100",
+              "#040201ff"
+            ],
+            [
+              37,
+              2,
+              "#04020100",
+              "#040201ff"
+            ],
+            [
+              38,
+              2,
+              "#04020100",
+              "#040201ff"
+            ],
+            [
+              35,
+              3,
+              "#04020100",
+              "#040201ff"
+            ],
+            [
+              36,
+              3,
+              "#04020100",
+              "#040201ff"
+            ],
+            [
+              37,
+              3,
+              "#04020100",
+              "#e0e0e3ff"
+            ],
+            [
+              38,
+              3,
+              "#04020100",
+              "#040201ff"
+            ],
+            [
+              39,
+              3,
+              "#04020100",
+              "#040201ff"
+            ],
+            [
+              34,
+              4,
+              "#04020100",
+              "#040201ff"
+            ],
+            [
+              35,
+              4,
+              "#04020100",
+              "#040201ff"
+            ],
+            [
+              36,
+              4,
+              "#04020100",
+              "#e0e0e3ff"
+            ],
+            [
+              37,
+              4,
+              "#04020100",
+              "#e0e0e3ff"
+            ],
+            [
+              38,
+              4,
+              "#04020100",
+              "#e0e0e3ff"
+            ],
+            [
+              39,
+              4,
+              "#04020100",
+              "#040201ff"
+            ],
+            [
+              40,
+              4,
+              "#04020100",
+              "#040201ff"
+            ],
+            [
+              34,
+              5,
+              "#04020100",
+              "#040201ff"
+            ],
+            [
+              35,
+              5,
+              "#04020100",
+              "#e0e0e3ff"
+            ],
+            [
+              36,
+              5,
+              "#04020100",
+              "#e0e0e3ff"
+            ],
+            [
+              37,
+              5,
+              "#04020100",
+              "#e0e0e3ff"
+            ],
+            [
+              38,
+              5,
+              "#04020100",
+              "#e0e0e3ff"
+            ],
+            [
+              39,
+              5,
+              "#04020100",
+              "#8e8a8cff"
+            ],
+            [
+              40,
+              5,
+              "#04020100",
+              "#040201ff"
+            ],
+            [
+              34,
+              6,
+              "#04020100",
+              "#040201ff"
+            ],
+            [
+              35,
+              6,
+              "#04020100",
+              "#e0e0e3ff"
+            ],
+            [
+              36,
+              6,
+              "#04020100",
+              "#e0e0e3ff"
+            ],
+            [
+              37,
+              6,
+              "#04020100",
+              "#e0e0e3ff"
+            ],
+            [
+              38,
+              6,
+              "#04020100",
+              "#e0e0e3ff"
+            ],
+            [
+              39,
+              6,
+              "#04020100",
+              "#8e8a8cff"
+            ],
+            [
+              40,
+              6,
+              "#04020100",
+              "#040201ff"
+            ],
+            [
+              34,
+              7,
+              "#04020100",
+              "#040201ff"
+            ],
+            [
+              35,
+              7,
+              "#04020100",
+              "#e0e0e3ff"
+            ],
+            [
+              36,
+              7,
+              "#04020100",
+              "#e0e0e3ff"
+            ],
+            [
+              37,
+              7,
+              "#04020100",
+              "#e0e0e3ff"
+            ],
+            [
+              38,
+              7,
+              "#04020100",
+              "#e0e0e3ff"
+            ],
+            [
+              39,
+              7,
+              "#04020100",
+              "#8e8a8cff"
+            ],
+            [
+              40,
+              7,
+              "#04020100",
+              "#040201ff"
+            ],
+            [
+              35,
+              8,
+              "#04020100",
+              "#040201ff"
+            ],
+            [
+              36,
+              8,
+              "#040201ff",
+              "#e0e0e3ff"
+            ],
+            [
+              37,
+              8,
+              "#040201ff",
+              "#e0e0e3ff"
+            ],
+            [
+              38,
+              8,
+              "#04020100",
+              "#8e8a8cff"
+            ],
+            [
+              39,
+              8,
+              "#04020100",
+              "#040201ff"
+            ],
+            [
+              36,
+              9,
+              "#040201ff",
+              "#040201ff"
+            ],
+            [
+              37,
+              9,
+              "#170d0aff",
+              "#e0e0e3ff"
+            ],
+            [
+              38,
+              9,
+              "#040201ff",
+              "#040201ff"
+            ],
+            [
+              36,
+              10,
+              "#040201ff",
+              "#040201ff"
+            ],
+            [
+              37,
+              10,
+              "#8e8a8cff",
+              "#f3d52aff"
+            ],
+            [
+              38,
+              10,
+              "#040201ff",
+              "#040201ff"
+            ]
+          ],
+          "reason": "Tornar a lâmina oeste branca e larga acima da cabeça, preservando rosto, cabelo e corpo"
+        }
+      ]
+    },
+    {
+      "input_id": "d7e0b580-3b14-41fd-88bf-0e54903b392c",
+      "output_id": "8f7b050a-0068-4fd6-8c98-6ae30e838390",
+      "changes": [
+        {
+          "operation": "patch_pixels",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "pixels": [
+            [
+              37,
+              1,
+              "#040201ff",
+              "#04020100"
+            ],
+            [
+              36,
+              2,
+              "#040201ff",
+              "#04020100"
+            ],
+            [
+              37,
+              2,
+              "#040201ff",
+              "#04020100"
+            ],
+            [
+              38,
+              2,
+              "#040201ff",
+              "#04020100"
+            ],
+            [
+              35,
+              3,
+              "#040201ff",
+              "#04020100"
+            ],
+            [
+              36,
+              3,
+              "#040201ff",
+              "#04020100"
+            ],
+            [
+              37,
+              3,
+              "#e0e0e3ff",
+              "#04020100"
+            ],
+            [
+              38,
+              3,
+              "#040201ff",
+              "#04020100"
+            ],
+            [
+              39,
+              3,
+              "#040201ff",
+              "#04020100"
+            ],
+            [
+              34,
+              4,
+              "#040201ff",
+              "#04020100"
+            ],
+            [
+              35,
+              4,
+              "#040201ff",
+              "#04020100"
+            ],
+            [
+              36,
+              4,
+              "#e0e0e3ff",
+              "#04020100"
+            ],
+            [
+              37,
+              4,
+              "#e0e0e3ff",
+              "#04020100"
+            ],
+            [
+              38,
+              4,
+              "#e0e0e3ff",
+              "#04020100"
+            ],
+            [
+              39,
+              4,
+              "#040201ff",
+              "#04020100"
+            ],
+            [
+              40,
+              4,
+              "#040201ff",
+              "#04020100"
+            ],
+            [
+              34,
+              5,
+              "#040201ff",
+              "#04020100"
+            ],
+            [
+              35,
+              5,
+              "#e0e0e3ff",
+              "#04020100"
+            ],
+            [
+              36,
+              5,
+              "#e0e0e3ff",
+              "#04020100"
+            ],
+            [
+              37,
+              5,
+              "#e0e0e3ff",
+              "#04020100"
+            ],
+            [
+              38,
+              5,
+              "#e0e0e3ff",
+              "#04020100"
+            ],
+            [
+              39,
+              5,
+              "#8e8a8cff",
+              "#04020100"
+            ],
+            [
+              40,
+              5,
+              "#040201ff",
+              "#04020100"
+            ],
+            [
+              34,
+              6,
+              "#040201ff",
+              "#04020100"
+            ],
+            [
+              35,
+              6,
+              "#e0e0e3ff",
+              "#04020100"
+            ],
+            [
+              36,
+              6,
+              "#e0e0e3ff",
+              "#04020100"
+            ],
+            [
+              37,
+              6,
+              "#e0e0e3ff",
+              "#04020100"
+            ],
+            [
+              38,
+              6,
+              "#e0e0e3ff",
+              "#04020100"
+            ],
+            [
+              39,
+              6,
+              "#8e8a8cff",
+              "#04020100"
+            ],
+            [
+              40,
+              6,
+              "#040201ff",
+              "#04020100"
+            ],
+            [
+              34,
+              7,
+              "#040201ff",
+              "#04020100"
+            ],
+            [
+              35,
+              7,
+              "#e0e0e3ff",
+              "#04020100"
+            ],
+            [
+              36,
+              7,
+              "#e0e0e3ff",
+              "#04020100"
+            ],
+            [
+              37,
+              7,
+              "#e0e0e3ff",
+              "#04020100"
+            ],
+            [
+              38,
+              7,
+              "#e0e0e3ff",
+              "#04020100"
+            ],
+            [
+              39,
+              7,
+              "#8e8a8cff",
+              "#04020100"
+            ],
+            [
+              40,
+              7,
+              "#040201ff",
+              "#04020100"
+            ],
+            [
+              35,
+              8,
+              "#040201ff",
+              "#04020100"
+            ],
+            [
+              36,
+              8,
+              "#e0e0e3ff",
+              "#040201ff"
+            ],
+            [
+              37,
+              8,
+              "#e0e0e3ff",
+              "#040201ff"
+            ],
+            [
+              38,
+              8,
+              "#8e8a8cff",
+              "#04020100"
+            ],
+            [
+              39,
+              8,
+              "#040201ff",
+              "#04020100"
+            ],
+            [
+              36,
+              9,
+              "#040201ff",
+              "#040201ff"
+            ],
+            [
+              37,
+              9,
+              "#e0e0e3ff",
+              "#170d0aff"
+            ],
+            [
+              38,
+              9,
+              "#040201ff",
+              "#040201ff"
+            ],
+            [
+              36,
+              10,
+              "#040201ff",
+              "#040201ff"
+            ],
+            [
+              37,
+              10,
+              "#f3d52aff",
+              "#8e8a8cff"
+            ],
+            [
+              38,
+              10,
+              "#040201ff",
+              "#040201ff"
+            ]
+          ],
+          "reason": "Retirar ponta sobre a cabeça e restaurar integralmente os pixels anteriores"
+        },
+        {
+          "operation": "select_mask",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "name": "empty_space",
+          "selector": {
+            "kind": "alpha",
+            "min": 0,
+            "max": 0
+          },
+          "reason": "Preservar todos os pixels visíveis originais do rosto, cabelo, roupa e corpo"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "mask": "empty_space",
+          "points": [
+            [
+              45,
+              15
+            ],
+            [
+              37,
+              35
+            ]
+          ],
+          "color": "#040201ff",
+          "size": 3,
+          "shape": "square",
+          "reason": "Cabo visível atrás da cabeça e conectado ao braço"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "mask": "empty_space",
+          "points": [
+            [
+              45,
+              15
+            ],
+            [
+              37,
+              35
+            ]
+          ],
+          "color": "#7d3f2aff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Madeira do cabo na paleta existente"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "mask": "empty_space",
+          "points": [
+            [
+              46,
+              3
+            ]
+          ],
+          "color": "#040201ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Lâmina larga ao lado de trás da cabeça"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "mask": "empty_space",
+          "points": [
+            [
+              45,
+              4
+            ],
+            [
+              47,
+              4
+            ]
+          ],
+          "color": "#040201ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Lâmina larga ao lado de trás da cabeça"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "mask": "empty_space",
+          "points": [
+            [
+              44,
+              5
+            ],
+            [
+              48,
+              5
+            ]
+          ],
+          "color": "#040201ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Lâmina larga ao lado de trás da cabeça"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "mask": "empty_space",
+          "points": [
+            [
+              43,
+              6
+            ],
+            [
+              49,
+              6
+            ]
+          ],
+          "color": "#040201ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Lâmina larga ao lado de trás da cabeça"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "mask": "empty_space",
+          "points": [
+            [
+              43,
+              7
+            ],
+            [
+              49,
+              7
+            ]
+          ],
+          "color": "#040201ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Lâmina larga ao lado de trás da cabeça"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "mask": "empty_space",
+          "points": [
+            [
+              43,
+              8
+            ],
+            [
+              49,
+              8
+            ]
+          ],
+          "color": "#040201ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Lâmina larga ao lado de trás da cabeça"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "mask": "empty_space",
+          "points": [
+            [
+              43,
+              9
+            ],
+            [
+              49,
+              9
+            ]
+          ],
+          "color": "#040201ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Lâmina larga ao lado de trás da cabeça"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "mask": "empty_space",
+          "points": [
+            [
+              43,
+              10
+            ],
+            [
+              49,
+              10
+            ]
+          ],
+          "color": "#040201ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Lâmina larga ao lado de trás da cabeça"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "mask": "empty_space",
+          "points": [
+            [
+              43,
+              11
+            ],
+            [
+              48,
+              11
+            ]
+          ],
+          "color": "#040201ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Lâmina larga ao lado de trás da cabeça"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "mask": "empty_space",
+          "points": [
+            [
+              44,
+              12
+            ],
+            [
+              47,
+              12
+            ]
+          ],
+          "color": "#040201ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Lâmina larga ao lado de trás da cabeça"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "mask": "empty_space",
+          "points": [
+            [
+              44,
+              13
+            ],
+            [
+              46,
+              13
+            ]
+          ],
+          "color": "#040201ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Lâmina larga ao lado de trás da cabeça"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "mask": "empty_space",
+          "points": [
+            [
+              44,
+              14
+            ],
+            [
+              46,
+              14
+            ]
+          ],
+          "color": "#040201ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Lâmina larga ao lado de trás da cabeça"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "mask": "empty_space",
+          "points": [
+            [
+              46,
+              5
+            ]
+          ],
+          "color": "#e0e0e3ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Metal branco legível no perfil oeste"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "mask": "empty_space",
+          "points": [
+            [
+              45,
+              6
+            ],
+            [
+              47,
+              6
+            ]
+          ],
+          "color": "#e0e0e3ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Metal branco legível no perfil oeste"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "mask": "empty_space",
+          "points": [
+            [
+              44,
+              7
+            ],
+            [
+              48,
+              7
+            ]
+          ],
+          "color": "#e0e0e3ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Metal branco legível no perfil oeste"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "mask": "empty_space",
+          "points": [
+            [
+              44,
+              8
+            ],
+            [
+              48,
+              8
+            ]
+          ],
+          "color": "#e0e0e3ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Metal branco legível no perfil oeste"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "mask": "empty_space",
+          "points": [
+            [
+              44,
+              9
+            ],
+            [
+              48,
+              9
+            ]
+          ],
+          "color": "#e0e0e3ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Metal branco legível no perfil oeste"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "mask": "empty_space",
+          "points": [
+            [
+              44,
+              10
+            ],
+            [
+              48,
+              10
+            ]
+          ],
+          "color": "#e0e0e3ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Metal branco legível no perfil oeste"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "mask": "empty_space",
+          "points": [
+            [
+              44,
+              11
+            ],
+            [
+              47,
+              11
+            ]
+          ],
+          "color": "#e0e0e3ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Metal branco legível no perfil oeste"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "mask": "empty_space",
+          "points": [
+            [
+              45,
+              12
+            ],
+            [
+              46,
+              12
+            ]
+          ],
+          "color": "#e0e0e3ff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Metal branco legível no perfil oeste"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "mask": "empty_space",
+          "points": [
+            [
+              48,
+              7
+            ]
+          ],
+          "color": "#8e8a8cff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Sombra da borda de metal"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "mask": "empty_space",
+          "points": [
+            [
+              48,
+              8
+            ]
+          ],
+          "color": "#8e8a8cff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Sombra da borda de metal"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "mask": "empty_space",
+          "points": [
+            [
+              48,
+              9
+            ]
+          ],
+          "color": "#8e8a8cff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Sombra da borda de metal"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "mask": "empty_space",
+          "points": [
+            [
+              48,
+              10
+            ]
+          ],
+          "color": "#8e8a8cff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Sombra da borda de metal"
+        },
+        {
+          "operation": "brush",
+          "layer": "image",
+          "frames": [
+            1
+          ],
+          "mask": "empty_space",
+          "points": [
+            [
+              45,
+              13
+            ],
+            [
+              46,
+              13
+            ]
+          ],
+          "color": "#f3d52aff",
+          "size": 1,
+          "shape": "square",
+          "reason": "Gola dourada da lança"
+        }
+      ]
+    }
+  ],
+  "service_events": [
+    "Uma inspeção falhou por erro de transporte; repetição única funcionou.",
+    "A chamada do segundo reparo retornou ferramentas ocupadas sem resultado; a repetição executou a única segunda passagem."
+  ],
+  "validation": {
+    "png_valid": true,
+    "size": [
+      68,
+      68
+    ],
+    "alpha_binary": true,
+    "alpha_bbox": [
+      25,
+      3,
+      50,
+      57
+    ],
+    "visible_pixels_source_from_alpha_mask": 668,
+    "visible_pixels_final": 754,
+    "additional_visible_pixels": 86,
+    "white_blade_pixels": 28,
+    "original_visible_pixels_preserved_by_alpha_mask": true,
+    "body_pixel_diff_not_independently_computed": true,
+    "applied_character_west_inspected_at_scale": 6,
+    "native_export_sha256": "b136895688a2e2a5c14d35a0848d0f4008c65cb7c00f1b761283c1965674b43d",
+    "browser_tested": false,
+    "godot_tested": false
+  }
+}

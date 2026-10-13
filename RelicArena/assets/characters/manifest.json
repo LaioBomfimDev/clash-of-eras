@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "source": "PixelLab original exports; realistic batch03 selected without modifying PNGs",
+  "characters": {
+    "neymar": {
+      "character_id": "291232c3-888e-4f25-89c4-c81820353189",
+      "states": {
+        "idle": {
+          "directions": {
+            "south": "res://assets/characters/neymar/realista_03/original/Idle/rotations/south.png",
+            "south-east": "res://assets/characters/neymar/realista_03/original/Idle/rotations/south-east.png",
+            "east": "res://assets/characters/neymar/realista_03/original/Idle/rotations/east.png",
+            "north-east": "res://assets/characters/neymar/realista_03/original/Idle/rotations/north-east.png",
+            "north": "res://assets/characters/neymar/realista_03/original/Idle/rotations/north.png",
+            "north-west": "res://assets/characters/neymar/realista_03/original/Idle/rotations/north-west.png",
+            "west": "res://assets/characters/neymar/realista_03/original/Idle/rotations/west.png",
+            "south-west": "res://assets/characters/neymar/realista_03/original/Idle/rotations/south-west.png"
+          }
+        }
+      },
+      "original_animations": 0,
+      "previous_character_id": "fcc05054-6672-4efb-b417-f49cffcc7b7f",
+      "art_batch": "realista_03"
+    },
+    "caramelo": {
+      "character_id": "82eace58-7128-4f15-97ce-1944a5702428",
+      "states": {
+        "idle": {
+          "directions": {
+            "south": "res://assets/characters/caramelo/original/Idle/rotations/south.png",
+            "south-east": "res://assets/characters/caramelo/original/Idle/rotations/south-east.png",
+            "east": "res://assets/characters/caramelo/original/Idle/rotations/east.png",
+            "north-east": "res://assets/characters/caramelo/original/Idle/rotations/north-east.png",
+            "north": "res://assets/characters/caramelo/original/Idle/rotations/north.png",
+            "north-west": "res://assets/characters/caramelo/original/Idle/rotations/north-west.png",
+            "west": "res://assets/characters/caramelo/original/Idle/rotations/west.png",
+            "south-west": "res://assets/characters/caramelo/original/Idle/rotations/south-west.png"
+          }
+        }
+      },
+      "original_animations": 0
+    },
+    "obama": {
+      "character_id": "d0c3bcfa-e7ee-4f64-aa3c-ce5e72a3fe78",
+      "states": {
+        "idle": {
+          "directions": {
+            "south": "res://assets/characters/obama/realista_03/original/Idle/rotations/south.png",
+            "south-east": "res://assets/characters/obama/realista_03/original/Idle/rotations/south-east.png",
+            "east": "res://assets/characters/obama/realista_03/original/Idle/rotations/east.png",
+            "north-east": "res://assets/characters/obama/realista_03/original/Idle/rotations/north-east.png",
+            "north": "res://assets/characters/obama/realista_03/original/Idle/rotations/north.png",
+            "north-west": "res://assets/characters/obama/realista_03/original/Idle/rotations/north-west.png",
+            "west": "res://assets/characters/obama/realista_03/original/Idle/rotations/west.png",
+            "south-west": "res://assets/characters/obama/realista_03/original/Idle/rotations/south-west.png"
+          }
+        }
+      },
+      "original_animations": 0,
+      "previous_character_id": "9a2a0a13-3fca-4dd6-a685-94d312c75bb2",
+      "art_batch": "realista_03"
+    },
+    "zumbi": {
+      "character_id": "47e44cf4-8365-4c14-8d6f-15ff0fbc4498",
+      "states": {
+        "idle": {
+          "directions": {
+            "south": "res://assets/characters/zumbi/grande_04/original/Idle/rotations/south.png",
+            "south-east": "res://assets/characters/zumbi/grande_04/original/Idle/rotations/south-east.png",
+            "east": "res://assets/characters/zumbi/grande_04/original/Idle/rotations/east.png",
+            "north-east": "res://assets/characters/zumbi/grande_04/original/Idle/rotations/north-east.png",
+            "north": "res://assets/characters/zumbi/grande_04/original/Idle/rotations/north.png",
+            "north-west": "res://assets/characters/zumbi/grande_04/original/Idle/rotations/north-west.png",
+            "west": "res://assets/characters/zumbi/grande_04/original/Idle/rotations/west.png",
+            "south-west": "res://assets/characters/zumbi/grande_04/original/Idle/rotations/south-west.png"
+          }
+        },
+        "idle_n2": {
+          "directions": {
+            "south": "res://assets/characters/zumbi/grande_04/niveis/nivel_2/rotations/south.png",
+            "south-east": "res://assets/characters/zumbi/grande_04/niveis/nivel_2/rotations/south-east.png",
+            "east": "res://assets/characters/zumbi/grande_04/niveis/nivel_2/rotations/east.png",
+            "north-east": "res://assets/characters/zumbi/grande_04/niveis/nivel_2/rotations/north-east.png",
+            "north": "res://assets/characters/zumbi/grande_04/niveis/nivel_2/rotations/north.png",
+            "north-west": "res://assets/characters/zumbi/grande_04/niveis/nivel_2/rotations/north-west.png",
+            "west": "res://assets/characters/zumbi/grande_04/niveis/nivel_2/rotations/west.png",
+            "south-west": "res://assets/characters/zumbi/grande_04/niveis/nivel_2/rotations/south-west.png"
+          }
+        },
+        "idle_n3": {
+          "directions": {
+            "south": "res://assets/characters/zumbi/grande_04/niveis/nivel_3/rotations/south.png",
+            "south-east": "res://assets/characters/zumbi/grande_04/niveis/nivel_3/rotations/south-east.png",
+            "east": "res://assets/characters/zumbi/grande_04/niveis/nivel_3/rotations/east.png",
+            "north-east": "res://assets/characters/zumbi/grande_04/niveis/nivel_3/rotations/north-east.png",
+            "north": "res://assets/characters/zumbi/grande_04/niveis/nivel_3/rotations/north.png",
+            "north-west": "res://assets/characters/zumbi/grande_04/niveis/nivel_3/rotations/north-west.png",
+            "west": "res://assets/characters/zumbi/grande_04/niveis/nivel_3/rotations/west.png",
+            "south-west": "res://assets/characters/zumbi/grande_04/niveis/nivel_3/rotations/south-west.png"
+          }
+        }
+      },
+      "original_animations": 0,
+      "previous_character_id": "7129a655-427d-4ca9-84bb-13ad3ddd4682",
+      "art_batch": "grande_04",
+      "portrait_focus": [
+        62,
+        7
+      ]
+    },
+    "barbie": {
+      "character_id": "8cce0cc9-9e8f-4a0c-bddf-69fa85fabbdd",
+      "art_batch": "realista_03",
+      "states": {
+        "idle": {
+          "directions": {
+            "south": "res://assets/characters/barbie/realista_03/original/Idle/rotations/south.png",
+            "south-east": "res://assets/characters/barbie/realista_03/original/Idle/rotations/south-east.png",
+            "east": "res://assets/characters/barbie/realista_03/original/Idle/rotations/east.png",
+            "north-east": "res://assets/characters/barbie/realista_03/original/Idle/rotations/north-east.png",
+            "north": "res://assets/characters/barbie/realista_03/original/Idle/rotations/north.png",
+            "north-west": "res://assets/characters/barbie/realista_03/original/Idle/rotations/north-west.png",
+            "west": "res://assets/characters/barbie/realista_03/original/Idle/rotations/west.png",
+            "south-west": "res://assets/characters/barbie/realista_03/original/Idle/rotations/south-west.png"
+          }
+        }
+      },
+      "original_animations": 0
+    },
+    "ken": {
+      "character_id": "6ee036bc-198c-42dc-93a5-f2083142861f",
+      "art_batch": "realista_03",
+      "states": {
+        "idle": {
+          "directions": {
+            "south": "res://assets/characters/ken/realista_03/original/Idle/rotations/south.png",
+            "south-east": "res://assets/characters/ken/realista_03/original/Idle/rotations/south-east.png",
+            "east": "res://assets/characters/ken/realista_03/original/Idle/rotations/east.png",
+            "north-east": "res://assets/characters/ken/realista_03/original/Idle/rotations/north-east.png",
+            "north": "res://assets/characters/ken/realista_03/original/Idle/rotations/north.png",
+            "north-west": "res://assets/characters/ken/realista_03/original/Idle/rotations/north-west.png",
+            "west": "res://assets/characters/ken/realista_03/original/Idle/rotations/west.png",
+            "south-west": "res://assets/characters/ken/realista_03/original/Idle/rotations/south-west.png"
+          }
+        }
+      },
+      "original_animations": 0
+    },
+    "elon": {
+      "character_id": "8634c766-2b2f-4166-961b-1ea182b56419",
+      "art_batch": "realista_03",
+      "states": {
+        "idle": {
+          "directions": {
+            "south": "res://assets/characters/elon/realista_03/original/Idle/rotations/south.png",
+            "south-east": "res://assets/characters/elon/realista_03/original/Idle/rotations/south-east.png",
+            "east": "res://assets/characters/elon/realista_03/original/Idle/rotations/east.png",
+            "north-east": "res://assets/characters/elon/realista_03/original/Idle/rotations/north-east.png",
+            "north": "res://assets/characters/elon/realista_03/original/Idle/rotations/north.png",
+            "north-west": "res://assets/characters/elon/realista_03/original/Idle/rotations/north-west.png",
+            "west": "res://assets/characters/elon/realista_03/original/Idle/rotations/west.png",
+            "south-west": "res://assets/characters/elon/realista_03/original/Idle/rotations/south-west.png"
+          }
+        }
+      },
+      "original_animations": 0
+    },
+    "snoop": {
+      "character_id": "80bd8c1a-4f93-4fa7-a4e6-a85eeb8dc556",
+      "art_batch": "realista_03",
+      "states": {
+        "idle": {
+          "directions": {
+            "south": "res://assets/characters/snoop/realista_03/original/Idle/rotations/south.png",
+            "south-east": "res://assets/characters/snoop/realista_03/original/Idle/rotations/south-east.png",
+            "east": "res://assets/characters/snoop/realista_03/original/Idle/rotations/east.png",
+            "north-east": "res://assets/characters/snoop/realista_03/original/Idle/rotations/north-east.png",
+            "north": "res://assets/characters/snoop/realista_03/original/Idle/rotations/north.png",
+            "north-west": "res://assets/characters/snoop/realista_03/original/Idle/rotations/north-west.png",
+            "west": "res://assets/characters/snoop/realista_03/original/Idle/rotations/west.png",
+            "south-west": "res://assets/characters/snoop/realista_03/original/Idle/rotations/south-west.png"
+          }
+        }
+      },
+      "original_animations": 0
+    },
+    "lula": {
+      "character_id": "2436503e-0400-44cf-9edf-4f16366eb29e",
+      "art_batch": "realista_03",
+      "states": {
+        "idle": {
+          "directions": {
+            "south": "res://assets/characters/lula/realista_03/original/Idle/rotations/south.png",
+            "south-east": "res://assets/characters/lula/realista_03/original/Idle/rotations/south-east.png",
+            "east": "res://assets/characters/lula/realista_03/original/Idle/rotations/east.png",
+            "north-east": "res://assets/characters/lula/realista_03/original/Idle/rotations/north-east.png",
+            "north": "res://assets/characters/lula/realista_03/original/Idle/rotations/north.png",
+            "north-west": "res://assets/characters/lula/realista_03/original/Idle/rotations/north-west.png",
+            "west": "res://assets/characters/lula/realista_03/original/Idle/rotations/west.png",
+            "south-west": "res://assets/characters/lula/realista_03/original/Idle/rotations/south-west.png"
+          }
+        }
+      },
+      "original_animations": 0
+    },
+    "bob_marley": {
+      "character_id": "b7d93d38-f6e1-44e1-b663-746f0b01ac88",
+      "art_batch": "realista_03",
+      "states": {
+        "idle": {
+          "directions": {
+            "south": "res://assets/characters/bob_marley/realista_03/original/Idle/rotations/south.png",
+            "south-east": "res://assets/characters/bob_marley/realista_03/original/Idle/rotations/south-east.png",
+            "east": "res://assets/characters/bob_marley/realista_03/original/Idle/rotations/east.png",
+            "north-east": "res://assets/characters/bob_marley/realista_03/original/Idle/rotations/north-east.png",
+            "north": "res://assets/characters/bob_marley/realista_03/original/Idle/rotations/north.png",
+            "north-west": "res://assets/characters/bob_marley/realista_03/original/Idle/rotations/north-west.png",
+            "west": "res://assets/characters/bob_marley/realista_03/original/Idle/rotations/west.png",
+            "south-west": "res://assets/characters/bob_marley/realista_03/original/Idle/rotations/south-west.png"
+          }
+        }
+      },
+      "original_animations": 0
+    },
+    "rapunzel": {
+      "character_id": "6820ab38-635e-4d0d-8e78-231af6cf37ec",
+      "art_batch": "realista_03",
+      "states": {
+        "idle": {
+          "directions": {
+            "south": "res://assets/characters/rapunzel/realista_03/original/Idle/rotations/south.png",
+            "south-east": "res://assets/characters/rapunzel/realista_03/original/Idle/rotations/south-east.png",
+            "east": "res://assets/characters/rapunzel/realista_03/original/Idle/rotations/east.png",
+            "north-east": "res://assets/characters/rapunzel/realista_03/original/Idle/rotations/north-east.png",
+            "north": "res://assets/characters/rapunzel/realista_03/original/Idle/rotations/north.png",
+            "north-west": "res://assets/characters/rapunzel/realista_03/original/Idle/rotations/north-west.png",
+            "west": "res://assets/characters/rapunzel/realista_03/original/Idle/rotations/west.png",
+            "south-west": "res://assets/characters/rapunzel/realista_03/original/Idle/rotations/south-west.png"
+          }
+        }
+      },
+      "original_animations": 0
+    }
+  }
+}

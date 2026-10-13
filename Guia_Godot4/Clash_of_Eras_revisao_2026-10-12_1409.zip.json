@@ -1,0 +1,3347 @@
+{
+  "snapshot": "C:/Users/m/Documents/Relic Arena MY/Guia_Godot4/Clash_of_Eras_revisao_2026-10-12_1409.zip",
+  "recorded_utc": "2026-10-12T17:21:04.0119670Z",
+  "files": 666,
+  "bytes": 110146326,
+  "sha256": "ACFF76047E61FB3211BC057616D9FB55F3BEA27C4DA0B57AAB415D1B3F702AFB",
+  "mismatches": [],
+  "changed_during_archive": [],
+  "inventory": [
+    {
+      "path": "RelicArena/.gitignore",
+      "sha256": "9DDFAD792B35BC5EF4DB81BF985431A1D3746BE5281195CEDE8F81655A32DA65",
+      "bytes": 24
+    },
+    {
+      "path": "RelicArena/export_presets.cfg",
+      "sha256": "FC2C1B3327DFAD214A07CCAD08768AB4C908A06AD8F8341E95FBBB53441FC641",
+      "bytes": 1241
+    },
+    {
+      "path": "RelicArena/INICIAR_JOGO.cmd",
+      "sha256": "CC77820F16A5E116344B74A1AB958D7FC0315EF9944839377503471FE580EA33",
+      "bytes": 339
+    },
+    {
+      "path": "RelicArena/main.tscn",
+      "sha256": "3F3AE81822CDAE6DFC8895DC6795654629A9FF89551FF952B09D8AEC4D77A0D2",
+      "bytes": 174
+    },
+    {
+      "path": "RelicArena/project.godot",
+      "sha256": "76A7A88F50D895549A776C2CEB42AD19F8F01F5F98CB6EB8AC1A8C7CB015935E",
+      "bytes": 705
+    },
+    {
+      "path": "RelicArena/README.md",
+      "sha256": "3F5A7F88955203A9D86364B7253EAA8F0DD7AF6B993CF664ECEFE27F3D686968",
+      "bytes": 12872
+    },
+    {
+      "path": "RelicArena/VALIDACAO_01.json",
+      "sha256": "26EF829955B24D68820315B19D08F61F5C66AF2A3C1969695377B307198391EB",
+      "bytes": 941
+    },
+    {
+      "path": "RelicArena/VALIDACAO_V1_1.json",
+      "sha256": "71DBEDC74137AF84955985AF9C0281C90F79308ADB8BF9D8FF298904BC0C6C3D",
+      "bytes": 2985
+    },
+    {
+      "path": "RelicArena/VALIDACAO_V1_2.json",
+      "sha256": "62511B93C689AA67F098555CC9B28A644B4011CE7C4A154460F88B74CF92474E",
+      "bytes": 4119
+    },
+    {
+      "path": "RelicArena/VALIDACAO_V1_3.json",
+      "sha256": "384C3348FFA2E3950F1380B8C5565EAD868AEDB83941662BCD8F33FD0EA668D6",
+      "bytes": 6508
+    },
+    {
+      "path": "RelicArena/VALIDACAO_V1_4.json",
+      "sha256": "50AC3D4AA25316091480B531391134CD44A194F3D13877BA32F3B8163C53F283",
+      "bytes": 9053
+    },
+    {
+      "path": "RelicArena/VALIDACAO_V1.json",
+      "sha256": "F71F02C05694676395B92C73020A3D94ACF4A55F60AB80CE953D478B13E8B5FF",
+      "bytes": 2614
+    },
+    {
+      "path": "RelicArena/assets/caramelo.png",
+      "sha256": "3EC4003692D56CD3433F5EC20FB540CD540BCC023D48407874CB949779E610DC",
+      "bytes": 1579
+    },
+    {
+      "path": "RelicArena/assets/heart.png",
+      "sha256": "1D72C557ED0A588CE5C6727264F64856E8CDEEE5638AF53BFB2A776B79D51413",
+      "bytes": 225
+    },
+    {
+      "path": "RelicArena/assets/neymar.png",
+      "sha256": "E8F6731E55554285C936D8F72204B87258089BD6B43847401A5BAF85FA0A5F34",
+      "bytes": 1515
+    },
+    {
+      "path": "RelicArena/assets/obama.png",
+      "sha256": "048BF9568C5A09FCD45F13BEB0A963C9341784E3466665643046DB66E4843590",
+      "bytes": 1498
+    },
+    {
+      "path": "RelicArena/assets/ORIGEM.md",
+      "sha256": "1D4ADB8EE6EA799E28AC5CD644D461EEBEC42A9CC8C297D98C05FA3B0109CCB3",
+      "bytes": 10380
+    },
+    {
+      "path": "RelicArena/assets/zumbi.png",
+      "sha256": "4AA0A31CF77B0D915638A0A29626EC5E41BE7DBC8A4A65F1AE82B649F9D3D14C",
+      "bytes": 1627
+    },
+    {
+      "path": "RelicArena/assets/arena/braseiro.png",
+      "sha256": "AC68112E711BAE4F84989FFAD8475E62CAF4E3E3D9CD0C288AAB16E4B612C446",
+      "bytes": 1089
+    },
+    {
+      "path": "RelicArena/assets/arena/coliseu_estudo_02.png",
+      "sha256": "0230386C5CA0ADFF21B3C2AE2BCA72A7F23C1902729EAA822009F94BB995469F",
+      "bytes": 127937
+    },
+    {
+      "path": "RelicArena/assets/arena/props.json",
+      "sha256": "AD57256C246354FEC3CC70B5FE1892914913DC1451C2DDC664825AD560F4A103",
+      "bytes": 505
+    },
+    {
+      "path": "RelicArena/assets/characters/manifest.json",
+      "sha256": "FAF5C4C92E5C16719BCACBD745F2A8E5F496326E2ECACC8A96061E47F6B8E6D5",
+      "bytes": 12165
+    },
+    {
+      "path": "RelicArena/assets/characters/barbie/realista_03/exportacao.json",
+      "sha256": "A9E35D8D6B233F30247A18180B05C76122EFC37FFC2A361951FE0B2598273D26",
+      "bytes": 329
+    },
+    {
+      "path": "RelicArena/assets/characters/barbie/realista_03/pixellab_original.zip",
+      "sha256": "70C57F69D62FA38F9C337B120C9A1BC14BE78F478E1C0E0FDD879E5186B59C12",
+      "bytes": 12672
+    },
+    {
+      "path": "RelicArena/assets/characters/barbie/realista_03/original/metadata.json",
+      "sha256": "41A78EBAAD012CFE938B5721E56BFF2C80C427787A82667C8501D4B4095CCA3A",
+      "bytes": 1686
+    },
+    {
+      "path": "RelicArena/assets/characters/barbie/realista_03/original/Idle/rotations/east.png",
+      "sha256": "D37EAE1737D3A31C4B4CE906D985FA71EA5D52E23A91737F4EF78AF7309D9DA3",
+      "bytes": 1048
+    },
+    {
+      "path": "RelicArena/assets/characters/barbie/realista_03/original/Idle/rotations/north-east.png",
+      "sha256": "B1EA04854AF023711742B8EBFB53E244C49E6C369879E16C3A0013412294A185",
+      "bytes": 1246
+    },
+    {
+      "path": "RelicArena/assets/characters/barbie/realista_03/original/Idle/rotations/north-west.png",
+      "sha256": "FD272FFD6B05DEC8FA0931CC47B1A6D7E028189AE64AD3E8F2A6BB24CDC2EF68",
+      "bytes": 1194
+    },
+    {
+      "path": "RelicArena/assets/characters/barbie/realista_03/original/Idle/rotations/north.png",
+      "sha256": "72556E675B900B1B5E6BEDDE86A810B2CFAD61B4515E2EA46F7343C1C3D0B6F4",
+      "bytes": 1168
+    },
+    {
+      "path": "RelicArena/assets/characters/barbie/realista_03/original/Idle/rotations/south-east.png",
+      "sha256": "5B8E56B037BD75C3904C166C7200A849913F2A6C3C8F9E7AA2D5B8C4B1445A79",
+      "bytes": 1389
+    },
+    {
+      "path": "RelicArena/assets/characters/barbie/realista_03/original/Idle/rotations/south-west.png",
+      "sha256": "E053C6AC1DDA3CBA0888FE0D987B3F01543C5627E9C211DF36C0AF113EA18A28",
+      "bytes": 1388
+    },
+    {
+      "path": "RelicArena/assets/characters/barbie/realista_03/original/Idle/rotations/south.png",
+      "sha256": "B8A055FC50CBA568C9A85F80651AE5F5ECF2D9C2AB6D29C0218F99E9F9F865BD",
+      "bytes": 1374
+    },
+    {
+      "path": "RelicArena/assets/characters/barbie/realista_03/original/Idle/rotations/west.png",
+      "sha256": "F2BF63E8C2778C4FD30446F54B4F67031985CD317C53723991E6DB5422288532",
+      "bytes": 1027
+    },
+    {
+      "path": "RelicArena/assets/characters/bob_marley/realista_03/exportacao.json",
+      "sha256": "168806CAED7CC300EABD062C28BF70BCFAC6CAC790B41F0EE5418D7EFF5EF4D5",
+      "bytes": 333
+    },
+    {
+      "path": "RelicArena/assets/characters/bob_marley/realista_03/pixellab_original.zip",
+      "sha256": "761738C618640F87293B5E04A57D6921EEFB4726CFF8216766D36EADE5CD8432",
+      "bytes": 14547
+    },
+    {
+      "path": "RelicArena/assets/characters/bob_marley/realista_03/original/metadata.json",
+      "sha256": "8824D1F28A37686ED764A0D370B29EF3E748DB2F83A5A880F197FE20FA8786B3",
+      "bytes": 1869
+    },
+    {
+      "path": "RelicArena/assets/characters/bob_marley/realista_03/original/Idle/rotations/east.png",
+      "sha256": "5334112AD7FAD53BBE2FB84276FC53414B9589A0FD0BCE85E105672EE04AE9B6",
+      "bytes": 1195
+    },
+    {
+      "path": "RelicArena/assets/characters/bob_marley/realista_03/original/Idle/rotations/north-east.png",
+      "sha256": "069036596AFD24557BB2647B493D355700400C6E599741E26E23297E84290240",
+      "bytes": 1272
+    },
+    {
+      "path": "RelicArena/assets/characters/bob_marley/realista_03/original/Idle/rotations/north-west.png",
+      "sha256": "CBE79BD504555E2BAE2A11D0623F653964279E41EDB1092C933DE7090CE67D52",
+      "bytes": 1413
+    },
+    {
+      "path": "RelicArena/assets/characters/bob_marley/realista_03/original/Idle/rotations/north.png",
+      "sha256": "B3A54487AF466C342A03BF1BADAC30358A8ADA4F30E9FCF3ABE698BC37D7CB70",
+      "bytes": 1159
+    },
+    {
+      "path": "RelicArena/assets/characters/bob_marley/realista_03/original/Idle/rotations/south-east.png",
+      "sha256": "4364B727719E34E569B4D98A5BD327849A4CFA44D93E7022F52F3D472FF2607C",
+      "bytes": 1799
+    },
+    {
+      "path": "RelicArena/assets/characters/bob_marley/realista_03/original/Idle/rotations/south-west.png",
+      "sha256": "CD6EA59EC158DEE579B9F3C7513D34C91730559337674E84491C8A1B2F40C364",
+      "bytes": 1705
+    },
+    {
+      "path": "RelicArena/assets/characters/bob_marley/realista_03/original/Idle/rotations/south.png",
+      "sha256": "05B162A3E5C5F9DF7EB04A983167D60CBE9BC82D76CAD04B360C40CEF3CD4097",
+      "bytes": 1789
+    },
+    {
+      "path": "RelicArena/assets/characters/bob_marley/realista_03/original/Idle/rotations/west.png",
+      "sha256": "5DF227BBB0B40AE92CD36DC2FC7A5FAD4A7A95D43D8E63A2A32856E9E392E713",
+      "bytes": 1194
+    },
+    {
+      "path": "RelicArena/assets/characters/caramelo/pixellab_original.zip",
+      "sha256": "FEA95670EA22583E2D39BD18716E98E4A3EB2B3DE3536D6BD401A3343884861F",
+      "bytes": 17898
+    },
+    {
+      "path": "RelicArena/assets/characters/caramelo/original/metadata.json",
+      "sha256": "D1A95B0918A5AC27FA8370F6BEFCECEE9A194185FDB9CF1E038A52DB2C8F4823",
+      "bytes": 1645
+    },
+    {
+      "path": "RelicArena/assets/characters/caramelo/original/Idle/rotations/east.png",
+      "sha256": "BF24BD1C03465C0FC6080111C45EEDEE319B6FA06000CBEF4E8D9EFBCADDF56D",
+      "bytes": 1974
+    },
+    {
+      "path": "RelicArena/assets/characters/caramelo/original/Idle/rotations/north-east.png",
+      "sha256": "7B098AA70AF2FAA65202105497DC1CDAD52464C6C675AC57FA9FFDAD70FEC98C",
+      "bytes": 2010
+    },
+    {
+      "path": "RelicArena/assets/characters/caramelo/original/Idle/rotations/north-west.png",
+      "sha256": "C2076DC41966125920392DC44656DFBA065FA81779F737D26AA60FDD3BABC49C",
+      "bytes": 2060
+    },
+    {
+      "path": "RelicArena/assets/characters/caramelo/original/Idle/rotations/north.png",
+      "sha256": "5829A1B2D74D2FB5ABCEDFCB892DFECCFDEC51F77C42BDB9E360F5A9287546EF",
+      "bytes": 1253
+    },
+    {
+      "path": "RelicArena/assets/characters/caramelo/original/Idle/rotations/south-east.png",
+      "sha256": "843EC9F282F77F72CF080C83BEB606ED8EBD8C46CE88001853EB89EDA6CF3DAB",
+      "bytes": 2085
+    },
+    {
+      "path": "RelicArena/assets/characters/caramelo/original/Idle/rotations/south-west.png",
+      "sha256": "C7BBEBC8566EB96A8D280CAA7E65C8AA066CD0BE5B608B2C18D81BA244A59097",
+      "bytes": 2086
+    },
+    {
+      "path": "RelicArena/assets/characters/caramelo/original/Idle/rotations/south.png",
+      "sha256": "3EC4003692D56CD3433F5EC20FB540CD540BCC023D48407874CB949779E610DC",
+      "bytes": 1579
+    },
+    {
+      "path": "RelicArena/assets/characters/caramelo/original/Idle/rotations/west.png",
+      "sha256": "8D59860792D30077DF5E0EFB8B3ADDC3759FE4C11F08A3E32C8D2B4BCAB0FF5B",
+      "bytes": 2054
+    },
+    {
+      "path": "RelicArena/assets/characters/elon/realista_03/exportacao.json",
+      "sha256": "2989720F25DF71337F409B310BBEC759BA773B0DBCC7EEFE0ECF1AD9D69214FF",
+      "bytes": 327
+    },
+    {
+      "path": "RelicArena/assets/characters/elon/realista_03/pixellab_original.zip",
+      "sha256": "5D9DC2B443FC9D7A50A90E85B2874A900CE906CAB3CF1883149F041E18742947",
+      "bytes": 11962
+    },
+    {
+      "path": "RelicArena/assets/characters/elon/realista_03/original/metadata.json",
+      "sha256": "6A46B619632E0B6C90C22EDF12F4603671C37A19A5C0FB603CDEAD38AFF99D54",
+      "bytes": 1771
+    },
+    {
+      "path": "RelicArena/assets/characters/elon/realista_03/original/Idle/rotations/east.png",
+      "sha256": "B9BAD23BD9B843424BA4CFCEBCF516043DC2C87863996E6D11C4F67FF1790A86",
+      "bytes": 944
+    },
+    {
+      "path": "RelicArena/assets/characters/elon/realista_03/original/Idle/rotations/north-east.png",
+      "sha256": "5E8936BE2C7F904C7A9E14FDC3948075F170E0AAA0F64EE78B34B876741DC2D3",
+      "bytes": 1014
+    },
+    {
+      "path": "RelicArena/assets/characters/elon/realista_03/original/Idle/rotations/north-west.png",
+      "sha256": "EAD56FAA80F16A92A0E0FF17F8C119D6FFEDB444E0C43366E252DA3C7989ECFE",
+      "bytes": 1095
+    },
+    {
+      "path": "RelicArena/assets/characters/elon/realista_03/original/Idle/rotations/north.png",
+      "sha256": "8A0885A4BF63B77E05DCF9B98C40B85B1D3795586D10CC27E725BEBD202D98AB",
+      "bytes": 1063
+    },
+    {
+      "path": "RelicArena/assets/characters/elon/realista_03/original/Idle/rotations/south-east.png",
+      "sha256": "EF4A50A214F18D8331597B044B0762FE6B7D1E028C618C469F1293E2DA67D4F0",
+      "bytes": 1441
+    },
+    {
+      "path": "RelicArena/assets/characters/elon/realista_03/original/Idle/rotations/south-west.png",
+      "sha256": "35A3ACF97AAC8FC02E3801F01FD79C36F87D9532AC82840830085379BDD1E75E",
+      "bytes": 1313
+    },
+    {
+      "path": "RelicArena/assets/characters/elon/realista_03/original/Idle/rotations/south.png",
+      "sha256": "D57D3AE2D3EC576485644865ADC29F712DF38F7B96BA2C7DE34FDFD6BD437848",
+      "bytes": 1255
+    },
+    {
+      "path": "RelicArena/assets/characters/elon/realista_03/original/Idle/rotations/west.png",
+      "sha256": "25D1B75C8353B64C324303DD5953E5B920AE07944FD6B23ED050FD68A31D50ED",
+      "bytes": 914
+    },
+    {
+      "path": "RelicArena/assets/characters/ken/realista_03/exportacao.json",
+      "sha256": "AF4E13B3799B40BDA283779918273B2BBBCCBC0F455B3511847B7ABBA6BACABF",
+      "bytes": 326
+    },
+    {
+      "path": "RelicArena/assets/characters/ken/realista_03/pixellab_original.zip",
+      "sha256": "2C4EB55DC54A8913DE1E0E9D492A63032AD6EACFB9C78E0B3D519777F61F124D",
+      "bytes": 11817
+    },
+    {
+      "path": "RelicArena/assets/characters/ken/realista_03/original/metadata.json",
+      "sha256": "D1FC5AC9204F48096157199A48280C8063102CFEA6CA24EA29F86D5660BA2637",
+      "bytes": 1735
+    },
+    {
+      "path": "RelicArena/assets/characters/ken/realista_03/original/Idle/rotations/east.png",
+      "sha256": "42ACF93DFC9461643F8BC701F1F96B49A02CE6A97D990DB1DA5FD0B5C2F3265A",
+      "bytes": 878
+    },
+    {
+      "path": "RelicArena/assets/characters/ken/realista_03/original/Idle/rotations/north-east.png",
+      "sha256": "DAB3215F3FD7B79CD4DCF6A3B68F5CB4D4E7C8EBF9DAB519E4D2A490CC962ECF",
+      "bytes": 1069
+    },
+    {
+      "path": "RelicArena/assets/characters/ken/realista_03/original/Idle/rotations/north-west.png",
+      "sha256": "D9C6E03FDE57B0C208B3065E16F33E130A39C37BA7D3EF05ED515E347CF3C33F",
+      "bytes": 1134
+    },
+    {
+      "path": "RelicArena/assets/characters/ken/realista_03/original/Idle/rotations/north.png",
+      "sha256": "C92878AF8423E94DE9281FE47097BA51806AB40F43320DD5BA37F616E338D182",
+      "bytes": 1081
+    },
+    {
+      "path": "RelicArena/assets/characters/ken/realista_03/original/Idle/rotations/south-east.png",
+      "sha256": "D57C3F5B982BAEA2C7C87627BC2715DBDE4966E50C19C2AC80B7524D462E5C8A",
+      "bytes": 1243
+    },
+    {
+      "path": "RelicArena/assets/characters/ken/realista_03/original/Idle/rotations/south-west.png",
+      "sha256": "3CA4A60FF92FE5F9730AF15F22A1A409B37C2A2DE9A16866E1827FDFB7B64F0A",
+      "bytes": 1261
+    },
+    {
+      "path": "RelicArena/assets/characters/ken/realista_03/original/Idle/rotations/south.png",
+      "sha256": "34D5DC37828CCC9D6A654664041FA84E308B50E036E9782A62A9F2280493F393",
+      "bytes": 1309
+    },
+    {
+      "path": "RelicArena/assets/characters/ken/realista_03/original/Idle/rotations/west.png",
+      "sha256": "CA6C399237B7414DE8048A9902B9265B9B72C63727A98E6544A08E35EB68DE0B",
+      "bytes": 955
+    },
+    {
+      "path": "RelicArena/assets/characters/lula/realista_03/exportacao.json",
+      "sha256": "0A79E5A7C9575975A68B5E223FCD89C7A887A7BEB15B3B31F999B2D229D6D8F3",
+      "bytes": 327
+    },
+    {
+      "path": "RelicArena/assets/characters/lula/realista_03/pixellab_original.zip",
+      "sha256": "602550884C7711DFEB5C4C2FDE4E8E16A46CDEE5604A81C8888D20F760497D58",
+      "bytes": 11527
+    },
+    {
+      "path": "RelicArena/assets/characters/lula/realista_03/original/metadata.json",
+      "sha256": "1BB32D1CD752A820DFCAA985DAF564A416B6830BCA2E3694BA6228E8EBCB1BD1",
+      "bytes": 1807
+    },
+    {
+      "path": "RelicArena/assets/characters/lula/realista_03/original/Idle/rotations/east.png",
+      "sha256": "E5FBC74C020A810F462E88BEAAF5910204B67CB1182E34E8E9800D47499628E9",
+      "bytes": 955
+    },
+    {
+      "path": "RelicArena/assets/characters/lula/realista_03/original/Idle/rotations/north-east.png",
+      "sha256": "5A90AF739E666B13C34CE06FB2F10B1AA214F3D1200855E0E84E0815FB9F1BDA",
+      "bytes": 1021
+    },
+    {
+      "path": "RelicArena/assets/characters/lula/realista_03/original/Idle/rotations/north-west.png",
+      "sha256": "F0748DDBE9B962274D49071E42CF537932F04696FB33D65539754EB411CC88E2",
+      "bytes": 1021
+    },
+    {
+      "path": "RelicArena/assets/characters/lula/realista_03/original/Idle/rotations/north.png",
+      "sha256": "B529FF50DA26C66B184C4BF96ED912E622CC77088B57EA2BF477D035F4F9180E",
+      "bytes": 925
+    },
+    {
+      "path": "RelicArena/assets/characters/lula/realista_03/original/Idle/rotations/south-east.png",
+      "sha256": "E5663E9DF1742EE475B4848AC614581C76826397262E4564B6D1832B93A37188",
+      "bytes": 1228
+    },
+    {
+      "path": "RelicArena/assets/characters/lula/realista_03/original/Idle/rotations/south-west.png",
+      "sha256": "71D6F944E3F6231800DD259CDD661B878601BBE41ABDDC3DEF0C9DACAC72B0D2",
+      "bytes": 1258
+    },
+    {
+      "path": "RelicArena/assets/characters/lula/realista_03/original/Idle/rotations/south.png",
+      "sha256": "6F7156EC12712C094EB3429DF6255315CFFEB9F20C5F95749648B45328A34C45",
+      "bytes": 1256
+    },
+    {
+      "path": "RelicArena/assets/characters/lula/realista_03/original/Idle/rotations/west.png",
+      "sha256": "C87F6BBF892C1D7703A6BA6E7879625FC885FAD0A9030D69AFEBB837186A06CB",
+      "bytes": 904
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/pixellab_original.zip",
+      "sha256": "E979D458AFA85C061794F17A39CB72EADBF967973B677FE088DED548CF998ADD",
+      "bytes": 13511
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/original/metadata.json",
+      "sha256": "6A8D29412AA34A41CE53F4F605F1A46863EC2F1457866A45D2C283134BD74305",
+      "bytes": 1899
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/original/Idle/rotations/east.png",
+      "sha256": "788062E3AA991BF4BECB9118843961F6FA925D35FAA80598CBFAA62F8BDD8BF4",
+      "bytes": 1265
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/original/Idle/rotations/north-east.png",
+      "sha256": "43FE9C4B16BB19C6EF0CF942D6A210FE1C731131DDCEA1F5640CEB0CEDDEC79B",
+      "bytes": 1375
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/original/Idle/rotations/north-west.png",
+      "sha256": "A1D7E1B6E2219E6F252AB6809725A39AAA578432D4FA827C60E18CC3B460C1BE",
+      "bytes": 1416
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/original/Idle/rotations/north.png",
+      "sha256": "073535D7C9B26FA734E9839069F61ADA90C0B478217AFEC6D82F93B2BD58A8CE",
+      "bytes": 1263
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/original/Idle/rotations/south-east.png",
+      "sha256": "AEB75084D15D48F8C4B4B5916BC4D8C955AE05C7622634288A10600CADBE0402",
+      "bytes": 1350
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/original/Idle/rotations/south-west.png",
+      "sha256": "010C8CF5341D8EDC2E96E6933099D11ADBE138CB07F1C4BD572335F7C1AE2EA6",
+      "bytes": 1333
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/original/Idle/rotations/south.png",
+      "sha256": "125A5588C3FA2E16179D32E98F1DC7DF69155631076C47074D2303209EE6DC69",
+      "bytes": 1273
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/original/Idle/rotations/west.png",
+      "sha256": "3832D872EEAA31DDFB0CCA8CF8EA89EC98B3E3A91CF0FD56CD0CC98136E0FF93",
+      "bytes": 1185
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/realista_03/exportacao.json",
+      "sha256": "4F8348C4679C40A057397307CC948325A2238E2BDC45B81CE2802D04EDB43F95",
+      "bytes": 329
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/realista_03/pixellab_original.zip",
+      "sha256": "098A3DB51C5731E73F48E83F41C21778A2DDAB73D2659F98B44EFB085BA97B45",
+      "bytes": 12691
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/realista_03/original/metadata.json",
+      "sha256": "D278C4D34D8ED315CA9C0A5EFB23C28C6772B2C3217F004EBE439BC93101A44A",
+      "bytes": 1838
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/realista_03/original/Idle/rotations/east.png",
+      "sha256": "5C09271E8E01BCC70D1702B471F21B752429C2AFB1BAB34F48931412C110B1D6",
+      "bytes": 991
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/realista_03/original/Idle/rotations/north-east.png",
+      "sha256": "07E7849BBEAB836AE9C2C2538B3306C2C93976DE70BD812E27D5AB79D0583FF4",
+      "bytes": 1290
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/realista_03/original/Idle/rotations/north-west.png",
+      "sha256": "2C71BF84A20ECBC2A8429B40064FB4DFF7F9985ED8E03A36102ECA5E745C0C24",
+      "bytes": 1276
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/realista_03/original/Idle/rotations/north.png",
+      "sha256": "016E462C24D26B4A2764077C98A6ED5B8B3F0364FE4A794634934D9E48E809F6",
+      "bytes": 1180
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/realista_03/original/Idle/rotations/south-east.png",
+      "sha256": "FADE3CA05AFD4305D071A923088B066556884FE3F7AE66B57B017CAAB4619942",
+      "bytes": 1312
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/realista_03/original/Idle/rotations/south-west.png",
+      "sha256": "C0D8F9FC8A55D573B3CF70616EDF12E55F3672BD6D3EF035DAAFF75E9A299D19",
+      "bytes": 1378
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/realista_03/original/Idle/rotations/south.png",
+      "sha256": "390B6C533B480629638D325588D3628E2CAC01E16245B6A437616A40BB54595D",
+      "bytes": 1253
+    },
+    {
+      "path": "RelicArena/assets/characters/neymar/realista_03/original/Idle/rotations/west.png",
+      "sha256": "ED937185D0A032BDA954FD1EA0EA15E1E09DE6310EC499BAA995474AA9927247",
+      "bytes": 1021
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/pixellab_original.zip",
+      "sha256": "649829420D837FBEFA18F4374AC83DA8AA16917E33842FA3AF607866B1599B4F",
+      "bytes": 12906
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/original/metadata.json",
+      "sha256": "5A2C8FC1F63D0E040394B51EF600FE79DB413213223AEB708E2A5156969384E8",
+      "bytes": 2164
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/original/Idle/rotations/east.png",
+      "sha256": "DB594B32D95D3098FE29B8EDB263E002D48C59962FEC9A6BF6A6DD841B4B2812",
+      "bytes": 1036
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/original/Idle/rotations/north-east.png",
+      "sha256": "12C184E079BB384F6329AD437C5C0B00652F1D1C2A60B81ADC45165CF0E1590D",
+      "bytes": 1106
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/original/Idle/rotations/north-west.png",
+      "sha256": "10595126EBB655ECA8A10CE995BBCE1383AF83D865338DE740E5A5D2628F7146",
+      "bytes": 1119
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/original/Idle/rotations/north.png",
+      "sha256": "23316AB291CBCE8D0B0DBA9C3F1BC042E68345C073897848C370684A0EAC8B7F",
+      "bytes": 1142
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/original/Idle/rotations/south-east.png",
+      "sha256": "6AAB2ABA4578B5FADCA611D01DD4D306E216E923227CB89D02B0D44C406F0705",
+      "bytes": 1330
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/original/Idle/rotations/south-west.png",
+      "sha256": "9D8327661D54F1E9FDA7139184498530B00E37D3692F2A23D13F8D9D6596B2D7",
+      "bytes": 1341
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/original/Idle/rotations/south.png",
+      "sha256": "615B36C0FFF72B1717F9F8E71A8FB07FFE824D647CEFE3BF4AD5772EE3298085",
+      "bytes": 1435
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/original/Idle/rotations/west.png",
+      "sha256": "417EB7DA202525BA5131877365870A0FF3EBAB8874F8DC9A8F62D77E0DA79209",
+      "bytes": 1081
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/realista_03/exportacao.json",
+      "sha256": "5CFFDDF882655AFA6B10F5A116959360D45003203319D2E0FEAEED77F4B00A20",
+      "bytes": 328
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/realista_03/pixellab_original.zip",
+      "sha256": "C13B8E3BBA80A0C289CF02C8238C2CFC22B629D12F01ECC5123DC286FF1CBA52",
+      "bytes": 11947
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/realista_03/original/metadata.json",
+      "sha256": "A058C1F8ABD13A6CD3BC90C0D0063B1CB1FFE3E36B4876BAC88677A212DE4CD9",
+      "bytes": 1779
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/realista_03/original/Idle/rotations/east.png",
+      "sha256": "E77392C127BB3DF6026E5747C4AC920F0BBC865EADD8350DA997BC8F5C4989AD",
+      "bytes": 862
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/realista_03/original/Idle/rotations/north-east.png",
+      "sha256": "1C763873039BCBD1191DE75BCBBE4F73F7E63503C12A368D642F67DB31367591",
+      "bytes": 1182
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/realista_03/original/Idle/rotations/north-west.png",
+      "sha256": "007010F1BE1D43AD583FCB7C895B26C15731CD91ACA292347A36A218C57A1111",
+      "bytes": 1203
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/realista_03/original/Idle/rotations/north.png",
+      "sha256": "DF58FDC65B6E4013CEE25B35AB9E6A2625819CACAA05593389C409CFAE9D55C4",
+      "bytes": 1030
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/realista_03/original/Idle/rotations/south-east.png",
+      "sha256": "BE5DB5A1D36861685ED24F9318F4DA7F7807BD26AF9329E78FD2715CA8D91E76",
+      "bytes": 1302
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/realista_03/original/Idle/rotations/south-west.png",
+      "sha256": "54432C361B0EE80A1B04D0102B865A1C608F9A92C2A4D1ADCA6E90E6D88E3346",
+      "bytes": 1197
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/realista_03/original/Idle/rotations/south.png",
+      "sha256": "9E7701E09BFE5F18FED0AD3DC3623AB9F16FD33B7AAEB3FE4EECF051E8EBBFAA",
+      "bytes": 1313
+    },
+    {
+      "path": "RelicArena/assets/characters/obama/realista_03/original/Idle/rotations/west.png",
+      "sha256": "44991553AA10AD9866A80494EDBE7A4A43B414A060F05B4B47D3AC8BF0944B99",
+      "bytes": 927
+    },
+    {
+      "path": "RelicArena/assets/characters/provisorio/barbie.png",
+      "sha256": "C3A8FF3B09E938788A760AA21D918383C4A7BE18110D9517935D8BCE33C41A38",
+      "bytes": 467
+    },
+    {
+      "path": "RelicArena/assets/characters/provisorio/bob_marley.png",
+      "sha256": "33FD8D02FFD69FDDFC4CBAA84518F56A3636B97D1E776B5DAA004DC19BA4FE41",
+      "bytes": 527
+    },
+    {
+      "path": "RelicArena/assets/characters/provisorio/caramelo.png",
+      "sha256": "7FBE993A8AD3E10448F3A1CDBD0F82EBC6E8B40AE8B93049610BA1BE03FA1DB8",
+      "bytes": 519
+    },
+    {
+      "path": "RelicArena/assets/characters/provisorio/cleopatra.png",
+      "sha256": "BE4E4749421005A6513E285A274C1AF312D1C92B6C80A63C45D16B0F0AEE21F3",
+      "bytes": 576
+    },
+    {
+      "path": "RelicArena/assets/characters/provisorio/einstein.png",
+      "sha256": "1C58D65CC6F17356566D0533E634F35B03269D49F52444FD46A9A2A18FEF6B27",
+      "bytes": 554
+    },
+    {
+      "path": "RelicArena/assets/characters/provisorio/elon.png",
+      "sha256": "F835E1904C90678600C1DCB3E2EC951FD5A325625766BA6D625B342A9FAAF5FF",
+      "bytes": 463
+    },
+    {
+      "path": "RelicArena/assets/characters/provisorio/julio_cesar.png",
+      "sha256": "80E874B2ED87D898903C1632C1AD5E1BB09EAFA9DE8E9ABAF436BB31C01B37AC",
+      "bytes": 530
+    },
+    {
+      "path": "RelicArena/assets/characters/provisorio/ken.png",
+      "sha256": "86C0DC3746F9B7BD7562A1BEB51796A188F88832A014422BC2301BA512D11E80",
+      "bytes": 455
+    },
+    {
+      "path": "RelicArena/assets/characters/provisorio/lula.png",
+      "sha256": "79151E888123747B2293918379ACF8C6B02A8E2617030D5DE638666576E3C85F",
+      "bytes": 461
+    },
+    {
+      "path": "RelicArena/assets/characters/provisorio/napoleao.png",
+      "sha256": "21BB09896F65BADB94668951758866492847AF19C6AAB56326CFF3D8E3706FA9",
+      "bytes": 554
+    },
+    {
+      "path": "RelicArena/assets/characters/provisorio/rapunzel.png",
+      "sha256": "B5D196197820E134F573F8AB082E7A6141B887C133A547CB926E53D5253AB79B",
+      "bytes": 558
+    },
+    {
+      "path": "RelicArena/assets/characters/provisorio/snoop.png",
+      "sha256": "36E79464BD3938D1547E4407AED5C0634D6B92F3768943860C67787DC8BB79DB",
+      "bytes": 478
+    },
+    {
+      "path": "RelicArena/assets/characters/provisorio/zumbi.png",
+      "sha256": "15D4A853432F7E8B8592A5939B78B7F9A5AAF93711F168FB99C84E67C7E69E9A",
+      "bytes": 559
+    },
+    {
+      "path": "RelicArena/assets/characters/rapunzel/realista_03/exportacao.json",
+      "sha256": "4AD4EB988BDBA02D1B9DF1B7ADE854891F13348568DC32C5D49E79297421EBD8",
+      "bytes": 331
+    },
+    {
+      "path": "RelicArena/assets/characters/rapunzel/realista_03/pixellab_original.zip",
+      "sha256": "95632CDD155FD04FEDBC3F55CDBB52280E4A047F3E82064D7DF250654B7954AA",
+      "bytes": 14278
+    },
+    {
+      "path": "RelicArena/assets/characters/rapunzel/realista_03/original/metadata.json",
+      "sha256": "B26C1CD6E3143C9F70EA0021DDABE582EF243DEF77E78A9C3ECAD3D78377FAB2",
+      "bytes": 1936
+    },
+    {
+      "path": "RelicArena/assets/characters/rapunzel/realista_03/original/Idle/rotations/east.png",
+      "sha256": "7BD8F3EDAD89BE19A1ECDED67405A62388E589061DD352597715B78C9C4FCA6E",
+      "bytes": 1308
+    },
+    {
+      "path": "RelicArena/assets/characters/rapunzel/realista_03/original/Idle/rotations/north-east.png",
+      "sha256": "F09ABD9FE790386B910B3EED6592CFD19921E992DD0FBC537856C437ECE2880B",
+      "bytes": 1295
+    },
+    {
+      "path": "RelicArena/assets/characters/rapunzel/realista_03/original/Idle/rotations/north-west.png",
+      "sha256": "6CF085D9E73652FB9D8F72016AF40877630FB67D541A25F60381F4EB937AF612",
+      "bytes": 1280
+    },
+    {
+      "path": "RelicArena/assets/characters/rapunzel/realista_03/original/Idle/rotations/north.png",
+      "sha256": "B418DC953B3684FFC7CFC284364691C29CDD22E226AAEA24A862FFD57C91B797",
+      "bytes": 1417
+    },
+    {
+      "path": "RelicArena/assets/characters/rapunzel/realista_03/original/Idle/rotations/south-east.png",
+      "sha256": "E549ADECD88E8FA1B379C7955DA5D690F29BBD2C111ED1731D01CF9B93F87D37",
+      "bytes": 1565
+    },
+    {
+      "path": "RelicArena/assets/characters/rapunzel/realista_03/original/Idle/rotations/south-west.png",
+      "sha256": "000FB30454B276921AC2B9FBD813E0C3A2AA4B4722D8CB34FF925FAB3877EEF4",
+      "bytes": 1524
+    },
+    {
+      "path": "RelicArena/assets/characters/rapunzel/realista_03/original/Idle/rotations/south.png",
+      "sha256": "8E996696DC366A79509A76B8399BC484C1537201C8CA8F14F31080225A3A8D24",
+      "bytes": 1616
+    },
+    {
+      "path": "RelicArena/assets/characters/rapunzel/realista_03/original/Idle/rotations/west.png",
+      "sha256": "E162FB39FDFAC01430E0A427210D0DAFBD301B3BC617AFC5930171B2D45DB29D",
+      "bytes": 1185
+    },
+    {
+      "path": "RelicArena/assets/characters/snoop/realista_03/exportacao.json",
+      "sha256": "1F5320CC7F74BAD3D78DF50B8D8654CD15229C812731574F0652F985E40A41A0",
+      "bytes": 328
+    },
+    {
+      "path": "RelicArena/assets/characters/snoop/realista_03/pixellab_original.zip",
+      "sha256": "68A0FBA6C402A7A3BC57228528771695266FA8C70852FB3C1A997371C2BB0EEB",
+      "bytes": 12251
+    },
+    {
+      "path": "RelicArena/assets/characters/snoop/realista_03/original/metadata.json",
+      "sha256": "11D63E6639C164BDC43284E0C3FB40176E0CC223FB46E9775D234D2B874DC6D6",
+      "bytes": 1806
+    },
+    {
+      "path": "RelicArena/assets/characters/snoop/realista_03/original/Idle/rotations/east.png",
+      "sha256": "C18B809E59DBF7D8BBD06059F19AE3403349AB58DC24FDD779E6BBECF1B48279",
+      "bytes": 1028
+    },
+    {
+      "path": "RelicArena/assets/characters/snoop/realista_03/original/Idle/rotations/north-east.png",
+      "sha256": "F80076A3F0AC1FD0FB3AAADC4F7D65387DCF4E174C8F22D551DF0BA6A6DF7C83",
+      "bytes": 1192
+    },
+    {
+      "path": "RelicArena/assets/characters/snoop/realista_03/original/Idle/rotations/north-west.png",
+      "sha256": "CBD39F52B9D126E96BD003452CCC9BCDC629CFF1AF8BAC69DECE7A29CC0EAF91",
+      "bytes": 1169
+    },
+    {
+      "path": "RelicArena/assets/characters/snoop/realista_03/original/Idle/rotations/north.png",
+      "sha256": "C5D70A5B849432B9CD11D582F3F8046BBBFFA0D162372DD36C1C01AB926FC9D0",
+      "bytes": 1196
+    },
+    {
+      "path": "RelicArena/assets/characters/snoop/realista_03/original/Idle/rotations/south-east.png",
+      "sha256": "C11204556875D78B46294DE4BB8885F9EA6CDFA0F011846E40479267877FE7F8",
+      "bytes": 1195
+    },
+    {
+      "path": "RelicArena/assets/characters/snoop/realista_03/original/Idle/rotations/south-west.png",
+      "sha256": "E3AA812324BDF0FE62C773C80301641A0850FFCF717DF908D9AF15C44EB5D624",
+      "bytes": 1272
+    },
+    {
+      "path": "RelicArena/assets/characters/snoop/realista_03/original/Idle/rotations/south.png",
+      "sha256": "8065BF0995DEE5B6E5F6EF7BEE8AABED4FAAE364E4108CEA912AED970CD5B48B",
+      "bytes": 1260
+    },
+    {
+      "path": "RelicArena/assets/characters/snoop/realista_03/original/Idle/rotations/west.png",
+      "sha256": "FA637EFF87A05C150900B53CF473A4D1E341A6F4000412C2CC0024477BEDC006",
+      "bytes": 981
+    },
+    {
+      "path": "RelicArena/assets/characters/zumbi/pixellab_original.zip",
+      "sha256": "A1EDD420D77C7E037C92FDF48A04AA5A47F5A1150C3B11996677E4BF95AC301F",
+      "bytes": 14721
+    },
+    {
+      "path": "RelicArena/assets/characters/zumbi/original/metadata.json",
+      "sha256": "E9B80D955E226111C1AF76ACBC3221344A08B2DEB1890163CC5AB08841525E9A",
+      "bytes": 1639
+    },
+    {
+      "path": "RelicArena/assets/characters/zumbi/original/Idle/rotations/east.png",
+      "sha256": "04789A481F7200B89498FAA17BB142BFE7B9DE0CA9234D73CDEA073F9A5FDF81",
+      "bytes": 1333
+    },
+    {
+      "path": "RelicArena/assets/characters/zumbi/original/Idle/rotations/north-east.png",
+      "sha256": "5CAA8F6C8F32C7D5E851D3014C96FAE6F6420D81400475195C81D1E3D3C4A1AB",
+      "bytes": 1424
+    },
+    {
+      "path": "RelicArena/assets/characters/zumbi/original/Idle/rotations/north-west.png",
+      "sha256": "E910A145F0874624BB624C78C1F86526EBECE4CE0EEF2ECD2FF44B1D7BE4DB96",
+      "bytes": 1506
+    },
+    {
+      "path": "RelicArena/assets/characters/zumbi/original/Idle/rotations/north.png",
+      "sha256": "328DB6066C9DFEE119B2153C9C3673BDA72F02C56555EB8F1AAEF7BBF487EC6A",
+      "bytes": 1204
+    },
+    {
+      "path": "RelicArena/assets/characters/zumbi/original/Idle/rotations/south-east.png",
+      "sha256": "7A573436924AA2F61EB025455BDCA306E735170462E2B50AF0FB4FA624F9EA2F",
+      "bytes": 1867
+    },
+    {
+      "path": "RelicArena/assets/characters/zumbi/original/Idle/rotations/south-west.png",
+      "sha256": "A7DFF98F2CF2F504BCEDA5850EE8AFDFEA2B5FF473FE616553A1E89B51B2F004",
+      "bytes": 1678
+    },
+    {
+      "path": "RelicArena/assets/characters/zumbi/original/Idle/rotations/south.png",
+      "sha256": "4AA0A31CF77B0D915638A0A29626EC5E41BE7DBC8A4A65F1AE82B649F9D3D14C",
+      "bytes": 1627
+    },
+    {
+      "path": "RelicArena/assets/characters/zumbi/original/Idle/rotations/west.png",
+      "sha256": "B136895688A2E2A5C14D35A0848D0F4008C65CB7C00F1B761283C1965674B43D",
+      "bytes": 1291
+    },
+    {
+      "path": "RelicArena/assets/michael/manifest.json",
+      "sha256": "924EE06924E5367C91039C9DFDF01CF3476AAAECA1DE11D1DC19FE9FD954687D",
+      "bytes": 12623
+    },
+    {
+      "path": "RelicArena/assets/michael/pixellab_original.zip",
+      "sha256": "78EBE8A8936F3991DE869963765E85E1B5EA5DAE29F2E62BDFAED08573643555",
+      "bytes": 137305
+    },
+    {
+      "path": "RelicArena/assets/michael/original/metadata.json",
+      "sha256": "A38B57907CC90FF92DC9E6F2B9C0B544BAD8DF08BCECA1A01FC2A171176ADC0A",
+      "bytes": 10262
+    },
+    {
+      "path": "RelicArena/assets/michael/original/dancer_in_a_white_vi/rotations/east.png",
+      "sha256": "692767DE50C544B52978660C0545C9B0CDF07A23610A54F299F3DF3A2D91363D",
+      "bytes": 1170
+    },
+    {
+      "path": "RelicArena/assets/michael/original/dancer_in_a_white_vi/rotations/north-east.png",
+      "sha256": "6B4C81005368B944637DB898D5A38480D257CE7A6FE0697161CEEC975E567CA2",
+      "bytes": 1262
+    },
+    {
+      "path": "RelicArena/assets/michael/original/dancer_in_a_white_vi/rotations/north-west.png",
+      "sha256": "1B87C7ED3911D37AAD71BF64F1AE295F207CF2BC632CD9ED0E205975364B99BE",
+      "bytes": 1169
+    },
+    {
+      "path": "RelicArena/assets/michael/original/dancer_in_a_white_vi/rotations/north.png",
+      "sha256": "6C89884027EAE3CAAE7EC5B9F5161695A4B466B97EA5E6D8B2C435FFBFC5E7A4",
+      "bytes": 1034
+    },
+    {
+      "path": "RelicArena/assets/michael/original/dancer_in_a_white_vi/rotations/south-east.png",
+      "sha256": "D461F329AF18C34681A15B84AFD222651770BBEE93E545BD00FD2E7104FE9C40",
+      "bytes": 1310
+    },
+    {
+      "path": "RelicArena/assets/michael/original/dancer_in_a_white_vi/rotations/south-west.png",
+      "sha256": "5C10588ED2F47DF712718B3548A740419E921C66D931B52723D3606C78F8EFBF",
+      "bytes": 1383
+    },
+    {
+      "path": "RelicArena/assets/michael/original/dancer_in_a_white_vi/rotations/south.png",
+      "sha256": "9FBFC42BBAEB020216F23E18E3848DAED80D1839B9086AF86C8B6A76062D61A5",
+      "bytes": 1253
+    },
+    {
+      "path": "RelicArena/assets/michael/original/dancer_in_a_white_vi/rotations/west.png",
+      "sha256": "7323708FD4C8000AA397AA172E4443AAD41A5D5B3566A22D64CBC964F236C318",
+      "bytes": 1149
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_000.png",
+      "sha256": "A8E85A3262FD1F7BEF44D14F9B3AC6F068ABFB2412A7BB12EE67AC6F211927B1",
+      "bytes": 1066
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_001.png",
+      "sha256": "556AA8F04BA0544A30CC6985658549A21EB70122D023C7A88B4C1F6CA8CCED03",
+      "bytes": 1170
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_002.png",
+      "sha256": "21C9F552E202D49FFE730F45CF324A41D5FA21AE2BAC680615F8D481658F912A",
+      "bytes": 1117
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_003.png",
+      "sha256": "61FC3BEBA723B2E8DE9ECA9E2B774EA86D498FCE4ADE031CDB42B1D78B194F83",
+      "bytes": 1145
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_004.png",
+      "sha256": "F17087DB0A53D63ECEEB424CE7277DE502F33E7DF2A62FDC1155E3414319D0F2",
+      "bytes": 1080
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_005.png",
+      "sha256": "036895DA8D4E1E792243F29EFFC19095C6A3D8D7FBD7D6F82C794F88E2C40A6B",
+      "bytes": 1155
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_006.png",
+      "sha256": "AC988831FC3B66A4002A0A00698EBE49B6844D87A1AE824372CFD5BD6C4A9443",
+      "bytes": 1168
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_007.png",
+      "sha256": "B39C3A402AD04CE3A94818783DDF220FBE05761007845EA3CDEDE4F6C3DE3CDF",
+      "bytes": 1201
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/east/frame_008.png",
+      "sha256": "DF360A0FD22E230A3082F5E9D7EB3CC1C629C456AB31944FBD3BA412EE0F0DC1",
+      "bytes": 1073
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_000.png",
+      "sha256": "5BAD17B176AD961783052039C6B45B48F834E88BCA5CBC953ED98CDBC7C64E98",
+      "bytes": 1302
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_001.png",
+      "sha256": "AFE0747466AC048698A77F98521324A27C711998B55A55A96EB47CA74906C878",
+      "bytes": 1249
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_002.png",
+      "sha256": "26BCE6496E1FC167EABA62AB0680DA63017B711995F81BBA5F031FBA782A57FB",
+      "bytes": 1185
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_003.png",
+      "sha256": "B20DC20D3B1C2265EF3FB857DB19967A83DF4E3B84886AAA98D642A98CFB63E6",
+      "bytes": 1237
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_004.png",
+      "sha256": "BF0C307FEF1131CF47BB3176EAA6059573977F53276DBFA1464CB0ACA5370769",
+      "bytes": 1151
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_005.png",
+      "sha256": "8D129D92C01131FC033325E3D0D918472D1E9CF1D7B891065D5AD0FCE9111441",
+      "bytes": 1127
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_006.png",
+      "sha256": "01A963A8E53727AE7C587A5B88E7B323C029A99CF4FD9A40A41C9C223110439F",
+      "bytes": 1090
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_007.png",
+      "sha256": "09941D85D578C374B56378B4DF94AD9D232A56D5EBC415103993D5E25BE914D2",
+      "bytes": 1115
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north/frame_008.png",
+      "sha256": "1CFF5DCD3B9E0D2F19614CD04DB4D691D690FCEB78984BF1D561B451C13F2A72",
+      "bytes": 1120
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_000.png",
+      "sha256": "72EE6BB65B4CE9EC256A56B5FA41973CACF34447DC7CC911A2FE3C663DAFD988",
+      "bytes": 1296
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_001.png",
+      "sha256": "E1C4E45782B30A0AFBD5B7A570A2AA9CF3F287F4606503BE70D247F16FBDB408",
+      "bytes": 1298
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_002.png",
+      "sha256": "80BA570967A74CE94DBFF529F49B66D568FC4D8C0BB5017A9565084574502012",
+      "bytes": 1123
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_003.png",
+      "sha256": "FDA088F09656D0DA758B406B2CAA6236DA660605BEB0C334145F1C76F504C844",
+      "bytes": 1078
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_004.png",
+      "sha256": "A506AB5840B68AAFFC6A89D7907B9CCEFE684E4BD9244E2ABFCCECF80180C4F0",
+      "bytes": 1033
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_005.png",
+      "sha256": "C68539E136CC1E80DC8877CCDC36951DE8A3F6F44574A195BC69968AC9C5B560",
+      "bytes": 1185
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_006.png",
+      "sha256": "DEAB1237ECACF3C91BB582C3AC39F9F704CD975F36DA99F0550011B9C5A64818",
+      "bytes": 1160
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_007.png",
+      "sha256": "60EE39F278408E2A77C72D1CEA7D461E0F47A0BE58F02519DA32EE41762FED81",
+      "bytes": 1111
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-east/frame_008.png",
+      "sha256": "018998608F3CDB0CC45FA3EF47464B755D162828AAE6B59B374D3A98777CB7F2",
+      "bytes": 1172
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_000.png",
+      "sha256": "B504730C45050F9069147D28BDFFDD2006FE4F5D6256CF0AD8C1E4DD896AD986",
+      "bytes": 1282
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_001.png",
+      "sha256": "2E8408A6B619B38325D050E2EB082EE33879AC897E524F299B85B73E3066EBD7",
+      "bytes": 1301
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_002.png",
+      "sha256": "BFF419F408393A07F8DE3ED52B351E69DD4CB02D5BCA1D340AA5D87BF8D425EC",
+      "bytes": 1092
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_003.png",
+      "sha256": "15C64854FCC416ECC3CE2BDD35C2857A7AD5E8D149D01BF2E888FEA5EEF6F32E",
+      "bytes": 1099
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_004.png",
+      "sha256": "2D4F20F0F181BAB85E7535093E1BFEA7892F1AC7F26EEC0C184DD2F5E837B5EE",
+      "bytes": 1044
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_005.png",
+      "sha256": "AAF9C1AAF8B3E23B55E2E6E13902AA2DC93D6203DF91842E243211B88F14F556",
+      "bytes": 1213
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_006.png",
+      "sha256": "C7306BCB34AB26E5F8C8CCD5F13FAD81606E8934C42B377224CF48692BB8673F",
+      "bytes": 1163
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_007.png",
+      "sha256": "747E13EB707A107FF303824796573F633351DE713DA0436A9FA1DEB9E863BB22",
+      "bytes": 1120
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/north-west/frame_008.png",
+      "sha256": "D82A59305C79D6A260B626D9F4E68F0BB1C03BF031BB3E6CCDBFE25A4DCD1B99",
+      "bytes": 1159
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_000.png",
+      "sha256": "393DD9D80B1F8E187CC338829CB01DB3E14BB69C8A86CA4521A84D82C4C222E9",
+      "bytes": 1406
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_001.png",
+      "sha256": "E2B5E2903C05E2804C6C593F79FD1F87AEDAF558E5B0CB081108EA0CAAC714F8",
+      "bytes": 1457
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_002.png",
+      "sha256": "D94965D75B568F7A02329DCD05F89FD914C1124A586DC5A8C67E024B9399D8B3",
+      "bytes": 1476
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_003.png",
+      "sha256": "3EBEA29890A52EE17B2D24F639DD458A960400B42CE8AFA837E498C14F4AFC50",
+      "bytes": 1481
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_004.png",
+      "sha256": "CE37A716F52933C41158BDF17F40144961CD57C25B3C412DB2BBC776B6DF53FE",
+      "bytes": 1433
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_005.png",
+      "sha256": "642CF9A7291632E4DBC405227CD73F41DDAE443D5E42A8785F65570461AEB85A",
+      "bytes": 1517
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_006.png",
+      "sha256": "E20B720A9276F3DA6E165F7EA5C460304601B9B24012E7252CC75F155EE25924",
+      "bytes": 1304
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_007.png",
+      "sha256": "1F20E5918D5D0C1F5E9D6321513C39DB88DC4669886F84DE89ED960D65173F27",
+      "bytes": 1356
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south/frame_008.png",
+      "sha256": "0D89F78EFE5B16E48E0E48533954C5E8A4A8A3401F5537DA7B8A3CCC08537B03",
+      "bytes": 1410
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_000.png",
+      "sha256": "0C115667A27F823B06969FCA2A329B7E1E38588488B65EA94FC97EB3DA8DC7F9",
+      "bytes": 1313
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_001.png",
+      "sha256": "945D652F222D3050C0BF34FEB04797709CB1CE004D01E99A5E4E00F821A31330",
+      "bytes": 1288
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_002.png",
+      "sha256": "5AF58DD24813E776A6A9167BE3285AA5E12523D4206218B423977BE1A8AB30B0",
+      "bytes": 1276
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_003.png",
+      "sha256": "4CA2349FC5BA8D7BC04CF9B72D803E5A4C3348B4F007F24A8D301943FB0868F9",
+      "bytes": 1280
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_004.png",
+      "sha256": "1C3BFA1260A207B152AEE9D5B92FC3EAA09300A7042A255CFF6E06C038B74EAB",
+      "bytes": 1238
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_005.png",
+      "sha256": "28AB109C245C24F0269137EBBEDC952566D382CFDFFB14CFFA268ACCB4F4AD68",
+      "bytes": 1287
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_006.png",
+      "sha256": "0742AAEB3BD43E184DE70F85120501EA8991015C064B76843FA48C8A72234A47",
+      "bytes": 1241
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_007.png",
+      "sha256": "343D51ED2B6093E6752638AD500352E1C95F93E7DA352A7AD89C4D56B4E1EE28",
+      "bytes": 1203
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-east/frame_008.png",
+      "sha256": "CD11B5C48682226227948B7973E3E447B7D7B2D8436D61C3026CF55BFAB8DE1B",
+      "bytes": 1132
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_000.png",
+      "sha256": "770A4119862F364F222D649BC929F74C6141461565FC4A00B3678DB7F72731A3",
+      "bytes": 1282
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_001.png",
+      "sha256": "028C802BAF07082438ECF2FFFDE3008FEBB648C8E06E891B315422C3680177D8",
+      "bytes": 1279
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_002.png",
+      "sha256": "B227FBCB749119FDF04A3CF3F3EA9731268DAB1D764FBB98D1CDA2D81ED11CEC",
+      "bytes": 1249
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_003.png",
+      "sha256": "E00AA83673075021C6DB1EE1A8BAAB907B3311C4A1FF4E07848865E722134BB4",
+      "bytes": 1265
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_004.png",
+      "sha256": "A4037BDE1F34EC2B473D980FE410BC58A48C6A01FF37C6621BB7EA6B58400404",
+      "bytes": 1209
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_005.png",
+      "sha256": "B829897C61DC59C8DA61D19E8651AA3F1805F4256A557690BD89F9F870B06DBC",
+      "bytes": 1323
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_006.png",
+      "sha256": "3E726A2B314611DE2E5F2A43C4F588D9F53D4E511866B0FE426C74CA7AACF55E",
+      "bytes": 1215
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_007.png",
+      "sha256": "57EA198B879293343C3A14BDEB85FB25BF88F2B7BE14ABE311CAB97597A53C81",
+      "bytes": 1205
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/south-west/frame_008.png",
+      "sha256": "852C5B58C124ED612408066424E50F1D8C02D07CD9A70FB36A7F034BA6FC4B8C",
+      "bytes": 1129
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_000.png",
+      "sha256": "C4E545B3F5891B81D0ED9921CAB4F880049660674652936F459052155CEA3B36",
+      "bytes": 1055
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_001.png",
+      "sha256": "025EB188B0CF000D214E84AB6CE91BC689BF69C2D4DF25E3638F6DA82A711599",
+      "bytes": 1161
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_002.png",
+      "sha256": "E1B2029FB9449F275D1885F9E3E9E0308BA535D7F163EDA60AB08BDF3DEDE8B0",
+      "bytes": 1095
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_003.png",
+      "sha256": "C7B473E3C12D713A6B1C712D62E186A85EBCA6E1B641A024B1CC49F929289881",
+      "bytes": 1139
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_004.png",
+      "sha256": "E45A3FB719A57DA1D88CC182F407C8B97764C293D4D3C70A4E49ABA6655FBDD1",
+      "bytes": 1072
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_005.png",
+      "sha256": "69B03729214E4EB9AC95E03AA07B4A1981760F7D0E34010FCFE9315E8F7128C8",
+      "bytes": 1153
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_006.png",
+      "sha256": "13D80D5314FF3E991C253369E4B156E0B25779AC1BE0A2ADBB1F1DBF9D03ECEE",
+      "bytes": 1178
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_007.png",
+      "sha256": "D84093CCFF7999D35C81FDD244910FD32E98B8ED2270A8150666FBA2AB470390",
+      "bytes": 1180
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/animations/The_subject_performs_the_classic_moonwalk_slide_rh/west/frame_008.png",
+      "sha256": "A28826BAAF75860731218C9F007F49DA9CCFF12D98F71EC6E8194890904F2FE1",
+      "bytes": 1053
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/rotations/east.png",
+      "sha256": "F98F6BD2D54FD475C98E8C06F5FE7B142A9508E556B929B3475DBB6D169FA540",
+      "bytes": 997
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/rotations/north-east.png",
+      "sha256": "CB2BBEF483E35BF0F67B993490A46555182F0A421AAC4649D916D07DED6C2172",
+      "bytes": 1265
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/rotations/north-west.png",
+      "sha256": "F8D4F42BAA1BA6A0F0A6D66E93D66278491445B74E2F40B4A141A14F6CC9C4B2",
+      "bytes": 1081
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/rotations/north.png",
+      "sha256": "52987E608E653931084C6DA8F897BFA17169A2CD6BCC89967FB237A4724BD9A7",
+      "bytes": 1279
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/rotations/south-east.png",
+      "sha256": "B1022F789ADF12410B9CD4B3982FE60C920FE8AE956D1BA2165257A5C0B9E85A",
+      "bytes": 1281
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/rotations/south-west.png",
+      "sha256": "DE42D0CD8B3175F32B48B9E663A4C72F02F2B0203718873B7F24122CCF868620",
+      "bytes": 1356
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/rotations/south.png",
+      "sha256": "FE2F3AB36B9DB2534D9E73A207586D08CC59A4A92E1E417688E22842B3C473E5",
+      "bytes": 1380
+    },
+    {
+      "path": "RelicArena/assets/michael/original/Idle/rotations/west.png",
+      "sha256": "8E2F6547FF669E49DA2137984065D97158BDCEBBD292CD3BA8F3F74873ECDDDC",
+      "bytes": 1038
+    },
+    {
+      "path": "RelicArena/assets/ui/lobby_background.png",
+      "sha256": "EFC5ECA93CF00C3DB17049ED4121BB882B531863FFA74CC570028514AD909DC5",
+      "bytes": 61863
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/fx_ball.png",
+      "sha256": "53944792E31F94A875150B0B0EEDEDD0432259A3DBFF5B33D142E791E850CBB5",
+      "bytes": 275
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/item_blade.png",
+      "sha256": "06B1C208BDAE86C935E3E6EFD42B8CE4B326DB7CCE1496EA276B7AE51CF0ADBC",
+      "bytes": 210
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/item_boots.png",
+      "sha256": "3258479337AC2D26093663BF41E9A0AA2E39409C29205F725D08E8B82BD3FA43",
+      "bytes": 321
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/item_charm.png",
+      "sha256": "8DB3857EAD1336C7A20B7A0C051BF009AEEAEEBC73644D077CE797AE3EC496F8",
+      "bytes": 258
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/item_great_blade.png",
+      "sha256": "945784A7B77B23DDFEAECBF73D4450D3BB7243C29A739543E10251E425FA9527",
+      "bytes": 297
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/item_guard_vest.png",
+      "sha256": "4E8421CDC65F43BB2821BD94BFB6852EAA8A8994A8D9EB7B33089548ED70387B",
+      "bytes": 245
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/item_plate.png",
+      "sha256": "31957DC82C32988B6CEF2A18183E0A0261F79BCE59FC7A4D610D12552E8DD2F7",
+      "bytes": 269
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/item_vest.png",
+      "sha256": "9E9A62340420F7594864A9135A6D8273A2A60F0C64316FC8EA0E9D11D26104E3",
+      "bytes": 325
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/item_ward.png",
+      "sha256": "3655CC010BCFA45C320A01C6383E023E20097602A80060BCE1E40189F09D9192",
+      "bytes": 224
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/syn_apoio.png",
+      "sha256": "31EED1D153EBA64A32D52F17DB5F9536FC005DD256372981EB4AC9A9487EB0D0",
+      "bytes": 224
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/syn_atacantes.png",
+      "sha256": "F5EBEB4EEB2521CF7CB596B60DD7547987CFEFEBC20A314290814C5B1687BDE3",
+      "bytes": 216
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/syn_atiradores.png",
+      "sha256": "F9EEB8A29BE6D6F16D3E063FACFC2EE6399DC5657CADB702DCDE2CC41CA8B687",
+      "bytes": 305
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/syn_vanguarda.png",
+      "sha256": "20DBACFDBFAC615BE133C83F4FD5F0FBE7BAF19A5C99222A2C5D1D2241C38C26",
+      "bytes": 235
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/ui_coin.png",
+      "sha256": "0FFCB97E787AC1E21C874ADEFC869460F0CA567D2B52AD813995EFA587BA73D0",
+      "bytes": 268
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/ui_expand.png",
+      "sha256": "6556637BC510AEE984774F380C6F8B874235B6B5C046B5ED86509DAE04AC7CA5",
+      "bytes": 237
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/ui_fight.png",
+      "sha256": "58AFDBCF972BF3B24FDB2D1EF2C9AF47D5EF9AA7618DE380ACCEA5FE00E67DED",
+      "bytes": 228
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/ui_menu.png",
+      "sha256": "965EC703BDB2BCE12B8124E571D55DE18032683E7AAF206B8B169941B072C5F3",
+      "bytes": 131
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/ui_refresh.png",
+      "sha256": "566156C47718DCDDEB67C4D48FC54482B7E738AE7D217EFB2AE866394B28BC67",
+      "bytes": 220
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/ui_scroll.png",
+      "sha256": "0C54E34656FFD906C3720615A274261D31D636B940351B76992A3C5F941DC618",
+      "bytes": 151
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/ui_sound.png",
+      "sha256": "DF78C105A46F467733E73AAE1B4A463F9A79A0B3FF9F683BE96428A3BF5C8087",
+      "bytes": 198
+    },
+    {
+      "path": "RelicArena/assets/ui/icons/ui_star.png",
+      "sha256": "22E6D28F2F5CB41BC35A9470C40DB81E1503FC1F433A6324628111602DABDBCC",
+      "bytes": 196
+    },
+    {
+      "path": "RelicArena/assets/vfx/INTEGRIDADE_V1_4.json",
+      "sha256": "0663D1EB1CF8708D7BCBCCF1699D465E37E89C49F11BFDC0C167756D2DEC1C3C",
+      "bytes": 74081
+    },
+    {
+      "path": "RelicArena/assets/vfx/INTEGRIDADE.json",
+      "sha256": "CE3D92A855F10F0019E43CF27512D7C4BC1CDE85DE066B7196780803673AD868",
+      "bytes": 21322
+    },
+    {
+      "path": "RelicArena/assets/vfx/manifest.json",
+      "sha256": "CE9531015CDDE560B2FCAFDE3849B5B8F97F01E28A4FA05258B93E57B76638D4",
+      "bytes": 9869
+    },
+    {
+      "path": "RelicArena/assets/vfx/README.md",
+      "sha256": "39479FE8EBF79E6171E2928D31C7DE6706955BA9F4726EF7A740F16A06AE6131",
+      "bytes": 5774
+    },
+    {
+      "path": "RelicArena/assets/vfx/anel_fumaca_01/ORIGEM.json",
+      "sha256": "0EEB8EB9F378FAF719FADA34A002BCCEE75B1A2451C555FB4CC0CDB2B987E0DA",
+      "bytes": 1588
+    },
+    {
+      "path": "RelicArena/assets/vfx/anel_fumaca_01/game_pack/manifest.json",
+      "sha256": "4009DB94AE4B50DD6A9B713C1F351225DB4724FEF37724164B26A1FE143C0216",
+      "bytes": 624
+    },
+    {
+      "path": "RelicArena/assets/vfx/anel_fumaca_01/game_pack/README.txt",
+      "sha256": "3030BB6C509E7759CD342FD0B98DD3968551C657DFD76C4E6886399F751D632C",
+      "bytes": 942
+    },
+    {
+      "path": "RelicArena/assets/vfx/anel_fumaca_01/game_pack/whole.png",
+      "sha256": "B14AD486E1A0084009B2FCD63CF6D1D7219325FE633ADBA7A2DA54C630CE2535",
+      "bytes": 4341
+    },
+    {
+      "path": "RelicArena/assets/vfx/anel_fumaca_01/original/clash-of-eras-anel-fumaca-snoop-01-game.zip",
+      "sha256": "7C74629803D1C68B17DDFC51804E639F3A186B25AA0B0D10D19B15F156E83F92",
+      "bytes": 5487
+    },
+    {
+      "path": "RelicArena/assets/vfx/anel_fumaca_01/original/clash-of-eras-anel-fumaca-snoop-01.gif",
+      "sha256": "5EEB489D29D784649D9164B403F9E2EFD158C0A9296845E1C189F47BF14A6D8A",
+      "bytes": 3004
+    },
+    {
+      "path": "RelicArena/assets/vfx/anel_fumaca_01/original/clash-of-eras-anel-fumaca-snoop-01.json",
+      "sha256": "7CB2BEEC24BB21B3A4E7325D46BEF978D0E221D5124C1097E33B0E375D7C1998",
+      "bytes": 3436
+    },
+    {
+      "path": "RelicArena/assets/vfx/anel_fumaca_01/original/clash-of-eras-anel-fumaca-snoop-01.png",
+      "sha256": "A21916C7656328C7A5518BE746DD64A5B112A4686DBCE77319562536F0E6ACA9",
+      "bytes": 4662
+    },
+    {
+      "path": "RelicArena/assets/vfx/charuto_01/ORIGEM.json",
+      "sha256": "0FA33F607F0B06D9464954E4F05E041BDD77C9F024A8E19534174FE4A85FFC93",
+      "bytes": 1618
+    },
+    {
+      "path": "RelicArena/assets/vfx/charuto_01/game_pack/manifest.json",
+      "sha256": "53650A8D02A562DAF80B5A656F9551B6D383E2FE38EDDE1CA1B44772FDD75DF3",
+      "bytes": 630
+    },
+    {
+      "path": "RelicArena/assets/vfx/charuto_01/game_pack/README.txt",
+      "sha256": "3030BB6C509E7759CD342FD0B98DD3968551C657DFD76C4E6886399F751D632C",
+      "bytes": 942
+    },
+    {
+      "path": "RelicArena/assets/vfx/charuto_01/game_pack/whole.png",
+      "sha256": "561B0B5F9FE3F62BEDCA094CF19E3960880FA25025D31CA2398D0E48EF5B38B0",
+      "bytes": 3241
+    },
+    {
+      "path": "RelicArena/assets/vfx/charuto_01/original/clash-of-eras-fumaca-charuto-snoop-01-game.zip",
+      "sha256": "BDFA3CA63E752734CEC1909F36AECD680E65DE16342A12C2DB5AADACB49CC31A",
+      "bytes": 4385
+    },
+    {
+      "path": "RelicArena/assets/vfx/charuto_01/original/clash-of-eras-fumaca-charuto-snoop-01.gif",
+      "sha256": "5066AC5387F9A7106F996D70285BF2D2373B9E100AABB72D5FA3517285E68485",
+      "bytes": 3148
+    },
+    {
+      "path": "RelicArena/assets/vfx/charuto_01/original/clash-of-eras-fumaca-charuto-snoop-01.json",
+      "sha256": "2C5F9345222CE538220E1771569B6CF08D03B83CD78321E0311C3812525B76F3",
+      "bytes": 5170
+    },
+    {
+      "path": "RelicArena/assets/vfx/charuto_01/original/clash-of-eras-fumaca-charuto-snoop-01.png",
+      "sha256": "BF275166B3D3AECC710ACD7C7FE9434BC0959889563BE70C6CD44C0B75727417",
+      "bytes": 3640
+    },
+    {
+      "path": "RelicArena/assets/vfx/cura_01/VALIDACAO.json",
+      "sha256": "741025B0433908450A79E6D880A9FB8FB3462C2E340A6DF9FCAC0E633D40E59A",
+      "bytes": 3600
+    },
+    {
+      "path": "RelicArena/assets/vfx/cura_01/game_pack/manifest.json",
+      "sha256": "7C8C5BFAB5402C18FEEE2B518A5A1402B279AF9EA3A1F09F9911C7F9E3200485",
+      "bytes": 983
+    },
+    {
+      "path": "RelicArena/assets/vfx/cura_01/game_pack/part-cura.png",
+      "sha256": "C409F99313692B3BCE0D7325259EC6C86F9CD0555027451FB69B8F0C062F25BA",
+      "bytes": 604
+    },
+    {
+      "path": "RelicArena/assets/vfx/cura_01/game_pack/README.txt",
+      "sha256": "3030BB6C509E7759CD342FD0B98DD3968551C657DFD76C4E6886399F751D632C",
+      "bytes": 942
+    },
+    {
+      "path": "RelicArena/assets/vfx/cura_01/game_pack/whole.png",
+      "sha256": "C409F99313692B3BCE0D7325259EC6C86F9CD0555027451FB69B8F0C062F25BA",
+      "bytes": 604
+    },
+    {
+      "path": "RelicArena/assets/vfx/cura_01/original/clash-of-eras-cura01-game.zip",
+      "sha256": "6F4807093C66042DEB90F4BA4BE93CABFA87EC21161F838FF9A2336531814B41",
+      "bytes": 2480
+    },
+    {
+      "path": "RelicArena/assets/vfx/cura_01/original/clash-of-eras-cura01.gif",
+      "sha256": "F008C640DC6A4B623CC6949DED7698183919A4797EAC08D16EFF45375118A82C",
+      "bytes": 1040
+    },
+    {
+      "path": "RelicArena/assets/vfx/cura_01/original/clash-of-eras-cura01.json",
+      "sha256": "EA7FF3D09DF3AE05E49F2AA05E299349B4B8CB34494BA13DE64B8C3D1EF83138",
+      "bytes": 4747
+    },
+    {
+      "path": "RelicArena/assets/vfx/cura_01/original/clash-of-eras-cura01.png",
+      "sha256": "D0F15E4B5C2E6D7AB02BC79EFFAD61A9001E024D023966CFC36F072018F74800",
+      "bytes": 608
+    },
+    {
+      "path": "RelicArena/assets/vfx/escudo_danca_01/exportacao.json",
+      "sha256": "EC0776A3BC0E88C11C37F2ABDE5489041B3D557E7B177C4C0D523559E2378622",
+      "bytes": 668
+    },
+    {
+      "path": "RelicArena/assets/vfx/escudo_danca_01/pixellab_original.zip",
+      "sha256": "8669913F30D6DCB25A8D0D8DB8B16EEE7C1A6E547F28AF8BD876637FA9717074",
+      "bytes": 13265
+    },
+    {
+      "path": "RelicArena/assets/vfx/escudo_danca_01/original/front.png",
+      "sha256": "FCDF1D9B1DAD1B1D31A9C85E105475C0C7933813E16CF68420201020B09BFDFB",
+      "bytes": 2485
+    },
+    {
+      "path": "RelicArena/assets/vfx/escudo_danca_01/original/manifest.json",
+      "sha256": "FFD8624EB2B168715950915D2E565CB63F03BC315951719003F8ED1C41032E2C",
+      "bytes": 1863
+    },
+    {
+      "path": "RelicArena/assets/vfx/escudo_danca_01/original/part-bubble_shield.png",
+      "sha256": "FCDF1D9B1DAD1B1D31A9C85E105475C0C7933813E16CF68420201020B09BFDFB",
+      "bytes": 2485
+    },
+    {
+      "path": "RelicArena/assets/vfx/escudo_danca_01/original/README.txt",
+      "sha256": "3030BB6C509E7759CD342FD0B98DD3968551C657DFD76C4E6886399F751D632C",
+      "bytes": 942
+    },
+    {
+      "path": "RelicArena/assets/vfx/escudo_danca_01/original/whole-with-sprite.png",
+      "sha256": "AD511B0704A78E25A0DD7F29C1991A0ADDB47DA502CE440EB88A8545EAB8D9B9",
+      "bytes": 4221
+    },
+    {
+      "path": "RelicArena/assets/vfx/escudo_danca_01/original/whole.png",
+      "sha256": "FCDF1D9B1DAD1B1D31A9C85E105475C0C7933813E16CF68420201020B09BFDFB",
+      "bytes": 2485
+    },
+    {
+      "path": "RelicArena/assets/vfx/estilhaco_01/ORIGEM.json",
+      "sha256": "7F704E3D222A8BD14FD09AAA2F57C346F78AD4B6769355F649E9EF925AAE9DE8",
+      "bytes": 1635
+    },
+    {
+      "path": "RelicArena/assets/vfx/estilhaco_01/game_pack/manifest.json",
+      "sha256": "FA2D0DF829BEF59F8A42A971663D48730862FFE0F9BAC28C0966C9DF0DADE7F9",
+      "bytes": 635
+    },
+    {
+      "path": "RelicArena/assets/vfx/estilhaco_01/game_pack/README.txt",
+      "sha256": "3030BB6C509E7759CD342FD0B98DD3968551C657DFD76C4E6886399F751D632C",
+      "bytes": 942
+    },
+    {
+      "path": "RelicArena/assets/vfx/estilhaco_01/game_pack/whole.png",
+      "sha256": "15FF04C5FDE232961B16DE510E79EE5C6834EEA383492E4C51185D8E41206723",
+      "bytes": 6415
+    },
+    {
+      "path": "RelicArena/assets/vfx/estilhaco_01/original/clash-of-eras-estilhaco-vizinhos-elon-01-game.zip",
+      "sha256": "EC6D55B59DE4608DE28DB1377BF36591E751B47924A4AD9658045059CE28A6CF",
+      "bytes": 7567
+    },
+    {
+      "path": "RelicArena/assets/vfx/estilhaco_01/original/clash-of-eras-estilhaco-vizinhos-elon-01.gif",
+      "sha256": "935526E2681E94CE28D47D6254442F4F50CDE8B0EFAA188A83580B28BA032544",
+      "bytes": 4572
+    },
+    {
+      "path": "RelicArena/assets/vfx/estilhaco_01/original/clash-of-eras-estilhaco-vizinhos-elon-01.json",
+      "sha256": "4E66745F0A0A7853750E7FBAD1D4EBE495D9ACE8A9E1610A20D16D5F80E5AC4C",
+      "bytes": 4782
+    },
+    {
+      "path": "RelicArena/assets/vfx/estilhaco_01/original/clash-of-eras-estilhaco-vizinhos-elon-01.png",
+      "sha256": "429F44E52EE77061F2791BCE4F433F8A53D56D211DEA4D24DAC739BE03B855AC",
+      "bytes": 6626
+    },
+    {
+      "path": "RelicArena/assets/vfx/estocada_01/clash-of-eras-estocada01-game.zip",
+      "sha256": "BF6DA9A9273DAEDA999DD03CC751434ACA81D08132CADAAA0139849D54719F92",
+      "bytes": 2151
+    },
+    {
+      "path": "RelicArena/assets/vfx/estocada_01/manifest.json",
+      "sha256": "34EEE62A63C90D0C91FCAC52696E7F480579DADA984138A2685A2E0BC683C792",
+      "bytes": 1042
+    },
+    {
+      "path": "RelicArena/assets/vfx/estocada_01/ORIGEM.md",
+      "sha256": "AC4FED62CDC657F0E7E5BCAF29EB4CF4C9A62BFCC6DFA967203F3FC91D2B5C27",
+      "bytes": 2045
+    },
+    {
+      "path": "RelicArena/assets/vfx/estocada_01/part-estocada.png",
+      "sha256": "369F95115AD7D40744CC1BA0682ED03CAFCA94C0CE287FF60989D4FC422FFF3D",
+      "bytes": 425
+    },
+    {
+      "path": "RelicArena/assets/vfx/estocada_01/README.txt",
+      "sha256": "3030BB6C509E7759CD342FD0B98DD3968551C657DFD76C4E6886399F751D632C",
+      "bytes": 942
+    },
+    {
+      "path": "RelicArena/assets/vfx/estocada_01/whole.png",
+      "sha256": "369F95115AD7D40744CC1BA0682ED03CAFCA94C0CE287FF60989D4FC422FFF3D",
+      "bytes": 425
+    },
+    {
+      "path": "RelicArena/assets/vfx/explosao_02/ORIGEM.json",
+      "sha256": "C1FB921AEFFDBADD1AB75E3A5CC5F73F5BEC7DAA26F54FDEAF07CD9E2025A3C8",
+      "bytes": 1610
+    },
+    {
+      "path": "RelicArena/assets/vfx/explosao_02/game_pack/manifest.json",
+      "sha256": "80E853128194979E7C23FE07598AFBAB3D88C3437E5C0E00B34151D1381908D0",
+      "bytes": 638
+    },
+    {
+      "path": "RelicArena/assets/vfx/explosao_02/game_pack/README.txt",
+      "sha256": "3030BB6C509E7759CD342FD0B98DD3968551C657DFD76C4E6886399F751D632C",
+      "bytes": 942
+    },
+    {
+      "path": "RelicArena/assets/vfx/explosao_02/game_pack/whole.png",
+      "sha256": "DA8B1C4472EA14785A09EE83F119E1C2426B8C6251122E266BDEDC344E4D1923",
+      "bytes": 27102
+    },
+    {
+      "path": "RelicArena/assets/vfx/explosao_02/original/clash-of-eras-explosao-foguete-elon-02-game.zip",
+      "sha256": "9FA2C575D6DB2C3F256599692340C6D1CB9086F7A33625034D9E3FC2E6A0B006",
+      "bytes": 28252
+    },
+    {
+      "path": "RelicArena/assets/vfx/explosao_02/original/clash-of-eras-explosao-foguete-elon-02.gif",
+      "sha256": "A1A450B775B2DF0488BFB8B72158D5D114EBA66F654D2A862D34BD44268918D6",
+      "bytes": 15396
+    },
+    {
+      "path": "RelicArena/assets/vfx/explosao_02/original/clash-of-eras-explosao-foguete-elon-02.json",
+      "sha256": "80036301670B0287353E485F7A6CAD51253CA864AD382138C4B71F7C2E9A0F0C",
+      "bytes": 6444
+    },
+    {
+      "path": "RelicArena/assets/vfx/explosao_02/original/clash-of-eras-explosao-foguete-elon-02.png",
+      "sha256": "DC96226D9CB5EB1E876399120B2810295770400FF1494DDD87A1DE79C7DB3733",
+      "bytes": 28711
+    },
+    {
+      "path": "RelicArena/assets/vfx/explosao_03/ORIGEM.json",
+      "sha256": "2AE26358CA6049B6D3365E151F16582979A95D0842F8B09329E9D2C8796979FA",
+      "bytes": 1704
+    },
+    {
+      "path": "RelicArena/assets/vfx/explosao_03/game_pack/manifest.json",
+      "sha256": "5165828CF4C38A9823457A2466C062CAF06D0C8AB3903D27CEA33AEC73364909",
+      "bytes": 640
+    },
+    {
+      "path": "RelicArena/assets/vfx/explosao_03/game_pack/README.txt",
+      "sha256": "3030BB6C509E7759CD342FD0B98DD3968551C657DFD76C4E6886399F751D632C",
+      "bytes": 942
+    },
+    {
+      "path": "RelicArena/assets/vfx/explosao_03/game_pack/whole.png",
+      "sha256": "CF1D09FCE389458ED395A011997448B557F5712572C45E4DC87F59FE46482AD5",
+      "bytes": 85509
+    },
+    {
+      "path": "RelicArena/assets/vfx/explosao_03/original/clash-of-eras-explosao-grande-elon-03-game.zip",
+      "sha256": "AEAAFACEC86DB1158655D8B1442320C60C70EC0FB4FEEB1822D2F6CEB52B3BDD",
+      "bytes": 86662
+    },
+    {
+      "path": "RelicArena/assets/vfx/explosao_03/original/clash-of-eras-explosao-grande-elon-03.gif",
+      "sha256": "0328B07A65BC60697CBFF58EF7609F48207316B26DCF12E7F50EE81E0ECFD9E7",
+      "bytes": 42647
+    },
+    {
+      "path": "RelicArena/assets/vfx/explosao_03/original/clash-of-eras-explosao-grande-elon-03.json",
+      "sha256": "5F7D2A183C6617D2858BD762E3A34AB4A3E9BA85421CA35DE9D95B086AD3D7B5",
+      "bytes": 8043
+    },
+    {
+      "path": "RelicArena/assets/vfx/explosao_03/original/clash-of-eras-explosao-grande-elon-03.png",
+      "sha256": "866AE347625B1B3B5B12575F4A3F42411297C1ED6223C93ED155878920D8C7FA",
+      "bytes": 90698
+    },
+    {
+      "path": "RelicArena/assets/vfx/foguete_01/clash-of-eras-impacto-foguete01-game.zip",
+      "sha256": "21A14FDAB200EFD058F00B3A4AE038C987B3CC83F762163F54BC0F70D3BCDC16",
+      "bytes": 6024
+    },
+    {
+      "path": "RelicArena/assets/vfx/foguete_01/clash-of-eras-impacto-foguete01.gif",
+      "sha256": "5CAEF4E0CEE09D14BE676C92FAFB35256A9ECEC6B5891910C4850F6F2384BB38",
+      "bytes": 2069
+    },
+    {
+      "path": "RelicArena/assets/vfx/foguete_01/clash-of-eras-impacto-foguete01.json",
+      "sha256": "3A665F87C3751D0363BBF3BEDF8EE814A1F29A60005EF9E96083CF90A8AD5311",
+      "bytes": 4869
+    },
+    {
+      "path": "RelicArena/assets/vfx/foguete_01/clash-of-eras-impacto-foguete01.png",
+      "sha256": "87FDF3A2B7E8AADE44FE8F4E95841F10A6AAE3191CFC687ED606F1AE43F2CEE4",
+      "bytes": 2495
+    },
+    {
+      "path": "RelicArena/assets/vfx/foguete_01/review.json",
+      "sha256": "0A8A6655860118598A7F2852D80578E8ABA50F8F3860B7D2C9742B8D4D5AA78A",
+      "bytes": 7439
+    },
+    {
+      "path": "RelicArena/assets/vfx/foguete_01/game_pack/manifest.json",
+      "sha256": "8112167B5704C31D63818D260E0FA8E3A5E0603B787E9766D89C0D983C30AB00",
+      "bytes": 1061
+    },
+    {
+      "path": "RelicArena/assets/vfx/foguete_01/game_pack/part-fire_blast.png",
+      "sha256": "C981BA9271FA3ADE55A27F0205143A89F169FBB4C8AC6BB1DBFE3BC4DE7C4BA2",
+      "bytes": 2358
+    },
+    {
+      "path": "RelicArena/assets/vfx/foguete_01/game_pack/README.txt",
+      "sha256": "3030BB6C509E7759CD342FD0B98DD3968551C657DFD76C4E6886399F751D632C",
+      "bytes": 942
+    },
+    {
+      "path": "RelicArena/assets/vfx/foguete_01/game_pack/whole.png",
+      "sha256": "C981BA9271FA3ADE55A27F0205143A89F169FBB4C8AC6BB1DBFE3BC4DE7C4BA2",
+      "bytes": 2358
+    },
+    {
+      "path": "RelicArena/assets/vfx/foguete_02/ORIGEM.json",
+      "sha256": "A313C4A5355F734597F5C2B26F23B3EA9E441DA23048EEBD2615A5D606617DF4",
+      "bytes": 1561
+    },
+    {
+      "path": "RelicArena/assets/vfx/foguete_02/game_pack/manifest.json",
+      "sha256": "29F355E895BDA0362ABE906B50AC2E41B5E003735F10FD44B1454B058F02838C",
+      "bytes": 618
+    },
+    {
+      "path": "RelicArena/assets/vfx/foguete_02/game_pack/README.txt",
+      "sha256": "3030BB6C509E7759CD342FD0B98DD3968551C657DFD76C4E6886399F751D632C",
+      "bytes": 942
+    },
+    {
+      "path": "RelicArena/assets/vfx/foguete_02/game_pack/whole.png",
+      "sha256": "90FA26C1A0870CD992602EE0805CC5A8ED551BF008D01B758AE1E210201A5486",
+      "bytes": 2976
+    },
+    {
+      "path": "RelicArena/assets/vfx/foguete_02/original/clash-of-eras-foguete-elon-02-game.zip",
+      "sha256": "F0F207D85FA49AB86B25EA58FDA47F51BFCC679EBF2B0F4D17F14835FFF29DA5",
+      "bytes": 4114
+    },
+    {
+      "path": "RelicArena/assets/vfx/foguete_02/original/clash-of-eras-foguete-elon-02.gif",
+      "sha256": "156E8D0E679EE0CFA72C694895350D1BCD4A645AC7F20B30AED13D88E75BEDA3",
+      "bytes": 3389
+    },
+    {
+      "path": "RelicArena/assets/vfx/foguete_02/original/clash-of-eras-foguete-elon-02.json",
+      "sha256": "D05702CE4C29E8F3B27C564C8898552C75DCA70858C930941D6956C145CFFF01",
+      "bytes": 3473
+    },
+    {
+      "path": "RelicArena/assets/vfx/foguete_02/original/clash-of-eras-foguete-elon-02.png",
+      "sha256": "6B18ED8121E7FC85FC790D4DD0188AA50BA3F02EF4951EAE83748425EB1EF0A2",
+      "bytes": 3254
+    },
+    {
+      "path": "RelicArena/assets/vfx/fumaca_01/clash-of-eras-fumaca01-game.zip",
+      "sha256": "DE71BF96731BC8C47AC6AE33BDB0028D06A1047A2A03E6557C5CC8F84D4057EC",
+      "bytes": 3918
+    },
+    {
+      "path": "RelicArena/assets/vfx/fumaca_01/clash-of-eras-fumaca01.gif",
+      "sha256": "BC61CFAAC6BF27BCC065F25BA40DB1BF810CA7450EBA1EC4D1375132A253581E",
+      "bytes": 1733
+    },
+    {
+      "path": "RelicArena/assets/vfx/fumaca_01/clash-of-eras-fumaca01.json",
+      "sha256": "FA308686B45CC7B11FD56FDB5CC1D114474CA1B057FAF7E5D30E048C8BD6750C",
+      "bytes": 6489
+    },
+    {
+      "path": "RelicArena/assets/vfx/fumaca_01/clash-of-eras-fumaca01.png",
+      "sha256": "C2A9B57584D34147E1114C0A77ABF0A4A7DD8DAA9F9552CD430F1EDA294C4B8D",
+      "bytes": 1479
+    },
+    {
+      "path": "RelicArena/assets/vfx/fumaca_01/estado.json",
+      "sha256": "CB71868643E1D85B22184C8D868C1638EC946AD208CAE9C5AC4A8EB9282E9FB5",
+      "bytes": 1288
+    },
+    {
+      "path": "RelicArena/assets/vfx/fumaca_01/ORIGEM.json",
+      "sha256": "217F4522A06A522291053ECFD577B2876DE9EBD3D146C4A3761E78A95F5FB8D4",
+      "bytes": 9364
+    },
+    {
+      "path": "RelicArena/assets/vfx/fumaca_01/original/manifest.json",
+      "sha256": "6BBCB723A61CF66D46F41C4EC519F26B09292B56838B83D6AD499623D269E905",
+      "bytes": 1035
+    },
+    {
+      "path": "RelicArena/assets/vfx/fumaca_01/original/part-fumaca.png",
+      "sha256": "BE0930A9D03414B76158616F2EFCC7910C8E4EC8F147F362C6746D34F0330E1A",
+      "bytes": 1315
+    },
+    {
+      "path": "RelicArena/assets/vfx/fumaca_01/original/README.txt",
+      "sha256": "3030BB6C509E7759CD342FD0B98DD3968551C657DFD76C4E6886399F751D632C",
+      "bytes": 942
+    },
+    {
+      "path": "RelicArena/assets/vfx/fumaca_01/original/whole.png",
+      "sha256": "BE0930A9D03414B76158616F2EFCC7910C8E4EC8F147F362C6746D34F0330E1A",
+      "bytes": 1315
+    },
+    {
+      "path": "RelicArena/assets/vfx/fumaca_02/ORIGEM.json",
+      "sha256": "E20E6298D219E1027868167055945FA688FB22F278A40F0FE15586067FE4F459",
+      "bytes": 1600
+    },
+    {
+      "path": "RelicArena/assets/vfx/fumaca_02/game_pack/manifest.json",
+      "sha256": "B90A1ADC2CF5CE339B37EE04D565F6919967092D6A2C7018AE6591D001098561",
+      "bytes": 635
+    },
+    {
+      "path": "RelicArena/assets/vfx/fumaca_02/game_pack/README.txt",
+      "sha256": "3030BB6C509E7759CD342FD0B98DD3968551C657DFD76C4E6886399F751D632C",
+      "bytes": 942
+    },
+    {
+      "path": "RelicArena/assets/vfx/fumaca_02/game_pack/whole.png",
+      "sha256": "C76963ECFE9D112E891ED7ADE6E0C422BFE42B145D0B2129481C7291C4AC7A8C",
+      "bytes": 77517
+    },
+    {
+      "path": "RelicArena/assets/vfx/fumaca_02/original/clash-of-eras-nuvem-fumaca-snoop-02-game.zip",
+      "sha256": "E33180908F945F9BE5B4AE59BE2C2ED654C1BE667A456B1F84009B9B68015B0D",
+      "bytes": 78665
+    },
+    {
+      "path": "RelicArena/assets/vfx/fumaca_02/original/clash-of-eras-nuvem-fumaca-snoop-02.gif",
+      "sha256": "A5DBB044860542EE0B6561ED79780FE19A3DAC9F1B33ECD16648498A19698500",
+      "bytes": 48368
+    },
+    {
+      "path": "RelicArena/assets/vfx/fumaca_02/original/clash-of-eras-nuvem-fumaca-snoop-02.json",
+      "sha256": "452B1A2F8183BE0104494DFD984A6D42765C47C22D298CE252A19A0FA38FAFE4",
+      "bytes": 6810
+    },
+    {
+      "path": "RelicArena/assets/vfx/fumaca_02/original/clash-of-eras-nuvem-fumaca-snoop-02.png",
+      "sha256": "054672F7EE2CF4507390367069BE099933CB7FB640362C526C1A87932AF51A31",
+      "bytes": 80106
+    },
+    {
+      "path": "RelicArena/assets/vfx/laco_01/estado.json",
+      "sha256": "18B2A02181535F3974990DE3DB65E16D817D66611A09F2F3F90E0BFB047AD0BB",
+      "bytes": 1679
+    },
+    {
+      "path": "RelicArena/assets/vfx/laco_01/exportacao.json",
+      "sha256": "22BBE37098B4FC0356B5E3EC2B408C1D031EC50F6E947F4F2AB0E7D80DB0652D",
+      "bytes": 6049
+    },
+    {
+      "path": "RelicArena/assets/vfx/laco_01/recipe.json",
+      "sha256": "C10120B47CCED4E9996D645D4741C7F05417697F5C41889D05D76EB9F62FAA4E",
+      "bytes": 7375
+    },
+    {
+      "path": "RelicArena/assets/vfx/laco_01/game_pack/manifest.json",
+      "sha256": "9B89E0493389B04718077CD87B8E50ECDFFEA4DBEAD6AA926417C79486CB8806",
+      "bytes": 983
+    },
+    {
+      "path": "RelicArena/assets/vfx/laco_01/game_pack/part-laco.png",
+      "sha256": "A818BB7520C4224C15455419F33F78A03F77949CF8DBE690BCDAFCCE752C2113",
+      "bytes": 963
+    },
+    {
+      "path": "RelicArena/assets/vfx/laco_01/game_pack/README.txt",
+      "sha256": "3030BB6C509E7759CD342FD0B98DD3968551C657DFD76C4E6886399F751D632C",
+      "bytes": 942
+    },
+    {
+      "path": "RelicArena/assets/vfx/laco_01/game_pack/whole.png",
+      "sha256": "A818BB7520C4224C15455419F33F78A03F77949CF8DBE690BCDAFCCE752C2113",
+      "bytes": 963
+    },
+    {
+      "path": "RelicArena/assets/vfx/laco_01/original/clash-of-eras-laco01-game.zip",
+      "sha256": "9DB2A623B867AB01D167FDF6DB4FB84AFB3713C768FCFCF0553A974BE103A63C",
+      "bytes": 3196
+    },
+    {
+      "path": "RelicArena/assets/vfx/laco_01/original/clash-of-eras-laco01.gif",
+      "sha256": "647FF5D05505E2B830C7F87E9B096AAC0503C3F4030DE2B82801CE3453ACDD9D",
+      "bytes": 1107
+    },
+    {
+      "path": "RelicArena/assets/vfx/laco_01/original/clash-of-eras-laco01.json",
+      "sha256": "83773D490F60DA74666B11DB3631F02FF023CEF866F1977EA2E7E40ABE6D2A91",
+      "bytes": 4711
+    },
+    {
+      "path": "RelicArena/assets/vfx/laco_01/original/clash-of-eras-laco01.png",
+      "sha256": "D46D60A52BBB816E430E83776FB55E66C0B48BDB0BD4B694AA7A04B7BEB8A2F4",
+      "bytes": 1091
+    },
+    {
+      "path": "RelicArena/build/ClashOfEras.exe",
+      "sha256": "AB1824F85BFD8E0E4128182C000C4003A3E042245B2967848D089B2A04B22424",
+      "bytes": 180858888
+    },
+    {
+      "path": "RelicArena/build/ClashOfEras.pck",
+      "sha256": "ABD2420953A61A6E7D58CF44D7FCB396EED80EBBDD837FDF3CE8A09FBB23870B",
+      "bytes": 8451836
+    },
+    {
+      "path": "RelicArena/build/COMO_JOGAR.txt",
+      "sha256": "797ED97A3727C6A9E559D34E3312DF536FC9F25AA85DA8D165B1DE1866C19A6D",
+      "bytes": 1026
+    },
+    {
+      "path": "RelicArena/captures/combate.png",
+      "sha256": "B5CD9A986DCAE4DCE8B54D1E3B74CDF519CAEE4F3D53D40147D006EE13129C2E",
+      "bytes": 112274
+    },
+    {
+      "path": "RelicArena/captures/integridade_lote_03.json",
+      "sha256": "CA0865E9A6007C0E3C173C771CB8A3176695D97E366918E7FE334A44AD8A76E5",
+      "bytes": 130
+    },
+    {
+      "path": "RelicArena/captures/lote_03_direcoes.json",
+      "sha256": "697DD6E748F0B151AAE2AC3C8467E65773BD006351E7B0E47696F82BB68345E0",
+      "bytes": 22126
+    },
+    {
+      "path": "RelicArena/captures/lote_03_direcoes.png",
+      "sha256": "195F6454AE127B5903B46D20C5B8BC817AB396DBBDF962C2B54630E8D4D4CECE",
+      "bytes": 162514
+    },
+    {
+      "path": "RelicArena/captures/lote_03_elenco.png",
+      "sha256": "E0305E56647DEC8E67F60B342898D1DDE818D103DBC486F5C59C19D10699CB6A",
+      "bytes": 59311
+    },
+    {
+      "path": "RelicArena/captures/preparacao.png",
+      "sha256": "B82525731F33794C46ECC4887B224547150C8916566BD31AF2EECAA31861A493",
+      "bytes": 87592
+    },
+    {
+      "path": "RelicArena/captures/v1_1_beneficio.png",
+      "sha256": "67C8AFC358E4C33C6F2C0FEA3D8CAE8EEFCC4B37CF981CFD79034D077BCB2D47",
+      "bytes": 280143
+    },
+    {
+      "path": "RelicArena/captures/v1_1_combate.png",
+      "sha256": "D4A4CF13CD4F4A29C4FA64244EF0107507040FAE9D2D36E37989F65794626E33",
+      "bytes": 460113
+    },
+    {
+      "path": "RelicArena/captures/v1_1_itens.png",
+      "sha256": "337CDFEDA543A7ADFD0C20A4D09A5A69C3F381EAAC19E3640D6E9344334F50F4",
+      "bytes": 466931
+    },
+    {
+      "path": "RelicArena/captures/v1_1_menu.png",
+      "sha256": "C303176ABC751E1B7AF64F58393332327AFFF745D350C19E56B5152FF398E023",
+      "bytes": 253741
+    },
+    {
+      "path": "RelicArena/captures/v1_1_niveis_combate.png",
+      "sha256": "9F5497154F8F68146552B27F832EFF092CC19215A8FF6B8FAD1F027A2B481D58",
+      "bytes": 457643
+    },
+    {
+      "path": "RelicArena/captures/v1_1_niveis.png",
+      "sha256": "2FD9E8E5801BD5F3893B983915DFDAA638004E9BA1EC878147A6666AD811BF3A",
+      "bytes": 476227
+    },
+    {
+      "path": "RelicArena/captures/v1_1_preparacao.png",
+      "sha256": "C518D2CA055C814B8CE6ABC749DF7C403D53029D495BDF29DC5837184CD30EAF",
+      "bytes": 463443
+    },
+    {
+      "path": "RelicArena/captures/v1_1_resultado.png",
+      "sha256": "0D1516CC4CA6CF659AA361B38FC752B0AA4C7DFAE93F8F8999BAD5772A40EED6",
+      "bytes": 306897
+    },
+    {
+      "path": "RelicArena/captures/v1_1_variacoes.png",
+      "sha256": "D2200A975CD1110B6C83029C4203C0B9FB4989AAE86E1CD41575B587F338FD55",
+      "bytes": 62073
+    },
+    {
+      "path": "RelicArena/captures/v1_2_beneficio.json",
+      "sha256": "40FCF6DAC731F5D265570F814366766745B4AB3BAC02FEC5AFEA977A33FF1679",
+      "bytes": 890
+    },
+    {
+      "path": "RelicArena/captures/v1_2_beneficio.png",
+      "sha256": "0E09CF79EDA133380E6765BBBEDE2F5CEEC41C4871CD288EF5FBCF7E4CDA9710",
+      "bytes": 283913
+    },
+    {
+      "path": "RelicArena/captures/v1_2_capture_beneficio.err",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "RelicArena/captures/v1_2_capture_beneficio.log",
+      "sha256": "793E63536960B06E0C0150A647742BFD96BE34FE24F2DC167E25A31A30B81675",
+      "bytes": 498
+    },
+    {
+      "path": "RelicArena/captures/v1_2_capture_itens.err",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "RelicArena/captures/v1_2_capture_itens.log",
+      "sha256": "84BAF138B1CEAD90E56B836DD8DB85ADEC7CAD3571DFDF55EC306E9E423A97F4",
+      "bytes": 545
+    },
+    {
+      "path": "RelicArena/captures/v1_2_capture_lote03combate.err",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "RelicArena/captures/v1_2_capture_lote03combate.log",
+      "sha256": "B1655512A1D42D0E4169F6FD637CC4624B41D6A07521E6F22A18DB8FA1C6F487",
+      "bytes": 600
+    },
+    {
+      "path": "RelicArena/captures/v1_2_capture_lote03resultado.err",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "RelicArena/captures/v1_2_capture_lote03resultado.log",
+      "sha256": "8117ACB433D7B632F63ADB0BDB26FBDC1E644B4B0579332C6F6288628CBDF065",
+      "bytes": 654
+    },
+    {
+      "path": "RelicArena/captures/v1_2_capture_menu.err",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "RelicArena/captures/v1_2_capture_menu.log",
+      "sha256": "0CDEB95616CF41C861B7E891EABF2C2E2AD7ABA8C5317A06828E7CF9BCCCDC69",
+      "bytes": 446
+    },
+    {
+      "path": "RelicArena/captures/v1_2_capture_preparacao.err",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "RelicArena/captures/v1_2_capture_preparacao.log",
+      "sha256": "74F404A63EED0744A9B72E2DE31ABC7D70702C99E376B7D524F1D32DFD8DB271",
+      "bytes": 550
+    },
+    {
+      "path": "RelicArena/captures/v1_2_itens.json",
+      "sha256": "AA91099C937AC57EA9803B7EC3AE497A0190A45B97620444DF0301B3176BB380",
+      "bytes": 894
+    },
+    {
+      "path": "RelicArena/captures/v1_2_itens.png",
+      "sha256": "D49AE803A43667A214042EFE8D18EB32A6525D358078B662FE60D1704C8D0571",
+      "bytes": 481363
+    },
+    {
+      "path": "RelicArena/captures/v1_2_lote03_combate.json",
+      "sha256": "37AE015D19EC75D1A997D59EE145D4793A2E297AD0FAC214AB33199E6891BD83",
+      "bytes": 1309
+    },
+    {
+      "path": "RelicArena/captures/v1_2_lote03_combate.png",
+      "sha256": "8D0B0DC367AFF2C65790FE18FE506360702D390C813EF288FC11DD0CEF199BC9",
+      "bytes": 494639
+    },
+    {
+      "path": "RelicArena/captures/v1_2_lote03_resultado_antes_Ken.png",
+      "sha256": "E7C155EAB86C6EEEC0F760E804CF82BBD46A537CC05A4DB2D0BE39D08D78F950",
+      "bytes": 321993
+    },
+    {
+      "path": "RelicArena/captures/v1_2_lote03_resultado.json",
+      "sha256": "692B866244091E683737C782B6BE0309AD9E571CD006D27CDBCC6017FE39A683",
+      "bytes": 925
+    },
+    {
+      "path": "RelicArena/captures/v1_2_lote03_resultado.png",
+      "sha256": "AF2A810B1847E517814578BC95A3377DD44D032340B6B9CB29FFA8CDCC36D361",
+      "bytes": 322863
+    },
+    {
+      "path": "RelicArena/captures/v1_2_menu.json",
+      "sha256": "0264936AE8F54F6FE0DFDBBBDEFB1D9ED23ED235E889B6388F4A023499B6AD19",
+      "bytes": 887
+    },
+    {
+      "path": "RelicArena/captures/v1_2_menu.png",
+      "sha256": "299D0B0343C3A19EE1047C505955189E55ADE63BB3ECB91893C26B92DBE98168",
+      "bytes": 261243
+    },
+    {
+      "path": "RelicArena/captures/v1_2_partidas_final.log",
+      "sha256": "A1AA56EB7C9866260AC842EA6805F4AC0EFF63879AFB14F6EA901186B6B2C6A2",
+      "bytes": 348
+    },
+    {
+      "path": "RelicArena/captures/v1_2_preparacao.json",
+      "sha256": "AA91099C937AC57EA9803B7EC3AE497A0190A45B97620444DF0301B3176BB380",
+      "bytes": 894
+    },
+    {
+      "path": "RelicArena/captures/v1_2_preparacao.png",
+      "sha256": "0F071E81E660B9F987A8B248FC98BA72E13DB7335B92CDBA535BBB7B18F63EE7",
+      "bytes": 478647
+    },
+    {
+      "path": "RelicArena/captures/v1_2_session_final.log",
+      "sha256": "EC52793289E7F12DF9484AF8F6A82B2F023353ED6A941065D9808AA0F139DC4B",
+      "bytes": 118
+    },
+    {
+      "path": "RelicArena/captures/v1_2_simulacao_final.log",
+      "sha256": "86F84071FC19D340DD06C1EE79A0B41CC5212FAF054188D7196AF155825971AC",
+      "bytes": 115
+    },
+    {
+      "path": "RelicArena/captures/v1_2_smoke_headless.log",
+      "sha256": "9A2EF52CC4F0864A0565C496A87581E307FCAABBF6E5FEC558AE54AD49943F77",
+      "bytes": 1432
+    },
+    {
+      "path": "RelicArena/captures/v1_2_smoke_opengl.err",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "RelicArena/captures/v1_2_smoke_opengl.log",
+      "sha256": "54801FC532C8F642691AEC0EAC014BC29662BBB87CA7AEF97A4B066F4F8EBF21",
+      "bytes": 1565
+    },
+    {
+      "path": "RelicArena/captures/v1_3_capture_foguete.err",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "RelicArena/captures/v1_3_capture_foguete.log",
+      "sha256": "2ED6E451659116F294FD11B75D9FA389CC37FC5F4214EE69D99130E012BA143F",
+      "bytes": 623
+    },
+    {
+      "path": "RelicArena/captures/v1_3_capture_vfx.err",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "RelicArena/captures/v1_3_capture_vfx.log",
+      "sha256": "01E2BA6760968112C41C0CCAA970B6F21D2DE3B7DFB3E4A4F26E722E96B65A38",
+      "bytes": 615
+    },
+    {
+      "path": "RelicArena/captures/v1_3_full_matches.err",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "RelicArena/captures/v1_3_full_matches.log",
+      "sha256": "A1AA56EB7C9866260AC842EA6805F4AC0EFF63879AFB14F6EA901186B6B2C6A2",
+      "bytes": 348
+    },
+    {
+      "path": "RelicArena/captures/v1_3_import_final.log",
+      "sha256": "E970B3DDB734FC8A8D4F5AA139093068174D15641FFB213A8F1EC47BADA6100B",
+      "bytes": 1366
+    },
+    {
+      "path": "RelicArena/captures/v1_3_import.log",
+      "sha256": "D9F3209FEFB7C5462E9157A78FEEE64ABB887F0C67EFEF08499CE162A4500063",
+      "bytes": 1758
+    },
+    {
+      "path": "RelicArena/captures/v1_3_regras_preservadas.json",
+      "sha256": "7899C0411E0B2A0144BCA2B1553C3C8527085989A8DB07AE10DB022CC80C3513",
+      "bytes": 8037
+    },
+    {
+      "path": "RelicArena/captures/v1_3_session.err",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "RelicArena/captures/v1_3_session.log",
+      "sha256": "EC52793289E7F12DF9484AF8F6A82B2F023353ED6A941065D9808AA0F139DC4B",
+      "bytes": 118
+    },
+    {
+      "path": "RelicArena/captures/v1_3_simulation.err",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "RelicArena/captures/v1_3_simulation.log",
+      "sha256": "86F84071FC19D340DD06C1EE79A0B41CC5212FAF054188D7196AF155825971AC",
+      "bytes": 115
+    },
+    {
+      "path": "RelicArena/captures/v1_3_smoke_headless.log",
+      "sha256": "674729056315A1C15F19FA386A804941C751A75EF3E912A8DAC4D980F22E5AFE",
+      "bytes": 1450
+    },
+    {
+      "path": "RelicArena/captures/v1_3_smoke_opengl.err",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "RelicArena/captures/v1_3_smoke_opengl.log",
+      "sha256": "7DA09EBE4FCC430A6A6AE30C234C3C37A8B81EBECDEF7F884165C32DA0E8BB2B",
+      "bytes": 1583
+    },
+    {
+      "path": "RelicArena/captures/v1_3_vfx_combate_foguete.json",
+      "sha256": "917EEE8C8C50E33A3615EA3530D9BD67486501813A46DC2441BA2C75753D14C0",
+      "bytes": 1706
+    },
+    {
+      "path": "RelicArena/captures/v1_3_vfx_combate_foguete.png",
+      "sha256": "C233D1A0D3A0046FFB4A6A1E121E66C5C4B6E7A29894A46237A8A7F2608639DA",
+      "bytes": 460583
+    },
+    {
+      "path": "RelicArena/captures/v1_3_vfx_combate.json",
+      "sha256": "01F77E62901DAE07152E6C26958866C1A3D82FC6C8FFC08485428836A63B96D2",
+      "bytes": 1832
+    },
+    {
+      "path": "RelicArena/captures/v1_3_vfx_combate.png",
+      "sha256": "29B8780B100A8463AC64F8EFE99E42B6F851044515661F8DB7798BDDEDA5AC3E",
+      "bytes": 465874
+    },
+    {
+      "path": "RelicArena/captures/v1_3_vfx_import.log",
+      "sha256": "0F04B78E947D9146D5A8BE67A465D6B6A7D5C5E10F23C662E25D13A6C5591444",
+      "bytes": 6724
+    },
+    {
+      "path": "RelicArena/captures/v1_3_vfx_library.log",
+      "sha256": "7D0A3BC7BF8B6326682112314B2D516E45AD67122EA59A0CCE22A683C76A029B",
+      "bytes": 115
+    },
+    {
+      "path": "RelicArena/captures/v1_4_bug017_capture_parse.log",
+      "sha256": "83CF0B082206AF2AA236C83064FBCFA76BE1E00A4AA3558574B2F65965D9481C",
+      "bytes": 75
+    },
+    {
+      "path": "RelicArena/captures/v1_4_bug017_repro_antes.json",
+      "sha256": "97C63C5D3EAC9220B77DBBD0AAF44CB2D06022DEA22C831FE0EDF35E7451A7BA",
+      "bytes": 2674
+    },
+    {
+      "path": "RelicArena/captures/v1_4_bug017_repro_antes.log",
+      "sha256": "6222D8B59F6738CB179BE6895D84CBBA121E98BDDA2C7C08982DF555A9FB9400",
+      "bytes": 760
+    },
+    {
+      "path": "RelicArena/captures/v1_4_bug017_repro_depois.json",
+      "sha256": "12CA35159F4F92331B0926A6896D9CE94E2444AB96579BB310D2DFB61EE79C65",
+      "bytes": 2484
+    },
+    {
+      "path": "RelicArena/captures/v1_4_bug017_repro_depois.log",
+      "sha256": "4959B7BE4B0CB18CA663FCFC410107B02DCEDE003E3B33EA1473499A9F30B047",
+      "bytes": 755
+    },
+    {
+      "path": "RelicArena/captures/v1_4_bug017_smoke_parse.log",
+      "sha256": "83CF0B082206AF2AA236C83064FBCFA76BE1E00A4AA3558574B2F65965D9481C",
+      "bytes": 75
+    },
+    {
+      "path": "RelicArena/captures/v1_4_capture_parse.log",
+      "sha256": "83CF0B082206AF2AA236C83064FBCFA76BE1E00A4AA3558574B2F65965D9481C",
+      "bytes": 75
+    },
+    {
+      "path": "RelicArena/captures/v1_4_capture_preparation.err",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "RelicArena/captures/v1_4_capture_preparation.log",
+      "sha256": "1BC443F14B3691F6437221A49E896AFDA77D933060681AD772FA46D0FDA13C06",
+      "bytes": 576
+    },
+    {
+      "path": "RelicArena/captures/v1_4_capture_support.err",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "RelicArena/captures/v1_4_capture_support.log",
+      "sha256": "0D3C5B5FA31D1C502889A65907D4D8EBD65525B543FB265B7860C20E4991DC92",
+      "bytes": 619
+    },
+    {
+      "path": "RelicArena/captures/v1_4_compendio_herois.json",
+      "sha256": "C9F6CF10CC920FA79B027FEDCE52CD9F8B0B0F54C9750292D9B3499DEB502C04",
+      "bytes": 1001
+    },
+    {
+      "path": "RelicArena/captures/v1_4_compendio_herois.png",
+      "sha256": "7C509EBD2C335B6813BE281D654F9743A350923195A1C7E28704FFE27C42E62A",
+      "bytes": 201695
+    },
+    {
+      "path": "RelicArena/captures/v1_4_configuracoes.json",
+      "sha256": "C9F6CF10CC920FA79B027FEDCE52CD9F8B0B0F54C9750292D9B3499DEB502C04",
+      "bytes": 1001
+    },
+    {
+      "path": "RelicArena/captures/v1_4_configuracoes.png",
+      "sha256": "487E0718EA294505EF10D885D501FF4AE91B361D0A3EFD4E327F7016A2E9CC84",
+      "bytes": 187749
+    },
+    {
+      "path": "RelicArena/captures/v1_4_final_operations.json",
+      "sha256": "6362686E9E6E8F0DC962A007300A42BF56B7D122948EE2F1ADF05CFA883AB6DE",
+      "bytes": 638
+    },
+    {
+      "path": "RelicArena/captures/v1_4_full_matches.err",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "RelicArena/captures/v1_4_full_matches.log",
+      "sha256": "A1AA56EB7C9866260AC842EA6805F4AC0EFF63879AFB14F6EA901186B6B2C6A2",
+      "bytes": 348
+    },
+    {
+      "path": "RelicArena/captures/v1_4_import_final.err",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "RelicArena/captures/v1_4_import_final.log",
+      "sha256": "B9473818B7692F48778DF2E5E30A2053341A47DDFB69E12E030B1DEA51AD2022",
+      "bytes": 2913
+    },
+    {
+      "path": "RelicArena/captures/v1_4_import_inicial.log",
+      "sha256": "A8AA65CDA038677604912E77874C9048DBC79C7EB4A7D0221C9B3E7628E13F36",
+      "bytes": 3960
+    },
+    {
+      "path": "RelicArena/captures/v1_4_menu.json",
+      "sha256": "C9F6CF10CC920FA79B027FEDCE52CD9F8B0B0F54C9750292D9B3499DEB502C04",
+      "bytes": 1001
+    },
+    {
+      "path": "RelicArena/captures/v1_4_menu.png",
+      "sha256": "80FBD6E3C8E3FAC2F12C03EE325E6E744A2B648A2F35403EF12462A4F9602713",
+      "bytes": 199769
+    },
+    {
+      "path": "RelicArena/captures/v1_4_regras_preservadas.json",
+      "sha256": "A490E6D866529DDD6BCF12938A589DA48CF9AB547D51AAE3D916D0D88D28B9F0",
+      "bytes": 5079
+    },
+    {
+      "path": "RelicArena/captures/v1_4_runners.json",
+      "sha256": "6B0A63A4795F0B6C94E4470F92AC67B1689D1E4559B23C7FCE6805213F817C4B",
+      "bytes": 1610
+    },
+    {
+      "path": "RelicArena/captures/v1_4_session.err",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "RelicArena/captures/v1_4_session.log",
+      "sha256": "EC52793289E7F12DF9484AF8F6A82B2F023353ED6A941065D9808AA0F139DC4B",
+      "bytes": 118
+    },
+    {
+      "path": "RelicArena/captures/v1_4_simulation.err",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "RelicArena/captures/v1_4_simulation.log",
+      "sha256": "86F84071FC19D340DD06C1EE79A0B41CC5212FAF054188D7196AF155825971AC",
+      "bytes": 115
+    },
+    {
+      "path": "RelicArena/captures/v1_4_smoke_headless_inicial.log",
+      "sha256": "D799317176B3B1245EBAB1F2EB5CB61C54AC0C0B73A1806512032915C7A25B09",
+      "bytes": 1450
+    },
+    {
+      "path": "RelicArena/captures/v1_4_smoke_headless.err",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "RelicArena/captures/v1_4_smoke_headless.log",
+      "sha256": "B110705304D076CA526E77593E30967020FD1E5DE163302698508E8B7CC96F54",
+      "bytes": 1450
+    },
+    {
+      "path": "RelicArena/captures/v1_4_smoke_opengl_inicial.log",
+      "sha256": "1E58E077EAA15CF323432A1803ABBCE538153760F75A48AEE9E838938D8ED7F6",
+      "bytes": 1583
+    },
+    {
+      "path": "RelicArena/captures/v1_4_smoke_opengl.err",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "RelicArena/captures/v1_4_smoke_opengl.log",
+      "sha256": "BBC2AC5264F37974A62505455F038AE3395338C7DD6EF5C63F8A9D7AFE94B526",
+      "bytes": 1583
+    },
+    {
+      "path": "RelicArena/captures/v1_4_smoke_parse.log",
+      "sha256": "83CF0B082206AF2AA236C83064FBCFA76BE1E00A4AA3558574B2F65965D9481C",
+      "bytes": 75
+    },
+    {
+      "path": "RelicArena/captures/v1_4_support_combate_antes_alinhar_fio.json",
+      "sha256": "10B2539AC0258178D5861751582B33B22449853CE63B6F7BAC19AC9343B7C8AB",
+      "bytes": 1883
+    },
+    {
+      "path": "RelicArena/captures/v1_4_support_combate_antes_alinhar_fio.png",
+      "sha256": "CC079C9CEDBEFFBAF0BD9A3AFEE8FC5B0F2776FD69900EF2725578DD95E10442",
+      "bytes": 490137
+    },
+    {
+      "path": "RelicArena/captures/v1_4_support_combate.json",
+      "sha256": "633A2FAB1E2652A58B2279C6C169923A41D2E902BAD50C7D409E983D97ACDFE6",
+      "bytes": 2127
+    },
+    {
+      "path": "RelicArena/captures/v1_4_support_combate.png",
+      "sha256": "9550CE52173380A925B03EAAC8472AC3B31D424F6C18E9D7206069AD35576C56",
+      "bytes": 489929
+    },
+    {
+      "path": "RelicArena/captures/v1_4_support_preparacao.json",
+      "sha256": "A7365CE74CCF74EE5711A1D906A6B723279DFB3FC751A8E5AB718FFEE0B6F262",
+      "bytes": 1008
+    },
+    {
+      "path": "RelicArena/captures/v1_4_support_preparacao.png",
+      "sha256": "89B8AF66DEBB36A3586F2A053DE96E0B09281F4A841FC29BA74772DAD3EDE367",
+      "bytes": 492366
+    },
+    {
+      "path": "RelicArena/captures/v1_4_vfx_library.err",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "RelicArena/captures/v1_4_vfx_library.log",
+      "sha256": "5D1C84181618ACE4AFF36F401C7CCA87B980F009DEEF6ECE57DA878FF5264683",
+      "bytes": 115
+    },
+    {
+      "path": "RelicArena/captures/v1_5_arrastar_heroi.png",
+      "sha256": "B0B33FE227645FCAFD78C7CACFFDB7359F51A816DEE2B3EBCFFCAD3A6FEBD597",
+      "bytes": 480101
+    },
+    {
+      "path": "RelicArena/captures/v1_5_arrastar_item.png",
+      "sha256": "0DEDE025D524EDEA6A8BF788A0D66D6AC31797C0CB035D59762DFCDD76BF0069",
+      "bytes": 459057
+    },
+    {
+      "path": "RelicArena/captures/v1_beneficio.png",
+      "sha256": "3CA2AD1B86F9B38EC28C221650D70D1C54B7D11941DC39EDF3FAFCAFA5D017BB",
+      "bytes": 112281
+    },
+    {
+      "path": "RelicArena/captures/v1_bolsa.png",
+      "sha256": "D6BBF8B7EABF03595F165C7FAE81974C8B90CBAD7E6054AF96C26DCBF3ACA259",
+      "bytes": 115782
+    },
+    {
+      "path": "RelicArena/captures/v1_combate.png",
+      "sha256": "FD9FE45AB6357419E121891B3F9372531ABC8F8007BCFD8AE512CB11334F23DF",
+      "bytes": 134035
+    },
+    {
+      "path": "RelicArena/captures/v1_menu.png",
+      "sha256": "83CA6B15108B63F52690D10A81D2FA2BACD4515D9F740CD2C58084A0EA9F1F69",
+      "bytes": 115379
+    },
+    {
+      "path": "RelicArena/captures/v1_play.log",
+      "sha256": "374B7303B2074A57F34A9CD8AFFEFA8AA518AD43FBB75A5FFF13F3046139BBDD",
+      "bytes": 804
+    },
+    {
+      "path": "RelicArena/captures/v1_preparacao.png",
+      "sha256": "C927F5570291719698501E4E165AD0152E36D6A5AB3F9891C16C18425252A237",
+      "bytes": 121377
+    },
+    {
+      "path": "RelicArena/captures/v1_resultado.png",
+      "sha256": "5038E41639C39E7BC9A0C0885E29FEDD32B6C59C5312F7FAC8F029D06D887739",
+      "bytes": 118138
+    },
+    {
+      "path": "RelicArena/client/board_projection.gd",
+      "sha256": "71C4C152BBC59E6E3D2892D11096500D5B00FE23C0D86204091D7CE210FF155D",
+      "bytes": 4489
+    },
+    {
+      "path": "RelicArena/client/board_projection.gd.uid",
+      "sha256": "72270573E9F7055F57AA8B314257ED27B7407ABF74C5A62F12A44FD9AE1A47C1",
+      "bytes": 20
+    },
+    {
+      "path": "RelicArena/client/character_visuals.gd",
+      "sha256": "7F2B42CCAE65542D88EB82BE09ABAE20F34D33A697304EC2743FB3BFF60FF028",
+      "bytes": 9659
+    },
+    {
+      "path": "RelicArena/client/character_visuals.gd.uid",
+      "sha256": "1D413388583EB94710B0C83B823CEC0C39D20E6600BB916B44C6B57F325E7B0A",
+      "bytes": 19
+    },
+    {
+      "path": "RelicArena/client/drag_controller.gd",
+      "sha256": "7E17299F4551D545F5BB274DA0AB6664FD415151F9A8EBF5A1543CABC9FD86BB",
+      "bytes": 14607
+    },
+    {
+      "path": "RelicArena/client/drag_controller.gd.uid",
+      "sha256": "AE433D6235745D53AAAB1DECD37B80C81C12998B8039CEFD0B18B60952B12094",
+      "bytes": 20
+    },
+    {
+      "path": "RelicArena/client/main.gd",
+      "sha256": "2D348A49B71B12A6E81AD796B96243378F998735A37F4AA08E2FE9F20D1F4471",
+      "bytes": 127950
+    },
+    {
+      "path": "RelicArena/client/main.gd.uid",
+      "sha256": "5C96609661394CAB0E3AB75BEF3C341F98AC45FA8F8097F5D71B31BF90278853",
+      "bytes": 19
+    },
+    {
+      "path": "RelicArena/client/pixel_scale.gdshader",
+      "sha256": "DB00D12EC1ACFA180F27F727A2B9E4266AF2419EE93F696E49ECB9EC4864BE62",
+      "bytes": 656
+    },
+    {
+      "path": "RelicArena/client/pixel_scale.gdshader.uid",
+      "sha256": "F7A0AF8ED647C77B7115B22498EB9CC03F2798CF3F9B63354D3DA17027504228",
+      "bytes": 20
+    },
+    {
+      "path": "RelicArena/client/prototype_audio.gd",
+      "sha256": "C63B5048BE1F357A977946256102A82C49D2807DA268ADD1D59021F8F9D2A6DC",
+      "bytes": 1876
+    },
+    {
+      "path": "RelicArena/client/prototype_audio.gd.uid",
+      "sha256": "583791BA74DEB06A13EB23F2CA326BBE3CB7DD2FF83740650BDFC48C547DB429",
+      "bytes": 19
+    },
+    {
+      "path": "RelicArena/client/smoke.gd",
+      "sha256": "5264E5F76F327A712C6274AF1E02B68DAACF597080515F31AB49A71DB70FC705",
+      "bytes": 44770
+    },
+    {
+      "path": "RelicArena/client/smoke.gd.uid",
+      "sha256": "A927B146E4356DD471F0E06C3450C227B16C1BCE8849FB66AB60EFE92DE11444",
+      "bytes": 20
+    },
+    {
+      "path": "RelicArena/client/ui_kit.gd",
+      "sha256": "93D1A57A03BB2156D9D1F982D9B2B766446C43B7DE59E673014667B59D7C0891",
+      "bytes": 4512
+    },
+    {
+      "path": "RelicArena/client/ui_kit.gd.uid",
+      "sha256": "95004126E5955DAEE5B7C68CE3EE441B5C7345C0063F643218E4924EB2862093",
+      "bytes": 20
+    },
+    {
+      "path": "RelicArena/client/vfx_library.gd",
+      "sha256": "DC3F9C7EE7FDCF9823E89460493B75BE0E427B5B91B1DCEB6F05EEC33548DF63",
+      "bytes": 4608
+    },
+    {
+      "path": "RelicArena/client/vfx_library.gd.uid",
+      "sha256": "B0BB80F24E1C8F169660267179686DB79AF9275630AA60C7F028902D93CACAFB",
+      "bytes": 20
+    },
+    {
+      "path": "RelicArena/data/character_catalog.gd",
+      "sha256": "BE0490F89454AEB22AA2D7576BCD7DFCDD6B9C07192C6B8A8FCF453358606A87",
+      "bytes": 2404
+    },
+    {
+      "path": "RelicArena/data/character_catalog.gd.uid",
+      "sha256": "EBC769A11C85731140FCAD85295B8C202C0385FAE949500B9C2FD9F14BBA092E",
+      "bytes": 19
+    },
+    {
+      "path": "RelicArena/data/debug_characters.json",
+      "sha256": "E9ECC9284910E476212361D9B1B7A18E144D8D6ECEEEA8B28A7CBFA6CE024C39",
+      "bytes": 6932
+    },
+    {
+      "path": "RelicArena/data/item_catalog.gd",
+      "sha256": "D805D3924F6B4F67F725ADBCD1DBD8B56085CC7B1C8AF090CA77B730A25CA85F",
+      "bytes": 2358
+    },
+    {
+      "path": "RelicArena/data/item_catalog.gd.uid",
+      "sha256": "E0E13DE91A762EDEA2B7FD219FDDC6C04766300CC710FD582DF85D7852487F49",
+      "bytes": 19
+    },
+    {
+      "path": "RelicArena/data/unit_spec.gd",
+      "sha256": "1FE84766BA64BF80A433CEF5141FCDA898BFADC72673FE1B5E5C1B5EA9A0D858",
+      "bytes": 6423
+    },
+    {
+      "path": "RelicArena/data/unit_spec.gd.uid",
+      "sha256": "1A3F7B0217B7FFB20AA8AF6C748B76E52EBF80CC8CBD3D47BFEB38F7B262023F",
+      "bytes": 20
+    },
+    {
+      "path": "RelicArena/simulation/arena_simulation.gd",
+      "sha256": "613C6864CD9CEC1A775D4F26D612BCB10804E5912C2FD12BAB2C2A3E0175E48E",
+      "bytes": 43702
+    },
+    {
+      "path": "RelicArena/simulation/arena_simulation.gd.uid",
+      "sha256": "FB1B6BC5BF50E1B191E36AD2E988C26FACE8D6958B9F5E1AC02F301EA0D7D496",
+      "bytes": 20
+    },
+    {
+      "path": "RelicArena/simulation/ball_projectile.gd",
+      "sha256": "96BAFF92B9FED02D82216DAF997963EBBC6F67FB87FAE237F96664BEBE5F3583",
+      "bytes": 1031
+    },
+    {
+      "path": "RelicArena/simulation/ball_projectile.gd.uid",
+      "sha256": "0FF946BC915B9222E362949A0CFCB1AE4B273E2CAA0F7310A016AEC1470FF2DE",
+      "bytes": 20
+    },
+    {
+      "path": "RelicArena/simulation/hex_grid.gd",
+      "sha256": "3C724AA0829BB284279F074136E9B8F4574B4EE2CBDE600CB61A28BF190B069E",
+      "bytes": 2272
+    },
+    {
+      "path": "RelicArena/simulation/hex_grid.gd.uid",
+      "sha256": "FEE285082A6DEFB5231D59211047FA22EE70D84E0498AA9CEADEB413D467B16E",
+      "bytes": 20
+    },
+    {
+      "path": "RelicArena/simulation/match_session.gd",
+      "sha256": "A7FDC19A2C75EF7F1AC3D2523970C700629B1E5C9BE62EE73B1E0FB68839CA43",
+      "bytes": 24820
+    },
+    {
+      "path": "RelicArena/simulation/match_session.gd.uid",
+      "sha256": "A9CE974ADE4256BF3F31CE47667569629BB0C394AF49DBAF88DEAC8763716C63",
+      "bytes": 20
+    },
+    {
+      "path": "RelicArena/simulation/README.md",
+      "sha256": "002BABD416FFF4961F2DB1CA007E1F1CD6D612871050B9F9CADB8E8946D3FAF9",
+      "bytes": 15918
+    },
+    {
+      "path": "RelicArena/simulation/unit_state.gd",
+      "sha256": "3AF3835E2C6D1B56E7DEE17CCC4E046CEC4EF62BC9600E1B520F3968EA9619A7",
+      "bytes": 5937
+    },
+    {
+      "path": "RelicArena/simulation/unit_state.gd.uid",
+      "sha256": "0ADB33A1C888B26CB6D17A99896BD6348BE89006D94A9DAEC2EB4882DF753E33",
+      "bytes": 20
+    },
+    {
+      "path": "RelicArena/tests/test_drag_and_drop.gd",
+      "sha256": "AD7474FDE42FA15030B55D28C048B01C4227E9E93BE67C5D04C2BB21EA22D982",
+      "bytes": 8222
+    },
+    {
+      "path": "RelicArena/tests/test_drag_and_drop.gd.uid",
+      "sha256": "4B825B1015376A6A04FACD32AD015FC887A5118FDD6B7BF95B9F2C3E4621EEDA",
+      "bytes": 19
+    },
+    {
+      "path": "RelicArena/tests/test_full_matches.gd",
+      "sha256": "BFC25D652AD38EC08786D6BDC9D8AEF9E01E83706A36ED17D39877567A6CD466",
+      "bytes": 4331
+    },
+    {
+      "path": "RelicArena/tests/test_full_matches.gd.uid",
+      "sha256": "1F785F46B9C4EB16FEC1BBA5B09DC9C359B075175EBCE4024431238EBE3D8F11",
+      "bytes": 20
+    },
+    {
+      "path": "RelicArena/tests/test_lobby_ui.gd",
+      "sha256": "09B21459A3AF23551B5D7D4A3B7E34D75C6CFD02BC239D64BFB4B4D16053D473",
+      "bytes": 5051
+    },
+    {
+      "path": "RelicArena/tests/test_lobby_ui.gd.uid",
+      "sha256": "260B72AFF23CE47209E5765ADFBB00865ADB427397976AD73F9688A4608E6BFB",
+      "bytes": 19
+    },
+    {
+      "path": "RelicArena/tests/test_match_session.gd",
+      "sha256": "C7602C34AC5E63162E444C10FD86AFB1C8F8369CF1E67642A5EEF4699B707906",
+      "bytes": 22320
+    },
+    {
+      "path": "RelicArena/tests/test_match_session.gd.uid",
+      "sha256": "F889BB20E4967FB46D6F089A69FA83349B04066F59A5C5BCED3E190429A5BF94",
+      "bytes": 20
+    },
+    {
+      "path": "RelicArena/tests/test_review_contracts.gd",
+      "sha256": "D3551857B1C829B953BEED6A72FDC8A40FF903D8EAF014A82571A6EA13FC94D8",
+      "bytes": 2878
+    },
+    {
+      "path": "RelicArena/tests/test_simulation.gd",
+      "sha256": "6B220E4B3BB7EAB5CD3E6B5451E692988A5FB9A60189F1E439127059C3DDAB89",
+      "bytes": 56378
+    },
+    {
+      "path": "RelicArena/tests/test_simulation.gd.uid",
+      "sha256": "3D1929453A79B75462D94E961934DD6D8BF3FE079E127808C99E8208474A06E7",
+      "bytes": 19
+    },
+    {
+      "path": "RelicArena/tests/test_vfx_library.gd",
+      "sha256": "A7333F1205477CD8867761BE5D677BDC4D130709D7DDE6BE1E41AF02DB9EF1EC",
+      "bytes": 6688
+    },
+    {
+      "path": "RelicArena/tests/test_vfx_library.gd.uid",
+      "sha256": "3C9875A490A61BB1A7649D942B25D3A38DCF6955FB2DC377950E74C8325A2FDB",
+      "bytes": 20
+    },
+    {
+      "path": "RelicArena/tools/capture_art_batch.gd",
+      "sha256": "6A63C3E69BDE283BD5A8E6FAC033EEF2AEFC1BE6E24D10F3AA89AF367C391D67",
+      "bytes": 3762
+    },
+    {
+      "path": "RelicArena/tools/capture_art_batch.gd.uid",
+      "sha256": "2D068116844943A49D7A62B32A6FF71AF7084F46A5E78B0CE4A330C64F6FB7F1",
+      "bytes": 19
+    },
+    {
+      "path": "RelicArena/tools/capture_drag.gd",
+      "sha256": "3C03DD110A1ED3358B16E1C9AC8C929A6F903CF88A4AC860E1015B6D11E2403B",
+      "bytes": 2461
+    },
+    {
+      "path": "RelicArena/tools/capture_drag.gd.uid",
+      "sha256": "1B3FEDFFB42E4B18C7C484F256FDD24593DF6849042D0778DD4CF03A7F66611F",
+      "bytes": 18
+    },
+    {
+      "path": "RelicArena/tools/capture_preview.gd",
+      "sha256": "E44F20CA9977BDD0833EFC1E57F02AE1259882602E091141538A210E677BA852",
+      "bytes": 11156
+    },
+    {
+      "path": "RelicArena/tools/capture_preview.gd.uid",
+      "sha256": "F4E17A9DF41CD452A0B0CC4A99E5CDA5D62B40E2DD2160D6DA8C06C61B850890",
+      "bytes": 20
+    },
+    {
+      "path": "RelicArena/tools/capture_roster.gd",
+      "sha256": "1F3D3DA9B3A098EEAABB2926EF35AD90BB9871B9F83BE811124F3C811E54A88A",
+      "bytes": 3708
+    },
+    {
+      "path": "RelicArena/tools/capture_roster.gd.uid",
+      "sha256": "98A474C1F0F38B8D98B91AF71515F3BF226A9622BC915F928145A5E78963E52E",
+      "bytes": 20
+    },
+    {
+      "path": "RelicArena/tools/capture_variations.gd",
+      "sha256": "B8763864624CC4D61A1689A4B821834C8FCE87427F4440F43B10708C435AC37E",
+      "bytes": 2355
+    },
+    {
+      "path": "RelicArena/tools/capture_variations.gd.uid",
+      "sha256": "6D944435F0A49B6FFF00113C6FE773A656BB3CA2626BEBCF9B6506A8462DFC4C",
+      "bytes": 20
+    },
+    {
+      "path": "RelicArena/tools/exportar_pixellab.ps1",
+      "sha256": "3B840303262A742C59292BE985AF942A7CA8BF9A154293C675362EC1208CE58C",
+      "bytes": 2153
+    },
+    {
+      "path": "RelicArena/tools/gerar_icones.py",
+      "sha256": "C3A59E8E1B9D9F4239A849150223B76BE18EBB3A1EBA02DEF20FE21D20C66EF3",
+      "bytes": 23189
+    },
+    {
+      "path": "RelicArena/tools/gerar_lobby_art.py",
+      "sha256": "6CB63DBDEAB70E8B1022AFEEADC10B6DA6919619323524C74007A39DEF685BF8",
+      "bytes": 11884
+    },
+    {
+      "path": "RelicArena/tools/gerar_provisorios.py",
+      "sha256": "19C6A631A1419CE331DE997D770F53C6D703C65B18F7180109035D25EF4283D6",
+      "bytes": 15213
+    },
+    {
+      "path": "RelicArena/tools/registrar_pixellab.ps1",
+      "sha256": "A3B75853ECC9A4852637014D4B9AE77A6C8DBD2E5F1BF1D9A6B788398CE0F545",
+      "bytes": 1758
+    },
+    {
+      "path": "RelicArena/tools/repro_lasso_endpoint.gd",
+      "sha256": "A3D514E16A66AF0B2D07062FAD30830A2283FE970E238E5403EAA4B08167994E",
+      "bytes": 5319
+    },
+    {
+      "path": "RelicArena/tools/repro_lasso_endpoint.gd.uid",
+      "sha256": "59D3D7E1236A8D0C63092A639185946BD92EEFB9C96C1A26AA03FAA8B4B8EA89",
+      "bytes": 20
+    },
+    {
+      "path": "RelicArena/tools/verificar_originais.ps1",
+      "sha256": "28D3C41A8E203801E9CB72C8B88114ABDFB812780D33D18040C0DC2C58D148CE",
+      "bytes": 2021
+    },
+    {
+      "path": "RelicArena/tools/vfx_habilidades_02.patch",
+      "sha256": "BD0EE4F5AF49223664B7075FCEE37D36B9F08277007C868D554EAECDC5EF6540",
+      "bytes": 12361
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "B5DC103507212F7E3698215878DF03ED4CB1F2AA1A1A3117804214B0AA3CDA6C",
+      "bytes": 3781
+    },
+    {
+      "path": "Guia_Godot4/CEREBRO.md",
+      "sha256": "4817825687183A8C11277FCA78F7B9D46E9805AF806075F4EAE24EBC4BC9FCCD",
+      "bytes": 25327
+    },
+    {
+      "path": "Guia_Godot4/HISTORICO_DE_BUGS.md",
+      "sha256": "A90EBC3E7299C1D20B917C177171CDA9B95BEA49BBD4694AAEBB7B493933768D",
+      "bytes": 70574
+    },
+    {
+      "path": "Guia_Godot4/EXECUCAO_CONTINUA.md",
+      "sha256": "B5F670BC236EFD65DB71ADA3E99A16271E00DA9819DA5B5967EF87BABD6F730A",
+      "bytes": 12319
+    },
+    {
+      "path": "Guia_Godot4/PERSONAGENS_LOTE_03.md",
+      "sha256": "46C0F24ECC7582154F3AAC7241BA98196EA16FC38C4BB38CDC08D06C4A90CB20",
+      "bytes": 8041
+    },
+    {
+      "path": "Guia_Godot4/PERSONAGENS_LOTE_04.md",
+      "sha256": "11528F563988505D51B202F7434A2D7AD9639715AA62F4D04F163B058A803FF3",
+      "bytes": 11320
+    },
+    {
+      "path": "Guia_Godot4/visuais/personagens_lote_03_execucao.json",
+      "sha256": "F08B1DBF4D996FCB1AE774C0E1448C917BF82EE01BB7A9F03D788F27F19DDE3E",
+      "bytes": 7550
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/capturar_atual.gd",
+      "sha256": "7D6AE680E0C085F9E10DB6FF99CA51061F4EED5EB43E5C193B6FB5FF69848E14",
+      "bytes": 11268
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/capture_heroes_tentativa1.log",
+      "sha256": "266FFA17490CDE22FEA81C175A35C891FFE4749DA46E03229BFAFF77BC914328",
+      "bytes": 583
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/capture_heroes.log",
+      "sha256": "87E9FCC5E666830D0F61B2FF49CBD420016BA77E61F38BBB47AF763A225BA32A",
+      "bytes": 491
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/capture_heroes.stderr.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/capture_menu_tentativa1.log",
+      "sha256": "266FFA17490CDE22FEA81C175A35C891FFE4749DA46E03229BFAFF77BC914328",
+      "bytes": 583
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/capture_menu.log",
+      "sha256": "792BBF1AD4CD2C9F2F34EA758AE96995070E6E2E834B61590017B81A1561F05C",
+      "bytes": 479
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/capture_menu.stderr.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/capture_preparacao.log",
+      "sha256": "266FFA17490CDE22FEA81C175A35C891FFE4749DA46E03229BFAFF77BC914328",
+      "bytes": 583
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/capture_preparacao.stderr.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/capture_support_combate.log",
+      "sha256": "2EB2624FEED05C9827D5FEEB70362DD35A9FBCC1804EDD8A7D55751747701976",
+      "bytes": 634
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/capture_support_combate.stderr.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/capture_support_resultado.log",
+      "sha256": "F208E199DB5D1399122C178386FFBB5925663984FA0A70A724B10811256A0277",
+      "bytes": 688
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/capture_support_resultado.stderr.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/fontes_validadas.json",
+      "sha256": "DF3E230BA19BD1DBF26DC44B494ED18B1CAC215B5DED04DBFE71AE9FA5CE4D16",
+      "bytes": 7521
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/import.log",
+      "sha256": "7C5BEE0E51BE5C298E9D25CC21EE8387668F2BF56F7DE81C3E06947160551ACC",
+      "bytes": 1484
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/import.stderr.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/jogo_aberto_confirmacao.log",
+      "sha256": "53CC557E4C41463565E7F129BFC067BED8AF3F8FAE58A34D684C67E67FA6755D",
+      "bytes": 442
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/jogo_aberto.json",
+      "sha256": "CD53EA2952779409D1FF4D7CE0CCB03ACCF4E8838170521BF01273C1A0D56BDE",
+      "bytes": 312
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/repro_antes.log",
+      "sha256": "8025E273B8F377EF0618F35547FDD200C355F7D559C2821BDABCFA13D39E621F",
+      "bytes": 538
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/repro_antes.stderr.log",
+      "sha256": "8A449D34A2E30F634A12DACFCC9B7E13D20DAAB68CA185B1CB21128069EEFB90",
+      "bytes": 820
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/repro_depois.log",
+      "sha256": "8C15B8269086402719EC7EC450C1155F5100AD09A14B2E817EB1AD2ACFCBC1C8",
+      "bytes": 543
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/repro_depois.stderr.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/repro_revisao.gd",
+      "sha256": "D3551857B1C829B953BEED6A72FDC8A40FF903D8EAF014A82571A6EA13FC94D8",
+      "bytes": 2878
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/REVISAO.md",
+      "sha256": "192A03C7CA90078F13A1DE8B5ED574848756903B8668F245D70C3D94BD62AF14",
+      "bytes": 5393
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/smoke_opengl.log",
+      "sha256": "83E48B8FFACAD75247A872BFC9D8F597BFAC45BD95EF1118E8926975379F3416",
+      "bytes": 1718
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/smoke_opengl.stderr.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/smoke.log",
+      "sha256": "A922BB3A89B8C833B271092C6728A3241CA57090AF13FD33C59601A0644BD53B",
+      "bytes": 1585
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/smoke.stderr.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/test_drag_and_drop.log",
+      "sha256": "63D64A1E7B689F4311538C82FF0126ADA2EF52331693B44F1CD00A11E6AE8CC2",
+      "bytes": 404
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/test_drag_and_drop.stderr.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/test_full_matches.log",
+      "sha256": "8BE513AB0C15484341978E939EBDD83EAAF5A1C26758059FE3E4B3C677BDCB6B",
+      "bytes": 348
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/test_full_matches.stderr.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/test_lobby_ui.log",
+      "sha256": "1BD05D9EC34A59BCF43DADBBEB1D7EBFDEB82C888AB1916CF2827B9CF69E2986",
+      "bytes": 308
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/test_lobby_ui.stderr.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/test_match_session.log",
+      "sha256": "81E5E8FFBA1F9A74A51F95F09A2B8FA35764313229FDAB46A32BD7A9704F943D",
+      "bytes": 118
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/test_match_session.stderr.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/test_review_contracts_opengl.log",
+      "sha256": "68E8D383557AF35E1292EEBBE3AA990653C365939BA15B61E78DC1960E245047",
+      "bytes": 676
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/test_review_contracts_opengl.stderr.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/test_review_contracts.log",
+      "sha256": "8C15B8269086402719EC7EC450C1155F5100AD09A14B2E817EB1AD2ACFCBC1C8",
+      "bytes": 543
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/test_review_contracts.stderr.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/test_simulation.log",
+      "sha256": "86F84071FC19D340DD06C1EE79A0B41CC5212FAF054188D7196AF155825971AC",
+      "bytes": 115
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/test_simulation.stderr.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/test_vfx_library_metadata_final.log",
+      "sha256": "BFE8C6C43CFB5568ADBCBC746AD91488DC4307556E5479E6732DDCC7A4CDA2F3",
+      "bytes": 116
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/test_vfx_library_metadata_final.stderr.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/test_vfx_library.log",
+      "sha256": "BFE8C6C43CFB5568ADBCBC746AD91488DC4307556E5479E6732DDCC7A4CDA2F3",
+      "bytes": 116
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/test_vfx_library.stderr.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/testes.json",
+      "sha256": "A46BAEE9B1E317E149EC6C828A113ACCA8DE6D2E3548893276654FF18D656F64",
+      "bytes": 1463
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/VALIDACAO.json",
+      "sha256": "B82D74931E2DAAA443C347E4603350A3C483956B51D2FEF77FF4AE694B3907DA",
+      "bytes": 2030
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/antes/CEREBRO.md",
+      "sha256": "9A02FD008D9F4F26AEC3078DB09A62202350CB4691DAB500F0FF7AF888B608EC",
+      "bytes": 24400
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/antes/client_main.gd",
+      "sha256": "2EC74FF2ED0D0ED88A3125736B44F0A3CCBB09691EBB2FEA2F6BFF24418E47FC",
+      "bytes": 127893
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/antes/client_smoke.gd",
+      "sha256": "5264E5F76F327A712C6274AF1E02B68DAACF597080515F31AB49A71DB70FC705",
+      "bytes": 44770
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/antes/EXECUCAO_CONTINUA.md",
+      "sha256": "B8B0D01FA54AD7392C4F89620569120D23F7C3CA8AB95B0A09C8C104DCDF64B2",
+      "bytes": 11828
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/antes/project.godot",
+      "sha256": "F3538043B837E1DD1A4FE7D26F430C612A70F1425EA7CFA08DD1921C5A817FE8",
+      "bytes": 699
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/antes/README.md",
+      "sha256": "6525E97DC7C690202E8A7D0EC80CC084B02EA22E924DA8F28CEA7623BE9C0160",
+      "bytes": 12152
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/antes/simulation_match_session.gd",
+      "sha256": "D7D7A6F9230BD7016143AB5965A01AF271BA90057488A6D080BBABF6A8DA1633",
+      "bytes": 24766
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/antes/tools_capture_preview.gd",
+      "sha256": "E44F20CA9977BDD0833EFC1E57F02AE1259882602E091141538A210E677BA852",
+      "bytes": 11156
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/antes/vfx_manifest.json",
+      "sha256": "305A94C32EC66818CA333CC4F80E382928473586890CDA8D7774DC8E3BFDBC44",
+      "bytes": 9820
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/capturas/revisao_compendio_herois.json",
+      "sha256": "FC377B72BC6DEE3CAF109C72F4CA67E97EB888E3C95BE70D9527AF109457D3B7",
+      "bytes": 1054
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/capturas/revisao_compendio_herois.png",
+      "sha256": "7C509EBD2C335B6813BE281D654F9743A350923195A1C7E28704FFE27C42E62A",
+      "bytes": 201695
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/capturas/revisao_menu.json",
+      "sha256": "FC377B72BC6DEE3CAF109C72F4CA67E97EB888E3C95BE70D9527AF109457D3B7",
+      "bytes": 1054
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/capturas/revisao_menu.png",
+      "sha256": "80FBD6E3C8E3FAC2F12C03EE325E6E744A2B648A2F35403EF12462A4F9602713",
+      "bytes": 199769
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/capturas/revisao_preparacao.json",
+      "sha256": "596A87D576011A33CADAA2C6AA2D92AF89FA4510DC888BC3A6B9DB51597D9295",
+      "bytes": 1061
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/capturas/revisao_preparacao.png",
+      "sha256": "2497E45471E6CF8CC8F345B95D0778F56AD3A1578179113C0395EA09864B5471",
+      "bytes": 436762
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/capturas/revisao_support_combate.json",
+      "sha256": "F09BF89213A8B33B0213E9B9228D47E6CE105F4B0A7DF9687D2FF4BEC1F17A62",
+      "bytes": 2243
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/capturas/revisao_support_combate.png",
+      "sha256": "144D8946B2C4A37858D3D54129A1604A1231A6A3F35E296B263C6F7A6070B112",
+      "bytes": 473806
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/capturas/revisao_support_resultado.json",
+      "sha256": "D1BE2BE808C96B195B12709E98B11C26BD0F9A46D14BC210A01BE5021700663A",
+      "bytes": 1064
+    },
+    {
+      "path": "Guia_Godot4/revisoes/2026-10-12_1409/capturas/revisao_support_resultado.png",
+      "sha256": "F17FFEFADF2F64DEE5ED4E15ADC32692E311B82B03836A1A22B44815ACA3BC38",
+      "bytes": 314204
+    }
+  ],
+  "excluded": [
+    ".godot cache",
+    "*.import",
+    "live jogo_aberto.log; frozen confirmation included",
+    "previous exported APK/EXE outside project"
+  ]
+}

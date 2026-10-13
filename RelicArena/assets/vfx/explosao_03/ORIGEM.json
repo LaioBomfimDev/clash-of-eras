@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-12",
+  "method": "PixelLab vfx_workbench (editor deterministico gratuito); nenhuma geracao por IA",
+  "ai_generation_calls": 0,
+  "name": "Clash of Eras - Explosao grande Elon 03",
+  "effect_id": "bf077b94-26d0-409f-b7e4-459aa4383243",
+  "step_id": "3eda79bf-51b5-4776-b8bf-2e78a4f24f64",
+  "export_image_id": "e76abd12-e582-443e-8101-363640e4645f",
+  "effect_url": "https://pixellab.ai/create-vfx?effect=bf077b94-26d0-409f-b7e4-459aa4383243",
+  "download_base": "https://api.pixellab.ai/mcp/pixel-tools/e76abd12-e582-443e-8101-363640e4645f/",
+  "uso": "Impacto completo do foguete do Elon: area de raio 1 (hexagono central + seis vizinhos); origem no chao do hexagono central. Substitui explosao_02 quando presente.",
+  "fps": 18,
+  "loop": false,
+  "canvas": {
+    "w": 300,
+    "h": 268
+  },
+  "anchor": {
+    "kind": "origin",
+    "x": 150,
+    "y": 182
+  },
+  "clip": "whole",
+  "clip_frames": 17,
+  "frame": {
+    "w": 240,
+    "h": 207
+  },
+  "offset": {
+    "x": -120,
+    "y": -132
+  },
+  "zip_entries": [
+    "README.txt",
+    "manifest.json",
+    "whole.png"
+  ],
+  "extracted_identical_to_zip": true,
+  "sha256": {
+    "clash-of-eras-explosao-grande-elon-03-game.zip": "AEAAFACEC86DB1158655D8B1442320C60C70EC0FB4FEEB1822D2F6CEB52B3BDD",
+    "clash-of-eras-explosao-grande-elon-03.gif": "0328B07A65BC60697CBFF58EF7609F48207316B26DCF12E7F50EE81E0ECFD9E7",
+    "clash-of-eras-explosao-grande-elon-03.json": "5F7D2A183C6617D2858BD762E3A34AB4A3E9BA85421CA35DE9D95B086AD3D7B5",
+    "clash-of-eras-explosao-grande-elon-03.png": "866AE347625B1B3B5B12575F4A3F42411297C1ED6223C93ED155878920D8C7FA"
+  },
+  "character_embedded": false
+}

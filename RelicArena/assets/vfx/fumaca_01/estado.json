@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-12",
+  "status": "integrated_validated_V1_4",
+  "method": "PixelLab deterministic free vfx_workbench; no AI generation",
+  "name": "Clash of Eras - Fumaca01",
+  "start_step_id": "521bf26e-7362-4062-9a08-e7e65be7c2df",
+  "latest_step_id": "8f84d327-304c-4164-83da-9770e270874e",
+  "reviewed_parts": [
+    "frost_mist",
+    "smoke_column"
+  ],
+  "proposal": "Low horizontal desaturated blue-gray mist, about36px wide, loop, no embedded character; prefer frost_mist without frost glints.",
+  "next": "Parent integration only; new isolated asset is complete. Do not regenerate or alter core.",
+  "effect_id": "76cb7b84-c9d2-484f-8847-c1e56b6a166b",
+  "export_image_id": "d5746abe-e8db-4ceb-8dcf-0ad03bdd0b3d",
+  "download_base": "https://api.pixellab.ai/mcp/pixel-tools/d5746abe-e8db-4ceb-8dcf-0ad03bdd0b3d/",
+  "game_pack_filename": "clash-of-eras-fumaca01-game.zip",
+  "quota_rejection": false,
+  "receipt": "ORIGEM.json",
+  "clip": "part-fumaca",
+  "frames": 16,
+  "fps": 10,
+  "loop": true,
+  "frame_pixels": [
+    29,
+    7
+  ],
+  "offset": [
+    -13,
+    -3
+  ],
+  "integration": {
+    "version": "V1.4",
+    "runtime_integrated": true,
+    "validation": "res://VALIDACAO_V1_4.json",
+    "final_user_art_approval": false
+  }
+}

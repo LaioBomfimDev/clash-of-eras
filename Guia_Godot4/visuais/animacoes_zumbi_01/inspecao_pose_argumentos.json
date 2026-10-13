@@ -1,0 +1,8 @@
+{
+  "notes": "User wants true articulated walking for the approved detailed Zumbi warrior. First generated clip walks off a stone instead of looping; inspect last grounded pose as a new starting reference. Need remove only detached stone chip, preserve every warrior pixel, then generate a proper in-place cycle.",
+  "mode": "high",
+  "argv": [
+    "inspect",
+    "https://backblaze.pixellab.ai/file/pixellab-characters/560d5183-31db-44f6-b63d-9600a7af48ec/6a5ec045-5930-4955-a684-ef864e5607b9/animations/ba5530d8-933e-4984-b948-ad2322d35402/east/7.png?t=1791846487178"
+  ]
+}

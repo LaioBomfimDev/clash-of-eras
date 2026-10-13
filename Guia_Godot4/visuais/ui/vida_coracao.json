@@ -1,0 +1,131 @@
+{
+  "asset": "vida_coracao",
+  "date": "2026-10-11",
+  "purpose": "Ícone de vida do estudo técnico de interface Relic Arena",
+  "creation": {
+    "service": "PixelLab",
+    "tool": "pixelart_workbench",
+    "command": "draw",
+    "method": "Desenho exato por grade, sem geração por IA",
+    "drawing_id": "b1e8ffea-e455-480c-a7d1-9ad457f7a12c",
+    "view": "icon",
+    "recipe": {
+      "job": {
+        "canvas": [
+          16,
+          16
+        ],
+        "frame_count": 1,
+        "durations_ms": [
+          100
+        ],
+        "views": [
+          {
+            "id": "icon",
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "source_bookends_exact": false,
+        "require_clear_border": true
+      },
+      "scene": {
+        "palette": {
+          "outline": "#4a2226",
+          "red": "#e94d61",
+          "shadow": "#a52e43",
+          "highlight": "#ffe1c4"
+        },
+        "layers": [
+          {
+            "id": "heart",
+            "name": "UI - Life heart"
+          }
+        ],
+        "views": {
+          "icon": {
+            "nodes": {
+              "heart": {
+                "layer": "heart",
+                "at": [
+                  0,
+                  0
+                ],
+                "draw": [
+                  {
+                    "op": "grid",
+                    "at": [
+                      0,
+                      0
+                    ],
+                    "legend": {
+                      "o": "outline",
+                      "r": "red",
+                      "s": "shadow",
+                      "h": "highlight"
+                    },
+                    "rows": [
+                      "................",
+                      "................",
+                      "...ooo....ooo...",
+                      "..orrro..orrro..",
+                      ".orhhrroorrrrro.",
+                      ".orhhrrrrrrrrro.",
+                      ".orrrrrrrrrssso.",
+                      ".orrrrrrrrrssso.",
+                      "..orrrrrrrrsso..",
+                      "...osssssssso...",
+                      "....osssssso....",
+                      ".....osssso.....",
+                      "......osso......",
+                      ".......oo.......",
+                      "................",
+                      "................"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "gallery": {
+    "tool": "save_to_asset",
+    "target": "gallery:new",
+    "asset_id": "81b2beb0-d35a-4c2f-8d22-9529393b19b2",
+    "reference": "gallery:81b2beb0-d35a-4c2f-8d22-9529393b19b2"
+  },
+  "original": {
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/b1e8ffea-e455-480c-a7d1-9ad457f7a12c/assets/icon/full.png",
+    "file": "vida_coracao.png",
+    "width": 16,
+    "height": 16,
+    "mode": "RGBA",
+    "transparent": true,
+    "bytes": 225,
+    "sha256": "1d72c557ed0a588ce5c6727264f64856e8cdeee5638af53bfb2a776b79d51413",
+    "local_pixel_editing": false,
+    "rescaled": false
+  },
+  "cost": {
+    "paid_generation_calls": 0,
+    "generation_credits": 0,
+    "basis": "Desenho exato e salvamento em galeria documentados como gratuitos nas ferramentas PixelLab utilizadas."
+  },
+  "validation": {
+    "returned_preview_reviewed": true,
+    "png_dimensions_and_transparency_checked": true,
+    "html_hearts_per_player": [
+      4,
+      4
+    ],
+    "javascript_syntax_checked_with": "Node.js vm.Script",
+    "browser_or_device_tested": false
+  },
+  "status": "Ícone de estudo; uso em Godot, legibilidade em aparelho real e aprovação final não validados."
+}
+

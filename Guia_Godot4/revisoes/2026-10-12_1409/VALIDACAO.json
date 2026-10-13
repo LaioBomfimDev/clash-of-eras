@@ -1,0 +1,82 @@
+{
+  "recorded_utc": "2026-10-12T17:20:07.6482425Z",
+  "godot": "4.7.2.stable.official.ed1daf0bf",
+  "scope": "Current PC source folder after V1.5/V1.6; not exported APK/EXE",
+  "headless_checks": 1695,
+  "headless_failures": 0,
+  "automated_matches": 4,
+  "opengl_client_checks": 370,
+  "opengl_regression_checks": 4,
+  "opengl_failures": 0,
+  "source_hashes": "fontes_validadas.json",
+  "test_results": "testes.json",
+  "bugs_fixed": [
+    "BUG-018",
+    "BUG-019"
+  ],
+  "pixellab_calls": 0,
+  "captures_inspected": [
+    "revisao_menu",
+    "revisao_compendio_herois",
+    "revisao_preparacao",
+    "revisao_support_combate",
+    "revisao_support_resultado"
+  ],
+  "capture_states": [
+    {
+      "file": "revisao_compendio_herois.json",
+      "phase": "menu",
+      "viewport": [
+        1280,
+        720
+      ],
+      "project_name": "Clash of Eras - protótipo local",
+      "elapsed": 0.0
+    },
+    {
+      "file": "revisao_menu.json",
+      "phase": "menu",
+      "viewport": [
+        1280,
+        720
+      ],
+      "project_name": "Clash of Eras - protótipo local",
+      "elapsed": 0.0
+    },
+    {
+      "file": "revisao_preparacao.json",
+      "phase": "preparation",
+      "viewport": [
+        1280,
+        720
+      ],
+      "project_name": "Clash of Eras - protótipo local",
+      "elapsed": 0.0
+    },
+    {
+      "file": "revisao_support_combate.json",
+      "phase": "combat",
+      "viewport": [
+        1280,
+        720
+      ],
+      "project_name": "Clash of Eras - protótipo local",
+      "elapsed": 2.6
+    },
+    {
+      "file": "revisao_support_resultado.json",
+      "phase": "round_result",
+      "viewport": [
+        1280,
+        720
+      ],
+      "project_name": "Clash of Eras - protótipo local",
+      "elapsed": 26.05
+    }
+  ],
+  "limitations": [
+    "No human match/balance/performance/device/network validation",
+    "New VFX patch not applied",
+    "Exported APK/EXE predate review fixes"
+  ]
+}

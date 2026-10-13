@@ -1,0 +1,36 @@
+{
+  "group_id": "705a1c36-77c7-4595-9eb4-2af32f939670",
+  "states": [
+    {
+      "character": {
+        "id": "6ee036bc-198c-42dc-93a5-f2083142861f",
+        "name": "Idle",
+        "prompt": "Man resembling a classic Ken fashion doll, realistic adult male anatomy with a naturally small head, seven heads tall, athletic lean tanned body, short neatly combed blond hair. Wearing ONLY blue swim briefs (Brazilian sunga) and simple sandals, protective upright fighter stance with hands ready to guard an ally. NOT chibi, NOT cartoon, NOT caricature. Restrained detailed pixel art matching a classic 48px Michael Jackson game sprite, about 43px visible adult height, full body centered with feet inside canvas. Low top-down elevated arena camera, crisp pixel clusters, medium shading, selective dark outline, warm upper-left lighting. Transparent background, no scene, text, brand logos or aura.",
+        "size": {
+          "width": 68,
+          "height": 68
+        },
+        "template_id": "mannequin",
+        "directions": 8,
+        "view": "low top-down",
+        "created_at": "2026-10-12T05:05:30.608516+00:00"
+      },
+      "folder": "Idle",
+      "frames": {
+        "rotations": {
+          "south": "Idle/rotations/south.png",
+          "south-east": "Idle/rotations/south-east.png",
+          "east": "Idle/rotations/east.png",
+          "north-east": "Idle/rotations/north-east.png",
+          "north": "Idle/rotations/north.png",
+          "north-west": "Idle/rotations/north-west.png",
+          "west": "Idle/rotations/west.png",
+          "south-west": "Idle/rotations/south-west.png"
+        },
+        "animations": {}
+      }
+    }
+  ],
+  "export_version": "3.1",
+  "export_date": "2026-10-12T05:08:45.066253"
+}

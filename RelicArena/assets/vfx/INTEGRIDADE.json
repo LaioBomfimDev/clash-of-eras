@@ -1,0 +1,671 @@
+{
+  "date_utc": "2026-10-12 11:01:12 UTC",
+  "scope": "Local read-only audit of original ZIPs and existing extracted exports; only this new report was written. No PixelLab calls, gameplay changes or shared-document edits.",
+  "method": [
+    "SHA-256 of four ZIPs and all 18 ZIP members/local counterparts",
+    "ZipFile.testzip CRC validation",
+    "Windows-safe paths: no absolute/drive/traversal/ADS paths, symlinks, duplicate case-insensitive names, trailing dots/spaces or reserved names; resolved destinations remain inside package roots",
+    "Direct byte-to-byte comparison of every ZIP file member with extracted file",
+    "Pillow.verify on all 10 extracted PNG sheets; clip frame counts and sheet sizes checked",
+    "Original RGBA crop comparison for both Cura and Foguete clips; 44 packed frame crops checked",
+    "Visual inspection of all 12 shield-only frames and all 12 with-sprite reference frames"
+  ],
+  "limitations": [
+    "Matching locally recorded hashes verifies local consistency; no independent signed upstream checksum was supplied or fetched.",
+    "This audit does not validate gameplay integration, performance, balance or final visual approval."
+  ],
+  "summary": {
+    "packages_checked": 4,
+    "zip_bytes": 23920,
+    "extracted_files_byte_compared": 18,
+    "extracted_bytes_compared": 27167,
+    "png_sheets_verified": 10,
+    "clip_sheet_definitions_checked": 10,
+    "original_rgba_frame_crops_compared": 44,
+    "all_zip_crc_passed": true,
+    "all_zip_paths_safe": true,
+    "all_extracted_byte_identical": true,
+    "all_four_zip_hashes_match_library_manifest": true,
+    "all_passed": true
+  },
+  "shield_separation": {
+    "selected_game_clip": "part-bubble_shield",
+    "selected_sheet": "escudo_danca_01/original/part-bubble_shield.png",
+    "effect_only": true,
+    "embedded_character": false,
+    "visual_frames_checked": 12,
+    "whole_front_and_part_sheets_byte_identical": true,
+    "reference_clip": "whole-with-sprite",
+    "reference_sheet": "escudo_danca_01/original/whole-with-sprite.png",
+    "reference_contains_michael": true,
+    "reference_only": true,
+    "reference_visual_frames_checked": 12,
+    "selection_confirmed_in": [
+      "manifest.json",
+      "escudo_danca_01/exportacao.json"
+    ],
+    "runtime_integration_not_claimed": true
+  },
+  "frame_count_notes": [
+    "Cura and Foguete authored manifests each retain 12 frames; their packed clips each contain 11. In both originals frame 12 is fully transparent, and all retained packed crops match original RGBA pixels.",
+    "Consumers should use each clip's own frames/frame dimensions/sheets/offset, not only the top-level authored frame count."
+  ],
+  "packages": [
+    {
+      "package": "cura_01",
+      "zip": "cura_01/original/clash-of-eras-cura01-game.zip",
+      "zip_bytes": 2480,
+      "zip_sha256": "6f4807093c66042deb90f4ba4be93cabfa87ec21161f838ff9a2336531814b41",
+      "extracted_root": "cura_01/game_pack",
+      "errors": [],
+      "entries": [
+        {
+          "path": "whole.png",
+          "bytes": 604,
+          "safe_path": true,
+          "path_issues": [],
+          "directory": false,
+          "zip_content_sha256": "c409f99313692b3bce0d7325259ec6c86f9cd0555027451fb69b8f0c062f25ba",
+          "local_file_exists": true,
+          "local_sha256": "c409f99313692b3bce0d7325259ec6c86f9cd0555027451fb69b8f0c062f25ba",
+          "byte_identical": true,
+          "png_size": [
+            76,
+            69
+          ],
+          "png_mode": "RGBA"
+        },
+        {
+          "path": "part-cura.png",
+          "bytes": 604,
+          "safe_path": true,
+          "path_issues": [],
+          "directory": false,
+          "zip_content_sha256": "c409f99313692b3bce0d7325259ec6c86f9cd0555027451fb69b8f0c062f25ba",
+          "local_file_exists": true,
+          "local_sha256": "c409f99313692b3bce0d7325259ec6c86f9cd0555027451fb69b8f0c062f25ba",
+          "byte_identical": true,
+          "png_size": [
+            76,
+            69
+          ],
+          "png_mode": "RGBA"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 983,
+          "safe_path": true,
+          "path_issues": [],
+          "directory": false,
+          "zip_content_sha256": "7c8c5bfab5402c18feee2b518a5a1402b279af9ea3a1f09f9911c7f9e3200485",
+          "local_file_exists": true,
+          "local_sha256": "7c8c5bfab5402c18feee2b518a5a1402b279af9ea3a1f09f9911c7f9e3200485",
+          "byte_identical": true
+        },
+        {
+          "path": "README.txt",
+          "bytes": 942,
+          "safe_path": true,
+          "path_issues": [],
+          "directory": false,
+          "zip_content_sha256": "3030bb6c509e7759cd342fd0b98dd3968551c657dfd76c4e6886399f751d632c",
+          "local_file_exists": true,
+          "local_sha256": "3030bb6c509e7759cd342fd0b98dd3968551c657dfd76c4e6886399f751d632c",
+          "byte_identical": true
+        }
+      ],
+      "clips": [
+        {
+          "name": "whole",
+          "frames": 11,
+          "frame_size": [
+            19,
+            23
+          ],
+          "sheet_checks": [
+            {
+              "file": "whole.png",
+              "size": [
+                76,
+                69
+              ],
+              "required_size": [
+                76,
+                69
+              ],
+              "frames_fit": true
+            }
+          ],
+          "frame_count_matches_sheets": true
+        },
+        {
+          "name": "part-cura",
+          "frames": 11,
+          "frame_size": [
+            19,
+            23
+          ],
+          "sheet_checks": [
+            {
+              "file": "part-cura.png",
+              "size": [
+                76,
+                69
+              ],
+              "required_size": [
+                76,
+                69
+              ],
+              "frames_fit": true
+            }
+          ],
+          "frame_count_matches_sheets": true
+        }
+      ],
+      "zip_crc_passed": true,
+      "manifest_frames": 12,
+      "fps": 16,
+      "safe_paths": true,
+      "files_checked": 4,
+      "all_extracted_byte_identical": true,
+      "zip_stable_during_read": true,
+      "recorded_zip_hash_source": "cura_01/VALIDACAO.json",
+      "recorded_zip_hash": "6f4807093c66042deb90f4ba4be93cabfa87ec21161f838ff9a2336531814b41",
+      "matches_recorded_zip_hash": true,
+      "library_manifest_zip_hash": "6f4807093c66042deb90f4ba4be93cabfa87ec21161f838ff9a2336531814b41",
+      "matches_library_manifest_hash": true,
+      "library_manifest_selected_clip": "part-cura",
+      "library_clip_matches_export": true,
+      "authored_to_pack_check": {
+        "package": "cura_01",
+        "authored_frames": 12,
+        "last_authored_frame_fully_transparent": true,
+        "packed_crops": [
+          {
+            "clip": "whole",
+            "frames_compared": 11,
+            "all_rgba_bytes_equal": true
+          },
+          {
+            "clip": "part-cura",
+            "frames_compared": 11,
+            "all_rgba_bytes_equal": true
+          }
+        ]
+      }
+    },
+    {
+      "package": "escudo_danca_01",
+      "zip": "escudo_danca_01/pixellab_original.zip",
+      "zip_bytes": 13265,
+      "zip_sha256": "8669913f30d6dcb25a8d0d8db8b16eee7c1a6e547f28af8bd876637fa9717074",
+      "extracted_root": "escudo_danca_01/original",
+      "errors": [],
+      "entries": [
+        {
+          "path": "whole.png",
+          "bytes": 2485,
+          "safe_path": true,
+          "path_issues": [],
+          "directory": false,
+          "zip_content_sha256": "fcdf1d9b1dad1b1d31a9c85e105475c0c7933813e16cf68420201020b09bfdfb",
+          "local_file_exists": true,
+          "local_sha256": "fcdf1d9b1dad1b1d31a9c85e105475c0c7933813e16cf68420201020b09bfdfb",
+          "byte_identical": true,
+          "png_size": [
+            172,
+            129
+          ],
+          "png_mode": "RGBA"
+        },
+        {
+          "path": "whole-with-sprite.png",
+          "bytes": 4221,
+          "safe_path": true,
+          "path_issues": [],
+          "directory": false,
+          "zip_content_sha256": "ad511b0704a78e25a0dd7f29c1991a0addb47da502ce440eb88a8545eab8d9b9",
+          "local_file_exists": true,
+          "local_sha256": "ad511b0704a78e25a0dd7f29c1991a0addb47da502ce440eb88a8545eab8d9b9",
+          "byte_identical": true,
+          "png_size": [
+            172,
+            129
+          ],
+          "png_mode": "RGBA"
+        },
+        {
+          "path": "front.png",
+          "bytes": 2485,
+          "safe_path": true,
+          "path_issues": [],
+          "directory": false,
+          "zip_content_sha256": "fcdf1d9b1dad1b1d31a9c85e105475c0c7933813e16cf68420201020b09bfdfb",
+          "local_file_exists": true,
+          "local_sha256": "fcdf1d9b1dad1b1d31a9c85e105475c0c7933813e16cf68420201020b09bfdfb",
+          "byte_identical": true,
+          "png_size": [
+            172,
+            129
+          ],
+          "png_mode": "RGBA"
+        },
+        {
+          "path": "part-bubble_shield.png",
+          "bytes": 2485,
+          "safe_path": true,
+          "path_issues": [],
+          "directory": false,
+          "zip_content_sha256": "fcdf1d9b1dad1b1d31a9c85e105475c0c7933813e16cf68420201020b09bfdfb",
+          "local_file_exists": true,
+          "local_sha256": "fcdf1d9b1dad1b1d31a9c85e105475c0c7933813e16cf68420201020b09bfdfb",
+          "byte_identical": true,
+          "png_size": [
+            172,
+            129
+          ],
+          "png_mode": "RGBA"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 1863,
+          "safe_path": true,
+          "path_issues": [],
+          "directory": false,
+          "zip_content_sha256": "ffd8624eb2b168715950915d2e565cb63f03bc315951719003f8ed1c41032e2c",
+          "local_file_exists": true,
+          "local_sha256": "ffd8624eb2b168715950915d2e565cb63f03bc315951719003f8ed1c41032e2c",
+          "byte_identical": true
+        },
+        {
+          "path": "README.txt",
+          "bytes": 942,
+          "safe_path": true,
+          "path_issues": [],
+          "directory": false,
+          "zip_content_sha256": "3030bb6c509e7759cd342fd0b98dd3968551c657dfd76c4e6886399f751d632c",
+          "local_file_exists": true,
+          "local_sha256": "3030bb6c509e7759cd342fd0b98dd3968551c657dfd76c4e6886399f751d632c",
+          "byte_identical": true
+        }
+      ],
+      "clips": [
+        {
+          "name": "whole",
+          "frames": 12,
+          "frame_size": [
+            43,
+            43
+          ],
+          "sheet_checks": [
+            {
+              "file": "whole.png",
+              "size": [
+                172,
+                129
+              ],
+              "required_size": [
+                172,
+                129
+              ],
+              "frames_fit": true
+            }
+          ],
+          "frame_count_matches_sheets": true
+        },
+        {
+          "name": "whole-with-sprite",
+          "frames": 12,
+          "frame_size": [
+            43,
+            43
+          ],
+          "sheet_checks": [
+            {
+              "file": "whole-with-sprite.png",
+              "size": [
+                172,
+                129
+              ],
+              "required_size": [
+                172,
+                129
+              ],
+              "frames_fit": true
+            }
+          ],
+          "frame_count_matches_sheets": true
+        },
+        {
+          "name": "front",
+          "frames": 12,
+          "frame_size": [
+            43,
+            43
+          ],
+          "sheet_checks": [
+            {
+              "file": "front.png",
+              "size": [
+                172,
+                129
+              ],
+              "required_size": [
+                172,
+                129
+              ],
+              "frames_fit": true
+            }
+          ],
+          "frame_count_matches_sheets": true
+        },
+        {
+          "name": "part-bubble_shield",
+          "frames": 12,
+          "frame_size": [
+            43,
+            43
+          ],
+          "sheet_checks": [
+            {
+              "file": "part-bubble_shield.png",
+              "size": [
+                172,
+                129
+              ],
+              "required_size": [
+                172,
+                129
+              ],
+              "frames_fit": true
+            }
+          ],
+          "frame_count_matches_sheets": true
+        }
+      ],
+      "zip_crc_passed": true,
+      "manifest_frames": 12,
+      "fps": 10,
+      "safe_paths": true,
+      "files_checked": 6,
+      "all_extracted_byte_identical": true,
+      "zip_stable_during_read": true,
+      "recorded_zip_hash_source": "escudo_danca_01/exportacao.json",
+      "recorded_zip_hash": "8669913F30D6DCB25A8D0D8DB8B16EEE7C1A6E547F28AF8BD876637FA9717074",
+      "matches_recorded_zip_hash": true,
+      "library_manifest_zip_hash": "8669913f30d6dcb25a8d0d8db8b16eee7c1a6e547f28af8bd876637fa9717074",
+      "matches_library_manifest_hash": true,
+      "library_manifest_selected_clip": "part-bubble_shield",
+      "library_clip_matches_export": true
+    },
+    {
+      "package": "estocada_01",
+      "zip": "estocada_01/clash-of-eras-estocada01-game.zip",
+      "zip_bytes": 2151,
+      "zip_sha256": "bf6da9a9273daeda999dd03cc751434aca81d08132cadaaa0139849d54719f92",
+      "extracted_root": "estocada_01",
+      "errors": [],
+      "entries": [
+        {
+          "path": "whole.png",
+          "bytes": 425,
+          "safe_path": true,
+          "path_issues": [],
+          "directory": false,
+          "zip_content_sha256": "369f95115ad7d40744cc1ba0682ed03cafca94c0ce287ff60989d4fc422fff3d",
+          "local_file_exists": true,
+          "local_sha256": "369f95115ad7d40744cc1ba0682ed03cafca94c0ce287ff60989d4fc422fff3d",
+          "byte_identical": true,
+          "png_size": [
+            72,
+            18
+          ],
+          "png_mode": "RGBA"
+        },
+        {
+          "path": "part-estocada.png",
+          "bytes": 425,
+          "safe_path": true,
+          "path_issues": [],
+          "directory": false,
+          "zip_content_sha256": "369f95115ad7d40744cc1ba0682ed03cafca94c0ce287ff60989d4fc422fff3d",
+          "local_file_exists": true,
+          "local_sha256": "369f95115ad7d40744cc1ba0682ed03cafca94c0ce287ff60989d4fc422fff3d",
+          "byte_identical": true,
+          "png_size": [
+            72,
+            18
+          ],
+          "png_mode": "RGBA"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 1042,
+          "safe_path": true,
+          "path_issues": [],
+          "directory": false,
+          "zip_content_sha256": "34eee62a63c90d0c91fcac52696e7f480579dada984138a2685a2e0bc683c792",
+          "local_file_exists": true,
+          "local_sha256": "34eee62a63c90d0c91fcac52696e7f480579dada984138a2685a2e0bc683c792",
+          "byte_identical": true
+        },
+        {
+          "path": "README.txt",
+          "bytes": 942,
+          "safe_path": true,
+          "path_issues": [],
+          "directory": false,
+          "zip_content_sha256": "3030bb6c509e7759cd342fd0b98dd3968551c657dfd76c4e6886399f751d632c",
+          "local_file_exists": true,
+          "local_sha256": "3030bb6c509e7759cd342fd0b98dd3968551c657dfd76c4e6886399f751d632c",
+          "byte_identical": true
+        }
+      ],
+      "clips": [
+        {
+          "name": "whole",
+          "frames": 7,
+          "frame_size": [
+            24,
+            6
+          ],
+          "sheet_checks": [
+            {
+              "file": "whole.png",
+              "size": [
+                72,
+                18
+              ],
+              "required_size": [
+                72,
+                18
+              ],
+              "frames_fit": true
+            }
+          ],
+          "frame_count_matches_sheets": true
+        },
+        {
+          "name": "part-estocada",
+          "frames": 7,
+          "frame_size": [
+            24,
+            6
+          ],
+          "sheet_checks": [
+            {
+              "file": "part-estocada.png",
+              "size": [
+                72,
+                18
+              ],
+              "required_size": [
+                72,
+                18
+              ],
+              "frames_fit": true
+            }
+          ],
+          "frame_count_matches_sheets": true
+        }
+      ],
+      "zip_crc_passed": true,
+      "manifest_frames": 7,
+      "fps": 24,
+      "safe_paths": true,
+      "files_checked": 4,
+      "all_extracted_byte_identical": true,
+      "zip_stable_during_read": true,
+      "recorded_zip_hash_source": "estocada_01/ORIGEM.md",
+      "recorded_zip_hash": "BF6DA9A9273DAEDA999DD03CC751434ACA81D08132CADAAA0139849D54719F92",
+      "matches_recorded_zip_hash": true,
+      "library_manifest_zip_hash": "bf6da9a9273daeda999dd03cc751434aca81d08132cadaaa0139849d54719f92",
+      "matches_library_manifest_hash": true,
+      "library_manifest_selected_clip": "part-estocada",
+      "library_clip_matches_export": true
+    },
+    {
+      "package": "foguete_01",
+      "zip": "foguete_01/clash-of-eras-impacto-foguete01-game.zip",
+      "zip_bytes": 6024,
+      "zip_sha256": "21a14fdab200efd058f00b3a4ae038c987b3cc83f762163f54bc0f70d3bcdc16",
+      "extracted_root": "foguete_01/game_pack",
+      "errors": [],
+      "entries": [
+        {
+          "path": "whole.png",
+          "bytes": 2358,
+          "safe_path": true,
+          "path_issues": [],
+          "directory": false,
+          "zip_content_sha256": "c981ba9271fa3ade55a27f0205143a89f169fbb4c8ac6bb1dbfe3bc4de7c4ba2",
+          "local_file_exists": true,
+          "local_sha256": "c981ba9271fa3ade55a27f0205143a89f169fbb4c8ac6bb1dbfe3bc4de7c4ba2",
+          "byte_identical": true,
+          "png_size": [
+            104,
+            78
+          ],
+          "png_mode": "RGBA"
+        },
+        {
+          "path": "part-fire_blast.png",
+          "bytes": 2358,
+          "safe_path": true,
+          "path_issues": [],
+          "directory": false,
+          "zip_content_sha256": "c981ba9271fa3ade55a27f0205143a89f169fbb4c8ac6bb1dbfe3bc4de7c4ba2",
+          "local_file_exists": true,
+          "local_sha256": "c981ba9271fa3ade55a27f0205143a89f169fbb4c8ac6bb1dbfe3bc4de7c4ba2",
+          "byte_identical": true,
+          "png_size": [
+            104,
+            78
+          ],
+          "png_mode": "RGBA"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 1061,
+          "safe_path": true,
+          "path_issues": [],
+          "directory": false,
+          "zip_content_sha256": "8112167b5704c31d63818d260e0fa8e3a5e0603b787e9766d89c0d983c30ab00",
+          "local_file_exists": true,
+          "local_sha256": "8112167b5704c31d63818d260e0fa8e3a5e0603b787e9766d89c0d983c30ab00",
+          "byte_identical": true
+        },
+        {
+          "path": "README.txt",
+          "bytes": 942,
+          "safe_path": true,
+          "path_issues": [],
+          "directory": false,
+          "zip_content_sha256": "3030bb6c509e7759cd342fd0b98dd3968551c657dfd76c4e6886399f751d632c",
+          "local_file_exists": true,
+          "local_sha256": "3030bb6c509e7759cd342fd0b98dd3968551c657dfd76c4e6886399f751d632c",
+          "byte_identical": true
+        }
+      ],
+      "clips": [
+        {
+          "name": "whole",
+          "frames": 11,
+          "frame_size": [
+            26,
+            26
+          ],
+          "sheet_checks": [
+            {
+              "file": "whole.png",
+              "size": [
+                104,
+                78
+              ],
+              "required_size": [
+                104,
+                78
+              ],
+              "frames_fit": true
+            }
+          ],
+          "frame_count_matches_sheets": true
+        },
+        {
+          "name": "part-fire_blast",
+          "frames": 11,
+          "frame_size": [
+            26,
+            26
+          ],
+          "sheet_checks": [
+            {
+              "file": "part-fire_blast.png",
+              "size": [
+                104,
+                78
+              ],
+              "required_size": [
+                104,
+                78
+              ],
+              "frames_fit": true
+            }
+          ],
+          "frame_count_matches_sheets": true
+        }
+      ],
+      "zip_crc_passed": true,
+      "manifest_frames": 12,
+      "fps": 24,
+      "safe_paths": true,
+      "files_checked": 4,
+      "all_extracted_byte_identical": true,
+      "zip_stable_during_read": true,
+      "recorded_zip_hash_source": null,
+      "recorded_zip_hash": null,
+      "matches_recorded_zip_hash": null,
+      "library_manifest_zip_hash": "21a14fdab200efd058f00b3a4ae038c987b3cc83f762163f54bc0f70d3bcdc16",
+      "matches_library_manifest_hash": true,
+      "library_manifest_selected_clip": "part-fire_blast",
+      "library_clip_matches_export": true,
+      "authored_to_pack_check": {
+        "package": "foguete_01",
+        "authored_frames": 12,
+        "last_authored_frame_fully_transparent": true,
+        "packed_crops": [
+          {
+            "clip": "whole",
+            "frames_compared": 11,
+            "all_rgba_bytes_equal": true
+          },
+          {
+            "clip": "part-fire_blast",
+            "frames_compared": 11,
+            "all_rgba_bytes_equal": true
+          }
+        ]
+      }
+    }
+  ]
+}

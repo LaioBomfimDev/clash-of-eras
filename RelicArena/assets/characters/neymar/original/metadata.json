@@ -1,0 +1,36 @@
+{
+  "group_id": "7de20497-d314-43f8-8eb1-117d600657ff",
+  "states": [
+    {
+      "character": {
+        "id": "fcc05054-6672-4efb-b417-f49cffcc7b7f",
+        "name": "Idle",
+        "prompt": "Clearly recognizable exaggerated caricature of Neymar Jr., Brazilian football superstar as a funny ranged damage character in a pixel-art auto battler. Huge expressive head, tan skin, mischievous confident smile, short dark beard, bleached blond crest hairstyle with dark sides, small agile athletic body. Green football shirt and shorts with yellow trim, NO logos or lettering. One comically enormous golden football boot on his kicking foot, and one clearly readable football resting beside it. Relaxed cocky ready stance, not midair. Football boot is the signature accessory, face remains visible. Crisp chunky pixel clusters, selective dark outline, medium shading, restrained palette, upper-left light, low top-down elevated arena camera, full body centered within requested48x48, both feet grounded, transparent background, no scenery, no glow or particles.",
+        "size": {
+          "width": 68,
+          "height": 68
+        },
+        "template_id": "mannequin",
+        "directions": 8,
+        "view": "low top-down",
+        "created_at": "2026-10-11T16:01:18.634676+00:00"
+      },
+      "folder": "Idle",
+      "frames": {
+        "rotations": {
+          "south": "Idle/rotations/south.png",
+          "south-east": "Idle/rotations/south-east.png",
+          "east": "Idle/rotations/east.png",
+          "north-east": "Idle/rotations/north-east.png",
+          "north": "Idle/rotations/north.png",
+          "north-west": "Idle/rotations/north-west.png",
+          "west": "Idle/rotations/west.png",
+          "south-west": "Idle/rotations/south-west.png"
+        },
+        "animations": {}
+      }
+    }
+  ],
+  "export_version": "3.1",
+  "export_date": "2026-10-11T20:27:41.115760"
+}

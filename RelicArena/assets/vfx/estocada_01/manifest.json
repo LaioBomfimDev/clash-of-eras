@@ -1,0 +1,71 @@
+{
+ "app": "PixelLab VFX Creator",
+ "name": "Clash of Eras - Estocada01",
+ "fps": 24,
+ "frame_ms": 42,
+ "frames": 7,
+ "loop": false,
+ "canvas": {
+  "w": 31,
+  "h": 16
+ },
+ "anchor": {
+  "kind": "origin",
+  "x": 4,
+  "y": 6
+ },
+ "clips": [
+  {
+   "name": "whole",
+   "title": "the whole effect, no sprite",
+   "depth": "both",
+   "loop": false,
+   "start_frame": 0,
+   "frames": 7,
+   "frame": {
+    "w": 24,
+    "h": 6
+   },
+   "sheets": [
+    {
+     "file": "whole.png",
+     "first_frame": 0,
+     "frames": 7,
+     "columns": 3,
+     "rows": 3
+    }
+   ],
+   "offset": {
+    "x": -1,
+    "y": -3
+   }
+  },
+  {
+   "name": "part-estocada",
+   "title": "the thrust streak part",
+   "role": "impact",
+   "part": "thrust_streak",
+   "depth": "front",
+   "loop": false,
+   "start_frame": 0,
+   "frames": 7,
+   "frame": {
+    "w": 24,
+    "h": 6
+   },
+   "sheets": [
+    {
+     "file": "part-estocada.png",
+     "first_frame": 0,
+     "frames": 7,
+     "columns": 3,
+     "rows": 3
+    }
+   ],
+   "offset": {
+    "x": -1,
+    "y": -3
+   }
+  }
+ ]
+}
