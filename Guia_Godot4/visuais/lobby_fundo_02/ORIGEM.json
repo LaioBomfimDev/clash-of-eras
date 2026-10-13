@@ -1,0 +1,18 @@
+{
+  "provided_by": "user",
+  "use": "lobby/menu only",
+  "originals": [
+    {
+      "file": "fundo_usuario.png",
+      "bytes": 3372083,
+      "sha256": "31482b22feb9a4e4502e8d3d45fa43ef2959d452c7cab529031c9ee60a899d21"
+    },
+    {
+      "file": "video_usuario.mp4",
+      "bytes": 3782948,
+      "sha256": "9fcac1cb4fa1764a6bcc952ca3e33fa2a39c9e45297a15680855f4debbb545bb"
+    }
+  ],
+  "runtime_audio": false,
+  "loop": "0.5 second end-to-start dissolve, derived runtime only"
+}

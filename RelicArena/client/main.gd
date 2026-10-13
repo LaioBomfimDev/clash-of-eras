@@ -17,6 +17,7 @@ const CharacterBank = preload("res://client/character_animation_bank.gd")
 const CharacterPlayer = preload("res://client/character_animation_player.gd")
 const OnlineClient = preload("res://net/online_client.gd")
 const GoldPileCache = preload("res://client/gold_pile_cache.gd")
+const LobbyBackdrop = preload("res://client/lobby_backdrop.gd")
 const ArenaRenderCache = preload("res://client/arena_render_cache.gd")
 const OrnateFrameCache = preload("res://client/ornate_frame_cache.gd")
 const ShopCardCache = preload("res://client/shop_card_cache.gd")
@@ -48,7 +49,7 @@ const KIT_TEXT: Dictionary = {
 	"rapunzel": "Começa com 0/100 mana e ganha 25 por ataque lançado. Ao encher, puxa o inimigo mais distante e o atordoa; a mana é consumida."
 }
 
-const LOBBY_BG_PATH: String = "res://assets/ui/lobby_background.png"
+const LOBBY_BG_PATH: String = "res://assets/ui/lobby_02/lobby.png"
 
 const HERO_CATALOG_KEYS: Array[String] = [
 	"neymar", "caramelo", "obama", "zumbi", "michael",
@@ -216,6 +217,7 @@ var equip_button: Button
 var fuse_button: Button
 var sound_button: Button
 var sound_icon_button: Button
+var lobby_backdrop: LobbyBackdrop
 var lobby_bg: Texture2D
 var lobby_root: Control
 var lobby_subview: String = "none" # "none", "heroes", "settings"
@@ -392,6 +394,8 @@ func _ready() -> void:
 	arena = load(ARENA_PATH) as Texture2D if ResourceLoader.exists(ARENA_PATH) else null
 	if ResourceLoader.exists(LOBBY_BG_PATH):
 		lobby_bg = load(LOBBY_BG_PATH) as Texture2D
+	lobby_backdrop = LobbyBackdrop.new()
+	add_child(lobby_backdrop)
 	board_perimeter = Board.perimeter_segments()
 	_load_arena_props()
 	for effect_name: String in ["explosao_fogo_roxo", "explosao_fogo_vermelho", "fogo_vermelho_projetil", "fogo_roxo_projetil", "furacao_fogo", "furacao_fogo_frame_0", "furacao_fogo_frame_1", "furacao_fogo_frame_2", "furacao_fogo_frame_3", "loot_orb_brilhante"]:
@@ -963,6 +967,8 @@ func _refresh(synchronize_local_state: bool = true) -> void:
 	if not is_online_match and synchronize_local_state:
 		state = session.snapshot_for_team(0)
 	var phase: String = _phase()
+	if lobby_backdrop != null:
+		lobby_backdrop.set_mode(phase == "menu", eco_mode)
 	var own: Dictionary = state.get("own", {})
 	var prep: bool = phase == "preparation"
 	var round_index: int = int(state.get("round", 1))
@@ -3537,47 +3543,11 @@ func _build_lobby() -> void:
 
 
 func _draw_lobby() -> void:
-	draw_rect(Rect2(Vector2.ZERO, SCREEN), Color("0c0e12"))
-	if lobby_bg != null:
-		draw_texture_rect(lobby_bg, Rect2(Vector2.ZERO, SCREEN), false)
-
-	# Braseiros nos pilares laterais
-	var flame_pulse: float = 0.85 + 0.15 * sin(visual_time * 6.5)
-	draw_circle(Vector2(95, 335), 48.0 * flame_pulse, Color(0.98, 0.58, 0.15, 0.14))
-	draw_circle(Vector2(1185, 335), 48.0 * flame_pulse, Color(0.98, 0.58, 0.15, 0.14))
-
-	# Selo rúnico central no chão de pedra do coliseu
-	var seal_pulse: float = 0.5 + 0.5 * sin(visual_time * 2.2)
-	var center_seal: Vector2 = Vector2(640, 490)
-	var seal_pts: PackedVector2Array = _make_ellipse(center_seal, 130.0, 55.0, 32)
-	draw_colored_polygon(seal_pts, Color("a45cff", 0.08 * seal_pulse))
-	seal_pts.append(seal_pts[0])
-	draw_polyline(seal_pts, Color(GOLD, 0.22 * seal_pulse), 2.0, true)
-
-	# Partículas de brasa/magia atmosféricas
-	if not eco_mode:
-		for i: int in range(14):
-			var px: float = fposmod(i * 97.0 + visual_time * (12.0 + i * 3.0), 1280.0)
-			var py: float = 680.0 - fposmod(i * 63.0 + visual_time * (20.0 + (i % 5) * 8.0), 550.0)
-			var p_size: float = 1.5 + (i % 3)
-			var p_alpha: float = (0.35 + 0.25 * sin(visual_time * 3.0 + i)) * (py / 720.0)
-			draw_circle(Vector2(px, py), p_size, Color(0.95, 0.75, 0.4, p_alpha))
-
-	# Aura mística pulsante do botão JOGAR (apenas no menu principal do lobby)
-	if lobby_subview == "none":
-		var play_rect: Rect2 = Rect2(1010, 616, 230, 72)
-		var aura_pulse: float = 0.5 + 0.5 * sin(visual_time * 4.5)
-		var purple: Color = Color("9d4edd")
-		for layer: int in range(3):
-			var expand: float = 4.0 + layer * 4.5 + 3.0 * aura_pulse
-			var r: Rect2 = play_rect.grow(expand)
-			var a: float = (0.28 - layer * 0.08) * (0.8 + 0.3 * aura_pulse)
-			var box: StyleBoxFlat = StyleBoxFlat.new()
-			box.bg_color = Color(purple, a)
-			box.border_color = Color(GOLD, a * 1.3)
-			box.set_border_width_all(1 if layer > 0 else 2)
-			box.set_corner_radius_all(14 + layer * 2)
-			box.draw(get_canvas_item(), r)
+	# Arte/vídeo já compõem o fundo. Somente sombrear a faixa de navegação.
+	var clear: Color = Color(0.02, 0.01, 0.05, 0.0)
+	var shade: Color = Color(0.02, 0.01, 0.05, 0.62)
+	draw_polygon(PackedVector2Array([Vector2(0, 565), Vector2(1280, 565), Vector2(1280, 720), Vector2(0, 720)]),
+		PackedColorArray([clear, clear, shade, shade]))
 
 
 func _refresh_lobby() -> void:
@@ -3602,6 +3572,8 @@ func _refresh_lobby() -> void:
 			else:
 				audio.stop_singer_music()
 			_refresh_lobby_heroes()
+		"help":
+			_refresh_lobby_help()
 		"settings":
 			audio.stop_singer_music()
 			_refresh_lobby_settings()
@@ -3610,14 +3582,8 @@ func _refresh_lobby() -> void:
 
 
 func _refresh_lobby_main() -> void:
-	# Título e cabeçalho com arte tipográfica
-	var title_panel: Panel = _panel(lobby_root, Rect2(36, 28, 620, 108), 0.76, 12)
-	_label(title_panel, "CLASH OF ERAS", Rect2(20, 10, 580, 52), 46, GOLD)
-	_label(title_panel, "ARENA DE HERÓIS · AUTO-BATTLER TÁTICO", Rect2(22, 60, 580, 22), 15, Color("e0d8b0"))
-	_label(title_panel, "12 Heróis · Sinergias TFT · Cópias sobem nível (★1 → ★2 → ★3)", Rect2(22, 82, 580, 18), 12, Kit.MUTED)
-
 	# Pílula de Otimização & Desempenho
-	var badge_panel: Panel = _panel(lobby_root, Rect2(720, 16, 190, 38), 0.82, 19)
+	var badge_panel: Panel = _panel(lobby_root, Rect2(24, 16, 190, 38), 0.82, 19)
 	lobby_performance_label = _label(badge_panel, "MEDINDO FPS…", Rect2(8, 8, 174, 22), 13, Color("86eda5"), HORIZONTAL_ALIGNMENT_CENTER)
 
 	# Botão de Tela Cheia (F11 / Mobile Fullscreen)
@@ -3632,11 +3598,11 @@ func _refresh_lobby_main() -> void:
 	sound_button = _button(lobby_root, "SOM: LIGADO" if audio.enabled else "SOM: DESLIGADO", Rect2(1106, 16, 146, 38), _toggle_sound)
 	sound_button.add_theme_font_size_override("font_size", 12)
 
-	# Painel Central com Dicas do Jogo & Sinergias
-	var banner: Panel = _panel(lobby_root, Rect2(36, 154, 520, 172), 0.72, 10)
-	_label(banner, "✦ SISTEMA DE COMBATE & EVOLUÇÃO ✦", Rect2(18, 14, 484, 24), 16, GOLD)
-	var tip_text: String = "• Colete cópias: 2 cópias sobem para ★2; 4 cópias para ★3. A terceira cópia avança o progresso. A raridade do herói não muda.\n• Combine Vanguarda, Atacantes, Atiradores e Apoio para virar a partida.\n• Itens e vagas usam ouro; recrutar e juntar cópias é gratuito."
-	_label(banner, tip_text, Rect2(18, 42, 484, 116), 13, Kit.INK, HORIZONTAL_ALIGNMENT_LEFT, true)
+	var help: Button = _button(lobby_root, "? COMO JOGAR", Rect2(24, 66, 190, 38), func() -> void:
+		lobby_subview = "help"
+		lobby_signature = ""
+		_refresh())
+	help.add_theme_font_size_override("font_size", 13)
 
 	# Barra Inferior: HERÓIS
 	var heroes_btn: Button = _button(lobby_root, "👑 COMPÊNDIO DE HERÓIS", Rect2(36, 624, 250, 64), func() -> void:
@@ -3650,7 +3616,7 @@ func _refresh_lobby_main() -> void:
 	heroes_btn.add_theme_stylebox_override("normal", h_style)
 
 	# Barra Inferior: CONFIGURAÇÕES
-	var settings_btn: Button = _button(lobby_root, "⚙ CONFIGURAÇÕES & 30 FPS", Rect2(302, 624, 260, 64), func() -> void:
+	var settings_btn: Button = _button(lobby_root, "⚙ CONFIGURAÇÕES", Rect2(302, 624, 260, 64), func() -> void:
 		lobby_subview = "settings"
 		lobby_signature = ""
 		_refresh())
@@ -3753,6 +3719,17 @@ func _refresh_lobby_matchmaking() -> void:
 		_refresh()
 	)
 	cancel_btn.add_theme_font_size_override("font_size", 14)
+
+
+func _refresh_lobby_help() -> void:
+	var modal: Panel = _panel(lobby_root, Rect2(340, 190, 600, 340), 0.94, 14)
+	_label(modal, "COMO JOGAR", Rect2(24, 18, 500, 32), 24, GOLD)
+	_button(modal, "X", Rect2(534, 14, 42, 38), func() -> void:
+		lobby_subview = "none"
+		lobby_signature = ""
+		_refresh())
+	var tips: String = "Recrute heróis gratuitamente e posicione sua equipe nos hexágonos.\n\n2 cópias sobem para ★2; 4 cópias para ★3. A terceira cópia guarda progresso.\n\nCombine sinergias e use ouro para itens, renovar a loja e ampliar o campo.\n\nVença as rodadas para remover os corações do adversário."
+	_label(modal, tips, Rect2(24, 72, 550, 240), 17, Kit.INK, HORIZONTAL_ALIGNMENT_LEFT, true)
 
 
 func _refresh_lobby_settings() -> void:

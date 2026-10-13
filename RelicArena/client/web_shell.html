@@ -24,6 +24,7 @@ body {
 }
 
 #canvas {
+	z-index: 1;
 	display: block;
 	width: 100%;
 	height: 100%;
@@ -48,6 +49,7 @@ body {
 }
 
 #status {
+	z-index: 2;
 	background-color: $GODOT_SPLASH_COLOR;
 	display: flex;
 	flex-direction: column;
@@ -117,6 +119,7 @@ body {
 			<div id="status-notice"></div>
 		</div>
 
+		<script src="lobby_video.js"></script>
 		<script src="$GODOT_URL"></script>
 		<script>
 const GODOT_CONFIG = $GODOT_CONFIG;

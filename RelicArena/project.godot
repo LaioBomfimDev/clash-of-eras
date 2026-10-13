@@ -9,12 +9,15 @@ config/features=PackedStringArray("4.7", "GL Compatibility")
 [display]
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/size/transparent.web=true
+window/per_pixel_transparency/allowed.web=true
 window/stretch/mode="canvas_items"
 window/stretch/mode.web="viewport"
 window/stretch/aspect="keep"
 window/handheld/orientation=6
 
 [rendering]
+viewport/transparent_background.web=true
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/canvas_textures/default_texture_filter=0

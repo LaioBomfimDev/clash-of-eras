@@ -1,8 +1,8 @@
 {
-  "build_id": "clash-of-eras-release-20261013-boss-vfx",
+  "build_id": "clash-of-eras-release-20261013-lobby-vfx",
   "source": "validated-frozen-runtime",
-  "pck_sha256": "b4ea1934b85a23de2f57183e03cd46a33f74c15cef449a56ed494e3eb426e6d9",
-  "html_sha256": "ae9bb8e55ad56a597a09191690f15f27a3717504ba56c58017193869f9e6afdc",
+  "pck_sha256": "68ffa979301909029828741131eeb0058a160105d611d4aa2edf6126f11bbc7f",
+  "html_sha256": "50c4a2bf1e98d6ac8a07515c2de141a84a77ddf3cfb8fac6c890646796f8feff",
   "simulation_sha256": "76fcc85eb35fe47251bdb6eec89e4905e749338b12016a2694847cde67c55d21",
   "server_sha256": "b271e11b4a101d82392ef9712531b18af43eeb1dc0021557e108ce1262737840"
 }
