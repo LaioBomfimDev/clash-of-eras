@@ -1,0 +1,107 @@
+{
+  "checked_at_utc": "2026-10-14T04:22:45.492244+00:00",
+  "runtime_commit": "c05588f9cf9b237a77a1ab9677602632dfbc7b79",
+  "previous_commit": "8f5207276876213470e9bf3bf7938a0a26e9358c",
+  "state": "published and verified",
+  "url": "https://clash-of-eras.vercel.app/",
+  "vercel_status": "success",
+  "vercel_deploy_url": "https://vercel.com/laio-bomfims-projects/clash-of-eras/5oBPmNG2cFtYCA33zUfLhAmwgrFo",
+  "frontend": {
+    "checked_at_utc": "2026-10-14T04:21:08.636603+00:00",
+    "runtime_commit": "c05588f9cf9b237a77a1ab9677602632dfbc7b79",
+    "url": "https://clash-of-eras.vercel.app/",
+    "all_match": true,
+    "files": [
+      {
+        "file": "index.html",
+        "bytes": 7097,
+        "sha256": "db9705c882a82a177fb314c6b6f9a46e40c9b34a78a25497f775480b4c4e7912",
+        "matches_dist": true,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "file": "index.pck",
+        "bytes": 16894828,
+        "sha256": "038807539094d151fc72497f8c7bcdb0a35fe702d6caec582894efe34e2ce31d",
+        "matches_dist": true,
+        "content_type": "application/octet-stream"
+      },
+      {
+        "file": "release.json",
+        "bytes": 1827,
+        "sha256": "9d6a6f432298ea604b417dc74ac9e3d4f79d0874d312ae5137575b87bd08bb0d",
+        "matches_dist": true,
+        "content_type": "application/json; charset=utf-8",
+        "release": {
+          "build_id": "web-fx-audio-20261014",
+          "source": "exported-workspace; source hashes recorded at export",
+          "pck_sha256": "038807539094d151fc72497f8c7bcdb0a35fe702d6caec582894efe34e2ce31d",
+          "html_sha256": "db9705c882a82a177fb314c6b6f9a46e40c9b34a78a25497f775480b4c4e7912",
+          "simulation_sha256": "3a20a09655d4f30daae360bf23ad21cafb816504e92a81b531f9eea120144a4e",
+          "server_sha256": "b271e11b4a101d82392ef9712531b18af43eeb1dc0021557e108ce1262737840",
+          "dedicated_entrypoint_sha256": "fcb9ba14a6ae34f005b4bf46601e8842892cca10992b2a7d89cbf7059224eb0f",
+          "source_sha256": {
+            "client/main.gd": "f75b09b7ce61846bfa8d00b703ccca26f238b7f4ed3124110e6a0847b9a02b49",
+            "client/prototype_audio.gd": "60111fb91df3633764e208c7e14afa83722b7b12c2a24d93de535ec114234c89",
+            "assets/vfx/manifest.json": "03daa80a5641f835c7b75ab4754ae7c87f8fe865df6cc696c2d45ccd915778f0",
+            "data/debug_characters.json": "8caccce9f2c4cbd2fcdca8ee20968082bfdb3f8ce9084a9b37cf2a24897d59d7",
+            "simulation/arena_simulation.gd": "3a20a09655d4f30daae360bf23ad21cafb816504e92a81b531f9eea120144a4e",
+            "simulation/match_session.gd": "49e3a597f969cbe6b46e1d578ceaff6dcac981285843143ea559022ca42fef35",
+            "server/dedicated_server.gd": "fcb9ba14a6ae34f005b4bf46601e8842892cca10992b2a7d89cbf7059224eb0f",
+            "net/online_server.gd": "b271e11b4a101d82392ef9712531b18af43eeb1dc0021557e108ce1262737840",
+            "net/perspective_mapper.gd": "f350b318e8492cec85f472b07a97a9484151079f9b49873ce100ef747b4250e4"
+          },
+          "external_media_sha256": {
+            "lobby_video.js": "6baed39f9f2d5e78d499220963d002f83adc7ac45d8c658a7c9696ee7a2b3b38",
+            "media/lobby_loop.mp4": "354b20d054f96ce3139947e065529a701b4d10f7c57156410528a6b85f820ac0",
+            "media/lobby_poster.webp": "bb0d445c9279d2e6a22e8dc17d886a50a8677d85eb72ba10b64bab6d570c609f"
+          }
+        }
+      },
+      {
+        "file": "lobby_video.js",
+        "bytes": 6851,
+        "sha256": "6baed39f9f2d5e78d499220963d002f83adc7ac45d8c658a7c9696ee7a2b3b38",
+        "matches_dist": true,
+        "content_type": "application/javascript; charset=utf-8"
+      },
+      {
+        "file": "media/lobby_loop.mp4",
+        "bytes": 2256893,
+        "sha256": "354b20d054f96ce3139947e065529a701b4d10f7c57156410528a6b85f820ac0",
+        "matches_dist": true,
+        "content_type": "video/mp4"
+      },
+      {
+        "file": "media/lobby_poster.webp",
+        "bytes": 536628,
+        "sha256": "bb0d445c9279d2e6a22e8dc17d886a50a8677d85eb72ba10b64bab6d570c609f",
+        "matches_dist": true,
+        "content_type": "image/webp"
+      }
+    ]
+  },
+  "backend": {
+    "connected": true,
+    "endpoint": "wss://clash-of-eras-server.onrender.com",
+    "handshake_ms": 11687,
+    "joined_queue": false,
+    "pong": true,
+    "rtt_ms": 384,
+    "scope": "WebSocket handshake/ping; no queue, room, player or gameplay"
+  },
+  "public_compendium": {
+    "scope": "Real Chrome compendium navigation; no matchmaking",
+    "errors": [],
+    "screenshots": [
+      "galeria.png",
+      "snoop_ficha.png",
+      "bob_ficha.png"
+    ]
+  },
+  "limits": [
+    "WebSocket handshake/ping only, no public matchmaking or load test",
+    "Resource tests verify loading, not audible playback or physical phone performance",
+    "Four-technique cards and mastery remain visual proposals"
+  ]
+}

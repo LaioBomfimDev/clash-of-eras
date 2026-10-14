@@ -40,4 +40,4 @@ Testes de pacote comprovam carregamento de recursos, não reprodução audível 
 
 ## Commit e publicação
 
-Usuário autorizou commit geral e já havia autorizado atualizar o jogo. O commit inclui fonte validada, build, documentação, testes e referências locais; caches/ZIPs/checkpoints ignorados continuam locais. Estado final e commit serão registrados em `PUBLICACAO.json` após conferir a atualização da Vercel. Não afirmar publicação somente pela conclusão do export ou pelo push.
+Usuário autorizou commit geral e já havia autorizado atualizar o jogo. **Commit geral `c05588f9cf9b237a77a1ab9677602632dfbc7b79` publicado e conferido na Vercel.** Inclui fonte validada, build, documentação, testes e referências locais; caches/ZIPs/checkpoints ignorados continuam locais. HTML/PCK/release/JS/MP4/WebP públicos iguais à dist; galeria e fichas Bob/Snoop abriram no Chrome público sem erros. Render respondeu pong (RTT384ms, handshake11.687ms), sem entrar na fila. [Recibo final](PUBLICACAO.json). O commit posterior do recibo/documentação não muda o runtime validado.
