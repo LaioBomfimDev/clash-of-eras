@@ -1,0 +1,52 @@
+{
+  "primary": {
+    "exact_matches": 1095,
+    "different": [],
+    "missing_count": 0,
+    "missing_targeted": []
+  },
+  "frozen": {
+    "exact_matches": 1055,
+    "different": [
+      ".godot/imported/cast_north_east.png-758e341650d736ec48a0888996e0caa7.ctex",
+      ".godot/imported/cast_north_east.png-c1f77cfeeb1af322c3cb5c7de128088d.ctex",
+      ".godot/imported/cast_north_west.png-8202aab09cee0f3565236c403ea9ecbc.ctex",
+      ".godot/imported/cast_north_west.png-fee936ad34a77a67b8dfc98b5938e8a4.ctex",
+      ".godot/imported/cast_south_east.png-c771e91fc2758f8bb7da198d36af03d3.ctex",
+      ".godot/imported/cast_south_east.png-f66b631d84a51bfed926a15797f177ec.ctex",
+      ".godot/imported/cast_south_west.png-251fb46be6aaa18f3d5840dab1f47746.ctex",
+      ".godot/imported/cast_south_west.png-64dd8ef541a874cdc2d1b347c3da3f85.ctex",
+      ".godot/imported/explosao_fogo_roxo.png-2d52657605b57c09fbeb42ed15463a28.ctex",
+      ".godot/imported/explosao_fogo_vermelho.png-bf1e8c712e3a8cfc47ff8be4a45c0cd4.ctex",
+      ".godot/imported/fogo_roxo_projetil.png-3c47bcc80fd3f5da5d11f46fa6ef833f.ctex",
+      ".godot/imported/fogo_vermelho_projetil.png-77439c71d828d1e29aeccf7071b79d56.ctex",
+      ".godot/imported/furacao_fogo.png-9dfef03f429e210e44b3bb686069d6d0.ctex",
+      ".godot/imported/furacao_fogo_frame_0.png-254b9115d18b746309982667826b270f.ctex",
+      ".godot/imported/furacao_fogo_frame_1.png-193f688ad905ea1441ca57eb0d9fb578.ctex",
+      ".godot/imported/furacao_fogo_frame_2.png-68d8b7df97a2c20d81a8f4ea387bee7e.ctex",
+      ".godot/imported/furacao_fogo_frame_3.png-ea801b991533089cdb7bb6359a60db27.ctex",
+      ".godot/imported/idle_north.png-680cc9837b9604f6bd3b0e06b0e0bc59.ctex",
+      ".godot/imported/idle_north.png-e1182b0072487c28f0240714ee35b84f.ctex",
+      ".godot/imported/idle_profile_left.png-532a6dee64f9986352010e26c3578509.ctex",
+      ".godot/imported/idle_profile_left.png-e5fdcd41a4f4bb982a4052b04dd7684d.ctex",
+      ".godot/imported/idle_profile_right.png-068ecb95b5b19801fb81996295d25b6d.ctex",
+      ".godot/imported/idle_profile_right.png-0be54ebf800fddfd3b5a4161759b2040.ctex",
+      ".godot/imported/idle_south.png-0e22d951b839e38cb539a81d6ff3dc69.ctex",
+      ".godot/imported/idle_south.png-51e60596138200b1190560e0c7be41b4.ctex",
+      "data/debug_characters.json"
+    ],
+    "missing_count": 14,
+    "missing_targeted": [
+      ".godot/imported/bob_marley_star1.mp3-9084ad425fdd789fd95efa29a8f88dea.mp3str",
+      ".godot/imported/bob_marley_star2.mp3-63bdc547f7ddbdae9c14c731a4042190.mp3str",
+      ".godot/imported/bob_marley_star3.mp3-25b1b19b78f448ebb92c44bd57de6492.mp3str",
+      ".godot/imported/bob_reggae_attack_64.png-4563f4fd98eb4d4483b4f1b809f6575b.ctex",
+      ".godot/imported/bob_reggae_note.png-f156cabe20bf100ee68f9d7fbfa3f2b2.ctex",
+      ".godot/imported/cannabis_leaf.png-808c5ea6eea8745ae0db375d53b19dfe.ctex",
+      ".godot/imported/cannabis_leaf_64.png-d1127b7c3c5850050c11ed85ccc6ca7d.ctex",
+      ".godot/imported/snoop_star1.mp3-db321338de43b98f9e281d883a4ec6a3.mp3str",
+      ".godot/imported/snoop_star2.mp3-6368e19ee5dbc35218f94fd1e8eac71d.mp3str",
+      ".godot/imported/snoop_star3.mp3-ff9d9f7716e8832de9bac23e4c4c7219.mp3str"
+    ]
+  }
+}

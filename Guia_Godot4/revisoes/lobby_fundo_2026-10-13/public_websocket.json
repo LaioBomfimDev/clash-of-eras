@@ -1,0 +1,9 @@
+{
+	"connected": true,
+	"endpoint": "wss://clash-of-eras-server.onrender.com",
+	"handshake_ms": 654,
+	"joined_queue": false,
+	"pong": true,
+	"rtt_ms": 220,
+	"scope": "WebSocket handshake/ping; no queue, room, player or gameplay"
+}

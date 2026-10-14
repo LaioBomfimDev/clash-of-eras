@@ -831,7 +831,7 @@ func _run() -> void:
 	_check(int(view.state["own"]["capacity"]) == 5 and int(view.state["own"]["gold"]) == expansion_gold_before - expansion_price, "capacidade e moedas vêm da Session")
 	view.session.teams[0]["capacity"] = 8
 	view._refresh()
-	_check(view.capacity_button.disabled and view.capacity_button.text == "CAMPO MÁX.", "capacidade máxima desativa compra")
+	_check(view.capacity_button.disabled and view.capacity_btn_label != null and view.capacity_btn_label.text == "CAMPO MÁX.", "capacidade máxima desativa compra")
 	view.session.teams[0]["capacity"] = 5
 	view._refresh()
 	_click_bench_unit(view, 4)

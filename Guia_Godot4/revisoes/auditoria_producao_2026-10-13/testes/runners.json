@@ -1,0 +1,44 @@
+[
+  {
+    "runner": "tests/test_battle_audio.gd",
+    "exit_code": 0,
+    "stderr_empty": true,
+    "result_lines": [
+      "AUDIO & BOB MARLEY REPERT\u00d3RIO TESTS: 106 passed, 0 failed"
+    ]
+  },
+  {
+    "runner": "tests/test_client_performance.gd",
+    "exit_code": 0,
+    "stderr_empty": true,
+    "result_lines": [
+      "CLIENT_PERFORMANCE_RESULT: 20 passed, 0 failed"
+    ]
+  },
+  {
+    "runner": "tests/test_lobby.gd",
+    "skipped": "not found"
+  },
+  {
+    "runner": "tests/test_vfx_library.gd",
+    "exit_code": 0,
+    "stderr_empty": true,
+    "result_lines": [
+      "VFX LIBRARY TESTS: 237 passed, 0 failed"
+    ]
+  },
+  {
+    "runner": "tests/test_render_cache.gd",
+    "exit_code": 1,
+    "stderr_empty": false,
+    "result_lines": []
+  },
+  {
+    "runner": "client/smoke.gd",
+    "exit_code": 1,
+    "stderr_empty": false,
+    "result_lines": [
+      "CLIENT_SMOKE_RESULT: 487 passed, 1 failed"
+    ]
+  }
+]

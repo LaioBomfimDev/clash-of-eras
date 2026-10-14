@@ -1,0 +1,82 @@
+const fs = require('node:fs/promises');
+const path = require('node:path');
+const { chromium } = require(process.env.CLASH_PLAYWRIGHT_MODULE || 'playwright');
+(async () => {
+  const out = path.resolve(process.argv[2]);
+  const url = process.argv[3] || 'http://127.0.0.1:8769/';
+  await fs.mkdir(out, { recursive: true });
+  const browser = await chromium.launch({ executablePath: process.env.CLASH_BROWSER_EXE, headless: true });
+  const report = { scope: 'Real Chrome Web export; local bot only, no public matchmaking', checks: [], errors: [] };
+  const check = (ok, name) => { report.checks.push({ ok, name }); if (!ok) throw new Error(name); };
+  let page;
+  try {
+    const context = await browser.newContext({ viewport: { width: 1280, height: 720 }, deviceScaleFactor: 2 });
+    page = await context.newPage();
+    page.on('pageerror', error => report.errors.push(error.message));
+    page.on('console', msg => { if (/SCRIPT ERROR|^ERROR:/.test(msg.text())) report.errors.push(msg.text()); });
+    await page.addInitScript(() => {
+      const Native = window.WebSocket;
+      window.WebSocket = class extends Native { constructor(_url, protocols) { super('ws://127.0.0.1:18769', protocols); } };
+    });
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
+    await page.waitForFunction(() => !document.querySelector('#status') && window.clashLobbyBackground?.getState().time > 0.5, null, { timeout: 45000 });
+    report.warmupMetrics = await page.evaluate(() => window.__clashPerformance);
+    await new Promise(resolve => setTimeout(resolve, 2200));
+    report.animated = await page.evaluate(() => ({ state: window.clashLobbyBackground.getState(), metrics: window.__clashPerformance,
+      muted: document.querySelector('#clash-lobby-background video').muted,
+      layer: document.querySelector('#clash-lobby-background').getBoundingClientRect().toJSON() }));
+    check(report.animated.state.active && !report.animated.state.paused && report.animated.muted, 'muted video decodes and advances in lobby');
+    await page.screenshot({ path: path.join(out, 'lobby_animated.png') });
+    await page.mouse.click(420, 650);
+    await page.mouse.click(450, 338);
+    await page.waitForFunction(() => window.clashLobbyBackground.getState().paused);
+    check(await page.evaluate(() => window.clashLobbyBackground.getState().active), 'eco keeps poster active');
+    await page.mouse.click(965, 104);
+    await page.screenshot({ path: path.join(out, 'lobby_poster_eco.png') });
+    await page.mouse.click(420, 650);
+    await page.mouse.click(450, 338);
+    await page.mouse.click(965, 104);
+    await page.waitForFunction(() => !window.clashLobbyBackground.getState().paused);
+    check(true, 'leaving eco resumes animation');
+    await page.mouse.click(115, 85);
+    await page.screenshot({ path: path.join(out, 'help.png') });
+    await page.mouse.click(895, 222);
+    await page.mouse.click(1150, 650);
+    await page.waitForFunction(() => !window.clashLobbyBackground.getState().active, null, { timeout: 25000 });
+    const stopped = await page.evaluate(() => window.clashLobbyBackground.getState());
+    await new Promise(resolve => setTimeout(resolve, 700));
+    const later = await page.evaluate(() => window.clashLobbyBackground.getState());
+    check(later.paused && Math.abs(later.time - stopped.time) < 0.1, 'starting local match hides and stops video decoding timeline');
+    await page.mouse.click(450, 350);
+    await page.screenshot({ path: path.join(out, 'arena_unchanged.png') });
+    await page.mouse.click(1245, 98);
+    await page.waitForFunction(() => window.clashLobbyBackground.getState().active && !window.clashLobbyBackground.getState().paused);
+    check(true, 'returning to menu resumes background');
+    await new Promise(resolve => setTimeout(resolve, 2200));
+    report.finalMetrics = await page.evaluate(() => window.__clashPerformance);
+    await context.close();
+    const reduced = await browser.newContext({ viewport: { width: 844, height: 390 }, reducedMotion: 'reduce' });
+    page = await reduced.newPage();
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
+    await page.waitForFunction(() => !document.querySelector('#status') && window.clashLobbyBackground?.getState().active, null, { timeout: 45000 });
+    report.reduced = await page.evaluate(() => ({ state: window.clashLobbyBackground.getState(), videoSrc: document.querySelector('#clash-lobby-background video').getAttribute('src') }));
+    check(report.reduced.state.paused && !report.reduced.videoSrc, 'reduced motion uses poster without fetching MP4');
+    await page.screenshot({ path: path.join(out, 'mobile_landscape_poster.png') });
+    await reduced.close();
+    const fallback = await browser.newContext({ viewport: { width: 1280, height: 720 } });
+    page = await fallback.newPage();
+    await page.route('**/media/lobby_loop.mp4', route => route.fulfill({ status: 404, body: 'intentional media test' }));
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
+    await page.waitForFunction(() => !document.querySelector('#status') && window.clashLobbyBackground?.getState().error, null, { timeout: 45000 });
+    report.fallback = await page.evaluate(() => window.clashLobbyBackground.getState());
+    check(report.fallback.active && report.fallback.paused, 'missing media leaves usable static poster');
+    await page.screenshot({ path: path.join(out, 'poster_if_video_unavailable.png') });
+    check(report.errors.length === 0, 'no page or Godot script errors');
+  } catch (error) {
+    report.failure = error.stack;
+    if (page) await page.screenshot({ path: path.join(out, 'failure.png') }).catch(() => {});
+    process.exitCode = 1;
+  } finally { await browser.close(); }
+  await fs.writeFile(path.join(out, 'browser.json'), JSON.stringify(report, null, 2));
+  console.log(JSON.stringify(report, null, 2));
+})();

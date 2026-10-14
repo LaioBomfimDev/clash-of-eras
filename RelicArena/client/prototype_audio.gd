@@ -387,14 +387,7 @@ func _revive(duration: float) -> AudioStreamWAV:
 func _load_bob_tracks() -> void:
 	for star: int in [1, 2, 3]:
 		var path_mp3: String = "res://assets/audio/bob_marley_star%d.mp3" % star
-		var stream: AudioStream = null
-		if FileAccess.file_exists(path_mp3):
-			var bytes: PackedByteArray = FileAccess.get_file_as_bytes(path_mp3)
-			if not bytes.is_empty():
-				var mp3: AudioStreamMP3 = AudioStreamMP3.new()
-				mp3.data = bytes
-				mp3.loop = true
-				stream = mp3
+		var stream: AudioStreamMP3 = _load_looping_track(path_mp3)
 		if stream != null:
 			bob_streams[star] = stream
 			streams["bob_marley_star%d" % star] = stream
@@ -405,17 +398,22 @@ func _load_bob_tracks() -> void:
 func _load_snoop_tracks() -> void:
 	for star: int in [1, 2, 3]:
 		var path_mp3: String = "res://assets/audio/snoop_star%d.mp3" % star
-		var stream: AudioStream = null
-		if FileAccess.file_exists(path_mp3):
-			var bytes: PackedByteArray = FileAccess.get_file_as_bytes(path_mp3)
-			if not bytes.is_empty():
-				var mp3: AudioStreamMP3 = AudioStreamMP3.new()
-				mp3.data = bytes
-				mp3.loop = true
-				stream = mp3
+		var stream: AudioStreamMP3 = _load_looping_track(path_mp3)
 		if stream != null:
 			snoop_streams[star] = stream
 			streams["snoop_star%d" % star] = stream
+
+
+func _load_looping_track(path: String) -> AudioStreamMP3:
+	# ResourceLoader follows export remaps; the raw MP3 need not be in the PCK.
+	if not ResourceLoader.exists(path):
+		return null
+	var imported: AudioStreamMP3 = load(path) as AudioStreamMP3
+	if imported == null:
+		return null
+	var stream: AudioStreamMP3 = imported.duplicate() as AudioStreamMP3
+	stream.loop = true
+	return stream
 
 
 func play_cue(cue: String) -> void:
@@ -438,31 +436,13 @@ func play_cue(cue: String) -> void:
 func play_bob_music(star_level: int = 1) -> void:
 	var lvl: int = clampi(star_level, 1, 3)
 	var track_key: String = "bob_marley_star%d" % lvl
-	if current_singer_track == track_key and singer_active and is_instance_valid(music_player) and music_player.playing:
-		return
-	current_singer_track = track_key
-	singer_active = true
-	if DisplayServer.get_name() == "headless" or not enabled:
-		return
-	if is_instance_valid(music_player) and bob_streams.has(lvl):
-		music_player.stream = bob_streams[lvl]
-		music_player.volume_db = -8.0
-		music_player.play()
+	_play_singer_track(track_key)
 
 
 func play_snoop_music(star_level: int = 1) -> void:
 	var lvl: int = clampi(star_level, 1, 3)
 	var track_key: String = "snoop_star%d" % lvl
-	if current_singer_track == track_key and singer_active and is_instance_valid(music_player) and music_player.playing:
-		return
-	current_singer_track = track_key
-	singer_active = true
-	if DisplayServer.get_name() == "headless" or not enabled:
-		return
-	if is_instance_valid(music_player) and snoop_streams.has(lvl):
-		music_player.stream = snoop_streams[lvl]
-		music_player.volume_db = -8.0
-		music_player.play()
+	_play_singer_track(track_key)
 
 
 func play_singer_music(singer_key: String, star_level: int = 1) -> void:
@@ -474,17 +454,24 @@ func play_singer_music(singer_key: String, star_level: int = 1) -> void:
 		return
 	var lvl: int = clampi(star_level, 1, 3)
 	var track_key: String = "%s_star%d" % [singer_key, lvl]
+	_play_singer_track(track_key)
+
+
+func _play_singer_track(track_key: String) -> void:
+	# A singer without a loaded track must not mute the battle's sound effects.
+	if not enabled or not streams.has(track_key):
+		stop_singer_music()
+		return
+	if current_singer_track == track_key and singer_active and is_instance_valid(music_player) and music_player.playing:
+		return
 	current_singer_track = track_key
 	singer_active = true
-	if DisplayServer.get_name() == "headless" or not enabled:
+	if DisplayServer.get_name() == "headless":
 		return
-	if streams.has(track_key) and is_instance_valid(music_player):
+	if is_instance_valid(music_player):
 		music_player.stream = streams[track_key]
 		music_player.volume_db = -8.0
 		music_player.play()
-	else:
-		if is_instance_valid(music_player):
-			music_player.stop()
 
 
 func stop_singer_music() -> void:

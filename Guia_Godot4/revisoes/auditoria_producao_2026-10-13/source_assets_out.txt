@@ -1,0 +1,5 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+CLIENT_PHASE: menu; rodada 1; vidas [4, 4]
+CLIENT_READY: Clash of Eras protótipo local; lobby de boas-vindas; 30 FPS; compêndio de heróis
+EXPORTED_ASSET_RESULT: {"failed":0,"pack":"","passed":23,"scope":"resource loading and presentation contracts, not audible browser playback or balance","tracks":[{"loaded":true,"path":"res://assets/audio/bob_marley_star1.mp3","raw_present":true,"resource_present":true},{"loaded":true,"path":"res://assets/audio/bob_marley_star2.mp3","raw_present":true,"resource_present":true},{"loaded":true,"path":"res://assets/audio/bob_marley_star3.mp3","raw_present":true,"resource_present":true},{"loaded":true,"path":"res://assets/audio/snoop_star1.mp3","raw_present":true,"resource_present":true},{"loaded":true,"path":"res://assets/audio/snoop_star2.mp3","raw_present":true,"resource_present":true},{"loaded":true,"path":"res://assets/audio/snoop_star3.mp3","raw_present":true,"resource_present":true}]}

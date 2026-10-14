@@ -1,0 +1,86 @@
+{
+  "scope": "Real Chrome Web export; local bot only, no public matchmaking",
+  "checks": [
+    {
+      "ok": true,
+      "name": "muted video decodes and advances in lobby"
+    },
+    {
+      "ok": true,
+      "name": "eco keeps poster active"
+    },
+    {
+      "ok": true,
+      "name": "leaving eco resumes animation"
+    },
+    {
+      "ok": true,
+      "name": "starting local match hides and stops video decoding timeline"
+    },
+    {
+      "ok": true,
+      "name": "returning to menu resumes background"
+    },
+    {
+      "ok": true,
+      "name": "reduced motion uses poster without fetching MP4"
+    },
+    {
+      "ok": true,
+      "name": "no page or Godot script errors"
+    }
+  ],
+  "errors": [],
+  "animated": {
+    "state": {
+      "active": true,
+      "paused": false,
+      "time": 0.537655,
+      "ready": true,
+      "error": ""
+    },
+    "metrics": {
+      "client_cpu_ms": 0.3002,
+      "draw_calls": 30,
+      "fps": 10,
+      "frame_ms": 28.7988571428571,
+      "p95_frame_ms": 72.349,
+      "render_height": 720,
+      "render_primitives": 3548,
+      "render_width": 1280,
+      "rtt_ms": -1
+    },
+    "muted": true,
+    "layer": {
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 720,
+      "top": 0,
+      "right": 1280,
+      "bottom": 720,
+      "left": 0
+    }
+  },
+  "finalMetrics": {
+    "client_cpu_ms": 0.227524590163934,
+    "draw_calls": 30,
+    "fps": 60,
+    "frame_ms": 16.6572950819672,
+    "p95_frame_ms": 17.629,
+    "render_height": 720,
+    "render_primitives": 3552,
+    "render_width": 1280,
+    "rtt_ms": -1
+  },
+  "reduced": {
+    "state": {
+      "active": true,
+      "paused": true,
+      "time": 0,
+      "ready": false,
+      "error": ""
+    },
+    "videoSrc": null
+  }
+}

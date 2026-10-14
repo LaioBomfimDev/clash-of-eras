@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria de Referências Visuais & UI — Relic Arena / Clash of Eras</title>
+  <style>
+    :root {
+      --bg-main: #0c0f14;
+      --bg-card: #151b24;
+      --bg-card-hover: #1c2431;
+      --border-gold: #d4af37;
+      --border-gold-soft: rgba(212, 175, 55, 0.35);
+      --border-dark: #2a3444;
+      --text-main: #e6edf5;
+      --text-muted: #8e9db3;
+      --accent-cyan: #10b981;
+      --accent-purple: #a855f7;
+      --accent-gold: #fbbf24;
+      --accent-rose: #f43f5e;
+      --accent-blue: #38bdf8;
+      --accent-amber: #f59e0b;
+      --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      font-family: var(--font-family);
+      min-height: 100vh;
+      line-height: 1.6;
+      padding: 24px;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: -200px;
+      left: 20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.07) 0%, rgba(168, 85, 247, 0.05) 50%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    header {
+      position: relative;
+      z-index: 1;
+      max-width: 1400px;
+      margin: 0 auto 32px auto;
+      border-bottom: 1px solid var(--border-gold-soft);
+      padding-bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .badge-top {
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid var(--border-gold);
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent-gold);
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    h1 span.gold {
+      color: var(--border-gold);
+      text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+    }
+
+    p.subtitle {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 950px;
+    }
+
+    .controls-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 8px;
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tab-btn {
+      background: #111620;
+      border: 1px solid var(--border-dark);
+      color: var(--text-muted);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn:hover {
+      border-color: var(--border-gold);
+      color: var(--text-main);
+      background: #171f2c;
+    }
+
+    .tab-btn.active {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.25), rgba(212, 175, 55, 0.08));
+      border-color: var(--border-gold);
+      color: #fff;
+      box-shadow: 0 0 12px rgba(212, 175, 55, 0.2);
+    }
+
+    .search-box {
+      position: relative;
+      min-width: 300px;
+    }
+
+    .search-input {
+      width: 100%;
+      background: #111620;
+      border: 1px solid var(--border-dark);
+      border-radius: 8px;
+      padding: 9px 14px 9px 38px;
+      color: #fff;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search-input:focus {
+      border-color: var(--border-gold);
+      box-shadow: 0 0 8px rgba(212, 175, 55, 0.25);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      pointer-events: none;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+      gap: 28px;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      body {
+        padding: 16px;
+      }
+    }
+
+    .ref-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-dark);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      position: relative;
+    }
+
+    .ref-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-gold-soft);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(212, 175, 55, 0.1);
+    }
+
+    .card-banner {
+      position: relative;
+      background: #090c10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border-dark);
+      cursor: zoom-in;
+      height: 380px;
+    }
+
+    .card-banner.wide-banner {
+      height: 260px;
+    }
+
+    .card-banner img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .card-banner:hover img {
+      transform: scale(1.03);
+    }
+
+    .zoom-hint {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background: rgba(12, 15, 20, 0.85);
+      backdrop-filter: blur(4px);
+      border: 1px solid var(--border-gold-soft);
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 0.75rem;
+      color: var(--accent-gold);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      pointer-events: none;
+    }
+
+    .tag-category {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      backdrop-filter: blur(6px);
+      z-index: 2;
+    }
+
+    .tag-card {
+      background: rgba(168, 85, 247, 0.25);
+      border: 1px solid #a855f7;
+      color: #e9d5ff;
+    }
+
+    .tag-inventory {
+      background: rgba(16, 185, 129, 0.25);
+      border: 1px solid #10b981;
+      color: #a7f3d0;
+    }
+
+    .tag-meter {
+      background: rgba(244, 63, 94, 0.25);
+      border: 1px solid #f43f5e;
+      color: #fecdd3;
+    }
+
+    .tag-arena {
+      background: rgba(56, 189, 248, 0.25);
+      border: 1px solid #38bdf8;
+      color: #bae6fd;
+    }
+
+    .tag-classes {
+      background: rgba(245, 158, 11, 0.25);
+      border: 1px solid #f59e0b;
+      color: #fde68a;
+    }
+
+    .card-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      gap: 14px;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .card-filename {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-family: monospace;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .card-desc {
+      font-size: 0.93rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .section-title {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      color: var(--accent-gold);
+      margin-top: 4px;
+    }
+
+    .highlight-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .highlight-list li {
+      font-size: 0.88rem;
+      color: #cfd9e8;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .highlight-list li::before {
+      content: "✦";
+      color: var(--border-gold);
+      font-size: 0.8rem;
+      line-height: 1.4;
+    }
+
+    details {
+      background: #0d1219;
+      border: 1px solid #232d3d;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 0.88rem;
+    }
+
+    details summary {
+      cursor: pointer;
+      color: var(--border-gold);
+      font-weight: 600;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    details summary:hover {
+      color: #fff;
+    }
+
+    .transcription-text {
+      margin-top: 10px;
+      color: #94a3b8;
+      font-size: 0.84rem;
+      white-space: pre-line;
+      line-height: 1.6;
+      border-top: 1px dashed #232d3d;
+      padding-top: 10px;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: auto;
+      padding-top: 12px;
+      border-top: 1px solid var(--border-dark);
+    }
+
+    .btn-action {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.1));
+      border: 1px solid var(--border-gold);
+      color: var(--accent-gold);
+    }
+
+    .btn-primary:hover {
+      background: var(--border-gold);
+      color: #000;
+    }
+
+    .btn-secondary {
+      background: #111620;
+      border: 1px solid var(--border-dark);
+      color: var(--text-muted);
+    }
+
+    .btn-secondary:hover {
+      border-color: #64748b;
+      color: #fff;
+    }
+
+    /* Modal / Lightbox */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 7, 10, 0.94);
+      backdrop-filter: blur(8px);
+      z-index: 999;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .modal-overlay.open {
+      display: flex;
+    }
+
+    .modal-header {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .modal-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .modal-controls {
+      display: flex;
+      gap: 8px;
+    }
+
+    .modal-btn {
+      background: #1a2332;
+      border: 1px solid var(--border-dark);
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: 0.2s;
+    }
+
+    .modal-btn:hover {
+      border-color: var(--border-gold);
+      color: var(--accent-gold);
+    }
+
+    .modal-btn-close {
+      background: rgba(244, 63, 94, 0.2);
+      border-color: #f43f5e;
+      color: #f43f5e;
+    }
+
+    .modal-btn-close:hover {
+      background: #f43f5e;
+      color: #fff;
+    }
+
+    .modal-image-container {
+      position: relative;
+      max-width: 95vw;
+      max-height: 80vh;
+      overflow: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      border: 1px solid var(--border-gold-soft);
+      background: #090c10;
+      padding: 16px;
+    }
+
+    .modal-image {
+      max-width: 100%;
+      max-height: 75vh;
+      object-fit: contain;
+      transition: transform 0.2s ease;
+      user-select: none;
+    }
+
+    footer {
+      max-width: 1400px;
+      margin: 48px auto 24px auto;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      border-top: 1px solid #1a2230;
+      padding-top: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="badge-top">✦ Relic Arena / Clash of Eras ✦</div>
+    <h1>Galeria de Referências Visuais <span class="gold">&amp; UI</span></h1>
+    <p class="subtitle">
+      Repositório oficial das <strong>12 imagens de referência</strong> de interface, fichas de personagens, técnicas ativas e passivas, galeria de elenco com 25 heróis e maestrias, timeline de rodadas, arena com combate tático, inventário de relíquias, árvores de melhorias de classe e painéis de métricas com tooltips detalhados de dano.
+    </p>
+
+    <!-- BANNER PROTÓTIPO TÓPICO 1 -->
+    <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(6, 78, 59, 0.4)); border: 1px solid #10b981; border-radius: 10px; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+      <div>
+        <div style="font-weight: 800; color: #a7f3d0; font-size: 1rem; display: flex; align-items: center; gap: 8px;">
+          <span>🌟</span> TÓPICO 1: PROTÓTIPO DA GALERIA DO ELENCO &amp; MAESTRIA (Ref. 11)
+        </div>
+        <div style="font-size: 0.85rem; color: #cbd5e1; margin-top: 2px;">
+          Interface interativa fiel com grade dos 25 heróis, estrelas, filtros e modal completo de ficha de herói com técnicas ativas/passivas.
+        </div>
+      </div>
+      <a href="elenco.html" style="background: #10b981; color: #042f2e; padding: 8px 20px; border-radius: 6px; font-weight: 800; font-size: 0.9rem; text-decoration: none; box-shadow: 0 0 14px rgba(16, 185, 129, 0.5); transition: 0.2s;">
+        🚀 Abrir Protótipo Fiel da Galeria &rarr;
+      </a>
+    </div>
+
+    <div class="controls-bar">
+      <div class="tabs">
+        <button class="tab-btn active" onclick="filterGallery('all', this)">Todas (12)</button>
+        <button class="tab-btn" onclick="filterGallery('card', this)">Fichas &amp; Elenco (3)</button>
+        <button class="tab-btn" onclick="filterGallery('arena', this)">Arena &amp; Rodadas (2)</button>
+        <button class="tab-btn" onclick="filterGallery('meter', this)">Métricas &amp; Tooltips (5)</button>
+        <button class="tab-btn" onclick="filterGallery('classes', this)">Melhorias de Classe (1)</button>
+        <button class="tab-btn" onclick="filterGallery('inventory', this)">Inventário &amp; Baú (1)</button>
+      </div>
+
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" class="search-input" id="searchInput" placeholder="Pesquisar por herói, técnica, classe, dano, maestria..." oninput="handleSearch()">
+      </div>
+    </div>
+  </header>
+
+  <main id="galleryContainer">
+    <div class="grid">
+
+      <!-- ITEM 11: GALERIA COMPLETA DE HERÓIS E TROFÉUS DE MAESTRIA -->
+      <article class="ref-card" data-category="card" data-keywords="galeria elenco herois maestria 5/75 trofeus aria dragomir fiona funke grace gustav hoyoung irini kai karsu logan ming nyx pimenta pollen ratna reyna rip rowan sal skorn tilly yuuna bloqueado">
+        <div class="card-banner" onclick="openLightbox('imagens/11_galeria_elenco_e_maestria.png', '11 — Galeria do Elenco de Heróis e Troféus de Maestria')">
+          <span class="tag-category tag-card">Fichas &amp; Elenco</span>
+          <img src="imagens/11_galeria_elenco_e_maestria.png" alt="Galeria do Elenco e Troféus de Maestria" loading="lazy">
+          <div class="zoom-hint">🔍 Clique para expandir</div>
+        </div>
+        <div class="card-content">
+          <div class="card-title">
+            <span>Galeria do Elenco &amp; Troféus de Maestria</span>
+            <span class="card-filename">11_galeria_elenco_e_maestria.png</span>
+          </div>
+          <p class="card-desc">
+            Tela completa da Galeria de Heróis exibindo a grade dos 25 personagens com retratos artísticos, estrelas de nível, sistema de maestria ("5/75 Troféus de Maestria - Ganhe um troféu por vencer com cada Especialização de nível B"), barra de busca e abas Heróis vs Melhorias de Classe.
+          </p>
+
+          <div class="section-title">Elementos Visuais &amp; Mecânicas</div>
+          <ul class="highlight-list">
+            <li><strong>Catálogo Completo:</strong> 25 heróis visíveis com retratos estilizados e nomes (Aria, Dragomir, Fiona, Grace, Nyx, Pollen, Ratna, Skorn, etc.).</li>
+            <li><strong>Sistema de Estrelas &amp; Desbloqueio:</strong> Heróis comuns com 3 estrelas, alguns com 2 ou 1 estrela e silhuetas cinzas de "Bloqueado".</li>
+            <li><strong>Meta de Maestria:</strong> Contador "5/75 Troféus" incentivando vencer com cada especialização de nível B.</li>
+            <li><strong>Filtros Superiores:</strong> Botão &lt; VOLTAR, abas "Heróis" / "Melhorias de Classe", barra de pesquisa e filtro "Tudo / Incompleta".</li>
+          </ul>
+
+          <details>
+            <summary>Ver Transcrição Completa dos Textos &amp; Elenco</summary>
+            <div class="transcription-text">
+<strong>CABEÇALHO:</strong>
+- &lt; VOLTAR | Abas: [HERÓIS] | [MELHORIAS DE CLASSE]
+- Busca: "Pesquisar..." | Filtro: "Tudo"
+- Meta: "5/75 ★ TROFÉUS DE MAESTRIA — Ganhe um troféu por vencer com cada Especialização de nível B."
+- Exibição: [Tudo] | [Incompleta]
+
+<strong>ELENCO DE HERÓIS NA GRADE (25):</strong>
+1. ARIA (★★★)
+2. DRAGOMIR (★★★)
+3. FIONA (★★★)
+4. FUNKE (★★★)
+5. GRACE (★★★)
+6. GUSTAV (★★★)
+7. HOYOUNG (★★★)
+8. IRINI (★★★)
+9. KAI (★★★)
+10. KARSU (★★★)
+11. LOGAN (★★☆)
+12. MING (★★★)
+13. BLOQUEADO (★★★)
+14. NYX (★★★)
+15. PIMENTA (★★★)
+16. POLLEN (★★★)
+17. RATNA (★★★)
+18. REYNA (★★★)
+19. RIP (★★☆)
+20. ROWAN (★★☆)
+21. SAL (★★★)
+22. SKORN (★★★)
+23. TILLY (★★★)
+24. YUUNA (★☆☆)
+25. BLOQUEADO (Medusa)
+            </div>
+          </details>
+
+          <div class="card-actions">
+            <a class="btn-action btn-primary" style="background: linear-gradient(135deg, #10b981, #059669); color: #fff; font-weight: 800; border-color: #34d399;" href="elenco.html">🚀 Abrir Protótipo Fiel</a>
+            <button class="btn-action btn-secondary" onclick="openLightbox('imagens/11_galeria_elenco_e_maestria.png', '11 — Galeria do Elenco de Heróis e Troféus de Maestria')">🔍 Zoom</button>
+            <a class="btn-action btn-secondary" href="imagens/11_galeria_elenco_e_maestria.png" download="11_galeria_elenco_e_maestria.png">⬇ Baixar</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ITEM 12: TOOLTIP DE DECOMPOSIÇÃO DE DANO (KARSU) -->
+      <article class="ref-card" data-category="meter" data-keywords="tooltip decomposicao dano causado total karsu flechas congeladas dano original tecnica nyx ratna rank b">
+        <div class="card-banner" onclick="openLightbox('imagens/12_tooltip_dano_causado_detalhado.png', '12 — Tooltip Detalhado de Decomposição do Dano Causado (Karsu)')">
+          <span class="tag-category tag-meter">Métricas &amp; Tooltips</span>
+          <img src="imagens/12_tooltip_dano_causado_detalhado.png" alt="Tooltip de Decomposição de Dano Causado" loading="lazy">
+          <div class="zoom-hint">🔍 Clique para expandir</div>
+        </div>
+        <div class="card-content">
+          <div class="card-title">
+            <span>Tooltip de Decomposição de Dano</span>
+            <span class="card-filename">12_tooltip_dano_causado_detalhado.png</span>
+          </div>
+          <p class="card-desc">
+            Painel lateral de dano com tooltip flutuante detalhado mostrando a separação exata entre o Dano Original (ataques básicos / físicos) e o Dano de Técnica (magias e habilidades específicas, ex: "Flechas Congeladas").
+          </p>
+
+          <div class="section-title">Elementos Visuais &amp; Mecânicas</div>
+          <ul class="highlight-list">
+            <li><strong>Separação Precisa de Dano:</strong> Karsu causou 8.419 de dano total, sendo 4.067 de Dano Original e 4.352 de Técnica.</li>
+            <li><strong>Nome da Habilidade no Tooltip:</strong> Exibe diretamente o nome da habilidade responsável ("Flechas Congeladas: 4352").</li>
+            <li><strong>Ranking Lateral:</strong> Karsu lidera com 8.419, seguido por Nyx com 4.637 e Ratna com 2.152.</li>
+            <li><strong>Cores Codificadas:</strong> Amarelo/dourado para dano original básico e roxo/magenta para dano de técnicas mágicas.</li>
+          </ul>
+
+          <details>
+            <summary>Ver Transcrição Completa dos Textos</summary>
+            <div class="transcription-text">
+<strong>TOOLTIP ABERTO — KARSU (Rank B):</strong>
+- Dano Causado (Total): 8419
+- Dano Original: 4067 (em amarelo/dourado)
+- Dano de Técnica: 4352 (em magenta/roxo)
+- Flechas Congeladas: 4352
+
+<strong>HERÓIS NO PLACAR LATERAL:</strong>
+1. Karsu (Rank B): 8,419 de dano
+2. Nyx (Rank B): 4,637 de dano
+3. Ratna (Rank B): 2,152 de dano
+            </div>
+          </details>
+
+          <div class="card-actions">
+            <button class="btn-action btn-primary" onclick="openLightbox('imagens/12_tooltip_dano_causado_detalhado.png', '12 — Tooltip Detalhado de Decomposição do Dano Causado (Karsu)')">🔍 Visualizar Detalhes</button>
+            <a class="btn-action btn-secondary" href="imagens/12_tooltip_dano_causado_detalhado.png" download="12_tooltip_dano_causado_detalhado.png">⬇ Baixar</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ITEM 1: FICHA & PASSIVAS (RATNA) -->
+      <article class="ref-card" data-category="card" data-keywords="ratna fashionista ostentadora magnanima ficha passivas atributos critico mana magia">
+        <div class="card-banner" onclick="openLightbox('imagens/01_ficha_heroi_e_passivas.png', '01 — Ficha do Herói (Ratna) e Escolha de Técnicas Passivas')">
+          <span class="tag-category tag-card">Fichas &amp; Elenco</span>
+          <img src="imagens/01_ficha_heroi_e_passivas.png" alt="Ficha de Ratna e Escolha de Passivas" loading="lazy">
+          <div class="zoom-hint">🔍 Clique para expandir</div>
+        </div>
+        <div class="card-content">
+          <div class="card-title">
+            <span>Ficha de Herói &amp; Escolha de Passivas</span>
+            <span class="card-filename">01_ficha_heroi_e_passivas.png</span>
+          </div>
+          <p class="card-desc">
+            Interface completa mostrando a ficha do herói à esquerda (Ratna, Rank B, 3 slots de itens, grade de atributos e tooltip de Crítico) e o sistema de 3 opções de Técnicas Passivas no centro/direita.
+          </p>
+
+          <div class="section-title">Elementos Visuais &amp; Mecânicas</div>
+          <ul class="highlight-list">
+            <li><strong>Ficha de Herói:</strong> Rank B, barras de Vida (575) e Mana (55), velocidade (4), 3 slots de itens e 7 atributos em grade com ícones.</li>
+            <li><strong>Regra de Crítico:</strong> Chance até 100% (2x dano). Acima de 100, cada ponto excedente dá +1% Dano Crítico.</li>
+            <li><strong>3 Escolhas de Técnicas Passivas:</strong> Molduras chanfradas douradas hexagonais com ícones temáticos e sinergias de classe.</li>
+            <li><strong>Barra Superior:</strong> Botões "Sortear Opções [1]", "Congelar Opções", "Arraste para cá para vender" e "Prosseguir".</li>
+          </ul>
+
+          <details>
+            <summary>Ver Transcrição Completa dos Textos</summary>
+            <div class="transcription-text">
+<strong>HERÓI:</strong> RATNA (Rank B) — PV: 575 | Mana: 55 | Velocidade: 4
+<strong>ATRIBUTOS:</strong> Ataque: 20 | Defesa: 0 | Resistência: 70 | Vel: 0 | Crít: 15 | Bônus: 27 | Alcance: 4
+
+<strong>TOOLTIP CRÍT:</strong>
+"Percentual de chance que um ataque automático ou técnica ativa tem de causar o dobro do dano. Ao acumular 100 pontos de Crít, cada ponto excedente aumenta o Dano de Crít em 1%. Valor: 15 (Original: 15 + Bônus: 0). Chance de Crít: 15% [Dano Crít: 200%]"
+
+<strong>PASSIVA 1 — FASHIONISTA:</strong>
+"Ganha um espaço para itens. No início do combate, ganha 45 de Magia, 3 de Regeneração de Mana e 6 PV/s por nível de raridade de cada item equipado."
+
+<strong>PASSIVA 2 — OSTENTADORA:</strong>
+"Ganha a classe Místico e 4 de Regeneração de Mana. Ao conjurar, outros Heróis ganham 17 de Magia e 1 de Regeneração de Mana. Apenas Reforço: No início do combate, Magos e Místicos ganham 17 de Magia e 1 de Regeneração de Mana."
+
+<strong>PASSIVA 3 — MAGNÂNIMA:</strong>
+"Ganha a classe Assassino e 25 de Crít. Queda da Estrela também atinge o inimigo com menos vida nas primeiras 3 vezes que é conjurada a cada combate. Ao eliminar, ganha Furtividade por 4 segundos e ganha 5 de Crít permanentemente."
+            </div>
+          </details>
+
+          <div class="card-actions">
+            <button class="btn-action btn-primary" onclick="openLightbox('imagens/01_ficha_heroi_e_passivas.png', '01 — Ficha do Herói (Ratna) e Escolha de Técnicas Passivas')">🔍 Visualizar Detalhes</button>
+            <a class="btn-action btn-secondary" href="imagens/01_ficha_heroi_e_passivas.png" download="01_ficha_heroi_e_passivas.png">⬇ Baixar</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ITEM 9: FICHA NYX & COLEÇÃO -->
+      <article class="ref-card" data-category="card" data-keywords="nyx duelista impeto tecnicas ativa instinto fera visao agucada natureza selvagem centelha maestria trofeus cartas colecao">
+        <div class="card-banner" onclick="openLightbox('imagens/09_ficha_nyx_colecao_e_tecnicas.png', '09 — Ficha de Coleção (Nyx ★★★) e Técnicas Ativas/Passivas')">
+          <span class="tag-category tag-card">Fichas &amp; Elenco</span>
+          <img src="imagens/09_ficha_nyx_colecao_e_tecnicas.png" alt="Ficha de Nyx e Técnicas" loading="lazy">
+          <div class="zoom-hint">🔍 Clique para expandir</div>
+        </div>
+        <div class="card-content">
+          <div class="card-title">
+            <span>Ficha de Coleção (Nyx ★★★) &amp; Técnicas</span>
+            <span class="card-filename">09_ficha_nyx_colecao_e_tecnicas.png</span>
+          </div>
+          <p class="card-desc">
+            Tela completa de Coleção e Customização fora da partida com a heroína Nyx (Duelista / Ímpeto), modelo de corpo inteiro, abas (Técnicas, Jogabilidade, Personalidade), 4 cartas de técnicas e carrossel de heróis no topo com troféus de maestria.
+          </p>
+
+          <div class="section-title">Elementos Visuais &amp; Mecânicas</div>
+          <ul class="highlight-list">
+            <li><strong>Arte do Herói:</strong> Nyx em corpo inteiro com garras duplas douradas, capuz de orelhas de gato e visual anime detalhado.</li>
+            <li><strong>Carrossel Superior:</strong> Seleção rápida de todos os personagens com progresso de troféus ("5/75 troféus de maestria").</li>
+            <li><strong>Técnica Ativa com Mana:</strong> "Natureza Selvagem" com custo 20/50 Mana e escalonamento múltiplo (+50% Vel + 33% Magia + 33% Ataque).</li>
+            <li><strong>Técnicas com Escalonamento de Tempo:</strong> "Centelha" aplica Queimadura aos 10s, Gelo aos 20s e Veneno aos 30s.</li>
+          </ul>
+
+          <details>
+            <summary>Ver Transcrição Completa dos Textos</summary>
+            <div class="transcription-text">
+<strong>HERÓI:</strong> NYX ★★★ — Classes: DUELISTA | ÍMPETO
+<strong>ABAS:</strong> TÉCNICAS | JOGABILIDADE [Bloqueada] | PERSONALIDADE
+
+<strong>TÉCNICA 1 — INSTINTO DE FERA (Passiva):</strong>
+"Durante 5s de Ímpeto, ganha 5 (+25% Velocidade) de Iniciativa e 5 (+25% Ataque) de Ataque para cada vez que esta técnica for ativada neste combate. A cada 12 ataques automáticos, reativa todas as técnicas de Ímpeto da Nyx."
+
+<strong>TÉCNICA 2 — VISÃO AGUÇADA (Passiva):</strong>
+"Ganha a classe Assassino e 30 de Crít. Assassinos e Duelistas destroem instantaneamente inimigos atacados que estejam abaixo de 20 (+5 por Reforço) % de PV Máx."
+
+<strong>TÉCNICA 3 — NATUREZA SELVAGEM (Técnica Ativa [20/50 Mana]):</strong>
+"Realiza um combo de 5 golpes. Cada golpe conta como um ataque automático e causa 100 (+50% Velocidade + 33% Magia + 33% Ataque) % de dano. Se o inimigo morrer durante o combo, Nyx salta para o inimigo mais próximo e conjura a técnica novamente."
+
+<strong>TÉCNICA 4 — CENTELHA (Passiva):</strong>
+"Após 10s de Inibição, cada ataque automático aplica 1 (+1 por 50 Velocidade) de Queimadura.
+Após 20s de Inibição, cada ataque automático aplica 1 (+1 por 75 Velocidade) de Gelo.
+Após 30s de Inibição, cada ataque automático aplica 1 (+1 por 100 Velocidade) de Veneno."
+            </div>
+          </details>
+
+          <div class="card-actions">
+            <button class="btn-action btn-primary" onclick="openLightbox('imagens/09_ficha_nyx_colecao_e_tecnicas.png', '09 — Ficha de Coleção (Nyx ★★★) e Técnicas Ativas/Passivas')">🔍 Visualizar Detalhes</button>
+            <a class="btn-action btn-secondary" href="imagens/09_ficha_nyx_colecao_e_tecnicas.png" download="09_ficha_nyx_colecao_e_tecnicas.png">⬇ Baixar</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ITEM 7: ARENA TABULEIRO E PREPARAÇÃO -->
+      <article class="ref-card" data-category="arena" data-keywords="arena tabuleiro preparacao combate combater herois monstros slimes grupo reserva barras vida itens slots">
+        <div class="card-banner" onclick="openLightbox('imagens/07_arena_tabuleiro_e_preparacao.png', '07 — Arena de Combate e Fase de Preparação Completa')">
+          <span class="tag-category tag-arena">Arena &amp; Rodadas</span>
+          <img src="imagens/07_arena_tabuleiro_e_preparacao.png" alt="Arena de Combate e Preparação" loading="lazy">
+          <div class="zoom-hint">🔍 Clique para expandir</div>
+        </div>
+        <div class="card-content">
+          <div class="card-title">
+            <span>Arena de Combate &amp; Preparação</span>
+            <span class="card-filename">07_arena_tabuleiro_e_preparacao.png</span>
+          </div>
+          <p class="card-desc">
+            Visão geral da arena do tabuleiro durante a fase de preparação. Apresenta o posicionamento dos heróis, barras flutuantes de vida com 3 slots de itens em cada um, inimigos (slimes e besta alada), barra de grupo/reserva e botão "COMBATER".
+          </p>
+
+          <div class="section-title">Elementos Visuais &amp; Mecânicas</div>
+          <ul class="highlight-list">
+            <li><strong>HUD Sobre os Heróis:</strong> Barra de vida verde com valor numérico e 3 caixas de itens equipados flutuando sobre a cabeça.</li>
+            <li><strong>Inimigos no Tabuleiro:</strong> Monstros verdes de dentes afiados (1.160 PV) e criatura alada vermelha (600 PV).</li>
+            <li><strong>Botão Central:</strong> "COMBATER" com fundo verde-esmeralda e moldura chanfrada em ouro.</li>
+            <li><strong>Barra Inferior Dupla:</strong> Seção "GRUPO" com retratos hexagonais dos heróis em campo e "RESERVA" com 5 slots circulares.</li>
+          </ul>
+
+          <details>
+            <summary>Ver Transcrição Completa dos Textos</summary>
+            <div class="transcription-text">
+<strong>ARENA &amp; COMBATENTES:</strong>
+- Ratna: 717 PV | 1 Cajado equipado | 2 slots livres
+- Suporte (loira): 675 PV | 1 Garra verde equipada | 2 slots livres
+- Guerreiro (machado): 825 PV | 3 slots livres
+- Inimigos: 2 Criaturas de lodo/ossos (1.160 PV cada) e 1 Besta alada vermelha (600 PV)
+- Botão de Ação: "COMBATER"
+- Barra de Rodapé: "GRUPO" (Heróis ativos) | "RESERVA" (5 slots vazios) | "Comentar (Enter)"
+            </div>
+          </details>
+
+          <div class="card-actions">
+            <button class="btn-action btn-primary" onclick="openLightbox('imagens/07_arena_tabuleiro_e_preparacao.png', '07 — Arena de Combate e Fase de Preparação Completa')">🔍 Visualizar Detalhes</button>
+            <a class="btn-action btn-secondary" href="imagens/07_arena_tabuleiro_e_preparacao.png" download="07_arena_tabuleiro_e_preparacao.png">⬇ Baixar</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ITEM 6: BARRA SUPERIOR RODADAS E TEMPO -->
+      <article class="ref-card" data-category="arena" data-keywords="barra superior timeline rodadas estagios ouro cronometro tempo boss mini-boss ampulheta">
+        <div class="card-banner wide-banner" onclick="openLightbox('imagens/06_barra_superior_rodadas_e_tempo.png', '06 — Barra Superior de Estágios, Rodadas e Cronômetro')">
+          <span class="tag-category tag-arena">Arena &amp; Rodadas</span>
+          <img src="imagens/06_barra_superior_rodadas_e_tempo.png" alt="Barra Superior de Rodadas e Tempo" loading="lazy">
+          <div class="zoom-hint">🔍 Clique para expandir</div>
+        </div>
+        <div class="card-content">
+          <div class="card-title">
+            <span>Barra Superior de Rodadas &amp; Cronômetro</span>
+            <span class="card-filename">06_barra_superior_rodadas_e_tempo.png</span>
+          </div>
+          <p class="card-desc">
+            Barra superior que guia a progressão da partida: exibe o saldo de ouro do jogador à esquerda, a timeline sequencial de encontros com ícones e marcadores no centro, o cronômetro oficial da rodada e a ampulheta à direita.
+          </p>
+
+          <div class="section-title">Elementos Visuais &amp; Mecânicas</div>
+          <ul class="highlight-list">
+            <li><strong>Contador de Moedas:</strong> Hexágono dourado com número "11" e moldura metálica.</li>
+            <li><strong>Timeline de Rodadas:</strong> Ícones para combate comum (espadas), reforço/loja, evento desconhecido (?), combate de elite com marcador verde, baús/pilares, acampamento com fogueira, mini-boss caveira e boss final com coroa.</li>
+            <li><strong>Cronômetro de Rodada:</strong> "00:00" em moldura chanfrada com ícone de relógio central.</li>
+            <li><strong>Ícone de Ampulheta:</strong> Ampulheta partida indicando controle ou pausa de tempo na fase.</li>
+          </ul>
+
+          <details>
+            <summary>Ver Transcrição Completa dos Textos</summary>
+            <div class="transcription-text">
+<strong>ESTRUTURA DA BARRA:</strong>
+- Saldo de Ouro: 11 moedas
+- Sequência de Encontros:
+  1. Espadas (Combate normal)
+  2. Ícone de Bênção/Reforço
+  3. Espadas
+  4. '?' (Encontro surpresa)
+  5. Espadas verdes com triângulo (Combate Atual / Elite)
+  6. Pilares / Baús (Recompensa de itens)
+  7. Espadas
+  8. '?'
+  9. Espadas
+  10. Fogueira (Descanso / Cura / Preparação especial)
+  11. Caveira Vermelha com Chifres (Mini-Boss)
+  12. '...'
+  13. Caveira com Coroa (Boss Final)
+- Cronômetro central: 00:00
+- Ampulheta partida no canto direito
+            </div>
+          </details>
+
+          <div class="card-actions">
+            <button class="btn-action btn-primary" onclick="openLightbox('imagens/06_barra_superior_rodadas_e_tempo.png', '06 — Barra Superior de Estágios, Rodadas e Cronômetro')">🔍 Visualizar Detalhes</button>
+            <a class="btn-action btn-secondary" href="imagens/06_barra_superior_rodadas_e_tempo.png" download="06_barra_superior_rodadas_e_tempo.png">⬇ Baixar</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ITEM 10: MELHORIAS DE CLASSE (ASSASSINO) -->
+      <article class="ref-card" data-category="classes" data-keywords="melhoria classe assassino veneno cristais abundancia critico talento arvore">
+        <div class="card-banner" onclick="openLightbox('imagens/10_melhorias_de_classe_assassino.png', '10 — Painel de Melhorias de Classe (Assassino)')">
+          <span class="tag-category tag-classes">Melhorias de Classe</span>
+          <img src="imagens/10_melhorias_de_classe_assassino.png" alt="Melhorias de Classe Assassino" loading="lazy">
+          <div class="zoom-hint">🔍 Clique para expandir</div>
+        </div>
+        <div class="card-content">
+          <div class="card-title">
+            <span>Melhorias de Classe (Assassino)</span>
+            <span class="card-filename">10_melhorias_de_classe_assassino.png</span>
+          </div>
+          <p class="card-desc">
+            Painel da árvore de talentos/melhorias de sinergia de classes com 7 classes no topo e uma grade de 8 cartas de melhorias específicas para a classe Assassino, com efeitos de veneno, acúmulo de cristais e dano crítico massivo.
+          </p>
+
+          <div class="section-title">Elementos Visuais &amp; Mecânicas</div>
+          <ul class="highlight-list">
+            <li><strong>Barra de Classes no Topo:</strong> 7 círculos com as classes do jogo (Assassino em destaque vermelho).</li>
+            <li><strong>8 Cartas de Melhoria:</strong> Molduras chanfradas vermelhas com ícones temáticos e sinergias de combate.</li>
+            <li><strong>Mecânicas de Veneno:</strong> "Investida Venenosa", "Lâmina Venenosa (+80% Crít contra envenenados)" e "Olho Venenoso (aplica 30 de veneno em todos)".</li>
+            <li><strong>Mecânica Econômica de Cristais:</strong> "Coletor de Cristais" e "Abundância" (Crítico escalando com cristais guardados).</li>
+          </ul>
+
+          <details>
+            <summary>Ver Transcrição Completa dos Textos</summary>
+            <div class="transcription-text">
+<strong>CLASSE SELECIONADA:</strong> ASSASSINO (7 classes no cabeçalho)
+
+<strong>1. ABUNDÂNCIA:</strong> "Durante 10s de Ímpeto, Assassinos ganham 1 de Crít para cada Cristal no banco. Reforço."
+<strong>2. COLETOR DE CRISTAIS:</strong> "A cada dois Críticos, ganha 1 Cristal."
+<strong>3. CRESCIMENTO CRÍTICO:</strong> "Ao realizar um Crít, ganha 1 de Ataque e 1 de Magia permanentemente."
+<strong>4. DEFESA CRÍTICA:</strong> "No início do combate, se este Herói estiver na linha de frente, ele ganha 0 (+250% Dano Crítico) de Defesa."
+<strong>5. INVESTIDA VENENOSA:</strong> "Ao realizar um Crít, aplica 1 (+10% Dano Crítico) de Veneno no alvo."
+<strong>6. LÂMINA VENENOSA:</strong> "Ganha +80% de Crít contra inimigos com Veneno."
+<strong>7. MIRA CERTA E VELOZ:</strong> "Durante 10s de Ímpeto, ganha +100% de Crít."
+<strong>8. OLHO VENENOSO:</strong> "No início do combate, aplica 30 (+50% Dano Crítico) de Veneno em todos os inimigos."
+            </div>
+          </details>
+
+          <div class="card-actions">
+            <button class="btn-action btn-primary" onclick="openLightbox('imagens/10_melhorias_de_classe_assassino.png', '10 — Painel de Melhorias de Classe (Assassino)')">🔍 Visualizar Detalhes</button>
+            <a class="btn-action btn-secondary" href="imagens/10_melhorias_de_classe_assassino.png" download="10_melhorias_de_classe_assassino.png">⬇ Baixar</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ITEM 8: ESTATÍSTICAS DETALHADAS DE COMBATE COM TOOLTIP -->
+      <article class="ref-card" data-category="meter" data-keywords="atributos estatisticas detalhadas combate tooltip pollen dano bloqueado protecao duracao jornada">
+        <div class="card-banner" onclick="openLightbox('imagens/08_estatisticas_detalhadas_combate.png', '08 — Janela de Atributos & Estatísticas Detalhadas com Tooltip')">
+          <span class="tag-category tag-meter">Métricas &amp; Tooltips</span>
+          <img src="imagens/08_estatisticas_detalhadas_combate.png" alt="Janela de Atributos e Estatísticas Detalhadas" loading="lazy">
+          <div class="zoom-hint">🔍 Clique para expandir</div>
+        </div>
+        <div class="card-content">
+          <div class="card-title">
+            <span>Atributos &amp; Estatísticas Detalhadas</span>
+            <span class="card-filename">08_estatisticas_detalhadas_combate.png</span>
+          </div>
+          <p class="card-desc">
+            Janela modal com o resumo aprofundado do combate: abas "ESTATÍSTICAS" e "ATRIBUTOS DE HERÓI", tempos de jornada e combate, confronto contra os chefes e tooltip flutuante detalhado dividindo o dano sofrido em dano real, dano bloqueado e dano absorvido por escudos de proteção.
+          </p>
+
+          <div class="section-title">Elementos Visuais &amp; Mecânicas</div>
+          <ul class="highlight-list">
+            <li><strong>Cabeçalho de Tempo:</strong> Duração da Jornada (2min 52,7s) e Duração do Combate (41,3s).</li>
+            <li><strong>Confronto Visual:</strong> Retratos dos 3 heróis vs 2 caveiras sombrias dos chefes.</li>
+            <li><strong>Barras Multifásicas:</strong> Roxo para dano causado (Ratna causou 7.453!), verde para dano sofrido e cinza para mitigado.</li>
+            <li><strong>Tooltip "Pollen":</strong> Total de 1.101 de Dano Sofrido detalhado em 757 de dano real, 294 bloqueado e 50 absorvido por proteção.</li>
+          </ul>
+
+          <details>
+            <summary>Ver Transcrição Completa dos Textos</summary>
+            <div class="transcription-text">
+<strong>JANELA:</strong> ATRIBUTOS — Abas: ESTATÍSTICAS | ATRIBUTOS DE HERÓI
+- Duração da Jornada: 2min 52,7s
+- Duração do Combate: 41,3s
+- Confronto: 3 heróis aliados vs 2 chefes
+
+<strong>BARRAS POR HERÓI:</strong>
+1. Ratna: 7.453 (Dano Causado) | 304 | 224
+2. Guerreiro: 620 | 1.050 | 0
+3. Pollen (Suporte): 502 | 1.101 | 150
+
+<strong>TOOLTIP ABERTO — POLLEN:</strong>
+- Dano Sofrido (Total): 1101
+- Dano Sofrido: 757 (em verde)
+- Dano Bloqueado: 294 (em cinza)
+- Dano Sofrido por Proteção: 50 (em amarelo)
+            </div>
+          </details>
+
+          <div class="card-actions">
+            <button class="btn-action btn-primary" onclick="openLightbox('imagens/08_estatisticas_detalhadas_combate.png', '08 — Janela de Atributos & Estatísticas Detalhadas com Tooltip')">🔍 Visualizar Detalhes</button>
+            <a class="btn-action btn-secondary" href="imagens/08_estatisticas_detalhadas_combate.png" download="08_estatisticas_detalhadas_combate.png">⬇ Baixar</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ITEM 3: CURA E PROTEÇÃO -->
+      <article class="ref-card" data-category="meter" data-keywords="cura protecao escudo estatisticas combate meter placar suporte michael">
+        <div class="card-banner" onclick="openLightbox('imagens/03_estatisticas_cura_e_protecao.png', '03 — Métricas de Combate — Cura e Proteção')">
+          <span class="tag-category tag-meter">Métricas &amp; Tooltips</span>
+          <img src="imagens/03_estatisticas_cura_e_protecao.png" alt="Estatísticas de Cura e Proteção" loading="lazy">
+          <div class="zoom-hint">🔍 Clique para expandir</div>
+        </div>
+        <div class="card-content">
+          <div class="card-title">
+            <span>Métricas — Cura e Proteção</span>
+            <span class="card-filename">03_estatisticas_cura_e_protecao.png</span>
+          </div>
+          <p class="card-desc">
+            Painel compacto com a aba de suporte (Cruz Médica) exibindo barras bicolores que diferenciam cura direta de escudos gerados para os aliados.
+          </p>
+
+          <div class="section-title">Elementos Visuais &amp; Mecânicas</div>
+          <ul class="highlight-list">
+            <li><strong>3 Abas no Cabeçalho:</strong> Espadas (Dano Causado), Escudo (Dano Sofrido) e Cruz (Cura e Proteção ativa).</li>
+            <li><strong>Barra Bicolor Segmentada:</strong> Herói Rank C com 374 pontos (segmento amarelo para escudos/proteção e segmento verde para cura).</li>
+            <li><strong>Ratna (Rank B):</strong> 72 pontos (barra verde pura de auto-regeneração).</li>
+            <li><strong>Botão de Gráfico:</strong> Alternador no canto superior direito para exibir gráfico detalhado.</li>
+          </ul>
+
+          <details>
+            <summary>Ver Transcrição Completa dos Textos</summary>
+            <div class="transcription-text">
+<strong>PAINEL:</strong> CURA E PROTEÇÃO
+- Herói Rank C (Retrato feminino com óculos): 374 (Barra mista: amarelo de escudo + verde de cura)
+- Herói Rank B (Ratna): 72 (Barra verde de cura)
+- Slot inferior: vazio/reserva circular
+            </div>
+          </details>
+
+          <div class="card-actions">
+            <button class="btn-action btn-primary" onclick="openLightbox('imagens/03_estatisticas_cura_e_protecao.png', '03 — Métricas de Combate — Cura e Proteção')">🔍 Visualizar Detalhes</button>
+            <a class="btn-action btn-secondary" href="imagens/03_estatisticas_cura_e_protecao.png" download="03_estatisticas_cura_e_protecao.png">⬇ Baixar</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ITEM 4: DANO CAUSADO -->
+      <article class="ref-card" data-category="meter" data-keywords="dano causado dps ataque magico fisico barras estatisticas combate">
+        <div class="card-banner" onclick="openLightbox('imagens/04_estatisticas_dano_causado.png', '04 — Métricas de Combate — Dano Causado')">
+          <span class="tag-category tag-meter">Métricas &amp; Tooltips</span>
+          <img src="imagens/04_estatisticas_dano_causado.png" alt="Estatísticas de Dano Causado" loading="lazy">
+          <div class="zoom-hint">🔍 Clique para expandir</div>
+        </div>
+        <div class="card-content">
+          <div class="card-title">
+            <span>Métricas — Dano Causado (DPS)</span>
+            <span class="card-filename">04_estatisticas_dano_causado.png</span>
+          </div>
+          <p class="card-desc">
+            Painel com a aba de Espadas ativada mostrando o ranking de dano infligido pelas unidades durante a rodada.
+          </p>
+
+          <div class="section-title">Elementos Visuais &amp; Mecânicas</div>
+          <ul class="highlight-list">
+            <li><strong>Líder de Dano:</strong> Ratna (Rank B) no topo com 3.904 de dano (barra horizontal magenta com ponta dourada para crítico).</li>
+            <li><strong>Segundo Lugar:</strong> Herói Rank C com 239 de dano (barra amarela curta proporcional).</li>
+            <li><strong>Retratos Circulares:</strong> Moldura com insígnia de classe/nível (letras B e C estilizadas em ouro e prata).</li>
+            <li><strong>Design Limpo:</strong> Fundo escuro texturizado com tipografia de fácil leitura para dispositivos móveis e PC.</li>
+          </ul>
+
+          <details>
+            <summary>Ver Transcrição Completa dos Textos</summary>
+            <div class="transcription-text">
+<strong>PAINEL:</strong> DANO CAUSADO
+- Herói Rank B (Ratna): 3.904 (Barra magenta/roxa com ponta dourada)
+- Herói Rank C (Feminino com óculos): 239 (Barra amarela)
+- Slot inferior: vazio/reserva circular
+            </div>
+          </details>
+
+          <div class="card-actions">
+            <button class="btn-action btn-primary" onclick="openLightbox('imagens/04_estatisticas_dano_causado.png', '04 — Métricas de Combate — Dano Causado')">🔍 Visualizar Detalhes</button>
+            <a class="btn-action btn-secondary" href="imagens/04_estatisticas_dano_causado.png" download="04_estatisticas_dano_causado.png">⬇ Baixar</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ITEM 5: DANO SOFRIDO -->
+      <article class="ref-card" data-category="meter" data-keywords="dano sofrido tank defesa vida armadura resistencia barras estatisticas">
+        <div class="card-banner" onclick="openLightbox('imagens/05_estatisticas_dano_sofrido.png', '05 — Métricas de Combate — Dano Sofrido')">
+          <span class="tag-category tag-meter">Métricas &amp; Tooltips</span>
+          <img src="imagens/05_estatisticas_dano_sofrido.png" alt="Estatísticas de Dano Sofrido" loading="lazy">
+          <div class="zoom-hint">🔍 Clique para expandir</div>
+        </div>
+        <div class="card-content">
+          <div class="card-title">
+            <span>Métricas — Dano Sofrido (Tank)</span>
+            <span class="card-filename">05_estatisticas_dano_sofrido.png</span>
+          </div>
+          <p class="card-desc">
+            Painel com a aba de Escudo selecionada indicando o total de dano absorvido ou recebido por cada combatente.
+          </p>
+
+          <div class="section-title">Elementos Visuais &amp; Mecânicas</div>
+          <ul class="highlight-list">
+            <li><strong>Herói Tank / Linha de Frente:</strong> Herói Rank C absorveu 706 de dano (barra com segmento verde de vida perdida e segmento laranja).</li>
+            <li><strong>Linha de Trás (Backline):</strong> Ratna (Rank B) recebeu 0 de dano, permanecendo totalmente intacta.</li>
+            <li><strong>Clareza Tática:</strong> Permite ao jogador avaliar instantaneamente quem tomou foco e se a linha de frente cumpriu o papel de proteção.</li>
+          </ul>
+
+          <details>
+            <summary>Ver Transcrição Completa dos Textos</summary>
+            <div class="transcription-text">
+<strong>PAINEL:</strong> DANO SOFRIDO
+- Herói Rank C (Feminino com óculos): 706 (Barra verde com segmento amarelo)
+- Herói Rank B (Ratna): 0 (Barra vazia, indicando foco perfeito da linha de frente)
+- Slot inferior: vazio/reserva circular
+            </div>
+          </details>
+
+          <div class="card-actions">
+            <button class="btn-action btn-primary" onclick="openLightbox('imagens/05_estatisticas_dano_sofrido.png', '05 — Métricas de Combate — Dano Sofrido')">🔍 Visualizar Detalhes</button>
+            <a class="btn-action btn-secondary" href="imagens/05_estatisticas_dano_sofrido.png" download="05_estatisticas_dano_sofrido.png">⬇ Baixar</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ITEM 2: INVENTARIO VERTICAL -->
+      <article class="ref-card" data-category="inventory" data-keywords="bau inventario slots itens reliquias vertical lateral bancada">
+        <div class="card-banner" onclick="openLightbox('imagens/02_inventario_vertical_itens.png', '02 — Barra Vertical de Inventário e Baú de Itens')">
+          <span class="tag-category tag-inventory">Inventário &amp; Baú</span>
+          <img src="imagens/02_inventario_vertical_itens.png" alt="Barra Vertical de Inventário" loading="lazy">
+          <div class="zoom-hint">🔍 Clique para expandir</div>
+        </div>
+        <div class="card-content">
+          <div class="card-title">
+            <span>Barra Vertical de Inventário &amp; Baú</span>
+            <span class="card-filename">02_inventario_vertical_itens.png</span>
+          </div>
+          <p class="card-desc">
+            Painel lateral vertical para armazenamento de itens obtidos ou componentes de relíquias. Fica fixado na lateral do tabuleiro com um botão superior de baú.
+          </p>
+
+          <div class="section-title">Elementos Visuais &amp; Mecânicas</div>
+          <ul class="highlight-list">
+            <li><strong>Ícone de Baú no Topo:</strong> Botão com fundo verde-esmeralda e contorno metálico dourado.</li>
+            <li><strong>Estrutura de 7 Slots:</strong> Grade vertical de 7 compartimentos quadrados para guardar itens antes de equipá-los nos heróis.</li>
+            <li><strong>Estilo de Moldura:</strong> Fundo translúcido escuro (cinza chumbo) com cantos chanfrados em detalhes dourados chanfrados.</li>
+            <li><strong>Interação Proposta:</strong> Ideal para arrastar e soltar (drag &amp; drop) itens diretamente para os personagens na arena.</li>
+          </ul>
+
+          <details>
+            <summary>Ver Transcrição Completa dos Textos</summary>
+            <div class="transcription-text">
+<strong>ESTRUTURA:</strong>
+- Botão superior: Ícone de Baú de Relíquias (verde-esmeralda).
+- Coluna com 7 slots quadrados para componentes ou itens completos.
+- Acabamento com cantos chanfrados dourados em estilo Art Déco / Fantasia Tecnológica.
+            </div>
+          </details>
+
+          <div class="card-actions">
+            <button class="btn-action btn-primary" onclick="openLightbox('imagens/02_inventario_vertical_itens.png', '02 — Barra Vertical de Inventário e Baú de Itens')">🔍 Visualizar Detalhes</button>
+            <a class="btn-action btn-secondary" href="imagens/02_inventario_vertical_itens.png" download="02_inventario_vertical_itens.png">⬇ Baixar</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- LIGHTBOX MODAL -->
+  <div class="modal-overlay" id="lightboxModal" onclick="closeLightbox(event)">
+    <div class="modal-header" onclick="event.stopPropagation()">
+      <div class="modal-title" id="modalTitle">Visualização de Referência</div>
+      <div class="modal-controls">
+        <button class="modal-btn" onclick="zoomIn()">🔍+ Ampliar</button>
+        <button class="modal-btn" onclick="zoomOut()">🔍- Reduzir</button>
+        <button class="modal-btn" onclick="resetZoom()">⟲ Resetar</button>
+        <button class="modal-btn modal-btn-close" onclick="closeModalDirect()">✕ Fechar (ESC)</button>
+      </div>
+    </div>
+    <div class="modal-image-container" onclick="event.stopPropagation()">
+      <img id="modalImg" class="modal-image" src="" alt="Zoom da Referência">
+    </div>
+  </div>
+
+  <footer>
+    <p><strong>Relic Arena / Clash of Eras</strong> — 12 imagens preservadas com segurança em <code>referencias_futuras/imagens/</code>.</p>
+    <p style="margin-top: 4px; color: #64748b;">Galeria interativa gerada para consulta offline permanente, sem dependências externas.</p>
+  </footer>
+
+  <script>
+    let currentZoom = 1;
+    const modal = document.getElementById('lightboxModal');
+    const modalImg = document.getElementById('modalImg');
+    const modalTitle = document.getElementById('modalTitle');
+
+    function openLightbox(src, title) {
+      modalImg.src = src;
+      modalTitle.textContent = title;
+      currentZoom = 1;
+      modalImg.style.transform = `scale(1)`;
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModalDirect() {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function closeLightbox(e) {
+      if (e.target === modal) {
+        closeModalDirect();
+      }
+    }
+
+    function zoomIn() {
+      currentZoom = Math.min(currentZoom + 0.25, 3.5);
+      modalImg.style.transform = `scale(${currentZoom})`;
+    }
+
+    function zoomOut() {
+      currentZoom = Math.max(currentZoom - 0.25, 0.5);
+      modalImg.style.transform = `scale(${currentZoom})`;
+    }
+
+    function resetZoom() {
+      currentZoom = 1;
+      modalImg.style.transform = `scale(1)`;
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('open')) {
+        closeModalDirect();
+      }
+    });
+
+    function filterGallery(category, btn) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.ref-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function handleSearch() {
+      const term = document.getElementById('searchInput').value.toLowerCase().trim();
+      const cards = document.querySelectorAll('.ref-card');
+
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        const keywords = card.getAttribute('data-keywords') || '';
+        if (text.includes(term) || keywords.includes(term)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

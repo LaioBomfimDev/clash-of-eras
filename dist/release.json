@@ -1,8 +1,25 @@
 {
-  "build_id": "clash-of-eras-release-20261013-lobby-vfx",
-  "source": "validated-frozen-runtime",
-  "pck_sha256": "68ffa979301909029828741131eeb0058a160105d611d4aa2edf6126f11bbc7f",
-  "html_sha256": "50c4a2bf1e98d6ac8a07515c2de141a84a77ddf3cfb8fac6c890646796f8feff",
-  "simulation_sha256": "76fcc85eb35fe47251bdb6eec89e4905e749338b12016a2694847cde67c55d21",
-  "server_sha256": "b271e11b4a101d82392ef9712531b18af43eeb1dc0021557e108ce1262737840"
+  "build_id": "web-fx-audio-20261014",
+  "source": "exported-workspace; source hashes recorded at export",
+  "pck_sha256": "038807539094d151fc72497f8c7bcdb0a35fe702d6caec582894efe34e2ce31d",
+  "html_sha256": "db9705c882a82a177fb314c6b6f9a46e40c9b34a78a25497f775480b4c4e7912",
+  "simulation_sha256": "3a20a09655d4f30daae360bf23ad21cafb816504e92a81b531f9eea120144a4e",
+  "server_sha256": "b271e11b4a101d82392ef9712531b18af43eeb1dc0021557e108ce1262737840",
+  "dedicated_entrypoint_sha256": "fcb9ba14a6ae34f005b4bf46601e8842892cca10992b2a7d89cbf7059224eb0f",
+  "source_sha256": {
+    "client/main.gd": "f75b09b7ce61846bfa8d00b703ccca26f238b7f4ed3124110e6a0847b9a02b49",
+    "client/prototype_audio.gd": "60111fb91df3633764e208c7e14afa83722b7b12c2a24d93de535ec114234c89",
+    "assets/vfx/manifest.json": "03daa80a5641f835c7b75ab4754ae7c87f8fe865df6cc696c2d45ccd915778f0",
+    "data/debug_characters.json": "8caccce9f2c4cbd2fcdca8ee20968082bfdb3f8ce9084a9b37cf2a24897d59d7",
+    "simulation/arena_simulation.gd": "3a20a09655d4f30daae360bf23ad21cafb816504e92a81b531f9eea120144a4e",
+    "simulation/match_session.gd": "49e3a597f969cbe6b46e1d578ceaff6dcac981285843143ea559022ca42fef35",
+    "server/dedicated_server.gd": "fcb9ba14a6ae34f005b4bf46601e8842892cca10992b2a7d89cbf7059224eb0f",
+    "net/online_server.gd": "b271e11b4a101d82392ef9712531b18af43eeb1dc0021557e108ce1262737840",
+    "net/perspective_mapper.gd": "f350b318e8492cec85f472b07a97a9484151079f9b49873ce100ef747b4250e4"
+  },
+  "external_media_sha256": {
+    "lobby_video.js": "6baed39f9f2d5e78d499220963d002f83adc7ac45d8c658a7c9696ee7a2b3b38",
+    "media/lobby_loop.mp4": "354b20d054f96ce3139947e065529a701b4d10f7c57156410528a6b85f820ac0",
+    "media/lobby_poster.webp": "bb0d445c9279d2e6a22e8dc17d886a50a8677d85eb72ba10b64bab6d570c609f"
+  }
 }

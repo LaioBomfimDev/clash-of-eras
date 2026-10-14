@@ -1,0 +1,38 @@
+[
+  {
+    "runner": "tests/test_lobby_ui.gd",
+    "headless": true,
+    "exit_code": 1,
+    "stderr_empty": false,
+    "result_lines": [
+      "LOBBY & HEROES TESTS: 26 passed, 2 failed"
+    ]
+  },
+  {
+    "runner": "client/smoke.gd",
+    "headless": true,
+    "exit_code": 0,
+    "stderr_empty": true,
+    "result_lines": [
+      "CLIENT_SMOKE_RESULT: 488 passed, 0 failed"
+    ]
+  },
+  {
+    "runner": "tests/test_render_cache.gd",
+    "headless": false,
+    "exit_code": 0,
+    "stderr_empty": true,
+    "result_lines": [
+      "RENDER_CACHE_RESULT: 10 passed, 0 failed"
+    ]
+  },
+  {
+    "runner": "client/smoke.gd",
+    "headless": false,
+    "exit_code": 0,
+    "stderr_empty": true,
+    "result_lines": [
+      "CLIENT_SMOKE_RESULT: 488 passed, 0 failed"
+    ]
+  }
+]

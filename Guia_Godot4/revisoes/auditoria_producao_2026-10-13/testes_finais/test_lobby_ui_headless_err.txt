@@ -1,0 +1,17 @@
+ERROR: FAIL: fundo pixel art do Coliseu carregado em 640×360
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/test_lobby_ui.gd:30)
+       [1] _test_lobby_basics (res://tests/test_lobby_ui.gd:36)
+       [2] _initialize (res://tests/test_lobby_ui.gd:16)
+ERROR: FAIL: hero_preview_control visível na árvore
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/test_lobby_ui.gd:30)
+       [1] _test_lobby_hero_compendium (res://tests/test_lobby_ui.gd:137)
+       [2] _initialize (res://tests/test_lobby_ui.gd:18)
+SCRIPT ERROR: Invalid call. Nonexistent function 'queue_redraw' in base 'Nil'.
+   at: _test_lobby_hero_compendium (res://tests/test_lobby_ui.gd:144)
+   GDScript backtrace (most recent call first):
+       [0] _test_lobby_hero_compendium (res://tests/test_lobby_ui.gd:144)
+       [1] _initialize (res://tests/test_lobby_ui.gd:18)

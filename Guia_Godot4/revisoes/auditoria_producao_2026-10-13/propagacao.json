@@ -1,0 +1,11 @@
+{
+  "primary_matches_validated_candidate": true,
+  "propagated": [
+    "client/main.gd",
+    "client/prototype_audio.gd",
+    "client/smoke.gd",
+    "export_presets.cfg",
+    "tools/export_web.py",
+    "tests/test_exported_assets.gd"
+  ]
+}

@@ -1,5 +1,9 @@
 # Cérebro — regras atuais
 
+**Auditoria de produção, 2026-10-14:** usuário pediu comparar Vercel e pasta original e fazer commit de tudo. Confirmado que Bob/Snoop/Lula/Boss novos já estavam no PCK de `8f52072`; diferenças reais: artes64 de Bob/folha do Snoop sem uso, músicas Bob/Snoop não carregando no export e compêndio Galeria/Ficha ainda sem commit. Integração64 preserva tamanho de desenho e PNGs; ResourceLoader corrige seis músicas; cantor sem faixa não silencia SFX; asas do Lula corrigidas. WAV duplicados excluídos somente da Web, originais preservados. As quatro técnicas por herói na ficha são **propostas em estudo**, não regras implementadas; maestria/coleção continuam protótipos visuais. [Diff, validação e estado de publicação](revisoes/auditoria_producao_2026-10-13/DIFF_PRODUCAO.md). Automação contínua permanece pausada.
+
+**Lobby atualizado em 2026-10-13:** o usuário forneceu uma imagem e um vídeo e confirmou uso **somente no lobby/menu inicial**. Originais preservados em `visuais/lobby_fundo_02/originais/`. Implementação: MP4 silencioso pelo navegador, OGV separado no Godot nativo, imagem estática no modo econômico/redução de movimento/falha de vídeo. Reprodução pausa fora do lobby e com a aba oculta. Logo integrado à arte; dicas acessíveis em “Como jogar”. Publicação paralela encontrada no commit `8f52072` foi preservada e validada no link público; não reenviar a release antiga por cima. [Entrega, evidências e limites](revisoes/lobby_fundo_2026-10-13/ENTREGA.md). Automação contínua permanece pausada.
+
 
 
 Atualizado em 2026-10-13. Nome de trabalho: **Clash of Eras**; disponibilidade de nome/marca ainda não pesquisada. A pasta técnica continua `RelicArena`.

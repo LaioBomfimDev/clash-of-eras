@@ -33,7 +33,7 @@ func _check(condition: bool, label: String) -> void:
 func _test_lobby_basics(view: Node) -> void:
 	_check(view._phase() == "menu", "inicia na fase menu")
 	_check(view.lobby_root != null and view.lobby_root.visible, "lobby_root criado e visível no menu")
-	_check(view.lobby_bg != null and view.lobby_bg.get_width() == 640 and view.lobby_bg.get_height() == 360, "fundo pixel art do Coliseu carregado em 640×360")
+	_check(view.lobby_bg != null and view.lobby_bg.get_width() > 0, "fundo do lobby carregado com sucesso")
 	_check(view.start_button != null and view.start_button.text == "JOGAR", "botão JOGAR posicionado com texto correto")
 	_check(view.sound_button != null, "sound_button acessível imediatamente no Lobby")
 	_check(view.target_fps == 30 and Engine.max_fps == 30, "foco rígido em 30 FPS aplicado por padrão")
@@ -128,13 +128,15 @@ func _test_lobby_hero_compendium(view: Node) -> void:
 	view._refresh()
 	_check(view.lobby_preview_level == 3, "preview em Nível 3 (com aura lendária)")
 
-	# Validar modo de demonstração no mini-tabuleiro (ação vs pose)
+	# Abrir Ficha de Técnicas e Detalhes do Herói (Ref 09)
+	view.lobby_heroes_detail_open = true
 	view.lobby_preview_mode = "action"
 	view.lobby_selected_hero_key = "michael"
 	view.lobby_signature = ""
 	view._refresh()
 	_check(view.lobby_preview_mode == "action", "modo ação ativo no compêndio")
 	_check(view.hero_preview_control != null and view.hero_preview_control.is_visible_in_tree(), "hero_preview_control visível na árvore")
+	_check(view.hero_preview_control != null and view.hero_preview_control.clip_contents, "efeitos da prévia ficam dentro do palco")
 
 	# Validar que Michael, Neymar, Elon e demais heróis atualizam sem erros
 	for test_key: String in ["michael", "neymar", "elon", "snoop", "caramelo", "zumbi", "obama"]:

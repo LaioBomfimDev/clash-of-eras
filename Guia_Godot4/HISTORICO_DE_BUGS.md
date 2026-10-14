@@ -825,3 +825,39 @@ O primeiro bug de combate foi registrado como BUG-001. Se uma ocorrência acima 
 
 
 **Publicação posterior do BUG-030:** usuário autorizou atualizar o jogo; commit`999a37d` publicado em2026-10-13. HTML ePCK públicos conferem porSHA-256 com a build validada. Servidor Render respondeu pong/nonce onde a baseline anterior conectava mas não respondia; nenhum probe entrou na fila. Lobby/resize públicoDPR1/2:8/0, ambos a60FPS; isso não mede combate público. [Recibo](revisoes/deploy_2026-10-13/PUBLICACAO.json). Mudanças posteriores da outra IA no workspace original foram preservadas e não misturadas nesta release.
+
+### BUG-031 — Suíte legada de UI do Compêndio falhava após transição para arquitetura Galeria/Ficha
+
+**Reprodução/investigação (2026-10-14):** A execução de `tests/test_lobby_ui.gd` retornou 2 falhas: uma asserção rígida de dimensões antigas do background do lobby (640×360 vs 1672px do fundo atualizado em 2026-10-13) e uma tentativa de invocar `hero_preview_control.queue_redraw()` com valor nulo. A falha ocorreu porque a reformulação do Compêndio (baseada nas referências 11 e 09) passou a abrir primeiro a Galeria de Cards de Heróis e apenas instanciar o palco `hero_preview_control` ao abrir a Ficha Técnica Detalhada (`lobby_heroes_detail_open = true`).
+
+**Causa/mudança:** Atualização do teste `test_lobby_ui.gd` para habilitar `lobby_heroes_detail_open = true` ao testar os modos de ação e pose da demonstração, e flexibilização da verificação de dimensões do fundo do lobby para aceitar texturas válidas do novo backdrop.
+
+**Validação:** Execução headless no Godot 4.7.2 confirmou `LOBBY & HEROES TESTS: 31 passed, 0 failed`. Suíte completa do projeto executada: Simulação 326/0, Partidas Completas 602/0, Sessão 173/0, Boss 70/0, Áudio 106/0, Background 7/0 e Loja 15/0, todos com saída 0 e sem regressões.
+
+**Complemento da auditoria de produção:** a cópia congelada inicial ainda tinha o teste antigo de Galeria/Ficha e reproduziu a falha. A atualização paralela desse runner foi preservada e reexecutada:31/0. Smoke também esperava o texto no Button de capacidade; o botão atual usa `capacity_btn_label`. Ajustado o teste para verificar o rótulo visível e o estado desabilitado, mantendo o contrato. Não era falha de compra/economia. Logs iniciais e finais em `revisoes/auditoria_producao_2026-10-13/`.
+
+### BUG-032 — Músicas de Bob e Snoop ausentes no jogo exportado
+
+**Reprodução/investigação (2026-10-14):** Vercel HTML/PCK/release conferiram byte a byte com dist. Num projeto vazio, montado apenas o PCK publicado, `PrototypeAudio.new()` e recarga explícita retornaram zero faixas Bob/Snoop. Os seis MP3 brutos não existem no PCK, enquanto ResourceLoader encontra seis AudioStreamMP3 importados com35s. Consultados BUG-028 e os registros de exportação; não havia caso de áudio remapeado. [Baseline](revisoes/auditoria_producao_2026-10-13/exportacao/audio_public_pack_failure.json).
+
+**Causa/mudança:** `_load_bob_tracks`/`_load_snoop_tracks` usavam FileAccess para ler o arquivo fonte, ausente após conversão em `.mp3str`. Agora ResourceLoader segue o remapeamento e cada instância recebe uma cópia do recurso com loop. Não incluídos MP3 brutos redundantes. [Documentação oficial](https://docs.godotengine.org/en/stable/classes/class_fileaccess.html).
+
+**Validação:** teste combinado no PCK anterior10/19falhas (inclui também faixa ausente e artes64); no candidato29/0, seis faixas carregadas sem arquivo bruto. Teste fonte23/0 e áudio existente106/0, saída0/stderr vazio. Não é prova de reprodução audível em celular. [Relatório](revisoes/auditoria_producao_2026-10-13/DIFF_PRODUCAO.md).
+
+### BUG-033 — Cantor sem faixa silenciava os efeitos da batalha
+
+**Reprodução/investigação (2026-10-14):** após selecionar Bob, `play_singer_music("michael",3)` no PCK anterior deixava `singer_active=true`, apesar de nenhuma faixa Michael existir. `play_cue` usa essa flag para suprimir sons de combate. BUG-032 explica a indisponibilidade das faixas exportadas, mas não esse estado indevido.
+
+**Mudança/validação:** seleção de faixa foi centralizada; sem faixa carregada ou áudio desabilitado, limpar seleção e manter SFX elegíveis. Não foi criada música nem mudada a disputa de cantores. Regressão do PCK cobre transição Bob→Michael sem faixa, áudio desligado→Snoop, religamento e faixa válida. Candidato29/0 e áudio106/0, logs em `revisoes/auditoria_producao_2026-10-13/`.
+
+### BUG-034 — Asa do Lula gerava polígono inválido
+
+**Reprodução/investigação (2026-10-14):** smoke da fonte candidata registrou repetidamente `Invalid polygon data, triangulation failed` em `_draw_lula_angel_wings`. O código anterior calculava a coordenada da ponta com cosseno que orientava as duas pontas para o mesmo lado em parte do ciclo; a asa esquerda cruzava seus próprios contornos. Não atribuir esses erros à rede ou a um asset faltante. Logs iniciais preservados em `revisoes/auditoria_producao_2026-10-13/testes/smoke_err.txt`.
+
+**Mudança/validação:** ponta construída com sinal do lado antes da rotação, mantendo batida, cores e demais penas. Smoke488/0 headless e488/0 OpenGL após mudança, ambos stderr vazio; cache gráfico10/0 OpenGL. A falha inicial de capacidade era expectativa antiga do runner (BUG-031), corrigida separadamente. Nenhuma regra do revive alterada.
+
+### BUG-035 — Prévia do Snoop divergente do efeito da batalha e fora do palco
+
+**Reprodução/investigação (2026-10-14):** captura real Chrome `revisoes/auditoria_producao_2026-10-13/compendio/snoop_ficha.png` mostrou fumaça lilás transbordando sobre os cards de técnicas. O combate já aplicava modulate verde em `_smoke_vfx_data`, mas `_draw_preview_vfx` usava a textura sem esse tom; o novo palco reduzido não recortava seu desenho. BUG-031 descrevia a navegação do compêndio, não essa apresentação.
+
+**Mudança/validação:** o helper da prévia usa o mesmo tom verde/transparência da batalha para fumaça; `hero_preview_control.clip_contents=true` limita o desenho ao palco. Lobby32/0, PCK29/0, navegação Chrome sem erros; captura final `compendio_final/snoop_ficha.png` inspecionada com fumaça verde e recortada. Nenhum alcance/dano alterado.

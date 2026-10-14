@@ -1,0 +1,95 @@
+ERROR: EXPORTED_ASSET_FAIL: Bob has all three exported tracks
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:22)
+       [1] _run (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:34)
+ERROR: EXPORTED_ASSET_FAIL: Snoop has all three exported tracks
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:22)
+       [1] _run (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:35)
+ERROR: EXPORTED_ASSET_FAIL: bob_marley_star1 loads and loops for 35s
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:22)
+       [1] _run (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:43)
+ERROR: EXPORTED_ASSET_FAIL: bob_marley_star1 owns its loop configuration
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:22)
+       [1] _run (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:44)
+ERROR: EXPORTED_ASSET_FAIL: bob_marley_star2 loads and loops for 35s
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:22)
+       [1] _run (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:43)
+ERROR: EXPORTED_ASSET_FAIL: bob_marley_star2 owns its loop configuration
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:22)
+       [1] _run (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:44)
+ERROR: EXPORTED_ASSET_FAIL: bob_marley_star3 loads and loops for 35s
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:22)
+       [1] _run (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:43)
+ERROR: EXPORTED_ASSET_FAIL: bob_marley_star3 owns its loop configuration
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:22)
+       [1] _run (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:44)
+ERROR: EXPORTED_ASSET_FAIL: snoop_star1 loads and loops for 35s
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:22)
+       [1] _run (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:43)
+ERROR: EXPORTED_ASSET_FAIL: snoop_star1 owns its loop configuration
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:22)
+       [1] _run (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:44)
+ERROR: EXPORTED_ASSET_FAIL: snoop_star2 loads and loops for 35s
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:22)
+       [1] _run (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:43)
+ERROR: EXPORTED_ASSET_FAIL: snoop_star2 owns its loop configuration
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:22)
+       [1] _run (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:44)
+ERROR: EXPORTED_ASSET_FAIL: snoop_star3 loads and loops for 35s
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:22)
+       [1] _run (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:43)
+ERROR: EXPORTED_ASSET_FAIL: snoop_star3 owns its loop configuration
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:22)
+       [1] _run (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:44)
+ERROR: EXPORTED_ASSET_FAIL: singer without track does not mute battle SFX
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:22)
+       [1] _run (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:52)
+ERROR: EXPORTED_ASSET_FAIL: missing track clears stale selection
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:22)
+       [1] _run (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:53)
+ERROR: EXPORTED_ASSET_FAIL: disabled audio stays inactive after singer update
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:22)
+       [1] _run (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:56)
+ERROR: EXPORTED_ASSET_FAIL: Bob uses existing detailed 64px art
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:22)
+       [1] _run (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:67)
+ERROR: EXPORTED_ASSET_FAIL: Snoop uses existing detailed 64px art
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:22)
+       [1] _run (C:/Users/m/Documents/Relic Arena MY/checkpoints/producao_2026-10-13/fonte_candidata/RelicArena/tests/test_exported_assets.gd:68)

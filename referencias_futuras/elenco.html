@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elenco & Maestria — Protótipo Fiel da Interface</title>
+  <style>
+    :root {
+      --bg-teal-deep: #07191d;
+      --bg-teal-main: #0b272c;
+      --bg-teal-light: #0f363c;
+      --bg-teal-card: #0d2a2f;
+      --border-teal: #194f57;
+      --border-teal-glow: #22d3ee;
+      --border-gold: #d4af37;
+      --text-teal-bright: #5eead4;
+      --text-teal-muted: #81a8ab;
+      --text-white: #f0fdfa;
+      --star-gold: #facc15;
+      --star-empty: #335357;
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: radial-gradient(circle at 50% 20%, #0d383e 0%, #071c20 60%, #040f12 100%);
+      color: var(--text-white);
+      font-family: var(--font-family);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      user-select: none;
+    }
+
+    /* Subtle background speed lines / geometric streaks matching the reference */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        -35deg,
+        transparent,
+        transparent 60px,
+        rgba(34, 211, 238, 0.015) 60px,
+        rgba(34, 211, 238, 0.015) 120px
+      );
+      pointer-events: none;
+    }
+
+    /* TOP NAVIGATION BAR */
+    .top-nav {
+      height: 64px;
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(25, 79, 87, 0.6);
+      background: rgba(7, 25, 29, 0.85);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .btn-voltar {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-teal-muted);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: color 0.2s, transform 0.2s;
+    }
+
+    .btn-voltar:hover {
+      color: #fff;
+      transform: translateX(-3px);
+    }
+
+    .center-tabs {
+      display: flex;
+      background: #061619;
+      border: 1px solid var(--border-teal);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .nav-tab {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 24px;
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      color: var(--text-teal-muted);
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      transition: all 0.2s;
+    }
+
+    .nav-tab.active {
+      background: #0f393f;
+      color: #fff;
+      box-shadow: inset 0 0 10px rgba(94, 234, 212, 0.2);
+    }
+
+    .nav-tab:hover:not(.active) {
+      color: var(--text-white);
+      background: rgba(15, 57, 63, 0.4);
+    }
+
+    .right-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .search-bar {
+      position: relative;
+    }
+
+    .search-bar input {
+      background: #061619;
+      border: 1px solid var(--border-teal);
+      border-radius: 6px;
+      padding: 7px 12px 7px 32px;
+      font-size: 0.85rem;
+      color: #fff;
+      outline: none;
+      width: 220px;
+      transition: border-color 0.2s, width 0.2s;
+    }
+
+    .search-bar input:focus {
+      border-color: var(--text-teal-bright);
+      width: 260px;
+    }
+
+    .search-bar span {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.8rem;
+      color: var(--text-teal-muted);
+    }
+
+    .dropdown-filter {
+      background: #061619;
+      border: 1px solid var(--border-teal);
+      border-radius: 6px;
+      padding: 7px 16px;
+      color: var(--text-teal-muted);
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .dropdown-filter:hover {
+      border-color: var(--text-teal-bright);
+      color: #fff;
+    }
+
+    /* SUB-HEADER / MAESTRIA INFO */
+    .subheader {
+      padding: 24px 48px 16px 48px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      max-width: 1600px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .maestria-info h2 {
+      font-size: 1.55rem;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .maestria-info h2 .gold-star {
+      color: var(--star-gold);
+      font-size: 1.3rem;
+      text-shadow: 0 0 10px rgba(250, 204, 21, 0.5);
+    }
+
+    .maestria-info p {
+      font-size: 0.95rem;
+      color: var(--text-teal-muted);
+      margin-top: 4px;
+    }
+
+    .status-toggle {
+      display: flex;
+      background: #061619;
+      border: 1px solid var(--border-teal);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .status-btn {
+      padding: 6px 16px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      border: none;
+      background: transparent;
+      color: var(--text-teal-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .status-btn.active {
+      background: #114249;
+      color: #fff;
+    }
+
+    /* HEROES GRID */
+    .roster-container {
+      flex: 1;
+      padding: 8px 48px 48px 48px;
+      max-width: 1600px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .heroes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 20px 16px;
+    }
+
+    @media (min-width: 1200px) {
+      .heroes-grid {
+        grid-template-columns: repeat(10, 1fr);
+      }
+    }
+
+    @media (max-width: 1199px) and (min-width: 900px) {
+      .heroes-grid {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+
+    @media (max-width: 899px) {
+      .heroes-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    /* INDIVIDUAL HERO CARD */
+    .hero-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1);
+      position: relative;
+    }
+
+    .hero-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .portrait-wrap {
+      width: 100%;
+      aspect-ratio: 1 / 1.15;
+      background: #092025;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid rgba(34, 211, 238, 0.25);
+      position: relative;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .hero-card:hover .portrait-wrap {
+      border-color: var(--text-teal-bright);
+      box-shadow: 0 0 16px rgba(94, 234, 212, 0.35);
+    }
+
+    .portrait-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s;
+    }
+
+    .hero-card:hover .portrait-img {
+      transform: scale(1.06);
+    }
+
+    /* Fallback stylized canvas / avatar if image is generated */
+    .portrait-avatar {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg, #123d44 0%, #081d22 100%);
+      position: relative;
+    }
+
+    .avatar-icon {
+      font-size: 2.4rem;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.6));
+    }
+
+    .locked-card .portrait-wrap {
+      border-color: #1e3538;
+      filter: grayscale(1) opacity(0.5);
+    }
+
+    .locked-card:hover .portrait-wrap {
+      border-color: #4b666a;
+      box-shadow: none;
+    }
+
+    .stars-row {
+      display: flex;
+      gap: 3px;
+      margin-top: 6px;
+      font-size: 0.85rem;
+    }
+
+    .star-filled {
+      color: var(--star-gold);
+      text-shadow: 0 0 6px rgba(250, 204, 21, 0.4);
+    }
+
+    .star-empty {
+      color: var(--star-empty);
+    }
+
+    .hero-name {
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      margin-top: 3px;
+      color: #e2e8f0;
+      text-transform: uppercase;
+      text-align: center;
+      transition: color 0.2s;
+    }
+
+    .hero-card:hover .hero-name {
+      color: var(--text-teal-bright);
+    }
+
+    .locked-card .hero-name {
+      color: #64748b;
+    }
+
+    /* MODAL: HERO SHEET (FICHA DE COLEÇÃO - ESTILO NYX 09) */
+    .sheet-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(4, 15, 18, 0.95);
+      backdrop-filter: blur(12px);
+      z-index: 100;
+      display: none;
+      flex-direction: column;
+      overflow-y: auto;
+      padding: 24px;
+    }
+
+    .sheet-modal.active {
+      display: flex;
+    }
+
+    .sheet-top-nav {
+      max-width: 1400px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(25, 79, 87, 0.5);
+    }
+
+    .sheet-close-btn {
+      background: rgba(244, 63, 94, 0.15);
+      border: 1px solid #f43f5e;
+      color: #f43f5e;
+      padding: 8px 18px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .sheet-close-btn:hover {
+      background: #f43f5e;
+      color: #fff;
+    }
+
+    /* MINI HERO SELECTOR CAROUSEL AT MODAL TOP */
+    .sheet-carousel {
+      max-width: 1400px;
+      width: 100%;
+      margin: 16px auto;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      scrollbar-width: thin;
+      scrollbar-color: #194f57 transparent;
+    }
+
+    .carousel-thumb {
+      width: 44px;
+      height: 44px;
+      border-radius: 4px;
+      border: 1px solid var(--border-teal);
+      background: #081d22;
+      overflow: hidden;
+      cursor: pointer;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      transition: all 0.2s;
+    }
+
+    .carousel-thumb:hover, .carousel-thumb.selected {
+      border-color: var(--text-teal-bright);
+      box-shadow: 0 0 10px rgba(94, 234, 212, 0.5);
+      transform: translateY(-2px);
+    }
+
+    /* SHEET CONTENT LAYOUT */
+    .sheet-body {
+      max-width: 1400px;
+      width: 100%;
+      margin: 20px auto;
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    @media (max-width: 980px) {
+      .sheet-body {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* LEFT: HERO FULL BODY */
+    .sheet-hero-art {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg, rgba(13, 42, 47, 0.4) 0%, rgba(7, 25, 29, 0.8) 100%);
+      border: 1px solid var(--border-teal);
+      border-radius: 12px;
+      padding: 32px 20px;
+      position: relative;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .sheet-hero-art .art-avatar {
+      font-size: 8rem;
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6));
+    }
+
+    .hero-art-name {
+      margin-top: 20px;
+      font-size: 2.2rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hero-art-stars {
+      color: var(--star-gold);
+      font-size: 1.4rem;
+    }
+
+    .hero-tags-row {
+      display: flex;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .hero-class-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      background: rgba(34, 211, 238, 0.12);
+      border: 1px solid var(--text-teal-bright);
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-teal-bright);
+    }
+
+    /* RIGHT: TECHNIQUES & TABS */
+    .sheet-details {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .sub-tabs-row {
+      display: flex;
+      gap: 8px;
+      border-bottom: 1px solid var(--border-teal);
+      padding-bottom: 12px;
+    }
+
+    .sub-tab-btn {
+      background: #092025;
+      border: 1px solid var(--border-teal);
+      padding: 8px 20px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: var(--text-teal-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .sub-tab-btn.active {
+      background: #114249;
+      color: #fff;
+      border-color: var(--text-teal-bright);
+      box-shadow: 0 0 10px rgba(94, 234, 212, 0.25);
+    }
+
+    .sub-tab-btn.locked {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    /* TECHNIQUES GRID (4 CARDS LIKE REFERENCE 09) */
+    .techniques-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 16px;
+    }
+
+    .tech-card {
+      background: #0a1f24;
+      border: 1px solid var(--border-gold);
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s;
+    }
+
+    .tech-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .tech-header-icon {
+      align-self: center;
+      width: 44px;
+      height: 44px;
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid var(--border-gold);
+      transform: rotate(45deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 6px;
+      margin-bottom: 14px;
+    }
+
+    .tech-header-icon span {
+      transform: rotate(-45deg);
+      font-size: 1.2rem;
+    }
+
+    .tech-title {
+      font-size: 0.95rem;
+      font-weight: 900;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .tech-type {
+      font-size: 0.72rem;
+      color: var(--text-teal-muted);
+      text-align: center;
+      margin-top: 2px;
+      margin-bottom: 12px;
+    }
+
+    .tech-desc {
+      font-size: 0.82rem;
+      color: #cbd5e1;
+      line-height: 1.5;
+      flex-grow: 1;
+    }
+
+    .tech-mana {
+      color: #38bdf8;
+      font-weight: 700;
+    }
+
+    .tech-maestria-footer {
+      margin-top: 14px;
+      padding-top: 8px;
+      border-top: 1px solid rgba(25, 79, 87, 0.4);
+      font-size: 0.72rem;
+      color: var(--star-gold);
+      text-align: center;
+      font-weight: 700;
+    }
+
+    /* FOOTER INFO */
+    .footer-note {
+      text-align: center;
+      padding: 24px;
+      color: var(--text-teal-muted);
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(25, 79, 87, 0.5);
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP NAVIGATION BAR -->
+  <header class="top-nav">
+    <a href="index.html" class="btn-voltar">
+      <span>&#9664;</span> VOLTAR ÀS REFERÊNCIAS
+    </a>
+
+    <div class="center-tabs">
+      <button class="nav-tab active">
+        <span>&#9638;</span> HERÓIS
+      </button>
+      <button class="nav-tab" onclick="alert('Melhorias de Classe (Assassino, Duelista, etc.) disponível na referência 10!')">
+        MELHORIAS DE CLASSE
+      </button>
+    </div>
+
+    <div class="right-controls">
+      <div class="search-bar">
+        <span>&#128269;</span>
+        <input type="text" id="heroSearch" placeholder="Pesquisar..." oninput="filterHeroes()">
+      </div>
+      <div class="dropdown-filter" id="filterStatus" onclick="toggleFilter()">
+        <span>&#9660;</span> Tudo
+      </div>
+    </div>
+  </header>
+
+  <!-- SUBHEADER MAESTRIA -->
+  <section class="subheader">
+    <div class="maestria-info">
+      <h2>5/75 <span class="gold-star">&#9733;</span> TROFÉUS DE MAESTRIA</h2>
+      <p>Ganhe um troféu por vencer com cada Especialização de nível B.</p>
+    </div>
+
+    <div class="status-toggle">
+      <button class="status-btn active" id="btnAll" onclick="setStatusFilter('all')">Tudo</button>
+      <button class="status-btn" id="btnIncomplete" onclick="setStatusFilter('incomplete')">Incompleta</button>
+    </div>
+  </section>
+
+  <!-- HEROES GRID -->
+  <main class="roster-container">
+    <div class="heroes-grid" id="heroesGrid">
+      <!-- Cards rendered via JS -->
+    </div>
+  </main>
+
+  <!-- MODAL: FICHA DE HERÓI (ESTILO NYX / RATNA) -->
+  <div class="sheet-modal" id="heroModal">
+    <div class="sheet-top-nav">
+      <button class="btn-voltar" onclick="closeHeroModal()">
+        <span>&#9664;</span> VOLTAR AO ELENCO
+      </button>
+      <button class="sheet-close-btn" onclick="closeHeroModal()">
+        &#10005; Fechar
+      </button>
+    </div>
+
+    <!-- Mini Carousel Topo -->
+    <div class="sheet-carousel" id="modalCarousel"></div>
+
+    <!-- Sheet Body -->
+    <div class="sheet-body">
+      <!-- Coluna Esquerda: Arte & Identidade -->
+      <div class="sheet-hero-art">
+        <div class="art-avatar" id="modalAvatar">&#129497;</div>
+        <div class="hero-art-name">
+          <span id="modalHeroName">NYX</span>
+          <span class="hero-art-stars" id="modalHeroStars">&#9733;&#9733;&#9733;</span>
+        </div>
+        <div class="hero-tags-row" id="modalTags">
+          <span class="hero-class-tag">&#9876; DUELISTA</span>
+          <span class="hero-class-tag">&#9889; ÍMPETO</span>
+        </div>
+      </div>
+
+      <!-- Coluna Direita: Técnicas & Abas -->
+      <div class="sheet-details">
+        <div class="sub-tabs-row">
+          <button class="sub-tab-btn active">TÉCNICAS</button>
+          <button class="sub-tab-btn locked">&#128274; JOGABILIDADE</button>
+          <button class="sub-tab-btn">PERSONALIDADE</button>
+        </div>
+
+        <div class="techniques-grid" id="modalTechniques">
+          <!-- 4 Cards de Técnicas inseridos dinamicamente -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-note">
+    Protótipo visual interativo baseado na referência oficial <code>11_galeria_elenco_e_maestria.png</code> e <code>09_ficha_nyx_colecao_e_tecnicas.png</code>.
+  </footer>
+
+  <script>
+    // LISTA COMPLETA DOS HERÓIS DA REFERÊNCIA + INTEGRADOS DO NOSSO PROJETO
+    const HEROES = [
+      { id: "aria", name: "Aria", stars: 3, icon: "🧙‍♀️", locked: false, classes: ["Mago", "Arcano"],
+        techniques: [
+          { name: "Fluxo Arcano", type: "Técnica Passiva", icon: "✨", desc: "A cada 3 conjurações, seus ataques causam dano em área em cascata." },
+          { name: "Prisma de Luz", type: "Técnica Ativa [30/60 Mana]", icon: "🔮", desc: "Dispara feixes prismáticos causando 320 (+40% Magia) a 3 inimigos." },
+          { name: "Sobrecarga", type: "Técnica Passiva", icon: "⚡", desc: "Ganha +20% de Dano Mágico quando a mana está acima de 50%." },
+          { name: "Proteção Astral", type: "Técnica Passiva", icon: "🛡️", desc: "Gera um escudo de 250 ao sofrer dano letal uma vez por combate." }
+        ]
+      },
+      { id: "dragomir", name: "Dragomir", stars: 3, icon: "🧛‍♂️", locked: false, classes: ["Vampiro", "Guerreiro"],
+        techniques: [
+          { name: "Drenagem Sombria", type: "Técnica Passiva", icon: "🩸", desc: "Cura 25% de todo o dano físico causado em ataques corpo a corpo." },
+          { name: "Golpe Noturno", type: "Técnica Ativa [20/50 Mana]", icon: "🗡️", desc: "Golpeia o alvo causando 450 de dano e silenciando por 2 segundos." },
+          { name: "Forma de Morcego", type: "Técnica Passiva", icon: "🦇", desc: "Ao cair abaixo de 30% de HP, fica invulnerável por 1.5s." },
+          { name: "Fome Insaciável", type: "Técnica Passiva", icon: "⚡", desc: "Cada abate concede permanentemente +5 de Ataque neste combate." }
+        ]
+      },
+      { id: "fiona", name: "Fiona", stars: 3, icon: "⚔️", locked: false, classes: ["Duelista", "Vanguarda"],
+        techniques: [
+          { name: "Estocada Precisa", type: "Técnica Passiva", icon: "🎯", desc: "Ignora 40% da armadura do alvo em acertos críticos." },
+          { name: "Dança das Lâminas", type: "Técnica Ativa [25/50 Mana]", icon: "⚔️", desc: "Avança e ataca 4 vezes em rápida sucessão aplicando sangramento." },
+          { name: "Riposte", type: "Técnica Passiva", icon: "🛡️", desc: "Bloqueia o primeiro ataque recebido a cada 4 segundos." },
+          { name: "Postura Nobre", type: "Técnica Passiva", icon: "👑", desc: "Aliados adjacentes ganham +15 de Velocidade de Ataque." }
+        ]
+      },
+      { id: "funke", name: "Funke", stars: 3, icon: "🔥", locked: false, classes: ["Piromante", "Destruidor"],
+        techniques: [
+          { name: "Combustão", type: "Técnica Passiva", icon: "🔥", desc: "Ataques incendeiam os inimigos causando 40 de dano por segundo." },
+          { name: "Onda Térmica", type: "Técnica Ativa [30/70 Mana]", icon: "🌋", desc: "Explosão frontal que causa 520 de dano e quebra escudos." },
+          { name: "Pavil Curto", type: "Técnica Passiva", icon: "🧨", desc: "Ao morrer, explode causando 300 de dano em área aos atacantes." },
+          { name: "Cinzas Quentes", type: "Técnica Passiva", icon: "💨", desc: "Inimigos em chamas erram 20% dos ataques automáticos." }
+        ]
+      },
+      { id: "grace", name: "Grace", stars: 3, icon: "👩‍🏫", locked: false, classes: ["Suporte", "Cientista"],
+        techniques: [
+          { name: "Estimulante", type: "Técnica Passiva", icon: "🧪", desc: "Cura o aliado mais ferido em 80 PV a cada 3 segundos." },
+          { name: "Campo de Força", type: "Técnica Ativa [20/60 Mana]", icon: "🛡️", desc: "Cria barreira protetora que absorve 400 de dano no tanque frontal." },
+          { name: "Catalisador", type: "Técnica Passiva", icon: "⚡", desc: "Gera +2 de mana por segundo para todos os aliados em combate." },
+          { name: "Descontaminação", type: "Técnica Passiva", icon: "💉", desc: "Remove venenos, congelamentos e lentidões dos aliados." }
+        ]
+      },
+      { id: "gustav", name: "Gustav", stars: 3, icon: "🛡️", locked: false, classes: ["Guardião", "Nobre"],
+        techniques: [
+          { name: "Baluarte", type: "Técnica Passiva", icon: "🏰", desc: "Recebe 30% a menos de dano vindo de ataques à distância." },
+          { name: "Muralha de Ferro", type: "Técnica Ativa [15/50 Mana]", icon: "🛡️", desc: "Ergue escudo colossal providenciando 600 de absorção para a fileira." },
+          { name: "Contra-Choque", type: "Técnica Passiva", icon: "💥", desc: "Ao bloquear, atordoa o atacante por 0.8 segundos." },
+          { name: "Ordem Tática", type: "Técnica Passiva", icon: "📜", desc: "Aumenta a defesa base da equipe em +20 pontos." }
+        ]
+      },
+      { id: "hoyoung", name: "Hoyoung", stars: 3, icon: "🏹", locked: false, classes: ["Atirador", "Caçador"],
+        techniques: [
+          { name: "Tiro Fantasma", type: "Técnica Passiva", icon: "🎯", desc: "A cada 4 ataques, a flecha perfura todos os alvos em linha reta." },
+          { name: "Chuva de Flechas", type: "Técnica Ativa [20/60 Mana]", icon: "🏹", desc: "Cobre a retaguarda inimiga com projéteis causando 380 de dano." },
+          { name: "Passo Evasivo", type: "Técnica Passiva", icon: "👟", desc: "Salta 2 casas para trás ao ser engajado por inimigo corpo a corpo." },
+          { name: "Olho de Falcão", type: "Técnica Passiva", icon: "🦅", desc: "+35% de Alcance de ataque e precisão impecável." }
+        ]
+      },
+      { id: "irini", name: "Irini", stars: 3, icon: "⚡", locked: false, classes: ["Místico", "Lutador"],
+        techniques: [
+          { name: "Punho Trovejante", type: "Técnica Passiva", icon: "👊", desc: "Ataques têm 20% de chance de eletrocutar 2 alvos adjacentes." },
+          { name: "Relâmpago Ascendente", type: "Técnica Ativa [20/40 Mana]", icon: "⚡", desc: "Lança o alvo ao ar causando 400 de dano e quebra de canalização." },
+          { name: "Condutividade", type: "Técnica Passiva", icon: "🔋", desc: "Recarrega 10 de mana a cada golpe crítico recebido." },
+          { name: "Sobretensão", type: "Técnica Passiva", icon: "🌩️", desc: "Acelera a velocidade de ataque em +50% por 4s após a técnica." }
+        ]
+      },
+      { id: "kai", name: "Kai", stars: 3, icon: "🥋", locked: false, classes: ["Monge", "Duelista"],
+        techniques: [
+          { name: "Postura do Dragão", type: "Técnica Passiva", icon: "🐉", desc: "Ganha 5 de Defesa e 5 de Ataque por cada segundo em combate contínuo." },
+          { name: "Golpe das Mil Palmas", type: "Técnica Ativa [20/50 Mana]", icon: "🖐️", desc: "Série devastadora de 8 golpes rápidos totalizando 580 de dano." },
+          { name: "Fluxo de Chi", type: "Técnica Passiva", icon: "☯️", desc: "Regenera 40 de vida por segundo enquanto não estiver atordoado." },
+          { name: "Paciência Marcial", type: "Técnica Passiva", icon: "🧘", desc: "Imunidade a empurrões e deslocamentos forçados." }
+        ]
+      },
+      { id: "karsu", name: "Karsu", stars: 3, icon: "❄️", locked: false, classes: ["Gelo", "Atirador"],
+        techniques: [
+          { name: "Flechas Congeladas", type: "Técnica Ativa [20/50 Mana]", icon: "❄️", desc: "Dispara saraivada gélida causando 4.352 de dano de técnica e congelamento." },
+          { name: "Tiro Certeiro", type: "Técnica Passiva", icon: "🏹", desc: "Causa 4.067 de dano original físico mantendo distância segura." },
+          { name: "Nevasca Paralisante", type: "Técnica Passiva", icon: "🌨️", desc: "Reduz a velocidade de movimento dos alvos em 50% por 3 segundos." },
+          { name: "Estilhaçar", type: "Técnica Passiva", icon: "💎", desc: "Inimigos congelados sofrem 30% a mais de dano crítico." }
+        ]
+      },
+      { id: "logan", name: "Logan", stars: 2, icon: "🪓", locked: false, classes: ["Bárbaro", "Linha de Frente"],
+        techniques: [
+          { name: "Grito de Fúria", type: "Técnica Passiva", icon: "🗣️", desc: "Ganha +40% de Ataque conforme a própria vida cai." },
+          { name: "Machadada Dupla", type: "Técnica Ativa [15/45 Mana]", icon: "🪓", desc: "Corta os dois inimigos frontais causando 480 de dano físico." },
+          { name: "Pele Grossa", type: "Técnica Passiva", icon: "🛡️", desc: "Ignora os primeiros 20 pontos de qualquer ataque recebido." },
+          { name: "Tenacidade", type: "Técnica Passiva", icon: "💪", desc: "Reduz a duração de atordoamentos em 60%." }
+        ]
+      },
+      { id: "ming", name: "Ming", stars: 3, icon: "🧘‍♂️", locked: false, classes: ["Monge", "Defensor"],
+        techniques: [
+          { name: "Mente Serena", type: "Técnica Passiva", icon: "🕉️", desc: "Converte 15% de todo dano recebido em mana instantânea." },
+          { name: "Onda de Sino", type: "Técnica Ativa [30/60 Mana]", icon: "🔔", desc: "Onda sônica circular que desorienta todos os inimigos ao redor." },
+          { name: "Couro Impenetrável", type: "Técnica Passiva", icon: "🛡️", desc: "+35 de Armadura base." },
+          { name: "Equilíbrio Interior", type: "Técnica Passiva", icon: "⚖️", desc: "Cura 120 de vida a cada habilidade conjurada." }
+        ]
+      },
+      { id: "bloqueado_1", name: "Bloqueado", stars: 0, icon: "🔒", locked: true, classes: ["Desconhecido"],
+        techniques: []
+      },
+      { id: "nyx", name: "Nyx", stars: 3, icon: "🐱", locked: false, classes: ["Duelista", "Ímpeto"],
+        techniques: [
+          { name: "Instinto de Fera", type: "Técnica Passiva", icon: "🐺", desc: "Durante 5s de Ímpeto, ganha 5 (+25% Vel) de Iniciativa e 5 (+25% Atq) de Ataque a cada ativação. A cada 12 ataques, reativa as técnicas de Ímpeto." },
+          { name: "Visão Aguçada", type: "Técnica Passiva", icon: "👁️", desc: "Ganha a classe Assassino e 30 de Crít. Assassinos e Duelistas destroem instantaneamente inimigos abaixo de 20 (+5 por Reforço)% de PV Máx." },
+          { name: "Natureza Selvagem", type: "Técnica Ativa [20/50 Mana]", icon: "🐾", desc: "Realiza combo de 5 golpes. Cada golpe causa 100 (+50% Vel + 33% Magia + 33% Atq)%. Se matar, salta para o próximo e reconjura." },
+          { name: "Centelha", type: "Técnica Passiva", icon: "⚡", desc: "Após 10s aplica Queimadura, após 20s Gelo, e após 30s Veneno em cada ataque automático escalando com velocidade." }
+        ]
+      },
+      { id: "pimenta", name: "Pimenta", stars: 3, icon: "🌶️", locked: false, classes: ["Assassino", "Fogo"],
+        techniques: [
+          { name: "Golpe Apimentado", type: "Técnica Passiva", icon: "🌶️", desc: "Ataques causam dano puro ao acertar inimigos pelas costas." },
+          { name: "Salto Flamejante", type: "Técnica Ativa [20/40 Mana]", icon: "🔥", desc: "Teleporta para o atirador mais distante e aplica queimadura grave." },
+          { name: "Rastro de Brasa", type: "Técnica Passiva", icon: "👣", desc: "Deixa rastro de fogo no chão que queima quem passar." },
+          { name: "Ardor", type: "Técnica Passiva", icon: "💥", desc: "Críticos aumentam a velocidade de ataque em 30% por 3s." }
+        ]
+      },
+      { id: "pollen", name: "Pollen", stars: 3, icon: "🌸", locked: false, classes: ["Místico", "Curandeiro"],
+        techniques: [
+          { name: "Esporos Revitalizantes", type: "Técnica Passiva", icon: "🌱", desc: "Libera névoa de pólen que cura 1.101 de HP e absorve 50 por proteção." },
+          { name: "Raízes Protetoras", type: "Técnica Ativa [25/60 Mana]", icon: "🌿", desc: "Enraíza os 2 inimigos mais avançados por 2.5s." },
+          { name: "Fotossíntese", type: "Técnica Passiva", icon: "☀️", desc: "Regenera mana continuamente enquanto houver aliados vivos." },
+          { name: "Floração Mágica", type: "Técnica Passiva", icon: "🌺", desc: "Aliados curados ganham 20% de dano mágico adicional." }
+        ]
+      },
+      { id: "ratna", name: "Ratna", stars: 3, icon: "📖", locked: false, classes: ["Mago", "Místico"],
+        techniques: [
+          { name: "Fashionista", type: "Técnica Passiva", icon: "👑", desc: "Ganha um espaço para itens. No início do combate ganha 45 de Magia, 3 de Regen de Mana e 6 PV/s por nível de raridade de cada item equipado." },
+          { name: "Ostentadora", type: "Técnica Passiva", icon: "✨", desc: "Ganha a classe Místico e 4 de Regen de Mana. Ao conjurar, outros heróis ganham 17 de Magia e 1 de Regen. Reforço: Magos ganham 17 Magia." },
+          { name: "Magnânima", type: "Técnica Passiva", icon: "🦅", desc: "Ganha a classe Assassino e 25 de Crít. Queda da Estrela atinge quem tiver menos vida nas 3 primeiras conjurações. Ao abater ganha Furtividade por 4s." },
+          { name: "Queda da Estrela", type: "Técnica Ativa [20/55 Mana]", icon: "🌠", desc: "Meteoro arcano que causa 3.904 de dano massivo na área de impacto." }
+        ]
+      },
+      { id: "reyna", name: "Reyna", stars: 3, icon: "🗡️", locked: false, classes: ["Assassino", "Sombra"],
+        techniques: [
+          { name: "Passo Sombrio", type: "Técnica Passiva", icon: "🌑", desc: "Inicia o combate invisível atrás das linhas inimigas." },
+          { name: "Execução Furtiva", type: "Técnica Ativa [10/40 Mana]", icon: "🗡️", desc: "Apunhala o alvo causando 650 de dano crítico garantido." },
+          { name: "Fumaça Protetora", type: "Técnica Passiva", icon: "💨", desc: "Ao receber dano fatal, cria nuvem e escapa para longe." },
+          { name: "Veneno Fatal", type: "Técnica Passiva", icon: "☠️", desc: "Ataques reduzem a cura do inimigo em 50%." }
+        ]
+      },
+      { id: "rip", name: "Rip", stars: 2, icon: "🎧", locked: false, classes: ["DJ", "Acelerador"],
+        techniques: [
+          { name: "Batida Acelerada", type: "Técnica Passiva", icon: "🎵", desc: "A cada compasso de combate, aumenta a velocidade do time." },
+          { name: "Drop do Baixo", type: "Técnica Ativa [20/50 Mana]", icon: "🔊", desc: "Onda de choque sonora que empurra os inimigos 1 hexágono." },
+          { name: "Equalizador", type: "Técnica Passiva", icon: "🎚️", desc: "Equilibra os escudos entre os 2 heróis mais feridos." },
+          { name: "Remix", type: "Técnica Passiva", icon: "💿", desc: "Chance de reconjurar a técnica sem custo." }
+        ]
+      },
+      { id: "rowan", name: "Rowan", stars: 2, icon: "🛡️", locked: false, classes: ["Lenhador", "Tanque"],
+        techniques: [
+          { name: "Tronco Robusto", type: "Técnica Passiva", icon: "🪵", desc: "+200 de HP máximo por item defensivo equipado." },
+          { name: "Arremesso de Machado", type: "Técnica Ativa [20/50 Mana]", icon: "🪓", desc: "Lança machado pesado causando 350 de dano e lentidão." },
+          { name: "Casca Grossa", type: "Técnica Passiva", icon: "🌲", desc: "Absorve 20% do dano físico e reflete em espinhos." },
+          { name: "Banquete Rústico", type: "Técnica Passiva", icon: "🍖", desc: "Come e restaura 15% do HP máximo na metade do combate." }
+        ]
+      },
+      { id: "sal", name: "Sal", stars: 3, icon: "💃", locked: false, classes: ["Dançarina", "Duelista"],
+        techniques: [
+          { name: "Giro Gracioso", type: "Técnica Passiva", icon: "🌪️", desc: "Esquiva de 25% de todos os ataques normais." },
+          { name: "Corte Rodopiante", type: "Técnica Ativa [15/45 Mana]", icon: "⚔️", desc: "Dano circular de 420 em todos os alvos vizinhos." },
+          { name: "Ritmo Frenético", type: "Técnica Passiva", icon: "💃", desc: "Ganha +10% de velocidade de ataque a cada esquiva." },
+          { name: "Passo Final", type: "Técnica Passiva", icon: "✨", desc: "Ataques contra alvos sangrando causam +40% de dano." }
+        ]
+      },
+      { id: "skorn", name: "Skorn", stars: 3, icon: "🦾", locked: false, classes: ["Colosso", "Guerreiro"],
+        techniques: [
+          { name: "Pancada Sísmica", type: "Técnica Passiva", icon: "💥", desc: "Ataques pesados tremem o chão atingindo inimigos adjacentes." },
+          { name: "Impacto Meteórico", type: "Técnica Ativa [25/60 Mana]", icon: "☄️", desc: "Salta no ar e esmaga o chão atordoando por 2 segundos." },
+          { name: "Blindagem de Aço", type: "Técnica Passiva", icon: "🛡️", desc: "Recebe bônus dobrado de armadura de itens." },
+          { name: "Fúria Colossal", type: "Técnica Passiva", icon: "⚡", desc: "Aumenta de tamanho e ganha +50% de dano aos 50% de vida." }
+        ]
+      },
+      { id: "tilly", name: "Tilly", stars: 3, icon: "👧", locked: false, classes: ["Atiradora", "Engenheira"],
+        techniques: [
+          { name: "Torreta Automática", type: "Técnica Passiva", icon: "⚙️", desc: "Instala torreta mecânica que atira continuamente à distância." },
+          { name: "Disparo Explosivo", type: "Técnica Ativa [20/50 Mana]", icon: "🚀", desc: "Míssil guiado de longo alcance que explode em área." },
+          { name: "Chave Inglesa", type: "Técnica Passiva", icon: "🔧", desc: "Repara escudos de aliados robóticos e máquinas." },
+          { name: "Munição Perfurante", type: "Técnica Passiva", icon: "💥", desc: "Ataques reduzem a defesa inimiga em 15%." }
+        ]
+      },
+      { id: "yuuna", name: "Yuuna", stars: 1, icon: "🥷", locked: false, classes: ["Ninja", "Assassino"],
+        techniques: [
+          { name: "Lâmina Oculta", type: "Técnica Passiva", icon: "🗡️", desc: "Primeiro ataque causa 300% de dano crítico surpresa." },
+          { name: "Clone das Sombras", type: "Técnica Ativa [20/40 Mana]", icon: "👥", desc: "Cria cópia ilusória que distrai os ataques inimigos." },
+          { name: "Shuriken Venenosa", type: "Técnica Passiva", icon: "⭐", desc: "Ataques à distância aplicam veneno cumulativo." },
+          { name: "Substituição", type: "Técnica Passiva", icon: "🪵", desc: "Troca de lugar com um tronco ao receber golpe crítico." }
+        ]
+      },
+      { id: "bloqueado_2", name: "Bloqueado", stars: 0, icon: "🐍", locked: true, classes: ["Medusa"],
+        techniques: []
+      }
+    ];
+
+    let currentFilter = 'all';
+
+    function renderHeroes() {
+      const grid = document.getElementById('heroesGrid');
+      grid.innerHTML = '';
+
+      const term = document.getElementById('heroSearch').value.toLowerCase().trim();
+
+      HEROES.forEach(hero => {
+        // Filter search
+        if (term && !hero.name.toLowerCase().includes(term)) {
+          return;
+        }
+
+        // Filter incomplete/locked
+        if (currentFilter === 'incomplete' && (!hero.locked && hero.stars === 3)) {
+          return;
+        }
+
+        const card = document.createElement('div');
+        card.className = `hero-card ${hero.locked ? 'locked-card' : ''}`;
+        card.onclick = () => {
+          if (!hero.locked) {
+            openHeroModal(hero);
+          } else {
+            alert('Este herói ainda está bloqueado na sua coleção!');
+          }
+        };
+
+        // Build Stars HTML
+        let starsHtml = '';
+        if (hero.locked) {
+          starsHtml = '<span class="star-empty">&#9733;&#9733;&#9733;</span>';
+        } else {
+          for (let i = 1; i <= 3; i++) {
+            starsHtml += i <= hero.stars ? '<span class="star-filled">&#9733;</span>' : '<span class="star-empty">&#9733;</span>';
+          }
+        }
+
+        card.innerHTML = `
+          <div class="portrait-wrap">
+            <div class="portrait-avatar">
+              <span class="avatar-icon">${hero.icon}</span>
+            </div>
+          </div>
+          <div class="stars-row">${starsHtml}</div>
+          <div class="hero-name">${hero.name}</div>
+        `;
+
+        grid.appendChild(card);
+      });
+    }
+
+    function filterHeroes() {
+      renderHeroes();
+    }
+
+    function setStatusFilter(status) {
+      currentFilter = status;
+      document.getElementById('btnAll').classList.toggle('active', status === 'all');
+      document.getElementById('btnIncomplete').classList.toggle('active', status === 'incomplete');
+      renderHeroes();
+    }
+
+    function toggleFilter() {
+      const f = document.getElementById('filterStatus');
+      if (currentFilter === 'all') {
+        setStatusFilter('incomplete');
+        f.innerHTML = '<span>&#9660;</span> Incompleta';
+      } else {
+        setStatusFilter('all');
+        f.innerHTML = '<span>&#9660;</span> Tudo';
+      }
+    }
+
+    // MODAL FUNCTIONS
+    function openHeroModal(hero) {
+      document.getElementById('modalHeroName').textContent = hero.name.toUpperCase();
+      document.getElementById('modalAvatar').textContent = hero.icon;
+
+      let starsHtml = '';
+      for (let i = 1; i <= 3; i++) {
+        starsHtml += i <= hero.stars ? '&#9733;' : '☆';
+      }
+      document.getElementById('modalHeroStars').innerHTML = starsHtml;
+
+      // Tags
+      const tagsContainer = document.getElementById('modalTags');
+      tagsContainer.innerHTML = '';
+      hero.classes.forEach(cls => {
+        const span = document.createElement('span');
+        span.className = 'hero-class-tag';
+        span.innerHTML = `&#9876; ${cls}`;
+        tagsContainer.appendChild(span);
+      });
+
+      // Techniques
+      const techContainer = document.getElementById('modalTechniques');
+      techContainer.innerHTML = '';
+      hero.techniques.forEach(tech => {
+        const tCard = document.createElement('div');
+        tCard.className = 'tech-card';
+        tCard.innerHTML = `
+          <div class="tech-header-icon"><span>${tech.icon}</span></div>
+          <div class="tech-title">${tech.name}</div>
+          <div class="tech-type">${tech.type}</div>
+          <div class="tech-desc">${tech.desc}</div>
+          <div class="tech-maestria-footer">&#9733; Maestria disponível</div>
+        `;
+        techContainer.appendChild(tCard);
+      });
+
+      // Populate Mini Carousel
+      const carousel = document.getElementById('modalCarousel');
+      carousel.innerHTML = '';
+      HEROES.filter(h => !h.locked).forEach(h => {
+        const thumb = document.createElement('div');
+        thumb.className = `carousel-thumb ${h.id === hero.id ? 'selected' : ''}`;
+        thumb.innerHTML = `<span>${h.icon}</span>`;
+        thumb.title = h.name;
+        thumb.onclick = () => openHeroModal(h);
+        carousel.appendChild(thumb);
+      });
+
+      document.getElementById('heroModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeHeroModal() {
+      document.getElementById('heroModal').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // ESC key closes modal
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeHeroModal();
+    });
+
+    // Initial render
+    renderHeroes();
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{
+  "failed": 0,
+  "pack": "",
+  "passed": 23,
+  "scope": "resource loading and presentation contracts, not audible browser playback or balance",
+  "tracks": [
+    {
+      "loaded": true,
+      "path": "res://assets/audio/bob_marley_star1.mp3",
+      "raw_present": true,
+      "resource_present": true
+    },
+    {
+      "loaded": true,
+      "path": "res://assets/audio/bob_marley_star2.mp3",
+      "raw_present": true,
+      "resource_present": true
+    },
+    {
+      "loaded": true,
+      "path": "res://assets/audio/bob_marley_star3.mp3",
+      "raw_present": true,
+      "resource_present": true
+    },
+    {
+      "loaded": true,
+      "path": "res://assets/audio/snoop_star1.mp3",
+      "raw_present": true,
+      "resource_present": true
+    },
+    {
+      "loaded": true,
+      "path": "res://assets/audio/snoop_star2.mp3",
+      "raw_present": true,
+      "resource_present": true
+    },
+    {
+      "loaded": true,
+      "path": "res://assets/audio/snoop_star3.mp3",
+      "raw_present": true,
+      "resource_present": true
+    }
+  ]
+}

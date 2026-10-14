@@ -1,0 +1,5 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+INICIANDO TESTES DO SISTEMA DE ÁUDIO & BOB MARLEY 8-BIT...
+
+AUDIO & BOB MARLEY REPERTÓRIO TESTS: 106 passed, 0 failed

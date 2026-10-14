@@ -49,6 +49,94 @@ const KIT_TEXT: Dictionary = {
 	"rapunzel": "Começa com 0/100 mana e ganha 25 por ataque lançado. Ao encher, puxa o inimigo mais distante e o atordoa; a mana é consumida."
 }
 
+## Propostas para a ficha visual; estas cartas não implementam novas regras de combate.
+const HERO_FOUR_TECHNIQUES: Dictionary = {
+	"zumbi": [
+		{"name": "ESTOCADAS DE LANÇA", "type": "Técnica Passiva", "desc": "Críticos consecutivos acumulam poder progressivo (+20 de dano por acerto crítico). Concede +15% de crítico e velocidade à equipe.", "icon": "🗡️"},
+		{"name": "LÍDER DOS PALMARES", "type": "Técnica Passiva", "desc": "Ganha a classe Atacantes e 25 de Crít. Ao eliminar um inimigo, ganha Fúria por 4s e regenera 10% de PV Máx.\nReforço: No início do combate, concede +15% de crítico à equipe.", "icon": "👑"},
+		{"name": "INVESTIDA IMPLACÁVEL", "type": "Técnica Ativa [20/50 Mana]", "desc": "Executa estocada perfurante causando 380 (+50% Velocidade + 35% Ataque)% de dano físico e quebrando 30% da armadura do alvo por 4s.", "icon": "⚡"},
+		{"name": "LANÇA ANCESTRAL", "type": "Técnica Passiva", "desc": "Após 10s de combate, a lança cresce (+20% alcance). No Nível 2 ganha corte horizontal e no Nível 3 ganha aura sagrada de chamas violetas.", "icon": "🔥"}
+	],
+	"neymar": [
+		{"name": "DRIBLE DA VACA", "type": "Técnica Passiva", "desc": "A cada 4 ataques automáticos, esquiva do próximo golpe e avança velozmente ganhando +30% de Velocidade de Ataque.", "icon": "⚽"},
+		{"name": "CAMISA 10", "type": "Técnica Passiva", "desc": "Ganha a classe Atiradores e 20 de Crít. Chutes contra inimigos isolados causam +30% de dano adicional.\nReforço: +15% de velocidade de ataque.", "icon": "👟"},
+		{"name": "CHUTE RICOCHETE", "type": "Técnica Ativa [15/45 Mana]", "desc": "Dispara chute com efeito curvo que atinge até 3 inimigos (1º impacto 100%, 2º impacto 80% e 3º impacto 50% de dano).", "icon": "🎯"},
+		{"name": "ROLAMENTO TÁTICO", "type": "Técnica Passiva", "desc": "Ao sofrer dano letal ou crítico, rola para trás tornando-se inalvejável por 1.5s e recupera 50 de Mana.", "icon": "🛡️"}
+	],
+	"michael": [
+		{"name": "MOONWALK PROTETOR", "type": "Técnica Passiva", "desc": "Desliza suavemente por 3 hexágonos para escapar de atacantes. Ao parar, gera 172.5 de escudo protetor para toda a equipe.", "icon": "🎩"},
+		{"name": "REI DO POP", "type": "Técnica Passiva", "desc": "Ganha a classe Apoio. Enquanto estiver vivo em campo, mantém aura mágica que cura 8.05 PV/s continuamente a todos os aliados.\nReforço: Concede +10% de vida máxima à equipe.", "icon": "⭐"},
+		{"name": "THRILLER NOTURNO", "type": "Técnica Ativa [25/60 Mana]", "desc": "Conjura passos de dança sincronizada que desorientam os inimigos adjacentes por 2s e aumenta o dano de aliados em 25%.", "icon": "🧟"},
+		{"name": "SMOOTH CRIMINAL", "type": "Técnica Passiva", "desc": "Após 15s de combate, todos os escudos concedidos por Michael duram o dobro do tempo e refletem 20% do dano aos atacantes.", "icon": "✨"}
+	],
+	"snoop": [
+		{"name": "CORTINA VOLUMÉTRICA", "type": "Técnica Passiva", "desc": "Lança nuvem de fumaça verde translúcida na altura da cintura (raio 2). Inimigos na fumaça erram 30% dos ataques automáticos.", "icon": "💨"},
+		{"name": "WEST COAST FLOW", "type": "Técnica Passiva", "desc": "Ganha a classe Atiradores e 25 de Magia. Aliados dentro da fumaça ganham +25% de velocidade de movimento e ataque.\nReforço: +15% de velocidade de ataque.", "icon": "🌴"},
+		{"name": "NEVA NEVA", "type": "Técnica Ativa [20/50 Mana]", "desc": "Dispara baforada mágica concentrada que intoxica a retaguarda inimiga causando 340 de dano mágico contínuo.", "icon": "🌿"},
+		{"name": "CHARUTÃO LENDÁRIO", "type": "Técnica Passiva", "desc": "Após 12s de combate, o charuto brilha intensamente concedendo regeneração contínua de 15 PV/s e imunidade a lentidões.", "icon": "🚬"}
+	],
+	"bob_marley": [
+		{"name": "RITMO DE PAZ E AMOR", "type": "Técnica Passiva", "desc": "Aura musical envolvente (raio 4/5/6) com cores da Jamaica: aliados atacam +30% mais rápido e inimigos atacam 30% mais devagar.", "icon": "🎵"},
+		{"name": "ONE LOVE", "type": "Técnica Passiva", "desc": "Ganha a classe Apoio. Ao conjurar, remove todos os efeitos de sangramento e lentidão de aliados no alcance da música.\nReforço: Aliados ganham +10% de vida máxima.", "icon": "💛"},
+		{"name": "REDENÇÃO SONORA", "type": "Técnica Ativa [20/50 Mana]", "desc": "Toca acorde de guitarra místico que emite ondas sonoras em anéis cósmicos curando 280 PV de aliados no raio.", "icon": "🎸"},
+		{"name": "POSITIVIDADE TOTAL", "type": "Técnica Passiva", "desc": "Após 10s de combate, o raio da aura de paz e amor se expande em +1 hexágono e concede +15% de armadura à equipe.", "icon": "🟢"}
+	],
+	"lula": [
+		{"name": "VOLTA POR CIMA", "type": "Técnica Passiva", "desc": "Ao sofrer dano letal, demora 1.0s para descer dos céus como anjo com 40% de vida, dando +25% de dano e 100% de crítico por 5s.", "icon": "🪽"},
+		{"name": "UNIÃO POPULAR", "type": "Técnica Passiva", "desc": "Ganha a classe Vanguarda. Concede 150 de escudo a aliados com menos de 50% de vida quando conjura.\nReforço: Reduz dano recebido em 15%.", "icon": "🤝"},
+		{"name": "DISCURSO ENÉRGICO", "type": "Técnica Ativa [20/50 Mana]", "desc": "Bate com força na tribuna mística disparando onda de choque que empurra e atordoa a fileira inimiga frontal.", "icon": "📢"},
+		{"name": "SEGUNDO MANDATO", "type": "Técnica Passiva", "desc": "No Nível 3, pode voltar uma segunda vez na mesma rodada com 30% de vida. Mantém as asas douradas até o final da luta.", "icon": "⭐"}
+	],
+	"barbie": [
+		{"name": "DUO PERFEITO", "type": "Técnica Passiva", "desc": "Entra em combate invocando o Ken ao seu lado. Enquanto o Ken viver, Barbie causa +50% de dano de ataque adicional.", "icon": "🎀"},
+		{"name": "FASHION ICON", "type": "Técnica Passiva", "desc": "Ganha a classe Vanguarda. Recebe +150 de Vida Máxima e +10 de Defesa por cada nível de raridade de item equipado.\nReforço: Ken recebe os mesmos bônus.", "icon": "👠"},
+		{"name": "CONVERSÍVEL ROSA", "type": "Técnica Ativa [25/55 Mana]", "desc": "Acelera seu conversível cruzando a fileira inimiga, causando 420 de dano de impacto e reduzindo armaduras em 20%.", "icon": "🚗"},
+		{"name": "COMANDO FASHION", "type": "Técnica Passiva", "desc": "Após 10s de combate, inspira o Ken a entrar em fúria, dobrando a velocidade de ataque dele por 6 segundos.", "icon": "✨"}
+	],
+	"ken": [
+		{"name": "GUARDIÃO DEDICADO", "type": "Técnica Passiva", "desc": "Atrai automaticamente os golpes direcionados à Barbie e absorve 35% de todo o dano recebido por ela.", "icon": "🏄"},
+		{"name": "ENERGIA DA PRAIA", "type": "Técnica Passiva", "desc": "Ganha a classe Guardião e +25 de Armadura base. Ao bloquear ataques, ganha 5 de Mana.\nReforço: Aumenta resistência mágica em +20.", "icon": "🏖️"},
+		{"name": "MERGULHO PROTETOR", "type": "Técnica Ativa [15/45 Mana]", "desc": "Salta na frente do aliado mais ferido, erguendo prancha que absorve 400 de dano por 4 segundos.", "icon": "🏄‍♂️"},
+		{"name": "MOJO DOJO CASA", "type": "Técnica Passiva", "desc": "Se a Barbie estiver viva após 15s de combate, Ken ganha +40% de Ataque e golpes que atordoam inimigos.", "icon": "🏠"}
+	],
+	"elon": [
+		{"name": "MINIFOGUETES FOCADOS", "type": "Técnica Passiva", "desc": "Dispara saraivada de 3 minifoguetes nos 3 primeiros tiros; o 4º disparo é um Super Foguete explosivo.", "icon": "🚀"},
+		{"name": "PROPULSÃO ESPACIAL", "type": "Técnica Passiva", "desc": "Ganha a classe Atiradores. Projéteis penetram 2 casas na retaguarda inimiga causando dano secundário.\nReforço: +15% de velocidade de ataque.", "icon": "🛰️"},
+		{"name": "LANÇAMENTO STARSHIP", "type": "Técnica Ativa [20/60 Mana]", "desc": "Míssil orbital que desce dos céus explodindo em raio 2, causando 520 de dano de fogo e empurrão em área.", "icon": "🔥"},
+		{"name": "BATERIA RECARREGÁVEL", "type": "Técnica Passiva", "desc": "A cada 8s de combate, recarrega instantaneamente 25 de Mana e ativa escudo de plasma de 180 PV.", "icon": "🔋"}
+	],
+	"obama": [
+		{"name": "MALA BLINDADA", "type": "Técnica Passiva", "desc": "A mala presidencial absorve os primeiros 450 pontos de dano recebido e regenera 50 de barreira a cada 5 segundos.", "icon": "💼"},
+		{"name": "YES WE CAN", "type": "Técnica Passiva", "desc": "Ganha a classe Vanguarda. Inspira aliados vizinhos com +20 de Armadura e +20 de Resistência Mágica.\nReforço: +10% de vida máxima da equipe.", "icon": "🇺🇸"},
+		{"name": "DECRETO PRESIDENCIAL", "type": "Técnica Ativa [20/50 Mana]", "desc": "Ergue escudo diplomático impenetrável que anula projéteis inimigos em cone frontal por 3.5 segundos.", "icon": "📜"},
+		{"name": "DIPLOMACIA PESADA", "type": "Técnica Passiva", "desc": "Inimigos que golpeiam a mala sofrem redução de 25% na velocidade de ataque e 15% de lentidão contínua.", "icon": "🏛️"}
+	],
+	"caramelo": [
+		{"name": "INSTINTO VIRA-LATA", "type": "Técnica Passiva", "desc": "No início do combate, caça o alvo mais frágil e distante da arena. Mordidas causam sangramento contínuo.", "icon": "🐕"},
+		{"name": "MORDIDA FEROZ", "type": "Técnica Passiva", "desc": "Ganha a classe Assassinos. Elimina instantaneamente inimigos com menos de 10% de vida máxima.\nReforço: Ganha +20 de Crítico permanente.", "icon": "🐾"},
+		{"name": "BOTE VELOZ", "type": "Técnica Ativa [15/40 Mana]", "desc": "Salta ágil por trás do inimigo, cravando os dentes e causando 360 de dano crítico com sangramento grave.", "icon": "⚡"},
+		{"name": "ESQUIVA URBANA", "type": "Técnica Passiva", "desc": "Possui 30% de chance permanente de esquivar de qualquer golpe físico ou habilidade teleguiada.", "icon": "🦴"}
+	],
+	"rapunzel": [
+		{"name": "TRANÇA ENCANTADA", "type": "Técnica Passiva", "desc": "Começa com 0/100 de mana e acumula +25 de mana a cada ataque básico desferido com suas mechas mágicas.", "icon": "✨"},
+		{"name": "LAÇO DOURADO", "type": "Técnica Passiva", "desc": "Ganha a classe Apoio. Ao atingir 100 de mana, laça o inimigo mais distante, puxa-o para frente e o atordoa.\nReforço: +10% de vida máxima.", "icon": "🎀"},
+		{"name": "BRILHO DA FLOR", "type": "Técnica Ativa [25/100 Mana]", "desc": "Libera pulso luminoso que cura a si mesma e aos aliados adjacentes em 320 de vida e restaura escudos.", "icon": "🌸"},
+		{"name": "CABELÃO DE 50 METROS", "type": "Técnica Passiva", "desc": "O alcance da puxada alcança qualquer canto da arena. Inimigo puxado fica isolado sofrendo +35% de dano.", "icon": "💇‍♀️"}
+	],
+	"nyx_guest": [
+		{"name": "INSTINTO DE FERA", "type": "Técnica Passiva", "desc": "Durante 5s de Ímpeto, ganha 5 (+25% Velocidade) de Iniciativa e 5 (+25% Ataque) de Ataque a cada ativação. A cada 12 ataques, reativa as técnicas de Ímpeto.", "icon": "🐺"},
+		{"name": "VISÃO AGUÇADA", "type": "Técnica Passiva", "desc": "Ganha a classe Assassino e 30 de Crít. Assassinos e Duelistas destroem instantaneamente inimigos atacados que estejam abaixo de 20 (+5 por Reforço)% de PV Máx.\nReforço.", "icon": "👁️"},
+		{"name": "NATUREZA SELVAGEM", "type": "Técnica Ativa [20/50 Mana]", "desc": "Realiza um combo de 5 golpes. Cada golpe causa 100 (+50% Vel + 33% Magia + 33% Ataque)% de dano. Se o inimigo morrer durante o combo, Nyx salta para o inimigo mais próximo e conjura novamente.", "icon": "🐾"},
+		{"name": "CENTELHA", "type": "Técnica Passiva", "desc": "Após 10s de Inibição aplica Queimadura, após 20s Gelo e após 30s Veneno em cada ataque automático.", "icon": "⚡"}
+	],
+	"ratna_guest": [
+		{"name": "FASHIONISTA", "type": "Técnica Passiva", "desc": "Ganha um espaço para itens. No início do combate, ganha 45 de Magia, 3 de Regen de Mana e 6 PV/s por nível de raridade de cada item equipado.", "icon": "👑"},
+		{"name": "OSTENTADORA", "type": "Técnica Passiva", "desc": "Ganha a classe Místico e 4 de Regen de Mana. Ao conjurar, outros heróis ganham 17 de Magia e 1 de Regen.\nReforço: Magos ganham 17 de Magia e 1 de Regen.", "icon": "✨"},
+		{"name": "MAGNÂNIMA", "type": "Técnica Passiva", "desc": "Ganha a classe Assassino e 25 de Crít. Queda da Estrela atinge quem tiver menos vida nas primeiras 3 vezes. Ao eliminar ganha Furtividade por 4s e +5 de Crít.", "icon": "🦅"},
+		{"name": "QUEDA DA ESTRELA", "type": "Técnica Ativa [20/55 Mana]", "desc": "Conjura meteoro cósmico massivo causando 3.904 de dano mágico em área com efeito de lentidão estelar.", "icon": "🌠"}
+	]
+}
+
 const LOBBY_BG_PATH: String = "res://assets/ui/lobby_02/lobby.png"
 
 const HERO_CATALOG_KEYS: Array[String] = [
@@ -225,6 +313,9 @@ var lobby_hero_synergy_filter: String = "all"
 var lobby_selected_hero_key: String = "neymar"
 var lobby_preview_level: int = 1
 var lobby_preview_mode: String = "action" # "action" (no tabuleiro), "pose" (estudo estático)
+var lobby_heroes_detail_open: bool = false
+var lobby_heroes_search: String = ""
+var lobby_heroes_status_filter: String = "all" # "all", "incomplete"
 var result_view_team: int = 0 # 0: próprio, 1: bot inimigo
 var result_sort_column: String = "damage" # "hero", "damage", "healing", "shield"
 var result_sort_descending: bool = true
@@ -401,9 +492,13 @@ func _ready() -> void:
 	for effect_name: String in ["explosao_fogo_roxo", "explosao_fogo_vermelho", "fogo_vermelho_projetil", "fogo_roxo_projetil", "furacao_fogo", "furacao_fogo_frame_0", "furacao_fogo_frame_1", "furacao_fogo_frame_2", "furacao_fogo_frame_3", "loot_orb_brilhante"]:
 		var effect_path: String = "res://assets/vfx/boss_dev/%s.png" % effect_name
 		boss_vfx_textures[effect_name] = load(effect_path) as Texture2D if ResourceLoader.exists(effect_path) else null
-	if ResourceLoader.exists("res://assets/vfx/cannabis_leaf.png"):
+	if ResourceLoader.exists("res://assets/vfx/cannabis_leaf_64.png"):
+		cannabis_leaf_tex = load("res://assets/vfx/cannabis_leaf_64.png") as Texture2D
+	elif ResourceLoader.exists("res://assets/vfx/cannabis_leaf.png"):
 		cannabis_leaf_tex = load("res://assets/vfx/cannabis_leaf.png") as Texture2D
-	if ResourceLoader.exists("res://assets/vfx/bob_reggae_note.png"):
+	if ResourceLoader.exists("res://assets/vfx/bob_reggae_attack_64.png"):
+		bob_reggae_note_tex = load("res://assets/vfx/bob_reggae_attack_64.png") as Texture2D
+	elif ResourceLoader.exists("res://assets/vfx/bob_reggae_note.png"):
 		bob_reggae_note_tex = load("res://assets/vfx/bob_reggae_note.png") as Texture2D
 	arena_render_cache = ArenaRenderCache.new()
 	arena_render_cache.z_index = -1
@@ -3551,9 +3646,10 @@ func _draw_lobby() -> void:
 
 
 func _refresh_lobby() -> void:
-	var signature: String = "%s_%s_%s_%d_%s_%d_%s_%s_%s" % [
+	var signature: String = "%s_%s_%s_%d_%s_%d_%s_%s_%s_%s_%s_%s" % [
 		lobby_subview, lobby_hero_synergy_filter, lobby_selected_hero_key,
-		lobby_preview_level, lobby_preview_mode, target_fps, str(eco_mode), str(audio.enabled), str(show_performance_diagnostics)
+		lobby_preview_level, lobby_preview_mode, target_fps, str(eco_mode), str(audio.enabled), str(show_performance_diagnostics),
+		str(lobby_heroes_detail_open), lobby_heroes_search, lobby_heroes_status_filter
 	]
 	if signature == lobby_signature:
 		return
@@ -3798,72 +3894,261 @@ func _refresh_lobby_settings() -> void:
 
 
 func _refresh_lobby_heroes() -> void:
-	var modal: Panel = _panel(lobby_root, Rect2(36, 32, 1208, 656), 0.96, 12)
-	_label(modal, "COMPÊNDIO DE HERÓIS", Rect2(24, 12, 500, 32), 26, GOLD)
-	_label(modal, "Conheça os 12 heróis do Clash of Eras, suas sinergias e evolução de nível", Rect2(26, 42, 600, 20), 13, Kit.MUTED)
-	_button(modal, "X", Rect2(1150, 14, 44, 40), func() -> void:
+	var modal: Panel = _panel(lobby_root, Rect2(36, 16, 1208, 688), 0.98, 12)
+	var modal_st: StyleBoxFlat = StyleBoxFlat.new()
+	modal_st.bg_color = Color(0.04, 0.12, 0.15, 0.98)
+	modal_st.border_color = Color(0.12, 0.35, 0.38, 0.8)
+	modal_st.set_border_width_all(1)
+	modal_st.set_corner_radius_all(12)
+	modal.add_theme_stylebox_override("panel", modal_st)
+
+	if not lobby_heroes_detail_open:
+		_refresh_lobby_heroes_gallery(modal)
+	else:
+		_refresh_lobby_heroes_sheet(modal)
+
+
+## TELA 1: GALERIA DO ELENCO & MAESTRIA (Ref. 11_galeria_elenco_e_maestria.png)
+func _refresh_lobby_heroes_gallery(modal: Panel) -> void:
+	# 1. Barra de Navegação Superior
+	var btn_voltar: Button = _button(modal, "◀ VOLTAR", Rect2(20, 14, 120, 36), func() -> void:
 		audio.stop_bob_music()
 		lobby_subview = "none"
 		lobby_signature = ""
 		_refresh())
+	btn_voltar.add_theme_font_size_override("font_size", 14)
+	var st_v: StyleBoxFlat = StyleBoxFlat.new()
+	st_v.bg_color = Color(0.06, 0.18, 0.22, 0.8)
+	st_v.border_color = Color(0.16, 0.45, 0.5)
+	st_v.set_border_width_all(1)
+	st_v.set_corner_radius_all(6)
+	btn_voltar.add_theme_stylebox_override("normal", st_v)
 
-	# Abas de Filtros de Sinergia
-	var filters: Array[Array] = [
-		["all", "TODOS (12)"],
-		["vanguarda", "VANGUARDA (4)"],
-		["atacantes", "ATACANTES (3)"],
-		["atiradores", "ATIRADORES (3)"],
-		["apoio", "APOIO (3)"]
-	]
-	var tab_w: float = 226.0
-	for f_idx: int in range(filters.size()):
-		var f_key: String = str(filters[f_idx][0])
-		var f_label: String = str(filters[f_idx][1])
-		var is_active: bool = (lobby_hero_synergy_filter == f_key)
-		var tab_btn: Button = _button(modal, f_label, Rect2(24 + f_idx * (tab_w + 8), 68, tab_w, 38), func() -> void:
-			lobby_hero_synergy_filter = f_key
-			lobby_signature = ""
-			_refresh())
-		tab_btn.add_theme_font_size_override("font_size", 13)
-		var tab_st: StyleBoxFlat = (tab_btn.get_theme_stylebox("normal") as StyleBoxFlat).duplicate() as StyleBoxFlat
-		if is_active:
-			tab_st.border_color = GOLD
-			tab_st.set_border_width_all(2)
-			tab_st.bg_color = Color(0.18, 0.14, 0.28, 0.95)
-			tab_btn.add_theme_color_override("font_color", GOLD)
-		tab_btn.add_theme_stylebox_override("normal", tab_st)
+	# Abas Centrais: [ ☷ HERÓIS ] [ MELHORIAS DE CLASSE ]
+	var tabs_container: Panel = _panel(modal, Rect2(440, 14, 340, 36), 0.6, 6)
+	var btn_herois: Button = _button(tabs_container, "☷ HERÓIS", Rect2(2, 2, 140, 32), func() -> void: pass)
+	btn_herois.add_theme_font_size_override("font_size", 13)
+	var st_h: StyleBoxFlat = StyleBoxFlat.new()
+	st_h.bg_color = Color(0.12, 0.36, 0.4, 0.95)
+	st_h.border_color = Color("5eead4")
+	st_h.set_border_width_all(1)
+	st_h.set_corner_radius_all(4)
+	btn_herois.add_theme_stylebox_override("normal", st_h)
+	btn_herois.add_theme_color_override("font_color", Color.WHITE)
 
-	# Coluna Esquerda: Lista Rolante de Heróis
+	var btn_melhorias: Button = _button(tabs_container, "MELHORIAS DE CLASSE", Rect2(146, 2, 192, 32), func() -> void:
+		pass)
+	btn_melhorias.add_theme_font_size_override("font_size", 12)
+	var st_m: StyleBoxFlat = StyleBoxFlat.new()
+	st_m.bg_color = Color.TRANSPARENT
+	btn_melhorias.add_theme_stylebox_override("normal", st_m)
+	btn_melhorias.add_theme_color_override("font_color", Color("81a8ab"))
+
+	# Controles Direita: Pesquisa e Filtro Dropdown
+	var search_edit: LineEdit = LineEdit.new()
+	search_edit.position = Vector2(850, 14)
+	search_edit.size = Vector2(210, 36)
+	search_edit.placeholder_text = "🔍 Pesquisar..."
+	search_edit.text = lobby_heroes_search
+	search_edit.add_theme_font_size_override("font_size", 13)
+	var se_st: StyleBoxFlat = StyleBoxFlat.new()
+	se_st.bg_color = Color(0.04, 0.12, 0.15, 0.9)
+	se_st.border_color = Color(0.15, 0.4, 0.45)
+	se_st.set_border_width_all(1)
+	se_st.set_corner_radius_all(6)
+	se_st.content_margin_left = 10
+	search_edit.add_theme_stylebox_override("normal", se_st)
+	search_edit.text_changed.connect(func(new_text: String) -> void:
+		lobby_heroes_search = new_text
+		lobby_signature = ""
+		_refresh())
+	modal.add_child(search_edit)
+
+	var filter_btn: Button = _button(modal, "▼ " + ("Tudo" if lobby_heroes_status_filter == "all" else "Incompleta"), Rect2(1072, 14, 114, 36), func() -> void:
+		lobby_heroes_status_filter = "incomplete" if lobby_heroes_status_filter == "all" else "all"
+		lobby_signature = ""
+		_refresh())
+	filter_btn.add_theme_font_size_override("font_size", 13)
+	var fb_st: StyleBoxFlat = StyleBoxFlat.new()
+	fb_st.bg_color = Color(0.04, 0.12, 0.15, 0.9)
+	fb_st.border_color = Color(0.15, 0.4, 0.45)
+	fb_st.set_border_width_all(1)
+	fb_st.set_corner_radius_all(6)
+	filter_btn.add_theme_stylebox_override("normal", fb_st)
+
+	# 2. Subheader de Maestria (Ref 11)
+	_label(modal, "5/75 ★ TROFÉUS DE MAESTRIA", Rect2(20, 60, 450, 28), 22, GOLD)
+	_label(modal, "Ganhe um troféu por vencer com cada Especialização de nível B.", Rect2(22, 88, 550, 20), 13, Color("81a8ab"))
+
+	# Alternador Tudo / Incompleta
+	var toggle_panel: Panel = _panel(modal, Rect2(1010, 64, 176, 32), 0.6, 4)
+	var is_all: bool = (lobby_heroes_status_filter == "all")
+	var btn_all: Button = _button(toggle_panel, "Tudo", Rect2(2, 2, 84, 28), func() -> void:
+		lobby_heroes_status_filter = "all"
+		lobby_signature = ""
+		_refresh())
+	btn_all.add_theme_font_size_override("font_size", 12)
+	var st_all: StyleBoxFlat = StyleBoxFlat.new()
+	st_all.bg_color = Color(0.12, 0.36, 0.4, 0.95) if is_all else Color.TRANSPARENT
+	btn_all.add_theme_stylebox_override("normal", st_all)
+	btn_all.add_theme_color_override("font_color", Color.WHITE if is_all else Color("81a8ab"))
+
+	var btn_inc: Button = _button(toggle_panel, "Incompleta", Rect2(88, 2, 86, 28), func() -> void:
+		lobby_heroes_status_filter = "incomplete"
+		lobby_signature = ""
+		_refresh())
+	btn_inc.add_theme_font_size_override("font_size", 12)
+	var st_inc: StyleBoxFlat = StyleBoxFlat.new()
+	st_inc.bg_color = Color(0.12, 0.36, 0.4, 0.95) if not is_all else Color.TRANSPARENT
+	btn_inc.add_theme_stylebox_override("normal", st_inc)
+	btn_inc.add_theme_color_override("font_color", Color.WHITE if not is_all else Color("81a8ab"))
+
+	# 3. Grade de Cards de Heróis (6 colunas)
 	var scroll: ScrollContainer = ScrollContainer.new()
-	scroll.position = Vector2(24, 114)
-	scroll.size = Vector2(450, 526)
+	scroll.position = Vector2(20, 118)
+	scroll.size = Vector2(1168, 550)
 	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
 	scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_AUTO
 	modal.add_child(scroll)
 
-	var list_container: VBoxContainer = VBoxContainer.new()
-	list_container.custom_minimum_size = Vector2(434, 0)
-	list_container.add_theme_constant_override("separation", 6)
-	scroll.add_child(list_container)
+	var grid: GridContainer = GridContainer.new()
+	grid.columns = 6
+	grid.add_theme_constant_override("h_separation", 16)
+	grid.add_theme_constant_override("v_separation", 18)
+	scroll.add_child(grid)
 
-	var filtered_keys: Array[String] = []
+	# Elenco de heróis jogáveis
 	for h_key: String in HERO_CATALOG_KEYS:
 		if not specs.has(h_key):
 			continue
 		var s: UnitSpec = specs[h_key]
-		if lobby_hero_synergy_filter == "all" or lobby_hero_synergy_filter in s.synergy_tags:
-			filtered_keys.append(h_key)
+		var h_name: String = s.display_name.to_upper()
 
-	if not filtered_keys.has(lobby_selected_hero_key) and not filtered_keys.is_empty():
-		lobby_selected_hero_key = filtered_keys[0]
+		if not lobby_heroes_search.is_empty():
+			if not h_name.to_lower().contains(lobby_heroes_search.to_lower()):
+				continue
 
-	for h_key: String in filtered_keys:
-		var s: UnitSpec = specs[h_key]
-		var is_selected: bool = (h_key == lobby_selected_hero_key)
-		var card: Button = Button.new()
-		card.custom_minimum_size = Vector2(434, 66)
-		card.text = ""
-		card.pressed.connect(func() -> void:
+		var card_btn: Button = Button.new()
+		card_btn.custom_minimum_size = Vector2(180, 154)
+		card_btn.text = ""
+		card_btn.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+		card_btn.pressed.connect(func() -> void:
+			audio.play_cue("click")
+			lobby_selected_hero_key = h_key
+			lobby_heroes_detail_open = true
+			lobby_signature = ""
+			if h_key == "bob_marley":
+				audio.play_bob_music(lobby_preview_level)
+			elif h_key == "snoop":
+				audio.play_snoop_music(lobby_preview_level)
+			else:
+				audio.stop_singer_music()
+			_refresh())
+		grid.add_child(card_btn)
+
+		var card_st: StyleBoxFlat = StyleBoxFlat.new()
+		card_st.bg_color = Color(0.06, 0.16, 0.19, 0.9)
+		card_st.border_color = Color(0.12, 0.38, 0.42, 0.7)
+		card_st.set_border_width_all(1)
+		card_st.set_corner_radius_all(6)
+		card_btn.add_theme_stylebox_override("normal", card_st)
+
+		var card_hov: StyleBoxFlat = card_st.duplicate() as StyleBoxFlat
+		card_hov.border_color = Color("5eead4")
+		card_hov.set_border_width_all(2)
+		card_hov.shadow_color = Color(0.37, 0.92, 0.83, 0.25)
+		card_hov.shadow_size = 8
+		card_btn.add_theme_stylebox_override("hover", card_hov)
+
+		# Retrato do Herói
+		var port_tex: Texture2D = art.portrait_for(h_key, 30, 28)
+		_icon_rect(card_btn, port_tex, Rect2(12, 10, 156, 92))
+
+		# 3 Estrelas Douradas
+		_label(card_btn, "★ ★ ★", Rect2(0, 106, 180, 18), 13, GOLD, HORIZONTAL_ALIGNMENT_CENTER)
+
+		# Nome do Herói em Caixa Alta
+		_label(card_btn, h_name, Rect2(0, 126, 180, 22), 15, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER)
+
+	# Heróis convidados e bloqueados adicionais (completando o grid como na referência 11)
+	if lobby_heroes_status_filter == "all" and lobby_heroes_search.is_empty():
+		var extra_heroes: Array[Dictionary] = [
+			{"key": "nyx_guest", "name": "NYX", "locked": false},
+			{"key": "ratna_guest", "name": "RATNA", "locked": false},
+			{"key": "locked_01", "name": "BLOQUEADO", "locked": true},
+			{"key": "locked_02", "name": "BLOQUEADO", "locked": true}
+		]
+		for ex: Dictionary in extra_heroes:
+			var is_loc: bool = bool(ex.get("locked", false))
+			var ex_key: String = str(ex.get("key"))
+			var ex_name: String = str(ex.get("name"))
+
+			var card_btn: Button = Button.new()
+			card_btn.custom_minimum_size = Vector2(180, 154)
+			card_btn.text = ""
+			card_btn.mouse_default_cursor_shape = Control.CURSOR_ARROW if is_loc else Control.CURSOR_POINTING_HAND
+			if not is_loc:
+				card_btn.pressed.connect(func() -> void:
+					audio.play_cue("click")
+					lobby_selected_hero_key = ex_key
+					lobby_heroes_detail_open = true
+					lobby_signature = ""
+					_refresh())
+			grid.add_child(card_btn)
+
+			var card_st: StyleBoxFlat = StyleBoxFlat.new()
+			card_st.bg_color = Color(0.04, 0.08, 0.1, 0.6) if is_loc else Color(0.06, 0.16, 0.19, 0.9)
+			card_st.border_color = Color(0.1, 0.15, 0.18, 0.5) if is_loc else Color(0.12, 0.38, 0.42, 0.7)
+			card_st.set_border_width_all(1)
+			card_st.set_corner_radius_all(6)
+			card_btn.add_theme_stylebox_override("normal", card_st)
+
+			if not is_loc:
+				var card_hov: StyleBoxFlat = card_st.duplicate() as StyleBoxFlat
+				card_hov.border_color = Color("5eead4")
+				card_hov.set_border_width_all(2)
+				card_btn.add_theme_stylebox_override("hover", card_hov)
+
+			var p_tex: Texture2D = art.portrait_for("zumbi", 30, 28)
+			_icon_rect(card_btn, p_tex, Rect2(12, 10, 156, 92))
+			_label(card_btn, "☆ ☆ ☆" if is_loc else "★ ★ ★", Rect2(0, 106, 180, 18), 13, Kit.MUTED if is_loc else GOLD, HORIZONTAL_ALIGNMENT_CENTER)
+			_label(card_btn, ex_name, Rect2(0, 126, 180, 22), 15, Kit.MUTED if is_loc else Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER)
+
+
+## TELA 2: FICHA DE COLEÇÃO & 4 TÉCNICAS (Ref. 09_ficha_nyx_colecao_e_tecnicas.png)
+func _refresh_lobby_heroes_sheet(modal: Panel) -> void:
+	# 1. Barra de Navegação Superior
+	var btn_voltar: Button = _button(modal, "◀ VOLTAR AO ELENCO", Rect2(20, 14, 180, 36), func() -> void:
+		lobby_heroes_detail_open = false
+		lobby_signature = ""
+		_refresh())
+	btn_voltar.add_theme_font_size_override("font_size", 13)
+	var st_v: StyleBoxFlat = StyleBoxFlat.new()
+	st_v.bg_color = Color(0.06, 0.18, 0.22, 0.8)
+	st_v.border_color = Color(0.16, 0.45, 0.5)
+	st_v.set_border_width_all(1)
+	st_v.set_corner_radius_all(6)
+	btn_voltar.add_theme_stylebox_override("normal", st_v)
+
+	# Mini Carrossel Horizontal de Retratos para trocar de herói com 1 clique (como no topo da Ref 09)
+	var carousel_scroll: ScrollContainer = ScrollContainer.new()
+	carousel_scroll.position = Vector2(214, 10)
+	carousel_scroll.size = Vector2(760, 46)
+	carousel_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_AUTO
+	carousel_scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	modal.add_child(carousel_scroll)
+
+	var carousel_box: HBoxContainer = HBoxContainer.new()
+	carousel_box.add_theme_constant_override("separation", 8)
+	carousel_scroll.add_child(carousel_box)
+
+	for h_key: String in HERO_CATALOG_KEYS:
+		var is_cur: bool = (h_key == lobby_selected_hero_key)
+		var thumb_btn: Button = Button.new()
+		thumb_btn.custom_minimum_size = Vector2(40, 40)
+		thumb_btn.text = ""
+		thumb_btn.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+		thumb_btn.pressed.connect(func() -> void:
 			audio.play_cue("click")
 			lobby_selected_hero_key = h_key
 			lobby_signature = ""
@@ -3874,94 +4159,131 @@ func _refresh_lobby_heroes() -> void:
 			else:
 				audio.stop_singer_music()
 			_refresh())
-		list_container.add_child(card)
+		carousel_box.add_child(thumb_btn)
 
-		var c_st: StyleBoxFlat = StyleBoxFlat.new()
-		c_st.bg_color = Color(0.16, 0.12, 0.24, 0.9) if is_selected else Color(0.08, 0.1, 0.13, 0.75)
-		c_st.border_color = GOLD if is_selected else Color(0.35, 0.4, 0.45, 0.4)
-		c_st.set_border_width_all(2 if is_selected else 1)
-		c_st.set_corner_radius_all(8)
-		card.add_theme_stylebox_override("normal", c_st)
-		var c_hov: StyleBoxFlat = c_st.duplicate() as StyleBoxFlat
-		c_hov.border_color = GOLD
-		card.add_theme_stylebox_override("hover", c_hov)
+		var t_st: StyleBoxFlat = StyleBoxFlat.new()
+		t_st.bg_color = Color(0.08, 0.2, 0.24, 0.95) if is_cur else Color(0.05, 0.12, 0.15, 0.7)
+		t_st.border_color = GOLD if is_cur else Color(0.15, 0.35, 0.4)
+		t_st.set_border_width_all(2 if is_cur else 1)
+		t_st.set_corner_radius_all(4)
+		thumb_btn.add_theme_stylebox_override("normal", t_st)
 
-		# Retrato do Herói
-		_icon_rect(card, art.portrait_for(h_key, 30, 28), Rect2(10, 8, 54, 50))
-		_label(card, s.display_name, Rect2(72, 8, 200, 22), 17, GOLD if is_selected else Color.WHITE)
-		_label(card, HERO_ROLES.get(h_key, "Combatente"), Rect2(72, 32, 240, 18), 12, Color("8ecae6"))
+		_icon_rect(thumb_btn, art.portrait_for(h_key, 30, 28), Rect2(3, 3, 34, 34))
 
-		# Ícones de sinergias no card
-		for tag_i: int in range(s.synergy_tags.size()):
-			var tag_name: String = s.synergy_tags[tag_i]
-			_icon_rect(card, Kit.icon("syn_" + tag_name), Rect2(356 + tag_i * 26, 20, 22, 22))
+	# Contador de Maestria no canto superior direito
+	_label(modal, "MAESTRIA · EM ESTUDO", Rect2(986, 20, 200, 22), 13, GOLD, HORIZONTAL_ALIGNMENT_RIGHT)
 
-	# Coluna Direita: Ficha de Dados do Herói
-	var detail_panel: Panel = _panel(modal, Rect2(488, 114, 696, 526), 0.88, 10)
 	var active_spec: UnitSpec = specs.get(lobby_selected_hero_key)
-	if active_spec == null:
-		return
+	var hero_name: String = active_spec.display_name.to_upper() if active_spec != null else lobby_selected_hero_key.to_upper()
 
-	# Cabeçalho da Ficha
-	_label(detail_panel, active_spec.display_name, Rect2(20, 12, 300, 32), 28, GOLD)
-	_label(detail_panel, HERO_ROLES.get(lobby_selected_hero_key, "Combatente"), Rect2(22, 44, 380, 20), 14, Color("8ecae6"))
+	# 2. Cabeçalho do Herói (Nome grande + Estrelas + Classes + Sub-abas)
+	_label(modal, hero_name + " ★★★", Rect2(326, 62, 450, 34), 28, Color.WHITE)
 
-	# Sinergias do herói com ícones e nomes
-	var syn_offset_x: float = 380.0
-	for tag_i: int in range(active_spec.synergy_tags.size()):
-		var syn_k: String = active_spec.synergy_tags[tag_i]
-		var info: Dictionary = SYNERGY_INFO.get(syn_k, {})
-		var syn_tag_panel: Panel = _panel(detail_panel, Rect2(syn_offset_x + tag_i * 150, 14, 142, 46), 0.75, 6)
-		_icon_rect(syn_tag_panel, Kit.icon("syn_" + syn_k), Rect2(8, 8, 30, 30))
-		_label(syn_tag_panel, str(info.get("name", syn_k.capitalize())), Rect2(44, 12, 94, 22), 14, GOLD)
+	# Badges de Classe / Sinergia (Duelista, Ímpeto, Atacantes, etc.)
+	var badge_x: float = 328.0
+	var roles_str: String = HERO_ROLES.get(lobby_selected_hero_key, "Combatente de Elite")
+	var role_panel: Panel = _panel(modal, Rect2(badge_x, 102, 260, 28), 0.7, 4)
+	var r_st: StyleBoxFlat = StyleBoxFlat.new()
+	r_st.bg_color = Color(0.06, 0.2, 0.24, 0.6)
+	r_st.border_color = Color("5eead4")
+	r_st.set_border_width_all(1)
+	r_st.set_corner_radius_all(4)
+	role_panel.add_theme_stylebox_override("panel", r_st)
+	_label(role_panel, "⚔️ " + roles_str, Rect2(8, 4, 244, 20), 12, Color("5eead4"))
 
-	# Preview Interativo do Personagem (Sprite animado + escala de nível + aura + demonstração de habilidades)
-	var preview_bg: Panel = _panel(detail_panel, Rect2(20, 72, 240, 200), 0.7, 8)
+	if active_spec != null:
+		for tag_i: int in range(active_spec.synergy_tags.size()):
+			var syn_k: String = active_spec.synergy_tags[tag_i]
+			var syn_p: Panel = _panel(modal, Rect2(badge_x + 270 + tag_i * 140, 102, 132, 28), 0.7, 4)
+			var sp_st: StyleBoxFlat = StyleBoxFlat.new()
+			sp_st.bg_color = Color(0.06, 0.2, 0.24, 0.6)
+			sp_st.border_color = GOLD
+			sp_st.set_border_width_all(1)
+			sp_st.set_corner_radius_all(4)
+			syn_p.add_theme_stylebox_override("panel", sp_st)
+			_label(syn_p, "✦ " + syn_k.capitalize(), Rect2(8, 4, 116, 20), 12, GOLD)
 
-	# Alternador de Modo de Demonstração (Ação no Tabuleiro vs Pose Clássica)
-	var btn_action: Button = _button(preview_bg, "▶ AÇÃO", Rect2(6, 6, 110, 24), func() -> void:
+	# Sub-abas: [ TÉCNICAS ] [ JOGABILIDADE 🔒 ] [ PERSONALIDADE ]
+	var sub_tabs_y: float = 138.0
+	_label(modal, "Técnicas em estudo; combate mantém o kit atual.", Rect2(790, 144, 418, 24), 11, GOLD)
+	var tab_tec: Button = _button(modal, "TÉCNICAS", Rect2(328, sub_tabs_y, 130, 32), func() -> void: pass)
+	tab_tec.add_theme_font_size_override("font_size", 13)
+	var tt_st: StyleBoxFlat = StyleBoxFlat.new()
+	tt_st.bg_color = Color(0.08, 0.28, 0.32, 0.95)
+	tt_st.border_color = Color("5eead4")
+	tt_st.set_border_width_all(1)
+	tt_st.set_corner_radius_all(4)
+	tab_tec.add_theme_stylebox_override("normal", tt_st)
+	tab_tec.add_theme_color_override("font_color", Color.WHITE)
+
+	var tab_jog: Button = _button(modal, "JOGABILIDADE 🔒", Rect2(468, sub_tabs_y, 150, 32), func() -> void: pass)
+	tab_jog.add_theme_font_size_override("font_size", 12)
+	var tj_st: StyleBoxFlat = StyleBoxFlat.new()
+	tj_st.bg_color = Color(0.05, 0.12, 0.14, 0.5)
+	tj_st.border_color = Color(0.12, 0.25, 0.3, 0.5)
+	tj_st.set_border_width_all(1)
+	tj_st.set_corner_radius_all(4)
+	tab_jog.add_theme_stylebox_override("normal", tj_st)
+	tab_jog.add_theme_color_override("font_color", Kit.MUTED)
+
+	var tab_per: Button = _button(modal, "PERSONALIDADE", Rect2(628, sub_tabs_y, 150, 32), func() -> void: pass)
+	tab_per.add_theme_font_size_override("font_size", 12)
+	tab_per.add_theme_stylebox_override("normal", tj_st)
+	tab_per.add_theme_color_override("font_color", Kit.MUTED)
+
+	# 3. COLUNA ESQUERDA: PALCO DO HERÓI (Full-body, demonstração animada, seletor de nível e cosméticos)
+	var stage_panel: Panel = _panel(modal, Rect2(20, 62, 290, 610), 0.72, 10)
+	var stage_st: StyleBoxFlat = StyleBoxFlat.new()
+	stage_st.bg_color = Color(0.03, 0.1, 0.12, 0.85)
+	stage_st.border_color = Color(0.12, 0.35, 0.38, 0.6)
+	stage_st.set_border_width_all(1)
+	stage_st.set_corner_radius_all(8)
+	stage_panel.add_theme_stylebox_override("panel", stage_st)
+
+	# Alternador de Demonstração (▶ AÇÃO vs ★ POSE)
+	var btn_action: Button = _button(stage_panel, "▶ AÇÃO", Rect2(8, 8, 132, 28), func() -> void:
 		lobby_preview_mode = "action"
 		lobby_signature = ""
 		_refresh())
-	btn_action.add_theme_font_size_override("font_size", 11)
-	var btn_pose: Button = _button(preview_bg, "★ POSE", Rect2(124, 6, 110, 24), func() -> void:
+	btn_action.add_theme_font_size_override("font_size", 12)
+	var btn_pose: Button = _button(stage_panel, "★ POSE", Rect2(150, 8, 132, 28), func() -> void:
 		lobby_preview_mode = "pose"
 		lobby_signature = ""
 		_refresh())
-	btn_pose.add_theme_font_size_override("font_size", 11)
+	btn_pose.add_theme_font_size_override("font_size", 12)
 
 	var is_act: bool = (lobby_preview_mode == "action")
-	var st_act: StyleBoxFlat = (btn_action.get_theme_stylebox("normal") as StyleBoxFlat).duplicate() as StyleBoxFlat
-	var st_pos: StyleBoxFlat = (btn_pose.get_theme_stylebox("normal") as StyleBoxFlat).duplicate() as StyleBoxFlat
-	if is_act:
-		st_act.border_color = GOLD
-		st_act.set_border_width_all(2)
-		st_act.bg_color = Color(0.24, 0.18, 0.35, 0.95)
-		btn_action.add_theme_color_override("font_color", GOLD)
-		btn_pose.add_theme_color_override("font_color", Kit.MUTED)
-	else:
-		st_pos.border_color = GOLD
-		st_pos.set_border_width_all(2)
-		st_pos.bg_color = Color(0.24, 0.18, 0.35, 0.95)
-		btn_pose.add_theme_color_override("font_color", GOLD)
-		btn_action.add_theme_color_override("font_color", Kit.MUTED)
+	var st_act: StyleBoxFlat = StyleBoxFlat.new()
+	st_act.bg_color = Color(0.12, 0.36, 0.4, 0.95) if is_act else Color(0.04, 0.1, 0.12, 0.7)
+	st_act.border_color = GOLD if is_act else Color(0.15, 0.3, 0.35)
+	st_act.set_border_width_all(1)
+	st_act.set_corner_radius_all(4)
 	btn_action.add_theme_stylebox_override("normal", st_act)
-	btn_pose.add_theme_stylebox_override("normal", st_pos)
+	btn_action.add_theme_color_override("font_color", GOLD if is_act else Kit.MUTED)
 
+	var st_pos: StyleBoxFlat = StyleBoxFlat.new()
+	st_pos.bg_color = Color(0.12, 0.36, 0.4, 0.95) if not is_act else Color(0.04, 0.1, 0.12, 0.7)
+	st_pos.border_color = GOLD if not is_act else Color(0.15, 0.3, 0.35)
+	st_pos.set_border_width_all(1)
+	st_pos.set_corner_radius_all(4)
+	btn_pose.add_theme_stylebox_override("normal", st_pos)
+	btn_pose.add_theme_color_override("font_color", GOLD if not is_act else Kit.MUTED)
+
+	# Canvas do Sprite Animado
 	hero_preview_control = Control.new()
-	hero_preview_control.position = Vector2(0, 0)
-	hero_preview_control.size = Vector2(240, 200)
+	hero_preview_control.position = Vector2(8, 44)
+	hero_preview_control.size = Vector2(274, 250)
+	hero_preview_control.clip_contents = true
 	hero_preview_control.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	hero_preview_control.draw.connect(_draw_hero_preview.bind(hero_preview_control))
-	preview_bg.add_child(hero_preview_control)
+	stage_panel.add_child(hero_preview_control)
 
 	# Seletor de Nível (1, 2, 3)
-	var lvl_bar: Panel = _panel(detail_panel, Rect2(276, 72, 400, 44), 0.75, 8)
 	var lvl_colors: Array[Color] = [Color("c58b4a"), Color("dfe7ef"), Color("f4d58a")]
 	for l_idx: int in range(3):
 		var lvl: int = l_idx + 1
 		var is_cur_lvl: bool = (lobby_preview_level == lvl)
-		var btn_lvl: Button = _button(lvl_bar, "%s NÍVEL %d" % ["★".repeat(lvl), lvl], Rect2(8 + l_idx * 130, 4, 124, 36), func() -> void:
+		var btn_lvl: Button = _button(stage_panel, "%s NÍVEL %d" % ["★".repeat(lvl), lvl], Rect2(8 + l_idx * 92, 302, 88, 30), func() -> void:
 			lobby_preview_level = lvl
 			lobby_signature = ""
 			if lobby_selected_hero_key == "bob_marley":
@@ -3969,52 +4291,136 @@ func _refresh_lobby_heroes() -> void:
 			elif lobby_selected_hero_key == "snoop":
 				audio.play_snoop_music(lvl)
 			_refresh())
-		btn_lvl.add_theme_font_size_override("font_size", 13)
-		var st_lvl: StyleBoxFlat = (btn_lvl.get_theme_stylebox("normal") as StyleBoxFlat).duplicate() as StyleBoxFlat
-		if is_cur_lvl:
-			st_lvl.border_color = lvl_colors[l_idx]
-			st_lvl.set_border_width_all(2)
-			st_lvl.bg_color = Color(0.2, 0.16, 0.3, 0.95)
-			btn_lvl.add_theme_color_override("font_color", lvl_colors[l_idx])
+		btn_lvl.add_theme_font_size_override("font_size", 11)
+		var st_lvl: StyleBoxFlat = StyleBoxFlat.new()
+		st_lvl.bg_color = Color(0.15, 0.32, 0.36, 0.95) if is_cur_lvl else Color(0.04, 0.1, 0.12, 0.6)
+		st_lvl.border_color = lvl_colors[l_idx] if is_cur_lvl else Color(0.15, 0.3, 0.35)
+		st_lvl.set_border_width_all(2 if is_cur_lvl else 1)
+		st_lvl.set_corner_radius_all(4)
 		btn_lvl.add_theme_stylebox_override("normal", st_lvl)
+		btn_lvl.add_theme_color_override("font_color", lvl_colors[l_idx] if is_cur_lvl else Kit.MUTED)
 
-	# Estatísticas Numéricas Recalculadas Conforme o Nível
+	# 4 Círculos de Cosméticos / Skins [ C ] [ 🔒 ] [ 🔒 ] [ 🔒 ] (como no rodapé do modelo na Ref 09)
+	var skin_y: float = 340.0
+	for sk_i: int in range(4):
+		var sk_panel: Panel = _panel(stage_panel, Rect2(50 + sk_i * 50, skin_y, 40, 32), 0.7, 16)
+		var sk_st: StyleBoxFlat = StyleBoxFlat.new()
+		sk_st.bg_color = Color(0.1, 0.28, 0.32, 0.9) if sk_i == 0 else Color(0.04, 0.08, 0.1, 0.6)
+		sk_st.border_color = GOLD if sk_i == 0 else Color(0.15, 0.25, 0.3)
+		sk_st.set_border_width_all(1)
+		sk_st.set_corner_radius_all(16)
+		sk_panel.add_theme_stylebox_override("panel", sk_st)
+		_label(sk_panel, "C" if sk_i == 0 else "🔒", Rect2(0, 4, 40, 22), 12, GOLD if sk_i == 0 else Kit.MUTED, HORIZONTAL_ALIGNMENT_CENTER)
+
+	# Estatísticas do Herói
 	var mult: float = [1.0, 1.5, 2.25][clampi(lobby_preview_level, 1, 3) - 1]
-	var stats_panel: Panel = _panel(detail_panel, Rect2(276, 122, 400, 150), 0.72, 8)
-	var hp_val: int = roundi(_preview_max_hp(active_spec, lobby_preview_level, mult))
-	var atk_val: int = roundi(active_spec.attack_damage * mult)
+	var stats_p: Panel = _panel(stage_panel, Rect2(8, 382, 274, 218), 0.8, 6)
+	var hp_v: int = roundi(_preview_max_hp(active_spec, lobby_preview_level, mult)) if active_spec != null else 600
+	var atk_v: int = roundi(active_spec.attack_damage * mult) if active_spec != null else 50
+	var aps_v: float = active_spec.attacks_per_second if active_spec != null else 0.85
+	var rng_v: int = active_spec.attack_range if active_spec != null else 1
+	var arm_v: int = roundi(active_spec.armor) if active_spec != null else 20
+	var res_v: int = roundi(active_spec.resist) if active_spec != null else 20
+	var crit_v: int = roundi(active_spec.crit_chance * 100) if active_spec != null else 15
 
-	_label(stats_panel, "VIDA (HP):", Rect2(14, 10, 120, 20), 13, Kit.MUTED)
-	var hp_value_label: Label = _label(stats_panel, "%d" % hp_val, Rect2(110, 8, 80, 22), 17, Color("86eda5"))
-	hp_value_label.name = "PreviewHp"
+	_label(stats_p, "VIDA (HP):", Rect2(10, 10, 100, 18), 12, Kit.MUTED)
+	_label(stats_p, "%d" % hp_v, Rect2(90, 8, 80, 20), 15, Color("86eda5"))
 
-	_label(stats_panel, "DANO (ATK):", Rect2(210, 10, 110, 20), 13, Kit.MUTED)
-	_label(stats_panel, "%d" % atk_val, Rect2(300, 8, 80, 22), 17, GOLD)
+	_label(stats_p, "ATAQUE:", Rect2(150, 10, 80, 18), 12, Kit.MUTED)
+	_label(stats_p, "%d" % atk_v, Rect2(215, 8, 50, 20), 15, GOLD)
 
-	_label(stats_panel, "VEL. ATAQUE:", Rect2(14, 44, 120, 20), 13, Kit.MUTED)
-	_label(stats_panel, "%.2f/s" % active_spec.attacks_per_second, Rect2(110, 42, 80, 22), 15, Color("90e0ef"))
+	_label(stats_p, "VEL. ATQ:", Rect2(10, 38, 100, 18), 12, Kit.MUTED)
+	_label(stats_p, "%.2f/s" % aps_v, Rect2(90, 36, 80, 20), 13, Color("90e0ef"))
 
-	_label(stats_panel, "ALCANCE:", Rect2(210, 44, 110, 20), 13, Kit.MUTED)
-	var range_str: String = "%d hex (%s)" % [active_spec.attack_range, "Corpo a corpo" if active_spec.attack_range == 1 else "Distância"]
-	_label(stats_panel, range_str, Rect2(280, 42, 114, 22), 13, Color.WHITE)
+	_label(stats_p, "ALCANCE:", Rect2(150, 38, 80, 18), 12, Kit.MUTED)
+	_label(stats_p, "%d hex" % rng_v, Rect2(215, 36, 50, 20), 13, Color.WHITE)
 
-	_label(stats_panel, "ARMADURA:", Rect2(14, 78, 120, 20), 13, Kit.MUTED)
-	_label(stats_panel, "%d" % roundi(active_spec.armor), Rect2(110, 76, 80, 22), 15, Color("b1daff"))
+	_label(stats_p, "ARMADURA:", Rect2(10, 66, 100, 18), 12, Kit.MUTED)
+	_label(stats_p, "%d" % arm_v, Rect2(90, 64, 80, 20), 13, Color("b1daff"))
 
-	_label(stats_panel, "RESISTÊNCIA:", Rect2(210, 78, 110, 20), 13, Kit.MUTED)
-	_label(stats_panel, "%d" % roundi(active_spec.resist), Rect2(300, 76, 80, 22), 15, Color("b1daff"))
+	_label(stats_p, "RESISTÊNCIA:", Rect2(140, 66, 90, 18), 12, Kit.MUTED)
+	_label(stats_p, "%d" % res_v, Rect2(225, 64, 40, 20), 13, Color("b1daff"))
 
-	_label(stats_panel, "CRÍTICO:", Rect2(14, 112, 120, 20), 13, Kit.MUTED)
-	_label(stats_panel, "%d%% (x%1.1f)" % [roundi(active_spec.crit_chance * 100), active_spec.crit_multiplier], Rect2(110, 110, 120, 22), 15, Color("ffb703"))
+	_label(stats_p, "CRÍTICO:", Rect2(10, 94, 100, 18), 12, Kit.MUTED)
+	_label(stats_p, "%d%%" % crit_v, Rect2(90, 92, 80, 20), 13, Color("ffb703"))
 
-	_label(stats_panel, "MULTI NÍVEL:", Rect2(210, 112, 110, 20), 13, Kit.MUTED)
-	_label(stats_panel, "x%1.2f Poder" % mult, Rect2(300, 110, 90, 22), 15, lvl_colors[lobby_preview_level - 1])
+	_label(stats_p, "MULTI PODER:", Rect2(140, 94, 90, 18), 12, Kit.MUTED)
+	_label(stats_p, "x%1.2f" % mult, Rect2(225, 92, 40, 20), 13, lvl_colors[lobby_preview_level - 1])
 
-	# Caixa de Habilidade Especial / Kit Tático
-	var skill_box: Panel = _panel(detail_panel, Rect2(20, 282, 656, 230), 0.78, 8)
-	_label(skill_box, "✦ HABILIDADE ESPECIAL & ESTILO DE COMBATE ✦", Rect2(16, 12, 500, 22), 15, GOLD)
-	var skill_desc: String = str(KIT_TEXT.get(lobby_selected_hero_key, "Habilidade em validação de laboratório."))
-	_label(skill_box, skill_desc, Rect2(16, 40, 624, 170), 14, Kit.INK, HORIZONTAL_ALIGNMENT_LEFT, true)
+	# 4. COLUNA DIREITA: AS 4 CARTAS DE TÉCNICAS COM MOLDURA DOURADA (Ref. 09)
+	var tech_grid_x: float = 328.0
+	var tech_grid_y: float = 180.0
+	var card_w: float = 205.0
+	var card_h: float = 492.0
+	var card_gap: float = 12.0
+
+	var tech_list: Array = HERO_FOUR_TECHNIQUES.get(lobby_selected_hero_key, [])
+	if tech_list.is_empty():
+		tech_list = [
+			{"name": "TÉCNICA PRIMÁRIA", "type": "Técnica Passiva", "desc": str(KIT_TEXT.get(lobby_selected_hero_key, "Habilidade primária do herói.")), "icon": "⚡"},
+			{"name": "SINERGIA DE CLASSE", "type": "Técnica Passiva", "desc": "Ganha atributos adicionais ao lutar com a equipe.\nReforço: Concede bônus de combate.", "icon": "👑"},
+			{"name": "GOLPE ESPECIAL", "type": "Técnica Ativa [20/50 Mana]", "desc": "Consome mana para desferir habilidade de grande impacto na arena.", "icon": "🔥"},
+			{"name": "ESCALONAMENTO", "type": "Técnica Passiva", "desc": "Ganha poder crescente conforme o tempo de combate avança.", "icon": "✨"}
+		]
+
+	for t_idx: int in range(mini(4, tech_list.size())):
+		var t_data: Dictionary = tech_list[t_idx]
+		var t_card: Panel = _panel(modal, Rect2(tech_grid_x + t_idx * (card_w + card_gap), tech_grid_y, card_w, card_h), 0.9, 8)
+
+		# Moldura Chanfrada em Ouro Nobre
+		var tc_st: StyleBoxFlat = StyleBoxFlat.new()
+		tc_st.bg_color = Color(0.04, 0.1, 0.12, 0.96)
+		tc_st.border_color = GOLD
+		tc_st.set_border_width_all(2)
+		tc_st.set_corner_radius_all(6)
+		tc_st.shadow_color = Color(0.83, 0.69, 0.22, 0.15)
+		tc_st.shadow_size = 10
+		t_card.add_theme_stylebox_override("panel", tc_st)
+
+		# Losango no Topo com Ícone
+		var dia_panel: Panel = Panel.new()
+		dia_panel.position = Vector2(card_w * 0.5 - 18, 12)
+		dia_panel.size = Vector2(36, 36)
+		var dia_st: StyleBoxFlat = StyleBoxFlat.new()
+		dia_st.bg_color = Color(0.18, 0.14, 0.08, 0.95)
+		dia_st.border_color = GOLD
+		dia_st.set_border_width_all(2)
+		dia_st.set_corner_radius_all(4)
+		dia_panel.add_theme_stylebox_override("panel", dia_st)
+		dia_panel.rotation_degrees = 45.0
+		t_card.add_child(dia_panel)
+
+		_label(t_card, str(t_data.get("icon", "✦")), Rect2(0, 16, card_w, 32), 18, GOLD, HORIZONTAL_ALIGNMENT_CENTER)
+
+		# Título da Técnica
+		var title_str: String = str(t_data.get("name", "TÉCNICA")).to_upper()
+		_label(t_card, title_str, Rect2(8, 66, card_w - 16, 36), 14, Color.WHITE, HORIZONTAL_ALIGNMENT_CENTER, true)
+
+		# Subtítulo (Passiva vs Ativa [Mana])
+		var type_str: String = str(t_data.get("type", "Técnica Passiva"))
+		var is_active_tech: bool = type_str.contains("Ativa")
+		var type_color: Color = Color("38bdf8") if is_active_tech else Color("81a8ab")
+		_label(t_card, type_str, Rect2(8, 104, card_w - 16, 20), 12, type_color, HORIZONTAL_ALIGNMENT_CENTER)
+
+		# Linha Divisória Dourada Superior
+		var sep_top: ColorRect = ColorRect.new()
+		sep_top.color = Color(0.83, 0.69, 0.22, 0.3)
+		sep_top.position = Vector2(16, 128)
+		sep_top.size = Vector2(card_w - 32, 1)
+		t_card.add_child(sep_top)
+
+		# Descrição Completa das Regras
+		var desc_str: String = str(t_data.get("desc", ""))
+		_label(t_card, desc_str, Rect2(12, 138, card_w - 24, 300), 13, Color("cbd5e1"), HORIZONTAL_ALIGNMENT_LEFT, true)
+
+		# Linha Divisória Inferior + "Maestria disponível ★"
+		var sep_bot: ColorRect = ColorRect.new()
+		sep_bot.color = Color(0.83, 0.69, 0.22, 0.3)
+		sep_bot.position = Vector2(16, 452)
+		sep_bot.size = Vector2(card_w - 32, 1)
+		t_card.add_child(sep_bot)
+
+		_label(t_card, "Maestria disponível ★", Rect2(0, 458, card_w, 24), 12, GOLD, HORIZONTAL_ALIGNMENT_CENTER)
 
 
 func _preview_max_hp(spec: UnitSpec, preview_level: int, multiplier: float) -> float:
@@ -4028,6 +4434,8 @@ func _draw_preview_vfx(canvas: CanvasItem, vfx_key: String, pos: Vector2, elapse
 	var data: Dictionary = vfx.frame_data(vfx_key, elapsed)
 	if data.is_empty():
 		return
+	if vfx_key in ["fumaca_01", "fumaca_02"]:
+		data["modulate"] = Color(0.35, 0.92, 0.45, 0.65)
 	data["position"] = pos
 	data["scale"] = scale_mult
 	_draw_vfx_frame(canvas, data)
@@ -4320,7 +4728,8 @@ func _draw_lula_angel_wings(canvas: CanvasItem, body_center: Vector2, height: fl
 		var root_pos: Vector2 = body_center + Vector2(s_f * (7.0 * scale_mult), shoulder_offset_y)
 		var angle: float = (s_f * 0.32) + (s_f * flap_angle)
 		
-		var tip: Vector2 = root_pos + Vector2(cos(angle - PI * 0.5 * s_f) * wing_span * 0.3, -wing_height).rotated(angle * 0.3)
+		# Keep each tip on its own side; the former cosine pointed both tips right.
+		var tip: Vector2 = root_pos + Vector2(s_f * wing_span * 0.3, -wing_height).rotated(angle * 0.3)
 		var mid_feather: Vector2 = root_pos + Vector2(s_f * wing_span * 0.95, -wing_height * 0.55).rotated(angle * 0.2)
 		var low_feather: Vector2 = root_pos + Vector2(s_f * wing_span * 0.75, 4.0 * scale_mult).rotated(angle * 0.1)
 		

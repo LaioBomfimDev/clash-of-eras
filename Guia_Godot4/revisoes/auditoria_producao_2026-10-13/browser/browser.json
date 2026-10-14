@@ -1,0 +1,108 @@
+{
+  "scope": "Real Chrome Web export; local bot only, no public matchmaking",
+  "checks": [
+    {
+      "ok": true,
+      "name": "muted video decodes and advances in lobby"
+    },
+    {
+      "ok": true,
+      "name": "eco keeps poster active"
+    },
+    {
+      "ok": true,
+      "name": "leaving eco resumes animation"
+    },
+    {
+      "ok": true,
+      "name": "starting local match hides and stops video decoding timeline"
+    },
+    {
+      "ok": true,
+      "name": "returning to menu resumes background"
+    },
+    {
+      "ok": true,
+      "name": "reduced motion uses poster without fetching MP4"
+    },
+    {
+      "ok": true,
+      "name": "missing media leaves usable static poster"
+    },
+    {
+      "ok": true,
+      "name": "no page or Godot script errors"
+    }
+  ],
+  "errors": [],
+  "warmupMetrics": {
+    "client_cpu_ms": 0.315529411764706,
+    "draw_calls": 30,
+    "fps": 26,
+    "frame_ms": 29.8814705882353,
+    "p95_frame_ms": 70.296,
+    "render_height": 720,
+    "render_primitives": 3548,
+    "render_width": 1280,
+    "rtt_ms": -1
+  },
+  "animated": {
+    "state": {
+      "active": true,
+      "paused": false,
+      "time": 2.745806,
+      "ready": true,
+      "error": ""
+    },
+    "metrics": {
+      "client_cpu_ms": 0.334543859649123,
+      "draw_calls": 30,
+      "fps": 56,
+      "frame_ms": 17.7804210526316,
+      "p95_frame_ms": 20.2,
+      "render_height": 720,
+      "render_primitives": 3552,
+      "render_width": 1280,
+      "rtt_ms": -1
+    },
+    "muted": true,
+    "layer": {
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 720,
+      "top": 0,
+      "right": 1280,
+      "bottom": 720,
+      "left": 0
+    }
+  },
+  "finalMetrics": {
+    "client_cpu_ms": 0.328545454545455,
+    "draw_calls": 30,
+    "fps": 56,
+    "frame_ms": 18.4704545454545,
+    "p95_frame_ms": 23.69,
+    "render_height": 720,
+    "render_primitives": 3552,
+    "render_width": 1280,
+    "rtt_ms": -1
+  },
+  "reduced": {
+    "state": {
+      "active": true,
+      "paused": true,
+      "time": 0,
+      "ready": false,
+      "error": ""
+    },
+    "videoSrc": null
+  },
+  "fallback": {
+    "active": true,
+    "paused": true,
+    "time": 0,
+    "ready": false,
+    "error": "media:4"
+  }
+}

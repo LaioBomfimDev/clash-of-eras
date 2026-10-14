@@ -1,0 +1,70 @@
+{
+  "checked_at_utc": "2026-10-14T00:13:17.329052+00:00",
+  "url": "https://clash-of-eras.vercel.app/",
+  "observed_commit": "8f5207276876213470e9bf3bf7938a0a26e9358c",
+  "all_runtime_files_match_local_dist": true,
+  "runtime": [
+    {
+      "file": "index.html",
+      "bytes": 7097,
+      "sha256": "50c4a2bf1e98d6ac8a07515c2de141a84a77ddf3cfb8fac6c890646796f8feff",
+      "matches_local_dist": true,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "file": "index.pck",
+      "bytes": 24365580,
+      "sha256": "68ffa979301909029828741131eeb0058a160105d611d4aa2edf6126f11bbc7f",
+      "matches_local_dist": true,
+      "content_type": "application/octet-stream"
+    },
+    {
+      "file": "lobby_video.js",
+      "bytes": 6851,
+      "sha256": "6baed39f9f2d5e78d499220963d002f83adc7ac45d8c658a7c9696ee7a2b3b38",
+      "matches_local_dist": true,
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "file": "media/lobby_loop.mp4",
+      "bytes": 2256893,
+      "sha256": "354b20d054f96ce3139947e065529a701b4d10f7c57156410528a6b85f820ac0",
+      "matches_local_dist": true,
+      "content_type": "video/mp4"
+    },
+    {
+      "file": "media/lobby_poster.webp",
+      "bytes": 536628,
+      "sha256": "bb0d445c9279d2e6a22e8dc17d886a50a8677d85eb72ba10b64bab6d570c609f",
+      "matches_local_dist": true,
+      "content_type": "image/webp"
+    },
+    {
+      "file": "release.json",
+      "bytes": 454,
+      "sha256": "92155d8f0876a3142ac0282e60a52c6020ef86e68b45f41885c30ee48b8b57a1",
+      "matches_local_dist": true,
+      "content_type": "application/json; charset=utf-8",
+      "release": {
+        "build_id": "clash-of-eras-release-20261013-lobby-vfx",
+        "source": "validated-frozen-runtime",
+        "pck_sha256": "68ffa979301909029828741131eeb0058a160105d611d4aa2edf6126f11bbc7f",
+        "html_sha256": "50c4a2bf1e98d6ac8a07515c2de141a84a77ddf3cfb8fac6c890646796f8feff",
+        "simulation_sha256": "76fcc85eb35fe47251bdb6eec89e4905e749338b12016a2694847cde67c55d21",
+        "server_sha256": "b271e11b4a101d82392ef9712531b18af43eeb1dc0021557e108ce1262737840"
+      }
+    }
+  ],
+  "source_references_only": {
+    "simulation_sha256": {
+      "git_blob_sha256": "3a20a09655d4f30daae360bf23ad21cafb816504e92a81b531f9eea120144a4e",
+      "release_sha256": "76fcc85eb35fe47251bdb6eec89e4905e749338b12016a2694847cde67c55d21",
+      "matches_git_blob": false
+    },
+    "server_sha256": {
+      "git_blob_sha256": "fcb9ba14a6ae34f005b4bf46601e8842892cca10992b2a7d89cbf7059224eb0f",
+      "release_sha256": "b271e11b4a101d82392ef9712531b18af43eeb1dc0021557e108ce1262737840",
+      "matches_git_blob": false
+    }
+  }
+}
