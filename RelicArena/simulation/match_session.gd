@@ -478,7 +478,8 @@ func _begin_combat() -> void:
 		return
 	_previous_round = sim.round_index
 	for team: int in range(2):
-		_previous_formations[team] = _formation_snapshot(team)
+		if not (sim.is_boss_round and team == 1):
+			_previous_formations[team] = _formation_snapshot(team)
 	phase = "combat"
 	_collect_core_events()
 
@@ -737,7 +738,15 @@ func snapshot_for_team(team: int) -> Dictionary:
 				"level": 1, "is_boss": true, "hp": 10000.0, "max_hp": 10000.0, "equipment": []
 			}]
 	else:
-		enemy_units_preview = (_previous_formations[1 - team] as Array).duplicate(true)
+		var prev_units: Array = (_previous_formations[1 - team] as Array).duplicate(true)
+		var clean_prev: Array = []
+		for u: Dictionary in prev_units:
+			if str(u.get("key", "")) != "boss_dev" and not bool(u.get("is_boss", false)):
+				clean_prev.append(u)
+		if clean_prev.is_empty() and sim.round_index > 1:
+			enemy_units_preview = _formation_snapshot(1 - team)
+		else:
+			enemy_units_preview = clean_prev
 	return {"phase": _phase_for_team(team), "prep_remaining": prep_remaining, "round": sim.round_index,
 		"lives": sim.team_lives.duplicate(), "match_winner": sim.match_winner,
 		"elapsed": sim.elapsed, "accelerated": sim.accelerated, "own": own,

@@ -748,7 +748,6 @@ func _build_boss_hud() -> void:
 	boss_bar_panel = _panel(ui, Rect2(304, 8, 672, 56), 0.92, 10)
 	boss_bar_panel.visible = false
 	boss_bar_panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	hud_controls.append(boss_bar_panel)
 	var style: StyleBoxFlat = boss_bar_panel.get_theme_stylebox("panel") as StyleBoxFlat
 	if style != null:
 		style.border_color = Color(GOLD, 0.9)
@@ -1139,10 +1138,10 @@ func _refresh(synchronize_local_state: bool = true) -> void:
 			fight_btn_label.text = "LUTAR"
 			fight_btn_label.add_theme_color_override("font_color", Color("fef08a"))
 	_refresh_status()
-	_refresh_boss_hud(is_boss_round, phase)
 	var in_match: bool = phase not in ["menu"]
 	for control: Control in hud_controls + [bag_panel, synergy_root]:
 		control.visible = in_match
+	_refresh_boss_hud(is_boss_round, phase)
 	performance_label.visible = in_match and show_performance_diagnostics
 	if lobby_root != null:
 		lobby_root.visible = not in_match
@@ -1183,7 +1182,8 @@ func _refresh_status() -> void:
 func _refresh_boss_hud(is_boss_round: bool, phase: String) -> void:
 	if boss_bar_panel == null:
 		return
-	if is_boss_round and phase in ["preparation", "combat"]:
+	var is_boss_fight: bool = is_boss_round and phase == "combat"
+	if is_boss_fight:
 		boss_bar_panel.visible = true
 		if stage_panel != null:
 			stage_panel.visible = false
@@ -1198,10 +1198,6 @@ func _refresh_boss_hud(is_boss_round: bool, phase: String) -> void:
 				minions_alive.append("Lodo Negro")
 			elif str(u.get("key", "")) == "monstro_olho_tentaculos" and bool(u.get("alive", true)):
 				minions_alive.append("Aberração Cósmica")
-		if boss_unit.is_empty():
-			for u: Dictionary in state.get("enemy", {}).get("units", []):
-				if str(u.get("key", "")) == "boss_dev" or bool(u.get("is_boss", false)):
-					boss_unit = u
 		if not boss_unit.is_empty():
 			var b_hp: float = maxf(0.0, float(boss_unit.get("hp", 0)))
 			var b_max: float = maxf(1.0, float(boss_unit.get("max_hp", 10000)))
@@ -1227,9 +1223,9 @@ func _refresh_boss_hud(is_boss_round: bool, phase: String) -> void:
 			boss_bar_hp_label.text = "%d / %d (%d%%)" % [roundi(b_hp), roundi(b_max), roundi(b_ratio * 100.0)]
 			var remaining: int = maxi(0, int(ceil(float(state.get("phase_remaining", 0)))))
 			if boss_bar_timer_label != null:
-				boss_bar_timer_label.text = ("PREPARAÇÃO · %ds" % remaining) if phase == "preparation" else ("BATALHA DE BOSS · %ds" % remaining)
+				boss_bar_timer_label.text = "BATALHA DE BOSS · %ds" % remaining
 			if minions_alive.is_empty():
-				boss_bar_minions_label.text = "⚡ TELEPORTE: A CADA 4s · SEM LACAIOS ATIVOS" if phase == "combat" else "AGUARDANDO O COMBATE..."
+				boss_bar_minions_label.text = "⚡ TELEPORTE: A CADA 4s · SEM LACAIOS ATIVOS"
 			else:
 				boss_bar_minions_label.text = "⚡ TELEPORTE: A CADA 4s · LACAIO NA RETAGUARDA (AGGRO): " + ", ".join(minions_alive)
 			if bot_lives_label != null:
@@ -1240,6 +1236,12 @@ func _refresh_boss_hud(is_boss_round: bool, phase: String) -> void:
 			stage_panel.visible = true
 		if status_panel != null and phase != "menu":
 			status_panel.visible = true
+		if bot_lives_label != null and phase != "menu":
+			if is_boss_round and phase == "preparation":
+				bot_lives_label.text = "DESAFIO PVE (SEM PERDA DE VIDA)"
+			else:
+				var lives: Array = state.get("lives", [4, 4])
+				bot_lives_label.text = "%d vidas" % int(lives[1])
 
 
 ## Valores recebidos da Session; não reproduz a fórmula de renda no cliente.
@@ -3063,8 +3065,10 @@ func _process_game_event(event: Dictionary) -> void:
 		var dest_cell: Vector2i = _cell(event.get("to", []))
 		var from_cell: Vector2i = _cell(event.get("from", []))
 		visual_ground[boss_id] = Board.ground(dest_cell)
-		kit_effects.append({"kind": "boss_teleport", "position": Board.project(Board.ground(from_cell)), "life": 0.55, "duration": 0.55, "critical": false})
-		kit_effects.append({"kind": "boss_teleport_land", "position": Board.project(Board.ground(dest_cell)), "life": 0.55, "duration": 0.55, "critical": false})
+		var tp_key: String = "boss_teleporte" if vfx.has_effect("boss_teleporte") else ""
+		var tp_dur: float = vfx.duration(tp_key) if not tp_key.is_empty() else 0.55
+		kit_effects.append({"kind": "boss_teleport", "position": Board.project(Board.ground(from_cell)), "life": tp_dur, "duration": tp_dur, "critical": false, "library_key": tp_key, "scale": 1.25})
+		kit_effects.append({"kind": "boss_teleport_land", "position": Board.project(Board.ground(dest_cell)), "life": tp_dur, "duration": tp_dur, "critical": false, "library_key": tp_key, "scale": 1.25})
 		floating.append({"text": "⚡ TELEPORTE! ⚡", "position": Board.project(Board.ground(dest_cell)) + Vector2(-28, -42), "color": Color("c084fc"), "life": 1.2, "duration": 1.2, "size": 15, "critical": true})
 		audio.play_cue("boss_spell")
 		shake_remaining = 0.22
@@ -3161,6 +3165,9 @@ func _spawn_kit_feedback(event: Dictionary, source: Dictionary, target: Dictiona
 	elif kind in ["hit", "execute"] and key == "caramelo":
 		effect_kind = "bite"
 		duration = 0.24 if kind == "hit" else 0.42
+		if vfx.has_effect("caramelo_mordida"):
+			library_key = "caramelo_mordida"
+			scale = 0.85
 	elif (kind in ["hit", "reggae_hit", "reggae_impact"] and (key == "bob_marley" or str(source.get("key", "")) == "bob_marley")):
 		effect_kind = "reggae_impact"
 		duration = 0.42
@@ -3190,6 +3197,9 @@ func _spawn_kit_feedback(event: Dictionary, source: Dictionary, target: Dictiona
 	elif kind == "briefcase_guard":
 		effect_kind = "guard"
 		duration = 0.65
+		if vfx.has_effect("obama_barreira"):
+			library_key = "obama_barreira"
+			scale = 1.05
 		if int(source.get("id", -1)) == selected_id:
 			floating.append({"text": "MALA", "position": source_point + Vector2(-16, -28), "color": Color("a7dfff"), "life": 0.7, "size": 12})
 	elif kind == "assassin_hunt":
@@ -3251,6 +3261,9 @@ func _spawn_kit_feedback(event: Dictionary, source: Dictionary, target: Dictiona
 	elif kind == "revive":
 		effect_kind = "revive"
 		duration = 1.0
+		if vfx.has_effect("lula_renascimento"):
+			library_key = "lula_renascimento"
+			scale = 1.25
 		var target_id: int = int(target.get("id", -1))
 		visual_deaths.erase(target_id)
 		lula_descents.erase(target_id)
@@ -3265,6 +3278,9 @@ func _spawn_kit_feedback(event: Dictionary, source: Dictionary, target: Dictiona
 	elif kind == "summon":
 		effect_kind = "summon"
 		duration = 0.55
+		if (key == "barbie" or str(source.get("key", "")) == "barbie") and vfx.has_effect("barbie_invocacao"):
+			library_key = "barbie_invocacao"
+			scale = 1.15
 	elif kind == "miss":
 		floating.append({"text": "ERROU", "position": source_point + Vector2(-17, -34), "color": Color("c5c5d5"), "life": 0.65, "size": 12})
 	elif kind == "crit_growth":
@@ -6178,7 +6194,7 @@ func _draw_overlay_layer() -> void:
 func _draw_bars(canvas: CanvasItem, entry: Dictionary) -> void:
 	var unit: Dictionary = entry["unit"]
 	var is_boss_bar: bool = str(unit.get("key", "")) == "boss_dev" or bool(unit.get("is_boss", false))
-	if (bool(entry["ghost"]) and not is_boss_bar) or not bool(unit.get("alive", true)) or not unit.has("max_hp"):
+	if bool(entry["ghost"]) or not bool(unit.get("alive", true)) or not unit.has("max_hp"):
 		if bool(entry["ghost"]) and int(entry["level"]) > 1:
 			_draw_level_stars(canvas, (entry["feet"] as Vector2) + Vector2(0, -float(entry["height"]) - 10), int(entry["level"]))
 		return

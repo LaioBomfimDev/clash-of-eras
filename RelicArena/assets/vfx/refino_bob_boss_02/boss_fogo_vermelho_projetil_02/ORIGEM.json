@@ -1,0 +1,11 @@
+{
+  "source": "https://pixellab.ai/create-vfx?effect=3df4728e-373f-4127-ac20-45eb2812534d",
+  "source_file": "Guia_Godot4\\visuais\\vfx_bob_boss_02\\originais\\boss_fogo_vermelho_projetil_02\\clash-of-eras-boss-fogo-vermelho-projetil-02.png",
+  "pixel_lab_step": "207f234e-4d0f-4c2f-b9c4-614df57a21df",
+  "pixel_preserving_pack": true,
+  "anchor": [
+    67,
+    40
+  ],
+  "purpose": "VFX only; embedded reference is an effect, not a character"
+}

@@ -1,0 +1,136 @@
+{
+  "effects": [
+    {
+      "key": "neymar_bola",
+      "frames": 12,
+      "distinct_frames": 12,
+      "alpha_verified": true
+    },
+    {
+      "key": "caramelo_mordida",
+      "frames": 12,
+      "distinct_frames": 12,
+      "alpha_verified": true
+    },
+    {
+      "key": "obama_barreira",
+      "frames": 12,
+      "distinct_frames": 11,
+      "alpha_verified": true
+    },
+    {
+      "key": "zumbi_estocada",
+      "frames": 12,
+      "distinct_frames": 12,
+      "alpha_verified": true
+    },
+    {
+      "key": "michael_escudo",
+      "frames": 12,
+      "distinct_frames": 12,
+      "alpha_verified": true
+    },
+    {
+      "key": "michael_cura",
+      "frames": 12,
+      "distinct_frames": 12,
+      "alpha_verified": true
+    },
+    {
+      "key": "barbie_invocacao",
+      "frames": 12,
+      "distinct_frames": 12,
+      "alpha_verified": true
+    },
+    {
+      "key": "elon_minifoguete",
+      "frames": 12,
+      "distinct_frames": 12,
+      "alpha_verified": true
+    },
+    {
+      "key": "elon_superexplosao",
+      "frames": 12,
+      "distinct_frames": 12,
+      "alpha_verified": true
+    },
+    {
+      "key": "snoop_fumaca",
+      "frames": 12,
+      "distinct_frames": 12,
+      "alpha_verified": true
+    },
+    {
+      "key": "lula_renascimento",
+      "frames": 12,
+      "distinct_frames": 12,
+      "alpha_verified": true
+    },
+    {
+      "key": "bob_notas",
+      "frames": 12,
+      "distinct_frames": 12,
+      "alpha_verified": true
+    },
+    {
+      "key": "rapunzel_laco",
+      "frames": 12,
+      "distinct_frames": 12,
+      "alpha_verified": true
+    },
+    {
+      "key": "ken_provocacao",
+      "frames": 12,
+      "distinct_frames": 12,
+      "alpha_verified": true
+    },
+    {
+      "key": "boss_fogo_vermelho",
+      "frames": 12,
+      "distinct_frames": 12,
+      "alpha_verified": true
+    },
+    {
+      "key": "boss_fogo_roxo",
+      "frames": 12,
+      "distinct_frames": 12,
+      "alpha_verified": true
+    },
+    {
+      "key": "boss_furacao",
+      "frames": 12,
+      "distinct_frames": 12,
+      "alpha_verified": true
+    },
+    {
+      "key": "boss_teleporte",
+      "frames": 12,
+      "distinct_frames": 12,
+      "alpha_verified": true
+    },
+    {
+      "key": "lodo_projetil",
+      "frames": 12,
+      "distinct_frames": 12,
+      "alpha_verified": true
+    },
+    {
+      "key": "aberracao_tentaculo",
+      "frames": 12,
+      "distinct_frames": 12,
+      "alpha_verified": true
+    }
+  ],
+  "total_frames": 240,
+  "atlas_size": [
+    1152,
+    1920
+  ],
+  "art_creation": "PixelLab MCP; Python somente para empacotamento e galeria",
+  "visual_review": "Todos os 12 quadros de cada efeito vistos no retorno do MCP; composicao local conferida separadamente",
+  "gameplay_tested": false,
+  "credits_before_after": {
+    "generations_remaining": 1.75,
+    "usd": 0
+  }
+}

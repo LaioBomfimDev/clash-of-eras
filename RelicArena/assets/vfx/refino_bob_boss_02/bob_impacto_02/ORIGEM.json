@@ -1,0 +1,11 @@
+{
+  "source": "https://pixellab.ai/create-vfx?effect=fc3bd79b-8385-487e-b1e2-11327088089a",
+  "source_file": "Guia_Godot4\\visuais\\vfx_bob_boss_02\\originais\\bob_impacto_02\\clash-of-eras-bob-impacto-02.png",
+  "pixel_lab_step": "ed76ab99-1da6-48c5-9c3e-205354d4720c",
+  "pixel_preserving_pack": true,
+  "anchor": [
+    56,
+    56
+  ],
+  "purpose": "VFX only; embedded reference is an effect, not a character"
+}

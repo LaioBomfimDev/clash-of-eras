@@ -76,10 +76,8 @@ func _run() -> void:
 		_assert(boss_prep.get("cell", []) == [4, 1], "Boss posicionado no topo do mapa em cell (4, 1)")
 		_assert(float(boss_prep.get("max_hp", 0)) == 10000.0, "Boss na prévia tem max_hp 10.000")
 
-	# Validar presença da Barra Épica de Boss no Topo da Tela (Raid Boss Bar)
-	_assert(view.boss_bar_panel != null and view.boss_bar_panel.visible, "Barra Épica de Boss ativa e visível no topo da tela")
-	_assert(view.boss_bar_title != null and view.boss_bar_title.text.find("CRIADOR") != -1, "Título da Boss Bar identifica 'O CRIADOR DA ARENA (BOSS)'")
-	_assert(view.boss_bar_hp_label != null and view.boss_bar_hp_label.text.find("10000") != -1, "Rótulo de HP exibe valor total de 10.000 HP")
+	# Validar que a Barra Épica de Boss no Topo da Tela NÃO aparece durante a preparação (aparece apenas na luta do Boss)
+	_assert(view.boss_bar_panel != null and not view.boss_bar_panel.visible, "Barra Épica de Boss oculta durante a fase de preparação")
 
 	# Capturar tela da prévia do Boss no mapa aguardando os combatentes
 	view.queue_redraw()
@@ -113,6 +111,9 @@ func _run() -> void:
 	view._refresh()
 	await process_frame
 	_assert(view._phase() == "combat", "Entrou na fase de combate contra o Boss")
+	_assert(view.boss_bar_panel != null and view.boss_bar_panel.visible, "Barra Épica de Boss ativa e visível no topo da tela durante o combate")
+	_assert(view.boss_bar_title != null and view.boss_bar_title.text.find("CRIADOR") != -1, "Título da Boss Bar identifica 'O CRIADOR DA ARENA (BOSS)'")
+	_assert(view.boss_bar_hp_label != null and view.boss_bar_hp_label.text.find("10000") != -1, "Rótulo de HP exibe valor total de 10.000 HP")
 	for u in view.session.sim.units:
 		if u.team == 0:
 			u.max_hp = 15000.0
@@ -248,6 +249,22 @@ func _run() -> void:
 
 	_assert(view.result_label.text == "O DESENVOLVEDOR ESCAPOU!", "Título do overlay indica Derrota/Tempo Esgotado")
 	_capture("res://captures/boss_desenvolvedor_derrota_sem_perda.png")
+
+	# Testar transição para a Rodada 5 após a luta do Boss
+	view._next_round()
+	await process_frame
+	await process_frame
+	_assert(view.session.sim.round_index == 5, "Avançou com sucesso para a Rodada 5")
+	_assert(view._phase() == "preparation", "Fase atual é preparação da Rodada 5")
+	_assert(not view.boss_bar_panel.visible, "Barra de vida do Boss invisível na Rodada 5")
+	var enemy_units_r5: Array = view.state.get("enemy", {}).get("units", [])
+	_assert(not enemy_units_r5.is_empty(), "Prévia da Rodada 5 contém unidades da equipe do adversário (tamanho: %d)" % enemy_units_r5.size())
+	var has_boss_in_r5: bool = false
+	for u in enemy_units_r5:
+		if str(u.get("key", "")) == "boss_dev" or bool(u.get("is_boss", false)):
+			has_boss_in_r5 = true
+	_assert(not has_boss_in_r5, "Prévia da Rodada 5 retornou à equipe normal do bot, SEM o Boss Dev")
+	_capture("res://captures/pos_boss_rodada5_previa_adversario.png")
 
 	print("\nBOSS BATTLE TEST RESULTS: %d passed, %d failed" % [passed, failed])
 	if failed > 0:

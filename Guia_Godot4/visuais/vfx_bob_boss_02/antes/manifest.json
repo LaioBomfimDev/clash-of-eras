@@ -1,0 +1,433 @@
+{
+  "date": "2026-10-12",
+  "method": "PixelLab deterministic vfx_workbench",
+  "ai_generation_calls": 0,
+  "state": "13 clips. Integrated in the client on 2026-10-12: foguete_02 (rocket flight), anel_fumaca_01 (Snoop shot), fumaca_02 (Snoop zone), explosao_03 (rocket impact, preferred over explosao_02/foguete_01) and estilhaco_01 (each splash target). explosao_02, foguete_01 and fumaca_01 stay as fallbacks; charuto_01 reserved for lote 04.",
+  "effects": [
+    {
+      "key": "escudo_danca_01",
+      "effect_id": "23968870-beb2-442e-bbea-1cc8593fc21a",
+      "step_id": "08033c2c-377f-4ce3-b7ac-0d8a25f1e605",
+      "export_image_id": "4121cbc9-7a18-4934-a9cb-9294a04ed40d",
+      "effect_url": "https://pixellab.ai/create-vfx?effect=23968870-beb2-442e-bbea-1cc8593fc21a",
+      "original_manifest": "res://assets/vfx/escudo_danca_01/original/manifest.json",
+      "clip": "part-bubble_shield",
+      "fps": 10,
+      "frames": 12,
+      "frame": {
+        "w": 43,
+        "h": 43
+      },
+      "offset": {
+        "x": -21,
+        "y": -43
+      },
+      "loop": true,
+      "original_zip": "escudo_danca_01/pixellab_original.zip",
+      "zip_sha256": "8669913F30D6DCB25A8D0D8DB8B16EEE7C1A6E547F28AF8BD876637FA9717074",
+      "character_embedded": false,
+      "runtime_integrated": true,
+      "runtime_role": "active"
+    },
+    {
+      "key": "cura_01",
+      "effect_id": "bdb4529f-f006-4df7-aa7f-b8257d577e08",
+      "step_id": "168f77b4-6ef2-4003-98dd-f3fb3039e01c",
+      "export_image_id": "f91a4295-da33-4b2d-9531-7166ef81d79c",
+      "effect_url": "https://pixellab.ai/create-vfx?effect=bdb4529f-f006-4df7-aa7f-b8257d577e08",
+      "original_manifest": "res://assets/vfx/cura_01/game_pack/manifest.json",
+      "clip": "part-cura",
+      "fps": 16,
+      "frames": 11,
+      "frame": {
+        "w": 19,
+        "h": 23
+      },
+      "offset": {
+        "x": -9,
+        "y": -20
+      },
+      "loop": false,
+      "original_zip": "cura_01/original/clash-of-eras-cura01-game.zip",
+      "zip_sha256": "6F4807093C66042DEB90F4BA4BE93CABFA87EC21161F838FF9A2336531814B41",
+      "character_embedded": false,
+      "runtime_integrated": true,
+      "runtime_role": "active"
+    },
+    {
+      "key": "estocada_01",
+      "effect_id": "38643174-7945-4ff4-811e-6ff0cb4be9ca",
+      "step_id": "16b027a9-8f3e-4808-8b1a-2c19282f1390",
+      "export_image_id": "e7a3ebf2-2a30-4f70-bd51-c6fd1fefa1d3",
+      "effect_url": "https://pixellab.ai/create-vfx?effect=38643174-7945-4ff4-811e-6ff0cb4be9ca",
+      "original_manifest": "res://assets/vfx/estocada_01/manifest.json",
+      "clip": "part-estocada",
+      "fps": 24,
+      "frames": 7,
+      "frame": {
+        "w": 24,
+        "h": 6
+      },
+      "offset": {
+        "x": -1,
+        "y": -3
+      },
+      "loop": false,
+      "original_zip": "estocada_01/clash-of-eras-estocada01-game.zip",
+      "zip_sha256": "BF6DA9A9273DAEDA999DD03CC751434ACA81D08132CADAAA0139849D54719F92",
+      "character_embedded": false,
+      "runtime_integrated": true,
+      "runtime_role": "active"
+    },
+    {
+      "key": "foguete_01",
+      "effect_id": "2476a6cd-b5d9-4a04-8deb-9b9458d1465d",
+      "step_id": "cf43e369-f4bc-48ef-a77b-7d6c62a1ceba",
+      "export_image_id": "c35d2140-488c-4843-ab15-8fb3107b9d6d",
+      "effect_url": "https://pixellab.ai/create-vfx?effect=2476a6cd-b5d9-4a04-8deb-9b9458d1465d",
+      "original_manifest": "res://assets/vfx/foguete_01/game_pack/manifest.json",
+      "clip": "part-fire_blast",
+      "fps": 24,
+      "frames": 11,
+      "frame": {
+        "w": 26,
+        "h": 26
+      },
+      "offset": {
+        "x": -13,
+        "y": -13
+      },
+      "loop": false,
+      "original_zip": "foguete_01/clash-of-eras-impacto-foguete01-game.zip",
+      "zip_sha256": "21A14FDAB200EFD058F00B3A4AE038C987B3CC83F762163F54BC0F70D3BCDC16",
+      "character_embedded": false,
+      "runtime_integrated": true,
+      "runtime_role": "fallback"
+    },
+    {
+      "export_image_id": "d5746abe-e8db-4ceb-8dcf-0ad03bdd0b3d",
+      "key": "fumaca_01",
+      "effect_url": "https://pixellab.ai/create-vfx?effect=76cb7b84-c9d2-484f-8847-c1e56b6a166b",
+      "frames": 16,
+      "zip_sha256": "DE71BF96731BC8C47AC6AE33BDB0028D06A1047A2A03E6557C5CC8F84D4057EC",
+      "clip": "part-fumaca",
+      "original_manifest": "res://assets/vfx/fumaca_01/original/manifest.json",
+      "runtime_integrated": true,
+      "step_id": "8f84d327-304c-4164-83da-9770e270874e",
+      "loop": true,
+      "offset": {
+        "y": -3,
+        "x": -13
+      },
+      "fps": 10,
+      "character_embedded": false,
+      "effect_id": "76cb7b84-c9d2-484f-8847-c1e56b6a166b",
+      "frame": {
+        "h": 7,
+        "w": 29
+      },
+      "original_zip": "fumaca_01/clash-of-eras-fumaca01-game.zip",
+      "runtime_role": "fallback"
+    },
+    {
+      "export_image_id": "fd0b489b-8c80-45b6-9c51-1d8d6edde2f3",
+      "key": "laco_01",
+      "effect_url": "https://pixellab.ai/create-vfx?effect=40e143b2-5dac-43ed-8c68-b8892fccfb69",
+      "frames": 11,
+      "zip_sha256": "9DB2A623B867AB01D167FDF6DB4FB84AFB3713C768FCFCF0553A974BE103A63C",
+      "clip": "part-laco",
+      "original_manifest": "res://assets/vfx/laco_01/game_pack/manifest.json",
+      "runtime_integrated": true,
+      "step_id": "8f0460f6-0fb9-4090-b6f3-da403d023e6f",
+      "loop": false,
+      "offset": {
+        "y": -8,
+        "x": -12
+      },
+      "fps": 16,
+      "character_embedded": false,
+      "effect_id": "40e143b2-5dac-43ed-8c68-b8892fccfb69",
+      "frame": {
+        "h": 15,
+        "w": 24
+      },
+      "original_zip": "laco_01/original/clash-of-eras-laco01-game.zip",
+      "runtime_role": "active"
+    },
+    {
+      "key": "explosao_02",
+      "effect_id": "ad3e2033-0e1c-49a6-810d-c403821693fb",
+      "step_id": "45b670f7-5a83-4a02-9c41-7ecb7d196768",
+      "export_image_id": "cab0e5bb-c5ad-47e4-96a2-b348c7271411",
+      "effect_url": "https://pixellab.ai/create-vfx?effect=ad3e2033-0e1c-49a6-810d-c403821693fb",
+      "original_manifest": "res://assets/vfx/explosao_02/game_pack/manifest.json",
+      "clip": "whole",
+      "fps": 18,
+      "frames": 14,
+      "frame": {
+        "w": 131,
+        "h": 103
+      },
+      "offset": {
+        "x": -75,
+        "y": -68
+      },
+      "loop": false,
+      "original_zip": "explosao_02/original/clash-of-eras-explosao-foguete-elon-02-game.zip",
+      "zip_sha256": "9FA2C575D6DB2C3F256599692340C6D1CB9086F7A33625034D9E3FC2E6A0B006",
+      "character_embedded": false,
+      "runtime_integrated": true,
+      "runtime_role": "fallback"
+    },
+    {
+      "key": "foguete_02",
+      "effect_id": "b16c4f92-6173-401e-9328-bd5933cf04fa",
+      "step_id": "6c514ef3-4e65-4e10-83c7-9994cfa2faee",
+      "export_image_id": "2f14c651-9043-4f16-8239-e127398e89b7",
+      "effect_url": "https://pixellab.ai/create-vfx?effect=b16c4f92-6173-401e-9328-bd5933cf04fa",
+      "original_manifest": "res://assets/vfx/foguete_02/game_pack/manifest.json",
+      "clip": "whole",
+      "fps": 16,
+      "frames": 8,
+      "frame": {
+        "w": 70,
+        "h": 12
+      },
+      "offset": {
+        "x": -58,
+        "y": -5
+      },
+      "loop": true,
+      "original_zip": "foguete_02/original/clash-of-eras-foguete-elon-02-game.zip",
+      "zip_sha256": "F0F207D85FA49AB86B25EA58FDA47F51BFCC679EBF2B0F4D17F14835FFF29DA5",
+      "character_embedded": false,
+      "runtime_integrated": true,
+      "runtime_role": "active"
+    },
+    {
+      "key": "fumaca_02",
+      "effect_id": "babfac7e-4ab2-4afc-a097-edf23c3f7416",
+      "step_id": "9fc27e68-af8a-433c-8081-b65999e7ff86",
+      "export_image_id": "b047c9e4-2934-47a4-9a1c-b493c035b3d4",
+      "effect_url": "https://pixellab.ai/create-vfx?effect=babfac7e-4ab2-4afc-a097-edf23c3f7416",
+      "original_manifest": "res://assets/vfx/fumaca_02/game_pack/manifest.json",
+      "clip": "whole",
+      "fps": 10,
+      "frames": 16,
+      "frame": {
+        "w": 222,
+        "h": 131
+      },
+      "offset": {
+        "x": -110,
+        "y": -62
+      },
+      "loop": true,
+      "original_zip": "fumaca_02/original/clash-of-eras-nuvem-fumaca-snoop-02-game.zip",
+      "zip_sha256": "E33180908F945F9BE5B4AE59BE2C2ED654C1BE667A456B1F84009B9B68015B0D",
+      "character_embedded": false,
+      "runtime_integrated": true,
+      "runtime_role": "active"
+    },
+    {
+      "key": "anel_fumaca_01",
+      "effect_id": "32e5565c-610d-4ab6-95cf-ff967dc191b5",
+      "step_id": "87ec92f4-52bf-438e-98ce-582593317aea",
+      "export_image_id": "9c182ce8-96ed-4a59-a755-637d36b6e748",
+      "effect_url": "https://pixellab.ai/create-vfx?effect=32e5565c-610d-4ab6-95cf-ff967dc191b5",
+      "original_manifest": "res://assets/vfx/anel_fumaca_01/game_pack/manifest.json",
+      "clip": "whole",
+      "fps": 16,
+      "frames": 8,
+      "frame": {
+        "w": 49,
+        "h": 30
+      },
+      "offset": {
+        "x": -38,
+        "y": -15
+      },
+      "loop": true,
+      "original_zip": "anel_fumaca_01/original/clash-of-eras-anel-fumaca-snoop-01-game.zip",
+      "zip_sha256": "7C74629803D1C68B17DDFC51804E639F3A186B25AA0B0D10D19B15F156E83F92",
+      "character_embedded": false,
+      "runtime_integrated": true,
+      "runtime_role": "active"
+    },
+    {
+      "key": "charuto_01",
+      "effect_id": "351d9e3f-66f9-4d9d-b091-94c1122a4c8a",
+      "step_id": "a96958c4-b650-40fe-96d0-d3ed80a965f3",
+      "export_image_id": "7b84b8a2-f8a6-415d-a70c-53b326bafd33",
+      "effect_url": "https://pixellab.ai/create-vfx?effect=351d9e3f-66f9-4d9d-b091-94c1122a4c8a",
+      "original_manifest": "res://assets/vfx/charuto_01/game_pack/manifest.json",
+      "clip": "whole",
+      "fps": 10,
+      "frames": 12,
+      "frame": {
+        "w": 15,
+        "h": 46
+      },
+      "offset": {
+        "x": -4,
+        "y": -42
+      },
+      "loop": true,
+      "original_zip": "charuto_01/original/clash-of-eras-fumaca-charuto-snoop-01-game.zip",
+      "zip_sha256": "BDFA3CA63E752734CEC1909F36AECD680E65DE16342A12C2DB5AADACB49CC31A",
+      "character_embedded": false,
+      "runtime_integrated": true,
+      "runtime_role": "active"
+    },
+    {
+      "key": "explosao_03",
+      "effect_id": "bf077b94-26d0-409f-b7e4-459aa4383243",
+      "step_id": "3eda79bf-51b5-4776-b8bf-2e78a4f24f64",
+      "export_image_id": "e76abd12-e582-443e-8101-363640e4645f",
+      "effect_url": "https://pixellab.ai/create-vfx?effect=bf077b94-26d0-409f-b7e4-459aa4383243",
+      "original_manifest": "res://assets/vfx/explosao_03/game_pack/manifest.json",
+      "clip": "whole",
+      "fps": 18,
+      "frames": 17,
+      "frame": {
+        "w": 240,
+        "h": 207
+      },
+      "offset": {
+        "x": -120,
+        "y": -132
+      },
+      "loop": false,
+      "original_zip": "explosao_03/original/clash-of-eras-explosao-grande-elon-03-game.zip",
+      "zip_sha256": "AEAAFACEC86DB1158655D8B1442320C60C70EC0FB4FEEB1822D2F6CEB52B3BDD",
+      "character_embedded": false,
+      "runtime_integrated": true,
+      "runtime_role": "active"
+    },
+    {
+      "key": "estilhaco_01",
+      "effect_id": "38155355-4da8-46af-9b1d-8e09482af254",
+      "step_id": "765c036b-9181-45fc-86e4-24de82e1d4cb",
+      "export_image_id": "7cdc5d7c-e117-43ad-80b2-652546a03a8e",
+      "effect_url": "https://pixellab.ai/create-vfx?effect=38155355-4da8-46af-9b1d-8e09482af254",
+      "original_manifest": "res://assets/vfx/estilhaco_01/game_pack/manifest.json",
+      "clip": "whole",
+      "fps": 18,
+      "frames": 10,
+      "frame": {
+        "w": 65,
+        "h": 67
+      },
+      "offset": {
+        "x": -33,
+        "y": -52
+      },
+      "loop": false,
+      "original_zip": "estilhaco_01/original/clash-of-eras-estilhaco-vizinhos-elon-01-game.zip",
+      "zip_sha256": "EC6D55B59DE4608DE28DB1377BF36591E751B47924A4AD9658045059CE28A6CF",
+      "character_embedded": false,
+      "runtime_integrated": true,
+      "runtime_role": "active"
+    },
+    {
+      "key": "zumbi_estocada_critica",
+      "effect_id": "2e362001-68de-4e23-85db-cfc090ce9588",
+      "step_id": "6aed2cf5-f3f1-4ce0-81d7-709d3fb0136e",
+      "export_image_id": "c0920c87-53ee-488c-a4fe-2c7da162b98c",
+      "effect_url": "https://pixellab.ai/create-vfx?effect=2e362001-68de-4e23-85db-cfc090ce9588",
+      "original_manifest": "res://assets/vfx/zumbi_estocada_02/game_pack/manifest.json",
+      "clip": "whole",
+      "fps": 24,
+      "frames": 7,
+      "frame": {
+        "w": 34,
+        "h": 12
+      },
+      "offset": {
+        "x": -5,
+        "y": -6
+      },
+      "loop": false,
+      "original_zip": "zumbi_estocada_02/original/clash-of-eras-zumbi-estocada-critica02-game.zip",
+      "zip_sha256": "842985205FDAC04D8D7C61BA55D2CE1906989F0BFFA76FC2077DDCDF1A598A08",
+      "character_embedded": false,
+      "runtime_integrated": true,
+      "runtime_role": "critical_spear_hit"
+    },
+    {
+      "key": "zumbi_inspiracao",
+      "effect_id": "6313f6b8-a969-405c-b435-38f58a8817cd",
+      "step_id": "f44e7e92-191f-42f1-a9d0-7b401b445dea",
+      "export_image_id": "3c944447-93b6-403c-9623-9da1412bd427",
+      "effect_url": "https://pixellab.ai/create-vfx?effect=6313f6b8-a969-405c-b435-38f58a8817cd",
+      "original_manifest": "res://assets/vfx/zumbi_inspiracao_02/game_pack/manifest.json",
+      "clip": "part-inspiracao",
+      "fps": 20,
+      "frames": 7,
+      "frame": {
+        "w": 21,
+        "h": 17
+      },
+      "offset": {
+        "x": -10,
+        "y": -22
+      },
+      "loop": false,
+      "original_zip": "zumbi_inspiracao_02/original/clash-of-eras-zumbi-inspiracao02-game.zip",
+      "zip_sha256": "7AA4558D748BD58830C793D6F6091FEB3CACD5E07C1EA9FB2CAB5853C94EBE95",
+      "character_embedded": false,
+      "runtime_integrated": true,
+      "runtime_role": "round_start_team_buff"
+    },
+    {
+      "key": "notas_bob_01",
+      "effect_id": "req_79cf33fd-8619-4e3d-af4e-5059dc6d6e32",
+      "step_id": "62579471-c0e9-4635-96fd-5aa47c17b367",
+      "export_image_id": "e8c02661-1cd5-43b9-99b8-f59bffced249",
+      "effect_url": "https://www.spritefusion.com/docs/pixel-art-generator/api/mcp",
+      "original_manifest": "res://assets/vfx/notas_bob_01/game_pack/manifest.json",
+      "clip": "whole",
+      "fps": 6,
+      "frames": 6,
+      "frame": {
+        "w": 14,
+        "h": 14
+      },
+      "offset": {
+        "x": -7,
+        "y": -7
+      },
+      "loop": true,
+      "original_zip": "spritefusion_01/ORIGEM.json",
+      "zip_sha256": "18D2183536035541B6304B3868EFD22F62D1926C9886A9BC86B5FF98C9B8B5E3",
+      "character_embedded": false,
+      "runtime_integrated": true,
+      "runtime_role": "active"
+    },
+    {
+      "key": "charutao_snoop_01",
+      "effect_id": "req_79cf33fd-8619-4e3d-af4e-5059dc6d6e32",
+      "step_id": "faa42462-c772-4624-ac46-99126b0e9c98",
+      "export_image_id": "1a20a102-b6b1-441d-8351-7773510ada25",
+      "effect_url": "https://www.spritefusion.com/docs/pixel-art-generator/api/mcp",
+      "original_manifest": "res://assets/vfx/charutao_snoop_01/game_pack/manifest.json",
+      "clip": "whole",
+      "fps": 6,
+      "frames": 4,
+      "frame": {
+        "w": 30,
+        "h": 28
+      },
+      "offset": {
+        "x": -1,
+        "y": -21
+      },
+      "loop": true,
+      "original_zip": "spritefusion_01/ORIGEM.json",
+      "zip_sha256": "B0818C7DE1B8AB78E9E02200BAF8688D3003CC8E39AB736AB2A6E53B2553EF25",
+      "character_embedded": false,
+      "runtime_integrated": true,
+      "runtime_role": "active"
+    }
+  ]
+}

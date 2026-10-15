@@ -1,0 +1,443 @@
+{
+ "frames": [
+  {
+   "filename": "clash-of-eras-boss-fogo-vermelho-projetil-02 0.png",
+   "frame": {
+    "x": 0,
+    "y": 0,
+    "w": 96,
+    "h": 80
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 96,
+    "h": 80
+   },
+   "sourceSize": {
+    "w": 96,
+    "h": 80
+   },
+   "pivot": {
+    "x": 0.6145833333333334,
+    "y": 0.65
+   },
+   "duration": 42
+  },
+  {
+   "filename": "clash-of-eras-boss-fogo-vermelho-projetil-02 1.png",
+   "frame": {
+    "x": 96,
+    "y": 0,
+    "w": 96,
+    "h": 80
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 96,
+    "h": 80
+   },
+   "sourceSize": {
+    "w": 96,
+    "h": 80
+   },
+   "pivot": {
+    "x": 0.6145833333333334,
+    "y": 0.65
+   },
+   "duration": 42
+  },
+  {
+   "filename": "clash-of-eras-boss-fogo-vermelho-projetil-02 2.png",
+   "frame": {
+    "x": 192,
+    "y": 0,
+    "w": 96,
+    "h": 80
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 96,
+    "h": 80
+   },
+   "sourceSize": {
+    "w": 96,
+    "h": 80
+   },
+   "pivot": {
+    "x": 0.6145833333333334,
+    "y": 0.65
+   },
+   "duration": 42
+  },
+  {
+   "filename": "clash-of-eras-boss-fogo-vermelho-projetil-02 3.png",
+   "frame": {
+    "x": 288,
+    "y": 0,
+    "w": 96,
+    "h": 80
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 96,
+    "h": 80
+   },
+   "sourceSize": {
+    "w": 96,
+    "h": 80
+   },
+   "pivot": {
+    "x": 0.6145833333333334,
+    "y": 0.65
+   },
+   "duration": 42
+  },
+  {
+   "filename": "clash-of-eras-boss-fogo-vermelho-projetil-02 4.png",
+   "frame": {
+    "x": 0,
+    "y": 80,
+    "w": 96,
+    "h": 80
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 96,
+    "h": 80
+   },
+   "sourceSize": {
+    "w": 96,
+    "h": 80
+   },
+   "pivot": {
+    "x": 0.6145833333333334,
+    "y": 0.65
+   },
+   "duration": 42
+  },
+  {
+   "filename": "clash-of-eras-boss-fogo-vermelho-projetil-02 5.png",
+   "frame": {
+    "x": 96,
+    "y": 80,
+    "w": 96,
+    "h": 80
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 96,
+    "h": 80
+   },
+   "sourceSize": {
+    "w": 96,
+    "h": 80
+   },
+   "pivot": {
+    "x": 0.6145833333333334,
+    "y": 0.65
+   },
+   "duration": 42
+  },
+  {
+   "filename": "clash-of-eras-boss-fogo-vermelho-projetil-02 6.png",
+   "frame": {
+    "x": 192,
+    "y": 80,
+    "w": 96,
+    "h": 80
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 96,
+    "h": 80
+   },
+   "sourceSize": {
+    "w": 96,
+    "h": 80
+   },
+   "pivot": {
+    "x": 0.6145833333333334,
+    "y": 0.65
+   },
+   "duration": 42
+  },
+  {
+   "filename": "clash-of-eras-boss-fogo-vermelho-projetil-02 7.png",
+   "frame": {
+    "x": 288,
+    "y": 80,
+    "w": 96,
+    "h": 80
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 96,
+    "h": 80
+   },
+   "sourceSize": {
+    "w": 96,
+    "h": 80
+   },
+   "pivot": {
+    "x": 0.6145833333333334,
+    "y": 0.65
+   },
+   "duration": 42
+  },
+  {
+   "filename": "clash-of-eras-boss-fogo-vermelho-projetil-02 8.png",
+   "frame": {
+    "x": 0,
+    "y": 160,
+    "w": 96,
+    "h": 80
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 96,
+    "h": 80
+   },
+   "sourceSize": {
+    "w": 96,
+    "h": 80
+   },
+   "pivot": {
+    "x": 0.6145833333333334,
+    "y": 0.65
+   },
+   "duration": 42
+  },
+  {
+   "filename": "clash-of-eras-boss-fogo-vermelho-projetil-02 9.png",
+   "frame": {
+    "x": 96,
+    "y": 160,
+    "w": 96,
+    "h": 80
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 96,
+    "h": 80
+   },
+   "sourceSize": {
+    "w": 96,
+    "h": 80
+   },
+   "pivot": {
+    "x": 0.6145833333333334,
+    "y": 0.65
+   },
+   "duration": 42
+  },
+  {
+   "filename": "clash-of-eras-boss-fogo-vermelho-projetil-02 10.png",
+   "frame": {
+    "x": 192,
+    "y": 160,
+    "w": 96,
+    "h": 80
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 96,
+    "h": 80
+   },
+   "sourceSize": {
+    "w": 96,
+    "h": 80
+   },
+   "pivot": {
+    "x": 0.6145833333333334,
+    "y": 0.65
+   },
+   "duration": 42
+  },
+  {
+   "filename": "clash-of-eras-boss-fogo-vermelho-projetil-02 11.png",
+   "frame": {
+    "x": 288,
+    "y": 160,
+    "w": 96,
+    "h": 80
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 96,
+    "h": 80
+   },
+   "sourceSize": {
+    "w": 96,
+    "h": 80
+   },
+   "pivot": {
+    "x": 0.6145833333333334,
+    "y": 0.65
+   },
+   "duration": 42
+  },
+  {
+   "filename": "clash-of-eras-boss-fogo-vermelho-projetil-02 12.png",
+   "frame": {
+    "x": 0,
+    "y": 240,
+    "w": 96,
+    "h": 80
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 96,
+    "h": 80
+   },
+   "sourceSize": {
+    "w": 96,
+    "h": 80
+   },
+   "pivot": {
+    "x": 0.6145833333333334,
+    "y": 0.65
+   },
+   "duration": 42
+  },
+  {
+   "filename": "clash-of-eras-boss-fogo-vermelho-projetil-02 13.png",
+   "frame": {
+    "x": 96,
+    "y": 240,
+    "w": 96,
+    "h": 80
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 96,
+    "h": 80
+   },
+   "sourceSize": {
+    "w": 96,
+    "h": 80
+   },
+   "pivot": {
+    "x": 0.6145833333333334,
+    "y": 0.65
+   },
+   "duration": 42
+  },
+  {
+   "filename": "clash-of-eras-boss-fogo-vermelho-projetil-02 14.png",
+   "frame": {
+    "x": 192,
+    "y": 240,
+    "w": 96,
+    "h": 80
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 96,
+    "h": 80
+   },
+   "sourceSize": {
+    "w": 96,
+    "h": 80
+   },
+   "pivot": {
+    "x": 0.6145833333333334,
+    "y": 0.65
+   },
+   "duration": 42
+  },
+  {
+   "filename": "clash-of-eras-boss-fogo-vermelho-projetil-02 15.png",
+   "frame": {
+    "x": 288,
+    "y": 240,
+    "w": 96,
+    "h": 80
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 96,
+    "h": 80
+   },
+   "sourceSize": {
+    "w": 96,
+    "h": 80
+   },
+   "pivot": {
+    "x": 0.6145833333333334,
+    "y": 0.65
+   },
+   "duration": 42
+  }
+ ],
+ "meta": {
+  "app": "PixelLab VFX Creator",
+  "image": "clash-of-eras-boss-fogo-vermelho-projetil-02.png",
+  "format": "RGBA8888",
+  "size": {
+   "w": 384,
+   "h": 320
+  },
+  "scale": "1",
+  "anchor": {
+   "kind": "feet",
+   "x": 59,
+   "y": 52
+  },
+  "frameTags": [
+   {
+    "name": "clash-of-eras-boss-fogo-vermelho-projetil-02",
+    "from": 0,
+    "to": 15,
+    "direction": "forward"
+   }
+  ]
+ }
+}

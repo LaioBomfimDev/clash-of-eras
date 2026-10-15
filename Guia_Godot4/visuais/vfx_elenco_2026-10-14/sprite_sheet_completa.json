@@ -1,0 +1,318 @@
+{
+  "source": "PixelLab MCP vfx_workbench",
+  "status": "proposta visual, sem integracao no combate",
+  "image": "sprite_sheet_completa.png",
+  "frame_size": [
+    96,
+    96
+  ],
+  "columns": 12,
+  "rows": 20,
+  "fps": 16,
+  "anchor": [
+    48,
+    48
+  ],
+  "effects": [
+    {
+      "key": "neymar_bola",
+      "name": "Neymar - Bola de energia",
+      "row": 0,
+      "frames": 12,
+      "fps": 16,
+      "loop": true,
+      "rect": [
+        0,
+        0,
+        1152,
+        96
+      ],
+      "edit_url": "https://pixellab.ai/create-vfx?effect=77215653-b60e-4337-a897-e025835361f0"
+    },
+    {
+      "key": "caramelo_mordida",
+      "name": "Caramelo - Presas ferozes",
+      "row": 1,
+      "frames": 12,
+      "fps": 16,
+      "loop": false,
+      "rect": [
+        0,
+        96,
+        1152,
+        96
+      ],
+      "edit_url": "https://pixellab.ai/create-vfx?effect=7da56200-f183-4803-942c-1812f037c8a8"
+    },
+    {
+      "key": "obama_barreira",
+      "name": "Obama - Barreira da mala",
+      "row": 2,
+      "frames": 12,
+      "fps": 16,
+      "loop": false,
+      "rect": [
+        0,
+        192,
+        1152,
+        96
+      ],
+      "edit_url": "https://pixellab.ai/create-vfx?effect=455fbfd2-23e8-4f46-897d-6055b4392a72"
+    },
+    {
+      "key": "zumbi_estocada",
+      "name": "Zumbi - Lanca ancestral",
+      "row": 3,
+      "frames": 12,
+      "fps": 16,
+      "loop": false,
+      "rect": [
+        0,
+        288,
+        1152,
+        96
+      ],
+      "edit_url": "https://pixellab.ai/create-vfx?effect=9cb15c35-26a5-4315-a0d8-0a72313e6dc4"
+    },
+    {
+      "key": "michael_escudo",
+      "name": "Michael - Escudo do moonwalk",
+      "row": 4,
+      "frames": 12,
+      "fps": 16,
+      "loop": true,
+      "rect": [
+        0,
+        384,
+        1152,
+        96
+      ],
+      "edit_url": "https://pixellab.ai/create-vfx?effect=7fca52fc-b2ea-44f9-bb93-bc56b3eb9305"
+    },
+    {
+      "key": "michael_cura",
+      "name": "Michael - Estrelas de cura",
+      "row": 5,
+      "frames": 12,
+      "fps": 16,
+      "loop": false,
+      "rect": [
+        0,
+        480,
+        1152,
+        96
+      ],
+      "edit_url": "https://pixellab.ai/create-vfx?effect=92c53ed5-dc70-4ba5-8717-fe83021c0d2c"
+    },
+    {
+      "key": "barbie_invocacao",
+      "name": "Barbie - Invocacao do Ken",
+      "row": 6,
+      "frames": 12,
+      "fps": 16,
+      "loop": false,
+      "rect": [
+        0,
+        576,
+        1152,
+        96
+      ],
+      "edit_url": "https://pixellab.ai/create-vfx?effect=58684ccb-97d0-45ac-96e1-eab21a717eeb"
+    },
+    {
+      "key": "elon_minifoguete",
+      "name": "Elon - Minifoguete",
+      "row": 7,
+      "frames": 12,
+      "fps": 16,
+      "loop": true,
+      "rect": [
+        0,
+        672,
+        1152,
+        96
+      ],
+      "edit_url": "https://pixellab.ai/create-vfx?effect=9dcc66e8-0b18-4d2d-ad13-34641631ecf1"
+    },
+    {
+      "key": "elon_superexplosao",
+      "name": "Elon - Super explosao",
+      "row": 8,
+      "frames": 12,
+      "fps": 16,
+      "loop": false,
+      "rect": [
+        0,
+        768,
+        1152,
+        96
+      ],
+      "edit_url": "https://pixellab.ai/create-vfx?effect=277a6132-4060-4232-9c3d-21d952786bf4"
+    },
+    {
+      "key": "snoop_fumaca",
+      "name": "Snoop - Fumaca verde",
+      "row": 9,
+      "frames": 12,
+      "fps": 16,
+      "loop": true,
+      "rect": [
+        0,
+        864,
+        1152,
+        96
+      ],
+      "edit_url": "https://pixellab.ai/create-vfx?effect=ea5f953e-9359-4b27-9b9c-afe333542f16"
+    },
+    {
+      "key": "lula_renascimento",
+      "name": "Lula - Asas do retorno",
+      "row": 10,
+      "frames": 12,
+      "fps": 16,
+      "loop": false,
+      "rect": [
+        0,
+        960,
+        1152,
+        96
+      ],
+      "edit_url": "https://pixellab.ai/create-vfx?effect=05a3123f-d572-4f8f-9d97-cd8a04cb6bc2"
+    },
+    {
+      "key": "bob_notas",
+      "name": "Bob Marley - Onda reggae",
+      "row": 11,
+      "frames": 12,
+      "fps": 16,
+      "loop": true,
+      "rect": [
+        0,
+        1056,
+        1152,
+        96
+      ],
+      "edit_url": "https://pixellab.ai/create-vfx?effect=2ec214da-a1e4-4afb-bd74-34c40d902054"
+    },
+    {
+      "key": "rapunzel_laco",
+      "name": "Rapunzel - Laco dourado",
+      "row": 12,
+      "frames": 12,
+      "fps": 16,
+      "loop": false,
+      "rect": [
+        0,
+        1152,
+        1152,
+        96
+      ],
+      "edit_url": "https://pixellab.ai/create-vfx?effect=a84efa57-8c55-4753-a8fa-c4e18ba7b9db"
+    },
+    {
+      "key": "ken_provocacao",
+      "name": "Ken - Guardiao leal",
+      "row": 13,
+      "frames": 12,
+      "fps": 16,
+      "loop": false,
+      "rect": [
+        0,
+        1248,
+        1152,
+        96
+      ],
+      "edit_url": "https://pixellab.ai/create-vfx?effect=fa3fbe1d-2d05-42cf-9d93-5c21b5f5e4f1"
+    },
+    {
+      "key": "boss_fogo_vermelho",
+      "name": "Boss - Meteoro vermelho",
+      "row": 14,
+      "frames": 12,
+      "fps": 16,
+      "loop": true,
+      "rect": [
+        0,
+        1344,
+        1152,
+        96
+      ],
+      "edit_url": "https://pixellab.ai/create-vfx?effect=32b20b83-39a5-4701-950e-9b299d1aa28c"
+    },
+    {
+      "key": "boss_fogo_roxo",
+      "name": "Boss - Singularidade violeta",
+      "row": 15,
+      "frames": 12,
+      "fps": 16,
+      "loop": true,
+      "rect": [
+        0,
+        1440,
+        1152,
+        96
+      ],
+      "edit_url": "https://pixellab.ai/create-vfx?effect=e7aac9e7-51f5-4c23-84c7-305196909dc9"
+    },
+    {
+      "key": "boss_furacao",
+      "name": "Boss - Furacao de fogo",
+      "row": 16,
+      "frames": 12,
+      "fps": 16,
+      "loop": true,
+      "rect": [
+        0,
+        1536,
+        1152,
+        96
+      ],
+      "edit_url": "https://pixellab.ai/create-vfx?effect=9c190e84-bff2-4ee5-8c17-06e3ed0c3071"
+    },
+    {
+      "key": "boss_teleporte",
+      "name": "Boss - Portal arcano",
+      "row": 17,
+      "frames": 12,
+      "fps": 16,
+      "loop": true,
+      "rect": [
+        0,
+        1632,
+        1152,
+        96
+      ],
+      "edit_url": "https://pixellab.ai/create-vfx?effect=7d4143cd-cdcc-4885-b9b1-8fa4e42d1f41"
+    },
+    {
+      "key": "lodo_projetil",
+      "name": "Lodo Negro - Gota sombria",
+      "row": 18,
+      "frames": 12,
+      "fps": 16,
+      "loop": true,
+      "rect": [
+        0,
+        1728,
+        1152,
+        96
+      ],
+      "edit_url": "https://pixellab.ai/create-vfx?effect=0c6de696-f341-4759-8c53-c72d67a75a6e"
+    },
+    {
+      "key": "aberracao_tentaculo",
+      "name": "Aberracao - Chicote cosmico",
+      "row": 19,
+      "frames": 12,
+      "fps": 16,
+      "loop": true,
+      "rect": [
+        0,
+        1824,
+        1152,
+        96
+      ],
+      "edit_url": "https://pixellab.ai/create-vfx?effect=c071429b-de5e-448d-afee-4c18d9b1261e"
+    }
+  ]
+}

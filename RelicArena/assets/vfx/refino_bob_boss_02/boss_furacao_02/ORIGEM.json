@@ -1,0 +1,11 @@
+{
+  "source": "https://pixellab.ai/create-vfx?effect=20e181ac-990f-4bef-8f1e-94faad40282d",
+  "source_file": "Guia_Godot4\\visuais\\vfx_bob_boss_02\\originais\\boss_furacao_02\\clash-of-eras-boss-furacao-02.png",
+  "pixel_lab_step": "6e7c79f6-79a2-48c3-b83c-b520612995f0",
+  "pixel_preserving_pack": true,
+  "anchor": [
+    64,
+    100
+  ],
+  "purpose": "VFX only; embedded reference is an effect, not a character"
+}

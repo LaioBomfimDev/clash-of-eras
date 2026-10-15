@@ -1,0 +1,11 @@
+{
+  "source": "https://pixellab.ai/create-vfx?effect=9143c401-b992-4326-819e-e880821cd37a",
+  "source_file": "Guia_Godot4\\visuais\\vfx_bob_boss_02\\originais\\bob_melodia_02\\clash-of-eras-bob-melodia-02.png",
+  "pixel_lab_step": "380b4af8-a848-452f-830e-a8071d7e4b8e",
+  "pixel_preserving_pack": true,
+  "anchor": [
+    48,
+    40
+  ],
+  "purpose": "VFX only; embedded reference is an effect, not a character"
+}

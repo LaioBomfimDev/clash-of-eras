@@ -1,0 +1,2990 @@
+[
+  {
+    "key": "neymar_bola",
+    "name": "Neymar - Bola de energia",
+    "recipe": {
+      "name": "Neymar - Bola de energia",
+      "canvas": {
+        "w": 96,
+        "h": 96
+      },
+      "frames": 12,
+      "fps": 16,
+      "loop": true,
+      "origin": [
+        48,
+        48
+      ],
+      "ramps": {
+        "main": [
+          "#005937",
+          "#009b3a",
+          "#fed100",
+          "#fff1a8"
+        ],
+        "accent": "electric"
+      },
+      "outline": {
+        "mode": "dark"
+      },
+      "seed": 42,
+      "layers": [
+        {
+          "id": "tail",
+          "type": "particles",
+          "mode": "travel",
+          "x": 56,
+          "y": 48,
+          "direction": 180,
+          "spread": 18,
+          "speed": 42,
+          "count": 20,
+          "shape": "streak",
+          "size": [
+            1,
+            2
+          ],
+          "ramp": "accent"
+        },
+        {
+          "id": "halo",
+          "type": "ring",
+          "x": 60,
+          "y": 48,
+          "radius": {
+            "wave": {
+              "mid": 10,
+              "amp": 2,
+              "cycles": 2,
+              "phase": 0
+            }
+          },
+          "width": 1,
+          "soft": 0,
+          "ramp": "main"
+        },
+        {
+          "id": "ball",
+          "type": "image",
+          "x": 60,
+          "y": 48,
+          "pixels": [
+            [
+              "...aaaaa...",
+              "..aabbbaa..",
+              ".aabbbbbaa.",
+              "aabbaaabbaa",
+              "abbaaaaabba",
+              "abbaaaaabba",
+              "aabbaaabbaa",
+              ".aabbbbbaa.",
+              "..aabbbaa..",
+              "...aaaaa..."
+            ],
+            [
+              "...aaaaa...",
+              "..aabbbaa..",
+              ".aabbbbbaa.",
+              "aabbaaabbaa",
+              "abbaaaaabba",
+              "abbaaaaabba",
+              "aabbaaabbaa",
+              ".aabbbbbaa.",
+              "..aabbbaa..",
+              "...aaaaa..."
+            ]
+          ],
+          "fps": 12,
+          "colours": {
+            "a": "#f8fbff",
+            "b": "#142b40"
+          },
+          "facing": "none"
+        },
+        {
+          "id": "sparks",
+          "type": "particles",
+          "ramp": "main",
+          "mode": "twinkle",
+          "count": 5,
+          "speed": 0,
+          "size": [
+            1,
+            2
+          ],
+          "x": 60,
+          "radius": 16
+        }
+      ]
+    },
+    "index": 0,
+    "step": "378feb74-d56c-4068-99a1-4ac328cfeaa8",
+    "receipt": "saved to My effects: effect id 77215653-b60e-4337-a897-e025835361f0\nhttps://pixellab.ai/create-vfx?effect=77215653-b60e-4337-a897-e025835361f0\ndownload https://api.pixellab.ai/mcp/pixel-tools/f67f2422-54cd-4f65-9f1e-5ba2a941831f/: clash-of-eras-vfx-2026-10-14-neymar-bola.gif, clash-of-eras-vfx-2026-10-14-neymar-bola.json, clash-of-eras-vfx-2026-10-14-neymar-bola.png",
+    "base_url": "https://api.pixellab.ai/mcp/pixel-tools/f67f2422-54cd-4f65-9f1e-5ba2a941831f/",
+    "files": [
+      "clash-of-eras-vfx-2026-10-14-neymar-bola.gif",
+      "clash-of-eras-vfx-2026-10-14-neymar-bola.json",
+      "clash-of-eras-vfx-2026-10-14-neymar-bola.png"
+    ],
+    "edit_url": "https://pixellab.ai/create-vfx?effect=77215653-b60e-4337-a897-e025835361f0"
+  },
+  {
+    "key": "caramelo_mordida",
+    "name": "Caramelo - Presas ferozes",
+    "recipe": {
+      "name": "Caramelo - Presas ferozes",
+      "canvas": {
+        "w": 96,
+        "h": 96
+      },
+      "frames": 12,
+      "fps": 16,
+      "loop": false,
+      "origin": [
+        48,
+        48
+      ],
+      "ramps": {
+        "main": [
+          "#713a16",
+          "#c97a27",
+          "#f3c36c",
+          "#fff3c9"
+        ],
+        "accent": "blood"
+      },
+      "outline": {
+        "mode": "dark"
+      },
+      "seed": 42,
+      "layers": [
+        {
+          "id": "jaw_top",
+          "type": "shape",
+          "points": [
+            [
+              -25,
+              -16
+            ],
+            [
+              -18,
+              -21
+            ],
+            [
+              -10,
+              -15
+            ],
+            [
+              -6,
+              -24
+            ],
+            [
+              0,
+              -17
+            ],
+            [
+              7,
+              -24
+            ],
+            [
+              11,
+              -15
+            ],
+            [
+              19,
+              -21
+            ],
+            [
+              25,
+              -16
+            ],
+            [
+              18,
+              -5
+            ],
+            [
+              12,
+              -10
+            ],
+            [
+              7,
+              -2
+            ],
+            [
+              0,
+              -10
+            ],
+            [
+              -7,
+              -2
+            ],
+            [
+              -12,
+              -10
+            ],
+            [
+              -18,
+              -5
+            ]
+          ],
+          "y": {
+            "keys": [
+              [
+                0,
+                26
+              ],
+              [
+                0.35,
+                45
+              ],
+              [
+                0.55,
+                45
+              ],
+              [
+                1,
+                32
+              ]
+            ]
+          },
+          "ramp": "main",
+          "dissolve": {
+            "keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0.6,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "jaw_bottom",
+          "type": "shape",
+          "points": [
+            [
+              -22,
+              15
+            ],
+            [
+              -16,
+              4
+            ],
+            [
+              -10,
+              9
+            ],
+            [
+              -5,
+              1
+            ],
+            [
+              0,
+              10
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              11,
+              9
+            ],
+            [
+              17,
+              4
+            ],
+            [
+              22,
+              15
+            ],
+            [
+              10,
+              22
+            ],
+            [
+              -10,
+              22
+            ]
+          ],
+          "y": {
+            "keys": [
+              [
+                0,
+                68
+              ],
+              [
+                0.35,
+                48
+              ],
+              [
+                0.55,
+                48
+              ],
+              [
+                1,
+                60
+              ]
+            ]
+          },
+          "dissolve": {
+            "keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0.6,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "sparks",
+          "type": "particles",
+          "ramp": "accent",
+          "mode": "burst",
+          "count": 14,
+          "speed": 28,
+          "size": [
+            1,
+            2
+          ],
+          "life": [
+            0.3,
+            1
+          ],
+          "shape": "droplet",
+          "gravity": 14
+        }
+      ]
+    },
+    "index": 1,
+    "step": "1543d6b3-9472-421d-9320-6e2c3c3a5fda",
+    "receipt": "saved to My effects: 'COE VFX 2026-10-14 caramelo_mordida' (effect id 7da56200-f183-4803-942c-1812f037c8a8); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=7da56200-f183-4803-942c-1812f037c8a8\n96x96, 12 frames @ 16 fps, plays once; anchor (origin) at 48,48\ndownload https://api.pixellab.ai/mcp/pixel-tools/4ef1adfa-522d-47c4-bd60-b2ec8d233353/: coe-vfx-2026-10-14-caramelo-mordida.gif, coe-vfx-2026-10-14-caramelo-mordida.json, coe-vfx-2026-10-14-caramelo-mordida.png\nno game pack (it renders every part again, so only when asked): export again with --replace 7da56200-f183-4803-942c-1812f037c8a8 and --game-pack for every piece, or --part <id> for one; this effect is one piece\nimage id: 4ef1adfa-522d-47c4-bd60-b2ec8d233353 (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['1543d6b3-9472-421d-9320-6e2c3c3a5fda', 'export', '--name', \"COE VFX 2026-10-14 caramelo_mordida\", '--replace', '7da56200-f183-4803-942c-1812f037c8a8'])",
+    "base_url": "https://api.pixellab.ai/mcp/pixel-tools/4ef1adfa-522d-47c4-bd60-b2ec8d233353/",
+    "files": [
+      "coe-vfx-2026-10-14-caramelo-mordida.gif",
+      "coe-vfx-2026-10-14-caramelo-mordida.json",
+      "coe-vfx-2026-10-14-caramelo-mordida.png"
+    ],
+    "edit_url": "https://pixellab.ai/create-vfx?effect=7da56200-f183-4803-942c-1812f037c8a8"
+  },
+  {
+    "key": "obama_barreira",
+    "name": "Obama - Barreira da mala",
+    "recipe": {
+      "name": "Obama - Barreira da mala",
+      "canvas": {
+        "w": 96,
+        "h": 96
+      },
+      "frames": 12,
+      "fps": 16,
+      "loop": false,
+      "origin": [
+        48,
+        48
+      ],
+      "ramps": {
+        "main": "holy",
+        "accent": "electric",
+        "dark": "shadow"
+      },
+      "outline": {
+        "mode": "dark"
+      },
+      "seed": 42,
+      "layers": [
+        {
+          "id": "shield",
+          "type": "shape",
+          "points": [
+            [
+              -22,
+              -22
+            ],
+            [
+              22,
+              -22
+            ],
+            [
+              22,
+              8
+            ],
+            [
+              12,
+              23
+            ],
+            [
+              0,
+              30
+            ],
+            [
+              -12,
+              23
+            ],
+            [
+              -22,
+              8
+            ]
+          ],
+          "scale": {
+            "keys": [
+              [
+                0,
+                0.1
+              ],
+              [
+                0.2,
+                1
+              ],
+              [
+                0.75,
+                1
+              ],
+              [
+                1,
+                0.1
+              ]
+            ]
+          },
+          "ramp": "accent",
+          "fill": "edge",
+          "bevel": 3
+        },
+        {
+          "id": "case",
+          "type": "shape",
+          "points": [
+            [
+              -12,
+              -8
+            ],
+            [
+              12,
+              -8
+            ],
+            [
+              12,
+              9
+            ],
+            [
+              -12,
+              9
+            ]
+          ],
+          "fill": "flat",
+          "level": 0.4
+        },
+        {
+          "id": "handle",
+          "type": "shape",
+          "points": [
+            [
+              -5,
+              -8
+            ],
+            [
+              -5,
+              -14
+            ],
+            [
+              5,
+              -14
+            ],
+            [
+              5,
+              -8
+            ]
+          ],
+          "closed": false,
+          "width": 2
+        },
+        {
+          "id": "sparks",
+          "type": "particles",
+          "ramp": "main",
+          "mode": "orbit",
+          "count": 5,
+          "speed": 4,
+          "size": [
+            1,
+            2
+          ],
+          "radius": 29,
+          "spacing": "even"
+        }
+      ]
+    },
+    "index": 2,
+    "step": "28244b94-554e-4d18-8c7b-1760b831f530",
+    "receipt": "saved to My effects: 'COE VFX 2026-10-14 obama_barreira' (effect id 455fbfd2-23e8-4f46-897d-6055b4392a72); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=455fbfd2-23e8-4f46-897d-6055b4392a72\n96x96, 12 frames @ 16 fps, plays once; anchor (origin) at 48,48\ndownload https://api.pixellab.ai/mcp/pixel-tools/9a58b71a-875f-406b-8cf1-121f4c5eef3c/: coe-vfx-2026-10-14-obama-barreira.gif, coe-vfx-2026-10-14-obama-barreira.json, coe-vfx-2026-10-14-obama-barreira.png\nno game pack (it renders every part again, so only when asked): export again with --replace 455fbfd2-23e8-4f46-897d-6055b4392a72 and --game-pack for every piece, or --part <id> for one; this effect is one piece\nimage id: 9a58b71a-875f-406b-8cf1-121f4c5eef3c (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['28244b94-554e-4d18-8c7b-1760b831f530', 'export', '--name', \"COE VFX 2026-10-14 obama_barreira\", '--replace', '455fbfd2-23e8-4f46-897d-6055b4392a72'])",
+    "base_url": "https://api.pixellab.ai/mcp/pixel-tools/9a58b71a-875f-406b-8cf1-121f4c5eef3c/",
+    "files": [
+      "coe-vfx-2026-10-14-obama-barreira.gif",
+      "coe-vfx-2026-10-14-obama-barreira.json",
+      "coe-vfx-2026-10-14-obama-barreira.png"
+    ],
+    "edit_url": "https://pixellab.ai/create-vfx?effect=455fbfd2-23e8-4f46-897d-6055b4392a72"
+  },
+  {
+    "key": "zumbi_estocada",
+    "name": "Zumbi - Lanca ancestral",
+    "recipe": {
+      "name": "Zumbi - Lanca ancestral",
+      "canvas": {
+        "w": 96,
+        "h": 96
+      },
+      "frames": 12,
+      "fps": 16,
+      "loop": false,
+      "origin": [
+        48,
+        48
+      ],
+      "ramps": {
+        "main": "holy",
+        "accent": [
+          "#233d3b",
+          "#547d70",
+          "#acc8b2",
+          "#efffd9"
+        ]
+      },
+      "outline": {
+        "mode": "dark"
+      },
+      "seed": 42,
+      "layers": [
+        {
+          "id": "shaft",
+          "type": "beam",
+          "x": 27,
+          "y": 48,
+          "width": 4,
+          "height": {
+            "keys": [
+              [
+                0,
+                3
+              ],
+              [
+                0.25,
+                42
+              ],
+              [
+                0.6,
+                42
+              ],
+              [
+                1,
+                6
+              ]
+            ]
+          },
+          "angle": 90,
+          "soft": 0,
+          "taper": 0.7,
+          "ramp": "main"
+        },
+        {
+          "id": "blade",
+          "type": "shape",
+          "points": [
+            [
+              -18,
+              -6
+            ],
+            [
+              0,
+              -10
+            ],
+            [
+              22,
+              0
+            ],
+            [
+              0,
+              10
+            ],
+            [
+              -18,
+              6
+            ],
+            [
+              -9,
+              0
+            ]
+          ],
+          "x": {
+            "keys": [
+              [
+                0,
+                35
+              ],
+              [
+                0.25,
+                66
+              ],
+              [
+                0.55,
+                66
+              ],
+              [
+                1,
+                45
+              ]
+            ]
+          },
+          "scale": {
+            "keys": [
+              [
+                0,
+                0.3
+              ],
+              [
+                0.2,
+                1
+              ],
+              [
+                0.7,
+                1
+              ],
+              [
+                1,
+                0.1
+              ]
+            ]
+          },
+          "ramp": "accent"
+        },
+        {
+          "id": "sparks",
+          "type": "particles",
+          "ramp": "main",
+          "mode": "burst",
+          "count": 14,
+          "speed": 18,
+          "size": [
+            1,
+            2
+          ],
+          "x": 70,
+          "life": [
+            0.25,
+            1
+          ],
+          "direction": 0,
+          "spread": 100
+        }
+      ]
+    },
+    "index": 3,
+    "step": "c43224b8-b3ca-460f-b3ee-cb13a7bae365",
+    "receipt": "saved to My effects: 'COE VFX 2026-10-14 zumbi_estocada' (effect id 9cb15c35-26a5-4315-a0d8-0a72313e6dc4); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=9cb15c35-26a5-4315-a0d8-0a72313e6dc4\n96x96, 12 frames @ 16 fps, plays once; anchor (origin) at 48,48\ndownload https://api.pixellab.ai/mcp/pixel-tools/24e89349-c1f4-4529-a3cd-cd61e8b2b65c/: coe-vfx-2026-10-14-zumbi-estocada.gif, coe-vfx-2026-10-14-zumbi-estocada.json, coe-vfx-2026-10-14-zumbi-estocada.png\nno game pack (it renders every part again, so only when asked): export again with --replace 9cb15c35-26a5-4315-a0d8-0a72313e6dc4 and --game-pack for every piece, or --part <id> for one; this effect is one piece\nimage id: 24e89349-c1f4-4529-a3cd-cd61e8b2b65c (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['c43224b8-b3ca-460f-b3ee-cb13a7bae365', 'export', '--name', \"COE VFX 2026-10-14 zumbi_estocada\", '--replace', '9cb15c35-26a5-4315-a0d8-0a72313e6dc4'])",
+    "base_url": "https://api.pixellab.ai/mcp/pixel-tools/24e89349-c1f4-4529-a3cd-cd61e8b2b65c/",
+    "files": [
+      "coe-vfx-2026-10-14-zumbi-estocada.gif",
+      "coe-vfx-2026-10-14-zumbi-estocada.json",
+      "coe-vfx-2026-10-14-zumbi-estocada.png"
+    ],
+    "edit_url": "https://pixellab.ai/create-vfx?effect=9cb15c35-26a5-4315-a0d8-0a72313e6dc4"
+  },
+  {
+    "key": "michael_escudo",
+    "name": "Michael - Escudo do moonwalk",
+    "recipe": {
+      "name": "Michael - Escudo do moonwalk",
+      "canvas": {
+        "w": 96,
+        "h": 96
+      },
+      "frames": 12,
+      "fps": 16,
+      "loop": true,
+      "origin": [
+        48,
+        48
+      ],
+      "ramps": {
+        "main": "holy",
+        "accent": "electric",
+        "dark": "shadow"
+      },
+      "outline": {
+        "mode": "dark"
+      },
+      "seed": 42,
+      "layers": [
+        {
+          "id": "shell",
+          "type": "ring",
+          "radius": {
+            "wave": {
+              "mid": 28,
+              "amp": 1,
+              "cycles": 1,
+              "phase": 0
+            }
+          },
+          "width": 2,
+          "soft": 2,
+          "ramp": "accent"
+        },
+        {
+          "id": "arc",
+          "type": "arc",
+          "radius": 25,
+          "start": {
+            "from": 0,
+            "to": 360
+          },
+          "sweep": 80,
+          "thickness": 2,
+          "soft": 0
+        },
+        {
+          "id": "floor",
+          "type": "ring",
+          "y": 72,
+          "radius": 24,
+          "squash": 0.35,
+          "width": 1,
+          "soft": 1
+        },
+        {
+          "id": "sparks",
+          "type": "particles",
+          "ramp": "main",
+          "mode": "orbit",
+          "count": 6,
+          "speed": 0,
+          "size": [
+            1,
+            3
+          ],
+          "radius": 30,
+          "spacing": "even"
+        }
+      ]
+    },
+    "index": 4,
+    "step": "af5bd9ed-4845-4d64-b6b0-ce5ba606aae2",
+    "receipt": "saved to My effects: 'COE VFX 2026-10-14 michael_escudo' (effect id 7fca52fc-b2ea-44f9-bb93-bc56b3eb9305); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=7fca52fc-b2ea-44f9-bb93-bc56b3eb9305\n96x96, 12 frames @ 16 fps, loops; anchor (origin) at 48,48\ndownload https://api.pixellab.ai/mcp/pixel-tools/973e13c9-4338-4f81-912d-b7144b8868ce/: coe-vfx-2026-10-14-michael-escudo.gif, coe-vfx-2026-10-14-michael-escudo.json, coe-vfx-2026-10-14-michael-escudo.png\nno game pack (it renders every part again, so only when asked): export again with --replace 7fca52fc-b2ea-44f9-bb93-bc56b3eb9305 and --game-pack for every piece, or --part <id> for one; this effect is one piece\nimage id: 973e13c9-4338-4f81-912d-b7144b8868ce (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['af5bd9ed-4845-4d64-b6b0-ce5ba606aae2', 'export', '--name', \"COE VFX 2026-10-14 michael_escudo\", '--replace', '7fca52fc-b2ea-44f9-bb93-bc56b3eb9305'])",
+    "base_url": "https://api.pixellab.ai/mcp/pixel-tools/973e13c9-4338-4f81-912d-b7144b8868ce/",
+    "files": [
+      "coe-vfx-2026-10-14-michael-escudo.gif",
+      "coe-vfx-2026-10-14-michael-escudo.json",
+      "coe-vfx-2026-10-14-michael-escudo.png"
+    ],
+    "edit_url": "https://pixellab.ai/create-vfx?effect=7fca52fc-b2ea-44f9-bb93-bc56b3eb9305"
+  },
+  {
+    "key": "michael_cura",
+    "name": "Michael - Estrelas de cura",
+    "recipe": {
+      "name": "Michael - Estrelas de cura",
+      "canvas": {
+        "w": 96,
+        "h": 96
+      },
+      "frames": 12,
+      "fps": 16,
+      "loop": false,
+      "origin": [
+        48,
+        48
+      ],
+      "ramps": {
+        "main": [
+          "#146946",
+          "#55d890",
+          "#d7ffe3"
+        ],
+        "accent": "holy"
+      },
+      "outline": {
+        "mode": "dark"
+      },
+      "seed": 42,
+      "layers": [
+        {
+          "id": "base",
+          "type": "ring",
+          "y": 68,
+          "radius": {
+            "from": 12,
+            "to": 30
+          },
+          "squash": 0.4,
+          "width": 1,
+          "soft": 1,
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          }
+        },
+        {
+          "id": "crosses",
+          "type": "particles",
+          "y": 65,
+          "mode": "rise",
+          "count": 9,
+          "radius": 21,
+          "speed": 42,
+          "shape": "custom",
+          "pixels": [
+            "..33..",
+            "..33..",
+            "333333",
+            "333333",
+            "..33..",
+            "..33.."
+          ],
+          "pixel_ramp": 3,
+          "shrink": 0,
+          "fade_out": 0.2
+        },
+        {
+          "id": "sparks",
+          "type": "particles",
+          "ramp": "accent",
+          "mode": "rise",
+          "count": 8,
+          "speed": 44,
+          "size": [
+            1,
+            2
+          ],
+          "y": 65,
+          "radius": 24
+        }
+      ]
+    },
+    "index": 5,
+    "step": "28252059-958b-4ee6-821c-600b05478a8b",
+    "receipt": "saved to My effects: 'COE VFX 2026-10-14 michael_cura' (effect id 92c53ed5-dc70-4ba5-8717-fe83021c0d2c); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=92c53ed5-dc70-4ba5-8717-fe83021c0d2c\n96x96, 12 frames @ 16 fps, plays once; anchor (origin) at 48,48\ndownload https://api.pixellab.ai/mcp/pixel-tools/a2e76f95-3e85-40ea-9da0-2ecf1d927bd9/: coe-vfx-2026-10-14-michael-cura.gif, coe-vfx-2026-10-14-michael-cura.json, coe-vfx-2026-10-14-michael-cura.png\nno game pack (it renders every part again, so only when asked): export again with --replace 92c53ed5-dc70-4ba5-8717-fe83021c0d2c and --game-pack for every piece, or --part <id> for one; this effect is one piece\nimage id: a2e76f95-3e85-40ea-9da0-2ecf1d927bd9 (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['28252059-958b-4ee6-821c-600b05478a8b', 'export', '--name', \"COE VFX 2026-10-14 michael_cura\", '--replace', '92c53ed5-dc70-4ba5-8717-fe83021c0d2c'])",
+    "base_url": "https://api.pixellab.ai/mcp/pixel-tools/a2e76f95-3e85-40ea-9da0-2ecf1d927bd9/",
+    "files": [
+      "coe-vfx-2026-10-14-michael-cura.gif",
+      "coe-vfx-2026-10-14-michael-cura.json",
+      "coe-vfx-2026-10-14-michael-cura.png"
+    ],
+    "edit_url": "https://pixellab.ai/create-vfx?effect=92c53ed5-dc70-4ba5-8717-fe83021c0d2c"
+  },
+  {
+    "key": "barbie_invocacao",
+    "name": "Barbie - Invocacao do Ken",
+    "recipe": {
+      "name": "Barbie - Invocacao do Ken",
+      "canvas": {
+        "w": 96,
+        "h": 96
+      },
+      "frames": 12,
+      "fps": 16,
+      "loop": false,
+      "origin": [
+        48,
+        48
+      ],
+      "ramps": {
+        "main": [
+          "#7c1256",
+          "#e83396",
+          "#ff82cf",
+          "#ffe0f2"
+        ],
+        "accent": "holy"
+      },
+      "outline": {
+        "mode": "dark"
+      },
+      "seed": 42,
+      "layers": [
+        {
+          "id": "ring",
+          "type": "ring",
+          "radius": {
+            "from": 5,
+            "to": 35
+          },
+          "width": {
+            "from": 3,
+            "to": 1
+          },
+          "soft": 0,
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "y": 65,
+          "squash": 0.42,
+          "ramp": "main"
+        },
+        {
+          "id": "heart",
+          "type": "shape",
+          "points": [
+            [
+              0,
+              20
+            ],
+            [
+              -22,
+              0
+            ],
+            [
+              -22,
+              -12
+            ],
+            [
+              -12,
+              -19
+            ],
+            [
+              -3,
+              -16
+            ],
+            [
+              0,
+              -10
+            ],
+            [
+              3,
+              -16
+            ],
+            [
+              12,
+              -19
+            ],
+            [
+              22,
+              -12
+            ],
+            [
+              22,
+              0
+            ]
+          ],
+          "scale": {
+            "keys": [
+              [
+                0,
+                0.1
+              ],
+              [
+                0.35,
+                1
+              ],
+              [
+                0.7,
+                0.8
+              ],
+              [
+                1,
+                0
+              ]
+            ]
+          },
+          "ramp": "main"
+        },
+        {
+          "id": "sparks",
+          "type": "particles",
+          "ramp": "accent",
+          "mode": "burst",
+          "count": 20,
+          "speed": 36,
+          "size": [
+            1,
+            2
+          ],
+          "shape": "sparkle",
+          "radius": 5
+        }
+      ]
+    },
+    "index": 6,
+    "step": "60900f50-b987-4213-b105-7ad382af3952",
+    "receipt": "saved to My effects: 'COE VFX 2026-10-14 barbie_invocacao' (effect id 58684ccb-97d0-45ac-96e1-eab21a717eeb); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=58684ccb-97d0-45ac-96e1-eab21a717eeb\n96x96, 12 frames @ 16 fps, plays once; anchor (origin) at 48,48\ndownload https://api.pixellab.ai/mcp/pixel-tools/d4ae2a63-51d0-4a2f-9b0c-0ee1c00865b9/: coe-vfx-2026-10-14-barbie-invocacao.gif, coe-vfx-2026-10-14-barbie-invocacao.json, coe-vfx-2026-10-14-barbie-invocacao.png\nno game pack (it renders every part again, so only when asked): export again with --replace 58684ccb-97d0-45ac-96e1-eab21a717eeb and --game-pack for every piece, or --part <id> for one; this effect is one piece\nimage id: d4ae2a63-51d0-4a2f-9b0c-0ee1c00865b9 (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['60900f50-b987-4213-b105-7ad382af3952', 'export', '--name', \"COE VFX 2026-10-14 barbie_invocacao\", '--replace', '58684ccb-97d0-45ac-96e1-eab21a717eeb'])",
+    "base_url": "https://api.pixellab.ai/mcp/pixel-tools/d4ae2a63-51d0-4a2f-9b0c-0ee1c00865b9/",
+    "files": [
+      "coe-vfx-2026-10-14-barbie-invocacao.gif",
+      "coe-vfx-2026-10-14-barbie-invocacao.json",
+      "coe-vfx-2026-10-14-barbie-invocacao.png"
+    ],
+    "edit_url": "https://pixellab.ai/create-vfx?effect=58684ccb-97d0-45ac-96e1-eab21a717eeb"
+  },
+  {
+    "key": "elon_minifoguete",
+    "name": "Elon - Minifoguete",
+    "recipe": {
+      "name": "Elon - Minifoguete",
+      "canvas": {
+        "w": 96,
+        "h": 96
+      },
+      "frames": 12,
+      "fps": 16,
+      "loop": true,
+      "origin": [
+        48,
+        48
+      ],
+      "ramps": {
+        "main": "fire",
+        "dark": "smoke"
+      },
+      "outline": {
+        "mode": "dark"
+      },
+      "seed": 42,
+      "layers": [
+        {
+          "id": "exhaust",
+          "type": "flame",
+          "x": 54,
+          "y": 48,
+          "angle": -90,
+          "width": 8,
+          "height": {
+            "wave": {
+              "mid": 29,
+              "amp": 5,
+              "cycles": 3,
+              "phase": 0
+            }
+          },
+          "tongues": 3,
+          "core": 1.3,
+          "ramp": "main"
+        },
+        {
+          "id": "rocket",
+          "type": "image",
+          "x": 62,
+          "y": 48,
+          "pixels": [
+            "...........aa........",
+            "..bbbbbbbbbbaaa......",
+            ".bcccccccccccddaaa...",
+            "..bbbbbbbbbbaaa......",
+            "...........aa........"
+          ],
+          "colours": {
+            "a": "#9daec1",
+            "b": "#3b536b",
+            "c": "#e5efff",
+            "d": "#ed4848"
+          },
+          "facing": "none"
+        },
+        {
+          "id": "smoke",
+          "type": "particles",
+          "x": 30,
+          "mode": "travel",
+          "direction": 180,
+          "spread": 12,
+          "speed": 20,
+          "count": 9,
+          "radius": 3,
+          "shape": "dot",
+          "size": [
+            2,
+            4
+          ],
+          "ramp": "dark"
+        }
+      ]
+    },
+    "index": 7,
+    "step": "4e2667d2-7c09-4671-8421-a103bcb5f328",
+    "receipt": "saved to My effects: 'COE VFX 2026-10-14 elon_minifoguete' (effect id 9dcc66e8-0b18-4d2d-ad13-34641631ecf1); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=9dcc66e8-0b18-4d2d-ad13-34641631ecf1\n96x96, 12 frames @ 16 fps, loops; anchor (origin) at 48,48\ndownload https://api.pixellab.ai/mcp/pixel-tools/13ec8dbf-535f-464b-b32c-da96b1f22db1/: coe-vfx-2026-10-14-elon-minifoguete.gif, coe-vfx-2026-10-14-elon-minifoguete.json, coe-vfx-2026-10-14-elon-minifoguete.png\nno game pack (it renders every part again, so only when asked): export again with --replace 9dcc66e8-0b18-4d2d-ad13-34641631ecf1 and --game-pack for every piece, or --part <id> for one; this effect is one piece\nimage id: 13ec8dbf-535f-464b-b32c-da96b1f22db1 (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['4e2667d2-7c09-4671-8421-a103bcb5f328', 'export', '--name', \"COE VFX 2026-10-14 elon_minifoguete\", '--replace', '9dcc66e8-0b18-4d2d-ad13-34641631ecf1'])",
+    "base_url": "https://api.pixellab.ai/mcp/pixel-tools/13ec8dbf-535f-464b-b32c-da96b1f22db1/",
+    "files": [
+      "coe-vfx-2026-10-14-elon-minifoguete.gif",
+      "coe-vfx-2026-10-14-elon-minifoguete.json",
+      "coe-vfx-2026-10-14-elon-minifoguete.png"
+    ],
+    "edit_url": "https://pixellab.ai/create-vfx?effect=9dcc66e8-0b18-4d2d-ad13-34641631ecf1"
+  },
+  {
+    "key": "elon_superexplosao",
+    "name": "Elon - Super explosao",
+    "recipe": {
+      "name": "Elon - Super explosao",
+      "canvas": {
+        "w": 96,
+        "h": 96
+      },
+      "frames": 12,
+      "fps": 16,
+      "loop": false,
+      "origin": [
+        48,
+        48
+      ],
+      "ramps": {
+        "main": "fire",
+        "accent": "holy",
+        "dark": "smoke"
+      },
+      "outline": {
+        "mode": "dark"
+      },
+      "seed": 42,
+      "layers": [
+        {
+          "id": "flash",
+          "type": "rays",
+          "length": {
+            "from": 6,
+            "to": 38
+          },
+          "width": 6,
+          "count": 8,
+          "life": [
+            0,
+            0.3
+          ],
+          "ramp": "accent"
+        },
+        {
+          "id": "blast",
+          "type": "puffs",
+          "radius": 27,
+          "count": 8,
+          "throw": 0.65,
+          "rise": 0.15,
+          "thin": 0.65,
+          "ramp": "main"
+        },
+        {
+          "id": "ring",
+          "type": "ring",
+          "radius": {
+            "from": 8,
+            "to": 42
+          },
+          "width": {
+            "from": 3,
+            "to": 1
+          },
+          "soft": 0,
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "life": [
+            0.1,
+            0.85
+          ],
+          "ramp": "main"
+        },
+        {
+          "id": "sparks",
+          "type": "particles",
+          "ramp": "dark",
+          "mode": "burst",
+          "count": 12,
+          "speed": 38,
+          "size": [
+            1,
+            2
+          ],
+          "shape": "chunk",
+          "gravity": 25,
+          "life": [
+            0.2,
+            1
+          ]
+        }
+      ]
+    },
+    "index": 8,
+    "step": "a556b3fa-d805-42c3-bd9b-1df802c827c3",
+    "receipt": "saved to My effects: 'COE VFX 2026-10-14 elon_superexplosao' (effect id 277a6132-4060-4232-9c3d-21d952786bf4); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=277a6132-4060-4232-9c3d-21d952786bf4\n96x96, 12 frames @ 16 fps, plays once; anchor (origin) at 48,48\ndownload https://api.pixellab.ai/mcp/pixel-tools/9d1c95cb-3ef9-4fdf-bd92-cb991e5532de/: coe-vfx-2026-10-14-elon-superexplosao.gif, coe-vfx-2026-10-14-elon-superexplosao.json, coe-vfx-2026-10-14-elon-superexplosao.png\nno game pack (it renders every part again, so only when asked): export again with --replace 277a6132-4060-4232-9c3d-21d952786bf4 and --game-pack for every piece, or --part <id> for one; this effect is one piece\nimage id: 9d1c95cb-3ef9-4fdf-bd92-cb991e5532de (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['a556b3fa-d805-42c3-bd9b-1df802c827c3', 'export', '--name', \"COE VFX 2026-10-14 elon_superexplosao\", '--replace', '277a6132-4060-4232-9c3d-21d952786bf4'])",
+    "base_url": "https://api.pixellab.ai/mcp/pixel-tools/9d1c95cb-3ef9-4fdf-bd92-cb991e5532de/",
+    "files": [
+      "coe-vfx-2026-10-14-elon-superexplosao.gif",
+      "coe-vfx-2026-10-14-elon-superexplosao.json",
+      "coe-vfx-2026-10-14-elon-superexplosao.png"
+    ],
+    "edit_url": "https://pixellab.ai/create-vfx?effect=277a6132-4060-4232-9c3d-21d952786bf4"
+  },
+  {
+    "key": "snoop_fumaca",
+    "name": "Snoop - Fumaca verde",
+    "recipe": {
+      "name": "Snoop - Fumaca verde",
+      "canvas": {
+        "w": 96,
+        "h": 96
+      },
+      "frames": 12,
+      "fps": 16,
+      "loop": true,
+      "origin": [
+        48,
+        48
+      ],
+      "ramps": {
+        "main": [
+          "#123f2e",
+          "#226a40",
+          "#479d55",
+          "#8ccc79",
+          "#b9e69a"
+        ],
+        "accent": [
+          "#093b20",
+          "#147c3b",
+          "#41d765",
+          "#b4f995"
+        ]
+      },
+      "outline": {
+        "mode": "dark"
+      },
+      "seed": 42,
+      "layers": [
+        {
+          "id": "cloud",
+          "type": "puffs",
+          "mode": "cloud",
+          "radius": 27,
+          "count": 8,
+          "squash": 0.5,
+          "billow": 0.8,
+          "highlight": 0.45,
+          "ramp": "main"
+        },
+        {
+          "id": "leaf",
+          "type": "shape",
+          "points": [
+            [
+              0,
+              -19
+            ],
+            [
+              3,
+              -7
+            ],
+            [
+              12,
+              -15
+            ],
+            [
+              8,
+              -3
+            ],
+            [
+              18,
+              -7
+            ],
+            [
+              11,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              0,
+              16
+            ],
+            [
+              -2,
+              4
+            ],
+            [
+              -12,
+              3
+            ],
+            [
+              -18,
+              -7
+            ],
+            [
+              -8,
+              -3
+            ],
+            [
+              -12,
+              -15
+            ],
+            [
+              -3,
+              -7
+            ]
+          ],
+          "scale": {
+            "wave": {
+              "mid": 0.65,
+              "amp": 0.08,
+              "cycles": 1,
+              "phase": 0
+            }
+          },
+          "y": {
+            "wave": {
+              "mid": 43,
+              "amp": 3,
+              "cycles": 1,
+              "phase": 0
+            }
+          },
+          "ramp": "accent",
+          "fill": "edge",
+          "bevel": 1
+        },
+        {
+          "id": "sparks",
+          "type": "particles",
+          "ramp": "main",
+          "mode": "rise",
+          "count": 8,
+          "speed": 22,
+          "size": [
+            1,
+            3
+          ],
+          "y": 54,
+          "radius": 24,
+          "shape": "dot"
+        }
+      ]
+    },
+    "index": 9,
+    "step": "261c165b-b70c-49bf-a77f-39107ac54dba",
+    "receipt": "saved to My effects: 'COE VFX 2026-10-14 snoop_fumaca' (effect id ea5f953e-9359-4b27-9b9c-afe333542f16); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=ea5f953e-9359-4b27-9b9c-afe333542f16\n96x96, 12 frames @ 16 fps, loops; anchor (origin) at 48,48\ndownload https://api.pixellab.ai/mcp/pixel-tools/690123b3-b522-4406-9af1-97454dadba42/: coe-vfx-2026-10-14-snoop-fumaca.gif, coe-vfx-2026-10-14-snoop-fumaca.json, coe-vfx-2026-10-14-snoop-fumaca.png\nno game pack (it renders every part again, so only when asked): export again with --replace ea5f953e-9359-4b27-9b9c-afe333542f16 and --game-pack for every piece, or --part <id> for one; this effect is one piece\nimage id: 690123b3-b522-4406-9af1-97454dadba42 (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['261c165b-b70c-49bf-a77f-39107ac54dba', 'export', '--name', \"COE VFX 2026-10-14 snoop_fumaca\", '--replace', 'ea5f953e-9359-4b27-9b9c-afe333542f16'])",
+    "base_url": "https://api.pixellab.ai/mcp/pixel-tools/690123b3-b522-4406-9af1-97454dadba42/",
+    "files": [
+      "coe-vfx-2026-10-14-snoop-fumaca.gif",
+      "coe-vfx-2026-10-14-snoop-fumaca.json",
+      "coe-vfx-2026-10-14-snoop-fumaca.png"
+    ],
+    "edit_url": "https://pixellab.ai/create-vfx?effect=ea5f953e-9359-4b27-9b9c-afe333542f16"
+  },
+  {
+    "key": "lula_renascimento",
+    "name": "Lula - Asas do retorno",
+    "recipe": {
+      "name": "Lula - Asas do retorno",
+      "canvas": {
+        "w": 96,
+        "h": 96
+      },
+      "frames": 12,
+      "fps": 16,
+      "loop": false,
+      "origin": [
+        48,
+        48
+      ],
+      "ramps": {
+        "main": "holy",
+        "accent": [
+          "#8e9cb7",
+          "#bdcbe1",
+          "#edf5ff",
+          "#ffffff"
+        ]
+      },
+      "outline": {
+        "mode": "dark"
+      },
+      "seed": 42,
+      "layers": [
+        {
+          "id": "beam",
+          "type": "beam",
+          "y": 74,
+          "width": {
+            "keys": [
+              [
+                0,
+                2
+              ],
+              [
+                0.3,
+                17
+              ],
+              [
+                0.6,
+                12
+              ],
+              [
+                1,
+                0
+              ]
+            ]
+          },
+          "height": 65,
+          "soft": 2,
+          "taper": 0,
+          "ramp": "main"
+        },
+        {
+          "id": "wings",
+          "type": "shape",
+          "points": [
+            [
+              [
+                -3,
+                4
+              ],
+              [
+                -12,
+                -12
+              ],
+              [
+                -35,
+                -26
+              ],
+              [
+                -30,
+                -9
+              ],
+              [
+                -36,
+                -10
+              ],
+              [
+                -27,
+                2
+              ],
+              [
+                -30,
+                5
+              ],
+              [
+                -17,
+                14
+              ],
+              [
+                -7,
+                12
+              ]
+            ],
+            [
+              [
+                3,
+                4
+              ],
+              [
+                12,
+                -12
+              ],
+              [
+                35,
+                -26
+              ],
+              [
+                30,
+                -9
+              ],
+              [
+                36,
+                -10
+              ],
+              [
+                27,
+                2
+              ],
+              [
+                30,
+                5
+              ],
+              [
+                17,
+                14
+              ],
+              [
+                7,
+                12
+              ]
+            ]
+          ],
+          "y": {
+            "wave": {
+              "mid": 48,
+              "amp": 3,
+              "cycles": 1,
+              "phase": 0
+            }
+          },
+          "scale": {
+            "keys": [
+              [
+                0,
+                0.1
+              ],
+              [
+                0.35,
+                1
+              ],
+              [
+                0.8,
+                1
+              ],
+              [
+                1,
+                0.5
+              ]
+            ]
+          },
+          "ramp": "accent",
+          "bevel": 3
+        },
+        {
+          "id": "halo",
+          "type": "ring",
+          "y": 21,
+          "radius": 11,
+          "squash": 0.35,
+          "width": 2,
+          "soft": 0
+        },
+        {
+          "id": "sparks",
+          "type": "particles",
+          "ramp": "main",
+          "mode": "rise",
+          "count": 12,
+          "speed": 38,
+          "size": [
+            1,
+            2
+          ],
+          "y": 73,
+          "radius": 26
+        }
+      ]
+    },
+    "index": 10,
+    "step": "ea128d42-818d-42ef-a395-246363c4251a",
+    "receipt": "saved to My effects: 'COE VFX 2026-10-14 lula_renascimento' (effect id 05a3123f-d572-4f8f-9d97-cd8a04cb6bc2); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=05a3123f-d572-4f8f-9d97-cd8a04cb6bc2\n96x96, 12 frames @ 16 fps, plays once; anchor (origin) at 48,48\ndownload https://api.pixellab.ai/mcp/pixel-tools/f6224f21-ed59-4061-9b90-d44386e8c5e9/: coe-vfx-2026-10-14-lula-renascimento.gif, coe-vfx-2026-10-14-lula-renascimento.json, coe-vfx-2026-10-14-lula-renascimento.png\nno game pack (it renders every part again, so only when asked): export again with --replace 05a3123f-d572-4f8f-9d97-cd8a04cb6bc2 and --game-pack for every piece, or --part <id> for one; this effect is one piece\nimage id: f6224f21-ed59-4061-9b90-d44386e8c5e9 (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['ea128d42-818d-42ef-a395-246363c4251a', 'export', '--name', \"COE VFX 2026-10-14 lula_renascimento\", '--replace', '05a3123f-d572-4f8f-9d97-cd8a04cb6bc2'])",
+    "base_url": "https://api.pixellab.ai/mcp/pixel-tools/f6224f21-ed59-4061-9b90-d44386e8c5e9/",
+    "files": [
+      "coe-vfx-2026-10-14-lula-renascimento.gif",
+      "coe-vfx-2026-10-14-lula-renascimento.json",
+      "coe-vfx-2026-10-14-lula-renascimento.png"
+    ],
+    "edit_url": "https://pixellab.ai/create-vfx?effect=05a3123f-d572-4f8f-9d97-cd8a04cb6bc2"
+  },
+  {
+    "key": "bob_notas",
+    "name": "Bob Marley - Onda reggae",
+    "recipe": {
+      "name": "Bob Marley - Onda reggae",
+      "canvas": {
+        "w": 96,
+        "h": 96
+      },
+      "frames": 12,
+      "fps": 16,
+      "loop": true,
+      "origin": [
+        48,
+        48
+      ],
+      "ramps": {
+        "main": [
+          "#876607",
+          "#fed100",
+          "#ffe780"
+        ],
+        "green": [
+          "#004c20",
+          "#009b3a",
+          "#7fe68e"
+        ],
+        "red": [
+          "#6b111b",
+          "#d52b1e",
+          "#ff8261"
+        ]
+      },
+      "outline": {
+        "mode": "dark"
+      },
+      "seed": 42,
+      "layers": [
+        {
+          "id": "wave_green",
+          "type": "ring",
+          "radius": {
+            "wave": {
+              "mid": 23,
+              "amp": 4,
+              "cycles": 2,
+              "phase": 0
+            }
+          },
+          "squash": 0.6,
+          "width": 2,
+          "soft": 0,
+          "ramp": "green"
+        },
+        {
+          "id": "wave_red",
+          "type": "arc",
+          "radius": 30,
+          "start": {
+            "from": 0,
+            "to": 360
+          },
+          "sweep": 160,
+          "thickness": 2,
+          "soft": 0,
+          "ramp": "red"
+        },
+        {
+          "id": "notes",
+          "type": "particles",
+          "mode": "orbit",
+          "radius": 26,
+          "count": 5,
+          "spacing": "even",
+          "shape": "custom",
+          "pixels": [
+            "...333",
+            "...3.3",
+            "...3.3",
+            "...3..",
+            ".333..",
+            "3333..",
+            ".33..."
+          ],
+          "pixel_ramp": 3,
+          "shrink": 0,
+          "ramp": "main"
+        },
+        {
+          "id": "echo",
+          "type": "ring",
+          "radius": {
+            "wave": {
+              "mid": 15,
+              "amp": 3,
+              "cycles": 2,
+              "phase": 0.5
+            }
+          },
+          "squash": 0.6,
+          "width": 1,
+          "soft": 0
+        }
+      ]
+    },
+    "index": 11,
+    "step": "a2909555-e60f-4a57-a2a5-130dc8e6c77e",
+    "receipt": "saved to My effects: 'COE VFX 2026-10-14 bob_notas' (effect id 2ec214da-a1e4-4afb-bd74-34c40d902054); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=2ec214da-a1e4-4afb-bd74-34c40d902054\n96x96, 12 frames @ 16 fps, loops; anchor (origin) at 48,48\ndownload https://api.pixellab.ai/mcp/pixel-tools/c3954193-d245-4dda-ae7b-b955672af2b2/: coe-vfx-2026-10-14-bob-notas.gif, coe-vfx-2026-10-14-bob-notas.json, coe-vfx-2026-10-14-bob-notas.png\nno game pack (it renders every part again, so only when asked): export again with --replace 2ec214da-a1e4-4afb-bd74-34c40d902054 and --game-pack for every piece, or --part <id> for one; this effect is one piece\nimage id: c3954193-d245-4dda-ae7b-b955672af2b2 (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['a2909555-e60f-4a57-a2a5-130dc8e6c77e', 'export', '--name', \"COE VFX 2026-10-14 bob_notas\", '--replace', '2ec214da-a1e4-4afb-bd74-34c40d902054'])",
+    "base_url": "https://api.pixellab.ai/mcp/pixel-tools/c3954193-d245-4dda-ae7b-b955672af2b2/",
+    "files": [
+      "coe-vfx-2026-10-14-bob-notas.gif",
+      "coe-vfx-2026-10-14-bob-notas.json",
+      "coe-vfx-2026-10-14-bob-notas.png"
+    ],
+    "edit_url": "https://pixellab.ai/create-vfx?effect=2ec214da-a1e4-4afb-bd74-34c40d902054"
+  },
+  {
+    "key": "rapunzel_laco",
+    "name": "Rapunzel - Laco dourado",
+    "recipe": {
+      "name": "Rapunzel - Laco dourado",
+      "canvas": {
+        "w": 96,
+        "h": 96
+      },
+      "frames": 12,
+      "fps": 16,
+      "loop": false,
+      "origin": [
+        48,
+        48
+      ],
+      "ramps": {
+        "main": [
+          "#80551a",
+          "#c99331",
+          "#f6d36a",
+          "#fff3b0"
+        ],
+        "accent": "holy"
+      },
+      "outline": {
+        "mode": "dark"
+      },
+      "seed": 42,
+      "layers": [
+        {
+          "id": "hair",
+          "type": "shape",
+          "points": {
+            "keys": [
+              [
+                0,
+                [
+                  [
+                    -34,
+                    0
+                  ],
+                  [
+                    -30.842105263157894,
+                    1.5380501172853427
+                  ],
+                  [
+                    -27.684210526315788,
+                    2.7477937146643034
+                  ],
+                  [
+                    -24.526315789473685,
+                    3.524911487421172
+                  ],
+                  [
+                    -21.36842105263158,
+                    3.8265799971289356
+                  ],
+                  [
+                    -18.210526315789473,
+                    3.6716270794982577
+                  ],
+                  [
+                    -15.05263157894737,
+                    3.1329087490830916
+                  ],
+                  [
+                    -11.894736842105264,
+                    2.323338665283574
+                  ],
+                  [
+                    -8.736842105263158,
+                    1.3777424535283713
+                  ],
+                  [
+                    -5.578947368421055,
+                    0.4331436586335107
+                  ],
+                  [
+                    -2.4210526315789487,
+                    -0.389829292770159
+                  ],
+                  [
+                    0.7368421052631575,
+                    -1.0019945116569968
+                  ],
+                  [
+                    3.89473684210526,
+                    -1.355280888082084
+                  ],
+                  [
+                    7.05263157894737,
+                    -1.4459578841921956
+                  ],
+                  [
+                    10.210526315789473,
+                    -1.311295385535092
+                  ],
+                  [
+                    13.368421052631582,
+                    -1.0204213325677163
+                  ],
+                  [
+                    16.526315789473685,
+                    -0.6609209038914703
+                  ],
+                  [
+                    19.684210526315788,
+                    -0.3232698487840358
+                  ],
+                  [
+                    22.84210526315789,
+                    -0.08544722873807475
+                  ],
+                  [
+                    26,
+                    0
+                  ]
+                ]
+              ],
+              [
+                0.25,
+                [
+                  [
+                    -34,
+                    5
+                  ],
+                  [
+                    -30.842105263157894,
+                    4.480186934371428
+                  ],
+                  [
+                    -27.684210526315788,
+                    3.53036543677334
+                  ],
+                  [
+                    -24.526315789473685,
+                    2.30293961314706
+                  ],
+                  [
+                    -21.36842105263158,
+                    0.9690216597663139
+                  ],
+                  [
+                    -18.210526315789473,
+                    -0.30423969384543204
+                  ],
+                  [
+                    -15.05263157894737,
+                    -1.3742211896022631
+                  ],
+                  [
+                    -11.894736842105264,
+                    -2.1387839103970774
+                  ],
+                  [
+                    -8.736842105263158,
+                    -2.5458450692819414
+                  ],
+                  [
+                    -5.578947368421055,
+                    -2.59568764053348
+                  ],
+                  [
+                    -2.4210526315789487,
+                    -2.3361188764801324
+                  ],
+                  [
+                    0.7368421052631575,
+                    -1.851523686750503
+                  ],
+                  [
+                    3.89473684210526,
+                    -1.2476239477316289
+                  ],
+                  [
+                    7.05263157894737,
+                    -0.634255933662584
+                  ],
+                  [
+                    10.210526315789473,
+                    -0.10865703351622738
+                  ],
+                  [
+                    13.368421052631582,
+                    0.2584057759376828
+                  ],
+                  [
+                    16.526315789473685,
+                    0.4318011774650738
+                  ],
+                  [
+                    19.684210526315788,
+                    0.41533711020862835
+                  ],
+                  [
+                    22.84210526315789,
+                    0.24889927413174612
+                  ],
+                  [
+                    26,
+                    0
+                  ]
+                ]
+              ],
+              [
+                0.5,
+                [
+                  [
+                    -34,
+                    6.123233995736766e-16
+                  ],
+                  [
+                    -30.842105263157894,
+                    -1.5380501172853407
+                  ],
+                  [
+                    -27.684210526315788,
+                    -2.7477937146643034
+                  ],
+                  [
+                    -24.526315789473685,
+                    -3.524911487421172
+                  ],
+                  [
+                    -21.36842105263158,
+                    -3.8265799971289356
+                  ],
+                  [
+                    -18.210526315789473,
+                    -3.671627079498258
+                  ],
+                  [
+                    -15.05263157894737,
+                    -3.132908749083091
+                  ],
+                  [
+                    -11.894736842105264,
+                    -2.3233386652835732
+                  ],
+                  [
+                    -8.736842105263158,
+                    -1.3777424535283727
+                  ],
+                  [
+                    -5.578947368421055,
+                    -0.4331436586335122
+                  ],
+                  [
+                    -2.4210526315789487,
+                    0.38982929277015566
+                  ],
+                  [
+                    0.7368421052631575,
+                    1.0019945116569973
+                  ],
+                  [
+                    3.89473684210526,
+                    1.355280888082084
+                  ],
+                  [
+                    7.05263157894737,
+                    1.4459578841921956
+                  ],
+                  [
+                    10.210526315789473,
+                    1.311295385535092
+                  ],
+                  [
+                    13.368421052631582,
+                    1.0204213325677163
+                  ],
+                  [
+                    16.526315789473685,
+                    0.6609209038914707
+                  ],
+                  [
+                    19.684210526315788,
+                    0.32326984878403586
+                  ],
+                  [
+                    22.84210526315789,
+                    0.08544722873807502
+                  ],
+                  [
+                    26,
+                    0
+                  ]
+                ]
+              ],
+              [
+                0.75,
+                [
+                  [
+                    -34,
+                    -5
+                  ],
+                  [
+                    -30.842105263157894,
+                    -4.480186934371428
+                  ],
+                  [
+                    -27.684210526315788,
+                    -3.5303654367733404
+                  ],
+                  [
+                    -24.526315789473685,
+                    -2.3029396131470605
+                  ],
+                  [
+                    -21.36842105263158,
+                    -0.9690216597663127
+                  ],
+                  [
+                    -18.210526315789473,
+                    0.3042396938454316
+                  ],
+                  [
+                    -15.05263157894737,
+                    1.374221189602264
+                  ],
+                  [
+                    -11.894736842105264,
+                    2.138783910397077
+                  ],
+                  [
+                    -8.736842105263158,
+                    2.5458450692819414
+                  ],
+                  [
+                    -5.578947368421055,
+                    2.59568764053348
+                  ],
+                  [
+                    -2.4210526315789487,
+                    2.336118876480133
+                  ],
+                  [
+                    0.7368421052631575,
+                    1.851523686750504
+                  ],
+                  [
+                    3.89473684210526,
+                    1.247623947731628
+                  ],
+                  [
+                    7.05263157894737,
+                    0.6342559336625841
+                  ],
+                  [
+                    10.210526315789473,
+                    0.10865703351622638
+                  ],
+                  [
+                    13.368421052631582,
+                    -0.2584057759376827
+                  ],
+                  [
+                    16.526315789473685,
+                    -0.43180117746507307
+                  ],
+                  [
+                    19.684210526315788,
+                    -0.415337110208628
+                  ],
+                  [
+                    22.84210526315789,
+                    -0.2488992741317461
+                  ],
+                  [
+                    26,
+                    0
+                  ]
+                ]
+              ],
+              [
+                1,
+                [
+                  [
+                    -34,
+                    -1.2246467991473533e-15
+                  ],
+                  [
+                    -30.842105263157894,
+                    1.538050117285342
+                  ],
+                  [
+                    -27.684210526315788,
+                    2.7477937146642994
+                  ],
+                  [
+                    -24.526315789473685,
+                    3.524911487421172
+                  ],
+                  [
+                    -21.36842105263158,
+                    3.8265799971289356
+                  ],
+                  [
+                    -18.210526315789473,
+                    3.671627079498258
+                  ],
+                  [
+                    -15.05263157894737,
+                    3.1329087490830916
+                  ],
+                  [
+                    -11.894736842105264,
+                    2.3233386652835755
+                  ],
+                  [
+                    -8.736842105263158,
+                    1.3777424535283707
+                  ],
+                  [
+                    -5.578947368421055,
+                    0.4331436586335124
+                  ],
+                  [
+                    -2.4210526315789487,
+                    -0.38982929277015527
+                  ],
+                  [
+                    0.7368421052631575,
+                    -1.0019945116569955
+                  ],
+                  [
+                    3.89473684210526,
+                    -1.3552808880820848
+                  ],
+                  [
+                    7.05263157894737,
+                    -1.4459578841921956
+                  ],
+                  [
+                    10.210526315789473,
+                    -1.311295385535092
+                  ],
+                  [
+                    13.368421052631582,
+                    -1.0204213325677163
+                  ],
+                  [
+                    16.526315789473685,
+                    -0.6609209038914708
+                  ],
+                  [
+                    19.684210526315788,
+                    -0.3232698487840359
+                  ],
+                  [
+                    22.84210526315789,
+                    -0.08544722873807503
+                  ],
+                  [
+                    26,
+                    0
+                  ]
+                ]
+              ]
+            ]
+          },
+          "closed": false,
+          "width": 4,
+          "taper": 0.3,
+          "fill": "edge",
+          "bevel": 1
+        },
+        {
+          "id": "loop",
+          "type": "ring",
+          "x": 69,
+          "radius": {
+            "keys": [
+              [
+                0,
+                3
+              ],
+              [
+                0.3,
+                18
+              ],
+              [
+                0.65,
+                15
+              ],
+              [
+                1,
+                6
+              ]
+            ]
+          },
+          "squash": 0.8,
+          "width": 3,
+          "soft": 0
+        },
+        {
+          "id": "tips",
+          "type": "particles",
+          "x": 69,
+          "mode": "twinkle",
+          "count": 6,
+          "radius": 20,
+          "speed": 0,
+          "size": [
+            1,
+            2
+          ],
+          "ramp": "accent"
+        }
+      ]
+    },
+    "index": 12,
+    "step": "c3195ff0-a2a7-4ed6-a2e7-db267fcb1cbc",
+    "receipt": "saved to My effects: 'COE VFX 2026-10-14 rapunzel_laco' (effect id a84efa57-8c55-4753-a8fa-c4e18ba7b9db); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=a84efa57-8c55-4753-a8fa-c4e18ba7b9db\n96x96, 12 frames @ 16 fps, plays once; anchor (origin) at 48,48\ndownload https://api.pixellab.ai/mcp/pixel-tools/500ce3cc-4576-460b-87c6-20eecd4fb037/: coe-vfx-2026-10-14-rapunzel-laco.gif, coe-vfx-2026-10-14-rapunzel-laco.json, coe-vfx-2026-10-14-rapunzel-laco.png\nno game pack (it renders every part again, so only when asked): export again with --replace a84efa57-8c55-4753-a8fa-c4e18ba7b9db and --game-pack for every piece, or --part <id> for one; this effect is one piece\nimage id: 500ce3cc-4576-460b-87c6-20eecd4fb037 (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['c3195ff0-a2a7-4ed6-a2e7-db267fcb1cbc', 'export', '--name', \"COE VFX 2026-10-14 rapunzel_laco\", '--replace', 'a84efa57-8c55-4753-a8fa-c4e18ba7b9db'])",
+    "base_url": "https://api.pixellab.ai/mcp/pixel-tools/500ce3cc-4576-460b-87c6-20eecd4fb037/",
+    "files": [
+      "coe-vfx-2026-10-14-rapunzel-laco.gif",
+      "coe-vfx-2026-10-14-rapunzel-laco.json",
+      "coe-vfx-2026-10-14-rapunzel-laco.png"
+    ],
+    "edit_url": "https://pixellab.ai/create-vfx?effect=a84efa57-8c55-4753-a8fa-c4e18ba7b9db"
+  },
+  {
+    "key": "ken_provocacao",
+    "name": "Ken - Guardiao leal",
+    "recipe": {
+      "name": "Ken - Guardiao leal",
+      "canvas": {
+        "w": 96,
+        "h": 96
+      },
+      "frames": 12,
+      "fps": 16,
+      "loop": false,
+      "origin": [
+        48,
+        48
+      ],
+      "ramps": {
+        "main": [
+          "#144c73",
+          "#239fb5",
+          "#8ae7e4",
+          "#e5ffff"
+        ],
+        "accent": "holy"
+      },
+      "outline": {
+        "mode": "dark"
+      },
+      "seed": 42,
+      "layers": [
+        {
+          "id": "fist",
+          "type": "shape",
+          "points": [
+            [
+              -15,
+              9
+            ],
+            [
+              -18,
+              -3
+            ],
+            [
+              -15,
+              -8
+            ],
+            [
+              -8,
+              -6
+            ],
+            [
+              -8,
+              -17
+            ],
+            [
+              -3,
+              -20
+            ],
+            [
+              2,
+              -17
+            ],
+            [
+              4,
+              -20
+            ],
+            [
+              10,
+              -17
+            ],
+            [
+              12,
+              -12
+            ],
+            [
+              18,
+              -10
+            ],
+            [
+              19,
+              2
+            ],
+            [
+              12,
+              14
+            ],
+            [
+              4,
+              20
+            ],
+            [
+              -7,
+              19
+            ]
+          ],
+          "scale": {
+            "keys": [
+              [
+                0,
+                0.1
+              ],
+              [
+                0.25,
+                1
+              ],
+              [
+                0.65,
+                1
+              ],
+              [
+                1,
+                0.1
+              ]
+            ]
+          },
+          "ramp": "main",
+          "bevel": 3
+        },
+        {
+          "id": "rays",
+          "type": "rays",
+          "length": {
+            "from": 5,
+            "to": 20
+          },
+          "inner": 22,
+          "count": 8,
+          "width": 3,
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "ramp": "accent"
+        }
+      ]
+    },
+    "index": 13,
+    "step": "a624ed63-447d-4a16-bfd5-17356a85ba96",
+    "receipt": "saved to My effects: 'COE VFX 2026-10-14 ken_provocacao' (effect id fa3fbe1d-2d05-42cf-9d93-5c21b5f5e4f1); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=fa3fbe1d-2d05-42cf-9d93-5c21b5f5e4f1\n96x96, 12 frames @ 16 fps, plays once; anchor (origin) at 48,48\ndownload https://api.pixellab.ai/mcp/pixel-tools/2b9a391f-7c89-4e25-b39f-a5ba1a11d98c/: coe-vfx-2026-10-14-ken-provocacao.gif, coe-vfx-2026-10-14-ken-provocacao.json, coe-vfx-2026-10-14-ken-provocacao.png\nno game pack (it renders every part again, so only when asked): export again with --replace fa3fbe1d-2d05-42cf-9d93-5c21b5f5e4f1 and --game-pack for every piece, or --part <id> for one; this effect is one piece\nimage id: 2b9a391f-7c89-4e25-b39f-a5ba1a11d98c (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['a624ed63-447d-4a16-bfd5-17356a85ba96', 'export', '--name', \"COE VFX 2026-10-14 ken_provocacao\", '--replace', 'fa3fbe1d-2d05-42cf-9d93-5c21b5f5e4f1'])",
+    "base_url": "https://api.pixellab.ai/mcp/pixel-tools/2b9a391f-7c89-4e25-b39f-a5ba1a11d98c/",
+    "files": [
+      "coe-vfx-2026-10-14-ken-provocacao.gif",
+      "coe-vfx-2026-10-14-ken-provocacao.json",
+      "coe-vfx-2026-10-14-ken-provocacao.png"
+    ],
+    "edit_url": "https://pixellab.ai/create-vfx?effect=fa3fbe1d-2d05-42cf-9d93-5c21b5f5e4f1"
+  },
+  {
+    "key": "boss_fogo_vermelho",
+    "name": "Boss - Meteoro vermelho",
+    "recipe": {
+      "name": "Boss - Meteoro vermelho",
+      "canvas": {
+        "w": 96,
+        "h": 96
+      },
+      "frames": 12,
+      "fps": 16,
+      "loop": true,
+      "origin": [
+        48,
+        48
+      ],
+      "ramps": {
+        "main": "fire"
+      },
+      "outline": {
+        "mode": "dark"
+      },
+      "seed": 42,
+      "layers": [
+        {
+          "id": "tail",
+          "type": "flame",
+          "x": 61,
+          "y": 48,
+          "width": 18,
+          "height": 43,
+          "angle": -90,
+          "tongues": 3,
+          "curl": 0.6,
+          "core": 1.2
+        },
+        {
+          "id": "core",
+          "type": "glow",
+          "x": 64,
+          "radius": {
+            "wave": {
+              "mid": 13,
+              "amp": 2,
+              "cycles": 2,
+              "phase": 0
+            }
+          },
+          "shape": "hard"
+        },
+        {
+          "id": "sparks",
+          "type": "particles",
+          "ramp": "main",
+          "mode": "travel",
+          "count": 18,
+          "speed": 28,
+          "size": [
+            1,
+            2
+          ],
+          "x": 45,
+          "direction": 180,
+          "spread": 30,
+          "radius": 8
+        }
+      ]
+    },
+    "index": 14,
+    "step": "318e6b0b-1721-49db-b4ea-cff8f687100d",
+    "receipt": "saved to My effects: 'COE VFX 2026-10-14 boss_fogo_vermelho' (effect id 32b20b83-39a5-4701-950e-9b299d1aa28c); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=32b20b83-39a5-4701-950e-9b299d1aa28c\n96x96, 12 frames @ 16 fps, loops; anchor (origin) at 48,48\ndownload https://api.pixellab.ai/mcp/pixel-tools/9594bdde-9c3d-498c-8710-00813608bbee/: coe-vfx-2026-10-14-boss-fogo-vermelho.gif, coe-vfx-2026-10-14-boss-fogo-vermelho.json, coe-vfx-2026-10-14-boss-fogo-vermelho.png\nno game pack (it renders every part again, so only when asked): export again with --replace 32b20b83-39a5-4701-950e-9b299d1aa28c and --game-pack for every piece, or --part <id> for one; this effect is one piece\nimage id: 9594bdde-9c3d-498c-8710-00813608bbee (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['318e6b0b-1721-49db-b4ea-cff8f687100d', 'export', '--name', \"COE VFX 2026-10-14 boss_fogo_vermelho\", '--replace', '32b20b83-39a5-4701-950e-9b299d1aa28c'])",
+    "base_url": "https://api.pixellab.ai/mcp/pixel-tools/9594bdde-9c3d-498c-8710-00813608bbee/",
+    "files": [
+      "coe-vfx-2026-10-14-boss-fogo-vermelho.gif",
+      "coe-vfx-2026-10-14-boss-fogo-vermelho.json",
+      "coe-vfx-2026-10-14-boss-fogo-vermelho.png"
+    ],
+    "edit_url": "https://pixellab.ai/create-vfx?effect=32b20b83-39a5-4701-950e-9b299d1aa28c"
+  },
+  {
+    "key": "boss_fogo_roxo",
+    "name": "Boss - Singularidade violeta",
+    "recipe": {
+      "name": "Boss - Singularidade violeta",
+      "canvas": {
+        "w": 96,
+        "h": 96
+      },
+      "frames": 12,
+      "fps": 16,
+      "loop": true,
+      "origin": [
+        48,
+        48
+      ],
+      "ramps": {
+        "main": "arcane",
+        "accent": [
+          "#4b144f",
+          "#df73f4",
+          "#fff0ff"
+        ]
+      },
+      "outline": {
+        "mode": "dark"
+      },
+      "seed": 42,
+      "layers": [
+        {
+          "id": "tail",
+          "type": "particles",
+          "x": 58,
+          "mode": "travel",
+          "direction": 180,
+          "spread": 16,
+          "speed": 38,
+          "count": 22,
+          "radius": 6,
+          "shape": "streak",
+          "size": [
+            1,
+            3
+          ]
+        },
+        {
+          "id": "orb",
+          "type": "spiral",
+          "x": 63,
+          "radius": 16,
+          "arms": 3,
+          "turns": 1.1,
+          "width": 3,
+          "soft": 1,
+          "spin": {
+            "from": 0,
+            "to": 120
+          }
+        },
+        {
+          "id": "core",
+          "type": "glow",
+          "x": 63,
+          "radius": 7,
+          "shape": "hard",
+          "ramp": "accent"
+        },
+        {
+          "id": "orbit",
+          "type": "ring",
+          "x": 63,
+          "radius": 21,
+          "squash": 0.55,
+          "width": 1,
+          "soft": 0
+        }
+      ]
+    },
+    "index": 15,
+    "step": "dd14ccde-1418-40f5-82d0-c14c753069e3",
+    "receipt": "saved to My effects: 'COE VFX 2026-10-14 boss_fogo_roxo' (effect id e7aac9e7-51f5-4c23-84c7-305196909dc9); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=e7aac9e7-51f5-4c23-84c7-305196909dc9\n96x96, 12 frames @ 16 fps, loops; anchor (origin) at 48,48\ndownload https://api.pixellab.ai/mcp/pixel-tools/c2a1b8a9-f8fa-4e8c-bd01-dbfcffe66095/: coe-vfx-2026-10-14-boss-fogo-roxo.gif, coe-vfx-2026-10-14-boss-fogo-roxo.json, coe-vfx-2026-10-14-boss-fogo-roxo.png\nno game pack (it renders every part again, so only when asked): export again with --replace e7aac9e7-51f5-4c23-84c7-305196909dc9 and --game-pack for every piece, or --part <id> for one; this effect is one piece\nimage id: c2a1b8a9-f8fa-4e8c-bd01-dbfcffe66095 (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['dd14ccde-1418-40f5-82d0-c14c753069e3', 'export', '--name', \"COE VFX 2026-10-14 boss_fogo_roxo\", '--replace', 'e7aac9e7-51f5-4c23-84c7-305196909dc9'])",
+    "base_url": "https://api.pixellab.ai/mcp/pixel-tools/c2a1b8a9-f8fa-4e8c-bd01-dbfcffe66095/",
+    "files": [
+      "coe-vfx-2026-10-14-boss-fogo-roxo.gif",
+      "coe-vfx-2026-10-14-boss-fogo-roxo.json",
+      "coe-vfx-2026-10-14-boss-fogo-roxo.png"
+    ],
+    "edit_url": "https://pixellab.ai/create-vfx?effect=e7aac9e7-51f5-4c23-84c7-305196909dc9"
+  },
+  {
+    "key": "boss_furacao",
+    "name": "Boss - Furacao de fogo",
+    "recipe": {
+      "name": "Boss - Furacao de fogo",
+      "canvas": {
+        "w": 96,
+        "h": 96
+      },
+      "frames": 12,
+      "fps": 16,
+      "loop": true,
+      "origin": [
+        48,
+        48
+      ],
+      "ramps": {
+        "main": "fire",
+        "accent": "arcane"
+      },
+      "outline": {
+        "mode": "dark"
+      },
+      "seed": 42,
+      "layers": [
+        {
+          "id": "vortex",
+          "type": "shape",
+          "points": {
+            "curves": [
+              {
+                "x": "(6+25*s)*sin(tau*(3*s-u))",
+                "y": "28-60*s",
+                "n": 100
+              }
+            ]
+          },
+          "closed": false,
+          "width": 7,
+          "fill": "edge",
+          "flow": [
+            0,
+            -25
+          ],
+          "reach": 5,
+          "taper": 0,
+          "bevel": 2
+        },
+        {
+          "id": "core",
+          "type": "beam",
+          "y": 76,
+          "width": 10,
+          "height": 57,
+          "taper": 0.7,
+          "soft": 1,
+          "ramp": "accent"
+        },
+        {
+          "id": "sparks",
+          "type": "particles",
+          "ramp": "main",
+          "mode": "orbit",
+          "count": 12,
+          "speed": 28,
+          "size": [
+            1,
+            2
+          ],
+          "y": 42,
+          "radius": 28,
+          "squash": 0.5
+        }
+      ]
+    },
+    "index": 16,
+    "step": "100edfad-baa8-4d82-b3cd-c6519663625c",
+    "receipt": "saved to My effects: 'COE VFX 2026-10-14 boss_furacao' (effect id 9c190e84-bff2-4ee5-8c17-06e3ed0c3071); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=9c190e84-bff2-4ee5-8c17-06e3ed0c3071\n96x96, 12 frames @ 16 fps, loops; anchor (origin) at 48,48\ndownload https://api.pixellab.ai/mcp/pixel-tools/b7f31c82-3b74-432f-8c46-707d734a8b54/: coe-vfx-2026-10-14-boss-furacao.gif, coe-vfx-2026-10-14-boss-furacao.json, coe-vfx-2026-10-14-boss-furacao.png\nno game pack (it renders every part again, so only when asked): export again with --replace 9c190e84-bff2-4ee5-8c17-06e3ed0c3071 and --game-pack for every piece, or --part <id> for one; this effect is one piece\nimage id: b7f31c82-3b74-432f-8c46-707d734a8b54 (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['100edfad-baa8-4d82-b3cd-c6519663625c', 'export', '--name', \"COE VFX 2026-10-14 boss_furacao\", '--replace', '9c190e84-bff2-4ee5-8c17-06e3ed0c3071'])",
+    "base_url": "https://api.pixellab.ai/mcp/pixel-tools/b7f31c82-3b74-432f-8c46-707d734a8b54/",
+    "files": [
+      "coe-vfx-2026-10-14-boss-furacao.gif",
+      "coe-vfx-2026-10-14-boss-furacao.json",
+      "coe-vfx-2026-10-14-boss-furacao.png"
+    ],
+    "edit_url": "https://pixellab.ai/create-vfx?effect=9c190e84-bff2-4ee5-8c17-06e3ed0c3071"
+  },
+  {
+    "key": "boss_teleporte",
+    "name": "Boss - Portal arcano",
+    "recipe": {
+      "name": "Boss - Portal arcano",
+      "canvas": {
+        "w": 96,
+        "h": 96
+      },
+      "frames": 12,
+      "fps": 16,
+      "loop": true,
+      "origin": [
+        48,
+        48
+      ],
+      "ramps": {
+        "main": "arcane",
+        "accent": "holy"
+      },
+      "outline": {
+        "mode": "dark"
+      },
+      "seed": 42,
+      "layers": [
+        {
+          "id": "portal",
+          "type": "spiral",
+          "radius": 30,
+          "arms": 4,
+          "turns": 1.2,
+          "width": 3,
+          "soft": 1,
+          "spin": {
+            "from": 0,
+            "to": 90
+          }
+        },
+        {
+          "id": "runes",
+          "type": "glyphs",
+          "radius": 36,
+          "count": 10,
+          "size": 4,
+          "rotation": {
+            "from": 0,
+            "to": -36
+          },
+          "ramp": "accent"
+        },
+        {
+          "id": "rim",
+          "type": "ring",
+          "radius": 32,
+          "width": 1,
+          "soft": 1,
+          "ramp": "accent"
+        },
+        {
+          "id": "sparks",
+          "type": "particles",
+          "ramp": "main",
+          "mode": "converge",
+          "count": 12,
+          "speed": 26,
+          "size": [
+            1,
+            2
+          ],
+          "radius": 38
+        }
+      ]
+    },
+    "index": 17,
+    "step": "d5a4f332-b0b0-47aa-83e4-d8b6f4089f8c",
+    "receipt": "saved to My effects: 'COE VFX 2026-10-14 boss_teleporte' (effect id 7d4143cd-cdcc-4885-b9b1-8fa4e42d1f41); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=7d4143cd-cdcc-4885-b9b1-8fa4e42d1f41\n96x96, 12 frames @ 16 fps, loops; anchor (origin) at 48,48\ndownload https://api.pixellab.ai/mcp/pixel-tools/83ae83f0-47e4-4118-bd0a-9c829daef851/: coe-vfx-2026-10-14-boss-teleporte.gif, coe-vfx-2026-10-14-boss-teleporte.json, coe-vfx-2026-10-14-boss-teleporte.png\nno game pack (it renders every part again, so only when asked): export again with --replace 7d4143cd-cdcc-4885-b9b1-8fa4e42d1f41 and --game-pack for every piece, or --part <id> for one; this effect is one piece\nimage id: 83ae83f0-47e4-4118-bd0a-9c829daef851 (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['d5a4f332-b0b0-47aa-83e4-d8b6f4089f8c', 'export', '--name', \"COE VFX 2026-10-14 boss_teleporte\", '--replace', '7d4143cd-cdcc-4885-b9b1-8fa4e42d1f41'])",
+    "base_url": "https://api.pixellab.ai/mcp/pixel-tools/83ae83f0-47e4-4118-bd0a-9c829daef851/",
+    "files": [
+      "coe-vfx-2026-10-14-boss-teleporte.gif",
+      "coe-vfx-2026-10-14-boss-teleporte.json",
+      "coe-vfx-2026-10-14-boss-teleporte.png"
+    ],
+    "edit_url": "https://pixellab.ai/create-vfx?effect=7d4143cd-cdcc-4885-b9b1-8fa4e42d1f41"
+  },
+  {
+    "key": "lodo_projetil",
+    "name": "Lodo Negro - Gota sombria",
+    "recipe": {
+      "name": "Lodo Negro - Gota sombria",
+      "canvas": {
+        "w": 96,
+        "h": 96
+      },
+      "frames": 12,
+      "fps": 16,
+      "loop": true,
+      "origin": [
+        48,
+        48
+      ],
+      "ramps": {
+        "main": [
+          "#080f19",
+          "#17272e",
+          "#2b4b50",
+          "#547877"
+        ],
+        "accent": [
+          "#37640d",
+          "#8bc638",
+          "#d8ff75"
+        ]
+      },
+      "outline": {
+        "mode": "dark"
+      },
+      "seed": 42,
+      "layers": [
+        {
+          "id": "drop",
+          "type": "shape",
+          "points": [
+            [
+              -32,
+              0
+            ],
+            [
+              -18,
+              -4
+            ],
+            [
+              -6,
+              -8
+            ],
+            [
+              7,
+              -12
+            ],
+            [
+              17,
+              -8
+            ],
+            [
+              22,
+              0
+            ],
+            [
+              17,
+              9
+            ],
+            [
+              7,
+              12
+            ],
+            [
+              -6,
+              8
+            ],
+            [
+              -18,
+              3
+            ]
+          ],
+          "x": 53,
+          "y": {
+            "wave": {
+              "mid": 48,
+              "amp": 2,
+              "cycles": 1,
+              "phase": 0
+            }
+          },
+          "fill": "smoke",
+          "grain": 4,
+          "flow": [
+            -18,
+            0
+          ],
+          "ramp": "main"
+        },
+        {
+          "id": "eye",
+          "type": "glow",
+          "x": 62,
+          "radius": 5,
+          "shape": "hard",
+          "ramp": "accent"
+        },
+        {
+          "id": "pupil",
+          "type": "shape",
+          "x": 63,
+          "points": [
+            [
+              -1,
+              -3
+            ],
+            [
+              1,
+              -3
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              -1,
+              3
+            ]
+          ],
+          "fill": "flat",
+          "level": 0,
+          "z": "front"
+        },
+        {
+          "id": "sparks",
+          "type": "particles",
+          "ramp": "main",
+          "mode": "travel",
+          "count": 7,
+          "speed": 15,
+          "size": [
+            2,
+            3
+          ],
+          "x": 30,
+          "direction": 180,
+          "spread": 15,
+          "shape": "droplet"
+        }
+      ]
+    },
+    "index": 18,
+    "step": "bae036c7-231b-4d32-93d5-6578e7262191",
+    "receipt": "saved to My effects: 'COE VFX 2026-10-14 lodo_projetil' (effect id 0c6de696-f341-4759-8c53-c72d67a75a6e); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=0c6de696-f341-4759-8c53-c72d67a75a6e\n96x96, 12 frames @ 16 fps, loops; anchor (origin) at 48,48\ndownload https://api.pixellab.ai/mcp/pixel-tools/0e96769f-5982-4e34-a3e3-1f798a2ad4f6/: coe-vfx-2026-10-14-lodo-projetil.gif, coe-vfx-2026-10-14-lodo-projetil.json, coe-vfx-2026-10-14-lodo-projetil.png\nno game pack (it renders every part again, so only when asked): export again with --replace 0c6de696-f341-4759-8c53-c72d67a75a6e and --game-pack for every piece, or --part <id> for one; this effect is one piece\nimage id: 0e96769f-5982-4e34-a3e3-1f798a2ad4f6 (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['bae036c7-231b-4d32-93d5-6578e7262191', 'export', '--name', \"COE VFX 2026-10-14 lodo_projetil\", '--replace', '0c6de696-f341-4759-8c53-c72d67a75a6e'])",
+    "base_url": "https://api.pixellab.ai/mcp/pixel-tools/0e96769f-5982-4e34-a3e3-1f798a2ad4f6/",
+    "files": [
+      "coe-vfx-2026-10-14-lodo-projetil.gif",
+      "coe-vfx-2026-10-14-lodo-projetil.json",
+      "coe-vfx-2026-10-14-lodo-projetil.png"
+    ],
+    "edit_url": "https://pixellab.ai/create-vfx?effect=0c6de696-f341-4759-8c53-c72d67a75a6e"
+  },
+  {
+    "key": "aberracao_tentaculo",
+    "name": "Aberracao - Chicote cosmico",
+    "recipe": {
+      "name": "Aberracao - Chicote cosmico",
+      "canvas": {
+        "w": 96,
+        "h": 96
+      },
+      "frames": 12,
+      "fps": 16,
+      "loop": true,
+      "origin": [
+        48,
+        48
+      ],
+      "ramps": {
+        "main": [
+          "#261a43",
+          "#673680",
+          "#b35cab",
+          "#edb9ed"
+        ],
+        "accent": [
+          "#8b4a07",
+          "#f0ad30",
+          "#fff3a5"
+        ]
+      },
+      "outline": {
+        "mode": "dark"
+      },
+      "seed": 42,
+      "layers": [
+        {
+          "id": "tentacle",
+          "type": "shape",
+          "points": {
+            "curves": [
+              {
+                "x": "-32+65*s",
+                "y": "16*sin(pi*2*s+tau*u)*s",
+                "n": 60
+              }
+            ]
+          },
+          "closed": false,
+          "width": 9,
+          "taper": 0.9,
+          "fill": "edge",
+          "bevel": 3,
+          "ramp": "main"
+        },
+        {
+          "id": "suckers",
+          "type": "particles",
+          "mode": "twinkle",
+          "radius": 23,
+          "count": 8,
+          "size": [
+            1,
+            2
+          ],
+          "shape": "dot",
+          "ramp": "accent"
+        },
+        {
+          "id": "eye",
+          "type": "glow",
+          "x": 21,
+          "radius": 8,
+          "shape": "hard",
+          "ramp": "accent"
+        },
+        {
+          "id": "pupil",
+          "type": "shape",
+          "x": 21,
+          "points": [
+            [
+              -2,
+              -5
+            ],
+            [
+              2,
+              -5
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              -2,
+              5
+            ]
+          ],
+          "fill": "flat",
+          "level": 0,
+          "z": "front"
+        }
+      ]
+    },
+    "index": 19,
+    "step": "52def94e-a810-41a1-9bb6-049b820b4a11",
+    "receipt": "saved to My effects: 'COE VFX 2026-10-14 aberracao_tentaculo' (effect id c071429b-de5e-448d-afee-4c18d9b1261e); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=c071429b-de5e-448d-afee-4c18d9b1261e\n96x96, 12 frames @ 16 fps, loops; anchor (origin) at 48,48\ndownload https://api.pixellab.ai/mcp/pixel-tools/257f8752-2da2-43a7-b659-5b3b88d32d7a/: coe-vfx-2026-10-14-aberracao-tentaculo.gif, coe-vfx-2026-10-14-aberracao-tentaculo.json, coe-vfx-2026-10-14-aberracao-tentaculo.png\nno game pack (it renders every part again, so only when asked): export again with --replace c071429b-de5e-448d-afee-4c18d9b1261e and --game-pack for every piece, or --part <id> for one; this effect is one piece\nimage id: 257f8752-2da2-43a7-b659-5b3b88d32d7a (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['52def94e-a810-41a1-9bb6-049b820b4a11', 'export', '--name', \"COE VFX 2026-10-14 aberracao_tentaculo\", '--replace', 'c071429b-de5e-448d-afee-4c18d9b1261e'])",
+    "base_url": "https://api.pixellab.ai/mcp/pixel-tools/257f8752-2da2-43a7-b659-5b3b88d32d7a/",
+    "files": [
+      "coe-vfx-2026-10-14-aberracao-tentaculo.gif",
+      "coe-vfx-2026-10-14-aberracao-tentaculo.json",
+      "coe-vfx-2026-10-14-aberracao-tentaculo.png"
+    ],
+    "edit_url": "https://pixellab.ai/create-vfx?effect=c071429b-de5e-448d-afee-4c18d9b1261e"
+  }
+]

@@ -1,0 +1,107 @@
+[
+  {
+    "path": "originais/bob_melodia_02/clash-of-eras-bob-melodia-02.gif",
+    "sha256": "4feb98d7556059d74c650191d01a8f50803b81d250e4ef926bddaba0af6a2b68",
+    "bytes": 7168
+  },
+  {
+    "path": "originais/bob_melodia_02/clash-of-eras-bob-melodia-02.json",
+    "sha256": "54c648326730aa1161888c5989189d30ee498bd32c817cfcdd0b4b024ae13d64",
+    "bytes": 6323
+  },
+  {
+    "path": "originais/bob_melodia_02/clash-of-eras-bob-melodia-02.png",
+    "sha256": "411aad8b1de75d43351b9a96c18b4614bb26a97e9f26caacda8e652c13f3845d",
+    "bytes": 6368
+  },
+  {
+    "path": "originais/bob_impacto_02/clash-of-eras-bob-impacto-02.gif",
+    "sha256": "69bf3740d48cf8daa62ec51afbf8d0ecdda8c95893cc0989af63889e56cc5e06",
+    "bytes": 9629
+  },
+  {
+    "path": "originais/bob_impacto_02/clash-of-eras-bob-impacto-02.json",
+    "sha256": "c103aad53902090fb9359e26bd9fde8b9fdeddf53edd865d39791255a97048f3",
+    "bytes": 6427
+  },
+  {
+    "path": "originais/bob_impacto_02/clash-of-eras-bob-impacto-02.png",
+    "sha256": "64b3490289d4c330f700da40f8f26d6753696be5d82d4708cf8d52fb0aa5827f",
+    "bytes": 12513
+  },
+  {
+    "path": "originais/boss_fogo_vermelho_projetil_02/clash-of-eras-boss-fogo-vermelho-projetil-02.gif",
+    "sha256": "9c37d9284801c49ba0db3f4cca13d74ad97d27fb48b3f4011e7c3ce30cd78f04",
+    "bytes": 9100
+  },
+  {
+    "path": "originais/boss_fogo_vermelho_projetil_02/clash-of-eras-boss-fogo-vermelho-projetil-02.json",
+    "sha256": "dfc3fb7ad5537faba04ccb6b96de0ce938cc0569b6ce698554cebc914a96514c",
+    "bytes": 6865
+  },
+  {
+    "path": "originais/boss_fogo_vermelho_projetil_02/clash-of-eras-boss-fogo-vermelho-projetil-02.png",
+    "sha256": "9b0629815a204380bb560e2f0f42e7cc4721d5b5e796c6ebc2de5386f887aad8",
+    "bytes": 11643
+  },
+  {
+    "path": "originais/boss_fogo_roxo_projetil_02/clash-of-eras-boss-fogo-roxo-projetil-02.gif",
+    "sha256": "8f9886c4d0cfa3b17a087a5c14c657f17463a1f1070f04fdd63189d8d254ba6a",
+    "bytes": 9092
+  },
+  {
+    "path": "originais/boss_fogo_roxo_projetil_02/clash-of-eras-boss-fogo-roxo-projetil-02.json",
+    "sha256": "504f4cca89b281efb62a98e7dc737024371720d3ccefa7171243ad7b391bc8b7",
+    "bytes": 6793
+  },
+  {
+    "path": "originais/boss_fogo_roxo_projetil_02/clash-of-eras-boss-fogo-roxo-projetil-02.png",
+    "sha256": "186de3d4206c04a355bbaa54125441b2ee6b8f747847b80b36c818383285021a",
+    "bytes": 11700
+  },
+  {
+    "path": "originais/boss_explosao_fogo_vermelho_02/clash-of-eras-boss-explosao-fogo-vermelho-02.gif",
+    "sha256": "c71cccc05b321dd57dc5e71546254e287555b61689493bd519eaeb35ac14c871",
+    "bytes": 12728
+  },
+  {
+    "path": "originais/boss_explosao_fogo_vermelho_02/clash-of-eras-boss-explosao-fogo-vermelho-02.json",
+    "sha256": "7edfd1d98e0104b89a41a2a4ddfa260f66a5502ea73d5b4100de44db8723cfc6",
+    "bytes": 6793
+  },
+  {
+    "path": "originais/boss_explosao_fogo_vermelho_02/clash-of-eras-boss-explosao-fogo-vermelho-02.png",
+    "sha256": "c4ac3990fd4a580fd05000a46acc539ecc937a7eab647b7d218773f6de7b949b",
+    "bytes": 20258
+  },
+  {
+    "path": "originais/boss_explosao_fogo_roxo_02/clash-of-eras-boss-explosao-fogo-roxo-02.gif",
+    "sha256": "1492ead64fd494dcb650077e6eb252cba838e50dd658be5b91b16f8400a95e06",
+    "bytes": 12550
+  },
+  {
+    "path": "originais/boss_explosao_fogo_roxo_02/clash-of-eras-boss-explosao-fogo-roxo-02.json",
+    "sha256": "2d2848129adfbd288dc9a3db0092efe83ff6cb5cad9ff35c9aeca9381e7f898a",
+    "bytes": 6721
+  },
+  {
+    "path": "originais/boss_explosao_fogo_roxo_02/clash-of-eras-boss-explosao-fogo-roxo-02.png",
+    "sha256": "4a0a979025d37d8a8ff99e6ce3067d24479794a94b09d75ecd261a19cec0dec9",
+    "bytes": 19929
+  },
+  {
+    "path": "originais/boss_furacao_02/clash-of-eras-boss-furacao-02.gif",
+    "sha256": "0975411832bd9ad270852869c67d63dbffbf10e53eafffc5dbcad0b9c009f96b",
+    "bytes": 16013
+  },
+  {
+    "path": "originais/boss_furacao_02/clash-of-eras-boss-furacao-02.json",
+    "sha256": "6ac6d04691152a32d5377ec5ed3665595d2d159aa4524eea4bdefbafdeb1f42f",
+    "bytes": 6459
+  },
+  {
+    "path": "originais/boss_furacao_02/clash-of-eras-boss-furacao-02.png",
+    "sha256": "14ac85f492269fc181b26f05beaa535f9c393822d433ec478ce4750c0cacbeae",
+    "bytes": 20036
+  }
+]

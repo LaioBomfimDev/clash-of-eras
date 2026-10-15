@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha das Poses do Boss Dev - Relic Arena</title>
+    <style>
+        :root {
+            --bg: #090d16;
+            --card-bg: #111726;
+            --card-border: #232f48;
+            --accent: #5eead4;
+            --accent-glow: rgba(94, 234, 212, 0.3);
+            --gold: #f4d58a;
+            --gold-glow: rgba(244, 213, 138, 0.25);
+            --selected-border: #38bdf8;
+            --selected-bg: rgba(56, 189, 248, 0.08);
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            padding: 24px;
+            padding-bottom: 120px;
+            line-height: 1.5;
+        }
+
+        header {
+            max-width: 1280px;
+            margin: 0 auto 32px auto;
+            background: linear-gradient(135deg, #182238 0%, #0f172a 100%);
+            border: 1px solid #334155;
+            border-radius: 14px;
+            padding: 28px 32px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        .badge-tag {
+            display: inline-block;
+            background: rgba(94, 234, 212, 0.15);
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        p.lead {
+            color: var(--text-muted);
+            font-size: 15px;
+            max-width: 950px;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .question-block {
+            margin-bottom: 48px;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--card-border);
+            border-radius: 14px;
+            padding: 28px;
+        }
+
+        .question-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
+        .question-desc {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .option-card {
+            background: var(--card-bg);
+            border: 2px solid var(--card-border);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .option-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+            box-shadow: 0 8px 24px var(--accent-glow);
+        }
+
+        .option-card.selected {
+            border-color: #38bdf8;
+            background: var(--selected-bg);
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.35);
+        }
+
+        .option-card.selected .check-circle {
+            background: #38bdf8;
+            color: #000;
+            border-color: #38bdf8;
+        }
+
+        .preview-area {
+            height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #080c14;
+            background-image: 
+                linear-gradient(45deg, #131b2c 25%, transparent 25%), 
+                linear-gradient(-45deg, #131b2c 25%, transparent 25%), 
+                linear-gradient(45deg, transparent 75%, #131b2c 75%), 
+                linear-gradient(-45deg, transparent 75%, #131b2c 75%);
+            background-size: 16px 16px;
+            background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+            padding: 16px;
+            position: relative;
+        }
+
+        .preview-area img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+            image-rendering: pixelated;
+            filter: drop-shadow(0 6px 12px rgba(0,0,0,0.7));
+        }
+
+        .check-circle {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            background: rgba(0, 0, 0, 0.6);
+            color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.2s ease;
+        }
+
+        .option-card-body {
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex-grow: 1;
+        }
+
+        .option-badge {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .option-name {
+            font-size: 17px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .option-detail {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* Barra de Ação Fixa Inferior */
+        .bottom-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(12px);
+            border-top: 2px solid #334155;
+            padding: 16px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.6);
+        }
+
+        .summary-text {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .summary-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gold);
+            text-transform: uppercase;
+        }
+
+        .summary-values {
+            font-size: 15px;
+            color: #fff;
+            display: flex;
+            gap: 20px;
+        }
+
+        .summary-tag {
+            background: #1e293b;
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: 1px solid #475569;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .btn-copy {
+            background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%);
+            border: none;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 700;
+            padding: 12px 28px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(14, 165, 233, 0.4);
+            transition: all 0.2s ease;
+        }
+
+        .btn-copy:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(14, 165, 233, 0.6);
+            background: linear-gradient(135deg, #0369a1 0%, #0284c7 100%);
+        }
+
+        .copy-success {
+            position: fixed;
+            top: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #10b981;
+            color: #fff;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 15px;
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.5);
+            display: none;
+            z-index: 2000;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="copySuccess" class="copy-success">
+        ✅ Resposta copiada com sucesso! Cole aqui no nosso chat com Ctrl+V.
+    </div>
+
+    <header>
+        <span class="badge-tag">Confirmação Visual com Imagens Reais</span>
+        <h1>👾 Escolha Exata das Poses do Boss Dev</h1>
+        <p class="lead">
+            Veja as imagens reais recortadas e limpas abaixo. Clique nos cards para selecionar qual imagem você quer para a <strong>pose parada (idle)</strong> e para a <strong>conjuração de magias (cast)</strong>. Depois, clique no botão azul no rodapé para copiar sua resposta para o chat!
+        </p>
+    </header>
+
+    <div class="container">
+
+        <!-- PERGUNTA 1: POSE PRINCIPAL / PARADO -->
+        <section class="question-block">
+            <h2 class="question-title">
+                <span>1️⃣</span> Qual imagem você quer para a POSE PRINCIPAL / PARADO (IDLE)?
+            </h2>
+            <p class="question-desc">
+                Esta será a imagem exibida 90% do tempo na arena (parado, andando e no ícone do topo da tela).
+            </p>
+
+            <div class="options-grid">
+
+                <!-- Opção 1A -->
+                <div class="option-card selected" onclick="selectOption('q1', '1A', 'Parado Frontal (Braços Baixos)', this)">
+                    <div class="preview-area">
+                        <span class="check-circle">✓</span>
+                        <img src="imagens/boss_dev/1_parado_turnaround_frente.png" alt="Parado Frontal">
+                    </div>
+                    <div class="option-card-body">
+                        <span class="option-badge">Opção 1A</span>
+                        <div class="option-name">Parado Frontal (Braços Baixos)</div>
+                        <div class="option-detail">
+                            Postura frontal com ambos os braços soltos, regata preta, bermuda, chinelos e tatuagem tribal visível no braço esquerdo. Fundo e sombra 100% limpos.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Opção 1B -->
+                <div class="option-card" onclick="selectOption('q1', '1B', 'Postura de Combate Apontando para Direita', this)">
+                    <div class="preview-area">
+                        <span class="check-circle">✓</span>
+                        <img src="imagens/boss_dev/2_apontando_sudeste_direita.png" alt="Apontando Sudeste">
+                    </div>
+                    <div class="option-card-body">
+                        <span class="option-badge">Opção 1B</span>
+                        <div class="option-name">Postura Ativa (Apontando Direita)</div>
+                        <div class="option-detail">
+                            Postura intimidadora em posição de batalha, apontando o dedo com o braço tatuado esticado para a frente/direita o tempo todo.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Opção 1C -->
+                <div class="option-card" onclick="selectOption('q1', '1C', 'Postura de Combate Apontando para Esquerda', this)">
+                    <div class="preview-area">
+                        <span class="check-circle">✓</span>
+                        <img src="imagens/boss_dev/3_apontando_sudoeste_esquerda.png" alt="Apontando Sudoeste">
+                    </div>
+                    <div class="option-card-body">
+                        <span class="option-badge">Opção 1C</span>
+                        <div class="option-name">Postura Ativa (Apontando Esquerda)</div>
+                        <div class="option-detail">
+                            Postura intimidadora em posição de batalha, apontando o dedo com o braço tatuado esticado para a frente/esquerda o tempo todo.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Opção 1D -->
+                <div class="option-card" onclick="selectOption('q1', '1D', 'Outra pose da Prancha de 5 Poses', this)">
+                    <div class="preview-area">
+                        <span class="check-circle">✓</span>
+                        <img src="imagens/boss_dev/prancha_5poses_original.jpg" alt="Prancha Original">
+                    </div>
+                    <div class="option-card-body">
+                        <span class="option-badge">Opção 1D</span>
+                        <div class="option-name">Outra Pose da Prancha</div>
+                        <div class="option-detail">
+                            Se preferir uma das outras poses da folha conceitual original (como a de costas ou a de perfil), escolha esta opção e me diga no chat.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- PERGUNTA 2: CONJURAÇÃO DE MAGIAS -->
+        <section class="question-block">
+            <h2 class="question-title">
+                <span>2️⃣</span> Qual imagem você quer para a CONJURAÇÃO DE MAGIAS (CAST / SKILLS)?
+            </h2>
+            <p class="question-desc">
+                Esta pose será ativada quando o Boss lançar Fogo Vermelho, Fogo Roxo, Furacão de Fogo ou Teletransporte.
+            </p>
+
+            <div class="options-grid">
+
+                <!-- Opção 2A -->
+                <div class="option-card selected" onclick="selectOption('q2', '2A', 'Mira Dinâmica (Vira na direção do alvo)', this)">
+                    <div class="preview-area" style="display: flex; gap: 8px;">
+                        <span class="check-circle">✓</span>
+                        <img src="imagens/boss_dev/3_apontando_sudoeste_esquerda.png" style="max-height: 90%; max-width: 48%;" alt="Esquerda">
+                        <img src="imagens/boss_dev/2_apontando_sudeste_direita.png" style="max-height: 90%; max-width: 48%;" alt="Direita">
+                    </div>
+                    <div class="option-card-body">
+                        <span class="option-badge">Opção 2A (Recomendada)</span>
+                        <div class="option-name">Mira Dinâmica (Direita e Esquerda)</div>
+                        <div class="option-detail">
+                            Aponta para a esquerda se os heróis estiverem à esquerda, e vira apontando para a direita se estiverem à direita. Braço sólido e perfeito nos dois ângulos!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Opção 2B -->
+                <div class="option-card" onclick="selectOption('q2', '2B', 'Fixa: Apontando para a Esquerda', this)">
+                    <div class="preview-area">
+                        <span class="check-circle">✓</span>
+                        <img src="imagens/boss_dev/3_apontando_sudoeste_esquerda.png" alt="Sudoeste">
+                    </div>
+                    <div class="option-card-body">
+                        <span class="option-badge">Opção 2B</span>
+                        <div class="option-name">Fixa: Apontando Esquerda</div>
+                        <div class="option-detail">
+                            Sempre usa a pose apontando para a esquerda/sudoeste ao disparar feitiços, independente de onde o Boss esteja na arena.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Opção 2C -->
+                <div class="option-card" onclick="selectOption('q2', '2C', 'Fixa: Apontando para a Direita', this)">
+                    <div class="preview-area">
+                        <span class="check-circle">✓</span>
+                        <img src="imagens/boss_dev/2_apontando_sudeste_direita.png" alt="Sudeste">
+                    </div>
+                    <div class="option-card-body">
+                        <span class="option-badge">Opção 2C</span>
+                        <div class="option-name">Fixa: Apontando Direita</div>
+                        <div class="option-detail">
+                            Sempre usa a pose apontando para a direita/sudeste ao disparar feitiços, independente de onde o Boss esteja na arena.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Opção 2D -->
+                <div class="option-card" onclick="selectOption('q2', '2D', 'Manter Mesma Pose (Sem trocar o corpo, só efeitos)', this)">
+                    <div class="preview-area">
+                        <span class="check-circle">✓</span>
+                        <img src="imagens/boss_dev/1_parado_turnaround_frente.png" alt="Sem troca de corpo">
+                    </div>
+                    <div class="option-card-body">
+                        <span class="option-badge">Opção 2D</span>
+                        <div class="option-name">Sem Trocar Pose (Apenas Magia)</div>
+                        <div class="option-detail">
+                            Não altera o sprite do corpo. Ao conjurar feitiços, o círculo arcano no chão e a aura cósmica se intensificam liberando o fogo.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- BARRA FIXA INFERIOR COM BOTÃO DE COPIAR -->
+    <div class="bottom-bar">
+        <div class="summary-text">
+            <span class="summary-title">Sua Escolha Selecionada:</span>
+            <div class="summary-values">
+                <span>Parado (Idle): <strong id="lblQ1" class="summary-tag">Opção 1A (Parado Frontal)</strong></span>
+                <span>Magias (Cast): <strong id="lblQ2" class="summary-tag">Opção 2A (Mira Dinâmica)</strong></span>
+            </div>
+        </div>
+        <button class="btn-copy" onclick="copyChoices()">
+            📋 COPIAR RESPOSTA PARA ENVIAR NO CHAT
+        </button>
+    </div>
+
+    <script>
+        let choices = {
+            q1: { code: 'Opção 1A', name: 'Parado Frontal (Braços Baixos)' },
+            q2: { code: 'Opção 2A', name: 'Mira Dinâmica (Direita e Esquerda)' }
+        };
+
+        function selectOption(question, code, name, cardElem) {
+            // Remove selected de todos no mesmo grupo
+            const grid = cardElem.parentElement;
+            grid.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
+            cardElem.classList.add('selected');
+
+            choices[question] = { code: 'Opção ' + code, name: name };
+
+            if (question === 'q1') {
+                document.getElementById('lblQ1').innerText = `${choices.q1.code} (${choices.q1.name})`;
+            } else if (question === 'q2') {
+                document.getElementById('lblQ2').innerText = `${choices.q2.code} (${choices.q2.name})`;
+            }
+        }
+
+        function copyChoices() {
+            const textToCopy = `Minha escolha para o Boss Dev:\n- Pose Parado (Idle): ${choices.q1.code} - ${choices.q1.name}\n- Pose Magias (Cast): ${choices.q2.code} - ${choices.q2.name}`;
+            
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const toast = document.getElementById('copySuccess');
+                toast.style.display = 'block';
+                setTimeout(() => {
+                    toast.style.display = 'none';
+                }, 4000);
+            }).catch(err => {
+                alert('Sua escolha:\n\n' + textToCopy + '\n\nPode copiar este texto e colar no chat!');
+            });
+        }
+    </script>
+</body>
+</html>

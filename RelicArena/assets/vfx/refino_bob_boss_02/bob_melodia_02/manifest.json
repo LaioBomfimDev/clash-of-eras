@@ -1,0 +1,27 @@
+{
+  "fps": 16,
+  "clips": [
+    {
+      "name": "whole",
+      "frames": 16,
+      "loop": true,
+      "frame": {
+        "w": 96,
+        "h": 80
+      },
+      "offset": {
+        "x": -48,
+        "y": -40
+      },
+      "sheets": [
+        {
+          "file": "sheet.png",
+          "columns": 4,
+          "rows": 4,
+          "frames": 16,
+          "first_frame": 0
+        }
+      ]
+    }
+  ]
+}

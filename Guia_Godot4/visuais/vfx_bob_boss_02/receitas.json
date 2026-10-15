@@ -1,0 +1,1032 @@
+[
+  {
+    "key": "bob_melodia_02",
+    "name": "Bob Marley - Melodia roots 02",
+    "recipe": {
+      "canvas": {
+        "w": 96,
+        "h": 80
+      },
+      "frames": 16,
+      "fps": 16,
+      "loop": true,
+      "origin": [
+        48,
+        40
+      ],
+      "ramps": {
+        "green": [
+          "#10271b",
+          "#006d2a",
+          "#009b3a"
+        ],
+        "gold": [
+          "#39250a",
+          "#a0780a",
+          "#fed100"
+        ],
+        "red": [
+          "#300f16",
+          "#8f1d27",
+          "#d52b1e"
+        ],
+        "main": [
+          "#332609",
+          "#fed100",
+          "#fff3a5"
+        ]
+      },
+      "outline": {
+        "mode": "black"
+      },
+      "layers": [
+        {
+          "id": "note0",
+          "type": "image",
+          "pixels": [
+            ".......11.....",
+            "......1331....",
+            "......13331...",
+            "......131331..",
+            "......131331..",
+            "......131131..",
+            "......131.11..",
+            "......131.....",
+            "......131.....",
+            "...111131.....",
+            "..1333331.....",
+            ".13333331.....",
+            ".13333331.....",
+            "..133331......",
+            "...1111......."
+          ],
+          "ramp": "green",
+          "x": 22,
+          "y": {
+            "wave": {
+              "mid": 44,
+              "amp": 7,
+              "cycles": 1,
+              "phase": 0
+            }
+          },
+          "facing": "none",
+          "z": "front"
+        },
+        {
+          "id": "star0",
+          "type": "particles",
+          "mode": "twinkle",
+          "x": 22,
+          "y": 43,
+          "count": 3,
+          "radius": 12,
+          "size": [
+            1,
+            2
+          ],
+          "ramp": "green",
+          "intensity": 0.8
+        },
+        {
+          "id": "note1",
+          "type": "image",
+          "pixels": [
+            ".......11.....",
+            "......1331....",
+            "......13331...",
+            "......131331..",
+            "......131331..",
+            "......131131..",
+            "......131.11..",
+            "......131.....",
+            "......131.....",
+            "...111131.....",
+            "..1333331.....",
+            ".13333331.....",
+            ".13333331.....",
+            "..133331......",
+            "...1111......."
+          ],
+          "ramp": "gold",
+          "x": 48,
+          "y": {
+            "wave": {
+              "mid": 44,
+              "amp": 7,
+              "cycles": 1,
+              "phase": 0.3333333333333333
+            }
+          },
+          "facing": "none",
+          "z": "front"
+        },
+        {
+          "id": "star1",
+          "type": "particles",
+          "mode": "twinkle",
+          "x": 48,
+          "y": 43,
+          "count": 3,
+          "radius": 12,
+          "size": [
+            1,
+            2
+          ],
+          "ramp": "gold",
+          "intensity": 0.8
+        },
+        {
+          "id": "note2",
+          "type": "image",
+          "pixels": [
+            ".......11.....",
+            "......1331....",
+            "......13331...",
+            "......131331..",
+            "......131331..",
+            "......131131..",
+            "......131.11..",
+            "......131.....",
+            "......131.....",
+            "...111131.....",
+            "..1333331.....",
+            ".13333331.....",
+            ".13333331.....",
+            "..133331......",
+            "...1111......."
+          ],
+          "ramp": "red",
+          "x": 74,
+          "y": {
+            "wave": {
+              "mid": 44,
+              "amp": 7,
+              "cycles": 1,
+              "phase": 0.6666666666666666
+            }
+          },
+          "facing": "none",
+          "z": "front"
+        },
+        {
+          "id": "star2",
+          "type": "particles",
+          "mode": "twinkle",
+          "x": 74,
+          "y": 43,
+          "count": 3,
+          "radius": 12,
+          "size": [
+            1,
+            2
+          ],
+          "ramp": "red",
+          "intensity": 0.8
+        },
+        {
+          "id": "staff1",
+          "type": "shape",
+          "points": {
+            "curves": [
+              {
+                "x": "-36+72*s",
+                "y": "19+2*sin(tau*(s-u))",
+                "n": 48
+              }
+            ]
+          },
+          "closed": false,
+          "width": 1,
+          "ramp": "gold",
+          "intensity": 0.65
+        },
+        {
+          "id": "staff2",
+          "type": "shape",
+          "points": {
+            "curves": [
+              {
+                "x": "-36+72*s",
+                "y": "23+2*sin(tau*(s-u))",
+                "n": 48
+              }
+            ]
+          },
+          "closed": false,
+          "width": 1,
+          "ramp": "green",
+          "intensity": 0.8
+        }
+      ]
+    }
+  },
+  {
+    "key": "bob_impacto_02",
+    "name": "Bob Marley - Impacto sincopado 02",
+    "recipe": {
+      "canvas": {
+        "w": 112,
+        "h": 112
+      },
+      "frames": 16,
+      "fps": 24,
+      "loop": false,
+      "origin": [
+        56,
+        56
+      ],
+      "ramps": {
+        "green": [
+          "#10271b",
+          "#006d2a",
+          "#009b3a"
+        ],
+        "gold": [
+          "#39250a",
+          "#a0780a",
+          "#fed100"
+        ],
+        "red": [
+          "#300f16",
+          "#8f1d27",
+          "#d52b1e"
+        ],
+        "main": [
+          "#332609",
+          "#fed100",
+          "#fff3a5"
+        ]
+      },
+      "outline": {
+        "mode": "black"
+      },
+      "layers": [
+        {
+          "id": "ring0",
+          "type": "ring",
+          "radius": {
+            "from": 5,
+            "to": 31
+          },
+          "width": {
+            "from": 2,
+            "to": 1
+          },
+          "soft": 0,
+          "life": [
+            0,
+            0.8
+          ],
+          "dissolve": {
+            "keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0.5,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          },
+          "ramp": "green",
+          "intensity": 0.85
+        },
+        {
+          "id": "notes0",
+          "type": "particles",
+          "mode": "burst",
+          "count": 2,
+          "radius": 5,
+          "speed": 29,
+          "shape": "custom",
+          "pixels": [
+            ".......11.....",
+            "......1331....",
+            "......13331...",
+            "......131331..",
+            "......131331..",
+            "......131131..",
+            "......131.11..",
+            "......131.....",
+            "......131.....",
+            "...111131.....",
+            "..1333331.....",
+            ".13333331.....",
+            ".13333331.....",
+            "..133331......",
+            "...1111......."
+          ],
+          "pixel_ramp": 3,
+          "shrink": 0,
+          "ramp": "green",
+          "direction": 0,
+          "spread": 60,
+          "life": [
+            0.1,
+            0.85
+          ],
+          "fade_out": 0.25
+        },
+        {
+          "id": "ring1",
+          "type": "ring",
+          "radius": {
+            "from": 9,
+            "to": 35
+          },
+          "width": {
+            "from": 2,
+            "to": 1
+          },
+          "soft": 0,
+          "life": [
+            0.06,
+            0.8600000000000001
+          ],
+          "dissolve": {
+            "keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0.5,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          },
+          "ramp": "gold",
+          "intensity": 0.85
+        },
+        {
+          "id": "notes1",
+          "type": "particles",
+          "mode": "burst",
+          "count": 2,
+          "radius": 5,
+          "speed": 29,
+          "shape": "custom",
+          "pixels": [
+            ".......11.....",
+            "......1331....",
+            "......13331...",
+            "......131331..",
+            "......131331..",
+            "......131131..",
+            "......131.11..",
+            "......131.....",
+            "......131.....",
+            "...111131.....",
+            "..1333331.....",
+            ".13333331.....",
+            ".13333331.....",
+            "..133331......",
+            "...1111......."
+          ],
+          "pixel_ramp": 3,
+          "shrink": 0,
+          "ramp": "gold",
+          "direction": 120,
+          "spread": 60,
+          "life": [
+            0.1,
+            0.85
+          ],
+          "fade_out": 0.25
+        },
+        {
+          "id": "ring2",
+          "type": "ring",
+          "radius": {
+            "from": 13,
+            "to": 39
+          },
+          "width": {
+            "from": 2,
+            "to": 1
+          },
+          "soft": 0,
+          "life": [
+            0.12,
+            0.92
+          ],
+          "dissolve": {
+            "keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0.5,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          },
+          "ramp": "red",
+          "intensity": 0.85
+        },
+        {
+          "id": "notes2",
+          "type": "particles",
+          "mode": "burst",
+          "count": 2,
+          "radius": 5,
+          "speed": 29,
+          "shape": "custom",
+          "pixels": [
+            ".......11.....",
+            "......1331....",
+            "......13331...",
+            "......131331..",
+            "......131331..",
+            "......131131..",
+            "......131.11..",
+            "......131.....",
+            "......131.....",
+            "...111131.....",
+            "..1333331.....",
+            ".13333331.....",
+            ".13333331.....",
+            "..133331......",
+            "...1111......."
+          ],
+          "pixel_ramp": 3,
+          "shrink": 0,
+          "ramp": "red",
+          "direction": 240,
+          "spread": 60,
+          "life": [
+            0.1,
+            0.85
+          ],
+          "fade_out": 0.25
+        }
+      ]
+    }
+  },
+  {
+    "key": "boss_fogo_vermelho_projetil_02",
+    "source": "fogo_vermelho_projetil",
+    "name": "Boss - fogo_vermelho_projetil 02",
+    "recipe": {
+      "canvas": {
+        "w": 96,
+        "h": 80
+      },
+      "frames": 16,
+      "fps": 24,
+      "loop": true,
+      "origin": [
+        48,
+        40
+      ],
+      "ramps": {
+        "main": "fire",
+        "spark": [
+          "#722018",
+          "#ee5419",
+          "#ffc95c"
+        ]
+      },
+      "outline": {
+        "mode": "dark"
+      },
+      "subject": {
+        "x": 59,
+        "y": 40,
+        "align": "center",
+        "wave": {
+          "amp": 1,
+          "length": 16,
+          "cycles": 2,
+          "axis": "y"
+        }
+      },
+      "layers": [
+        {
+          "id": "trail",
+          "type": "flame",
+          "x": 45,
+          "y": 40,
+          "width": 10,
+          "height": {
+            "wave": {
+              "mid": 29,
+              "amp": 4,
+              "cycles": 2,
+              "phase": 0
+            }
+          },
+          "angle": -90,
+          "tongues": 3,
+          "core": 0.65,
+          "curl": 0.45,
+          "intensity": 0.8
+        },
+        {
+          "id": "embers",
+          "type": "particles",
+          "x": 37,
+          "y": 40,
+          "mode": "travel",
+          "direction": 180,
+          "spread": 16,
+          "speed": 27,
+          "count": 14,
+          "radius": 5,
+          "shape": "streak",
+          "size": [
+            1,
+            2
+          ],
+          "ramp": "spark",
+          "intensity": 0.8
+        }
+      ]
+    }
+  },
+  {
+    "key": "boss_fogo_roxo_projetil_02",
+    "source": "fogo_roxo_projetil",
+    "name": "Boss - fogo_roxo_projetil 02",
+    "recipe": {
+      "canvas": {
+        "w": 96,
+        "h": 80
+      },
+      "frames": 16,
+      "fps": 24,
+      "loop": true,
+      "origin": [
+        48,
+        40
+      ],
+      "ramps": {
+        "main": "arcane",
+        "spark": [
+          "#46216e",
+          "#9955dd",
+          "#ed9eff"
+        ]
+      },
+      "outline": {
+        "mode": "dark"
+      },
+      "subject": {
+        "x": 59,
+        "y": 40,
+        "align": "center",
+        "wave": {
+          "amp": 1,
+          "length": 16,
+          "cycles": 2,
+          "axis": "y"
+        }
+      },
+      "layers": [
+        {
+          "id": "trail",
+          "type": "flame",
+          "x": 45,
+          "y": 40,
+          "width": 10,
+          "height": {
+            "wave": {
+              "mid": 29,
+              "amp": 4,
+              "cycles": 2,
+              "phase": 0
+            }
+          },
+          "angle": -90,
+          "tongues": 3,
+          "core": 0.65,
+          "curl": 0.45,
+          "intensity": 0.8
+        },
+        {
+          "id": "embers",
+          "type": "particles",
+          "x": 37,
+          "y": 40,
+          "mode": "travel",
+          "direction": 180,
+          "spread": 16,
+          "speed": 27,
+          "count": 14,
+          "radius": 5,
+          "shape": "streak",
+          "size": [
+            1,
+            2
+          ],
+          "ramp": "spark",
+          "intensity": 0.8
+        }
+      ]
+    }
+  },
+  {
+    "key": "boss_explosao_fogo_vermelho_02",
+    "source": "explosao_fogo_vermelho",
+    "name": "Boss - explosao_fogo_vermelho 02",
+    "recipe": {
+      "canvas": {
+        "w": 128,
+        "h": 128
+      },
+      "frames": 16,
+      "fps": 24,
+      "loop": false,
+      "origin": [
+        64,
+        64
+      ],
+      "ramps": {
+        "main": "fire",
+        "sparks": "holy",
+        "smoke": "smoke"
+      },
+      "subject": {
+        "x": 64,
+        "y": 64,
+        "align": "center",
+        "life": [
+          0.13,
+          0.85
+        ],
+        "dissolve": {
+          "keys": [
+            [
+              0,
+              1
+            ],
+            [
+              0.15,
+              0
+            ],
+            [
+              0.4,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        "wave": {
+          "amp": 2,
+          "length": 12,
+          "cycles": 2,
+          "axis": "x"
+        }
+      },
+      "layers": [
+        {
+          "id": "flash",
+          "type": "rays",
+          "count": 8,
+          "length": {
+            "from": 5,
+            "to": 29
+          },
+          "width": 3,
+          "life": [
+            0,
+            0.2
+          ],
+          "intensity": 0.9
+        },
+        {
+          "id": "pressure",
+          "type": "ring",
+          "radius": {
+            "from": 7,
+            "to": 52
+          },
+          "width": {
+            "from": 3,
+            "to": 1
+          },
+          "soft": 0,
+          "life": [
+            0.13,
+            0.9
+          ],
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.7
+        },
+        {
+          "id": "billows",
+          "type": "puffs",
+          "radius": 32,
+          "count": 7,
+          "throw": 0.55,
+          "rise": 0.1,
+          "thin": 0.7,
+          "intensity": 0.65
+        },
+        {
+          "id": "sparks",
+          "type": "particles",
+          "mode": "burst",
+          "count": 22,
+          "speed": 43,
+          "size": [
+            1,
+            3
+          ],
+          "shape": "streak",
+          "life": [
+            0.1,
+            0.8
+          ],
+          "ramp": "sparks",
+          "intensity": 0.75
+        },
+        {
+          "id": "smoke",
+          "type": "puffs",
+          "mode": "poof",
+          "radius": 19,
+          "count": 4,
+          "rise": 0.3,
+          "throw": 0.25,
+          "thin": 0.9,
+          "life": [
+            0.6,
+            1
+          ],
+          "ramp": "smoke",
+          "intensity": 0.45
+        }
+      ]
+    }
+  },
+  {
+    "key": "boss_explosao_fogo_roxo_02",
+    "source": "explosao_fogo_roxo",
+    "name": "Boss - explosao_fogo_roxo 02",
+    "recipe": {
+      "canvas": {
+        "w": 128,
+        "h": 128
+      },
+      "frames": 16,
+      "fps": 24,
+      "loop": false,
+      "origin": [
+        64,
+        64
+      ],
+      "ramps": {
+        "main": "arcane",
+        "sparks": "arcane",
+        "smoke": "smoke"
+      },
+      "subject": {
+        "x": 64,
+        "y": 64,
+        "align": "center",
+        "life": [
+          0.13,
+          0.85
+        ],
+        "dissolve": {
+          "keys": [
+            [
+              0,
+              1
+            ],
+            [
+              0.15,
+              0
+            ],
+            [
+              0.4,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        "wave": {
+          "amp": 2,
+          "length": 12,
+          "cycles": 2,
+          "axis": "x"
+        }
+      },
+      "layers": [
+        {
+          "id": "flash",
+          "type": "rays",
+          "count": 8,
+          "length": {
+            "from": 5,
+            "to": 29
+          },
+          "width": 3,
+          "life": [
+            0,
+            0.2
+          ],
+          "intensity": 0.9
+        },
+        {
+          "id": "pressure",
+          "type": "ring",
+          "radius": {
+            "from": 7,
+            "to": 52
+          },
+          "width": {
+            "from": 3,
+            "to": 1
+          },
+          "soft": 0,
+          "life": [
+            0.13,
+            0.9
+          ],
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.7
+        },
+        {
+          "id": "billows",
+          "type": "puffs",
+          "radius": 32,
+          "count": 7,
+          "throw": 0.55,
+          "rise": 0.1,
+          "thin": 0.7,
+          "intensity": 0.65
+        },
+        {
+          "id": "sparks",
+          "type": "particles",
+          "mode": "burst",
+          "count": 22,
+          "speed": 43,
+          "size": [
+            1,
+            3
+          ],
+          "shape": "streak",
+          "life": [
+            0.1,
+            0.8
+          ],
+          "ramp": "sparks",
+          "intensity": 0.75
+        },
+        {
+          "id": "smoke",
+          "type": "puffs",
+          "mode": "poof",
+          "radius": 19,
+          "count": 4,
+          "rise": 0.3,
+          "throw": 0.25,
+          "thin": 0.9,
+          "life": [
+            0.6,
+            1
+          ],
+          "ramp": "smoke",
+          "intensity": 0.45
+        }
+      ]
+    }
+  },
+  {
+    "key": "boss_furacao_02",
+    "source": "furacao_fogo",
+    "name": "Boss - Furacao infernal 02",
+    "recipe": {
+      "canvas": {
+        "w": 128,
+        "h": 128
+      },
+      "frames": 16,
+      "fps": 20,
+      "loop": true,
+      "origin": [
+        64,
+        70
+      ],
+      "ramps": {
+        "main": "fire",
+        "runes": "arcane"
+      },
+      "outline": {
+        "mode": "dark"
+      },
+      "subject": {
+        "x": 64,
+        "y": 63,
+        "align": "center",
+        "wave": {
+          "amp": 2,
+          "length": 18,
+          "cycles": 2,
+          "axis": "x"
+        }
+      },
+      "layers": [
+        {
+          "id": "foot",
+          "type": "ring",
+          "x": 64,
+          "y": 100,
+          "radius": {
+            "wave": {
+              "mid": 29,
+              "amp": 3,
+              "cycles": 2,
+              "phase": 0
+            }
+          },
+          "squash": 0.3,
+          "width": 1,
+          "soft": 0,
+          "intensity": 0.7
+        },
+        {
+          "id": "embers",
+          "type": "particles",
+          "x": 64,
+          "y": 97,
+          "mode": "rise",
+          "radius": 24,
+          "speed": 76,
+          "count": 30,
+          "vortex": 2,
+          "shape": "streak",
+          "size": [
+            1,
+            2
+          ],
+          "intensity": 0.8
+        },
+        {
+          "id": "ribbons",
+          "type": "shape",
+          "points": {
+            "curves": [
+              {
+                "x": "(8+26*s)*sin(tau*(3*s-u))",
+                "y": "30-82*s",
+                "n": 80
+              }
+            ]
+          },
+          "closed": false,
+          "width": 2,
+          "fill": "edge",
+          "bevel": 1,
+          "intensity": 0.7
+        },
+        {
+          "id": "runes",
+          "type": "particles",
+          "x": 64,
+          "y": 90,
+          "mode": "orbit",
+          "radius": 30,
+          "squash": 0.3,
+          "count": 6,
+          "shape": "sparkle",
+          "size": [
+            1,
+            2
+          ],
+          "ramp": "runes"
+        }
+      ]
+    }
+  }
+]

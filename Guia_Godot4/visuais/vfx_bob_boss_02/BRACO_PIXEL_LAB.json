@@ -1,0 +1,100 @@
+{
+  "source": "RelicArena/assets/characters/boss_dev/referencias/boss_dev_apontando_linha_4angulos.jpg",
+  "crop": [
+    207,
+    294,
+    380,
+    760
+  ],
+  "derived_size": [
+    52,
+    140
+  ],
+  "source_inspection_id": "36eef5e2-90b4-48ce-a400-ee34113a1735",
+  "result_id": "e1c0beda-f67a-412e-b29a-144ca2531ac1",
+  "url": "https://api.pixellab.ai/mcp/pixel-tools/e1c0beda-f67a-412e-b29a-144ca2531ac1/image.png",
+  "operations": [
+    {
+      "operation": "flood_fill",
+      "frames": [
+        1
+      ],
+      "seed": [
+        0,
+        0
+      ],
+      "expected": "#41413fff",
+      "color": "#00000000",
+      "tolerance": 14,
+      "reason": "Remove only connected grey background; retain dark tattoo and shirt."
+    },
+    {
+      "operation": "select_mask",
+      "frames": [
+        1
+      ],
+      "name": "stray",
+      "selector": {
+        "kind": "rectangle",
+        "region": [
+          0,
+          0,
+          18,
+          40
+        ]
+      },
+      "reason": "Neighbour pose's pointing hand is outside selected character."
+    },
+    {
+      "operation": "brush",
+      "frames": [
+        1
+      ],
+      "mask": "stray",
+      "points": [
+        [
+          9,
+          20
+        ]
+      ],
+      "size": 64,
+      "shape": "square",
+      "mode": "erase",
+      "reason": "Clear neighbour pose from crop."
+    },
+    {
+      "operation": "select_mask",
+      "frames": [
+        1
+      ],
+      "name": "right_stray",
+      "selector": {
+        "kind": "rectangle",
+        "region": [
+          50,
+          0,
+          51,
+          38
+        ]
+      },
+      "reason": "Other pose at right edge."
+    },
+    {
+      "operation": "brush",
+      "frames": [
+        1
+      ],
+      "mask": "right_stray",
+      "points": [
+        [
+          51,
+          19
+        ]
+      ],
+      "size": 64,
+      "shape": "square",
+      "mode": "erase",
+      "reason": "Clear right edge neighbour."
+    }
+  ]
+}

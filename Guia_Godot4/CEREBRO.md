@@ -1,5 +1,9 @@
 # Cérebro — regras atuais
 
+**Integração de novos sprites de skills (2026-10-14):** a pedido do usuário, os novos sprites de skills foram integrados especificamente para os personagens e efeitos que **não tinham** sprite próprio anteriormente: `caramelo_mordida` (Presas ferozes do Caramelo), `obama_barreira` (Barreira da mala do Obama), `barbie_invocacao` (Círculo de invocação da Barbie), `ken_provocacao` (Guardião leal do Ken), `boss_teleporte` (Portal arcano do Boss) e `lula_renascimento` (Impacto divino do Lula). **Nenhum asset visual ativo foi excluído ou substituído** (os VFX pré-existentes de Michael, Zumbi, Snoop, Elon, Bob, Rapunzel e ataques do Boss foram 100% preservados). Validação completa no Godot Engine: 237 testes de VFX, 326 testes de simulação e 70 testes de combate do Boss passaram sem falhas.
+
+**VFX do elenco, 2026-10-14:** pedido direto para criar sprite sheet de ataques/habilidades animados usando o MCP do PixelLab. Entregues **20 efeitos × 12 quadros**, canvas 96×96, 16 FPS, atlas transparente 1152×1920, PNGs/GIFs/JSONs originais e galeria. Produzidos no editor gratuito `vfx_workbench`; saldo antes/depois 1,75 geração e US$0,00. [Entrega e proveniência](visuais/vfx_elenco_2026-10-14/README.md). Automação segue pausada.
+
 **Auditoria de produção, 2026-10-14:** usuário pediu comparar Vercel e pasta original e fazer commit de tudo. Confirmado que Bob/Snoop/Lula/Boss novos já estavam no PCK de `8f52072`; diferenças reais: artes64 de Bob/folha do Snoop sem uso, músicas Bob/Snoop não carregando no export e compêndio Galeria/Ficha ainda sem commit. Integração64 preserva tamanho de desenho e PNGs; ResourceLoader corrige seis músicas; cantor sem faixa não silencia SFX; asas do Lula corrigidas. WAV duplicados excluídos somente da Web, originais preservados. As quatro técnicas por herói na ficha são **propostas em estudo**, não regras implementadas; maestria/coleção continuam protótipos visuais. [Diff, validação e estado de publicação](revisoes/auditoria_producao_2026-10-13/DIFF_PRODUCAO.md). Automação contínua permanece pausada.
 
 **Lobby atualizado em 2026-10-13:** o usuário forneceu uma imagem e um vídeo e confirmou uso **somente no lobby/menu inicial**. Originais preservados em `visuais/lobby_fundo_02/originais/`. Implementação: MP4 silencioso pelo navegador, OGV separado no Godot nativo, imagem estática no modo econômico/redução de movimento/falha de vídeo. Reprodução pausa fora do lobby e com a aba oculta. Logo integrado à arte; dicas acessíveis em “Como jogar”. Publicação paralela encontrada no commit `8f52072` foi preservada e validada no link público; não reenviar a release antiga por cima. [Entrega, evidências e limites](revisoes/lobby_fundo_2026-10-13/ENTREGA.md). Automação contínua permanece pausada.
@@ -143,6 +147,23 @@ Contratos temporários: execução do Caramelo em mordida contra vida ≤10% ant
 
 
 ## Trabalho e evidência
+
+- **Correção da UI de Vida do Boss & Retorno da Prévia da Equipe Adversária (2026-10-14):**
+  - Implementado a pedido do usuário (*"a ui da vida do boss esta aparecendo a todo momento, esta errado, deveria aparecer apenas na luta do boss e depois da luta do boss, deverá voltar a animação previa da equipe do adversário, e nao continuar apenas o boss novamente como previa"*):
+  1. **UI de Vida do Boss Exclusiva no Combate da Luta do Boss (`client/main.gd`):**
+     - Removido `boss_bar_panel` de `hud_controls.append(boss_bar_panel)`, eliminando a causa raiz que forçava `visible = true` em todas as rodadas e fases da partida.
+     - Em `_refresh_boss_hud(is_boss_round, phase)`, restringida a visibilidade para estritamente `is_boss_round and phase == "combat"`.
+     - Nas Rodadas 1, 2, 3 e 5+, assim como na preparação da Rodada 4, `boss_bar_panel` permanece 100% invisível, e os painéis padrão (`stage_panel` e `status_panel`) são mantidos ativos.
+     - Em `_draw_bars(canvas, entry)`, removida a exceção de `is_boss_bar` para unidades `ghost`, impedindo que o boss em espera durante a preparação exiba uma barra flutuante de combate.
+  2. **Restauração da Prévia da Equipe Adversária Pós-Boss (`simulation/match_session.gd`):**
+     - Em `_begin_combat()`, adicionada a guarda `if not (sim.is_boss_round and team == 1): _previous_formations[team] = _formation_snapshot(team)`. Evita que o Boss (unidade 999) sobrescreva a formação de heróis do bot armazenada na Rodada 3.
+     - Em `snapshot_for_team()`, a geração de `enemy_units_preview` em rodadas que não são do Boss sanitiza qualquer resquício de `boss_dev` e faz fallback seguro para a formação atual do bot (`_formation_snapshot(1 - team)`) quando `round_index > 1`.
+     - Na Rodada 5 em diante, a preparação volta a exibir a equipe completa do adversário (Bob Marley, Neymar, Zumbi, etc.) com suas respectivas animações de idle, círculos de equipe e sem o Boss.
+     - Preservada rigorosamente a privacidade da Rodada 1 (`view.enemy.units` vazio).
+  3. **Validação Completa (1.333 testes aprovados, zero regressões):**
+     - `tests/test_boss_battle.gd`: 77 testes aprovados (incluindo validação de boss bar oculta na preparação, ativa no combate e equipe do oponente restaurada na Rodada 5).
+     - Suíte determinística integral aprovada: simulação (326), balanço (84), Lula ascensão (38), sessão (173), drag-and-drop (18), 4 partidas completas (602), melhorias da loja (15).
+     - Evidências visuais salvas: `captures/crop_r4_prep_top.png`, `captures/crop_r4_combat_top.png`, `captures/crop_r5_prep_top.png` e `captures/crop_r5_arena_preview.png`.
 
 - **Refinamento de UI/UX da Loja, Botões, Badges e Tooltips de Habilidades (2026-10-13):**
   - Implementado a pedido do usuário (*"icon espaço / renovar esta quase saindo, fonte negrita realcando branco legivel, gold em amarelo com icone menorzinho, mouse hover nos herois le suas habilidades, campo 1/4 substitui por membros: com icone de time e borda bem feita, botao lutar e recrute corrigidos, moedas no meio paradas sem girar com mais brilhos e juntas"*):

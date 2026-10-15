@@ -1,0 +1,1098 @@
+[
+  {
+    "key": "bob_melodia_02",
+    "name": "Bob Marley - Melodia roots 02",
+    "recipe": {
+      "canvas": {
+        "w": 96,
+        "h": 80
+      },
+      "frames": 16,
+      "fps": 16,
+      "loop": true,
+      "origin": [
+        48,
+        40
+      ],
+      "ramps": {
+        "green": [
+          "#10271b",
+          "#006d2a",
+          "#009b3a"
+        ],
+        "gold": [
+          "#39250a",
+          "#a0780a",
+          "#fed100"
+        ],
+        "red": [
+          "#300f16",
+          "#8f1d27",
+          "#d52b1e"
+        ],
+        "main": [
+          "#332609",
+          "#fed100",
+          "#fff3a5"
+        ]
+      },
+      "outline": {
+        "mode": "black"
+      },
+      "layers": [
+        {
+          "id": "note0",
+          "type": "image",
+          "pixels": [
+            ".......11.....",
+            "......1331....",
+            "......13331...",
+            "......131331..",
+            "......131331..",
+            "......131131..",
+            "......131.11..",
+            "......131.....",
+            "......131.....",
+            "...111131.....",
+            "..1333331.....",
+            ".13333331.....",
+            ".13333331.....",
+            "..133331......",
+            "...1111......."
+          ],
+          "ramp": "green",
+          "x": 22,
+          "y": {
+            "wave": {
+              "mid": 44,
+              "amp": 7,
+              "cycles": 1,
+              "phase": 0
+            }
+          },
+          "facing": "none",
+          "z": "front"
+        },
+        {
+          "id": "star0",
+          "type": "particles",
+          "mode": "twinkle",
+          "x": 22,
+          "y": 43,
+          "count": 3,
+          "radius": 12,
+          "size": [
+            1,
+            2
+          ],
+          "ramp": "green",
+          "intensity": 0.8
+        },
+        {
+          "id": "note1",
+          "type": "image",
+          "pixels": [
+            ".......11.....",
+            "......1331....",
+            "......13331...",
+            "......131331..",
+            "......131331..",
+            "......131131..",
+            "......131.11..",
+            "......131.....",
+            "......131.....",
+            "...111131.....",
+            "..1333331.....",
+            ".13333331.....",
+            ".13333331.....",
+            "..133331......",
+            "...1111......."
+          ],
+          "ramp": "gold",
+          "x": 48,
+          "y": {
+            "wave": {
+              "mid": 44,
+              "amp": 7,
+              "cycles": 1,
+              "phase": 0.3333333333333333
+            }
+          },
+          "facing": "none",
+          "z": "front"
+        },
+        {
+          "id": "star1",
+          "type": "particles",
+          "mode": "twinkle",
+          "x": 48,
+          "y": 43,
+          "count": 3,
+          "radius": 12,
+          "size": [
+            1,
+            2
+          ],
+          "ramp": "gold",
+          "intensity": 0.8
+        },
+        {
+          "id": "note2",
+          "type": "image",
+          "pixels": [
+            ".......11.....",
+            "......1331....",
+            "......13331...",
+            "......131331..",
+            "......131331..",
+            "......131131..",
+            "......131.11..",
+            "......131.....",
+            "......131.....",
+            "...111131.....",
+            "..1333331.....",
+            ".13333331.....",
+            ".13333331.....",
+            "..133331......",
+            "...1111......."
+          ],
+          "ramp": "red",
+          "x": 74,
+          "y": {
+            "wave": {
+              "mid": 44,
+              "amp": 7,
+              "cycles": 1,
+              "phase": 0.6666666666666666
+            }
+          },
+          "facing": "none",
+          "z": "front"
+        },
+        {
+          "id": "star2",
+          "type": "particles",
+          "mode": "twinkle",
+          "x": 74,
+          "y": 43,
+          "count": 3,
+          "radius": 12,
+          "size": [
+            1,
+            2
+          ],
+          "ramp": "red",
+          "intensity": 0.8
+        },
+        {
+          "id": "staff1",
+          "type": "shape",
+          "points": {
+            "curves": [
+              {
+                "x": "-36+72*s",
+                "y": "19+2*sin(tau*(s-u))",
+                "n": 48
+              }
+            ]
+          },
+          "closed": false,
+          "width": 1,
+          "ramp": "gold",
+          "intensity": 0.65
+        },
+        {
+          "id": "staff2",
+          "type": "shape",
+          "points": {
+            "curves": [
+              {
+                "x": "-36+72*s",
+                "y": "23+2*sin(tau*(s-u))",
+                "n": 48
+              }
+            ]
+          },
+          "closed": false,
+          "width": 1,
+          "ramp": "green",
+          "intensity": 0.8
+        }
+      ]
+    },
+    "step": "380b4af8-a848-452f-830e-a8071d7e4b8e",
+    "receipt": "saved to My effects: 'Clash of Eras bob_melodia_02' (effect id 9143c401-b992-4326-819e-e880821cd37a); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=9143c401-b992-4326-819e-e880821cd37a\n96x80, 16 frames @ 16 fps, loops; anchor (origin) at 48,40\ndownload https://api.pixellab.ai/mcp/pixel-tools/a74a4864-a9d5-4e90-847e-340a42cf7eef/: clash-of-eras-bob-melodia-02.gif, clash-of-eras-bob-melodia-02.json, clash-of-eras-bob-melodia-02.png\nno game pack (it renders every part again, so only when asked): export again with --replace 9143c401-b992-4326-819e-e880821cd37a and --game-pack for every piece, or --part <id> for one; this effect is one piece\nimage id: a74a4864-a9d5-4e90-847e-340a42cf7eef (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['380b4af8-a848-452f-830e-a8071d7e4b8e', 'export', '--name', \"Clash of Eras bob_melodia_02\", '--replace', '9143c401-b992-4326-819e-e880821cd37a'])",
+    "base_url": "https://api.pixellab.ai/mcp/pixel-tools/a74a4864-a9d5-4e90-847e-340a42cf7eef/",
+    "files": [
+      "clash-of-eras-bob-melodia-02.gif",
+      "clash-of-eras-bob-melodia-02.json",
+      "clash-of-eras-bob-melodia-02.png"
+    ],
+    "edit_url": "https://pixellab.ai/create-vfx?effect=9143c401-b992-4326-819e-e880821cd37a"
+  },
+  {
+    "key": "bob_impacto_02",
+    "name": "Bob Marley - Impacto sincopado 02",
+    "recipe": {
+      "canvas": {
+        "w": 112,
+        "h": 112
+      },
+      "frames": 16,
+      "fps": 24,
+      "loop": false,
+      "origin": [
+        56,
+        56
+      ],
+      "ramps": {
+        "green": [
+          "#10271b",
+          "#006d2a",
+          "#009b3a"
+        ],
+        "gold": [
+          "#39250a",
+          "#a0780a",
+          "#fed100"
+        ],
+        "red": [
+          "#300f16",
+          "#8f1d27",
+          "#d52b1e"
+        ],
+        "main": [
+          "#332609",
+          "#fed100",
+          "#fff3a5"
+        ]
+      },
+      "outline": {
+        "mode": "black"
+      },
+      "layers": [
+        {
+          "id": "ring0",
+          "type": "ring",
+          "radius": {
+            "from": 5,
+            "to": 31
+          },
+          "width": {
+            "from": 2,
+            "to": 1
+          },
+          "soft": 0,
+          "life": [
+            0,
+            1
+          ],
+          "dissolve": {
+            "keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0.8,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          },
+          "ramp": "green",
+          "intensity": 0.85
+        },
+        {
+          "id": "notes0",
+          "type": "particles",
+          "mode": "burst",
+          "count": 2,
+          "radius": 5,
+          "speed": 29,
+          "shape": "custom",
+          "pixels": [
+            ".......11.....",
+            "......1331....",
+            "......13331...",
+            "......131331..",
+            "......131331..",
+            "......131131..",
+            "......131.11..",
+            "......131.....",
+            "......131.....",
+            "...111131.....",
+            "..1333331.....",
+            ".13333331.....",
+            ".13333331.....",
+            "..133331......",
+            "...1111......."
+          ],
+          "pixel_ramp": 3,
+          "shrink": 0,
+          "ramp": "green",
+          "direction": 0,
+          "spread": 60,
+          "life": [
+            0.1,
+            1
+          ],
+          "fade_out": 0.25,
+          "lifespan": 0.85
+        },
+        {
+          "id": "ring1",
+          "type": "ring",
+          "radius": {
+            "from": 9,
+            "to": 35
+          },
+          "width": {
+            "from": 2,
+            "to": 1
+          },
+          "soft": 0,
+          "life": [
+            0.06,
+            1
+          ],
+          "dissolve": {
+            "keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0.8,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          },
+          "ramp": "gold",
+          "intensity": 0.85
+        },
+        {
+          "id": "notes1",
+          "type": "particles",
+          "mode": "burst",
+          "count": 2,
+          "radius": 5,
+          "speed": 29,
+          "shape": "custom",
+          "pixels": [
+            ".......11.....",
+            "......1331....",
+            "......13331...",
+            "......131331..",
+            "......131331..",
+            "......131131..",
+            "......131.11..",
+            "......131.....",
+            "......131.....",
+            "...111131.....",
+            "..1333331.....",
+            ".13333331.....",
+            ".13333331.....",
+            "..133331......",
+            "...1111......."
+          ],
+          "pixel_ramp": 3,
+          "shrink": 0,
+          "ramp": "gold",
+          "direction": 120,
+          "spread": 60,
+          "life": [
+            0.1,
+            1
+          ],
+          "fade_out": 0.25,
+          "lifespan": 0.85
+        },
+        {
+          "id": "ring2",
+          "type": "ring",
+          "radius": {
+            "from": 13,
+            "to": 39
+          },
+          "width": {
+            "from": 2,
+            "to": 1
+          },
+          "soft": 0,
+          "life": [
+            0.12,
+            1
+          ],
+          "dissolve": {
+            "keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0.8,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          },
+          "ramp": "red",
+          "intensity": 0.85
+        },
+        {
+          "id": "notes2",
+          "type": "particles",
+          "mode": "burst",
+          "count": 2,
+          "radius": 5,
+          "speed": 29,
+          "shape": "custom",
+          "pixels": [
+            ".......11.....",
+            "......1331....",
+            "......13331...",
+            "......131331..",
+            "......131331..",
+            "......131131..",
+            "......131.11..",
+            "......131.....",
+            "......131.....",
+            "...111131.....",
+            "..1333331.....",
+            ".13333331.....",
+            ".13333331.....",
+            "..133331......",
+            "...1111......."
+          ],
+          "pixel_ramp": 3,
+          "shrink": 0,
+          "ramp": "red",
+          "direction": 240,
+          "spread": 60,
+          "life": [
+            0.1,
+            1
+          ],
+          "fade_out": 0.25,
+          "lifespan": 0.85
+        }
+      ]
+    },
+    "step": "ed76ab99-1da6-48c5-9c3e-205354d4720c",
+    "receipt": "saved to My effects: 'Clash of Eras bob_impacto_02' (effect id fc3bd79b-8385-487e-b1e2-11327088089a); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=fc3bd79b-8385-487e-b1e2-11327088089a\n112x112, 16 frames @ 24 fps, plays once; anchor (origin) at 56,56\ndownload https://api.pixellab.ai/mcp/pixel-tools/309d701f-4c01-461e-8751-a78454362525/: clash-of-eras-bob-impacto-02.gif, clash-of-eras-bob-impacto-02.json, clash-of-eras-bob-impacto-02.png\nno game pack (it renders every part again, so only when asked): export again with --replace fc3bd79b-8385-487e-b1e2-11327088089a and --game-pack for every piece, or --part <id> for one; this effect is one piece\nimage id: 309d701f-4c01-461e-8751-a78454362525 (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['ed76ab99-1da6-48c5-9c3e-205354d4720c', 'export', '--name', \"Clash of Eras bob_impacto_02\", '--replace', 'fc3bd79b-8385-487e-b1e2-11327088089a'])",
+    "base_url": "https://api.pixellab.ai/mcp/pixel-tools/309d701f-4c01-461e-8751-a78454362525/",
+    "files": [
+      "clash-of-eras-bob-impacto-02.gif",
+      "clash-of-eras-bob-impacto-02.json",
+      "clash-of-eras-bob-impacto-02.png"
+    ],
+    "edit_url": "https://pixellab.ai/create-vfx?effect=fc3bd79b-8385-487e-b1e2-11327088089a"
+  },
+  {
+    "key": "boss_fogo_vermelho_projetil_02",
+    "source": "fogo_vermelho_projetil",
+    "name": "Boss - fogo_vermelho_projetil 02",
+    "recipe": {
+      "canvas": {
+        "w": 96,
+        "h": 80
+      },
+      "frames": 16,
+      "fps": 24,
+      "loop": true,
+      "origin": [
+        48,
+        40
+      ],
+      "ramps": {
+        "main": "fire",
+        "spark": [
+          "#722018",
+          "#ee5419",
+          "#ffc95c"
+        ]
+      },
+      "outline": {
+        "mode": "dark"
+      },
+      "subject": {
+        "x": 59,
+        "y": 40,
+        "align": "center",
+        "wave": {
+          "amp": 1,
+          "length": 16,
+          "cycles": 2,
+          "axis": "y"
+        }
+      },
+      "layers": [
+        {
+          "id": "trail",
+          "type": "flame",
+          "x": 45,
+          "y": 40,
+          "width": 10,
+          "height": {
+            "wave": {
+              "mid": 29,
+              "amp": 4,
+              "cycles": 2,
+              "phase": 0
+            }
+          },
+          "angle": -90,
+          "tongues": 3,
+          "core": 0.65,
+          "curl": 0.45,
+          "intensity": 0.8
+        },
+        {
+          "id": "embers",
+          "type": "particles",
+          "x": 37,
+          "y": 40,
+          "mode": "travel",
+          "direction": 180,
+          "spread": 16,
+          "speed": 27,
+          "count": 14,
+          "radius": 5,
+          "shape": "streak",
+          "size": [
+            1,
+            2
+          ],
+          "ramp": "spark",
+          "intensity": 0.8
+        }
+      ]
+    },
+    "step": "207f234e-4d0f-4c2f-b9c4-614df57a21df",
+    "receipt": "saved to My effects: 'Clash of Eras boss_fogo_vermelho_projetil_02' (effect id 3df4728e-373f-4127-ac20-45eb2812534d); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=3df4728e-373f-4127-ac20-45eb2812534d\n96x80, 16 frames @ 24 fps, loops; anchor (feet) at 59,52\ndownload https://api.pixellab.ai/mcp/pixel-tools/366c3914-68f0-43e2-9505-9674db3e8729/: clash-of-eras-boss-fogo-vermelho-projetil-02.gif, clash-of-eras-boss-fogo-vermelho-projetil-02.json, clash-of-eras-boss-fogo-vermelho-projetil-02.png\nno game pack (it renders every part again, so only when asked): export again with --replace 3df4728e-373f-4127-ac20-45eb2812534d and --game-pack for every piece, or --part <id> for one; this effect is one piece\nimage id: 366c3914-68f0-43e2-9505-9674db3e8729 (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['207f234e-4d0f-4c2f-b9c4-614df57a21df', 'export', '--name', \"Clash of Eras boss_fogo_vermelho_projetil_02\", '--replace', '3df4728e-373f-4127-ac20-45eb2812534d'])",
+    "base_url": "https://api.pixellab.ai/mcp/pixel-tools/366c3914-68f0-43e2-9505-9674db3e8729/",
+    "files": [
+      "clash-of-eras-boss-fogo-vermelho-projetil-02.gif",
+      "clash-of-eras-boss-fogo-vermelho-projetil-02.json",
+      "clash-of-eras-boss-fogo-vermelho-projetil-02.png"
+    ],
+    "edit_url": "https://pixellab.ai/create-vfx?effect=3df4728e-373f-4127-ac20-45eb2812534d"
+  },
+  {
+    "key": "boss_fogo_roxo_projetil_02",
+    "source": "fogo_roxo_projetil",
+    "name": "Boss - fogo_roxo_projetil 02",
+    "recipe": {
+      "canvas": {
+        "w": 96,
+        "h": 80
+      },
+      "frames": 16,
+      "fps": 24,
+      "loop": true,
+      "origin": [
+        48,
+        40
+      ],
+      "ramps": {
+        "main": "arcane",
+        "spark": [
+          "#46216e",
+          "#9955dd",
+          "#ed9eff"
+        ]
+      },
+      "outline": {
+        "mode": "dark"
+      },
+      "subject": {
+        "x": 59,
+        "y": 40,
+        "align": "center",
+        "wave": {
+          "amp": 1,
+          "length": 16,
+          "cycles": 2,
+          "axis": "y"
+        }
+      },
+      "layers": [
+        {
+          "id": "trail",
+          "type": "flame",
+          "x": 45,
+          "y": 40,
+          "width": 10,
+          "height": {
+            "wave": {
+              "mid": 29,
+              "amp": 4,
+              "cycles": 2,
+              "phase": 0
+            }
+          },
+          "angle": -90,
+          "tongues": 3,
+          "core": 0.65,
+          "curl": 0.45,
+          "intensity": 0.8
+        },
+        {
+          "id": "embers",
+          "type": "particles",
+          "x": 37,
+          "y": 40,
+          "mode": "travel",
+          "direction": 180,
+          "spread": 16,
+          "speed": 27,
+          "count": 14,
+          "radius": 5,
+          "shape": "streak",
+          "size": [
+            1,
+            2
+          ],
+          "ramp": "spark",
+          "intensity": 0.8
+        }
+      ]
+    },
+    "step": "ffc49aa9-716c-4edf-98d3-209ab21e950f",
+    "receipt": "saved to My effects: 'Clash of Eras boss_fogo_roxo_projetil_02' (effect id e59f01a5-cd1e-4108-8c9e-97f797d83762); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=e59f01a5-cd1e-4108-8c9e-97f797d83762\n96x80, 16 frames @ 24 fps, loops; anchor (feet) at 59,52\ndownload https://api.pixellab.ai/mcp/pixel-tools/87f1ee15-3d40-4fd8-a9d0-190df6382bd2/: clash-of-eras-boss-fogo-roxo-projetil-02.gif, clash-of-eras-boss-fogo-roxo-projetil-02.json, clash-of-eras-boss-fogo-roxo-projetil-02.png\nno game pack (it renders every part again, so only when asked): export again with --replace e59f01a5-cd1e-4108-8c9e-97f797d83762 and --game-pack for every piece, or --part <id> for one; this effect is one piece\nimage id: 87f1ee15-3d40-4fd8-a9d0-190df6382bd2 (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['ffc49aa9-716c-4edf-98d3-209ab21e950f', 'export', '--name', \"Clash of Eras boss_fogo_roxo_projetil_02\", '--replace', 'e59f01a5-cd1e-4108-8c9e-97f797d83762'])",
+    "base_url": "https://api.pixellab.ai/mcp/pixel-tools/87f1ee15-3d40-4fd8-a9d0-190df6382bd2/",
+    "files": [
+      "clash-of-eras-boss-fogo-roxo-projetil-02.gif",
+      "clash-of-eras-boss-fogo-roxo-projetil-02.json",
+      "clash-of-eras-boss-fogo-roxo-projetil-02.png"
+    ],
+    "edit_url": "https://pixellab.ai/create-vfx?effect=e59f01a5-cd1e-4108-8c9e-97f797d83762"
+  },
+  {
+    "key": "boss_explosao_fogo_vermelho_02",
+    "source": "explosao_fogo_vermelho",
+    "name": "Boss - explosao_fogo_vermelho 02",
+    "recipe": {
+      "canvas": {
+        "w": 128,
+        "h": 128
+      },
+      "frames": 16,
+      "fps": 24,
+      "loop": false,
+      "origin": [
+        64,
+        64
+      ],
+      "ramps": {
+        "main": "fire",
+        "sparks": "holy",
+        "smoke": "smoke"
+      },
+      "subject": {
+        "x": 64,
+        "y": 64,
+        "align": "center",
+        "life": [
+          0.13,
+          0.85
+        ],
+        "dissolve": {
+          "keys": [
+            [
+              0,
+              1
+            ],
+            [
+              0.15,
+              0
+            ],
+            [
+              0.4,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        "wave": {
+          "amp": 2,
+          "length": 12,
+          "cycles": 2,
+          "axis": "x"
+        }
+      },
+      "layers": [
+        {
+          "id": "flash",
+          "type": "rays",
+          "count": 8,
+          "length": {
+            "from": 5,
+            "to": 29
+          },
+          "width": 3,
+          "life": [
+            0,
+            0.2
+          ],
+          "intensity": 0.9
+        },
+        {
+          "id": "pressure",
+          "type": "ring",
+          "radius": {
+            "from": 7,
+            "to": 52
+          },
+          "width": {
+            "from": 3,
+            "to": 1
+          },
+          "soft": 0,
+          "life": [
+            0.13,
+            0.9
+          ],
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.7
+        },
+        {
+          "id": "billows",
+          "type": "puffs",
+          "radius": 32,
+          "count": 7,
+          "throw": 0.55,
+          "rise": 0.1,
+          "thin": 0.7,
+          "intensity": 0.65
+        },
+        {
+          "id": "sparks",
+          "type": "particles",
+          "mode": "burst",
+          "count": 22,
+          "speed": 43,
+          "size": [
+            1,
+            3
+          ],
+          "shape": "streak",
+          "life": [
+            0.1,
+            0.8
+          ],
+          "ramp": "sparks",
+          "intensity": 0.75
+        },
+        {
+          "id": "smoke",
+          "type": "puffs",
+          "mode": "poof",
+          "radius": 19,
+          "count": 4,
+          "rise": 0.3,
+          "throw": 0.25,
+          "thin": 0.9,
+          "life": [
+            0.6,
+            1
+          ],
+          "ramp": "smoke",
+          "intensity": 0.45
+        }
+      ]
+    },
+    "step": "4c09d2ef-afd3-4d0a-af51-37b5f3a60ea8",
+    "receipt": "saved to My effects: 'Clash of Eras boss_explosao_fogo_vermelho_02' (effect id fba2682d-2a6b-4701-a36d-5d5149fa59e2); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=fba2682d-2a6b-4701-a36d-5d5149fa59e2\n128x128, 16 frames @ 24 fps, plays once; anchor (feet) at 64,94\ndownload https://api.pixellab.ai/mcp/pixel-tools/7d15f8db-e9c8-47c1-a600-57a8dfe3ee53/: clash-of-eras-boss-explosao-fogo-vermelho-02.gif, clash-of-eras-boss-explosao-fogo-vermelho-02.json, clash-of-eras-boss-explosao-fogo-vermelho-02.png\nno game pack (it renders every part again, so only when asked): export again with --replace fba2682d-2a6b-4701-a36d-5d5149fa59e2 and --game-pack for every piece, or --part <id> for one; this effect is one piece\nimage id: 7d15f8db-e9c8-47c1-a600-57a8dfe3ee53 (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['4c09d2ef-afd3-4d0a-af51-37b5f3a60ea8', 'export', '--name', \"Clash of Eras boss_explosao_fogo_vermelho_02\", '--replace', 'fba2682d-2a6b-4701-a36d-5d5149fa59e2'])",
+    "base_url": "https://api.pixellab.ai/mcp/pixel-tools/7d15f8db-e9c8-47c1-a600-57a8dfe3ee53/",
+    "files": [
+      "clash-of-eras-boss-explosao-fogo-vermelho-02.gif",
+      "clash-of-eras-boss-explosao-fogo-vermelho-02.json",
+      "clash-of-eras-boss-explosao-fogo-vermelho-02.png"
+    ],
+    "edit_url": "https://pixellab.ai/create-vfx?effect=fba2682d-2a6b-4701-a36d-5d5149fa59e2"
+  },
+  {
+    "key": "boss_explosao_fogo_roxo_02",
+    "source": "explosao_fogo_roxo",
+    "name": "Boss - explosao_fogo_roxo 02",
+    "recipe": {
+      "canvas": {
+        "w": 128,
+        "h": 128
+      },
+      "frames": 16,
+      "fps": 24,
+      "loop": false,
+      "origin": [
+        64,
+        64
+      ],
+      "ramps": {
+        "main": "arcane",
+        "sparks": "arcane",
+        "smoke": "smoke"
+      },
+      "subject": {
+        "x": 64,
+        "y": 64,
+        "align": "center",
+        "life": [
+          0.13,
+          0.85
+        ],
+        "dissolve": {
+          "keys": [
+            [
+              0,
+              1
+            ],
+            [
+              0.15,
+              0
+            ],
+            [
+              0.4,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        "wave": {
+          "amp": 2,
+          "length": 12,
+          "cycles": 2,
+          "axis": "x"
+        }
+      },
+      "layers": [
+        {
+          "id": "flash",
+          "type": "rays",
+          "count": 8,
+          "length": {
+            "from": 5,
+            "to": 29
+          },
+          "width": 3,
+          "life": [
+            0,
+            0.2
+          ],
+          "intensity": 0.9
+        },
+        {
+          "id": "pressure",
+          "type": "ring",
+          "radius": {
+            "from": 7,
+            "to": 52
+          },
+          "width": {
+            "from": 3,
+            "to": 1
+          },
+          "soft": 0,
+          "life": [
+            0.13,
+            0.9
+          ],
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.7
+        },
+        {
+          "id": "billows",
+          "type": "puffs",
+          "radius": 32,
+          "count": 7,
+          "throw": 0.55,
+          "rise": 0.1,
+          "thin": 0.7,
+          "intensity": 0.65
+        },
+        {
+          "id": "sparks",
+          "type": "particles",
+          "mode": "burst",
+          "count": 22,
+          "speed": 43,
+          "size": [
+            1,
+            3
+          ],
+          "shape": "streak",
+          "life": [
+            0.1,
+            0.8
+          ],
+          "ramp": "sparks",
+          "intensity": 0.75
+        },
+        {
+          "id": "smoke",
+          "type": "puffs",
+          "mode": "poof",
+          "radius": 19,
+          "count": 4,
+          "rise": 0.3,
+          "throw": 0.25,
+          "thin": 0.9,
+          "life": [
+            0.6,
+            1
+          ],
+          "ramp": "smoke",
+          "intensity": 0.45
+        }
+      ]
+    },
+    "step": "b636d410-47ec-4096-bd07-f20e379598a0",
+    "receipt": "saved to My effects: 'Clash of Eras boss_explosao_fogo_roxo_02' (effect id b202de30-4a3e-467a-a161-55158c42b461); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=b202de30-4a3e-467a-a161-55158c42b461\n128x128, 16 frames @ 24 fps, plays once; anchor (feet) at 64,94\ndownload https://api.pixellab.ai/mcp/pixel-tools/41e0e1d2-ea8e-4e22-a495-43d13746dbea/: clash-of-eras-boss-explosao-fogo-roxo-02.gif, clash-of-eras-boss-explosao-fogo-roxo-02.json, clash-of-eras-boss-explosao-fogo-roxo-02.png\nno game pack (it renders every part again, so only when asked): export again with --replace b202de30-4a3e-467a-a161-55158c42b461 and --game-pack for every piece, or --part <id> for one; this effect is one piece\nimage id: 41e0e1d2-ea8e-4e22-a495-43d13746dbea (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['b636d410-47ec-4096-bd07-f20e379598a0', 'export', '--name', \"Clash of Eras boss_explosao_fogo_roxo_02\", '--replace', 'b202de30-4a3e-467a-a161-55158c42b461'])",
+    "base_url": "https://api.pixellab.ai/mcp/pixel-tools/41e0e1d2-ea8e-4e22-a495-43d13746dbea/",
+    "files": [
+      "clash-of-eras-boss-explosao-fogo-roxo-02.gif",
+      "clash-of-eras-boss-explosao-fogo-roxo-02.json",
+      "clash-of-eras-boss-explosao-fogo-roxo-02.png"
+    ],
+    "edit_url": "https://pixellab.ai/create-vfx?effect=b202de30-4a3e-467a-a161-55158c42b461"
+  },
+  {
+    "key": "boss_furacao_02",
+    "source": "furacao_fogo",
+    "name": "Boss - Furacao infernal 02",
+    "recipe": {
+      "canvas": {
+        "w": 128,
+        "h": 128
+      },
+      "frames": 16,
+      "fps": 20,
+      "loop": true,
+      "origin": [
+        64,
+        70
+      ],
+      "ramps": {
+        "main": "fire",
+        "runes": "arcane"
+      },
+      "outline": {
+        "mode": "dark"
+      },
+      "subject": {
+        "x": 64,
+        "y": 63,
+        "align": "center",
+        "wave": {
+          "amp": 2,
+          "length": 18,
+          "cycles": 2,
+          "axis": "x"
+        }
+      },
+      "layers": [
+        {
+          "id": "foot",
+          "type": "ring",
+          "x": 64,
+          "y": 100,
+          "radius": {
+            "wave": {
+              "mid": 29,
+              "amp": 3,
+              "cycles": 2,
+              "phase": 0
+            }
+          },
+          "squash": 0.3,
+          "width": 1,
+          "soft": 0,
+          "intensity": 0.7
+        },
+        {
+          "id": "embers",
+          "type": "particles",
+          "x": 64,
+          "y": 87,
+          "mode": "rise",
+          "radius": 17,
+          "speed": 40,
+          "count": 30,
+          "vortex": 0.25,
+          "shape": "dot",
+          "size": [
+            1,
+            2
+          ],
+          "intensity": 0.8
+        },
+        {
+          "id": "ribbons",
+          "type": "shape",
+          "points": {
+            "curves": [
+              {
+                "x": "(8+26*s)*sin(tau*(3*s-u))",
+                "y": "22-58*s",
+                "n": 80
+              }
+            ]
+          },
+          "closed": false,
+          "width": 2,
+          "fill": "edge",
+          "bevel": 1,
+          "intensity": 0.7
+        },
+        {
+          "id": "runes",
+          "type": "particles",
+          "x": 64,
+          "y": 90,
+          "mode": "orbit",
+          "radius": 30,
+          "squash": 0.3,
+          "count": 6,
+          "shape": "sparkle",
+          "size": [
+            1,
+            2
+          ],
+          "ramp": "runes"
+        }
+      ]
+    },
+    "step": "6e7c79f6-79a2-48c3-b83c-b520612995f0",
+    "receipt": "saved to My effects: 'Clash of Eras boss_furacao_02' (effect id 20e181ac-990f-4bef-8f1e-94faad40282d); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=20e181ac-990f-4bef-8f1e-94faad40282d\n128x128, 16 frames @ 20 fps, loops; anchor (feet) at 64,96\ndownload https://api.pixellab.ai/mcp/pixel-tools/40f79c20-fd46-4770-8561-904db66a1348/: clash-of-eras-boss-furacao-02.gif, clash-of-eras-boss-furacao-02.json, clash-of-eras-boss-furacao-02.png\nno game pack (it renders every part again, so only when asked): export again with --replace 20e181ac-990f-4bef-8f1e-94faad40282d and --game-pack for every piece, or --part <id> for one; this effect is one piece\nimage id: 40f79c20-fd46-4770-8561-904db66a1348 (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['6e7c79f6-79a2-48c3-b83c-b520612995f0', 'export', '--name', \"Clash of Eras boss_furacao_02\", '--replace', '20e181ac-990f-4bef-8f1e-94faad40282d'])",
+    "base_url": "https://api.pixellab.ai/mcp/pixel-tools/40f79c20-fd46-4770-8561-904db66a1348/",
+    "files": [
+      "clash-of-eras-boss-furacao-02.gif",
+      "clash-of-eras-boss-furacao-02.json",
+      "clash-of-eras-boss-furacao-02.png"
+    ],
+    "edit_url": "https://pixellab.ai/create-vfx?effect=20e181ac-990f-4bef-8f1e-94faad40282d"
+  }
+]

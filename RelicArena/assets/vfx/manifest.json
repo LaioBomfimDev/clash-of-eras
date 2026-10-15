@@ -428,6 +428,104 @@
       "character_embedded": false,
       "runtime_integrated": true,
       "runtime_role": "active"
+    },
+    {
+      "key": "bob_melodia_02",
+      "original_manifest": "res://assets/vfx/refino_bob_boss_02/bob_melodia_02/manifest.json",
+      "clip": "whole",
+      "character_embedded": false,
+      "runtime_role": "active",
+      "effect_url": "https://pixellab.ai/create-vfx?effect=9143c401-b992-4326-819e-e880821cd37a"
+    },
+    {
+      "key": "bob_impacto_02",
+      "original_manifest": "res://assets/vfx/refino_bob_boss_02/bob_impacto_02/manifest.json",
+      "clip": "whole",
+      "character_embedded": false,
+      "runtime_role": "active",
+      "effect_url": "https://pixellab.ai/create-vfx?effect=fc3bd79b-8385-487e-b1e2-11327088089a"
+    },
+    {
+      "key": "boss_fogo_vermelho_projetil_02",
+      "original_manifest": "res://assets/vfx/refino_bob_boss_02/boss_fogo_vermelho_projetil_02/manifest.json",
+      "clip": "whole",
+      "character_embedded": false,
+      "runtime_role": "active",
+      "effect_url": "https://pixellab.ai/create-vfx?effect=3df4728e-373f-4127-ac20-45eb2812534d"
+    },
+    {
+      "key": "boss_fogo_roxo_projetil_02",
+      "original_manifest": "res://assets/vfx/refino_bob_boss_02/boss_fogo_roxo_projetil_02/manifest.json",
+      "clip": "whole",
+      "character_embedded": false,
+      "runtime_role": "active",
+      "effect_url": "https://pixellab.ai/create-vfx?effect=e59f01a5-cd1e-4108-8c9e-97f797d83762"
+    },
+    {
+      "key": "boss_explosao_fogo_vermelho_02",
+      "original_manifest": "res://assets/vfx/refino_bob_boss_02/boss_explosao_fogo_vermelho_02/manifest.json",
+      "clip": "whole",
+      "character_embedded": false,
+      "runtime_role": "active",
+      "effect_url": "https://pixellab.ai/create-vfx?effect=fba2682d-2a6b-4701-a36d-5d5149fa59e2"
+    },
+    {
+      "key": "boss_explosao_fogo_roxo_02",
+      "original_manifest": "res://assets/vfx/refino_bob_boss_02/boss_explosao_fogo_roxo_02/manifest.json",
+      "clip": "whole",
+      "character_embedded": false,
+      "runtime_role": "active",
+      "effect_url": "https://pixellab.ai/create-vfx?effect=b202de30-4a3e-467a-a161-55158c42b461"
+    },
+    {
+      "key": "boss_furacao_02",
+      "original_manifest": "res://assets/vfx/refino_bob_boss_02/boss_furacao_02/manifest.json",
+      "clip": "whole",
+      "character_embedded": false,
+      "runtime_role": "active",
+      "effect_url": "https://pixellab.ai/create-vfx?effect=20e181ac-990f-4bef-8f1e-94faad40282d"
+    },
+    {
+      "key": "caramelo_mordida",
+      "original_manifest": "res://assets/vfx/elenco_novos/caramelo_mordida/manifest.json",
+      "clip": "whole",
+      "character_embedded": false,
+      "runtime_role": "active"
+    },
+    {
+      "key": "obama_barreira",
+      "original_manifest": "res://assets/vfx/elenco_novos/obama_barreira/manifest.json",
+      "clip": "whole",
+      "character_embedded": false,
+      "runtime_role": "active"
+    },
+    {
+      "key": "barbie_invocacao",
+      "original_manifest": "res://assets/vfx/elenco_novos/barbie_invocacao/manifest.json",
+      "clip": "whole",
+      "character_embedded": false,
+      "runtime_role": "active"
+    },
+    {
+      "key": "ken_provocacao",
+      "original_manifest": "res://assets/vfx/elenco_novos/ken_provocacao/manifest.json",
+      "clip": "whole",
+      "character_embedded": false,
+      "runtime_role": "active"
+    },
+    {
+      "key": "boss_teleporte",
+      "original_manifest": "res://assets/vfx/elenco_novos/boss_teleporte/manifest.json",
+      "clip": "whole",
+      "character_embedded": false,
+      "runtime_role": "active"
+    },
+    {
+      "key": "lula_renascimento",
+      "original_manifest": "res://assets/vfx/elenco_novos/lula_renascimento/manifest.json",
+      "clip": "whole",
+      "character_embedded": false,
+      "runtime_role": "active"
     }
   ]
 }
