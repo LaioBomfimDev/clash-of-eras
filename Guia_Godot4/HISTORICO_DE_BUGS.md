@@ -858,6 +858,8 @@ O primeiro bug de combate foi registrado como BUG-001. Se uma ocorrência acima 
 
 ### BUG-035 — Prévia do Snoop divergente do efeito da batalha e fora do palco
 
+**Recorrência na miniatura da carta (2026-10-15):** durante a integração do Snoop detalhado, captura OpenGL mostrou a fumaça da nova vitrine da Carta 0 atravessando o texto e o palco. A vitrine usava escala fixa1,2 para um clip muito maior que seus54px de altura e não ativava `clip_contents`. O palco principal já estava recortado, conforme a correção anterior. A nova vitrine passa a recortar seu conteúdo e ajustar o efeito ao espaço44×38 reservado à esquerda do texto. Capturas antes/depois conferidas; teste Snoop39/0 e smoke486/0. [Evidências](visuais/snoop_detalhado_mcp_2026-10-15/README.md).
+
 **Reprodução/investigação (2026-10-14):** captura real Chrome `revisoes/auditoria_producao_2026-10-13/compendio/snoop_ficha.png` mostrou fumaça lilás transbordando sobre os cards de técnicas. O combate já aplicava modulate verde em `_smoke_vfx_data`, mas `_draw_preview_vfx` usava a textura sem esse tom; o novo palco reduzido não recortava seu desenho. BUG-031 descrevia a navegação do compêndio, não essa apresentação.
 
 **Mudança/validação:** o helper da prévia usa o mesmo tom verde/transparência da batalha para fumaça; `hero_preview_control.clip_contents=true` limita o desenho ao palco. Lobby32/0, PCK29/0, navegação Chrome sem erros; captura final `compendio_final/snoop_ficha.png` inspecionada com fumaça verde e recortada. Nenhum alcance/dano alterado.
@@ -923,3 +925,13 @@ O primeiro bug de combate foi registrado como BUG-001. Se uma ocorrência acima 
 5. `test_boss_battle.gd` (76 passed, 0 failed).
 6. `test_boss_resolution_regression.gd` (46 passed, 0 failed).
 
+
+## DEV F6 — primeiro uso sem pasta de feedbacks (2026-10-15)
+
+**Reprodução:** primeira execução de `tests/test_dev_lab.gd` após adicionar a ferramenta: 56 asserções passaram, porém o log mostrou `Couldn't open directory at path user://devtools` ao construir a lista vazia. Repetiu na pasta exclusiva da fixture ao abrir F6 antes de salvar qualquer registro.
+
+**Investigação e causa:** `saved_feedbacks()` chamava `DirAccess.get_files_at()` antes de a pasta ser criada pela primeira gravação. Não era perda de feedback nem problema de gameplay anterior; foi encontrado na validação da funcionalidade nova.
+
+**Mudança:** verificar `DirAccess.dir_exists_absolute(storage_dir)` e retornar lista vazia quando ainda não existe. A criação continua na primeira gravação; falhas reais de escrita continuam informadas na interface. Na inspeção visual, o botão DEV inicialmente cobria o botão FND da bolsa; foi movido para a faixa livre entre sinergias e status.
+
+**Validação:** execução OpenGL do teste DEV após correção do diretório: 58 verificações aprovadas, zero falhas, sem erros de diretório no log. Persistência e leitura JSON, acentos, rejeição de comentário vazio e isolamento dos registros de teste foram verificados. Sessão 173/0, lobby 32/0, arrasto18/0 e quatro partidas completas1036/0. Sem teste humano, Web ou celular nesta entrega.

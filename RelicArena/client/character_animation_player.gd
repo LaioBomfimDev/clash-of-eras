@@ -5,11 +5,13 @@ extends RefCounted
 ## event_stamp deve ser único por unidade até clear(), incluindo rodada/tick/tipo.
 
 const AnimationBank = preload("res://client/character_animation_bank.gd")
-const ACTIONS: Array[String] = ["attack", "skill"]
+const ACTIONS: Array[String] = ["attack", "skill", "death", "buff"]
 
 var _bank: RefCounted
 var _actions: Dictionary = {}
 var _walks: Dictionary = {}
+var _stances: Dictionary = {}
+var _stuns: Dictionary = {}
 var _seen_stamps: Dictionary = {}
 
 
@@ -24,7 +26,7 @@ func _init(bank: RefCounted = null) -> void:
 func advance(delta: float) -> void:
 	if not is_finite(delta) or delta <= 0.0:
 		return
-	for records: Dictionary in [_actions, _walks]:
+	for records: Dictionary in [_actions, _walks, _stances, _stuns]:
 		for record: Dictionary in records.values():
 			var next_elapsed: float = float(record["elapsed"]) + delta
 			if is_finite(next_elapsed):
@@ -35,6 +37,8 @@ func advance(delta: float) -> void:
 func clear() -> void:
 	_actions.clear()
 	_walks.clear()
+	_stances.clear()
+	_stuns.clear()
 	_seen_stamps.clear()
 
 
@@ -51,6 +55,7 @@ func play_action(unit_id: int, key: String, state: String, direction: String, ev
 		return false
 	_actions[unit_id] = {"key": key, "state": state, "direction": direction, "elapsed": 0.0, "duration": duration}
 	_walks.erase(unit_id)
+	_stances.erase(unit_id)
 	seen[event_stamp] = true
 	_seen_stamps[unit_id] = seen
 	return true
@@ -62,10 +67,55 @@ func frame_for(unit: Dictionary, direction: String, walking: bool) -> Dictionary
 	var unit_id: int = int(unit.get("id", -1))
 	var key: String = str(unit.get("key", ""))
 	var stun: float = float(unit.get("stun_remaining", 0.0))
-	if unit_id < 0 or key.is_empty() or not bool(unit.get("alive", true)) or not bool(unit.get("active", true)) or not is_finite(stun) or stun > 0.0:
+	var is_alive: bool = bool(unit.get("alive", true))
+	var is_active: bool = bool(unit.get("active", true))
+	if unit_id < 0 or key.is_empty():
+		return {}
+
+	# Unidade eliminada: se há animação de death tocando, exibe até o fim.
+	if not is_alive:
+		var action: Dictionary = _actions.get(unit_id, {})
+		if not action.is_empty() and str(action.get("state", "")) == "death" and str(action.get("key", "")) == key:
+			var action_frame: Dictionary = _frame(key, "death", str(action["direction"]), float(action["elapsed"]))
+			if not action_frame.is_empty():
+				return action_frame
 		_actions.erase(unit_id)
 		_walks.erase(unit_id)
+		_stances.erase(unit_id)
+		_stuns.erase(unit_id)
 		return {}
+
+	# Unidade inativa ou preparação/banco: preserva visual idle prévio do cliente.
+	if not is_active:
+		_actions.erase(unit_id)
+		_walks.erase(unit_id)
+		_stances.erase(unit_id)
+		_stuns.erase(unit_id)
+		return {}
+
+	# Stun inválido / nonfinite.
+	if not is_finite(stun):
+		_actions.erase(unit_id)
+		_walks.erase(unit_id)
+		_stances.erase(unit_id)
+		_stuns.erase(unit_id)
+		return {}
+
+	# Unidade atordoada: interrompe ações e caminhada.
+	if stun > 0.0:
+		_actions.erase(unit_id)
+		_walks.erase(unit_id)
+		_stances.erase(unit_id)
+		if _has_clip(key, "stun", direction):
+			var stun_rec: Dictionary = _stuns.get(unit_id, {})
+			if stun_rec.is_empty() or str(stun_rec.get("key", "")) != key or str(stun_rec.get("direction", "")) != direction:
+				stun_rec = {"key": key, "direction": direction, "elapsed": 0.0}
+				_stuns[unit_id] = stun_rec
+			return _frame(key, "stun", direction, float(stun_rec["elapsed"]))
+		return {}
+	_stuns.erase(unit_id)
+
+	# Ações prioritárias (ataque, skill, buff, etc.)
 	var action: Dictionary = _actions.get(unit_id, {})
 	if not action.is_empty():
 		if str(action["key"]) == key and float(action["elapsed"]) < float(action["duration"]):
@@ -73,18 +123,26 @@ func frame_for(unit: Dictionary, direction: String, walking: bool) -> Dictionary
 			if not action_frame.is_empty():
 				return action_frame
 		_actions.erase(unit_id)
-	if not walking or not _has_clip(key, "walk", direction):
-		_walks.erase(unit_id)
-		# Pose opcional com os pés no chão: a pedra do retrato não reaparece
-		# entre passos/golpes. Continua exigindo uma direção realmente exportada.
-		if _has_clip(key, "stance", direction):
-			return _frame(key, "stance", direction, 0.0)
-		return {}
-	var walk: Dictionary = _walks.get(unit_id, {})
-	if walk.is_empty() or str(walk["key"]) != key or str(walk["direction"]) != direction:
-		walk = {"key": key, "direction": direction, "elapsed": 0.0}
-		_walks[unit_id] = walk
-	return _frame(key, "walk", direction, float(walk["elapsed"]))
+
+	# Caminhada
+	if walking and _has_clip(key, "walk", direction):
+		_stances.erase(unit_id)
+		var walk: Dictionary = _walks.get(unit_id, {})
+		if walk.is_empty() or str(walk["key"]) != key or str(walk["direction"]) != direction:
+			walk = {"key": key, "direction": direction, "elapsed": 0.0}
+			_walks[unit_id] = walk
+		return _frame(key, "walk", direction, float(walk["elapsed"]))
+
+	# Parado / Stance viva com movimento de respiração e mãos
+	_walks.erase(unit_id)
+	if _has_clip(key, "stance", direction):
+		var stance_rec: Dictionary = _stances.get(unit_id, {})
+		if stance_rec.is_empty() or str(stance_rec.get("key", "")) != key or str(stance_rec.get("direction", "")) != direction:
+			stance_rec = {"key": key, "direction": direction, "elapsed": 0.0}
+			_stances[unit_id] = stance_rec
+		return _frame(key, "stance", direction, float(stance_rec["elapsed"]))
+
+	return {}
 
 
 func _has_clip(key: String, state: String, direction: String) -> bool:

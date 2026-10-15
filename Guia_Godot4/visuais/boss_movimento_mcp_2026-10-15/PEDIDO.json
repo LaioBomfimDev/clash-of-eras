@@ -30,11 +30,11 @@
     }
   ],
   "walk_job": "66d09dbe-358c-47e5-bb33-95bece34eab3",
-  "cast_job": null,
+  "cast_job": "9ac8c9b0-749e-4ce4-a61c-1a751895874f",
   "balance_before": {
     "generations_remaining": 1.75,
     "daily_bonus": 10,
     "credits": 0
   },
-  "note": "Cast call initially rejected by 1-job concurrency limit. Retry only after walk completes."
+  "note": "Cast retried after walk completed; both completed. Receipts and playback metadata in ENTREGA.json."
 }

@@ -6,7 +6,7 @@ extends RefCounted
 ## O chamador mantém o visual idle quando frame_data() retorna {}.
 
 const DEFAULT_MANIFEST_PATH: String = "res://assets/characters/animations_manifest.json"
-const STATES: Array[String] = ["stance", "walk", "attack", "skill"]
+const STATES: Array[String] = ["stance", "walk", "attack", "skill", "death", "stun", "buff"]
 const DIRECTIONS: Array[String] = [
 	"south", "south-east", "east", "north-east",
 	"north", "north-west", "west", "south-west"
@@ -51,8 +51,11 @@ func loaded_frames() -> Array[Dictionary]:
 	for states: Dictionary in _clips.values():
 		for directions: Dictionary in states.values():
 			for clip: Dictionary in directions.values():
-				for texture: Texture2D in clip["frames"]:
-					result.append({"texture": texture, "anchor": clip["anchor"]})
+				var paths: Array = clip.get("paths", [])
+				for index: int in range(paths.size()):
+					var texture: Texture2D = _get_frame_texture(clip, index)
+					if texture != null:
+						result.append({"texture": texture, "anchor": clip["anchor"]})
 	return result
 
 
@@ -65,17 +68,18 @@ func frame_data(key: String, state: String, direction: String, elapsed: float) -
 	var clip: Dictionary = _get_clip(key, state, direction)
 	if clip.is_empty():
 		return {}
-	var frames: Array[Texture2D] = clip["frames"]
-	var duration: float = clip["duration"]
+	var paths: Array = clip.get("paths", [])
+	var duration: float = float(clip["duration"])
 	var time: float = maxf(0.0, elapsed)
-	var frame_index: int = frames.size() - 1
+	var frame_index: int = paths.size() - 1
 	if bool(clip["loop"]):
 		time = fposmod(time, duration)
-		frame_index = mini(floori(time * float(clip["fps"])), frames.size() - 1)
+		frame_index = mini(floori(time * float(clip["fps"])), paths.size() - 1)
 	elif time < duration:
-		frame_index = mini(floori(time * float(clip["fps"])), frames.size() - 1)
+		frame_index = mini(floori(time * float(clip["fps"])), paths.size() - 1)
+	var texture: Texture2D = _get_frame_texture(clip, frame_index)
 	return {
-		"texture": frames[frame_index], "anchor": clip["anchor"],
+		"texture": texture, "anchor": clip["anchor"],
 		"frame_index": frame_index, "duration": duration
 	}
 
@@ -140,28 +144,50 @@ func _load_clip(state: String, definition: Dictionary, entry: Dictionary) -> Dic
 	var anchor: Vector2 = Vector2(float(raw_anchor[0]), float(raw_anchor[1]))
 	if not is_finite(anchor.x) or not is_finite(anchor.y):
 		return {}
-	var raw_loop: Variant = entry.get("loop", definition.get("loop", state == "walk"))
+	var raw_loop: Variant = entry.get("loop", definition.get("loop", state in ["walk", "stance", "stun", "buff"]))
 	if not raw_loop is bool:
 		return {}
 	var paths: Variant = entry.get("frames", [])
 	if not paths is Array or paths.is_empty():
 		return {}
-	var frames: Array[Texture2D] = []
+	var frame_paths: Array[String] = []
+	var frames: Array = []
 	for path: Variant in paths:
 		if not path is String or path.is_empty():
 			return {}
-		var texture: Texture2D = _load_texture(path)
-		if texture == null:
+		if not _is_frame_valid(str(path)):
 			# Não comprimir a sequência ao ignorar um quadro ausente.
 			return {}
-		frames.append(texture)
-	var duration: float = float(frames.size()) / fps
+		frame_paths.append(str(path))
+		frames.append(null)
+	var duration: float = float(frame_paths.size()) / fps
 	if not is_finite(duration) or duration <= 0.0:
 		return {}
 	return {
-		"frames": frames, "fps": fps, "loop": bool(raw_loop) and state == "walk",
+		"paths": frame_paths, "frames": frames, "fps": fps,
+		"loop": bool(raw_loop) and (state in ["walk", "stance", "stun", "buff"]),
 		"anchor": anchor, "duration": duration
 	}
+
+
+func _get_frame_texture(clip: Dictionary, index: int) -> Texture2D:
+	var frames: Array = clip.get("frames", [])
+	if index < 0 or index >= frames.size():
+		return null
+	if frames[index] != null:
+		return frames[index] as Texture2D
+	var paths: Array = clip.get("paths", [])
+	if index < 0 or index >= paths.size():
+		return null
+	var texture: Texture2D = _load_texture(str(paths[index]))
+	frames[index] = texture
+	return texture
+
+
+func _is_frame_valid(path: String) -> bool:
+	if ResourceLoader.exists(path, "Texture2D"):
+		return true
+	return _load_texture(path) != null
 
 
 func _load_texture(path: String) -> Texture2D:
@@ -172,3 +198,4 @@ func _load_texture(path: String) -> Texture2D:
 
 func _is_number(value: Variant) -> bool:
 	return value is int or value is float
+

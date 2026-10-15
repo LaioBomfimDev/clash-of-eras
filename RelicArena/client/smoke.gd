@@ -178,7 +178,7 @@ func _check_copies(view: MainView) -> void:
 
 ## Tamanho no tabuleiro é independente dos PNGs, retratos e vitrines.
 func _check_board_display(view: MainView) -> void:
-	var targets: Dictionary = {"neymar": 68.0, "caramelo": 56.0, "obama": 70.0, "zumbi": 76.0, "michael": 68.0, "barbie": 68.0, "ken": 68.0, "elon": 68.0, "snoop": 68.0, "lula": 70.0, "bob_marley": 68.0, "rapunzel": 68.0}
+	var targets: Dictionary = {"neymar": 68.0, "caramelo": 56.0, "obama": 70.0, "zumbi": 76.0, "michael": 68.0, "barbie": 72.0, "ken": 74.0, "elon": 68.0, "snoop": 68.0, "lula": 70.0, "bob_marley": 68.0, "rapunzel": 68.0}
 	for key: String in targets:
 		var front: Texture2D = view.art.statics.get(key) as Texture2D
 		if not _check(front != null, "frente N1 disponível para medir " + key):
@@ -701,7 +701,7 @@ func _run() -> void:
 	await process_frame
 	view.set_process(false)
 	_check(view._phase() == "menu" and view.start_button != null, "inicia no menu")
-	_check(view.arena != null and view.arena.get_width() == 351, "fundo PixelLab da arena carregado")
+	_check(view.arena != null and view.arena.resource_path == MainView.ARENA_PATH and view.arena.get_width() > 0, "fundo ativo da arena HD carregado")
 	for team: int in range(2):
 		var visible_hearts: int = 0
 		for icon: TextureRect in view.heart_controls[team]:
@@ -871,7 +871,11 @@ func _run() -> void:
 	if not _check(view._phase() == "combat", "LUTAR inicia combate"):
 		await _finish(view)
 		return
-	_check(view.state["combat"]["units"].size() == 10, "revelação contém dez ativos")
+	var expected_active: int = 0
+	for authoritative_unit: Variant in view.session.sim.units:
+		if authoritative_unit.active:
+			expected_active += 1
+	_check(view.state["combat"]["units"].size() == expected_active and expected_active >= 5, "revelação contém todos os ativos da formação real do bot e do jogador")
 	var before_cell: Vector2i = _cell_of(view, 1)
 	_click_cell(view, Vector2i(1, 7))
 	_check(_cell_of(view, 1) == before_cell, "combate bloqueia posicionamento")

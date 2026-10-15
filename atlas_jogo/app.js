@@ -700,6 +700,41 @@ function getDirName(dir) {
 function initBossView() {
   if (!appData || !appData.boss) return;
 
+  // Interatividade da Nova Boss Bar de Ferro e Fogo
+  const slider = document.getElementById("sim-boss-hp-slider");
+  const fillClipper = document.getElementById("sim-boss-bar-fill-clipper");
+  const hpText = document.getElementById("sim-boss-bar-hp-text");
+  const hpVal = document.getElementById("sim-boss-hp-val");
+  const rateBtn = document.getElementById("btn-rate-boss-bar");
+
+  if (slider && fillClipper && hpText && hpVal) {
+    slider.addEventListener("input", (e) => {
+      const pct = parseInt(e.target.value);
+      fillClipper.style.width = `${pct}%`;
+      const currentHp = Math.round(pct * 100);
+      hpText.textContent = `${currentHp.toLocaleString('pt-BR')} / 10.000 (${pct}%)`;
+      hpVal.textContent = `${pct}% HP`;
+      if (pct <= 40) {
+        hpVal.style.color = "var(--accent-red)";
+        hpVal.textContent = `${pct}% HP (FÚRIA!)`;
+      } else {
+        hpVal.style.color = "var(--text-gold)";
+      }
+    });
+  }
+
+  if (rateBtn) {
+    rateBtn.addEventListener("click", () => {
+      openFeedbackModal({
+        id: "ui_boss_bar_ferro_fogo",
+        categoria: "Interface / HUD de Combate",
+        item_id: "boss_bar_ferro_fogo",
+        item_nome: "Barra de Vida do Boss (Ferro Forjado e Fogo)",
+        subtitle: "Inspirada na referência: moldura pontiaguda de ferro e preenchimento de fogo"
+      });
+    });
+  }
+
   const officialGrid = document.getElementById("boss-official-grid");
   officialGrid.innerHTML = `
     <div class="boss-card highlight">
