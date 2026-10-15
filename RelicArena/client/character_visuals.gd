@@ -123,21 +123,20 @@ func texture_for(key: String, direction: String, visual_time: float, animation_s
 					statics["boss_dev_cast_west_refined"] = west
 				if west != null:
 					return west
-			var is_east: bool = "east" in direction
-			var cast_key: String = "boss_dev_cast_east" if is_east else "boss_dev_cast_west"
-			var cast_tex: Texture2D = statics.get(cast_key, null)
+			if "north" in direction:
+				var cast_north_tex: Texture2D = statics.get("boss_dev_cast_north", null)
+				if cast_north_tex == null:
+					cast_north_tex = _load_texture("res://assets/characters/boss_dev/game_ready/cast_north.png")
+					statics["boss_dev_cast_north"] = cast_north_tex
+				if cast_north_tex != null:
+					return cast_north_tex
+			var cast_tex: Texture2D = statics.get("boss_dev_cast_east", null)
 			if cast_tex == null:
-				var path: String = "res://assets/characters/boss_dev/game_ready/cast_south_east.png" if is_east else "res://assets/characters/boss_dev/game_ready/cast_south_west.png"
-				cast_tex = _load_texture(path)
-				statics[cast_key] = cast_tex
+				cast_tex = _load_texture("res://assets/characters/boss_dev/game_ready/cast_south_east.png")
+				statics["boss_dev_cast_east"] = cast_tex
 			if cast_tex != null:
 				return cast_tex
-			var fallback_tex: Texture2D = statics.get("boss_dev_cast", null)
-			if fallback_tex == null:
-				fallback_tex = _load_texture("res://assets/characters/boss_dev/game_ready/cast_south_west.png")
-				statics["boss_dev_cast"] = fallback_tex
-			if fallback_tex != null:
-				return fallback_tex
+			return statics.get("boss_dev", null)
 	if character_states.has(key):
 		var states: Dictionary = character_states[key]
 		var directions: Dictionary = states.get(animation_state, states.get("idle", {}))

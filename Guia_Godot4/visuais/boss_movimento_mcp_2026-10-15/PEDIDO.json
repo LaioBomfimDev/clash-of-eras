@@ -1,0 +1,40 @@
+{
+  "request": "Animação do Boss Dev andando e levantando o braço pelo MCP PixelLab.",
+  "sources": {
+    "idle": "RelicArena/assets/characters/boss_dev/game_ready/idle_south.png",
+    "cast": "RelicArena/assets/characters/boss_dev/game_ready/cast_south_east.png"
+  },
+  "padding_steps": [
+    "25478b72-4157-4b1e-aa5a-7f704f6745ff",
+    "ce0f0bb5-34f7-407f-9e6a-18810aa7e0a7"
+  ],
+  "canvas": [
+    64,
+    120
+  ],
+  "requests": [
+    {
+      "first_frame_url": "https://api.pixellab.ai/mcp/pixel-tools/25478b72-4157-4b1e-aa5a-7f704f6745ff/assets/south/full.png",
+      "action": "Seamless in-place forward walking cycle, facing the viewer with the same slight three-quarter stance. Alternate left and right steps with clear knee bending and heel lift, feet planting one at a time, relaxed opposite arm swings and subtle shoulder counter-rotation. Stay in the same place and keep the same body proportions, face, black tank top, shorts, sandals and tattoo on his anatomical LEFT arm (screen right). Eight distinct poses covering one full gait cycle, ending close to the starting pose. No turning, sliding, stretching, camera motion or added effects.",
+      "frame_count": 8,
+      "no_background": true,
+      "seed": 1501
+    },
+    {
+      "first_frame_url": "https://api.pixellab.ai/mcp/pixel-tools/25478b72-4157-4b1e-aa5a-7f704f6745ff/assets/south/full.png",
+      "last_frame_url": "https://api.pixellab.ai/mcp/pixel-tools/ce0f0bb5-34f7-407f-9e6a-18810aa7e0a7/assets/south/full.png",
+      "action": "From neutral standing, deliberately raise the tattooed anatomical LEFT arm (screen right) to the final pointing spellcasting pose. Start by bending that elbow, lift upper arm from shoulder, then extend forearm and fingers outward toward screen right and slightly upward. Smooth continuous shoulder-elbow-hand articulation through the intermediate frames, slight chest turn and weight transfer, both feet planted in the same position. The other arm stays relaxed. Finish exactly at the supplied pointing pose. Preserve face, body size, black tank top, shorts, sandals and same tattooed arm. No magic effects or camera motion.",
+      "frame_count": 8,
+      "no_background": true,
+      "seed": 1502
+    }
+  ],
+  "walk_job": "66d09dbe-358c-47e5-bb33-95bece34eab3",
+  "cast_job": null,
+  "balance_before": {
+    "generations_remaining": 1.75,
+    "daily_bonus": 10,
+    "credits": 0
+  },
+  "note": "Cast call initially rejected by 1-job concurrency limit. Retry only after walk completes."
+}

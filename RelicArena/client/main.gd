@@ -25,10 +25,10 @@ const MATCH_SEED: int = 20261011
 const SCREEN: Vector2 = Vector2(1280, 720)
 const TEAM_COLORS: Array[Color] = [Color("64dcd2"), Color("ec7a74")]
 const GOLD: Color = Color("f4d58a")
-const ARENA_PATH: String = "res://assets/arena/coliseu_estudo_02.png"
-## Fundo PixelLab a 4× inteiro; o recorte evita a moldura original nas bordas.
-const ARENA_SCALE: float = 4.0
-const ARENA_OFFSET: Vector2 = Vector2(-92, -84)
+const ARENA_PATH: String = "res://assets/arena/coliseu_epico_hd.png"
+## Arena épica em alta definição 1× nativo para máxima nitidez e acabamento clean.
+const ARENA_SCALE: float = 1.0
+const ARENA_OFFSET: Vector2 = Vector2(-30, -20)
 const PIXEL_SHADER: Shader = preload("res://client/pixel_scale.gdshader")
 ## Nível na partida: +20% de tamanho por nível (1,2× e 1,44×), pedido do usuário.
 const LEVEL_SCALE: Array[float] = [1.0, 1.2, 1.44]
@@ -261,11 +261,15 @@ var synergy_root: Control
 var synergy_hover_card: Panel
 var synergy_hover_root: Control
 var hovered_synergy_key: String = ""
+var synergies_collapsed: bool = false
+var synergy_header_btn: Button = null
+var synergy_toggle_btn: Button = null
 var shop_root: Control
 var bag_panel: Panel
 var bag_root: Control
 var bag_title: Label
 var unit_card: Panel
+var unit_card_frame: OrnateFrameCache = null
 var card_root: Control
 var overlay_dim: ColorRect
 var overlay: Panel
@@ -477,7 +481,7 @@ func _ready() -> void:
 	for frame: Dictionary in character_bank.loaded_frames():
 		art.register_animation_frame(frame["texture"], frame["anchor"])
 	# A pose de conjuração também é usada pela primeira vez só no combate do Boss.
-	art.texture_for("boss_dev", "south-west", 0.0, "cast")
+	art.texture_for("boss_dev", "south-east", 0.0, "cast")
 	character_player.clear()
 	vfx.load_assets()
 	add_child(audio)
@@ -782,18 +786,25 @@ func _build_boss_hud() -> void:
 
 
 func _build_synergy_tracker() -> void:
-	var header: Button = Button.new()
-	header.text = "SINERGIAS · TESTE"
-	header.flat = true
-	header.position = Vector2(12, 84)
-	header.size = Vector2(214, 26)
-	header.alignment = HORIZONTAL_ALIGNMENT_LEFT
-	header.add_theme_font_size_override("font_size", 13)
-	header.add_theme_color_override("font_color", Kit.MUTED)
-	header.tooltip_text = "Grupos funcionais de teste; passe o mouse nas sinergias para ver quem dá o buff e os heróis."
-	header.pressed.connect(_toggle_drawer.bind("synergies"))
-	ui.add_child(header)
-	hud_controls.append(header)
+	synergy_header_btn = Button.new()
+	synergy_header_btn.text = "SINERGIAS · TESTE"
+	synergy_header_btn.flat = true
+	synergy_header_btn.position = Vector2(12, 84)
+	synergy_header_btn.size = Vector2(174, 26)
+	synergy_header_btn.alignment = HORIZONTAL_ALIGNMENT_LEFT
+	synergy_header_btn.add_theme_font_size_override("font_size", 13)
+	synergy_header_btn.add_theme_color_override("font_color", Kit.MUTED)
+	synergy_header_btn.tooltip_text = "Grupos funcionais de teste; passe o mouse nas sinergias para ver quem dá o buff e os heróis."
+	synergy_header_btn.pressed.connect(_toggle_drawer.bind("synergies"))
+	ui.add_child(synergy_header_btn)
+	hud_controls.append(synergy_header_btn)
+
+	synergy_toggle_btn = _button(ui, "◀", Rect2(188, 84, 28, 26), _toggle_synergies_collapse)
+	synergy_toggle_btn.tooltip_text = "Recolher sinergias (Modo Compacto)"
+	synergy_toggle_btn.add_theme_font_size_override("font_size", 12)
+	_apply_ornate_button(synergy_toggle_btn, "teal")
+	hud_controls.append(synergy_toggle_btn)
+
 	synergy_root = _container(ui)
 
 	# Card flutuante rico de sinergia no mouse hover
@@ -807,21 +818,72 @@ func _build_synergy_tracker() -> void:
 	synergy_hover_root = _container(synergy_hover_card)
 
 
+func _toggle_synergies_collapse() -> void:
+	synergies_collapsed = not synergies_collapsed
+	synergy_signature = ""
+	_refresh_synergies_header()
+	var own: Dictionary = state.get("own", {})
+	_refresh_synergies(_displayed_synergies(_phase(), own))
+
+
+func _refresh_synergies_header() -> void:
+	if not is_instance_valid(synergy_header_btn) or not is_instance_valid(synergy_toggle_btn):
+		return
+	if synergies_collapsed:
+		synergy_header_btn.text = "SIN."
+		synergy_header_btn.size = Vector2(36, 26)
+		synergy_toggle_btn.text = "▶"
+		synergy_toggle_btn.position = Vector2(48, 84)
+		synergy_toggle_btn.size = Vector2(24, 26)
+		synergy_toggle_btn.tooltip_text = "Expandir sinergias (Modo Completo)"
+	else:
+		synergy_header_btn.text = "SINERGIAS · TESTE"
+		synergy_header_btn.size = Vector2(174, 26)
+		synergy_toggle_btn.text = "◀"
+		synergy_toggle_btn.position = Vector2(188, 84)
+		synergy_toggle_btn.size = Vector2(28, 26)
+		synergy_toggle_btn.tooltip_text = "Recolher sinergias (Modo Compacto)"
+
 
 func _build_bag() -> void:
-	bag_panel = _panel(ui, Rect2(12, 340, 214, 196), 0.72)
-	bag_title = _label(bag_panel, "", Rect2(10, 6, 196, 20), 14, GOLD)
+	# Bolsa integrada no dock inferior esquerdo (alinhada verticalmente com membros em Y:554 e base em Y:712)
+	bag_panel = _panel(ui, Rect2(10, 554, 126, 158), 0.88, 8)
+	var bag_frame: OrnateFrameCache = OrnateFrameCache.new()
+	bag_frame.show_behind_parent = true
+	bag_frame.size = bag_panel.size
+	bag_frame.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	bag_panel.add_child(bag_frame)
+	bag_frame.setup(func(canvas: CanvasItem) -> void:
+		Kit.draw_ornate_panel_frame(canvas, Rect2(Vector2.ZERO, bag_frame.size), "bronze")
+	)
+
+	bag_title = _label(bag_panel, "MOCHILA", Rect2(4, 5, 118, 18), 11, GOLD, HORIZONTAL_ALIGNMENT_CENTER)
+	bag_title.add_theme_constant_override("outline_size", 3)
+	bag_title.add_theme_color_override("font_outline_color", Color(0.02, 0.04, 0.06, 0.98))
+
 	bag_root = _container(bag_panel)
-	equip_button = _button(bag_panel, "EQUIPAR", Rect2(10, 144, 94, 40), _equip_selected)
-	fuse_button = _button(bag_panel, "FUNDIR", Rect2(110, 144, 94, 40), _fuse_selected)
+	equip_button = _button(bag_panel, "EQUIPAR", Rect2(8, 88, 110, 29), _equip_selected)
+	fuse_button = _button(bag_panel, "FUNDIR", Rect2(8, 121, 110, 29), _fuse_selected)
 	equip_button.tooltip_text = "Marque 1 item e selecione um herói."
 	fuse_button.tooltip_text = "Marque 2 itens de uma receita."
+	equip_button.add_theme_font_size_override("font_size", 11)
+	fuse_button.add_theme_font_size_override("font_size", 11)
 	_apply_ornate_button(equip_button, "teal")
 	_apply_ornate_button(fuse_button, "gold")
 
 
 func _build_unit_card() -> void:
-	unit_card = _panel(ui, Rect2(1040, 124, 228, 352), 0.78)
+	unit_card = _panel(ui, Rect2(1040, 124, 228, 352), 0.88, 8)
+	unit_card_frame = OrnateFrameCache.new()
+	unit_card_frame.name = "UnitCardFrame"
+	unit_card_frame.show_behind_parent = true
+	unit_card_frame.size = unit_card.size
+	unit_card_frame.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	unit_card.add_child(unit_card_frame)
+	unit_card_frame.setup(func(canvas: CanvasItem) -> void:
+		Kit.draw_ornate_panel_frame(canvas, Rect2(Vector2.ZERO, unit_card_frame.size), "bronze")
+	)
+
 	card_root = _container(unit_card)
 	bench_button = _button(unit_card, "RESERVAR", Rect2(10, 298, 124, 42), _bench_or_deploy)
 	bench_button.add_theme_font_size_override("font_size", 12)
@@ -1074,6 +1136,11 @@ func _refresh(synchronize_local_state: bool = true) -> void:
 		round_label.text = ("RODADA 4 · BOSS CRIADOR" if is_boss_round else ("RODADA %d" % round_index)) if phase != "menu" else "PROTÓTIPO LOCAL"
 	if player_name_label != null and is_instance_valid(player_name_label):
 		player_name_label.text = "VOCÊ (%s)" % player_name
+	if not is_online_match:
+		var enemy_info: Dictionary = state.get("enemy", {})
+		var bot_name: String = str(enemy_info.get("bot_name", ""))
+		if not bot_name.is_empty():
+			opponent_title = bot_name
 	if opponent_name_label != null and is_instance_valid(opponent_name_label):
 		opponent_name_label.text = "DESENVOLVEDOR (BOSS)" if (is_boss_round and phase != "menu") else opponent_title
 	var elapsed: float = float(state.get("elapsed", 0.0))
@@ -1283,10 +1350,11 @@ func _refresh_synergies(source: Array) -> void:
 	for u_dict: Variant in own.get("units", []):
 		if u_dict is Dictionary:
 			units_summary.append([u_dict.get("key", ""), bool(u_dict.get("active", false)), int(u_dict.get("level", 1))])
-	var signature: String = str(groups) + str(units_summary)
+	var signature: String = str(groups) + str(units_summary) + str(synergies_collapsed)
 	if signature == synergy_signature:
 		return
 	synergy_signature = signature
+	_refresh_synergies_header()
 	_clear(synergy_root)
 	for index: int in range(groups.size()):
 		var group: Dictionary = groups[index]
@@ -1297,12 +1365,13 @@ func _refresh_synergies(source: Array) -> void:
 		for threshold: Variant in breakpoints:
 			if count >= int(threshold):
 				level += 1
-		var row: Panel = _panel(synergy_root, Rect2(12, 112 + index * 50, 214, 46), 0.66 if tier > 0 else 0.5)
+		var syn_y: float = 112.0 + index * 50.0
+		var row_w: float = 48.0 if synergies_collapsed else 214.0
+		var row: Panel = _panel(synergy_root, Rect2(12, syn_y, row_w, 46), 0.66 if tier > 0 else 0.5)
 		if tier > 0:
 			(row.get_theme_stylebox("panel") as StyleBoxFlat).border_color = Color(GOLD, 0.85)
 		row.mouse_filter = Control.MOUSE_FILTER_STOP
 		row.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
-		var syn_y: float = 112.0 + index * 50.0
 		row.mouse_entered.connect(func() -> void:
 			var s_box: StyleBoxFlat = row.get_theme_stylebox("panel") as StyleBoxFlat
 			if s_box != null:
@@ -1321,13 +1390,29 @@ func _refresh_synergies(source: Array) -> void:
 		var badge: Kit.Badge = Kit.Badge.new(Kit.icon("syn_" + str(group.get("key", ""))), badge_tier, 40.0)
 		badge.position = Vector2(4, 3)
 		row.add_child(badge)
-		var group_name: String = str(group.get("name", "")).replace(" · TESTE", "")
-		_label(row, group_name, Rect2(50, 3, 120, 20), 15, Color.WHITE if tier > 0 else Kit.MUTED)
-		var steps: Array[String] = []
-		for threshold: Variant in breakpoints:
-			steps.append(str(int(threshold)))
-		_label(row, " › ".join(steps), Rect2(50, 22, 120, 18), 12, GOLD if tier > 0 else Color(Kit.MUTED, 0.7))
-		_label(row, str(count), Rect2(168, 8, 38, 28), 22, GOLD if tier > 0 else Kit.MUTED, HORIZONTAL_ALIGNMENT_RIGHT)
+		if synergies_collapsed:
+			var cnt_pill: Panel = Panel.new()
+			cnt_pill.position = Vector2(24, 24)
+			cnt_pill.size = Vector2(18, 16)
+			cnt_pill.mouse_filter = Control.MOUSE_FILTER_IGNORE
+			var cnt_box: StyleBoxFlat = StyleBoxFlat.new()
+			cnt_box.bg_color = Color(0.04, 0.05, 0.08, 0.95)
+			cnt_box.border_color = Color(GOLD, 0.9) if tier > 0 else Color(0.4, 0.45, 0.5, 0.7)
+			cnt_box.set_border_width_all(1)
+			cnt_box.set_corner_radius_all(3)
+			cnt_pill.add_theme_stylebox_override("panel", cnt_box)
+			row.add_child(cnt_pill)
+			var cnt_lbl: Label = _label(cnt_pill, str(count), Rect2(0, 0, 18, 16), 11, GOLD if tier > 0 else Kit.MUTED, HORIZONTAL_ALIGNMENT_CENTER)
+			cnt_lbl.add_theme_constant_override("outline_size", 2)
+			cnt_lbl.add_theme_color_override("font_outline_color", Color.BLACK)
+		else:
+			var group_name: String = str(group.get("name", "")).replace(" · TESTE", "")
+			_label(row, group_name, Rect2(50, 3, 120, 20), 15, Color.WHITE if tier > 0 else Kit.MUTED)
+			var steps: Array[String] = []
+			for threshold: Variant in breakpoints:
+				steps.append(str(int(threshold)))
+			_label(row, " › ".join(steps), Rect2(50, 22, 120, 18), 12, GOLD if tier > 0 else Color(Kit.MUTED, 0.7))
+			_label(row, str(count), Rect2(168, 8, 38, 28), 22, GOLD if tier > 0 else Kit.MUTED, HORIZONTAL_ALIGNMENT_RIGHT)
 
 
 func _show_synergy_hover(group: Dictionary, anchor_y: float) -> void:
@@ -1536,7 +1621,7 @@ func _show_synergy_hover(group: Dictionary, anchor_y: float) -> void:
 	y_cursor += class_rows * 32.0 + 8.0
 
 	synergy_hover_card.size = Vector2(350, y_cursor)
-	synergy_hover_card.position.x = 232.0
+	synergy_hover_card.position.x = 64.0 if synergies_collapsed else 232.0
 	synergy_hover_card.position.y = clampf(anchor_y - 10.0, 80.0, SCREEN.y - y_cursor - 10.0)
 	synergy_hover_card.visible = true
 	units_layer.queue_redraw()
@@ -1830,24 +1915,40 @@ func _refresh_bag(own: Dictionary, prep: bool) -> void:
 		bag_signature = signature
 		_clear(bag_root)
 		bag_buttons.clear()
-		bag_title.text = "ITENS %d/%d" % [bag.size(), capacity]
+		bag_title.text = "MOCHILA %d/%d" % [bag.size(), capacity]
 		for index: int in range(capacity):
 			var item: Dictionary = bag[index] if index < bag.size() else {}
 			var item_id: String = str(item.get("id", ""))
-			var slot: Button = _button(bag_root, "", Rect2(10 + (index % 4) * 49, 32 + (index / 4) * 52, 46, 46), _select_item.bind(item_id))
+			var col: int = index % 4
+			var row: int = index / 4
+			var slot_x: float = 7.0 + float(col) * 29.0
+			var slot_y: float = 26.0 + float(row) * 29.0
+			var slot: Button = _button(bag_root, "", Rect2(slot_x, slot_y, 26, 26), _select_item.bind(item_id))
 			slot.disabled = item.is_empty() or not can_manage_bag
+			slot.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+
+			var slot_style: StyleBoxFlat = StyleBoxFlat.new()
+			slot_style.bg_color = Color(0.05, 0.07, 0.10, 0.92)
+			slot_style.border_color = Color(0.25, 0.30, 0.38, 0.65)
+			slot_style.set_border_width_all(1)
+			slot_style.set_corner_radius_all(3)
+
 			if not item.is_empty():
-				_icon_rect(slot, Kit.icon("item_" + str(item.get("key", ""))), Rect2(7, 7, 32, 32))
+				_icon_rect(slot, Kit.icon("item_" + str(item.get("key", ""))), Rect2(3, 3, 20, 20))
 				slot.tooltip_text = _rich_item_tooltip(item)
 				bag_buttons[item_id] = slot
 				if item_id in selected_items:
-					var style: StyleBoxFlat = (slot.get_theme_stylebox("normal") as StyleBoxFlat).duplicate() as StyleBoxFlat
-					style.border_color = GOLD
-					style.set_border_width_all(3)
-					style.bg_color = Color(0.32, 0.26, 0.1, 0.9)
-					slot.add_theme_stylebox_override("normal", style)
-					slot.add_theme_stylebox_override("hover", style)
-					slot.add_theme_stylebox_override("disabled", style)
+					slot_style.border_color = GOLD
+					slot_style.set_border_width_all(2)
+					slot_style.bg_color = Color(0.32, 0.26, 0.1, 0.95)
+			else:
+				slot_style.bg_color = Color(0.03, 0.04, 0.06, 0.85)
+				slot_style.border_color = Color(0.18, 0.22, 0.28, 0.45)
+
+			slot.add_theme_stylebox_override("normal", slot_style)
+			slot.add_theme_stylebox_override("hover", slot_style)
+			slot.add_theme_stylebox_override("pressed", slot_style)
+			slot.add_theme_stylebox_override("disabled", slot_style)
 	var can_equip: bool = can_manage_bag and selected_items.size() == 1 and not _selected_own().is_empty()
 	if phase == "combat":
 		var sel_unit: Dictionary = _selected_own()
@@ -1870,6 +1971,8 @@ func _refresh_card(own: Dictionary, prep: bool) -> void:
 	var mana_info: Dictionary = _mana_bar_data(unit)
 	var mana_shift: float = 18.0 if not mana_info.is_empty() else 0.0
 	unit_card.size.y = 352.0 + mana_shift
+	if is_instance_valid(unit_card_frame):
+		unit_card_frame.size = unit_card.size
 	bench_button.position.y = 298.0 + mana_shift
 	dismiss_button.position.y = 298.0 + mana_shift
 	var equipment: Array = []
@@ -1910,24 +2013,34 @@ func _refresh_card(own: Dictionary, prep: bool) -> void:
 	_clear(card_root)
 	equipment_buttons.clear()
 	var key: String = str(unit.get("key", ""))
-	var frame: ColorRect = ColorRect.new()
-	frame.color = Color(TEAM_COLORS[team].darkened(0.7), 0.9)
-	frame.position = Vector2(10, 10)
-	frame.size = Vector2(60, 56)
-	frame.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	card_root.add_child(frame)
-	_icon_rect(card_root, art.portrait_for(key, 30, 28), Rect2(10, 10, 60, 56))
-	_stars(card_root, Vector2(40, 60), int(unit.get("level", 1)), 14.0)
-	_label(card_root, str(unit.get("name", "Herói")), Rect2(78, 8, 140, 24), 19, TEAM_COLORS[team])
+
+	# Mini-retrato emoldurado com cantos e borda na cor do time
+	var portrait_panel: Panel = _panel(card_root, Rect2(10, 10, 56, 56), 0.95, 6)
+	var p_style: StyleBoxFlat = portrait_panel.get_theme_stylebox("panel") as StyleBoxFlat
+	if p_style != null:
+		p_style.border_color = TEAM_COLORS[team]
+		p_style.set_border_width_all(2)
+	_icon_rect(portrait_panel, art.portrait_for(key, 28, 28), Rect2(3, 3, 50, 50))
+	_stars(portrait_panel, Vector2(28, 44), int(unit.get("level", 1)), 12.0)
+
+	var name_lbl: Label = _label(card_root, str(unit.get("name", "Herói")), Rect2(74, 8, 144, 22), 17, TEAM_COLORS[team])
+	name_lbl.add_theme_constant_override("outline_size", 3)
+	name_lbl.add_theme_color_override("font_outline_color", Color(0.02, 0.04, 0.06, 0.98))
+
 	var spec: Variant = specs.get(key, null)
 	var magic: bool = str(unit.get("damage_type", "physical")) == "magic"
 	var reach: int = spec.attack_range if spec != null else 1
-	_label(card_root, ("Mágico" if magic else "Físico") + " · alc. %d · nível %d" % [reach, int(unit.get("level", 1))], Rect2(78, 31, 146, 18), 12, Kit.MUTED)
+	var sub_text: String = ("MÁGICO" if magic else "FÍSICO") + " · ALC %d · NV %d" % [reach, int(unit.get("level", 1))]
+	var sub_lbl: Label = _label(card_root, sub_text, Rect2(74, 29, 144, 16), 11, Color("7dd3fc") if magic else Color("fcd34d"))
+	sub_lbl.add_theme_constant_override("outline_size", 2)
+	sub_lbl.add_theme_color_override("font_outline_color", Color(0.02, 0.04, 0.06, 0.98))
+
 	var tags: Array = unit.get("synergy_tags", [])
 	for index: int in range(tags.size()):
 		var badge: Kit.Badge = Kit.Badge.new(Kit.icon("syn_" + str(tags[index])), 2, 22.0)
-		badge.position = Vector2(78 + index * 26, 48)
+		badge.position = Vector2(74 + index * 26, 46)
 		card_root.add_child(badge)
+
 	if not unit.has("max_hp"):
 		var prev_equip: Array = unit.get("equipment", [])
 		var prev_text: String = "Formação da rodada %d.\nAtributos atuais ficam ocultos." % int(state.get("enemy", {}).get("previous_round", 0))
@@ -1935,31 +2048,45 @@ func _refresh_card(own: Dictionary, prep: bool) -> void:
 			prev_text += "\n(Sem itens na rodada anterior)"
 		else:
 			prev_text += "\nItens usados na rodada anterior:"
-		_label(card_root, prev_text, Rect2(10, 80, 208, 60), 12, Kit.MUTED, HORIZONTAL_ALIGNMENT_LEFT, true)
+		_label(card_root, prev_text, Rect2(10, 78, 208, 56), 12, Kit.MUTED, HORIZONTAL_ALIGNMENT_LEFT, true)
 		for index: int in range(4):
 			var item: Dictionary = prev_equip[index] if index < prev_equip.size() else {}
-			var slot: Button = _button(card_root, "", Rect2(10 + index * 54, 150, 46, 46), Callable())
+			var slot: Button = _button(card_root, "", Rect2(10 + index * 54, 144, 46, 46), Callable())
 			slot.disabled = item.is_empty()
 			slot.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+			var slot_sb: StyleBoxFlat = StyleBoxFlat.new()
+			slot_sb.bg_color = Color(0.05, 0.07, 0.10, 0.92)
+			slot_sb.border_color = Color(0.25, 0.30, 0.38, 0.65)
+			slot_sb.set_border_width_all(1)
+			slot_sb.set_corner_radius_all(4)
 			if not item.is_empty():
+				slot_sb.border_color = Color("38bdf8")
+				slot_sb.set_border_width_all(2)
 				_icon_rect(slot, Kit.icon("item_" + str(item.get("key", ""))), Rect2(7, 7, 32, 32))
 				slot.tooltip_text = "%s\n(Usado pelo adversário na rodada %d)" % [_rich_item_tooltip(item), int(state.get("enemy", {}).get("previous_round", 0))]
+			slot.add_theme_stylebox_override("normal", slot_sb)
+			slot.add_theme_stylebox_override("hover", slot_sb)
+			slot.add_theme_stylebox_override("disabled", slot_sb)
 			equipment_buttons.append(slot)
 		bench_button.visible = false
 		return
+
+	# Barra de Vida (HP) com berço chanfrado e texto formatado
 	var track: ColorRect = ColorRect.new()
-	track.color = Color(0, 0, 0, 0.55)
-	track.position = Vector2(10, 74)
+	track.color = Color(0.04, 0.05, 0.08, 0.95)
+	track.position = Vector2(10, 72)
 	track.size = Vector2(208, 16)
 	track.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	card_root.add_child(track)
+
 	var fill_bar: ColorRect = ColorRect.new()
 	fill_bar.name = "HpFill"
 	fill_bar.color = TEAM_COLORS[team]
-	fill_bar.position = Vector2(10, 74)
+	fill_bar.position = Vector2(10, 72)
 	fill_bar.size = Vector2(208.0 * hp_ratio, 16)
 	fill_bar.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	card_root.add_child(fill_bar)
+
 	# Modificadores de equipamento da unidade
 	var item_catalog: Dictionary = state.get("item_catalog", {})
 	var eq_mods: Dictionary = (unit.get("equipment_modifiers", {}) as Dictionary).duplicate(true)
@@ -1997,60 +2124,96 @@ func _refresh_card(own: Dictionary, prep: bool) -> void:
 	if item_hp_gain > 0:
 		hp_bbcode += " [color=#4ade80](+%d)[/color]" % item_hp_gain
 	hp_bbcode += "[/center]"
-	var hp_text: RichTextLabel = _rich_label(card_root, hp_bbcode, Rect2(10, 72, 208, 18), 12, Color.WHITE)
+	var hp_text: RichTextLabel = _rich_label(card_root, hp_bbcode, Rect2(10, 72, 208, 16), 12, Color.WHITE)
 	hp_text.name = "HpText"
+
 	if not mana_info.is_empty():
 		var mana_track: ColorRect = ColorRect.new()
-		mana_track.color = Color("121e2b")
-		mana_track.position = Vector2(10, 92)
-		mana_track.size = Vector2(208, 16)
+		mana_track.color = Color("0d1824")
+		mana_track.position = Vector2(10, 90)
+		mana_track.size = Vector2(208, 15)
 		mana_track.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		card_root.add_child(mana_track)
-		var mana_text: Label = _label(card_root, "MANA  %d / %d" % [int(mana_info["value"]), int(mana_info["maximum"])], Rect2(10, 91, 208, 18), 12, Color("9acbff"), HORIZONTAL_ALIGNMENT_CENTER)
+
+		var mana_ratio: float = clampf(float(mana_info["value"]) / maxf(1.0, float(mana_info["maximum"])), 0.0, 1.0)
+		var mana_fill: ColorRect = ColorRect.new()
+		mana_fill.color = Color("2563eb")
+		mana_fill.position = Vector2(10, 90)
+		mana_fill.size = Vector2(208.0 * mana_ratio, 15)
+		mana_fill.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		card_root.add_child(mana_fill)
+
+		var mana_text: Label = _label(card_root, "MANA  %d / %d" % [int(mana_info["value"]), int(mana_info["maximum"])], Rect2(10, 89, 208, 16), 11, Color("9acbff"), HORIZONTAL_ALIGNMENT_CENTER)
 		mana_text.name = "ManaText"
 
-	var atq_text: String = "ATQ  %d" % roundi(cur_atk)
+	# Badges de Atributos em grade 2x3 estilizada
+	var stat_start_y: float = 92.0 + mana_shift
+
+	var atq_text: String = "[color=#f87171]ATQ[/color]  %d" % roundi(cur_atk)
 	if item_atk_gain > 0:
 		atq_text += " [color=#4ade80](+%d)[/color]" % item_atk_gain
 
-	var vel_text: String = "VEL  %.2f/s" % speed
+	var vel_text: String = "[color=#fbbf24]VEL[/color]  %.2f/s" % speed
 	if item_spd_gain > 0.001:
-		vel_text = "VEL  %.2f [color=#4ade80](+%.2f)[/color]" % [speed, item_spd_gain]
+		vel_text = "[color=#fbbf24]VEL[/color]  %.2f [color=#4ade80](+%.2f)[/color]" % [speed, item_spd_gain]
 
-	var arm_text: String = "ARM  %d" % roundi(float(unit.get("armor", 0)))
+	var arm_text: String = "[color=#94a3b8]ARM[/color]  %d" % roundi(float(unit.get("armor", 0)))
 	if item_arm_gain > 0:
 		arm_text += " [color=#4ade80](+%d)[/color]" % item_arm_gain
 
-	var res_text: String = "RES  %d" % roundi(float(unit.get("resist", 0)))
+	var res_text: String = "[color=#a78bfa]RES[/color]  %d" % roundi(float(unit.get("resist", 0)))
 	if item_res_gain > 0:
 		res_text += " [color=#4ade80](+%d)[/color]" % item_res_gain
 
-	var crit_text: String = "CRÍT  %d%%" % roundi(float(unit.get("effective_crit_chance", 0)) * 100.0)
+	var crit_text: String = "[color=#fde047]CRÍT[/color]  %d%%" % roundi(float(unit.get("effective_crit_chance", 0)) * 100.0)
 	if item_crit_gain > 0:
 		crit_text += " [color=#4ade80](+%d%%)[/color]" % item_crit_gain
 
-	var alc_text: String = "ALC  %d" % reach
+	var alc_text: String = "[color=#38bdf8]ALC[/color]  %d" % reach
 
 	var stat_items: Array[Dictionary] = [
-		{"bbcode": atq_text, "rect": Rect2(10, 96, 96, 18)},
-		{"bbcode": vel_text, "rect": Rect2(108, 96, 112, 18)},
-		{"bbcode": arm_text, "rect": Rect2(10, 115, 96, 18)},
-		{"bbcode": res_text, "rect": Rect2(108, 115, 112, 18)},
-		{"bbcode": crit_text, "rect": Rect2(10, 134, 96, 18)},
-		{"bbcode": alc_text, "rect": Rect2(108, 134, 112, 18)}
+		{"bbcode": atq_text, "rect": Rect2(10, stat_start_y, 100, 20)},
+		{"bbcode": vel_text, "rect": Rect2(118, stat_start_y, 100, 20)},
+		{"bbcode": arm_text, "rect": Rect2(10, stat_start_y + 22, 100, 20)},
+		{"bbcode": res_text, "rect": Rect2(118, stat_start_y + 22, 100, 20)},
+		{"bbcode": crit_text, "rect": Rect2(10, stat_start_y + 44, 100, 20)},
+		{"bbcode": alc_text, "rect": Rect2(118, stat_start_y + 44, 100, 20)}
 	]
 	for stat_data: Dictionary in stat_items:
 		var stat_rect: Rect2 = stat_data["rect"]
-		stat_rect.position.y += mana_shift
-		_rich_label(card_root, stat_data["bbcode"], stat_rect, 12, Color("dfe6e3"))
-	_label(card_root, str(KIT_TEXT.get(key, "")), Rect2(10, 156 + mana_shift, 208, 82), 12, Color("c9d8d2"), HORIZONTAL_ALIGNMENT_LEFT, true)
+		var stat_box: Panel = _panel(card_root, stat_rect, 0.55, 4)
+		var sb_style: StyleBoxFlat = stat_box.get_theme_stylebox("panel") as StyleBoxFlat
+		if sb_style != null:
+			sb_style.border_color = Color(0.24, 0.30, 0.38, 0.60)
+			sb_style.set_border_width_all(1)
+		_rich_label(stat_box, stat_data["bbcode"], Rect2(4, 2, 92, 16), 11, Color("dfe6e3"))
+
+	# Descrição da Habilidade / Kit
+	var kit_box: Panel = _panel(card_root, Rect2(10, stat_start_y + 68, 208, 68), 0.40, 4)
+	var kb_style: StyleBoxFlat = kit_box.get_theme_stylebox("panel") as StyleBoxFlat
+	if kb_style != null:
+		kb_style.border_color = Color(0.20, 0.25, 0.32, 0.45)
+		kb_style.set_border_width_all(1)
+	_label(kit_box, str(KIT_TEXT.get(key, "")), Rect2(6, 4, 196, 60), 11, Color("c9d8d2"), HORIZONTAL_ALIGNMENT_LEFT, true)
+
+	# 4 Slots de Equipamentos chanfrados
 	for index: int in range(4):
 		var item: Dictionary = equipment[index] if index < equipment.size() else {}
 		var action: Callable = _command.bind("unequip", {"unit_id": selected_id, "item_id": str(item.get("id", ""))}) if (prep and own_unit) else Callable()
-		var slot: Button = _button(card_root, "", Rect2(10 + index * 54, 242 + mana_shift, 46, 46), action)
+		var slot: Button = _button(card_root, "", Rect2(10 + index * 54, stat_start_y + 142, 46, 46), action)
 		slot.disabled = item.is_empty()
 		slot.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+
+		var slot_sb: StyleBoxFlat = StyleBoxFlat.new()
+		slot_sb.bg_color = Color(0.05, 0.07, 0.10, 0.92)
+		slot_sb.border_color = Color(0.25, 0.30, 0.38, 0.65)
+		slot_sb.set_border_width_all(1)
+		slot_sb.set_corner_radius_all(4)
+
 		if not item.is_empty():
+			slot_sb.border_color = GOLD if own_unit else Color("38bdf8")
+			slot_sb.set_border_width_all(2)
+			slot_sb.bg_color = Color(0.10, 0.14, 0.20, 0.95)
 			_icon_rect(slot, Kit.icon("item_" + str(item.get("key", ""))), Rect2(7, 7, 32, 32))
 			var action_hint: String = ""
 			if not own_unit:
@@ -2060,7 +2223,12 @@ func _refresh_card(own: Dictionary, prep: bool) -> void:
 			else:
 				action_hint = "Ativo em combate · não pode remover durante a luta"
 			slot.tooltip_text = "%s\n(%s)" % [_rich_item_tooltip(item), action_hint]
+
+		slot.add_theme_stylebox_override("normal", slot_sb)
+		slot.add_theme_stylebox_override("hover", slot_sb)
+		slot.add_theme_stylebox_override("disabled", slot_sb)
 		equipment_buttons.append(slot)
+
 	bench_button.visible = own_unit and phase == "preparation"
 	bench_button.disabled = not prep
 	bench_button.text = "RESERVAR" if bool(unit.get("active", false)) else "EM CAMPO"
@@ -2095,7 +2263,16 @@ func _open_menu() -> void:
 
 func _start_match() -> void:
 	if not is_online_match:
-		session.reset(MATCH_SEED)
+		var dynamic_seed: int = int(Time.get_ticks_usec() ^ (randi() << 16) ^ randi())
+		if dynamic_seed == 0:
+			dynamic_seed = int(Time.get_unix_time_from_system())
+		session.reset(dynamic_seed)
+		var enemy_info: Dictionary = session.snapshot_for_team(0).get("enemy", {})
+		var bot_name: String = str(enemy_info.get("bot_name", ""))
+		if not bot_name.is_empty():
+			opponent_title = bot_name
+		else:
+			opponent_title = "BOT LOCAL"
 	menu_open = false
 	lobby_subview = "none"
 	audio.stop_bob_music()
@@ -2997,15 +3174,18 @@ func _process_game_event(event: Dictionary) -> void:
 			floating.append({"text": "ESCUDO %d" % roundi(float(event.get("amount", 0))), "position": _head_of(source) + Vector2(-30, -6), "color": GOLD, "life": 1.0, "size": 15})
 	if kind == "boss_cast" and not source.is_empty():
 		var u_id: int = int(source["id"])
-		var cast_dir: String = "south-west"
+		var cast_dir: String = "south-east"
 		if event.has("to") and event.has("from"):
 			var c_from: Variant = event.get("from")
 			var c_to: Variant = event.get("to")
-			var from_x: int = int(c_from.x) if (c_from is Vector2i or c_from is Vector2) else (int(c_from[0]) if c_from is Array and c_from.size() > 0 else 0)
-			var to_x: int = int(c_to.x) if (c_to is Vector2i or c_to is Vector2) else (int(c_to[0]) if c_to is Array and c_to.size() > 0 else 0)
-			cast_dir = "south-east" if to_x >= from_x else "south-west"
+			var from_y: int = int(c_from.y) if (c_from is Vector2i or c_from is Vector2) else (int(c_from[1]) if c_from is Array and c_from.size() > 1 else 0)
+			var to_y: int = int(c_to.y) if (c_to is Vector2i or c_to is Vector2) else (int(c_to[1]) if c_to is Array and c_to.size() > 1 else 0)
+			if to_y < from_y:
+				cast_dir = "north"
+			else:
+				cast_dir = "south-east"
 		visual_directions[u_id] = cast_dir
-		visual_attacks[u_id] = {"remaining": 0.55, "duration": 0.55, "direction": Vector2.RIGHT if "east" in cast_dir else Vector2.LEFT}
+		visual_attacks[u_id] = {"remaining": 0.55, "duration": 0.55, "direction": Vector2.UP if cast_dir == "north" else Vector2.RIGHT}
 		var spell_name: String = str(event.get("spell", ""))
 		if spell_name == "fire_tornado":
 			audio.play_cue("tornado")
@@ -3065,6 +3245,7 @@ func _process_game_event(event: Dictionary) -> void:
 		var dest_cell: Vector2i = _cell(event.get("to", []))
 		var from_cell: Vector2i = _cell(event.get("from", []))
 		visual_ground[boss_id] = Board.ground(dest_cell)
+		character_player.play_action(boss_id, "boss_dev", "skill", "south", _character_event_stamp(event, boss_id))
 		var tp_key: String = "boss_teleporte" if vfx.has_effect("boss_teleporte") else ""
 		var tp_dur: float = vfx.duration(tp_key) if not tp_key.is_empty() else 0.55
 		kit_effects.append({"kind": "boss_teleport", "position": Board.project(Board.ground(from_cell)), "life": tp_dur, "duration": tp_dur, "critical": false, "library_key": tp_key, "scale": 1.25})

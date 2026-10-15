@@ -2,6 +2,8 @@
 .godot/
 *.tmp
 *.zip
+*.log
+RelicArena/assets/characters/neymar/test_walk.gif
 RelicArena/build/
 RelicArena/builds/
 __pycache__/

@@ -870,3 +870,56 @@ O primeiro bug de combate foi registrado como BUG-001. Se uma ocorrência acima 
 **Mudança:** selecionar a pose refinada para oeste, ancorar nos pés em (32,138) e compensar sua resolução maior (140 px de canvas) na escala de desenho. O corpo mantém 160 px e a barra de vida mantém a referência idle. Os arquivos originais não foram alterados por esta correção.
 
 **Validação:** teste de integração confirma o caminho selecionado, âncora e altura em cast/idle (19/0); biblioteca VFX 332/0, smoke 488/0 e batalha do Boss OpenGL 77/0. Captura de combate conferida visualmente. [Evidências](visuais/vfx_bob_boss_02/README.md). Não se presume causa de anatomia ou remoção de fundo além da seleção de asset comprovada.
+
+### BUG-037 — Reestruturação definitiva das poses do Boss Dev (Idle 1A, Cast 2C e Cast de Costas ao mirar para cima)
+
+**Reprodução/investigação (2026-10-15):** O usuário rejeitou expressamente a pose apontando para a esquerda/oeste (1C/2B, `cast_south_west.png`), instruindo sua exclusão total de qualquer momento do jogo. Na confirmação visual pelo site, o usuário aprovou a Opção 1A (`idle_south.png`) para o repouso/idle, a Opção 2C (`cast_south_east.png`, apontando para a direita) como pose de conjuração padrão, e solicitou a inclusão de uma pose de costas com o braço apontando para cima (`cast_north.png`, extraída da folha conceitual de quadrantes) quando o Boss se posicionar na parte inferior do tabuleiro e mirar para cima nos heróis.
+
+**Mudança:** 
+1. `idle_south.png` atualizado com o recorte limpo da Opção 1A (preservando chinelos, pés e transparência entre pernas e braço).
+2. `cast_south_east.png` atualizado com o recorte limpo da Opção 2C.
+3. Gerado `cast_north.png` game-ready com o recorte limpo da pose de costas mirando para cima.
+4. `cast_south_west.png` sobrescrito com o sprite aprovado 2C para impedir qualquer fallback na arte rejeitada.
+5. Em `character_visuals.gd`, conjurações com direção contendo `"north"` usam `cast_north.png`; todas as demais usam `cast_south_east.png`.
+6. Em `main.gd`, evento `boss_cast` calcula se o alvo está acima do Boss (`to_y < from_y`), direcionando como `"north"`, e `"south-east"` nos demais casos.
+
+**Validação:** Testes automatizados executados no Godot 4.7.2: `test_boss_battle.gd` (76 passed, 0 failed), `test_boss_resolution_regression.gd` (46 passed, 0 failed) e `test_lobby_ui.gd` (32 passed, 0 failed), todos com saída 0 e sem regressões.
+
+
+### BUG-038 — Repetição de cartas idênticas no início da partida e falta de aleatoriedade/tática dos bots
+
+**Tipo e estado:** BUG / resolvido com evidência.
+
+**Datas:** 2026-10-15; investigação em 2026-10-15; validação final em 2026-10-15.
+
+**Impacto:** Afetava todas as partidas locais contra o bot. O jogador e o bot recebiam sempre exatamente as mesmas 4 cartas de heróis e 3 itens idênticos no início da partida, e o bot operava de forma rudimentar, amontoando unidades na fileira 0 sem estratégia ou arquétipos.
+
+**Ambiente:** Godot 4.7.2.stable.official.ed1daf0bf, Windows 64-bit, cliente local `RelicArena`.
+
+**Regra esperada:** Cada partida nova deve gerar ofertas aleatórias de heróis, itens e benefícios tanto para o jogador quanto para o bot. O bot deve adotar estratégias variadas, priorizar cópias para subir níveis (2★ e 3★), reposicionar unidades taticamente no tabuleiro (tanques na linha de frente, atiradores na retaguarda e suportes no centro) e equipar itens de acordo com a classe.
+
+**Resultado observado:** `main.gd:2261` chamava `session.reset(MATCH_SEED)` com a semente fixa `20261011`. Em consequência, o gerador de números aleatórios inicializava com a mesma semente toda partida. O bot em `match_session.gd:587` apenas comprava itens e heróis na ordem em que apareciam e posicionava todas as unidades na primeira célula livre encontrada (linha 0), sem tática, reroll ou arquétipos.
+
+**Reprodução mínima:**
+1. Iniciar o jogo e clicar em "Iniciar Partida" / contra Bot.
+2. Observar as 4 cartas de heróis e 3 itens oferecidos na loja na rodada 1.
+3. Terminar ou reiniciar a partida. As ofertas da loja e as compras do bot eram 100% idênticas às da partida anterior.
+
+**Causa sustentada por evidências:**
+1. `RelicArena/client/main.gd`: invocação de `session.reset(MATCH_SEED)` forçava a semente constante `20261011`.
+2. `RelicArena/simulation/match_session.gd`: ausência de arquétipos, perfil ou reposicionamento tático de unidades ativas no tabuleiro.
+
+**Mudança:**
+1. Em `main.gd`, `_start_match()` agora gera semente dinâmica com entropia em runtime (`Time.get_ticks_usec() ^ (randi() << 16) ^ randi()`), mantendo `MATCH_SEED` apenas como fallback constante.
+2. `opponent_title` agora reflete dinamicamente o perfil e nome temático sorteado pelo bot (ex: "BOT: Guardião Obama", "BOT: Artilheiro Elon", "BOT: Matilha Caramelo", etc.).
+3. Em `match_session.gd`, criados 5 arquétipos estratégicos com preferências de heróis e itens (`vanguarda`, `atiradores`, `atacantes`, `musica_controle`, `tatico_estrelas`).
+4. Implementada priorização de cópias para subir níveis (2★/3★) na loja, rerolls táticos quando há ouro excedente, fusão inteligente de itens (`fuse`), equipamento contextual e reposicionamento tático de formação (tanques na linha 3, assassinos nos flancos, Bob Marley na linha média 1-2 e atiradores na linha 0).
+
+**Validação:**
+1. `test_bot_variety_and_randomness.gd` criado e aprovado (9 passed, 0 failed): valida que sementes diferentes geram lojas diferentes, que múltiplos arquétipos/nomes são gerados e que tanques/atiradores ocupam as linhas corretas.
+2. `test_match_session.gd` (173 passed, 0 failed).
+3. `test_full_matches.gd` (4 partidas automatizadas, 1.036 passed, 0 failed).
+4. `test_simulation.gd` (326 passed, 0 failed).
+5. `test_boss_battle.gd` (76 passed, 0 failed).
+6. `test_boss_resolution_regression.gd` (46 passed, 0 failed).
+

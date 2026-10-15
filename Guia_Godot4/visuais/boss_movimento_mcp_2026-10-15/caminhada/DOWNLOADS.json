@@ -1,0 +1,101 @@
+[
+  {
+    "file": "frame_000.png",
+    "url": "https://api.pixellab.ai/mcp/images/66d09dbe-358c-47e5-bb33-95bece34eab3/download?index=0",
+    "sha256": "883aa1c21b1f15aa6032cda5c99716566dcb960631beb18a87265224646addf5",
+    "bounds": [
+      1,
+      4,
+      40,
+      116
+    ]
+  },
+  {
+    "file": "frame_001.png",
+    "url": "https://api.pixellab.ai/mcp/images/66d09dbe-358c-47e5-bb33-95bece34eab3/download?index=1",
+    "sha256": "3e5c0077a5d88f263d93ada7547c95f3548460fc87c2119acaf8d97bf2a6b975",
+    "bounds": [
+      1,
+      4,
+      40,
+      116
+    ]
+  },
+  {
+    "file": "frame_002.png",
+    "url": "https://api.pixellab.ai/mcp/images/66d09dbe-358c-47e5-bb33-95bece34eab3/download?index=2",
+    "sha256": "650fa78792aa97468442f6b75512da5164671c11ff7a66ec428f3a7b758ffc77",
+    "bounds": [
+      2,
+      4,
+      41,
+      116
+    ]
+  },
+  {
+    "file": "frame_003.png",
+    "url": "https://api.pixellab.ai/mcp/images/66d09dbe-358c-47e5-bb33-95bece34eab3/download?index=3",
+    "sha256": "65de6ac47715826c379b5a538d29a9d80682ac0bc3dc676d101cd5cdcf2aec16",
+    "bounds": [
+      4,
+      5,
+      48,
+      116
+    ]
+  },
+  {
+    "file": "frame_004.png",
+    "url": "https://api.pixellab.ai/mcp/images/66d09dbe-358c-47e5-bb33-95bece34eab3/download?index=4",
+    "sha256": "a93d3e8569a6d953b0dcf7b08011ad171676c40c1af65db99c19ad6e93a46b8c",
+    "bounds": [
+      5,
+      6,
+      54,
+      116
+    ]
+  },
+  {
+    "file": "frame_005.png",
+    "url": "https://api.pixellab.ai/mcp/images/66d09dbe-358c-47e5-bb33-95bece34eab3/download?index=5",
+    "sha256": "bd947f53ab6c7f51d3945308eb5dc7a10c91bb04070847009aa276fee7ccfdea",
+    "bounds": [
+      9,
+      4,
+      55,
+      116
+    ]
+  },
+  {
+    "file": "frame_006.png",
+    "url": "https://api.pixellab.ai/mcp/images/66d09dbe-358c-47e5-bb33-95bece34eab3/download?index=6",
+    "sha256": "dd2a2d9f09e4278de61502a8a0b2d7089203ab000db7214810c23084d12a06db",
+    "bounds": [
+      12,
+      4,
+      55,
+      116
+    ]
+  },
+  {
+    "file": "frame_007.png",
+    "url": "https://api.pixellab.ai/mcp/images/66d09dbe-358c-47e5-bb33-95bece34eab3/download?index=7",
+    "sha256": "947e6d56e57b99343c4e918e91e7a3024c831cc3408e56227cc76b5ca60f3797",
+    "bounds": [
+      20,
+      4,
+      59,
+      116
+    ]
+  },
+  {
+    "file": "frame_008.png",
+    "url": "https://api.pixellab.ai/mcp/images/66d09dbe-358c-47e5-bb33-95bece34eab3/download?index=8",
+    "sha256": "7bb2e5fe4b97aafc5095f82bb6ff4a69dc610671262552ab6947c6110a080e3e",
+    "bounds": [
+      23,
+      5,
+      62,
+      116
+    ]
+  }
+]

@@ -431,9 +431,17 @@ static func draw_ornate_button_frame(canvas: CanvasItem, rect: Rect2, theme_name
 
 ## Moldura decorada de painel (como o badge de membros da equipe)
 static func draw_ornate_panel_frame(canvas: CanvasItem, rect: Rect2, theme_name: String = "bronze") -> void:
-	var bg_col: Color = Color(0.07, 0.09, 0.12, 0.94) if theme_name == "bronze" else Color(0.06, 0.14, 0.18, 0.94)
-	var b_col: Color = Color(0.82, 0.64, 0.36, 0.88) if theme_name == "bronze" else Color(0.20, 0.62, 0.68, 0.88)
-	var b_light: Color = Color(1.0, 0.88, 0.55, 1.0) if theme_name == "bronze" else Color(0.48, 0.88, 0.95, 1.0)
+	var bg_col: Color = Color(0.07, 0.09, 0.12, 0.94)
+	var b_col: Color = Color(0.82, 0.64, 0.36, 0.88)
+	var b_light: Color = Color(1.0, 0.88, 0.55, 1.0)
+	if theme_name == "gold":
+		bg_col = Color(0.08, 0.07, 0.10, 0.95)
+		b_col = Color(0.95, 0.75, 0.25, 0.92)
+		b_light = Color(1.0, 0.94, 0.65, 1.0)
+	elif theme_name == "teal":
+		bg_col = Color(0.06, 0.14, 0.18, 0.94)
+		b_col = Color(0.20, 0.62, 0.68, 0.88)
+		b_light = Color(0.48, 0.88, 0.95, 1.0)
 
 	# 1. Sombra exterior suave
 	canvas.draw_rect(rect.grow(1.5), Color(0.0, 0.0, 0.0, 0.45), false, 1.5)

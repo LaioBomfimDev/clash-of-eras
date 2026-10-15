@@ -25,6 +25,39 @@ const BENCH_CAPACITY: int = 5
 const INITIAL_KEYS: Array[String] = []
 
 
+const BOT_ARCHETYPES: Dictionary = {
+	"vanguarda": {
+		"titles": ["BOT: Guardião Obama", "BOT: Muralha de Aço", "BOT: Falange Blindada"],
+		"preferred_heroes": ["obama", "barbie", "lula", "michael", "zumbi"],
+		"preferred_items": ["shield", "armor", "cloak", "charm", "blade"],
+		"focus": "defense"
+	},
+	"atiradores": {
+		"titles": ["BOT: Artilheiro Elon", "BOT: Chuva de Balas", "BOT: Snipers de Elite"],
+		"preferred_heroes": ["elon", "neymar", "snoop", "barbie", "obama"],
+		"preferred_items": ["blade", "boots", "charm", "shield", "armor"],
+		"focus": "attack_speed"
+	},
+	"atacantes": {
+		"titles": ["BOT: Matilha Caramelo", "BOT: Lança Ancestral", "BOT: Predadores Selvagens"],
+		"preferred_heroes": ["caramelo", "zumbi", "neymar", "lula", "obama"],
+		"preferred_items": ["blade", "boots", "charm", "armor", "cloak"],
+		"focus": "burst_damage"
+	},
+	"musica_controle": {
+		"titles": ["BOT: Ritmo & Frequência", "BOT: Sinfonia Mística", "BOT: Vibração Rastafári"],
+		"preferred_heroes": ["bob_marley", "michael", "rapunzel", "snoop", "lula"],
+		"preferred_items": ["charm", "boots", "shield", "armor", "blade"],
+		"focus": "support"
+	},
+	"tatico_estrelas": {
+		"titles": ["BOT: Mestre Tático", "BOT: Estrategista Supremo", "BOT: Veterano de Guerra"],
+		"preferred_heroes": ["obama", "neymar", "zumbi", "michael", "elon"],
+		"preferred_items": ["blade", "shield", "charm", "boots", "armor"],
+		"focus": "high_roll"
+	}
+}
+
 var sim: Core = Core.new()
 var phase: String = "benefit"
 var prep_remaining: float = PREPARATION_SECONDS
@@ -66,6 +99,7 @@ func reset(seed_value: int = 20261011) -> void:
 			"shop_revision": 0, "benefit_options": [], "benefit_rounds": [],
 			"extra_life_used": false, "ready": false, "win_streak": 0,
 			"pending_win_bonus": 0, "last_income_paid": 0})
+	_init_bot_profile()
 	var roster: Array[Dictionary] = []
 	for team: int in range(2):
 		for index: int in range(Catalog.KEYS.size()):
@@ -584,29 +618,277 @@ func _resolve_boss_rewards() -> void:
 		teams[0]["boss_rewards"] = []
 		_emit("boss_escaped", {"message": "O Boss escapou! Nenhum prêmio resgatado desta vez."})
 
+func _init_bot_profile() -> void:
+	if _rngs.size() < 2:
+		return
+	var archetypes: Array = BOT_ARCHETYPES.keys()
+	var arch_index: int = _rngs[1].randi_range(0, archetypes.size() - 1)
+	var arch_key: String = str(archetypes[arch_index])
+	var def: Dictionary = BOT_ARCHETYPES[arch_key]
+	var titles: Array = def.get("titles", ["BOT LOCAL"])
+	var title_index: int = _rngs[1].randi_range(0, titles.size() - 1)
+	teams[1]["bot_archetype"] = arch_key
+	teams[1]["bot_name"] = str(titles[title_index])
+
 func _bot_prepare() -> void:
-	# Runs before player input; never inspects the player's current positions/items.
-	_auto_benefit(1)
-	_bot_command("upgrade_capacity")
+	# Executa antes da entrada do jogador; nunca inspeciona o tabuleiro ou itens atuais do jogador.
+	var arch_key: String = str(teams[1].get("bot_archetype", "vanguarda"))
+	if not BOT_ARCHETYPES.has(arch_key):
+		arch_key = "vanguarda"
+	var arch_def: Dictionary = BOT_ARCHETYPES[arch_key]
+	var preferred_heroes: Array = arch_def.get("preferred_heroes", [])
+	var preferred_items: Array = arch_def.get("preferred_items", [])
+
+	# 1. Benefício inteligente
+	_bot_choose_benefit(arch_key)
+
+	# 2. Upgrade de Capacidade
+	var cap: int = int(teams[1]["capacity"])
+	var upgrade_cost: int = upgrade_cost_for(cap)
+	var current_gold: int = int(teams[1]["gold"])
+	var has_bench_units: bool = _bench_count(1) > 0
+	if cap < MAX_CAPACITY and current_gold >= upgrade_cost:
+		if has_bench_units or current_gold >= upgrade_cost + 4 or sim.round_index >= 2:
+			_bot_command("upgrade_capacity")
+
+	# 3. Recrutamento inicial da loja (com prioridade máxima para cópias 2★/3★)
+	_bot_recruit_from_shop(preferred_heroes)
+
+	# 4. Reroll estratégico
+	current_gold = int(teams[1]["gold"])
+	var should_reroll: bool = false
+	if sim.round_index >= 2 and current_gold >= (4 if arch_key == "tatico_estrelas" else 6):
+		var active_c: int = _active_count(1)
+		var current_cap: int = int(teams[1]["capacity"])
+		if active_c < current_cap or _bot_needs_copies():
+			should_reroll = true
+	if should_reroll:
+		_bot_command("reroll")
+		_bot_recruit_from_shop(preferred_heroes)
+
+	# 5. Compras de Itens
 	for offer: Dictionary in (teams[1]["shop"] as Array).duplicate(true):
-		if offer["kind"] == "hero":
-			_bot_command("recruit", {"offer_id": offer["offer_id"]})
-	for offer: Dictionary in (teams[1]["shop"] as Array).duplicate(true):
-		if offer["kind"] == "item":
-			_bot_command("buy_item", {"offer_id": offer["offer_id"]})
-	var bag: Array = (teams[1]["bag"] as Array).duplicate(true)
-	for item: Dictionary in bag:
-		var target_unit = null
-		var candidates: Array = ["neymar", "elon", "snoop", "caramelo", "obama"] if item["key"] in ["blade", "boots", "charm"] else ["obama", "barbie", "lula", "michael"]
-		for preferred_key: String in candidates:
-			if (teams[1]["owned"] as Array).has(preferred_key):
-				target_unit = _unit_for_key(1, preferred_key)
-				break
-		if target_unit == null and not (teams[1]["owned"] as Array).is_empty():
-			target_unit = _unit_for_key(1, str(teams[1]["owned"][0]))
-		if target_unit != null:
-			_bot_command("equip", {"unit_id": target_unit.id, "item_id": item["id"]})
+		if offer["kind"] == "item" and not bool(offer["claimed"]):
+			var item_key: String = str(offer["key"])
+			var price: int = int(offer["price"])
+			if int(teams[1]["gold"]) >= price and (teams[1]["bag"] as Array).size() < BAG_CAPACITY:
+				if preferred_items.has(item_key) or int(teams[1]["gold"]) >= price + 4:
+					_bot_command("buy_item", {"offer_id": offer["offer_id"]})
+
+	# 6. Fusão de Itens na Bolsa
+	_bot_fuse_items()
+
+	# 7. Equipamento Inteligente
+	_bot_equip_items(preferred_items)
+
+	# 8. Deploy de heróis da reserva
+	_bot_deploy_bench_units()
+
+	# 9. Posicionamento tático de combate no tabuleiro
+	_bot_reposition_formation()
+
 	teams[1]["ready"] = true
+
+func _bot_choose_benefit(arch_key: String) -> void:
+	var choices: Array = (teams[1]["benefit_options"] as Array).duplicate(true)
+	if choices.is_empty():
+		return
+	var target_option_id: String = ""
+	if sim.team_lives[1] <= 2:
+		for c: Dictionary in choices:
+			if c["kind"] == "life":
+				target_option_id = str(c["option_id"])
+				break
+	if target_option_id.is_empty() and arch_key in ["tatico_estrelas", "atiradores"]:
+		for c: Dictionary in choices:
+			if c["kind"] == "gold":
+				target_option_id = str(c["option_id"])
+				break
+	if target_option_id.is_empty():
+		for c: Dictionary in choices:
+			if c["kind"] in ["item_bundle", "item"]:
+				target_option_id = str(c["option_id"])
+				break
+	if target_option_id.is_empty() and not choices.is_empty():
+		target_option_id = str(choices[0]["option_id"])
+	if not target_option_id.is_empty():
+		_bot_command("choose_benefit", {"option_id": target_option_id})
+
+func _bot_needs_copies() -> bool:
+	for key: String in (teams[1]["owned"] as Array):
+		var copies: int = int((teams[1]["copies"] as Dictionary).get(key, 0))
+		if copies < _max_copies():
+			return true
+	return false
+
+func _bot_recruit_from_shop(preferred_heroes: Array) -> void:
+	var shop_offers: Array = (teams[1]["shop"] as Array).duplicate(true)
+	# Passo 1: Cópias de heróis possuídos (Prioridade Máxima para upar estrelas)
+	for offer: Dictionary in shop_offers:
+		if offer["kind"] == "hero" and not bool(offer["claimed"]):
+			var key: String = str(offer["key"])
+			if (teams[1]["owned"] as Array).has(key):
+				var copies: int = int((teams[1]["copies"] as Dictionary).get(key, 0))
+				if copies < _max_copies():
+					_bot_command("recruit", {"offer_id": offer["offer_id"]})
+	# Passo 2: Heróis preferidos do arquétipo
+	shop_offers = (teams[1]["shop"] as Array).duplicate(true)
+	for offer: Dictionary in shop_offers:
+		if offer["kind"] == "hero" and not bool(offer["claimed"]):
+			var key: String = str(offer["key"])
+			if preferred_heroes.has(key):
+				if _active_count(1) < int(teams[1]["capacity"]) or _bench_count(1) < BENCH_CAPACITY:
+					_bot_command("recruit", {"offer_id": offer["offer_id"]})
+	# Passo 3: Preencher vagas ativas livres se ainda estiver abaixo da capacidade
+	shop_offers = (teams[1]["shop"] as Array).duplicate(true)
+	for offer: Dictionary in shop_offers:
+		if offer["kind"] == "hero" and not bool(offer["claimed"]):
+			if _active_count(1) < int(teams[1]["capacity"]):
+				_bot_command("recruit", {"offer_id": offer["offer_id"]})
+
+func _bot_fuse_items() -> void:
+	var bag: Array = (teams[1]["bag"] as Array).duplicate(true)
+	if bag.size() < 2:
+		return
+	for i: int in range(bag.size()):
+		for j: int in range(i + 1, bag.size()):
+			var key1: String = str(bag[i]["key"])
+			var key2: String = str(bag[j]["key"])
+			var output: String = Items.fused_key(key1, key2)
+			if not output.is_empty():
+				_bot_command("fuse", {"item_ids": [str(bag[i]["id"]), str(bag[j]["id"])]})
+				return
+
+func _bot_equip_items(_preferred_items: Array) -> void:
+	var bag: Array = (teams[1]["bag"] as Array).duplicate(true)
+	if bag.is_empty():
+		return
+	var bot_units: Array = []
+	for unit in sim.units:
+		if unit.team == 1 and unit.active and not unit.summoned:
+			bot_units.append(unit)
+	bot_units.sort_custom(func(a, b) -> bool:
+		if a.level != b.level:
+			return a.level > b.level
+		return a.id < b.id
+	)
+	if bot_units.is_empty():
+		return
+
+	for item: Dictionary in bag:
+		var item_key: String = str(item["key"])
+		var is_defensive: bool = item_key in ["shield", "armor", "cloak", "buckler", "heart", "aegis"]
+		var target_unit = null
+		if is_defensive:
+			for u in bot_units:
+				var equipped_count: int = ((teams[1]["equipment"] as Dictionary).get(u.id, []) as Array).size()
+				if equipped_count < EQUIPMENT_SLOTS and (u.key in ["obama", "barbie", "lula", "ken"] or "vanguarda" in u.spec.synergy_tags):
+					target_unit = u
+					break
+		else:
+			for u in bot_units:
+				var equipped_count: int = ((teams[1]["equipment"] as Dictionary).get(u.id, []) as Array).size()
+				if equipped_count < EQUIPMENT_SLOTS and (u.key in ["neymar", "elon", "snoop", "caramelo", "zumbi"] or "atiradores" in u.spec.synergy_tags or "atacantes" in u.spec.synergy_tags):
+					target_unit = u
+					break
+		if target_unit == null:
+			for u in bot_units:
+				var equipped_count: int = ((teams[1]["equipment"] as Dictionary).get(u.id, []) as Array).size()
+				if equipped_count < EQUIPMENT_SLOTS:
+					target_unit = u
+					break
+		if target_unit != null:
+			_bot_command("equip", {"unit_id": target_unit.id, "item_id": str(item["id"])})
+
+func _bot_deploy_bench_units() -> void:
+	if _active_count(1) >= int(teams[1]["capacity"]):
+		return
+	for unit in sim.units:
+		if unit.team == 1 and not unit.active and not unit.summoned and (teams[1]["owned"] as Array).has(unit.key):
+			var cell: Vector2i = _first_free_cell(1)
+			if cell != Grid.INVALID:
+				_bot_command("deploy", {"unit_id": unit.id, "cell": cell})
+			if _active_count(1) >= int(teams[1]["capacity"]):
+				break
+
+func _role_priority(key: String) -> int:
+	match key:
+		"bob_marley": return 0
+		"obama", "barbie", "lula": return 1
+		"caramelo", "zumbi": return 2
+		"neymar", "elon", "snoop": return 3
+		"michael", "rapunzel": return 4
+		_: return 5
+
+func _preferred_cells_for_hero(key: String) -> Array[Vector2i]:
+	match key:
+		"bob_marley":
+			return [Vector2i(3, 1), Vector2i(4, 1), Vector2i(3, 2), Vector2i(4, 2), Vector2i(2, 1), Vector2i(5, 1)]
+		"obama", "barbie", "lula":
+			return [Vector2i(3, 3), Vector2i(4, 3), Vector2i(2, 3), Vector2i(5, 3), Vector2i(1, 3), Vector2i(6, 3), Vector2i(3, 2), Vector2i(4, 2)]
+		"caramelo", "zumbi":
+			return [Vector2i(1, 3), Vector2i(6, 3), Vector2i(0, 3), Vector2i(7, 3), Vector2i(1, 2), Vector2i(6, 2), Vector2i(2, 2), Vector2i(5, 2)]
+		"neymar", "elon", "snoop":
+			return [Vector2i(3, 0), Vector2i(4, 0), Vector2i(2, 0), Vector2i(5, 0), Vector2i(1, 0), Vector2i(6, 0), Vector2i(0, 0), Vector2i(7, 0)]
+		"michael", "rapunzel":
+			return [Vector2i(2, 1), Vector2i(5, 1), Vector2i(1, 1), Vector2i(6, 1), Vector2i(2, 0), Vector2i(5, 0), Vector2i(1, 0), Vector2i(6, 0)]
+		_:
+			return [Vector2i(3, 2), Vector2i(4, 2), Vector2i(2, 2), Vector2i(5, 2)]
+
+func _bot_reposition_formation() -> void:
+	var active_units: Array = []
+	for unit in sim.units:
+		if unit.team == 1 and unit.active and not unit.summoned:
+			active_units.append(unit)
+	if active_units.is_empty():
+		return
+
+	var targets: Dictionary = {}
+	var assigned_cells: Array[Vector2i] = []
+
+	var sorted_for_assignment: Array = active_units.duplicate()
+	sorted_for_assignment.sort_custom(func(a, b) -> bool:
+		return _role_priority(a.key) < _role_priority(b.key)
+	)
+
+	for unit in sorted_for_assignment:
+		var preferred_cells: Array[Vector2i] = _preferred_cells_for_hero(unit.key)
+		var chosen: Vector2i = Grid.INVALID
+		for cell: Vector2i in preferred_cells:
+			if not assigned_cells.has(cell) and Grid.belongs_to_team(cell, 1):
+				chosen = cell
+				break
+		if chosen == Grid.INVALID:
+			for row: int in [3, 2, 1, 0]:
+				for col: int in range(8):
+					var cand: Vector2i = Vector2i(col, row)
+					if not assigned_cells.has(cand) and Grid.belongs_to_team(cand, 1):
+						chosen = cand
+						break
+				if chosen != Grid.INVALID:
+					break
+		if chosen != Grid.INVALID:
+			targets[unit.id] = chosen
+			assigned_cells.append(chosen)
+
+	var temp_cells: Array[Vector2i] = []
+	for row: int in range(4):
+		for col: int in range(8):
+			var c: Vector2i = Vector2i(col, row)
+			if not assigned_cells.has(c):
+				temp_cells.append(c)
+
+	for unit in active_units:
+		var target_for_this: Vector2i = targets.get(unit.id, unit.cell)
+		if unit.cell != target_for_this and assigned_cells.has(unit.cell):
+			if not temp_cells.is_empty():
+				var temp_c: Vector2i = temp_cells.pop_back()
+				_bot_command("place", {"unit_id": unit.id, "cell": temp_c})
+
+	for unit in active_units:
+		var target: Vector2i = targets.get(unit.id, Grid.INVALID)
+		if target != Grid.INVALID and unit.cell != target:
+			_bot_command("place", {"unit_id": unit.id, "cell": target})
 
 func _bot_command(operation: String, payload: Dictionary = {}) -> void:
 	_bot_counter += 1
@@ -751,7 +1033,12 @@ func snapshot_for_team(team: int) -> Dictionary:
 		"lives": sim.team_lives.duplicate(), "match_winner": sim.match_winner,
 		"elapsed": sim.elapsed, "accelerated": sim.accelerated, "own": own,
 		"is_boss_round": sim.is_boss_round, "boss_rewards": (teams[team] as Dictionary).get("boss_rewards", []),
-		"enemy": {"units": enemy_units_preview, "previous_round": _previous_round},
+		"enemy": {
+			"units": enemy_units_preview,
+			"previous_round": _previous_round,
+			"bot_name": str(teams[1 - team].get("bot_name", "Bot Local")),
+			"bot_archetype": str(teams[1 - team].get("bot_archetype", "vanguarda"))
+		},
 		"combat": combat, "recipes": Items.RECIPES.duplicate(true), "item_catalog": Items.ITEMS.duplicate(true),
 		"test_config": {"initial_gold": INITIAL_GOLD, "round_income": ROUND_INCOME,
 			"round_income_growth": ROUND_INCOME_GROWTH, "win_streak_bonus": WIN_STREAK_BONUS, "reroll_cost": REROLL_COST,
