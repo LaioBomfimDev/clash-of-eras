@@ -114,6 +114,15 @@ func texture_for(key: String, direction: String, visual_time: float, animation_s
 			return rotations[direction] as Texture2D
 	if key == "boss_dev":
 		if animation_state in ["cast", "attack"]:
+			if "west" in direction and not "north" in direction:
+				var west: Texture2D = statics.get("boss_dev_cast_west_refined", null)
+				if west == null:
+					west = _load_texture("res://assets/characters/boss_dev/refino_02/cast_south_west.png")
+					if west != null:
+						metrics[west.get_instance_id()]["anchor"] = Vector2(32, 138)
+					statics["boss_dev_cast_west_refined"] = west
+				if west != null:
+					return west
 			var is_east: bool = "east" in direction
 			var cast_key: String = "boss_dev_cast_east" if is_east else "boss_dev_cast_west"
 			var cast_tex: Texture2D = statics.get(cast_key, null)

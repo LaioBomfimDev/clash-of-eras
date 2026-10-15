@@ -3171,6 +3171,9 @@ func _spawn_kit_feedback(event: Dictionary, source: Dictionary, target: Dictiona
 	elif (kind in ["hit", "reggae_hit", "reggae_impact"] and (key == "bob_marley" or str(source.get("key", "")) == "bob_marley")):
 		effect_kind = "reggae_impact"
 		duration = 0.42
+		if vfx.has_effect("bob_impacto_02"):
+			library_key = "bob_impacto_02"
+			scale = 0.75
 		if not target.is_empty():
 			target_point = Board.project(_ground_of(target)) + Vector2(0, -21)
 	elif kind == "bleed":
@@ -3439,10 +3442,45 @@ func _lasso_points(effect: Dictionary) -> PackedVector2Array:
 	return points
 
 
+## Clips refinados conservam os eventos e o tempo do combate.
+func _refined_boss_vfx_data(effect: Dictionary) -> Dictionary:
+	var kind: String = str(effect.get("kind", ""))
+	var key: String = ""
+	match kind:
+		"red_explosion": key = "boss_explosao_fogo_vermelho_02"
+		"purple_explosion": key = "boss_explosao_fogo_roxo_02"
+		"fire_tornado": key = "boss_furacao_02"
+		"boss_fire_projectile":
+			key = "boss_fogo_vermelho_projetil_02" if str(effect.get("spell", "")) == "red_fire" else "boss_fogo_roxo_projetil_02"
+	if not vfx.has_effect(key):
+		return {}
+	var duration: float = maxf(float(effect.get("duration", 0.0)), 0.001)
+	var elapsed: float = maxf(0.0, duration - float(effect.get("life", duration)))
+	var progress: float = clampf(elapsed / duration, 0.0, 0.99999)
+	var clip_time: float = progress * vfx.duration(key) if kind.ends_with("explosion") else elapsed
+	var data: Dictionary = vfx.frame_data(key, clip_time)
+	if data.is_empty():
+		return {}
+	data["position"] = effect["position"]
+	data["scale"] = 1.35 if kind == "fire_tornado" else 1.1
+	if kind == "boss_fire_projectile":
+		var start: Vector2 = effect["from"]
+		var destination: Vector2 = effect["destination"]
+		data["position"] = start.lerp(destination, progress)
+		data["angle"] = (destination - start).angle()
+	elif kind == "fire_tornado":
+		data["modulate"] = Color(1, 1, 1, minf(1.0, (1.0 - progress) * 5.0))
+	return data
+
+
 func _draw_kit_feedback(canvas: Node2D) -> void:
 	for effect: Dictionary in kit_effects:
 		if not str(effect.get("library_key", "")).is_empty():
 			continue # O clip original substitui o desenho procedural, sem duplicar o golpe.
+		var refined: Dictionary = _refined_boss_vfx_data(effect)
+		if not refined.is_empty():
+			_draw_vfx_frame(canvas, refined)
+			continue
 		var progress: float = 1.0 - float(effect["life"]) / float(effect["duration"])
 		var alpha: float = clampf(1.0 - progress, 0.0, 1.0)
 		var point: Vector2 = effect["position"]
@@ -4513,6 +4551,9 @@ func _draw_snoop_cigar(canvas: CanvasItem, feet_pos: Vector2, hero_scale: float,
 
 ## Desenha as notas musicais de reggae (verde, ouro e vermelho da Jamaica) do Bob Marley.
 func _draw_bob_musical_notes(canvas: CanvasItem, bob_feet: Vector2, elapsed: float, scale_mult: float = 1.4, base_y: float = -34.0) -> void:
+	if vfx.has_effect("bob_melodia_02"):
+		_draw_preview_vfx(canvas, "bob_melodia_02", bob_feet + Vector2(0, base_y - 8.0), elapsed, scale_mult * 0.65)
+		return
 	var base_offsets: Array[Vector2] = [
 		Vector2(-18.0, base_y),
 		Vector2(16.0, base_y + 4.0),
@@ -5305,6 +5346,7 @@ func _draw_hero_preview(canvas: Control) -> void:
 			combat_msg_target = "opp"
 			opp_wobble = sin(t * 8.0) * 1.5
 			opp_tint = Color("f5b7b1")
+			_draw_preview_vfx(canvas, "bob_impacto_02", opp_pos + Vector2(0, -21), fmod(t - 2.5, 0.9), 0.75)
 	else:
 		# Padrão para os demais heróis (Obama, Ken, Lula, Rapunzel, Cleopatra, Julio Cesar, Einstein, Napoleao)
 		opp_key = "caramelo" if key == "zumbi" else "zumbi"
@@ -5511,6 +5553,9 @@ func _prepare_frame() -> void:
 		entry["scale"] = LEVEL_SCALE[level - 1]
 		entry["display_scale"] = LEVEL_SCALE[level - 1] * art.board_scale_for(str(unit.get("key", "")))
 		entry["height"] = float(body["height"]) * float(entry["display_scale"])
+		if str(unit.get("key", "")) == "boss_dev" and texture != null:
+			# A pose tem mais resolução; mantém os 160 px do corpo e a barra estável.
+			entry["display_scale"] *= art.idle_height_for("boss_dev", level) / maxf(art.height_for(texture), 1.0)
 		entry["feet"] = Board.project(entry["ground"])
 		var unit_id: int = int(unit.get("id", -1))
 		if bool(unit.get("has_angel_wings", false)):

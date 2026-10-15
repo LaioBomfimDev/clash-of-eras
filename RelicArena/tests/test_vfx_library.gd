@@ -9,7 +9,7 @@ var failed: int = 0
 func _initialize() -> void:
 	var library: VfxLibrary = VfxLibrary.new()
 	library.load_assets()
-	_check(library.effects.size() == 17, "seventeen exported effects load")
+	_check(library.effects.size() == 30, "thirty exported effects load")
 	var expected: Dictionary = {
 		"escudo_danca_01": {"frames": 12, "fps": 10.0, "size": Vector2(43, 43), "offset": Vector2(-21, -43), "columns": 4, "rows": 3, "loop": true, "clip": "part-bubble_shield"},
 		"cura_01": {"frames": 11, "fps": 16.0, "size": Vector2(19, 23), "offset": Vector2(-9, -20), "columns": 4, "rows": 3, "loop": false, "clip": "part-cura"},
@@ -31,12 +31,24 @@ func _initialize() -> void:
 	}
 	for key: String in expected:
 		_test_effect(library, key, expected[key])
+	var refined: Dictionary = {
+		"bob_melodia_02": [96, 80, 16, true, -48, -40],
+		"bob_impacto_02": [112, 112, 24, false, -56, -56],
+		"boss_fogo_vermelho_projetil_02": [96, 80, 24, true, -67, -40],
+		"boss_fogo_roxo_projetil_02": [96, 80, 24, true, -67, -40],
+		"boss_explosao_fogo_vermelho_02": [128, 128, 24, false, -64, -64],
+		"boss_explosao_fogo_roxo_02": [128, 128, 24, false, -64, -64],
+		"boss_furacao_02": [128, 128, 20, true, -64, -100]
+	}
+	for key: String in refined:
+		var values: Array = refined[key]
+		_test_effect(library, key, {"frames": 16, "fps": float(values[2]), "size": Vector2(values[0], values[1]), "offset": Vector2(values[4], values[5]), "columns": 4, "rows": 4, "loop": values[3], "clip": "whole", "file": "sheet.png"})
 	_check(not library.has_effect("unknown") and library.frame_data("unknown", 0.0).is_empty(), "unknown effect has no drawable frame")
 	_near(library.duration("unknown"), 0.0, "unknown effect has zero duration")
 	_check(library.frame_data("cura_01", NAN).is_empty() and library.frame_data("cura_01", INF).is_empty(), "nonfinite time has no drawable frame")
 	_test_safe_clip_selection(library)
 	library.load_assets()
-	_check(library.effects.size() == 17, "reloading assets is idempotent")
+	_check(library.effects.size() == 30, "reloading assets is idempotent")
 	print("VFX LIBRARY TESTS: %d passed, %d failed" % [passed, failed])
 	quit(0 if failed == 0 else 1)
 
@@ -59,7 +71,7 @@ func _test_effect(library: VfxLibrary, key: String, expected: Dictionary) -> voi
 		return
 	var definition: Dictionary = library.effects[key]
 	_check(definition["frames"] == expected["frames"] and definition["fps"] == expected["fps"] and definition["loop"] == expected["loop"], key + ": original clip timing")
-	_check(definition["clip"] == expected["clip"] and str(definition["texture_path"]).get_file() == str(expected["clip"]) + ".png", key + ": selected part sheet has no embedded character")
+	_check(definition["clip"] == expected["clip"] and str(definition["texture_path"]).get_file() == str(expected.get("file", str(expected["clip"]) + ".png")), key + ": selected part sheet has no embedded character")
 	var first: Dictionary = library.frame_data(key, 0.0)
 	_check(first["texture"] is Texture2D and first["size"] == expected["size"] and first["offset"] == expected["offset"], key + ": texture, native size and exported offset")
 	_check(first["region"] == Rect2(Vector2.ZERO, expected["size"]) and first["frame_index"] == 0, key + ": first region")

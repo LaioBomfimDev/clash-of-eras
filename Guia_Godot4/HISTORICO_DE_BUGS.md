@@ -861,3 +861,12 @@ O primeiro bug de combate foi registrado como BUG-001. Se uma ocorrência acima 
 **Reprodução/investigação (2026-10-14):** captura real Chrome `revisoes/auditoria_producao_2026-10-13/compendio/snoop_ficha.png` mostrou fumaça lilás transbordando sobre os cards de técnicas. O combate já aplicava modulate verde em `_smoke_vfx_data`, mas `_draw_preview_vfx` usava a textura sem esse tom; o novo palco reduzido não recortava seu desenho. BUG-031 descrevia a navegação do compêndio, não essa apresentação.
 
 **Mudança/validação:** o helper da prévia usa o mesmo tom verde/transparência da batalha para fumaça; `hero_preview_control.clip_contents=true` limita o desenho ao palco. Lobby32/0, PCK29/0, navegação Chrome sem erros; captura final `compendio_final/snoop_ficha.png` inspecionada com fumaça verde e recortada. Nenhum alcance/dano alterado.
+
+
+### BUG-036 — Pose corrigida do braço do Boss não era selecionada pelo jogo
+
+**Reprodução/investigação (2026-10-15):** o usuário pediu corrigir o braço. Em `0949122`, a referência refinada já existia em `assets/characters/boss_dev/refino_02/cast_south_west.png`, mas `character_visuals.gd` continuava selecionando `game_ready/cast_south_west.png`. A comparação visual e os caminhos confirmaram que a nova pose não estava conectada ao jogo. Consultados os registros anteriores; a alegação histórica de manga removida pelo recorte não foi reproduzida nesta investigação.
+
+**Mudança:** selecionar a pose refinada para oeste, ancorar nos pés em (32,138) e compensar sua resolução maior (140 px de canvas) na escala de desenho. O corpo mantém 160 px e a barra de vida mantém a referência idle. Os arquivos originais não foram alterados por esta correção.
+
+**Validação:** teste de integração confirma o caminho selecionado, âncora e altura em cast/idle (19/0); biblioteca VFX 332/0, smoke 488/0 e batalha do Boss OpenGL 77/0. Captura de combate conferida visualmente. [Evidências](visuais/vfx_bob_boss_02/README.md). Não se presume causa de anatomia ou remoção de fundo além da seleção de asset comprovada.
