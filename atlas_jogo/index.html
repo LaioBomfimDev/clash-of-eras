@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas Visual do Jogo | Clash of Eras</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div class="brand">
+        <span class="brand-icon">⚔️</span>
+        <div>
+          <h1>Clash of Eras — Atlas Visual do Jogo</h1>
+          <p>Central de Análise Completa: Frames Base, Movimentos, Boss, Mobs, Mapas e VFX</p>
+        </div>
+      </div>
+      <nav class="tab-nav">
+        <button class="tab-btn active" data-tab="animacoes">🚶‍♂️ Movimentos (16f)</button>
+        <button class="tab-btn" data-tab="personagens">👥 Frames Base & Rotações</button>
+        <button class="tab-btn" data-tab="boss">👹 Boss & Monstros</button>
+        <button class="tab-btn" data-tab="mapas">🏟️ Mapas & Arenas</button>
+        <button class="tab-btn" data-tab="skills">✨ Skills & VFX</button>
+        <button class="tab-btn" data-tab="mapa-jogo">🗺️ Arena do Jogo</button>
+        <button class="tab-btn" data-tab="feedbacks">📋 Notas & Feedbacks (<span id="tab-feedback-count">0</span>)</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- ABA 1: MOVIMENTOS & ANIMAÇÕES (PLAYER INTERATIVO) -->
+    <section id="tab-animacoes" class="tab-panel active">
+      <div class="panel-grid">
+        <!-- Barra Lateral de Personagens -->
+        <div class="card">
+          <div class="card-title">
+            <span>Selecione o Personagem</span>
+            <span id="char-count-badge" style="font-size: 11px; color: var(--text-muted);">13 Heróis</span>
+          </div>
+          <div class="char-list" id="anim-char-list">
+            <!-- Gerado dinamicamente via JS -->
+          </div>
+        </div>
+
+        <!-- Palco do Player de Animações -->
+        <div class="stage-container">
+          <div class="card">
+            <!-- Ações Disponíveis -->
+            <div class="card-title">
+              <span id="current-char-title">Barbie — Movimentos</span>
+              <span id="current-char-origin" style="font-size: 12px; color: var(--border-gold);">Lote 04 HD</span>
+            </div>
+
+            <div class="action-nav" id="action-buttons">
+              <!-- Botões de ações (walk, attack, stance, skill, etc.) -->
+            </div>
+
+            <!-- Viewport Canvas -->
+            <div class="viewport-box bg-arena" id="anim-viewport">
+              <canvas id="anim-canvas" class="pixel-canvas" width="256" height="256"></canvas>
+            </div>
+
+            <!-- Barra de Controles -->
+            <div class="controls-bar" style="margin-top: 15px;">
+              <!-- Play / Pause / Step -->
+              <div class="btn-group">
+                <button class="btn-ctrl" id="btn-prev-frame" title="Quadro Anterior">⏮️</button>
+                <button class="btn-ctrl active" id="btn-play-pause" title="Play / Pausar">⏸️ Pausar</button>
+                <button class="btn-ctrl" id="btn-next-frame" title="Próximo Quadro">⏭️</button>
+              </div>
+
+              <!-- Velocidade FPS -->
+              <div class="slider-ctrl">
+                <span>Velocidade:</span>
+                <input type="range" id="fps-slider" min="1" max="30" value="24">
+                <strong id="fps-val" style="color: var(--text-gold); min-width: 48px;">24 FPS</strong>
+              </div>
+
+              <!-- Zoom Canvas -->
+              <div class="slider-ctrl">
+                <span>Zoom:</span>
+                <button class="btn-ctrl" id="btn-zoom-1x">1×</button>
+                <button class="btn-ctrl active" id="btn-zoom-2x">2×</button>
+                <button class="btn-ctrl" id="btn-zoom-3x">3×</button>
+              </div>
+
+              <!-- Fundo do Viewport -->
+              <div class="btn-group">
+                <button class="btn-ctrl active" data-bg="bg-arena" title="Arena Coliseu">🏟️ Coliseu</button>
+                <button class="btn-ctrl" data-bg="bg-dark" title="Fundo Escuro">🌑 Escuro</button>
+                <button class="btn-ctrl" data-bg="bg-checker" title="Fundo Transparente">🏁 Grade</button>
+              </div>
+
+              <!-- Bússola de 8 Direções -->
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 12px; color: var(--text-muted);">Direção:</span>
+                <div class="compass-grid" id="compass-controls">
+                  <button class="compass-btn" data-dir="north-west" title="Noroeste">NW</button>
+                  <button class="compass-btn" data-dir="north" title="Norte">N</button>
+                  <button class="compass-btn" data-dir="north-east" title="Nordeste">NE</button>
+                  <button class="compass-btn" data-dir="west" title="Oeste">W</button>
+                  <div style="background: #090a0f; border-radius: 4px;"></div>
+                  <button class="compass-btn" data-dir="east" title="Leste">E</button>
+                  <button class="compass-btn" data-dir="south-west" title="Sudoeste">SW</button>
+                  <button class="compass-btn active" data-dir="south" title="Sul (Frente)">S</button>
+                  <button class="compass-btn" data-dir="south-east" title="Sudeste">SE</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tira de Frames (Filmstrip) -->
+            <div class="filmstrip-container" style="margin-top: 15px;">
+              <div class="filmstrip-title">
+                <span>Tira de Todos os Quadros da Ação Atual (Clique em qualquer quadro para inspecionar):</span>
+                <span id="filmstrip-info">Quadro: 0 / 15</span>
+              </div>
+              <div class="filmstrip" id="filmstrip-frames">
+                <!-- Miniaturas dos 16 quadros geradas dinamicamente -->
+              </div>
+            </div>
+
+            <!-- Caixa de Avaliação e Feedback da Animação Atual -->
+            <div class="feedback-box-inline" id="anim-feedback-box">
+              <div class="feedback-header">
+                <div>
+                  <strong style="color: var(--text-gold); font-size: 14px;" id="feedback-item-title">Avaliar esta Animação: Barbie (Walk)</strong>
+                  <span id="current-eval-badge" style="margin-left: 8px;"></span>
+                </div>
+                <!-- Seletor de Estrelas -->
+                <div class="star-rating" id="inline-star-rating" title="Clique para dar uma nota de 1 a 5">
+                  <span class="star" data-star="1">★</span>
+                  <span class="star" data-star="2">★</span>
+                  <span class="star" data-star="3">★</span>
+                  <span class="star" data-star="4">★</span>
+                  <span class="star" data-star="5">★</span>
+                </div>
+              </div>
+
+              <!-- Veredito Rápido -->
+              <div class="verdict-group" id="inline-verdict-group">
+                <button class="verdict-pill active" data-verdict="reprovado">🔴 Refazer / Ridículo</button>
+                <button class="verdict-pill" data-verdict="ajustar">🟡 Ajustar Detalhes</button>
+                <button class="verdict-pill" data-verdict="aprovado">🟢 Aprovado / Bom</button>
+              </div>
+
+              <!-- Campo de Comentário Detalhado -->
+              <textarea class="feedback-textarea" id="inline-feedback-comment" placeholder="Escreva sua opinião detalhada sobre esta animação (ex: o braço está torto, a perna está dura, a passada está desproporcional, etc.)..."></textarea>
+
+              <div class="feedback-footer">
+                <span style="font-size: 11px; color: var(--text-muted);">💾 Suas notas e comentários são salvos automaticamente no projeto em feedbacks.json para o assistente ler.</span>
+                <button class="btn-submit-feedback" id="btn-save-inline-feedback">💾 Salvar Avaliação desta Ação</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABA 2: FRAMES BASE & COMPARAÇÕES -->
+    <section id="tab-personagens" class="tab-panel">
+      <div class="card" style="margin-bottom: 20px;">
+        <div class="card-title">
+          <span>Seletor de Herói para Inspeção de Frames Base</span>
+        </div>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;" id="base-char-selector">
+          <!-- Botões rápidos de heróis -->
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <span id="base-char-name">Barbie — Frames Base Estáticos</span>
+          <span id="base-char-detail" style="font-size: 13px; color: var(--text-muted);">Proporções e Ângulos de Câmera</span>
+        </div>
+
+        <!-- Área de Comparações (Versão Antiga vs Nova) -->
+        <div id="versions-container">
+          <!-- Gerado dinamicamente para cada versão disponível -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ABA 3: BOSS & MONSTROS -->
+    <section id="tab-boss" class="tab-panel">
+      <div class="card" style="margin-bottom: 25px;">
+        <div class="card-title">
+          <span>O Criador (Boss Dev) — Poses Oficiais Aprovadas e Conceito</span>
+          <span style="font-size: 12px; color: var(--accent-red);">Chefe de Arena PvE (Round 4)</span>
+        </div>
+        <div class="boss-grid" id="boss-official-grid">
+          <!-- Poses oficiais do Boss (1A, 2C, Costas Norte) -->
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom: 25px;">
+        <div class="card-title">
+          <span>Monstros & Lacaios Invocados na Arena (Mobs)</span>
+          <span style="font-size: 12px; color: var(--accent-blue);">Invocados no Fundo da Arena com Mecânica de Provocação</span>
+        </div>
+        <div class="boss-grid" id="mobs-grid">
+          <!-- Slime e Olho tentáculos -->
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <span>Habilidades e Feitiços do Boss</span>
+          <span style="font-size: 12px; color: var(--border-gold);">Fogo Vermelho, Fogo Roxo e Furacão</span>
+        </div>
+        <div class="vfx-grid" id="boss-vfx-grid">
+          <!-- Efeitos do Boss -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ABA 4: MAPAS & ARENAS -->
+    <section id="tab-mapas" class="tab-panel">
+      <div class="card">
+        <div class="card-title">
+          <span>Coliseu Épico em HD (1340×760)</span>
+          <div style="display: flex; gap: 10px; align-items: center;">
+            <label style="font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 6px;">
+              <input type="checkbox" id="toggle-hex-grid" checked>
+              <span>Sobrepor Grade Hexagonal 8×8</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="map-viewer">
+          <div class="map-viewport">
+            <img id="main-map-img" src="../RelicArena/assets/arena/coliseu_epico_hd.png" alt="Coliseu Épico HD">
+            <canvas id="hex-canvas" class="hex-overlay"></canvas>
+          </div>
+        </div>
+
+        <div style="margin-top: 25px;">
+          <h4 style="color: var(--text-gold); margin-bottom: 12px;">Histórico e Props de Arena:</h4>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px;">
+            <div class="card" style="background: #0d0f15;">
+              <h5 style="color: var(--text-muted); margin-bottom: 8px;">Coliseu Estudo 02 (320×180 Antigo)</h5>
+              <img src="../RelicArena/assets/arena/coliseu_estudo_02.png" style="width: 100%; border-radius: 6px; image-rendering: pixelated;">
+            </div>
+            <div class="card" style="background: #0d0f15;">
+              <h5 style="color: var(--text-muted); margin-bottom: 8px;">Braseiro de Ferro Fundido (Iluminação)</h5>
+              <div style="height: 140px; display: flex; align-items: center; justify-content: center;">
+                <img src="../RelicArena/assets/arena/braseiro.png" style="max-height: 100px; image-rendering: pixelated;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABA 5: SKILLS & EFEITOS VISUAIS (VFX) -->
+    <section id="tab-skills" class="tab-panel">
+      <div class="card">
+        <div class="card-title">
+          <span>Galeria de Efeitos Visuais (VFX) e Animações de Skills</span>
+          <span style="font-size: 12px; color: var(--accent-green);">27 Efeitos Animados de Combate</span>
+        </div>
+        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 20px;">
+          Todos os efeitos visuais animados em loop com renderização transparente. Inclui as habilidades do elenco e feitiços arcanos.
+        </p>
+        <div class="vfx-grid" id="vfx-gallery-grid">
+          <!-- VFX renderizados em loops automáticos -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ABA 6: ARENA DO JOGO (MAPA INTERATIVO) -->
+    <section id="tab-mapa-jogo" class="tab-panel">
+      <div class="card">
+        <div class="card-title">
+          <span>Mapa Interativo da Arena de Combate</span>
+          <span style="font-size: 12px; color: var(--text-muted);">Teste Visual de Escala e Posicionamento dos Personagens no Tabuleiro</span>
+        </div>
+        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 15px;">
+          Clique em qualquer personagem do elenco abaixo para posicioná-lo no centro da arena e ver a proporção exata no Coliseu:
+        </p>
+
+        <!-- Seletor Rápido de Tropas -->
+        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px;" id="arena-char-picker">
+          <!-- Pílulas de heróis -->
+        </div>
+
+        <!-- Arena Interativa com Tabuleiro -->
+        <div class="arena-interactive" id="arena-interactive-board">
+          <div class="interactive-grid" id="interactive-grid-cells">
+            <!-- 8 fileiras com células hexagonais -->
+          </div>
+        </div>
+
+        <div style="margin-top: 15px; text-align: center; color: var(--text-muted); font-size: 13px;">
+          <span>Posicionamento de Combate: Topo = Time Inimigo / Boss Dev (Fileiras 0 a 3) | Base = Time do Jogador (Fileiras 4 a 7)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABA 7: CENTRAL DE NOTAS & FEEDBACKS -->
+    <section id="tab-feedbacks" class="tab-panel">
+      <div class="card" style="margin-bottom: 25px;">
+        <div class="card-title">
+          <span>Central Consolidada de Notas e Feedbacks do Jogo</span>
+          <div style="display: flex; gap: 8px;">
+            <button class="btn-ctrl" id="btn-copy-feedbacks-summary">📋 Copiar Resumo para o Chat</button>
+            <button class="btn-ctrl" id="btn-clear-feedbacks" style="color: var(--accent-red);">🗑️ Limpar Tudo</button>
+          </div>
+        </div>
+
+        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 20px;">
+          Todas as notas e instruções detalhadas que você enviou ficam salvas no projeto em <code>atlas_jogo/feedbacks.json</code>. O assistente lê diretamente esse arquivo para implementar as alterações conforme sua vontade!
+        </p>
+
+        <!-- Métricas Rápidas -->
+        <div class="feedback-metrics-grid">
+          <div class="metric-card">
+            <h3 id="metric-total" style="color: var(--text-gold);">0</h3>
+            <span>Total Avaliado</span>
+          </div>
+          <div class="metric-card">
+            <h3 id="metric-reprovados" style="color: var(--accent-red);">0</h3>
+            <span>Reprovados / Refazer</span>
+          </div>
+          <div class="metric-card">
+            <h3 id="metric-ajustes" style="color: #f59e0b;">0</h3>
+            <span>Ajustar Detalhes</span>
+          </div>
+          <div class="metric-card">
+            <h3 id="metric-aprovados" style="color: var(--accent-green);">0</h3>
+            <span>Aprovados</span>
+          </div>
+          <div class="metric-card">
+            <h3 id="metric-media" style="color: var(--accent-blue);">0.0 ★</h3>
+            <span>Média Geral</span>
+          </div>
+        </div>
+
+        <!-- Tabela Detalhada de Feedbacks -->
+        <div style="overflow-x: auto;">
+          <table class="feedbacks-table">
+            <thead>
+              <tr>
+                <th>Elemento / Item</th>
+                <th>Categoria</th>
+                <th>Nota</th>
+                <th>Veredito</th>
+                <th>Seu Comentário / Instrução</th>
+                <th>Data / Hora</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody id="feedbacks-table-body">
+              <tr>
+                <td colspan="7" style="text-align: center; color: var(--text-muted); padding: 30px;">
+                  Nenhuma avaliação registrada ainda. Navegue pelas abas e avalie os heróis, movimentos e mapas!
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal Global de Avaliação Flutuante -->
+  <div class="modal-overlay" id="global-feedback-modal">
+    <div class="modal-box">
+      <button class="modal-close-btn" id="btn-close-modal">✕</button>
+      <h3 style="color: var(--text-gold);" id="modal-item-title">Avaliar Elemento</h3>
+      <p style="font-size: 13px; color: var(--text-muted);" id="modal-item-subtitle">Dê sua nota e diga o que você achou</p>
+
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 10px;">
+        <span style="font-size: 13px; font-weight: 600;">Sua Nota (1 a 5 estrelas):</span>
+        <div class="star-rating" id="modal-star-rating">
+          <span class="star" data-star="1">★</span>
+          <span class="star" data-star="2">★</span>
+          <span class="star" data-star="3">★</span>
+          <span class="star" data-star="4">★</span>
+          <span class="star" data-star="5">★</span>
+        </div>
+      </div>
+
+      <div style="margin-top: 10px;">
+        <span style="font-size: 13px; font-weight: 600; display: block; margin-bottom: 6px;">Veredito:</span>
+        <div class="verdict-group" id="modal-verdict-group">
+          <button class="verdict-pill active" data-verdict="reprovado">🔴 Refazer / Ridículo</button>
+          <button class="verdict-pill" data-verdict="ajustar">🟡 Ajustar Detalhes</button>
+          <button class="verdict-pill" data-verdict="aprovado">🟢 Aprovado / Bom</button>
+        </div>
+      </div>
+
+      <div style="margin-top: 10px;">
+        <span style="font-size: 13px; font-weight: 600; display: block; margin-bottom: 6px;">Seu Comentário / O que mudar:</span>
+        <textarea class="feedback-textarea" id="modal-feedback-comment" placeholder="Explique com detalhes o que está feio, o que deve ser refeito ou o que você gostou..."></textarea>
+      </div>
+
+      <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 15px;">
+        <button class="btn-ctrl" id="btn-cancel-modal">Cancelar</button>
+        <button class="btn-submit-feedback" id="btn-save-modal-feedback">💾 Salvar Avaliação no Projeto</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notice" id="toast-notification">
+    <span>✅</span>
+    <span id="toast-text">Feedback gravado com sucesso no projeto!</span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
