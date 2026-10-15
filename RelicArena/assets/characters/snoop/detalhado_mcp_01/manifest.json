@@ -1,0 +1,682 @@
+{
+  "schema_version": 1,
+  "note": "Authored in free PixelLab MCP pixelart_workbench, no AI generation. Two authored front/back quarter views plus MCP mirrors. Eight game directions map to these four views.",
+  "characters": {
+    "snoop": {
+      "states": {
+        "stance": {
+          "fps": 10,
+          "loop": true,
+          "directions": {
+            "south": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/base/south-east/frame_000.png"
+              ],
+              "anchor": [
+                47,
+                119
+              ]
+            },
+            "south-east": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/base/south-east/frame_000.png"
+              ],
+              "anchor": [
+                47,
+                119
+              ]
+            },
+            "east": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/base/south-east/frame_000.png"
+              ],
+              "anchor": [
+                47,
+                119
+              ]
+            },
+            "south-west": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/base/south-west/frame_000.png"
+              ],
+              "anchor": [
+                65,
+                119
+              ]
+            },
+            "west": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/base/south-west/frame_000.png"
+              ],
+              "anchor": [
+                65,
+                119
+              ]
+            },
+            "north": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/base/north-east/frame_000.png"
+              ],
+              "anchor": [
+                47,
+                119
+              ]
+            },
+            "north-east": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/base/north-east/frame_000.png"
+              ],
+              "anchor": [
+                47,
+                119
+              ]
+            },
+            "north-west": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/base/north-west/frame_000.png"
+              ],
+              "anchor": [
+                65,
+                119
+              ]
+            }
+          }
+        },
+        "walk": {
+          "fps": 16.666666666666668,
+          "loop": true,
+          "directions": {
+            "south": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_000.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_001.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_002.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_003.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_004.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_005.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_006.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_007.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_008.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_009.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_010.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_011.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_012.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_013.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_014.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_015.png"
+              ],
+              "anchor": [
+                47,
+                119
+              ]
+            },
+            "south-east": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_000.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_001.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_002.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_003.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_004.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_005.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_006.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_007.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_008.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_009.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_010.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_011.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_012.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_013.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_014.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_015.png"
+              ],
+              "anchor": [
+                47,
+                119
+              ]
+            },
+            "east": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_000.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_001.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_002.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_003.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_004.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_005.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_006.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_007.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_008.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_009.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_010.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_011.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_012.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_013.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_014.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-east/frame_015.png"
+              ],
+              "anchor": [
+                47,
+                119
+              ]
+            },
+            "south-west": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_000.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_001.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_002.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_003.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_004.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_005.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_006.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_007.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_008.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_009.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_010.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_011.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_012.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_013.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_014.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_015.png"
+              ],
+              "anchor": [
+                65,
+                119
+              ]
+            },
+            "west": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_000.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_001.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_002.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_003.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_004.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_005.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_006.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_007.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_008.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_009.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_010.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_011.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_012.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_013.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_014.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/south-west/frame_015.png"
+              ],
+              "anchor": [
+                65,
+                119
+              ]
+            },
+            "north": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_000.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_001.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_002.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_003.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_004.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_005.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_006.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_007.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_008.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_009.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_010.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_011.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_012.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_013.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_014.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_015.png"
+              ],
+              "anchor": [
+                47,
+                119
+              ]
+            },
+            "north-east": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_000.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_001.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_002.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_003.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_004.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_005.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_006.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_007.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_008.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_009.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_010.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_011.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_012.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_013.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_014.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-east/frame_015.png"
+              ],
+              "anchor": [
+                47,
+                119
+              ]
+            },
+            "north-west": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-west/frame_000.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-west/frame_001.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-west/frame_002.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-west/frame_003.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-west/frame_004.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-west/frame_005.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-west/frame_006.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-west/frame_007.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-west/frame_008.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-west/frame_009.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-west/frame_010.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-west/frame_011.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-west/frame_012.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-west/frame_013.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-west/frame_014.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/walk/north-west/frame_015.png"
+              ],
+              "anchor": [
+                65,
+                119
+              ]
+            }
+          }
+        },
+        "attack": {
+          "fps": 11.11111111111111,
+          "loop": false,
+          "directions": {
+            "south": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_000.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_001.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_002.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_003.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_004.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_005.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_006.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_007.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_008.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_009.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_010.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_011.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_012.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_013.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_014.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_015.png"
+              ],
+              "anchor": [
+                47,
+                119
+              ]
+            },
+            "south-east": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_000.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_001.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_002.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_003.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_004.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_005.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_006.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_007.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_008.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_009.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_010.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_011.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_012.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_013.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_014.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_015.png"
+              ],
+              "anchor": [
+                47,
+                119
+              ]
+            },
+            "east": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_000.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_001.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_002.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_003.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_004.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_005.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_006.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_007.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_008.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_009.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_010.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_011.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_012.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_013.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_014.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_015.png"
+              ],
+              "anchor": [
+                47,
+                119
+              ]
+            },
+            "south-west": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_000.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_001.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_002.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_003.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_004.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_005.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_006.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_007.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_008.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_009.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_010.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_011.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_012.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_013.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_014.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_015.png"
+              ],
+              "anchor": [
+                65,
+                119
+              ]
+            },
+            "west": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_000.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_001.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_002.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_003.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_004.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_005.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_006.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_007.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_008.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_009.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_010.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_011.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_012.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_013.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_014.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_015.png"
+              ],
+              "anchor": [
+                65,
+                119
+              ]
+            },
+            "north": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_000.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_001.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_002.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_003.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_004.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_005.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_006.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_007.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_008.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_009.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_010.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_011.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_012.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_013.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_014.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_015.png"
+              ],
+              "anchor": [
+                47,
+                119
+              ]
+            },
+            "north-east": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_000.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_001.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_002.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_003.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_004.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_005.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_006.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_007.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_008.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_009.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_010.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_011.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_012.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_013.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_014.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_015.png"
+              ],
+              "anchor": [
+                47,
+                119
+              ]
+            },
+            "north-west": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_000.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_001.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_002.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_003.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_004.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_005.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_006.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_007.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_008.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_009.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_010.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_011.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_012.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_013.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_014.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_015.png"
+              ],
+              "anchor": [
+                65,
+                119
+              ]
+            }
+          }
+        },
+        "skill": {
+          "fps": 11.11111111111111,
+          "loop": false,
+          "directions": {
+            "south": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_000.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_001.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_002.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_003.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_004.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_005.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_006.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_007.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_008.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_009.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_010.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_011.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_012.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_013.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_014.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_015.png"
+              ],
+              "anchor": [
+                47,
+                119
+              ]
+            },
+            "south-east": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_000.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_001.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_002.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_003.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_004.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_005.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_006.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_007.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_008.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_009.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_010.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_011.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_012.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_013.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_014.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_015.png"
+              ],
+              "anchor": [
+                47,
+                119
+              ]
+            },
+            "east": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_000.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_001.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_002.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_003.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_004.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_005.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_006.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_007.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_008.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_009.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_010.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_011.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_012.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_013.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_014.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-east/frame_015.png"
+              ],
+              "anchor": [
+                47,
+                119
+              ]
+            },
+            "south-west": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_000.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_001.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_002.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_003.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_004.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_005.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_006.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_007.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_008.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_009.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_010.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_011.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_012.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_013.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_014.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_015.png"
+              ],
+              "anchor": [
+                65,
+                119
+              ]
+            },
+            "west": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_000.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_001.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_002.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_003.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_004.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_005.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_006.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_007.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_008.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_009.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_010.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_011.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_012.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_013.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_014.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/south-west/frame_015.png"
+              ],
+              "anchor": [
+                65,
+                119
+              ]
+            },
+            "north": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_000.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_001.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_002.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_003.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_004.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_005.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_006.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_007.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_008.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_009.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_010.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_011.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_012.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_013.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_014.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_015.png"
+              ],
+              "anchor": [
+                47,
+                119
+              ]
+            },
+            "north-east": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_000.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_001.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_002.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_003.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_004.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_005.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_006.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_007.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_008.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_009.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_010.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_011.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_012.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_013.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_014.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-east/frame_015.png"
+              ],
+              "anchor": [
+                47,
+                119
+              ]
+            },
+            "north-west": {
+              "frames": [
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_000.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_001.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_002.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_003.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_004.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_005.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_006.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_007.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_008.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_009.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_010.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_011.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_012.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_013.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_014.png",
+                "res://assets/characters/snoop/detalhado_mcp_01/smoke/north-west/frame_015.png"
+              ],
+              "anchor": [
+                65,
+                119
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

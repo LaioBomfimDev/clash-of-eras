@@ -27,10 +27,10 @@ const MATCH_SEED: int = 20261011
 const SCREEN: Vector2 = Vector2(1280, 720)
 const TEAM_COLORS: Array[Color] = [Color("64dcd2"), Color("ec7a74")]
 const GOLD: Color = Color("f4d58a")
-const ARENA_PATH: String = "res://assets/arena/coliseu_epico_hd.png"
-## Arena épica em alta definição 1× nativo para máxima nitidez e acabamento clean.
-const ARENA_SCALE: float = 1.0
-const ARENA_OFFSET: Vector2 = Vector2(-30, -20)
+const ARENA_PATH: String = "res://assets/arena/coliseu_estudo_02.png"
+## Fundo PixelLab a 4× inteiro; o recorte evita a moldura original nas bordas.
+const ARENA_SCALE: float = 4.0
+const ARENA_OFFSET: Vector2 = Vector2(-92, -84)
 const PIXEL_SHADER: Shader = preload("res://client/pixel_scale.gdshader")
 ## Nível na partida: +20% de tamanho por nível (1,2× e 1,44×), pedido do usuário.
 const LEVEL_SCALE: Array[float] = [1.0, 1.2, 1.44]

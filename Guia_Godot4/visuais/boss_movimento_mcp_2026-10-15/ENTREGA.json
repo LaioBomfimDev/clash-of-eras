@@ -1,0 +1,51 @@
+{
+  "walk_job": "66d09dbe-358c-47e5-bb33-95bece34eab3",
+  "cast_job": "9ac8c9b0-749e-4ce4-a61c-1a751895874f",
+  "alignment_step": "912a5d7b-cf83-4905-af4c-145eec730407",
+  "charged_generations": 2,
+  "balance_after": {
+    "generations_remaining": 0,
+    "daily_bonus": 8,
+    "credits": 0
+  },
+  "cast_playback_sequence": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    8,
+    8,
+    7,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1,
+    0
+  ],
+  "frames": {
+    "cast\\frame_000.png": "4113c95a6eeacbac7e277627a014c5d114625bcf597bfa70f4764549f0c8d20b",
+    "cast\\frame_001.png": "c1b7c62119eaa9935c77034c42330b73d26cbc077db4d09ea34c6990df52d6d3",
+    "cast\\frame_002.png": "c397aad023f8846623fa8eb7a150c6a6ae67692e3328b34d37c6297df1a683bd",
+    "cast\\frame_003.png": "93f2255e2215b57a98d3b9b3b9d696c0387fd9a4722e1e380b5cfcc1ac000e2a",
+    "cast\\frame_004.png": "341da83108806a268b6b5caae426af3edc38f2b220c8538d0878b929229a1571",
+    "cast\\frame_005.png": "eb366d9031ac71d2c1a798fb19a5b96cb270fd418605c3210799bb1a56b85575",
+    "cast\\frame_006.png": "36cb1f5b61e73dfb604714c1df789b8a5ff57a4fab3c50800c4b19c44cdf5312",
+    "cast\\frame_007.png": "83f42ea8fab27b6abdf2947be1bdaf7927b1fb1d86bbcfa5a715d33af8b9f71a",
+    "cast\\frame_008.png": "c48998f0fcc2d99de4b69a381ca0b223a240c686bff87433a3ae7fe8203767a5",
+    "walk\\frame_000.png": "d2415c4472fe2352d7ab760434c9a347264645167cd54fd6316b099aab8e261c",
+    "walk\\frame_001.png": "1ad66c4d8890c971c4a4dbc595d8b9e28ec126eabfd989383dc266be38fd6af2",
+    "walk\\frame_002.png": "38510668d4c2d61aa62296d12f0533b09a1bde8754793d4076e2111dc73e77fa",
+    "walk\\frame_003.png": "2fcbc569ebdbbb04d3b5c3cc31b467e3f979dff1cbda559f8703e39d683dc9ed",
+    "walk\\frame_004.png": "ca02908c9fedbbf7bdd0f488c823dff652155b0f2b7e26f6fad07b822a37e77e",
+    "walk\\frame_005.png": "1819fb04c7527fcd2547472aa30fd4f499ad065153d2fbca5fee0711fc87d42b",
+    "walk\\frame_006.png": "9715f4abac31aae165a43cfa27b2b0e63f5c7d19cc66f22ecf2783037eb8192d",
+    "walk\\frame_007.png": "7c51651695861629d0d5f146e247cf0fd123f28455aa8ea8dd0ebf83a1fb5e4c"
+  }
+}

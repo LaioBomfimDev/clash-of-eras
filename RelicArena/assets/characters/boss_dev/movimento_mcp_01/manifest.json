@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "note": "Generated through PixelLab MCP animate_image. Front walk only; right-pointing cast. No mirrored tattoo. Cast return reuses generated poses in reverse.",
+  "characters": {
+    "boss_dev": {
+      "states": {
+        "walk": {
+          "fps": 12,
+          "loop": true,
+          "directions": {
+            "south": {
+              "frames": [
+                "res://assets/characters/boss_dev/movimento_mcp_01/walk/frame_000.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/walk/frame_001.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/walk/frame_002.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/walk/frame_003.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/walk/frame_004.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/walk/frame_005.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/walk/frame_006.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/walk/frame_007.png"
+              ],
+              "anchor": [
+                45,
+                116
+              ]
+            }
+          }
+        },
+        "attack": {
+          "fps": 24,
+          "loop": false,
+          "directions": {
+            "south-east": {
+              "frames": [
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_000.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_001.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_002.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_003.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_004.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_005.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_006.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_007.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_008.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_008.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_008.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_007.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_006.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_005.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_004.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_003.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_002.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_001.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_000.png"
+              ],
+              "anchor": [
+                21,
+                116
+              ]
+            },
+            "east": {
+              "frames": [
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_000.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_001.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_002.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_003.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_004.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_005.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_006.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_007.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_008.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_008.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_008.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_007.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_006.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_005.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_004.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_003.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_002.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_001.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_000.png"
+              ],
+              "anchor": [
+                21,
+                116
+              ]
+            },
+            "south": {
+              "frames": [
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_000.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_001.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_002.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_003.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_004.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_005.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_006.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_007.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_008.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_008.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_008.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_007.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_006.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_005.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_004.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_003.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_002.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_001.png",
+                "res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_000.png"
+              ],
+              "anchor": [
+                21,
+                116
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

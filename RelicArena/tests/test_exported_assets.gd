@@ -68,6 +68,18 @@ func _run() -> void:
 	_check(leaf != null and leaf.get_width() == 64, "Snoop uses existing detailed 64px art")
 	_check(view.has_method("_draw_bob_song_buff") and view.has_method("_draw_bob_song_debuff"), "Bob buff/debuff drawers exported")
 	_check(view.has_method("_draw_snoop_smoke_zone_atmosphere"), "Snoop atmosphere drawer exported")
+	_check(view.get("dev_lab") != null and view.dev_lab.panel.tabs.get_tab_count() == 4, "F6 controller and four tabs exported")
+	_check(view.dev_lab.panel.opacity_slider != null, "DEV opacity controls exported")
+	_check(view.ARENA_PATH == "res://assets/arena/coliseu_estudo_02.png" and view.arena != null, "approved classic arena selected in export")
+	for asset: String in [
+		"res://assets/characters/barbie/animacoes_16f/walk/south/frame_015.png",
+		"res://assets/characters/ken/animacoes_16f/attack/south/frame_015.png",
+		"res://assets/characters/boss_dev/movimento_mcp_01/cast/frame_008.png",
+		"res://assets/ui/boss_bar/fill.png",
+		"res://assets/ui/boss_bar/frame.png"
+	]:
+		_check(ResourceLoader.exists(asset) and load(asset) is Texture2D, "new asset loads: " + asset)
+	_check(view.snoop_mcp.loaded, "detailed Snoop sprites and clips loaded from export")
 	view.queue_free()
 	await process_frame
 	var report: Dictionary = {"passed": passed, "failed": failed, "pack": pack, "tracks": tracks,

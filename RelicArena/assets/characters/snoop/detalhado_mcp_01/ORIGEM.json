@@ -1,0 +1,814 @@
+{
+  "method": "PixelLab MCP deterministic layered drawing and articulated rig",
+  "generations_charged": 0,
+  "steps": {
+    "base": "490d196f-18f3-4be3-a3e0-35fba92f42c5",
+    "walk": "17b3d133-d663-4a75-9718-c463eba4f584",
+    "smoke": "7d750600-0aed-460c-bc23-b07160e13931"
+  },
+  "direction_mapping": {
+    "south": "south-east",
+    "south-east": "south-east",
+    "east": "south-east",
+    "south-west": "south-west",
+    "west": "south-west",
+    "north": "north-east",
+    "north-east": "north-east",
+    "north-west": "north-west"
+  },
+  "files": [
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\base\\south-east\\frame_000.png",
+      "sha256": "e0b39f60a47d1cbd05e00d7e0dd6602179a0b4a49c141be2fba3b50b1c6d4685",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/490d196f-18f3-4be3-a3e0-35fba92f42c5/assets/south-east/full.png",
+      "source_frame": 0
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\base\\south-west\\frame_000.png",
+      "sha256": "6c09ca0f821ac21443092c56d2af43dfe1b66183eba21fe5944ee66d0231e1e4",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/490d196f-18f3-4be3-a3e0-35fba92f42c5/assets/south-west/full.png",
+      "source_frame": 0
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\base\\north-east\\frame_000.png",
+      "sha256": "4003cad2f463163997266e2f5cf83ef44c52e210787fbccf092777fcba9e1f71",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/490d196f-18f3-4be3-a3e0-35fba92f42c5/assets/north-east/full.png",
+      "source_frame": 0
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\base\\north-west\\frame_000.png",
+      "sha256": "927859ae64650cfe38d264a09076f914aa0b72316c5e23a1ca7adef9ca2428f2",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/490d196f-18f3-4be3-a3e0-35fba92f42c5/assets/north-west/full.png",
+      "source_frame": 0
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-east\\frame_000.png",
+      "sha256": "cdf167439b61abe07de891512d181ee678b69730fb7ef21fb81edbf4227f9240",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-east/full.png",
+      "source_frame": 0
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-east\\frame_001.png",
+      "sha256": "a7a5f2fd7ca1aac0c6037ae77714974ca5ed22c71136db60b7f66679d8ca7e44",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-east/full.png",
+      "source_frame": 1
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-east\\frame_002.png",
+      "sha256": "dfb8d4a0c8038a5c67169cdad234056625da5dc4d304697dc7069b4997913cd0",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-east/full.png",
+      "source_frame": 2
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-east\\frame_003.png",
+      "sha256": "9b18451527d6171ab5b752b35cb7c3f9845a1a2fc57b947fecf88f16305281f0",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-east/full.png",
+      "source_frame": 3
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-east\\frame_004.png",
+      "sha256": "0c9ccf81dabf325dbc164b5faebf457f94a2f7d37a79d593e40a21c2bf718118",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-east/full.png",
+      "source_frame": 4
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-east\\frame_005.png",
+      "sha256": "b2aff1f1a2ef09dd3eef25b381163753ec737ca432490174cd21cea63754cd96",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-east/full.png",
+      "source_frame": 5
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-east\\frame_006.png",
+      "sha256": "a344a0d10615562f47aea98f274c44f949b475c533c1e32b1a4dfbcb692f3999",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-east/full.png",
+      "source_frame": 6
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-east\\frame_007.png",
+      "sha256": "a7a5f2fd7ca1aac0c6037ae77714974ca5ed22c71136db60b7f66679d8ca7e44",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-east/full.png",
+      "source_frame": 7
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-east\\frame_008.png",
+      "sha256": "cdf167439b61abe07de891512d181ee678b69730fb7ef21fb81edbf4227f9240",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-east/full.png",
+      "source_frame": 8
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-east\\frame_009.png",
+      "sha256": "3496848bf5ca393102378153ab0ffc6915799724184f1f96fedfc98a16ca6ee7",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-east/full.png",
+      "source_frame": 9
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-east\\frame_010.png",
+      "sha256": "cfe38f1c5d32db0499f66a520780a1706970d79f6ea4b2037e894f26d70da3e3",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-east/full.png",
+      "source_frame": 10
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-east\\frame_011.png",
+      "sha256": "796b630d0e5d680bce71e75cf3c1961b3bab32cd30e0b77e0929977a11b3daa8",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-east/full.png",
+      "source_frame": 11
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-east\\frame_012.png",
+      "sha256": "6346489fb80c0f8b47e8228028856390bd2d9649888e6dd9d8dccf0d8f0f1769",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-east/full.png",
+      "source_frame": 12
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-east\\frame_013.png",
+      "sha256": "0edf18a94996e08ea695232cf375bb486eb929a8a045698de9f0e4b6a9c387e9",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-east/full.png",
+      "source_frame": 13
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-east\\frame_014.png",
+      "sha256": "428dbea69daba9b523bc2d95b9da66a783cf04075fb6618f881903c3d0fbeeb8",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-east/full.png",
+      "source_frame": 14
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-east\\frame_015.png",
+      "sha256": "3496848bf5ca393102378153ab0ffc6915799724184f1f96fedfc98a16ca6ee7",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-east/full.png",
+      "source_frame": 15
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-west\\frame_000.png",
+      "sha256": "84273562bd67b4ae0399dd46ed921cd9a315da2da16289e3c3b3cefbfecc1275",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-west/full.png",
+      "source_frame": 0
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-west\\frame_001.png",
+      "sha256": "7f9f737bbb6b09c38807994556a5b6e00ac0eed79aa792e3b118bc5140e499f4",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-west/full.png",
+      "source_frame": 1
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-west\\frame_002.png",
+      "sha256": "2ea1e951e30bbbd220ff98f6954f78c007ac786d37a5a3de5f4233e1d1896f05",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-west/full.png",
+      "source_frame": 2
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-west\\frame_003.png",
+      "sha256": "f5c4b8f3c31bd394579fc4f806fdb7b210bababd0f985a775d8a35e49eb3dd22",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-west/full.png",
+      "source_frame": 3
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-west\\frame_004.png",
+      "sha256": "db0eb69b02c621687ebe487f2c81442365f1d397fdf91ff9cb4e9eb5d00bfc75",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-west/full.png",
+      "source_frame": 4
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-west\\frame_005.png",
+      "sha256": "f77e9da4cb367eef93326f2d52ead6429e1df3f2977e0b887f7395e6ac66ee14",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-west/full.png",
+      "source_frame": 5
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-west\\frame_006.png",
+      "sha256": "d419d1c14103d08694c1f9781b37b0bfa49b72fbd71e609b1e050d92b9a2d8b8",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-west/full.png",
+      "source_frame": 6
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-west\\frame_007.png",
+      "sha256": "7f9f737bbb6b09c38807994556a5b6e00ac0eed79aa792e3b118bc5140e499f4",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-west/full.png",
+      "source_frame": 7
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-west\\frame_008.png",
+      "sha256": "84273562bd67b4ae0399dd46ed921cd9a315da2da16289e3c3b3cefbfecc1275",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-west/full.png",
+      "source_frame": 8
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-west\\frame_009.png",
+      "sha256": "b756e59b5f5fba87e5bffef5a52656fec8c7eaa41d01d35c373314ba0af1d5e0",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-west/full.png",
+      "source_frame": 9
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-west\\frame_010.png",
+      "sha256": "b52d951b0472cc6a155e288d5027a902e49213f267b3450cf8d243e261ceb7b4",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-west/full.png",
+      "source_frame": 10
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-west\\frame_011.png",
+      "sha256": "e3e7d1e7735febf8fc8625c525d4207866575e7154ac3d346ffb674e12bb2ff5",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-west/full.png",
+      "source_frame": 11
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-west\\frame_012.png",
+      "sha256": "3b50e4cda5fe6ba5fb7ca4382d504d6866dd092d17087bacc17f73a94611fdd9",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-west/full.png",
+      "source_frame": 12
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-west\\frame_013.png",
+      "sha256": "867f3106591a313f7ee1901be17b117fad12c7d8d28fa819c8a9ae988b2195a2",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-west/full.png",
+      "source_frame": 13
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-west\\frame_014.png",
+      "sha256": "32b07ca4f44b933d915b8c5e7c534f8fe80d8cf81a8ba945e7dd4fbd4343132a",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-west/full.png",
+      "source_frame": 14
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\south-west\\frame_015.png",
+      "sha256": "b756e59b5f5fba87e5bffef5a52656fec8c7eaa41d01d35c373314ba0af1d5e0",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/south-west/full.png",
+      "source_frame": 15
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-east\\frame_000.png",
+      "sha256": "91c93297f0eba5c553e6189c35b66b66fa6df2e2a2942ea0854164c1a9356e90",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-east/full.png",
+      "source_frame": 0
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-east\\frame_001.png",
+      "sha256": "22d917b1174e9b30af35914572b9d81b9494147ad2c6c36ab89dc94238131fc2",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-east/full.png",
+      "source_frame": 1
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-east\\frame_002.png",
+      "sha256": "0ca5660fdae56e43a321b37d6d83f0e7c39ec6c4d188051474e158f588371197",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-east/full.png",
+      "source_frame": 2
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-east\\frame_003.png",
+      "sha256": "dc03c5db09d2a2a1a32b95e578256f129640bde0cd8e031eb4dd0147f366cb40",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-east/full.png",
+      "source_frame": 3
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-east\\frame_004.png",
+      "sha256": "fbff43ba3d76d7c72bc0fbd99791404f20fa66b8ce9646058c354df261c49a99",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-east/full.png",
+      "source_frame": 4
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-east\\frame_005.png",
+      "sha256": "4913c335c5bb084b6b71b744820f52e9debd49afb53ce83a91e41b26a0a32de4",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-east/full.png",
+      "source_frame": 5
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-east\\frame_006.png",
+      "sha256": "243c4ae06681d9f5601ced4ee43cc05e6b8750974e77b1f002d471d74ce1f362",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-east/full.png",
+      "source_frame": 6
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-east\\frame_007.png",
+      "sha256": "22d917b1174e9b30af35914572b9d81b9494147ad2c6c36ab89dc94238131fc2",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-east/full.png",
+      "source_frame": 7
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-east\\frame_008.png",
+      "sha256": "91c93297f0eba5c553e6189c35b66b66fa6df2e2a2942ea0854164c1a9356e90",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-east/full.png",
+      "source_frame": 8
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-east\\frame_009.png",
+      "sha256": "ff3965fe3cd5c5c55004e059e6549f9308750ae63383a503626012968bbf8a71",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-east/full.png",
+      "source_frame": 9
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-east\\frame_010.png",
+      "sha256": "2f423bfec5ecfbb58245fc61798fe10883d5a90e2544d3197b7ddc89e5b8865e",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-east/full.png",
+      "source_frame": 10
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-east\\frame_011.png",
+      "sha256": "00006b9dee91d71c88de1c8fcbcb3abdf47578bb46eb4b1544fa5686009a6ca0",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-east/full.png",
+      "source_frame": 11
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-east\\frame_012.png",
+      "sha256": "67fe572d738393f69f182f52c02dd13708316f54031cde0f055692f64637a70b",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-east/full.png",
+      "source_frame": 12
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-east\\frame_013.png",
+      "sha256": "de5c43175ef62829e50acaf0ef12f04cf1966d5cd82865f70a2ca63ccf765b26",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-east/full.png",
+      "source_frame": 13
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-east\\frame_014.png",
+      "sha256": "f465f748df3d8c9833f1b8ef899361522bd9d4c914797ccbc015984aa44f8656",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-east/full.png",
+      "source_frame": 14
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-east\\frame_015.png",
+      "sha256": "ff3965fe3cd5c5c55004e059e6549f9308750ae63383a503626012968bbf8a71",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-east/full.png",
+      "source_frame": 15
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-west\\frame_000.png",
+      "sha256": "28452e9a82dfe77c9dae6e6e3f0b68d8254868c341d97aa08ddc4c5083cb8ddf",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-west/full.png",
+      "source_frame": 0
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-west\\frame_001.png",
+      "sha256": "c82ffcf01b210879aa8b51d9e4d158e84296755ecf81ac1d6fa909053e2ff8e4",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-west/full.png",
+      "source_frame": 1
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-west\\frame_002.png",
+      "sha256": "b7b54b41aac815d545df2bc5905ba02e29c33bbd9efa09171738878a20b7ab6a",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-west/full.png",
+      "source_frame": 2
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-west\\frame_003.png",
+      "sha256": "5b0eaa56ea4fad523e66cf0b61faa4d3ebb8726704a3c462a03edb83a988368a",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-west/full.png",
+      "source_frame": 3
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-west\\frame_004.png",
+      "sha256": "b20e219fb676b69988eeedc2ca96ed27a5853713b413867175d16be4c906de75",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-west/full.png",
+      "source_frame": 4
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-west\\frame_005.png",
+      "sha256": "798174f9fc4ef13e9a9f8c27fb63600b105d324f811800a5387f05eae53e1734",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-west/full.png",
+      "source_frame": 5
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-west\\frame_006.png",
+      "sha256": "8e0d8560877e2f2f581fd89252f7a93555ebcbe733f5649f1ceb45687f4330f2",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-west/full.png",
+      "source_frame": 6
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-west\\frame_007.png",
+      "sha256": "c82ffcf01b210879aa8b51d9e4d158e84296755ecf81ac1d6fa909053e2ff8e4",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-west/full.png",
+      "source_frame": 7
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-west\\frame_008.png",
+      "sha256": "28452e9a82dfe77c9dae6e6e3f0b68d8254868c341d97aa08ddc4c5083cb8ddf",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-west/full.png",
+      "source_frame": 8
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-west\\frame_009.png",
+      "sha256": "e5aa0e7a7101e9781083d6c70b41c88b029203960f80a038043ca82cd22ebfa5",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-west/full.png",
+      "source_frame": 9
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-west\\frame_010.png",
+      "sha256": "eacb4c9917ec395fcf7f5489af1acd1b4e79cd41b748fbf70bc0975492163aba",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-west/full.png",
+      "source_frame": 10
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-west\\frame_011.png",
+      "sha256": "8e8f2f493236f09e3e2746db04876b9eb4f5d0cb9a5a76ac10ca126072b134da",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-west/full.png",
+      "source_frame": 11
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-west\\frame_012.png",
+      "sha256": "c8728b382faf831fd6528fdebf52c566427b234952a28b3b7d6af401e4467f70",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-west/full.png",
+      "source_frame": 12
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-west\\frame_013.png",
+      "sha256": "15aac773ea4075236913b502d466d09c17084856f41507ff367a8c7bd3307721",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-west/full.png",
+      "source_frame": 13
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-west\\frame_014.png",
+      "sha256": "31a9941367d7c289b3f79a9e4442090f11c257b0079452062572a5fdc361afd8",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-west/full.png",
+      "source_frame": 14
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\walk\\north-west\\frame_015.png",
+      "sha256": "e5aa0e7a7101e9781083d6c70b41c88b029203960f80a038043ca82cd22ebfa5",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/17b3d133-d663-4a75-9718-c463eba4f584/assets/north-west/full.png",
+      "source_frame": 15
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-east\\frame_000.png",
+      "sha256": "7e40966d97e94cf42db215a63a0d0794dc3096925b4ad271910da066edb1ad36",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-east/full.png",
+      "source_frame": 0
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-east\\frame_001.png",
+      "sha256": "5a12b04bcfb50d2d40357436f5a5634aa61c2bad6c2c61617aa750bf5fc1df4a",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-east/full.png",
+      "source_frame": 1
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-east\\frame_002.png",
+      "sha256": "c2a7cebfe44cb6950675efbb27c177e4cf10c5fa45341d15433aa181f9273169",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-east/full.png",
+      "source_frame": 2
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-east\\frame_003.png",
+      "sha256": "4cdeb93eff8083ebb94c5e413356694383d90ed1d77cc9363c6878a6b134ba62",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-east/full.png",
+      "source_frame": 3
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-east\\frame_004.png",
+      "sha256": "a9784071800467b74958478fe775a0b851dec61011007816a573d45930181f90",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-east/full.png",
+      "source_frame": 4
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-east\\frame_005.png",
+      "sha256": "4c4e17f955c4990d01f44cd62ee0c33c4968612a0f4ac1596885cac7d4c869ab",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-east/full.png",
+      "source_frame": 5
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-east\\frame_006.png",
+      "sha256": "7186d9c18d56ccbd507746444dd461851eb8914ffe63ddf3ffdd8ca5104e9145",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-east/full.png",
+      "source_frame": 6
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-east\\frame_007.png",
+      "sha256": "e6ca8468abb8eb5d8155446fece2868679c18b7a35caa9ec9c19d920e4bd925b",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-east/full.png",
+      "source_frame": 7
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-east\\frame_008.png",
+      "sha256": "d3ab338b1048886987b63dce7ac3aff9afce6e0e5a51cda116d0c5a818dfcb04",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-east/full.png",
+      "source_frame": 8
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-east\\frame_009.png",
+      "sha256": "193217b93612840c356ba07ba1b3b6ee296e007940047affd4837dff602b3e80",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-east/full.png",
+      "source_frame": 9
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-east\\frame_010.png",
+      "sha256": "072face18a119f2d5e28543256795a5c25e9ae90e2226e354a9e1f1da5a8ab33",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-east/full.png",
+      "source_frame": 10
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-east\\frame_011.png",
+      "sha256": "f97f216d1a84e089022df34531eb8b82166d841a8d4c51502efc858275484757",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-east/full.png",
+      "source_frame": 11
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-east\\frame_012.png",
+      "sha256": "7eda95d339a391420f9fb5f40e149186fb10e2721ffeafcd75224f5a98b59446",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-east/full.png",
+      "source_frame": 12
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-east\\frame_013.png",
+      "sha256": "a9c5b1abd8d085ad1381fb2bda1d290b398430d3b112e54ccb3a21d4af34c93f",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-east/full.png",
+      "source_frame": 13
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-east\\frame_014.png",
+      "sha256": "5856ccd77a1d2ed38c71dd7fb8525da870b004d1b5dc8557d3ec40fb5aa1b1e2",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-east/full.png",
+      "source_frame": 14
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-east\\frame_015.png",
+      "sha256": "7e40966d97e94cf42db215a63a0d0794dc3096925b4ad271910da066edb1ad36",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-east/full.png",
+      "source_frame": 15
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-west\\frame_000.png",
+      "sha256": "eeaef8dca047e0e4e159ecb03dfb14f080428ade4d5ef047915d31cad65165da",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-west/full.png",
+      "source_frame": 0
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-west\\frame_001.png",
+      "sha256": "82f79e27a9de9a5f2e60b04dd4c9885c5480934de3a1472931b87882a79ad1c7",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-west/full.png",
+      "source_frame": 1
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-west\\frame_002.png",
+      "sha256": "8ab5429da593cd41035cf39abca352e1ed301509ff685fb8c9114c788483e869",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-west/full.png",
+      "source_frame": 2
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-west\\frame_003.png",
+      "sha256": "5b1ef8ed842ca4b22609ae851630e01d390fa9cef8dd85f94f35efecf8fceb71",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-west/full.png",
+      "source_frame": 3
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-west\\frame_004.png",
+      "sha256": "cb700745288a76aa7c98659dd8215373eac5d1c39373078de88f90671f1f2287",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-west/full.png",
+      "source_frame": 4
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-west\\frame_005.png",
+      "sha256": "4e66751a1b2db2a16a22e01d1a0dc4ede081a264627e08a581a31bd3a272233a",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-west/full.png",
+      "source_frame": 5
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-west\\frame_006.png",
+      "sha256": "71f22bbc9860587e9e8f80094fc5c811540d11212e85f24dcec34bc8c4d6d936",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-west/full.png",
+      "source_frame": 6
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-west\\frame_007.png",
+      "sha256": "918bf3f9c60467e0514af97812f5849c7e151dd0ab26d060a98eea109e24845a",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-west/full.png",
+      "source_frame": 7
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-west\\frame_008.png",
+      "sha256": "602e990992bf39edcd3b8864a5b9c5eddf1d7ac31724a945f20d647128b85cb0",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-west/full.png",
+      "source_frame": 8
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-west\\frame_009.png",
+      "sha256": "d25428d0ec1bb87ef672266e818f703ab6a11e0fe0d9da0181f5141c12e7675c",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-west/full.png",
+      "source_frame": 9
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-west\\frame_010.png",
+      "sha256": "16c993ab9384be05d32f2c6945597826e630b96fdf0e10be53a21e524bc4dd78",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-west/full.png",
+      "source_frame": 10
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-west\\frame_011.png",
+      "sha256": "905247e8458e9e4f8761bc69b2ee2ebf472d6694bac006850996268618a0f440",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-west/full.png",
+      "source_frame": 11
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-west\\frame_012.png",
+      "sha256": "f0b47ecb98b95b2d52f6d8eba94fbe5ada586ab5e6cec910c137ec0eeeda02c6",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-west/full.png",
+      "source_frame": 12
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-west\\frame_013.png",
+      "sha256": "595445fe1bfe2102117bc49739aefcec96928d51492502930762935406329a05",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-west/full.png",
+      "source_frame": 13
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-west\\frame_014.png",
+      "sha256": "d025ec3f9b1e0b52a4aaa152f02fead88b7c7321e57156e3f0e73b5c79db83d5",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-west/full.png",
+      "source_frame": 14
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\south-west\\frame_015.png",
+      "sha256": "eeaef8dca047e0e4e159ecb03dfb14f080428ade4d5ef047915d31cad65165da",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/south-west/full.png",
+      "source_frame": 15
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-east\\frame_000.png",
+      "sha256": "7c0715ccb3ab945679f342551a6c0f93ab94bd56aad9b2cb11fc1ec4b4eb90b5",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-east/full.png",
+      "source_frame": 0
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-east\\frame_001.png",
+      "sha256": "4f50fddb57311dc9711546a7a537cff755b91a99fa713c5a15b27f72db51ff75",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-east/full.png",
+      "source_frame": 1
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-east\\frame_002.png",
+      "sha256": "9a7720fe4150c299b60458a1093c68bda505e470d6320b180196c6789e6049b6",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-east/full.png",
+      "source_frame": 2
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-east\\frame_003.png",
+      "sha256": "32460c0f20ade270a9b38b50dfaa6396408c50dccdd64191fc339bf4785ccbf7",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-east/full.png",
+      "source_frame": 3
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-east\\frame_004.png",
+      "sha256": "2a217d317314285bfea7547668c19e40873cbd671916165951df3fd8892ec787",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-east/full.png",
+      "source_frame": 4
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-east\\frame_005.png",
+      "sha256": "d69db234e70d78dddb6f2e8f7338cf5fd604326500b6289f419462512f07069b",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-east/full.png",
+      "source_frame": 5
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-east\\frame_006.png",
+      "sha256": "90f489d36c0e9caacdaa63858a9ce1b12c270366251da8c5e615ffce9a421c42",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-east/full.png",
+      "source_frame": 6
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-east\\frame_007.png",
+      "sha256": "0a37b51a6e13d1c38a3e105384bf31c342f2914c0449a78801b3da23b25ce85a",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-east/full.png",
+      "source_frame": 7
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-east\\frame_008.png",
+      "sha256": "75c1599227f84712c1d4ed8d77b8eb5d345aefc524bf7564969ba4ed2c094810",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-east/full.png",
+      "source_frame": 8
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-east\\frame_009.png",
+      "sha256": "91f1191ad44b72364600723e0bb7b5a8c220859d72b62f01e4a505752fc6d91b",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-east/full.png",
+      "source_frame": 9
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-east\\frame_010.png",
+      "sha256": "57254a33df3109d679ac91229db5d25213a40ec588ae69861206a9893dc2f015",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-east/full.png",
+      "source_frame": 10
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-east\\frame_011.png",
+      "sha256": "4a84b2772d45c8b42ce6aa4864b4a40f0c609e05d18da1b6b51e2442c39db327",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-east/full.png",
+      "source_frame": 11
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-east\\frame_012.png",
+      "sha256": "c9558b3a8eda078825d193a2f9d194174da73729b5ceda3c9461ca8a6f015ff8",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-east/full.png",
+      "source_frame": 12
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-east\\frame_013.png",
+      "sha256": "5c1b506369cb16bc92c81f1b3681f1a0e2ac08afe417c5bdf5e79811442111ee",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-east/full.png",
+      "source_frame": 13
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-east\\frame_014.png",
+      "sha256": "d6ce224517c8f94e35833b4d4aee21b58ede6014e104e232d29acf023b3b7050",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-east/full.png",
+      "source_frame": 14
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-east\\frame_015.png",
+      "sha256": "7c0715ccb3ab945679f342551a6c0f93ab94bd56aad9b2cb11fc1ec4b4eb90b5",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-east/full.png",
+      "source_frame": 15
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-west\\frame_000.png",
+      "sha256": "84191b9389aed92cdc81b5f0f02cede9e5fe471651c7feb60e8058326411ed3e",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-west/full.png",
+      "source_frame": 0
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-west\\frame_001.png",
+      "sha256": "959b4a51bea5f99358dd837cff7a95ece7dccaec0b45252320186bb576ae7e61",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-west/full.png",
+      "source_frame": 1
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-west\\frame_002.png",
+      "sha256": "04a2007d33c21eb737ddadc2f2349201ca5d5e7e121786535542dac0a82a4048",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-west/full.png",
+      "source_frame": 2
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-west\\frame_003.png",
+      "sha256": "6ee110e0164fdbf1a576e94b73206276661a406e902e2d94dd331a03333c0268",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-west/full.png",
+      "source_frame": 3
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-west\\frame_004.png",
+      "sha256": "71b662261f0a5951b6dca14d761435b85d1d20efdc58ac15e77ead4db3073e9c",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-west/full.png",
+      "source_frame": 4
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-west\\frame_005.png",
+      "sha256": "7f3970a42f08a9c05537dcb9ea669e702ac93cb94fcd269719e4a191aacfc4f4",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-west/full.png",
+      "source_frame": 5
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-west\\frame_006.png",
+      "sha256": "18dfbf59680fa8fe7ef7138cfa9da6d29bff9f34c28cef611d88b5d456bda261",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-west/full.png",
+      "source_frame": 6
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-west\\frame_007.png",
+      "sha256": "517d99bbdb66caa7ae57c46a024ca1f9dc4fd3f9ac6491f053440d3cce9bf4fa",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-west/full.png",
+      "source_frame": 7
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-west\\frame_008.png",
+      "sha256": "72a736bb980cb9ec64c86bb1845a647b7f4f2b43dcb1523b6de0264f045983cd",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-west/full.png",
+      "source_frame": 8
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-west\\frame_009.png",
+      "sha256": "7ab7ef82d714f88a75828248a611d4f7555f7d477797663879e0a3f2a91dcba2",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-west/full.png",
+      "source_frame": 9
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-west\\frame_010.png",
+      "sha256": "e7229dc683677156580c9c1c075deeb84f3ed0af59fbee246df5726f3eaee7a8",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-west/full.png",
+      "source_frame": 10
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-west\\frame_011.png",
+      "sha256": "4168ac8ab7b9675ce4c1c60d165ab7231482b5a81dc0a19297092bb7cb0b332b",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-west/full.png",
+      "source_frame": 11
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-west\\frame_012.png",
+      "sha256": "110f1190ce055e7d8b7db20703b17f44ff9f70c5b3ca6ff87facc6978e644314",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-west/full.png",
+      "source_frame": 12
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-west\\frame_013.png",
+      "sha256": "845c7e1ca9c79c0d0a7abdc0c02ec57950f0a36c9c54ce1c320f0f9e4f6174c3",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-west/full.png",
+      "source_frame": 13
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-west\\frame_014.png",
+      "sha256": "590c9173227ae48e0051ba9a3b82411a220022db01233ddcb2ae6be661246d5a",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-west/full.png",
+      "source_frame": 14
+    },
+    {
+      "file": "assets\\characters\\snoop\\detalhado_mcp_01\\smoke\\north-west\\frame_015.png",
+      "sha256": "84191b9389aed92cdc81b5f0f02cede9e5fe471651c7feb60e8058326411ed3e",
+      "source": "https://api.pixellab.ai/mcp/pixel-tools/7d750600-0aed-460c-bc23-b07160e13931/assets/north-west/full.png",
+      "source_frame": 15
+    }
+  ],
+  "trial_ai_request": "create_image_pro rejected before generation; free editor used instead"
+}

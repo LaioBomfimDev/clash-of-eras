@@ -935,3 +935,11 @@ O primeiro bug de combate foi registrado como BUG-001. Se uma ocorrência acima 
 **Mudança:** verificar `DirAccess.dir_exists_absolute(storage_dir)` e retornar lista vazia quando ainda não existe. A criação continua na primeira gravação; falhas reais de escrita continuam informadas na interface. Na inspeção visual, o botão DEV inicialmente cobria o botão FND da bolsa; foi movido para a faixa livre entre sinergias e status.
 
 **Validação:** execução OpenGL do teste DEV após correção do diretório: 58 verificações aprovadas, zero falhas, sem erros de diretório no log. Persistência e leitura JSON, acentos, rejeição de comentário vazio e isolamento dos registros de teste foram verificados. Sessão 173/0, lobby 32/0, arrasto18/0 e quatro partidas completas1036/0. Sem teste humano, Web ou celular nesta entrega.
+
+## DEV F6 — bloqueios encontrados antes da publicação de 2026-10-15
+
+**Reprodução/investigação:** o teste DEV do estado local pré-publicação falhou em `reroll_shop_free`: chamava `MatchSession._reroll_shop`, que não existe. Depois interrompeu no runner chamando `ArenaSimulation._unit_for_key`, método que pertence à Session. A leitura do catálogo confirmou ainda que o kit rápido criava `cloak`, `wand` e `clover`, sem definição. O campo crítico (%) passava 20 diretamente à simulação, cujo sorteio compara `randf()` a uma probabilidade de 0 a 1; o runner antigo aceitava esse valor errado.
+
+**Mudanças:** renovação gratuita usa `_refresh_shop` e incrementa revisão das ofertas sem cobrar ouro; kit usa cinco chaves existentes; preenchimento rápido usa Snoop em vez do Ken (que é invocação); percentual crítico converte ida/volta para probabilidade; runner busca Boss na Session, tem timeout de 90s e não grava preferências reais de opacidade.
+
+**Validação executada:** DEV79/0 após correção, incluindo IDs novos na loja, ouro preservado, cinco itens válidos e 20% = 0,20. Smoke486/0 e quatro partidas completas1036/0. Os números74/74 do registro anterior do painel não foram reproduzidos no estado encontrado; esta execução e as causas acima prevalecem para a publicação. Não houve alteração das regras base de combate.

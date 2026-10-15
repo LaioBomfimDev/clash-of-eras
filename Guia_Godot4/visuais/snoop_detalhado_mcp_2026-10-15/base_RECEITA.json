@@ -1,0 +1,4106 @@
+{
+  "mcp_drawing_id": "490d196f-18f3-4be3-a3e0-35fba92f42c5",
+  "recipe": {
+    "job": {
+      "canvas": [
+        112,
+        128
+      ],
+      "frame_count": 1,
+      "durations_ms": [
+        100
+      ],
+      "views": [
+        {
+          "id": "south-east",
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "id": "south-west",
+          "mirror_of": "south-east"
+        },
+        {
+          "id": "north-east",
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "id": "north-west",
+          "mirror_of": "north-east"
+        }
+      ],
+      "source_bookends_exact": false,
+      "body_palette_exact": false,
+      "require_clear_border": true
+    },
+    "scene": {
+      "palette": {
+        "ink": "#101521",
+        "hair": "#15151b",
+        "hairHi": "#33313b",
+        "skinD": "#523326",
+        "skinS": "#76503a",
+        "skin": "#9f704b",
+        "skinL": "#c39464",
+        "skinH": "#deb586",
+        "blueD": "#122653",
+        "blueS": "#1b3e80",
+        "blue": "#2464bd",
+        "blueL": "#3e8be2",
+        "blueH": "#76b8f3",
+        "white": "#eef3e8",
+        "whiteS": "#b9c7d2",
+        "gray": "#788895",
+        "goldD": "#956529",
+        "gold": "#e4b650",
+        "goldL": "#ffdf89",
+        "cigarD": "#54311e",
+        "cigar": "#885735",
+        "cigarL": "#bb8150",
+        "ash": "#b7aaa0",
+        "ember": "#ee672b",
+        "fire": "#ffca64",
+        "smoke": "#97c6a7b0"
+      },
+      "layers": [
+        {
+          "id": "rear",
+          "name": "Body - far limbs"
+        },
+        {
+          "id": "body",
+          "name": "Body - face and clothing"
+        },
+        {
+          "id": "front",
+          "name": "Body - near arm"
+        },
+        {
+          "id": "prop",
+          "name": "Prop - charutao"
+        },
+        {
+          "id": "hand",
+          "name": "Body - gripping hand"
+        }
+      ],
+      "views": {
+        "south-east": {
+          "nodes": {
+            "root": {
+              "layer": "body",
+              "at": [
+                0,
+                0
+              ],
+              "draw": []
+            },
+            "far_thigh": {
+              "layer": "rear",
+              "at": {
+                "node": "root",
+                "point": [
+                  51,
+                  72
+                ]
+              },
+              "pivot": [
+                0,
+                0
+              ],
+              "angle": 3,
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -5,
+                      0
+                    ],
+                    [
+                      4,
+                      0
+                    ],
+                    [
+                      4,
+                      21
+                    ],
+                    [
+                      -4,
+                      21
+                    ]
+                  ],
+                  "color": "blue",
+                  "outline": "ink"
+                },
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -4,
+                      1
+                    ],
+                    [
+                      -1,
+                      1
+                    ],
+                    [
+                      -1,
+                      20
+                    ],
+                    [
+                      -4,
+                      20
+                    ]
+                  ],
+                  "color": "blueS"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      3,
+                      2
+                    ],
+                    [
+                      3,
+                      19
+                    ]
+                  ],
+                  "color": "whiteS",
+                  "stroke_width": 2
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      0,
+                      4
+                    ],
+                    [
+                      1,
+                      7
+                    ],
+                    [
+                      0,
+                      10
+                    ]
+                  ],
+                  "color": "blueL",
+                  "stroke_width": 1
+                }
+              ]
+            },
+            "far_shin": {
+              "layer": "rear",
+              "at": {
+                "node": "far_thigh",
+                "point": [
+                  0,
+                  20
+                ]
+              },
+              "pivot": [
+                0,
+                0
+              ],
+              "angle": -2,
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -4,
+                      0
+                    ],
+                    [
+                      3,
+                      0
+                    ],
+                    [
+                      3,
+                      22
+                    ],
+                    [
+                      -3,
+                      22
+                    ]
+                  ],
+                  "color": "blue",
+                  "outline": "ink"
+                },
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -3,
+                      1
+                    ],
+                    [
+                      -1,
+                      1
+                    ],
+                    [
+                      -1,
+                      21
+                    ],
+                    [
+                      -3,
+                      21
+                    ]
+                  ],
+                  "color": "blueS"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      2,
+                      2
+                    ],
+                    [
+                      2,
+                      20
+                    ]
+                  ],
+                  "color": "whiteS",
+                  "stroke_width": 2
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      0,
+                      4
+                    ],
+                    [
+                      1,
+                      7
+                    ],
+                    [
+                      0,
+                      10
+                    ]
+                  ],
+                  "color": "blueL",
+                  "stroke_width": 1
+                }
+              ]
+            },
+            "far_shoe": {
+              "layer": "rear",
+              "at": {
+                "node": "far_shin",
+                "point": [
+                  0,
+                  21
+                ]
+              },
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -4,
+                      -2
+                    ],
+                    [
+                      3,
+                      -2
+                    ],
+                    [
+                      7,
+                      2
+                    ],
+                    [
+                      7,
+                      5
+                    ],
+                    [
+                      -5,
+                      5
+                    ]
+                  ],
+                  "color": "white",
+                  "outline": "ink"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      -4,
+                      4
+                    ],
+                    [
+                      6,
+                      4
+                    ]
+                  ],
+                  "color": "whiteS",
+                  "stroke_width": 1
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      -1,
+                      0
+                    ],
+                    [
+                      2,
+                      0
+                    ]
+                  ],
+                  "color": "gray",
+                  "stroke_width": 1
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      1,
+                      2
+                    ],
+                    [
+                      4,
+                      2
+                    ]
+                  ],
+                  "color": "blueL",
+                  "stroke_width": 1
+                }
+              ]
+            },
+            "far_upper": {
+              "layer": "rear",
+              "at": {
+                "node": "root",
+                "point": [
+                  54,
+                  41
+                ]
+              },
+              "pivot": [
+                0,
+                0
+              ],
+              "angle": -8,
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -4,
+                      0
+                    ],
+                    [
+                      3,
+                      0
+                    ],
+                    [
+                      3,
+                      17
+                    ],
+                    [
+                      -3,
+                      17
+                    ]
+                  ],
+                  "color": "blue",
+                  "outline": "ink"
+                },
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -3,
+                      1
+                    ],
+                    [
+                      -1,
+                      1
+                    ],
+                    [
+                      -1,
+                      16
+                    ],
+                    [
+                      -3,
+                      16
+                    ]
+                  ],
+                  "color": "blueS"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      2,
+                      2
+                    ],
+                    [
+                      2,
+                      15
+                    ]
+                  ],
+                  "color": "whiteS",
+                  "stroke_width": 2
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      0,
+                      4
+                    ],
+                    [
+                      1,
+                      7
+                    ],
+                    [
+                      0,
+                      10
+                    ]
+                  ],
+                  "color": "blueL",
+                  "stroke_width": 1
+                }
+              ]
+            },
+            "far_fore": {
+              "layer": "rear",
+              "at": {
+                "node": "far_upper",
+                "point": [
+                  0,
+                  16
+                ]
+              },
+              "pivot": [
+                0,
+                0
+              ],
+              "angle": 8,
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -3,
+                      0
+                    ],
+                    [
+                      2,
+                      0
+                    ],
+                    [
+                      2,
+                      16
+                    ],
+                    [
+                      -2,
+                      16
+                    ]
+                  ],
+                  "color": "blue",
+                  "outline": "ink"
+                },
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -2,
+                      1
+                    ],
+                    [
+                      -1,
+                      1
+                    ],
+                    [
+                      -1,
+                      15
+                    ],
+                    [
+                      -2,
+                      15
+                    ]
+                  ],
+                  "color": "blueS"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      1,
+                      2
+                    ],
+                    [
+                      1,
+                      14
+                    ]
+                  ],
+                  "color": "whiteS",
+                  "stroke_width": 2
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      0,
+                      4
+                    ],
+                    [
+                      1,
+                      7
+                    ],
+                    [
+                      0,
+                      10
+                    ]
+                  ],
+                  "color": "blueL",
+                  "stroke_width": 1
+                }
+              ]
+            },
+            "far_hand": {
+              "layer": "rear",
+              "at": {
+                "node": "far_fore",
+                "point": [
+                  0,
+                  15
+                ]
+              },
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -2,
+                      0
+                    ],
+                    [
+                      2,
+                      0
+                    ],
+                    [
+                      3,
+                      5
+                    ],
+                    [
+                      0,
+                      7
+                    ],
+                    [
+                      -2,
+                      5
+                    ]
+                  ],
+                  "color": "skin",
+                  "outline": "ink"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      1,
+                      2
+                    ],
+                    [
+                      1,
+                      5
+                    ]
+                  ],
+                  "color": "skinL",
+                  "stroke_width": 1
+                }
+              ]
+            },
+            "near_thigh": {
+              "layer": "body",
+              "at": {
+                "node": "root",
+                "point": [
+                  40,
+                  72
+                ]
+              },
+              "pivot": [
+                0,
+                0
+              ],
+              "angle": -3,
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -5,
+                      0
+                    ],
+                    [
+                      4,
+                      0
+                    ],
+                    [
+                      4,
+                      22
+                    ],
+                    [
+                      -4,
+                      22
+                    ]
+                  ],
+                  "color": "blue",
+                  "outline": "ink"
+                },
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -4,
+                      1
+                    ],
+                    [
+                      -1,
+                      1
+                    ],
+                    [
+                      -1,
+                      21
+                    ],
+                    [
+                      -4,
+                      21
+                    ]
+                  ],
+                  "color": "blueS"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      3,
+                      2
+                    ],
+                    [
+                      3,
+                      20
+                    ]
+                  ],
+                  "color": "whiteS",
+                  "stroke_width": 2
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      0,
+                      4
+                    ],
+                    [
+                      1,
+                      7
+                    ],
+                    [
+                      0,
+                      10
+                    ]
+                  ],
+                  "color": "blueL",
+                  "stroke_width": 1
+                }
+              ]
+            },
+            "near_shin": {
+              "layer": "body",
+              "at": {
+                "node": "near_thigh",
+                "point": [
+                  0,
+                  21
+                ]
+              },
+              "pivot": [
+                0,
+                0
+              ],
+              "angle": 2,
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -4,
+                      0
+                    ],
+                    [
+                      3,
+                      0
+                    ],
+                    [
+                      3,
+                      21
+                    ],
+                    [
+                      -3,
+                      21
+                    ]
+                  ],
+                  "color": "blue",
+                  "outline": "ink"
+                },
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -3,
+                      1
+                    ],
+                    [
+                      -1,
+                      1
+                    ],
+                    [
+                      -1,
+                      20
+                    ],
+                    [
+                      -3,
+                      20
+                    ]
+                  ],
+                  "color": "blueS"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      2,
+                      2
+                    ],
+                    [
+                      2,
+                      19
+                    ]
+                  ],
+                  "color": "whiteS",
+                  "stroke_width": 2
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      0,
+                      4
+                    ],
+                    [
+                      1,
+                      7
+                    ],
+                    [
+                      0,
+                      10
+                    ]
+                  ],
+                  "color": "blueL",
+                  "stroke_width": 1
+                }
+              ]
+            },
+            "near_shoe": {
+              "layer": "body",
+              "at": {
+                "node": "near_shin",
+                "point": [
+                  0,
+                  20
+                ]
+              },
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -4,
+                      -2
+                    ],
+                    [
+                      3,
+                      -2
+                    ],
+                    [
+                      8,
+                      2
+                    ],
+                    [
+                      8,
+                      5
+                    ],
+                    [
+                      -5,
+                      5
+                    ]
+                  ],
+                  "color": "white",
+                  "outline": "ink"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      -4,
+                      4
+                    ],
+                    [
+                      7,
+                      4
+                    ]
+                  ],
+                  "color": "whiteS",
+                  "stroke_width": 1
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      -1,
+                      0
+                    ],
+                    [
+                      2,
+                      0
+                    ]
+                  ],
+                  "color": "gray",
+                  "stroke_width": 1
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      1,
+                      2
+                    ],
+                    [
+                      5,
+                      2
+                    ]
+                  ],
+                  "color": "blueL",
+                  "stroke_width": 1
+                }
+              ]
+            },
+            "torso": {
+              "layer": "body",
+              "at": {
+                "node": "root",
+                "point": [
+                  0,
+                  0
+                ]
+              },
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      35,
+                      40
+                    ],
+                    [
+                      42,
+                      35
+                    ],
+                    [
+                      50,
+                      35
+                    ],
+                    [
+                      57,
+                      41
+                    ],
+                    [
+                      55,
+                      73
+                    ],
+                    [
+                      36,
+                      73
+                    ]
+                  ],
+                  "color": "blue",
+                  "outline": "ink"
+                },
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      36,
+                      42
+                    ],
+                    [
+                      41,
+                      38
+                    ],
+                    [
+                      42,
+                      70
+                    ],
+                    [
+                      37,
+                      72
+                    ]
+                  ],
+                  "color": "blueS"
+                },
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      49,
+                      38
+                    ],
+                    [
+                      54,
+                      41
+                    ],
+                    [
+                      53,
+                      70
+                    ],
+                    [
+                      49,
+                      70
+                    ]
+                  ],
+                  "color": "blueL"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      37,
+                      43
+                    ],
+                    [
+                      38,
+                      65
+                    ],
+                    [
+                      37,
+                      71
+                    ]
+                  ],
+                  "color": "white",
+                  "stroke_width": 2
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      52,
+                      41
+                    ],
+                    [
+                      52,
+                      69
+                    ]
+                  ],
+                  "color": "white",
+                  "stroke_width": 2
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      45,
+                      39
+                    ],
+                    [
+                      45,
+                      70
+                    ]
+                  ],
+                  "color": "whiteS",
+                  "stroke_width": 1
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      43,
+                      46
+                    ],
+                    [
+                      41,
+                      50
+                    ],
+                    [
+                      42,
+                      54
+                    ]
+                  ],
+                  "color": "blueH",
+                  "stroke_width": 1
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      49,
+                      53
+                    ],
+                    [
+                      47,
+                      58
+                    ],
+                    [
+                      49,
+                      63
+                    ]
+                  ],
+                  "color": "blueH",
+                  "stroke_width": 1
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      38,
+                      69
+                    ],
+                    [
+                      53,
+                      69
+                    ]
+                  ],
+                  "color": "blueD",
+                  "stroke_width": 2
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      46,
+                      40
+                    ],
+                    [
+                      47,
+                      44
+                    ],
+                    [
+                      47,
+                      47
+                    ]
+                  ],
+                  "color": "goldL",
+                  "stroke_width": 1
+                },
+                {
+                  "op": "rect",
+                  "box": [
+                    46,
+                    47,
+                    47,
+                    49
+                  ],
+                  "color": "gray"
+                },
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      41,
+                      34
+                    ],
+                    [
+                      49,
+                      34
+                    ],
+                    [
+                      50,
+                      38
+                    ],
+                    [
+                      46,
+                      42
+                    ],
+                    [
+                      41,
+                      38
+                    ]
+                  ],
+                  "color": "skinS",
+                  "outline": "ink"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      41,
+                      37
+                    ],
+                    [
+                      42,
+                      42
+                    ],
+                    [
+                      46,
+                      45
+                    ],
+                    [
+                      50,
+                      42
+                    ],
+                    [
+                      52,
+                      38
+                    ]
+                  ],
+                  "color": "goldD",
+                  "stroke_width": 2
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      41,
+                      36
+                    ],
+                    [
+                      42,
+                      41
+                    ],
+                    [
+                      46,
+                      44
+                    ],
+                    [
+                      50,
+                      41
+                    ],
+                    [
+                      51,
+                      37
+                    ]
+                  ],
+                  "color": "gold",
+                  "stroke_width": 1
+                },
+                {
+                  "op": "circle",
+                  "center": [
+                    46,
+                    46
+                  ],
+                  "radius": 2,
+                  "color": "gold",
+                  "outline": "goldD"
+                },
+                {
+                  "op": "pixels",
+                  "pixels": [
+                    [
+                      46,
+                      45,
+                      "goldL"
+                    ],
+                    [
+                      46,
+                      46,
+                      "white"
+                    ],
+                    [
+                      44,
+                      48,
+                      "blueH"
+                    ]
+                  ]
+                }
+              ]
+            },
+            "head": {
+              "layer": "body",
+              "at": {
+                "node": "root",
+                "point": [
+                  36,
+                  10
+                ]
+              },
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      4,
+                      0
+                    ],
+                    [
+                      13,
+                      0
+                    ],
+                    [
+                      17,
+                      3
+                    ],
+                    [
+                      18,
+                      9
+                    ],
+                    [
+                      17,
+                      13
+                    ],
+                    [
+                      19,
+                      15
+                    ],
+                    [
+                      17,
+                      17
+                    ],
+                    [
+                      16,
+                      22
+                    ],
+                    [
+                      11,
+                      25
+                    ],
+                    [
+                      5,
+                      23
+                    ],
+                    [
+                      2,
+                      18
+                    ],
+                    [
+                      1,
+                      10
+                    ],
+                    [
+                      2,
+                      4
+                    ]
+                  ],
+                  "color": "skin",
+                  "outline": "ink"
+                },
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      2,
+                      5
+                    ],
+                    [
+                      6,
+                      3
+                    ],
+                    [
+                      5,
+                      18
+                    ],
+                    [
+                      8,
+                      23
+                    ],
+                    [
+                      5,
+                      22
+                    ],
+                    [
+                      2,
+                      17
+                    ]
+                  ],
+                  "color": "skinS"
+                },
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      11,
+                      4
+                    ],
+                    [
+                      15,
+                      6
+                    ],
+                    [
+                      16,
+                      12
+                    ],
+                    [
+                      18,
+                      15
+                    ],
+                    [
+                      15,
+                      16
+                    ],
+                    [
+                      14,
+                      21
+                    ],
+                    [
+                      11,
+                      22
+                    ],
+                    [
+                      10,
+                      16
+                    ]
+                  ],
+                  "color": "skinL"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      11,
+                      7
+                    ],
+                    [
+                      14,
+                      8
+                    ],
+                    [
+                      15,
+                      10
+                    ]
+                  ],
+                  "color": "skinH",
+                  "stroke_width": 1
+                },
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      2,
+                      3
+                    ],
+                    [
+                      5,
+                      0
+                    ],
+                    [
+                      13,
+                      0
+                    ],
+                    [
+                      17,
+                      3
+                    ],
+                    [
+                      17,
+                      6
+                    ],
+                    [
+                      13,
+                      4
+                    ],
+                    [
+                      10,
+                      3
+                    ],
+                    [
+                      5,
+                      5
+                    ],
+                    [
+                      3,
+                      11
+                    ],
+                    [
+                      1,
+                      10
+                    ]
+                  ],
+                  "color": "hair",
+                  "outline": "ink"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      4,
+                      4
+                    ],
+                    [
+                      6,
+                      2
+                    ],
+                    [
+                      9,
+                      1
+                    ],
+                    [
+                      12,
+                      2
+                    ]
+                  ],
+                  "color": "hairHi",
+                  "stroke_width": 1
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      2,
+                      8
+                    ],
+                    [
+                      1,
+                      15
+                    ],
+                    [
+                      1,
+                      26
+                    ]
+                  ],
+                  "color": "hair",
+                  "stroke_width": 3
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      4,
+                      7
+                    ],
+                    [
+                      3,
+                      17
+                    ],
+                    [
+                      4,
+                      27
+                    ]
+                  ],
+                  "color": "hair",
+                  "stroke_width": 2
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      1,
+                      11
+                    ],
+                    [
+                      2,
+                      12
+                    ],
+                    [
+                      1,
+                      14
+                    ],
+                    [
+                      2,
+                      16
+                    ],
+                    [
+                      1,
+                      18
+                    ],
+                    [
+                      2,
+                      20
+                    ],
+                    [
+                      1,
+                      23
+                    ]
+                  ],
+                  "color": "hairHi",
+                  "stroke_width": 1
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      4,
+                      12
+                    ],
+                    [
+                      5,
+                      14
+                    ],
+                    [
+                      4,
+                      17
+                    ],
+                    [
+                      5,
+                      20
+                    ],
+                    [
+                      4,
+                      24
+                    ]
+                  ],
+                  "color": "hairHi",
+                  "stroke_width": 1
+                },
+                {
+                  "op": "rect",
+                  "box": [
+                    6,
+                    9,
+                    11,
+                    12
+                  ],
+                  "color": "ink"
+                },
+                {
+                  "op": "rect",
+                  "box": [
+                    13,
+                    9,
+                    17,
+                    12
+                  ],
+                  "color": "ink"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      10,
+                      9
+                    ],
+                    [
+                      14,
+                      9
+                    ]
+                  ],
+                  "color": "goldD",
+                  "stroke_width": 1
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      7,
+                      9
+                    ],
+                    [
+                      10,
+                      9
+                    ]
+                  ],
+                  "color": "gray",
+                  "stroke_width": 1
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      14,
+                      9
+                    ],
+                    [
+                      16,
+                      9
+                    ]
+                  ],
+                  "color": "gray",
+                  "stroke_width": 1
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      14,
+                      13
+                    ],
+                    [
+                      15,
+                      16
+                    ],
+                    [
+                      13,
+                      17
+                    ]
+                  ],
+                  "color": "skinS",
+                  "stroke_width": 1
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      9,
+                      18
+                    ],
+                    [
+                      11,
+                      17
+                    ],
+                    [
+                      15,
+                      18
+                    ]
+                  ],
+                  "color": "hair",
+                  "stroke_width": 1
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      11,
+                      20
+                    ],
+                    [
+                      14,
+                      20
+                    ]
+                  ],
+                  "color": "skinD",
+                  "stroke_width": 1
+                },
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      7,
+                      20
+                    ],
+                    [
+                      10,
+                      22
+                    ],
+                    [
+                      14,
+                      21
+                    ],
+                    [
+                      14,
+                      24
+                    ],
+                    [
+                      11,
+                      25
+                    ],
+                    [
+                      8,
+                      24
+                    ]
+                  ],
+                  "color": "hair"
+                },
+                {
+                  "op": "pixels",
+                  "pixels": [
+                    [
+                      15,
+                      17,
+                      "skinH"
+                    ],
+                    [
+                      11,
+                      19,
+                      "skinL"
+                    ],
+                    [
+                      14,
+                      23,
+                      "hairHi"
+                    ],
+                    [
+                      5,
+                      13,
+                      "goldL"
+                    ],
+                    [
+                      5,
+                      14,
+                      "gold"
+                    ]
+                  ]
+                }
+              ]
+            },
+            "near_upper": {
+              "layer": "front",
+              "at": {
+                "node": "root",
+                "point": [
+                  36,
+                  42
+                ]
+              },
+              "pivot": [
+                0,
+                0
+              ],
+              "angle": -25,
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -4,
+                      0
+                    ],
+                    [
+                      3,
+                      0
+                    ],
+                    [
+                      3,
+                      18
+                    ],
+                    [
+                      -3,
+                      18
+                    ]
+                  ],
+                  "color": "blue",
+                  "outline": "ink"
+                },
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -3,
+                      1
+                    ],
+                    [
+                      -1,
+                      1
+                    ],
+                    [
+                      -1,
+                      17
+                    ],
+                    [
+                      -3,
+                      17
+                    ]
+                  ],
+                  "color": "blueS"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      2,
+                      2
+                    ],
+                    [
+                      2,
+                      16
+                    ]
+                  ],
+                  "color": "whiteS",
+                  "stroke_width": 2
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      0,
+                      4
+                    ],
+                    [
+                      1,
+                      7
+                    ],
+                    [
+                      0,
+                      10
+                    ]
+                  ],
+                  "color": "blueL",
+                  "stroke_width": 1
+                }
+              ]
+            },
+            "near_fore": {
+              "layer": "front",
+              "at": {
+                "node": "near_upper",
+                "point": [
+                  0,
+                  17
+                ]
+              },
+              "pivot": [
+                0,
+                0
+              ],
+              "angle": -90,
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -3,
+                      0
+                    ],
+                    [
+                      2,
+                      0
+                    ],
+                    [
+                      2,
+                      18
+                    ],
+                    [
+                      -2,
+                      18
+                    ]
+                  ],
+                  "color": "blue",
+                  "outline": "ink"
+                },
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -2,
+                      1
+                    ],
+                    [
+                      -1,
+                      1
+                    ],
+                    [
+                      -1,
+                      17
+                    ],
+                    [
+                      -2,
+                      17
+                    ]
+                  ],
+                  "color": "blueS"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      1,
+                      2
+                    ],
+                    [
+                      1,
+                      16
+                    ]
+                  ],
+                  "color": "whiteS",
+                  "stroke_width": 2
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      0,
+                      4
+                    ],
+                    [
+                      1,
+                      7
+                    ],
+                    [
+                      0,
+                      10
+                    ]
+                  ],
+                  "color": "blueL",
+                  "stroke_width": 1
+                }
+              ]
+            },
+            "cigar": {
+              "layer": "prop",
+              "at": {
+                "node": "near_fore",
+                "point": [
+                  0,
+                  17
+                ]
+              },
+              "angle": -12,
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -3,
+                      -4
+                    ],
+                    [
+                      37,
+                      -4
+                    ],
+                    [
+                      41,
+                      -2
+                    ],
+                    [
+                      42,
+                      2
+                    ],
+                    [
+                      39,
+                      4
+                    ],
+                    [
+                      -3,
+                      4
+                    ]
+                  ],
+                  "color": "cigar",
+                  "outline": "ink"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      -1,
+                      -3
+                    ],
+                    [
+                      36,
+                      -3
+                    ],
+                    [
+                      39,
+                      -1
+                    ]
+                  ],
+                  "color": "cigarL"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      0,
+                      3
+                    ],
+                    [
+                      37,
+                      3
+                    ]
+                  ],
+                  "color": "cigarD",
+                  "stroke_width": 2
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      3,
+                      -3
+                    ],
+                    [
+                      8,
+                      3
+                    ]
+                  ],
+                  "color": "cigarD"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      11,
+                      -3
+                    ],
+                    [
+                      16,
+                      3
+                    ]
+                  ],
+                  "color": "cigarD"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      19,
+                      -3
+                    ],
+                    [
+                      24,
+                      3
+                    ]
+                  ],
+                  "color": "cigarD"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      27,
+                      -3
+                    ],
+                    [
+                      32,
+                      3
+                    ]
+                  ],
+                  "color": "cigarD"
+                },
+                {
+                  "op": "rect",
+                  "box": [
+                    30,
+                    -3,
+                    34,
+                    3
+                  ],
+                  "color": "goldD"
+                },
+                {
+                  "op": "rect",
+                  "box": [
+                    31,
+                    -3,
+                    33,
+                    2
+                  ],
+                  "color": "gold"
+                },
+                {
+                  "op": "pixels",
+                  "pixels": [
+                    [
+                      31,
+                      -2,
+                      "goldL"
+                    ],
+                    [
+                      32,
+                      -1,
+                      "white"
+                    ],
+                    [
+                      33,
+                      0,
+                      "goldL"
+                    ],
+                    [
+                      32,
+                      1,
+                      "goldL"
+                    ]
+                  ]
+                },
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      37,
+                      -3
+                    ],
+                    [
+                      40,
+                      -2
+                    ],
+                    [
+                      41,
+                      0
+                    ],
+                    [
+                      40,
+                      3
+                    ],
+                    [
+                      37,
+                      3
+                    ]
+                  ],
+                  "color": "ash"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      37,
+                      -2
+                    ],
+                    [
+                      39,
+                      -1
+                    ],
+                    [
+                      37,
+                      1
+                    ],
+                    [
+                      39,
+                      2
+                    ]
+                  ],
+                  "color": "gray"
+                },
+                {
+                  "op": "rect",
+                  "box": [
+                    40,
+                    -1,
+                    41,
+                    2
+                  ],
+                  "color": "ember"
+                },
+                {
+                  "op": "pixels",
+                  "pixels": [
+                    [
+                      41,
+                      0,
+                      "fire"
+                    ],
+                    [
+                      40,
+                      1,
+                      "fire"
+                    ]
+                  ]
+                }
+              ]
+            },
+            "near_hand": {
+              "layer": "hand",
+              "at": {
+                "node": "near_fore",
+                "point": [
+                  0,
+                  17
+                ]
+              },
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -3,
+                      -3
+                    ],
+                    [
+                      1,
+                      -4
+                    ],
+                    [
+                      4,
+                      -2
+                    ],
+                    [
+                      3,
+                      3
+                    ],
+                    [
+                      0,
+                      5
+                    ],
+                    [
+                      -3,
+                      2
+                    ]
+                  ],
+                  "color": "skin",
+                  "outline": "ink"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      -2,
+                      -2
+                    ],
+                    [
+                      0,
+                      -2
+                    ],
+                    [
+                      2,
+                      -1
+                    ]
+                  ],
+                  "color": "skinL",
+                  "stroke_width": 1
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      0,
+                      1
+                    ],
+                    [
+                      2,
+                      1
+                    ]
+                  ],
+                  "color": "skinS",
+                  "stroke_width": 1
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      -2,
+                      2
+                    ],
+                    [
+                      0,
+                      3
+                    ]
+                  ],
+                  "color": "skinL",
+                  "stroke_width": 1
+                },
+                {
+                  "op": "rect",
+                  "box": [
+                    -4,
+                    -4,
+                    -2,
+                    -2
+                  ],
+                  "color": "gold"
+                },
+                {
+                  "op": "pixels",
+                  "pixels": [
+                    [
+                      -3,
+                      -4,
+                      "goldL"
+                    ]
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "north-east": {
+          "nodes": {
+            "root": {
+              "layer": "body",
+              "at": [
+                0,
+                0
+              ],
+              "draw": []
+            },
+            "far_thigh": {
+              "layer": "rear",
+              "at": {
+                "node": "root",
+                "point": [
+                  51,
+                  72
+                ]
+              },
+              "pivot": [
+                0,
+                0
+              ],
+              "angle": 3,
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -5,
+                      0
+                    ],
+                    [
+                      4,
+                      0
+                    ],
+                    [
+                      4,
+                      21
+                    ],
+                    [
+                      -4,
+                      21
+                    ]
+                  ],
+                  "color": "blue",
+                  "outline": "ink"
+                },
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -4,
+                      1
+                    ],
+                    [
+                      -1,
+                      1
+                    ],
+                    [
+                      -1,
+                      20
+                    ],
+                    [
+                      -4,
+                      20
+                    ]
+                  ],
+                  "color": "blueS"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      3,
+                      2
+                    ],
+                    [
+                      3,
+                      19
+                    ]
+                  ],
+                  "color": "whiteS",
+                  "stroke_width": 2
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      0,
+                      4
+                    ],
+                    [
+                      1,
+                      7
+                    ],
+                    [
+                      0,
+                      10
+                    ]
+                  ],
+                  "color": "blueL",
+                  "stroke_width": 1
+                }
+              ]
+            },
+            "far_shin": {
+              "layer": "rear",
+              "at": {
+                "node": "far_thigh",
+                "point": [
+                  0,
+                  20
+                ]
+              },
+              "pivot": [
+                0,
+                0
+              ],
+              "angle": -2,
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -4,
+                      0
+                    ],
+                    [
+                      3,
+                      0
+                    ],
+                    [
+                      3,
+                      22
+                    ],
+                    [
+                      -3,
+                      22
+                    ]
+                  ],
+                  "color": "blue",
+                  "outline": "ink"
+                },
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -3,
+                      1
+                    ],
+                    [
+                      -1,
+                      1
+                    ],
+                    [
+                      -1,
+                      21
+                    ],
+                    [
+                      -3,
+                      21
+                    ]
+                  ],
+                  "color": "blueS"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      2,
+                      2
+                    ],
+                    [
+                      2,
+                      20
+                    ]
+                  ],
+                  "color": "whiteS",
+                  "stroke_width": 2
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      0,
+                      4
+                    ],
+                    [
+                      1,
+                      7
+                    ],
+                    [
+                      0,
+                      10
+                    ]
+                  ],
+                  "color": "blueL",
+                  "stroke_width": 1
+                }
+              ]
+            },
+            "far_shoe": {
+              "layer": "rear",
+              "at": {
+                "node": "far_shin",
+                "point": [
+                  0,
+                  21
+                ]
+              },
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -4,
+                      -2
+                    ],
+                    [
+                      3,
+                      -2
+                    ],
+                    [
+                      7,
+                      2
+                    ],
+                    [
+                      7,
+                      5
+                    ],
+                    [
+                      -5,
+                      5
+                    ]
+                  ],
+                  "color": "white",
+                  "outline": "ink"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      -4,
+                      4
+                    ],
+                    [
+                      6,
+                      4
+                    ]
+                  ],
+                  "color": "whiteS",
+                  "stroke_width": 1
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      -1,
+                      0
+                    ],
+                    [
+                      2,
+                      0
+                    ]
+                  ],
+                  "color": "gray",
+                  "stroke_width": 1
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      1,
+                      2
+                    ],
+                    [
+                      4,
+                      2
+                    ]
+                  ],
+                  "color": "blueL",
+                  "stroke_width": 1
+                }
+              ]
+            },
+            "far_upper": {
+              "layer": "rear",
+              "at": {
+                "node": "root",
+                "point": [
+                  54,
+                  41
+                ]
+              },
+              "pivot": [
+                0,
+                0
+              ],
+              "angle": -8,
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -4,
+                      0
+                    ],
+                    [
+                      3,
+                      0
+                    ],
+                    [
+                      3,
+                      17
+                    ],
+                    [
+                      -3,
+                      17
+                    ]
+                  ],
+                  "color": "blue",
+                  "outline": "ink"
+                },
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -3,
+                      1
+                    ],
+                    [
+                      -1,
+                      1
+                    ],
+                    [
+                      -1,
+                      16
+                    ],
+                    [
+                      -3,
+                      16
+                    ]
+                  ],
+                  "color": "blueS"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      2,
+                      2
+                    ],
+                    [
+                      2,
+                      15
+                    ]
+                  ],
+                  "color": "whiteS",
+                  "stroke_width": 2
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      0,
+                      4
+                    ],
+                    [
+                      1,
+                      7
+                    ],
+                    [
+                      0,
+                      10
+                    ]
+                  ],
+                  "color": "blueL",
+                  "stroke_width": 1
+                }
+              ]
+            },
+            "far_fore": {
+              "layer": "rear",
+              "at": {
+                "node": "far_upper",
+                "point": [
+                  0,
+                  16
+                ]
+              },
+              "pivot": [
+                0,
+                0
+              ],
+              "angle": 8,
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -3,
+                      0
+                    ],
+                    [
+                      2,
+                      0
+                    ],
+                    [
+                      2,
+                      16
+                    ],
+                    [
+                      -2,
+                      16
+                    ]
+                  ],
+                  "color": "blue",
+                  "outline": "ink"
+                },
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -2,
+                      1
+                    ],
+                    [
+                      -1,
+                      1
+                    ],
+                    [
+                      -1,
+                      15
+                    ],
+                    [
+                      -2,
+                      15
+                    ]
+                  ],
+                  "color": "blueS"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      1,
+                      2
+                    ],
+                    [
+                      1,
+                      14
+                    ]
+                  ],
+                  "color": "whiteS",
+                  "stroke_width": 2
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      0,
+                      4
+                    ],
+                    [
+                      1,
+                      7
+                    ],
+                    [
+                      0,
+                      10
+                    ]
+                  ],
+                  "color": "blueL",
+                  "stroke_width": 1
+                }
+              ]
+            },
+            "far_hand": {
+              "layer": "rear",
+              "at": {
+                "node": "far_fore",
+                "point": [
+                  0,
+                  15
+                ]
+              },
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -2,
+                      0
+                    ],
+                    [
+                      2,
+                      0
+                    ],
+                    [
+                      3,
+                      5
+                    ],
+                    [
+                      0,
+                      7
+                    ],
+                    [
+                      -2,
+                      5
+                    ]
+                  ],
+                  "color": "skin",
+                  "outline": "ink"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      1,
+                      2
+                    ],
+                    [
+                      1,
+                      5
+                    ]
+                  ],
+                  "color": "skinL",
+                  "stroke_width": 1
+                }
+              ]
+            },
+            "near_thigh": {
+              "layer": "body",
+              "at": {
+                "node": "root",
+                "point": [
+                  40,
+                  72
+                ]
+              },
+              "pivot": [
+                0,
+                0
+              ],
+              "angle": -3,
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -5,
+                      0
+                    ],
+                    [
+                      4,
+                      0
+                    ],
+                    [
+                      4,
+                      22
+                    ],
+                    [
+                      -4,
+                      22
+                    ]
+                  ],
+                  "color": "blue",
+                  "outline": "ink"
+                },
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -4,
+                      1
+                    ],
+                    [
+                      -1,
+                      1
+                    ],
+                    [
+                      -1,
+                      21
+                    ],
+                    [
+                      -4,
+                      21
+                    ]
+                  ],
+                  "color": "blueS"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      3,
+                      2
+                    ],
+                    [
+                      3,
+                      20
+                    ]
+                  ],
+                  "color": "whiteS",
+                  "stroke_width": 2
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      0,
+                      4
+                    ],
+                    [
+                      1,
+                      7
+                    ],
+                    [
+                      0,
+                      10
+                    ]
+                  ],
+                  "color": "blueL",
+                  "stroke_width": 1
+                }
+              ]
+            },
+            "near_shin": {
+              "layer": "body",
+              "at": {
+                "node": "near_thigh",
+                "point": [
+                  0,
+                  21
+                ]
+              },
+              "pivot": [
+                0,
+                0
+              ],
+              "angle": 2,
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -4,
+                      0
+                    ],
+                    [
+                      3,
+                      0
+                    ],
+                    [
+                      3,
+                      21
+                    ],
+                    [
+                      -3,
+                      21
+                    ]
+                  ],
+                  "color": "blue",
+                  "outline": "ink"
+                },
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -3,
+                      1
+                    ],
+                    [
+                      -1,
+                      1
+                    ],
+                    [
+                      -1,
+                      20
+                    ],
+                    [
+                      -3,
+                      20
+                    ]
+                  ],
+                  "color": "blueS"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      2,
+                      2
+                    ],
+                    [
+                      2,
+                      19
+                    ]
+                  ],
+                  "color": "whiteS",
+                  "stroke_width": 2
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      0,
+                      4
+                    ],
+                    [
+                      1,
+                      7
+                    ],
+                    [
+                      0,
+                      10
+                    ]
+                  ],
+                  "color": "blueL",
+                  "stroke_width": 1
+                }
+              ]
+            },
+            "near_shoe": {
+              "layer": "body",
+              "at": {
+                "node": "near_shin",
+                "point": [
+                  0,
+                  20
+                ]
+              },
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -4,
+                      -2
+                    ],
+                    [
+                      3,
+                      -2
+                    ],
+                    [
+                      8,
+                      2
+                    ],
+                    [
+                      8,
+                      5
+                    ],
+                    [
+                      -5,
+                      5
+                    ]
+                  ],
+                  "color": "white",
+                  "outline": "ink"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      -4,
+                      4
+                    ],
+                    [
+                      7,
+                      4
+                    ]
+                  ],
+                  "color": "whiteS",
+                  "stroke_width": 1
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      -1,
+                      0
+                    ],
+                    [
+                      2,
+                      0
+                    ]
+                  ],
+                  "color": "gray",
+                  "stroke_width": 1
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      1,
+                      2
+                    ],
+                    [
+                      5,
+                      2
+                    ]
+                  ],
+                  "color": "blueL",
+                  "stroke_width": 1
+                }
+              ]
+            },
+            "torso": {
+              "layer": "body",
+              "at": {
+                "node": "root",
+                "point": [
+                  0,
+                  0
+                ]
+              },
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      35,
+                      40
+                    ],
+                    [
+                      41,
+                      35
+                    ],
+                    [
+                      51,
+                      35
+                    ],
+                    [
+                      57,
+                      41
+                    ],
+                    [
+                      55,
+                      73
+                    ],
+                    [
+                      36,
+                      73
+                    ]
+                  ],
+                  "color": "blue",
+                  "outline": "ink"
+                },
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      36,
+                      42
+                    ],
+                    [
+                      40,
+                      38
+                    ],
+                    [
+                      41,
+                      70
+                    ],
+                    [
+                      37,
+                      72
+                    ]
+                  ],
+                  "color": "blueS"
+                },
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      49,
+                      38
+                    ],
+                    [
+                      54,
+                      41
+                    ],
+                    [
+                      53,
+                      70
+                    ],
+                    [
+                      49,
+                      70
+                    ]
+                  ],
+                  "color": "blueL"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      37,
+                      43
+                    ],
+                    [
+                      38,
+                      65
+                    ],
+                    [
+                      37,
+                      71
+                    ]
+                  ],
+                  "color": "white",
+                  "stroke_width": 2
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      52,
+                      41
+                    ],
+                    [
+                      52,
+                      69
+                    ]
+                  ],
+                  "color": "white",
+                  "stroke_width": 2
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      41,
+                      38
+                    ],
+                    [
+                      46,
+                      40
+                    ],
+                    [
+                      51,
+                      38
+                    ]
+                  ],
+                  "color": "whiteS"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      42,
+                      48
+                    ],
+                    [
+                      45,
+                      47
+                    ],
+                    [
+                      48,
+                      48
+                    ]
+                  ],
+                  "color": "blueH"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      44,
+                      50
+                    ],
+                    [
+                      45,
+                      61
+                    ],
+                    [
+                      43,
+                      65
+                    ]
+                  ],
+                  "color": "blueS"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      49,
+                      54
+                    ],
+                    [
+                      48,
+                      59
+                    ],
+                    [
+                      50,
+                      64
+                    ]
+                  ],
+                  "color": "blueH"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      38,
+                      69
+                    ],
+                    [
+                      53,
+                      69
+                    ]
+                  ],
+                  "color": "blueD",
+                  "stroke_width": 2
+                }
+              ]
+            },
+            "head": {
+              "layer": "body",
+              "at": {
+                "node": "root",
+                "point": [
+                  36,
+                  10
+                ]
+              },
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      3,
+                      1
+                    ],
+                    [
+                      13,
+                      0
+                    ],
+                    [
+                      17,
+                      3
+                    ],
+                    [
+                      18,
+                      10
+                    ],
+                    [
+                      17,
+                      20
+                    ],
+                    [
+                      14,
+                      26
+                    ],
+                    [
+                      4,
+                      26
+                    ],
+                    [
+                      1,
+                      20
+                    ],
+                    [
+                      1,
+                      8
+                    ]
+                  ],
+                  "color": "hair",
+                  "outline": "ink"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      3,
+                      5
+                    ],
+                    [
+                      4,
+                      2
+                    ],
+                    [
+                      8,
+                      1
+                    ],
+                    [
+                      13,
+                      2
+                    ],
+                    [
+                      16,
+                      4
+                    ]
+                  ],
+                  "color": "hairHi"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      4,
+                      5
+                    ],
+                    [
+                      3,
+                      9
+                    ],
+                    [
+                      4,
+                      13
+                    ],
+                    [
+                      3,
+                      17
+                    ],
+                    [
+                      4,
+                      21
+                    ],
+                    [
+                      3,
+                      26
+                    ]
+                  ],
+                  "color": "hairHi"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      8,
+                      5
+                    ],
+                    [
+                      7,
+                      9
+                    ],
+                    [
+                      8,
+                      13
+                    ],
+                    [
+                      7,
+                      17
+                    ],
+                    [
+                      8,
+                      21
+                    ],
+                    [
+                      7,
+                      26
+                    ]
+                  ],
+                  "color": "hairHi"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      12,
+                      5
+                    ],
+                    [
+                      11,
+                      9
+                    ],
+                    [
+                      12,
+                      13
+                    ],
+                    [
+                      11,
+                      17
+                    ],
+                    [
+                      12,
+                      21
+                    ],
+                    [
+                      11,
+                      26
+                    ]
+                  ],
+                  "color": "hairHi"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      16,
+                      5
+                    ],
+                    [
+                      15,
+                      9
+                    ],
+                    [
+                      16,
+                      13
+                    ],
+                    [
+                      15,
+                      17
+                    ],
+                    [
+                      16,
+                      21
+                    ],
+                    [
+                      15,
+                      26
+                    ]
+                  ],
+                  "color": "hairHi"
+                },
+                {
+                  "op": "rect",
+                  "box": [
+                    6,
+                    25,
+                    13,
+                    28
+                  ],
+                  "color": "skinS"
+                },
+                {
+                  "op": "pixels",
+                  "pixels": [
+                    [
+                      1,
+                      14,
+                      "skin"
+                    ],
+                    [
+                      17,
+                      14,
+                      "skinS"
+                    ],
+                    [
+                      2,
+                      16,
+                      "gold"
+                    ],
+                    [
+                      16,
+                      16,
+                      "goldD"
+                    ]
+                  ]
+                }
+              ]
+            },
+            "near_upper": {
+              "layer": "rear",
+              "at": {
+                "node": "root",
+                "point": [
+                  36,
+                  42
+                ]
+              },
+              "pivot": [
+                0,
+                0
+              ],
+              "angle": -25,
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -4,
+                      0
+                    ],
+                    [
+                      3,
+                      0
+                    ],
+                    [
+                      3,
+                      18
+                    ],
+                    [
+                      -3,
+                      18
+                    ]
+                  ],
+                  "color": "blue",
+                  "outline": "ink"
+                },
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -3,
+                      1
+                    ],
+                    [
+                      -1,
+                      1
+                    ],
+                    [
+                      -1,
+                      17
+                    ],
+                    [
+                      -3,
+                      17
+                    ]
+                  ],
+                  "color": "blueS"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      2,
+                      2
+                    ],
+                    [
+                      2,
+                      16
+                    ]
+                  ],
+                  "color": "whiteS",
+                  "stroke_width": 2
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      0,
+                      4
+                    ],
+                    [
+                      1,
+                      7
+                    ],
+                    [
+                      0,
+                      10
+                    ]
+                  ],
+                  "color": "blueL",
+                  "stroke_width": 1
+                }
+              ]
+            },
+            "near_fore": {
+              "layer": "rear",
+              "at": {
+                "node": "near_upper",
+                "point": [
+                  0,
+                  17
+                ]
+              },
+              "pivot": [
+                0,
+                0
+              ],
+              "angle": -90,
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -3,
+                      0
+                    ],
+                    [
+                      2,
+                      0
+                    ],
+                    [
+                      2,
+                      18
+                    ],
+                    [
+                      -2,
+                      18
+                    ]
+                  ],
+                  "color": "blue",
+                  "outline": "ink"
+                },
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -2,
+                      1
+                    ],
+                    [
+                      -1,
+                      1
+                    ],
+                    [
+                      -1,
+                      17
+                    ],
+                    [
+                      -2,
+                      17
+                    ]
+                  ],
+                  "color": "blueS"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      1,
+                      2
+                    ],
+                    [
+                      1,
+                      16
+                    ]
+                  ],
+                  "color": "whiteS",
+                  "stroke_width": 2
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      0,
+                      4
+                    ],
+                    [
+                      1,
+                      7
+                    ],
+                    [
+                      0,
+                      10
+                    ]
+                  ],
+                  "color": "blueL",
+                  "stroke_width": 1
+                }
+              ]
+            },
+            "cigar": {
+              "layer": "rear",
+              "at": {
+                "node": "near_fore",
+                "point": [
+                  0,
+                  17
+                ]
+              },
+              "angle": -12,
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -3,
+                      -4
+                    ],
+                    [
+                      37,
+                      -4
+                    ],
+                    [
+                      41,
+                      -2
+                    ],
+                    [
+                      42,
+                      2
+                    ],
+                    [
+                      39,
+                      4
+                    ],
+                    [
+                      -3,
+                      4
+                    ]
+                  ],
+                  "color": "cigar",
+                  "outline": "ink"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      -1,
+                      -3
+                    ],
+                    [
+                      36,
+                      -3
+                    ],
+                    [
+                      39,
+                      -1
+                    ]
+                  ],
+                  "color": "cigarL"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      0,
+                      3
+                    ],
+                    [
+                      37,
+                      3
+                    ]
+                  ],
+                  "color": "cigarD",
+                  "stroke_width": 2
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      3,
+                      -3
+                    ],
+                    [
+                      8,
+                      3
+                    ]
+                  ],
+                  "color": "cigarD"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      11,
+                      -3
+                    ],
+                    [
+                      16,
+                      3
+                    ]
+                  ],
+                  "color": "cigarD"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      19,
+                      -3
+                    ],
+                    [
+                      24,
+                      3
+                    ]
+                  ],
+                  "color": "cigarD"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      27,
+                      -3
+                    ],
+                    [
+                      32,
+                      3
+                    ]
+                  ],
+                  "color": "cigarD"
+                },
+                {
+                  "op": "rect",
+                  "box": [
+                    30,
+                    -3,
+                    34,
+                    3
+                  ],
+                  "color": "goldD"
+                },
+                {
+                  "op": "rect",
+                  "box": [
+                    31,
+                    -3,
+                    33,
+                    2
+                  ],
+                  "color": "gold"
+                },
+                {
+                  "op": "pixels",
+                  "pixels": [
+                    [
+                      31,
+                      -2,
+                      "goldL"
+                    ],
+                    [
+                      32,
+                      -1,
+                      "white"
+                    ],
+                    [
+                      33,
+                      0,
+                      "goldL"
+                    ],
+                    [
+                      32,
+                      1,
+                      "goldL"
+                    ]
+                  ]
+                },
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      37,
+                      -3
+                    ],
+                    [
+                      40,
+                      -2
+                    ],
+                    [
+                      41,
+                      0
+                    ],
+                    [
+                      40,
+                      3
+                    ],
+                    [
+                      37,
+                      3
+                    ]
+                  ],
+                  "color": "ash"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      37,
+                      -2
+                    ],
+                    [
+                      39,
+                      -1
+                    ],
+                    [
+                      37,
+                      1
+                    ],
+                    [
+                      39,
+                      2
+                    ]
+                  ],
+                  "color": "gray"
+                },
+                {
+                  "op": "rect",
+                  "box": [
+                    40,
+                    -1,
+                    41,
+                    2
+                  ],
+                  "color": "ember"
+                },
+                {
+                  "op": "pixels",
+                  "pixels": [
+                    [
+                      41,
+                      0,
+                      "fire"
+                    ],
+                    [
+                      40,
+                      1,
+                      "fire"
+                    ]
+                  ]
+                }
+              ]
+            },
+            "near_hand": {
+              "layer": "rear",
+              "at": {
+                "node": "near_fore",
+                "point": [
+                  0,
+                  17
+                ]
+              },
+              "draw": [
+                {
+                  "op": "polygon",
+                  "points": [
+                    [
+                      -3,
+                      -3
+                    ],
+                    [
+                      1,
+                      -4
+                    ],
+                    [
+                      4,
+                      -2
+                    ],
+                    [
+                      3,
+                      3
+                    ],
+                    [
+                      0,
+                      5
+                    ],
+                    [
+                      -3,
+                      2
+                    ]
+                  ],
+                  "color": "skin",
+                  "outline": "ink"
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      -2,
+                      -2
+                    ],
+                    [
+                      0,
+                      -2
+                    ],
+                    [
+                      2,
+                      -1
+                    ]
+                  ],
+                  "color": "skinL",
+                  "stroke_width": 1
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      0,
+                      1
+                    ],
+                    [
+                      2,
+                      1
+                    ]
+                  ],
+                  "color": "skinS",
+                  "stroke_width": 1
+                },
+                {
+                  "op": "path",
+                  "points": [
+                    [
+                      -2,
+                      2
+                    ],
+                    [
+                      0,
+                      3
+                    ]
+                  ],
+                  "color": "skinL",
+                  "stroke_width": 1
+                },
+                {
+                  "op": "rect",
+                  "box": [
+                    -4,
+                    -4,
+                    -2,
+                    -2
+                  ],
+                  "color": "gold"
+                },
+                {
+                  "op": "pixels",
+                  "pixels": [
+                    [
+                      -3,
+                      -4,
+                      "goldL"
+                    ]
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "receipt": "drawing_id: 490d196f-18f3-4be3-a3e0-35fba92f42c5\ncanvas 112x128, 1 frames, 100 ms, views: south-east, south-west (mirror of south-east), north-east, north-west (mirror of north-east)\nstate: needs_visual_review\nlayers (south-east): Body - far limbs | Body - face and clothing | Body - near arm | Prop - charutao | Body - gripping hand\nnodes (south-east): cigar, far_fore, far_hand, far_shin, far_shoe, far_thigh, far_upper, head, near_fore, near_hand, near_shin, near_shoe, near_thigh, near_upper, root, torso\nlayers (north-east): Body - far limbs | Body - face and clothing | Body - near arm | Prop - charutao | Body - gripping hand\nnodes (north-east): cigar, far_fore, far_hand, far_shin, far_shoe, far_thigh, far_upper, head, near_fore, near_hand, near_shin, near_shoe, near_thigh, near_upper, root, torso\nnote: view south-east: no tracks or poses — every frame is the rest pose\nnote: view south-east: no selections — the source is not cut into parts\nnote: view north-east: no tracks or poses — every frame is the rest pose\nnote: view north-east: no selections — the source is not cut into parts\nnote: view south-east: no source given — transparent canvas\nnote: view north-east: no source given — transparent canvas\nimages: assets/south-east/review/full-01.png, assets/south-west/review/full-01.png, assets/north-east/review/full-01.png\n(+6 more evidence images — body-only, change masks, palette: repeat with mode=\"high\", or zoom with --inspect […])\ndownload https://api.pixellab.ai/mcp/pixel-tools/490d196f-18f3-4be3-a3e0-35fba92f42c5/: assets/south-east/animation.gif, assets/south-east/full.png, assets/south-east/layers.npz, recipe.json\nnext: draw --drawing 490d196f-18f3-4be3-a3e0-35fba92f42c5 --changes […]"
+}

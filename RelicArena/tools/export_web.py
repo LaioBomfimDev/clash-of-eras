@@ -8,6 +8,20 @@ import shutil
 import subprocess
 
 
+def sha256(path):
+    with path.open('rb') as stream:
+        return hashlib.file_digest(stream, 'sha256').hexdigest()
+
+
+def source_manifest(project):
+    files = [project / name for name in ('project.godot', 'main.tscn', 'export_presets.cfg')]
+    for directory in ('client', 'data', 'simulation', 'net', 'server', 'assets'):
+        files.extend(path for path in (project / directory).rglob('*')
+                     if path.is_file() and '__pycache__' not in path.parts
+                     and path.suffix != '.tmp')
+    return {path.relative_to(project).as_posix(): sha256(path) for path in sorted(files)}
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--godot', required=True)
@@ -18,14 +32,22 @@ def main():
     project = args.project.resolve(strict=True)
     output = args.output.resolve()
     output.parent.mkdir(parents=True, exist_ok=True)
+    sources_before = source_manifest(project)
+    git_head = subprocess.run(['git', '-C', str(project), 'rev-parse', 'HEAD'],
+                              check=True, capture_output=True, text=True).stdout.strip()
     subprocess.run([args.godot, '--headless', '--path', str(project), '--export-release', 'Web', str(output)], check=True)
     shutil.copy2(project / 'client/lobby_video.js', output.parent / 'lobby_video.js')
     media = output.parent / 'media'
     media.mkdir(exist_ok=True)
     for name in ('lobby_loop.mp4', 'lobby_poster.webp'):
         shutil.copy2(project / 'client/web_media' / name, media / name)
-    def sha256(path):
-        return hashlib.sha256(path.read_bytes()).hexdigest()
+    sources_after = source_manifest(project)
+    if sources_before != sources_after:
+        changed = sorted(name for name in sources_before.keys() | sources_after.keys()
+                         if sources_before.get(name) != sources_after.get(name))
+        raise RuntimeError('Source changed during export; do not publish this build: ' + ', '.join(changed[:20]))
+    manifest_path = output.parent / 'source_manifest.json'
+    manifest_path.write_text(json.dumps(sources_after, indent=2) + '\n', encoding='utf-8')
     source_files = ['client/main.gd', 'client/prototype_audio.gd', 'assets/vfx/manifest.json',
                     'data/debug_characters.json', 'simulation/arena_simulation.gd',
                     'simulation/match_session.gd', 'server/dedicated_server.gd',
@@ -33,8 +55,13 @@ def main():
     release = {
         'build_id': args.build_id or datetime.now(timezone.utc).strftime('web-%Y%m%dT%H%M%SZ'),
         'source': 'exported-workspace; source hashes recorded at export',
+        'source_git_head_at_export': git_head,
+        'source_manifest_sha256': sha256(manifest_path),
+        'source_file_count': len(sources_after),
         'pck_sha256': sha256(output.with_suffix('.pck')),
         'html_sha256': sha256(output),
+        'wasm_sha256': sha256(output.with_suffix('.wasm')),
+        'javascript_sha256': sha256(output.with_suffix('.js')),
         'simulation_sha256': sha256(project / 'simulation/arena_simulation.gd'),
         'server_sha256': sha256(project / 'net/online_server.gd'),
         'dedicated_entrypoint_sha256': sha256(project / 'server/dedicated_server.gd'),

@@ -701,7 +701,7 @@ func _run() -> void:
 	await process_frame
 	view.set_process(false)
 	_check(view._phase() == "menu" and view.start_button != null, "inicia no menu")
-	_check(view.arena != null and view.arena.resource_path == MainView.ARENA_PATH and view.arena.get_width() > 0, "fundo ativo da arena HD carregado")
+	_check(view.arena != null and view.arena.resource_path == MainView.ARENA_PATH and view.arena.get_width() > 0, "fundo ativo da arena carregado")
 	for team: int in range(2):
 		var visible_hearts: int = 0
 		for icon: TextureRect in view.heart_controls[team]:

@@ -226,7 +226,7 @@ func dismiss_hero(unit_id: int) -> bool:
 	_refresh_view()
 	return true
 
-func edit_unit(unit_id: int, hp: float, damage: float, armor: float, resist: float) -> bool:
+func edit_unit(unit_id: int, hp: float, damage: float, armor: float, resist: float, shield: float = -1.0, mana: float = -1.0, attack_speed: float = -1.0, crit_chance: float = -1.0) -> bool:
 	if not _guard() or view.session.phase != "combat":
 		notice.emit("Atributos diretos são editáveis durante o combate e valem só nesta rodada.")
 		return false
@@ -244,8 +244,205 @@ func edit_unit(unit_id: int, hp: float, damage: float, armor: float, resist: flo
 	unit.attack_damage = damage
 	unit.armor = armor
 	unit.resist = resist
-	_record("atributos_no_combate", {"unit_id": unit_id, "hp": hp, "damage": damage, "armor": armor, "resist": resist})
+	if shield >= 0.0 and is_finite(shield):
+		unit.shield = minf(shield, 100000.0)
+	if mana >= 0.0 and is_finite(mana):
+		unit.mana = clampf(mana, 0.0, 100.0)
+	if attack_speed > 0.0 and is_finite(attack_speed):
+		unit.attack_speed_multiplier = clampf(attack_speed, 0.1, 10.0)
+	if crit_chance >= 0.0 and is_finite(crit_chance):
+		unit.effective_crit_chance = clampf(crit_chance / 100.0, 0.0, 1.0)
+	_record("atributos_no_combate", {
+		"unit_id": unit_id, "hp": hp, "damage": damage, "armor": armor, "resist": resist,
+		"shield": unit.shield, "mana": unit.mana, "speed": unit.attack_speed_multiplier, "crit": unit.effective_crit_chance
+	})
 	_refresh_view()
+	return true
+
+func heal_unit(unit_id: int, ratio: float = 1.0) -> bool:
+	if not _guard() or view.session.phase != "combat":
+		notice.emit("Cura direta disponível durante o combate.")
+		return false
+	var unit = view.session.sim.get_unit(unit_id)
+	if unit == null or not unit.active or not unit.alive:
+		notice.emit("Selecione um combatente vivo.")
+		return false
+	unit.hp = clampf(unit.max_hp * ratio, 1.0, unit.max_hp)
+	_record("curar_combatente", {"unit_id": unit_id, "hp": unit.hp})
+	_refresh_view()
+	notice.emit("Combatente curado: %.0f / %.0f HP." % [unit.hp, unit.max_hp])
+	return true
+
+func kill_unit(unit_id: int) -> bool:
+	if not _guard() or view.session.phase != "combat":
+		notice.emit("Eliminação disponível durante o combate.")
+		return false
+	var unit = view.session.sim.get_unit(unit_id)
+	if unit == null or not unit.active or not unit.alive:
+		notice.emit("Combatente já eliminado ou inválido.")
+		return false
+	unit.hp = 0.0
+	unit.alive = false
+	unit.bleeds.clear()
+	unit.last_action = "dead"
+	unit.dance_shield = 0.0
+	unit.dance_shield_remaining = 0.0
+	view.session.sim._emit("death", {"source_id": -1, "target_id": unit.id})
+	_record("eliminar_combatente", {"unit_id": unit_id})
+	_refresh_view()
+	notice.emit("Combatente #%d eliminado." % unit_id)
+	return true
+
+func stun_unit(unit_id: int, duration: float) -> bool:
+	if not _guard() or view.session.phase != "combat":
+		notice.emit("Atordoamento editável durante o combate.")
+		return false
+	var unit = view.session.sim.get_unit(unit_id)
+	if unit == null or not unit.active or not unit.alive:
+		return false
+	unit.stun_remaining = maxf(0.0, duration)
+	if duration > 0.0:
+		unit.last_action = "stun"
+	_record("atordoar_combatente", {"unit_id": unit_id, "duration": duration})
+	_refresh_view()
+	notice.emit("Stun ajustado para %.1f s." % duration)
+	return true
+
+func instant_win(winner_team: int = 0) -> bool:
+	if not _guard() or view.session.phase != "combat":
+		notice.emit("Vitória rápida disponível durante o combate.")
+		return false
+	var target_team: int = 1 if winner_team == 0 else 0
+	var eliminated: int = 0
+	for unit in view.session.sim.units:
+		if unit.team == target_team and unit.active and unit.alive:
+			unit.hp = 0.0
+			unit.alive = false
+			unit.bleeds.clear()
+			unit.last_action = "dead"
+			view.session.sim._emit("death", {"source_id": -1, "target_id": unit.id})
+			eliminated += 1
+	_record("vitoria_instantanea", {"winner_team": winner_team, "eliminated": eliminated})
+	_refresh_view()
+	notice.emit("Adversários eliminados (%d unidades). Vitória imediata!" % eliminated)
+	return true
+
+func add_gold(team: int, amount: int) -> bool:
+	if not _guard(true) or team not in [0, 1]:
+		return false
+	var s: Session = view.session
+	var new_gold: int = clampi(int(s.teams[team]["gold"]) + amount, 0, 99999)
+	s.teams[team]["gold"] = new_gold
+	_record("adicionar_ouro", {"team": team, "amount": amount, "total": new_gold})
+	_refresh_view()
+	notice.emit("Ouro da equipe ajustado: %d." % new_gold)
+	return true
+
+func set_lives(team: int, lives: int) -> bool:
+	if not _guard(true) or team not in [0, 1]:
+		return false
+	var s: Session = view.session
+	var new_lives: int = clampi(lives, 1, Session.MAX_LIVES)
+	s.sim.team_lives[team] = new_lives
+	_record("definir_vidas", {"team": team, "lives": new_lives})
+	_refresh_view()
+	notice.emit("Vidas da equipe ajustadas para %d." % new_lives)
+	return true
+
+func set_capacity(team: int, cap: int) -> bool:
+	if not _guard(true) or team not in [0, 1]:
+		return false
+	var s: Session = view.session
+	if cap < s._active_count(team) or cap < Session.INITIAL_CAPACITY or cap > Session.MAX_CAPACITY:
+		notice.emit("Capacidade inválida: deve comportar os heróis em campo (%d–%d)." % [Session.INITIAL_CAPACITY, Session.MAX_CAPACITY])
+		return false
+	s.teams[team]["capacity"] = cap
+	_record("definir_capacidade", {"team": team, "capacity": cap})
+	_refresh_view()
+	notice.emit("Capacidade do campo alterada para %d vagas." % cap)
+	return true
+
+func reroll_shop_free(team: int = 0) -> bool:
+	if not _guard(true) or team not in [0, 1]:
+		return false
+	var s: Session = view.session
+	s.teams[team]["shop_revision"] = int(s.teams[team]["shop_revision"]) + 1
+	s._refresh_shop(team)
+	_record("renovar_loja_gratis", {"team": team})
+	_refresh_view()
+	notice.emit("Loja renovada gratuitamente com novas ofertas.")
+	return true
+
+func clear_bag(team: int = 0) -> bool:
+	if not _guard(true) or team not in [0, 1]:
+		return false
+	view.session.teams[team]["bag"].clear()
+	_record("limpar_bolsa", {"team": team})
+	_refresh_view()
+	notice.emit("Bolsa de itens da equipe esvaziada.")
+	return true
+
+func grant_sample_items(team: int = 0) -> bool:
+	if not _guard(true) or team not in [0, 1]:
+		return false
+	var s: Session = view.session
+	var sample_keys: Array[String] = ["blade", "vest", "ward", "boots", "charm"]
+	var count: int = 0
+	for key in sample_keys:
+		if s.teams[team]["bag"].size() >= Session.BAG_CAPACITY:
+			break
+		s.teams[team]["bag"].append(s._new_item(team, key))
+		count += 1
+	_record("kit_itens_basicos", {"team": team, "count": count})
+	_refresh_view()
+	notice.emit("%d itens básicos adicionados à bolsa." % count)
+	return true
+
+func quick_fill_team(team: int = 0, level: int = 2) -> bool:
+	if not _guard(true) or team not in [0, 1]:
+		return false
+	var s: Session = view.session
+	var roster: Array[String] = ["obama", "neymar", "caramelo", "michael", "zumbi", "barbie", "snoop", "elon"]
+	var cap: int = int(s.teams[team]["capacity"])
+	var added: int = 0
+	for key in roster:
+		if s._active_count(team) >= cap:
+			break
+		if grant_hero(team, key, level):
+			added += 1
+	_record("preencher_equipe_rapida", {"team": team, "added": added, "level": level})
+	_refresh_view()
+	notice.emit("%d heróis N%d adicionados à equipe." % [added, level])
+	return true
+
+func boss_trigger_rage(unit_id: int) -> bool:
+	if not _guard() or view.session.phase != "combat":
+		notice.emit("Fúria do Boss disponível somente em combate.")
+		return false
+	var unit = view.session.sim.get_unit(unit_id)
+	if unit == null or not unit.is_boss or not unit.alive:
+		notice.emit("Selecione o Boss Desenvolvedor vivo.")
+		return false
+	unit.boss_enraged = true
+	unit.attack_speed_multiplier = maxf(unit.attack_speed_multiplier, 1.25)
+	view.session.sim._emit("boss_enrage", {"boss_id": unit.id, "cell": [unit.cell.x, unit.cell.y]})
+	_record("boss_furia", {"unit_id": unit_id})
+	_refresh_view()
+	notice.emit("Modo FÚRIA ativado no Boss Desenvolvedor!")
+	return true
+
+func boss_force_teleport(unit_id: int) -> bool:
+	if not _guard() or view.session.phase != "combat":
+		notice.emit("Teleporte disponível somente em combate.")
+		return false
+	var unit = view.session.sim.get_unit(unit_id)
+	if unit == null or not unit.is_boss or not unit.alive:
+		notice.emit("Selecione o Boss Desenvolvedor vivo.")
+		return false
+	unit.boss_teleport_timer = 0.05
+	_record("boss_teleporte", {"unit_id": unit_id})
+	_refresh_view()
+	notice.emit("Teleporte do Boss agendado para o próximo tick!")
 	return true
 
 func edit_timing(preparation: float, duration: float, acceleration: float) -> bool:
