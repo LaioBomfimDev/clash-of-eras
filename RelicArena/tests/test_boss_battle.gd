@@ -134,6 +134,8 @@ func _run() -> void:
 		for u in view.session.sim.units:
 			if u.team == 0:
 				u.hp = 15000.0
+			elif u.id == 999 and u.is_boss:
+				u.hp = max(u.hp, 6000.0)
 		view.session.step(1.0)
 		view._consume_events()
 		view._refresh()

@@ -6024,56 +6024,6 @@
           "loop": true,
           "fps": 24,
           "directions": {
-            "east": {
-              "frames": [
-                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_000.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_001.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_002.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_003.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_004.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_005.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_006.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_007.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_008.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_009.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_010.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_011.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_012.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_013.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_014.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                63
-              ],
-              "fps": 24
-            },
-            "west": {
-              "frames": [
-                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_000.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_001.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_002.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_003.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_004.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_005.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_006.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_007.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_008.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_009.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_010.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_011.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_012.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_013.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_014.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                63
-              ],
-              "fps": 24
-            },
             "south": {
               "frames": [
                 "res://assets/characters/barbie/animacoes_16f/walk/south/frame_000.png",
@@ -6094,33 +6044,8 @@
                 "res://assets/characters/barbie/animacoes_16f/walk/south/frame_015.png"
               ],
               "anchor": [
-                34,
-                61
-              ],
-              "fps": 24
-            },
-            "north": {
-              "frames": [
-                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_000.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_001.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_002.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_003.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_004.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_005.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_006.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_007.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_008.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_009.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_010.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_011.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_012.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_013.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_014.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                62
+                64,
+                119
               ],
               "fps": 24
             },
@@ -6144,33 +6069,33 @@
                 "res://assets/characters/barbie/animacoes_16f/walk/south-east/frame_015.png"
               ],
               "anchor": [
-                34,
-                63
+                64,
+                119
               ],
               "fps": 24
             },
-            "south-west": {
+            "east": {
               "frames": [
-                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_000.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_001.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_002.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_003.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_004.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_005.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_006.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_007.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_008.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_009.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_010.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_011.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_012.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_013.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_014.png",
-                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_015.png"
+                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/east/frame_015.png"
               ],
               "anchor": [
-                34,
-                63
+                64,
+                119
               ],
               "fps": 24
             },
@@ -6194,8 +6119,33 @@
                 "res://assets/characters/barbie/animacoes_16f/walk/north-east/frame_015.png"
               ],
               "anchor": [
-                34,
-                63
+                64,
+                119
+              ],
+              "fps": 24
+            },
+            "north": {
+              "frames": [
+                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/north/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                119
               ],
               "fps": 24
             },
@@ -6219,67 +6169,67 @@
                 "res://assets/characters/barbie/animacoes_16f/walk/north-west/frame_015.png"
               ],
               "anchor": [
-                34,
-                64
+                64,
+                119
+              ],
+              "fps": 24
+            },
+            "west": {
+              "frames": [
+                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                119
+              ],
+              "fps": 24
+            },
+            "south-west": {
+              "frames": [
+                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/walk/south-west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                119
               ],
               "fps": 24
             }
           }
         },
         "attack": {
-          "loop": false,
+          "loop": true,
           "fps": 24,
           "directions": {
-            "east": {
-              "frames": [
-                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_000.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_001.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_002.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_003.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_004.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_005.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_006.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_007.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_008.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_009.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_010.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_011.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_012.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_013.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_014.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                63
-              ],
-              "fps": 24
-            },
-            "west": {
-              "frames": [
-                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_000.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_001.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_002.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_003.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_004.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_005.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_006.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_007.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_008.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_009.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_010.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_011.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_012.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_013.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_014.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                63
-              ],
-              "fps": 24
-            },
             "south": {
               "frames": [
                 "res://assets/characters/barbie/animacoes_16f/attack/south/frame_000.png",
@@ -6300,33 +6250,8 @@
                 "res://assets/characters/barbie/animacoes_16f/attack/south/frame_015.png"
               ],
               "anchor": [
-                34,
-                61
-              ],
-              "fps": 24
-            },
-            "north": {
-              "frames": [
-                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_000.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_001.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_002.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_003.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_004.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_005.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_006.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_007.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_008.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_009.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_010.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_011.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_012.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_013.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_014.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                62
+                64,
+                119
               ],
               "fps": 24
             },
@@ -6350,33 +6275,33 @@
                 "res://assets/characters/barbie/animacoes_16f/attack/south-east/frame_015.png"
               ],
               "anchor": [
-                34,
-                63
+                64,
+                119
               ],
               "fps": 24
             },
-            "south-west": {
+            "east": {
               "frames": [
-                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_000.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_001.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_002.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_003.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_004.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_005.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_006.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_007.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_008.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_009.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_010.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_011.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_012.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_013.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_014.png",
-                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_015.png"
+                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/east/frame_015.png"
               ],
               "anchor": [
-                34,
-                63
+                64,
+                119
               ],
               "fps": 24
             },
@@ -6400,8 +6325,33 @@
                 "res://assets/characters/barbie/animacoes_16f/attack/north-east/frame_015.png"
               ],
               "anchor": [
-                34,
-                63
+                64,
+                119
+              ],
+              "fps": 24
+            },
+            "north": {
+              "frames": [
+                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/north/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                119
               ],
               "fps": 24
             },
@@ -6425,8 +6375,58 @@
                 "res://assets/characters/barbie/animacoes_16f/attack/north-west/frame_015.png"
               ],
               "anchor": [
-                34,
-                64
+                64,
+                119
+              ],
+              "fps": 24
+            },
+            "west": {
+              "frames": [
+                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                119
+              ],
+              "fps": 24
+            },
+            "south-west": {
+              "frames": [
+                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/attack/south-west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                119
               ],
               "fps": 24
             }
@@ -6436,56 +6436,6 @@
           "loop": true,
           "fps": 24,
           "directions": {
-            "east": {
-              "frames": [
-                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_000.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_001.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_002.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_003.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_004.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_005.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_006.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_007.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_008.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_009.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_010.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_011.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_012.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_013.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_014.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                63
-              ],
-              "fps": 24
-            },
-            "west": {
-              "frames": [
-                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_000.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_001.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_002.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_003.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_004.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_005.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_006.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_007.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_008.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_009.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_010.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_011.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_012.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_013.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_014.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                63
-              ],
-              "fps": 24
-            },
             "south": {
               "frames": [
                 "res://assets/characters/barbie/animacoes_16f/stance/south/frame_000.png",
@@ -6506,33 +6456,8 @@
                 "res://assets/characters/barbie/animacoes_16f/stance/south/frame_015.png"
               ],
               "anchor": [
-                34,
-                61
-              ],
-              "fps": 24
-            },
-            "north": {
-              "frames": [
-                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_000.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_001.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_002.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_003.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_004.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_005.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_006.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_007.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_008.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_009.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_010.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_011.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_012.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_013.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_014.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                62
+                64,
+                119
               ],
               "fps": 24
             },
@@ -6556,33 +6481,33 @@
                 "res://assets/characters/barbie/animacoes_16f/stance/south-east/frame_015.png"
               ],
               "anchor": [
-                34,
-                63
+                64,
+                119
               ],
               "fps": 24
             },
-            "south-west": {
+            "east": {
               "frames": [
-                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_000.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_001.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_002.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_003.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_004.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_005.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_006.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_007.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_008.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_009.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_010.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_011.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_012.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_013.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_014.png",
-                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_015.png"
+                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/east/frame_015.png"
               ],
               "anchor": [
-                34,
-                63
+                64,
+                119
               ],
               "fps": 24
             },
@@ -6606,8 +6531,33 @@
                 "res://assets/characters/barbie/animacoes_16f/stance/north-east/frame_015.png"
               ],
               "anchor": [
-                34,
-                63
+                64,
+                119
+              ],
+              "fps": 24
+            },
+            "north": {
+              "frames": [
+                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/north/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                119
               ],
               "fps": 24
             },
@@ -6631,8 +6581,58 @@
                 "res://assets/characters/barbie/animacoes_16f/stance/north-west/frame_015.png"
               ],
               "anchor": [
-                34,
-                64
+                64,
+                119
+              ],
+              "fps": 24
+            },
+            "west": {
+              "frames": [
+                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                119
+              ],
+              "fps": 24
+            },
+            "south-west": {
+              "frames": [
+                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/stance/south-west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                119
               ],
               "fps": 24
             }
@@ -6642,56 +6642,6 @@
           "loop": true,
           "fps": 24,
           "directions": {
-            "east": {
-              "frames": [
-                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_000.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_001.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_002.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_003.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_004.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_005.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_006.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_007.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_008.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_009.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_010.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_011.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_012.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_013.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_014.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                63
-              ],
-              "fps": 24
-            },
-            "west": {
-              "frames": [
-                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_000.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_001.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_002.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_003.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_004.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_005.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_006.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_007.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_008.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_009.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_010.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_011.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_012.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_013.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_014.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                63
-              ],
-              "fps": 24
-            },
             "south": {
               "frames": [
                 "res://assets/characters/barbie/animacoes_16f/stun/south/frame_000.png",
@@ -6712,33 +6662,8 @@
                 "res://assets/characters/barbie/animacoes_16f/stun/south/frame_015.png"
               ],
               "anchor": [
-                34,
-                61
-              ],
-              "fps": 24
-            },
-            "north": {
-              "frames": [
-                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_000.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_001.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_002.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_003.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_004.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_005.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_006.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_007.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_008.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_009.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_010.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_011.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_012.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_013.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_014.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                62
+                64,
+                119
               ],
               "fps": 24
             },
@@ -6762,33 +6687,33 @@
                 "res://assets/characters/barbie/animacoes_16f/stun/south-east/frame_015.png"
               ],
               "anchor": [
-                34,
-                63
+                64,
+                119
               ],
               "fps": 24
             },
-            "south-west": {
+            "east": {
               "frames": [
-                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_000.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_001.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_002.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_003.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_004.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_005.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_006.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_007.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_008.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_009.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_010.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_011.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_012.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_013.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_014.png",
-                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_015.png"
+                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/east/frame_015.png"
               ],
               "anchor": [
-                34,
-                63
+                64,
+                119
               ],
               "fps": 24
             },
@@ -6812,8 +6737,33 @@
                 "res://assets/characters/barbie/animacoes_16f/stun/north-east/frame_015.png"
               ],
               "anchor": [
-                34,
-                63
+                64,
+                119
+              ],
+              "fps": 24
+            },
+            "north": {
+              "frames": [
+                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/north/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                119
               ],
               "fps": 24
             },
@@ -6837,8 +6787,58 @@
                 "res://assets/characters/barbie/animacoes_16f/stun/north-west/frame_015.png"
               ],
               "anchor": [
-                34,
-                64
+                64,
+                119
+              ],
+              "fps": 24
+            },
+            "west": {
+              "frames": [
+                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                119
+              ],
+              "fps": 24
+            },
+            "south-west": {
+              "frames": [
+                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/stun/south-west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                119
               ],
               "fps": 24
             }
@@ -6848,56 +6848,6 @@
           "loop": false,
           "fps": 24,
           "directions": {
-            "east": {
-              "frames": [
-                "res://assets/characters/barbie/animacoes_16f/death/east/frame_000.png",
-                "res://assets/characters/barbie/animacoes_16f/death/east/frame_001.png",
-                "res://assets/characters/barbie/animacoes_16f/death/east/frame_002.png",
-                "res://assets/characters/barbie/animacoes_16f/death/east/frame_003.png",
-                "res://assets/characters/barbie/animacoes_16f/death/east/frame_004.png",
-                "res://assets/characters/barbie/animacoes_16f/death/east/frame_005.png",
-                "res://assets/characters/barbie/animacoes_16f/death/east/frame_006.png",
-                "res://assets/characters/barbie/animacoes_16f/death/east/frame_007.png",
-                "res://assets/characters/barbie/animacoes_16f/death/east/frame_008.png",
-                "res://assets/characters/barbie/animacoes_16f/death/east/frame_009.png",
-                "res://assets/characters/barbie/animacoes_16f/death/east/frame_010.png",
-                "res://assets/characters/barbie/animacoes_16f/death/east/frame_011.png",
-                "res://assets/characters/barbie/animacoes_16f/death/east/frame_012.png",
-                "res://assets/characters/barbie/animacoes_16f/death/east/frame_013.png",
-                "res://assets/characters/barbie/animacoes_16f/death/east/frame_014.png",
-                "res://assets/characters/barbie/animacoes_16f/death/east/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                63
-              ],
-              "fps": 24
-            },
-            "west": {
-              "frames": [
-                "res://assets/characters/barbie/animacoes_16f/death/west/frame_000.png",
-                "res://assets/characters/barbie/animacoes_16f/death/west/frame_001.png",
-                "res://assets/characters/barbie/animacoes_16f/death/west/frame_002.png",
-                "res://assets/characters/barbie/animacoes_16f/death/west/frame_003.png",
-                "res://assets/characters/barbie/animacoes_16f/death/west/frame_004.png",
-                "res://assets/characters/barbie/animacoes_16f/death/west/frame_005.png",
-                "res://assets/characters/barbie/animacoes_16f/death/west/frame_006.png",
-                "res://assets/characters/barbie/animacoes_16f/death/west/frame_007.png",
-                "res://assets/characters/barbie/animacoes_16f/death/west/frame_008.png",
-                "res://assets/characters/barbie/animacoes_16f/death/west/frame_009.png",
-                "res://assets/characters/barbie/animacoes_16f/death/west/frame_010.png",
-                "res://assets/characters/barbie/animacoes_16f/death/west/frame_011.png",
-                "res://assets/characters/barbie/animacoes_16f/death/west/frame_012.png",
-                "res://assets/characters/barbie/animacoes_16f/death/west/frame_013.png",
-                "res://assets/characters/barbie/animacoes_16f/death/west/frame_014.png",
-                "res://assets/characters/barbie/animacoes_16f/death/west/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                63
-              ],
-              "fps": 24
-            },
             "south": {
               "frames": [
                 "res://assets/characters/barbie/animacoes_16f/death/south/frame_000.png",
@@ -6918,33 +6868,8 @@
                 "res://assets/characters/barbie/animacoes_16f/death/south/frame_015.png"
               ],
               "anchor": [
-                34,
-                61
-              ],
-              "fps": 24
-            },
-            "north": {
-              "frames": [
-                "res://assets/characters/barbie/animacoes_16f/death/north/frame_000.png",
-                "res://assets/characters/barbie/animacoes_16f/death/north/frame_001.png",
-                "res://assets/characters/barbie/animacoes_16f/death/north/frame_002.png",
-                "res://assets/characters/barbie/animacoes_16f/death/north/frame_003.png",
-                "res://assets/characters/barbie/animacoes_16f/death/north/frame_004.png",
-                "res://assets/characters/barbie/animacoes_16f/death/north/frame_005.png",
-                "res://assets/characters/barbie/animacoes_16f/death/north/frame_006.png",
-                "res://assets/characters/barbie/animacoes_16f/death/north/frame_007.png",
-                "res://assets/characters/barbie/animacoes_16f/death/north/frame_008.png",
-                "res://assets/characters/barbie/animacoes_16f/death/north/frame_009.png",
-                "res://assets/characters/barbie/animacoes_16f/death/north/frame_010.png",
-                "res://assets/characters/barbie/animacoes_16f/death/north/frame_011.png",
-                "res://assets/characters/barbie/animacoes_16f/death/north/frame_012.png",
-                "res://assets/characters/barbie/animacoes_16f/death/north/frame_013.png",
-                "res://assets/characters/barbie/animacoes_16f/death/north/frame_014.png",
-                "res://assets/characters/barbie/animacoes_16f/death/north/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                62
+                64,
+                119
               ],
               "fps": 24
             },
@@ -6968,33 +6893,33 @@
                 "res://assets/characters/barbie/animacoes_16f/death/south-east/frame_015.png"
               ],
               "anchor": [
-                34,
-                63
+                64,
+                119
               ],
               "fps": 24
             },
-            "south-west": {
+            "east": {
               "frames": [
-                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_000.png",
-                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_001.png",
-                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_002.png",
-                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_003.png",
-                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_004.png",
-                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_005.png",
-                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_006.png",
-                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_007.png",
-                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_008.png",
-                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_009.png",
-                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_010.png",
-                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_011.png",
-                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_012.png",
-                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_013.png",
-                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_014.png",
-                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_015.png"
+                "res://assets/characters/barbie/animacoes_16f/death/east/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/death/east/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/death/east/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/death/east/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/death/east/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/death/east/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/death/east/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/death/east/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/death/east/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/death/east/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/death/east/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/death/east/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/death/east/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/death/east/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/death/east/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/death/east/frame_015.png"
               ],
               "anchor": [
-                34,
-                63
+                64,
+                119
               ],
               "fps": 24
             },
@@ -7018,8 +6943,33 @@
                 "res://assets/characters/barbie/animacoes_16f/death/north-east/frame_015.png"
               ],
               "anchor": [
-                34,
-                63
+                64,
+                119
+              ],
+              "fps": 24
+            },
+            "north": {
+              "frames": [
+                "res://assets/characters/barbie/animacoes_16f/death/north/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/death/north/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/death/north/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/death/north/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/death/north/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/death/north/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/death/north/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/death/north/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/death/north/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/death/north/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/death/north/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/death/north/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/death/north/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/death/north/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/death/north/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/death/north/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                119
               ],
               "fps": 24
             },
@@ -7043,8 +6993,58 @@
                 "res://assets/characters/barbie/animacoes_16f/death/north-west/frame_015.png"
               ],
               "anchor": [
-                34,
-                64
+                64,
+                119
+              ],
+              "fps": 24
+            },
+            "west": {
+              "frames": [
+                "res://assets/characters/barbie/animacoes_16f/death/west/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/death/west/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/death/west/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/death/west/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/death/west/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/death/west/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/death/west/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/death/west/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/death/west/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/death/west/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/death/west/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/death/west/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/death/west/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/death/west/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/death/west/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/death/west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                119
+              ],
+              "fps": 24
+            },
+            "south-west": {
+              "frames": [
+                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/death/south-west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                119
               ],
               "fps": 24
             }
@@ -7054,56 +7054,6 @@
           "loop": true,
           "fps": 24,
           "directions": {
-            "east": {
-              "frames": [
-                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_000.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_001.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_002.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_003.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_004.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_005.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_006.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_007.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_008.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_009.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_010.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_011.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_012.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_013.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_014.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                63
-              ],
-              "fps": 24
-            },
-            "west": {
-              "frames": [
-                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_000.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_001.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_002.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_003.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_004.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_005.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_006.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_007.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_008.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_009.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_010.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_011.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_012.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_013.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_014.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                63
-              ],
-              "fps": 24
-            },
             "south": {
               "frames": [
                 "res://assets/characters/barbie/animacoes_16f/buff/south/frame_000.png",
@@ -7124,33 +7074,8 @@
                 "res://assets/characters/barbie/animacoes_16f/buff/south/frame_015.png"
               ],
               "anchor": [
-                34,
-                61
-              ],
-              "fps": 24
-            },
-            "north": {
-              "frames": [
-                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_000.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_001.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_002.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_003.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_004.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_005.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_006.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_007.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_008.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_009.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_010.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_011.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_012.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_013.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_014.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                62
+                64,
+                119
               ],
               "fps": 24
             },
@@ -7174,33 +7099,33 @@
                 "res://assets/characters/barbie/animacoes_16f/buff/south-east/frame_015.png"
               ],
               "anchor": [
-                34,
-                63
+                64,
+                119
               ],
               "fps": 24
             },
-            "south-west": {
+            "east": {
               "frames": [
-                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_000.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_001.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_002.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_003.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_004.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_005.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_006.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_007.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_008.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_009.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_010.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_011.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_012.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_013.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_014.png",
-                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_015.png"
+                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/east/frame_015.png"
               ],
               "anchor": [
-                34,
-                63
+                64,
+                119
               ],
               "fps": 24
             },
@@ -7224,8 +7149,33 @@
                 "res://assets/characters/barbie/animacoes_16f/buff/north-east/frame_015.png"
               ],
               "anchor": [
-                34,
-                63
+                64,
+                119
+              ],
+              "fps": 24
+            },
+            "north": {
+              "frames": [
+                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/north/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                119
               ],
               "fps": 24
             },
@@ -7249,8 +7199,264 @@
                 "res://assets/characters/barbie/animacoes_16f/buff/north-west/frame_015.png"
               ],
               "anchor": [
-                34,
-                64
+                64,
+                119
+              ],
+              "fps": 24
+            },
+            "west": {
+              "frames": [
+                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                119
+              ],
+              "fps": 24
+            },
+            "south-west": {
+              "frames": [
+                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/buff/south-west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                119
+              ],
+              "fps": 24
+            }
+          }
+        },
+        "skill": {
+          "loop": true,
+          "fps": 24,
+          "directions": {
+            "south": {
+              "frames": [
+                "res://assets/characters/barbie/animacoes_16f/skill/south/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                119
+              ],
+              "fps": 24
+            },
+            "south-east": {
+              "frames": [
+                "res://assets/characters/barbie/animacoes_16f/skill/south-east/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-east/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-east/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-east/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-east/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-east/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-east/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-east/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-east/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-east/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-east/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-east/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-east/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-east/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-east/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-east/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                119
+              ],
+              "fps": 24
+            },
+            "east": {
+              "frames": [
+                "res://assets/characters/barbie/animacoes_16f/skill/east/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/east/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/east/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/east/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/east/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/east/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/east/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/east/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/east/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/east/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/east/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/east/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/east/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/east/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/east/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/east/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                119
+              ],
+              "fps": 24
+            },
+            "north-east": {
+              "frames": [
+                "res://assets/characters/barbie/animacoes_16f/skill/north-east/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-east/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-east/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-east/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-east/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-east/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-east/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-east/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-east/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-east/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-east/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-east/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-east/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-east/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-east/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-east/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                119
+              ],
+              "fps": 24
+            },
+            "north": {
+              "frames": [
+                "res://assets/characters/barbie/animacoes_16f/skill/north/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                119
+              ],
+              "fps": 24
+            },
+            "north-west": {
+              "frames": [
+                "res://assets/characters/barbie/animacoes_16f/skill/north-west/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-west/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-west/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-west/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-west/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-west/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-west/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-west/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-west/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-west/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-west/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-west/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-west/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-west/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-west/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/north-west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                119
+              ],
+              "fps": 24
+            },
+            "west": {
+              "frames": [
+                "res://assets/characters/barbie/animacoes_16f/skill/west/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/west/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/west/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/west/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/west/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/west/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/west/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/west/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/west/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/west/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/west/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/west/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/west/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/west/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/west/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                119
+              ],
+              "fps": 24
+            },
+            "south-west": {
+              "frames": [
+                "res://assets/characters/barbie/animacoes_16f/skill/south-west/frame_000.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-west/frame_001.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-west/frame_002.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-west/frame_003.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-west/frame_004.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-west/frame_005.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-west/frame_006.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-west/frame_007.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-west/frame_008.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-west/frame_009.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-west/frame_010.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-west/frame_011.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-west/frame_012.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-west/frame_013.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-west/frame_014.png",
+                "res://assets/characters/barbie/animacoes_16f/skill/south-west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                119
               ],
               "fps": 24
             }
@@ -7264,56 +7470,6 @@
           "loop": true,
           "fps": 24,
           "directions": {
-            "east": {
-              "frames": [
-                "res://assets/characters/ken/animacoes_16f/walk/east/frame_000.png",
-                "res://assets/characters/ken/animacoes_16f/walk/east/frame_001.png",
-                "res://assets/characters/ken/animacoes_16f/walk/east/frame_002.png",
-                "res://assets/characters/ken/animacoes_16f/walk/east/frame_003.png",
-                "res://assets/characters/ken/animacoes_16f/walk/east/frame_004.png",
-                "res://assets/characters/ken/animacoes_16f/walk/east/frame_005.png",
-                "res://assets/characters/ken/animacoes_16f/walk/east/frame_006.png",
-                "res://assets/characters/ken/animacoes_16f/walk/east/frame_007.png",
-                "res://assets/characters/ken/animacoes_16f/walk/east/frame_008.png",
-                "res://assets/characters/ken/animacoes_16f/walk/east/frame_009.png",
-                "res://assets/characters/ken/animacoes_16f/walk/east/frame_010.png",
-                "res://assets/characters/ken/animacoes_16f/walk/east/frame_011.png",
-                "res://assets/characters/ken/animacoes_16f/walk/east/frame_012.png",
-                "res://assets/characters/ken/animacoes_16f/walk/east/frame_013.png",
-                "res://assets/characters/ken/animacoes_16f/walk/east/frame_014.png",
-                "res://assets/characters/ken/animacoes_16f/walk/east/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                64
-              ],
-              "fps": 24
-            },
-            "west": {
-              "frames": [
-                "res://assets/characters/ken/animacoes_16f/walk/west/frame_000.png",
-                "res://assets/characters/ken/animacoes_16f/walk/west/frame_001.png",
-                "res://assets/characters/ken/animacoes_16f/walk/west/frame_002.png",
-                "res://assets/characters/ken/animacoes_16f/walk/west/frame_003.png",
-                "res://assets/characters/ken/animacoes_16f/walk/west/frame_004.png",
-                "res://assets/characters/ken/animacoes_16f/walk/west/frame_005.png",
-                "res://assets/characters/ken/animacoes_16f/walk/west/frame_006.png",
-                "res://assets/characters/ken/animacoes_16f/walk/west/frame_007.png",
-                "res://assets/characters/ken/animacoes_16f/walk/west/frame_008.png",
-                "res://assets/characters/ken/animacoes_16f/walk/west/frame_009.png",
-                "res://assets/characters/ken/animacoes_16f/walk/west/frame_010.png",
-                "res://assets/characters/ken/animacoes_16f/walk/west/frame_011.png",
-                "res://assets/characters/ken/animacoes_16f/walk/west/frame_012.png",
-                "res://assets/characters/ken/animacoes_16f/walk/west/frame_013.png",
-                "res://assets/characters/ken/animacoes_16f/walk/west/frame_014.png",
-                "res://assets/characters/ken/animacoes_16f/walk/west/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                64
-              ],
-              "fps": 24
-            },
             "south": {
               "frames": [
                 "res://assets/characters/ken/animacoes_16f/walk/south/frame_000.png",
@@ -7334,33 +7490,8 @@
                 "res://assets/characters/ken/animacoes_16f/walk/south/frame_015.png"
               ],
               "anchor": [
-                34,
-                63
-              ],
-              "fps": 24
-            },
-            "north": {
-              "frames": [
-                "res://assets/characters/ken/animacoes_16f/walk/north/frame_000.png",
-                "res://assets/characters/ken/animacoes_16f/walk/north/frame_001.png",
-                "res://assets/characters/ken/animacoes_16f/walk/north/frame_002.png",
-                "res://assets/characters/ken/animacoes_16f/walk/north/frame_003.png",
-                "res://assets/characters/ken/animacoes_16f/walk/north/frame_004.png",
-                "res://assets/characters/ken/animacoes_16f/walk/north/frame_005.png",
-                "res://assets/characters/ken/animacoes_16f/walk/north/frame_006.png",
-                "res://assets/characters/ken/animacoes_16f/walk/north/frame_007.png",
-                "res://assets/characters/ken/animacoes_16f/walk/north/frame_008.png",
-                "res://assets/characters/ken/animacoes_16f/walk/north/frame_009.png",
-                "res://assets/characters/ken/animacoes_16f/walk/north/frame_010.png",
-                "res://assets/characters/ken/animacoes_16f/walk/north/frame_011.png",
-                "res://assets/characters/ken/animacoes_16f/walk/north/frame_012.png",
-                "res://assets/characters/ken/animacoes_16f/walk/north/frame_013.png",
-                "res://assets/characters/ken/animacoes_16f/walk/north/frame_014.png",
-                "res://assets/characters/ken/animacoes_16f/walk/north/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                63
+                64,
+                120
               ],
               "fps": 24
             },
@@ -7384,33 +7515,33 @@
                 "res://assets/characters/ken/animacoes_16f/walk/south-east/frame_015.png"
               ],
               "anchor": [
-                34,
-                65
+                64,
+                120
               ],
               "fps": 24
             },
-            "south-west": {
+            "east": {
               "frames": [
-                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_000.png",
-                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_001.png",
-                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_002.png",
-                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_003.png",
-                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_004.png",
-                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_005.png",
-                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_006.png",
-                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_007.png",
-                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_008.png",
-                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_009.png",
-                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_010.png",
-                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_011.png",
-                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_012.png",
-                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_013.png",
-                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_014.png",
-                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_015.png"
+                "res://assets/characters/ken/animacoes_16f/walk/east/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/walk/east/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/walk/east/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/walk/east/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/walk/east/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/walk/east/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/walk/east/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/walk/east/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/walk/east/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/walk/east/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/walk/east/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/walk/east/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/walk/east/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/walk/east/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/walk/east/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/walk/east/frame_015.png"
               ],
               "anchor": [
-                34,
-                65
+                64,
+                120
               ],
               "fps": 24
             },
@@ -7434,8 +7565,33 @@
                 "res://assets/characters/ken/animacoes_16f/walk/north-east/frame_015.png"
               ],
               "anchor": [
-                34,
-                64
+                64,
+                120
+              ],
+              "fps": 24
+            },
+            "north": {
+              "frames": [
+                "res://assets/characters/ken/animacoes_16f/walk/north/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/walk/north/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/walk/north/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/walk/north/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/walk/north/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/walk/north/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/walk/north/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/walk/north/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/walk/north/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/walk/north/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/walk/north/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/walk/north/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/walk/north/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/walk/north/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/walk/north/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/walk/north/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                120
               ],
               "fps": 24
             },
@@ -7459,67 +7615,67 @@
                 "res://assets/characters/ken/animacoes_16f/walk/north-west/frame_015.png"
               ],
               "anchor": [
-                34,
-                64
+                64,
+                120
+              ],
+              "fps": 24
+            },
+            "west": {
+              "frames": [
+                "res://assets/characters/ken/animacoes_16f/walk/west/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/walk/west/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/walk/west/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/walk/west/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/walk/west/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/walk/west/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/walk/west/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/walk/west/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/walk/west/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/walk/west/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/walk/west/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/walk/west/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/walk/west/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/walk/west/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/walk/west/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/walk/west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                120
+              ],
+              "fps": 24
+            },
+            "south-west": {
+              "frames": [
+                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/walk/south-west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                120
               ],
               "fps": 24
             }
           }
         },
         "attack": {
-          "loop": false,
+          "loop": true,
           "fps": 24,
           "directions": {
-            "east": {
-              "frames": [
-                "res://assets/characters/ken/animacoes_16f/attack/east/frame_000.png",
-                "res://assets/characters/ken/animacoes_16f/attack/east/frame_001.png",
-                "res://assets/characters/ken/animacoes_16f/attack/east/frame_002.png",
-                "res://assets/characters/ken/animacoes_16f/attack/east/frame_003.png",
-                "res://assets/characters/ken/animacoes_16f/attack/east/frame_004.png",
-                "res://assets/characters/ken/animacoes_16f/attack/east/frame_005.png",
-                "res://assets/characters/ken/animacoes_16f/attack/east/frame_006.png",
-                "res://assets/characters/ken/animacoes_16f/attack/east/frame_007.png",
-                "res://assets/characters/ken/animacoes_16f/attack/east/frame_008.png",
-                "res://assets/characters/ken/animacoes_16f/attack/east/frame_009.png",
-                "res://assets/characters/ken/animacoes_16f/attack/east/frame_010.png",
-                "res://assets/characters/ken/animacoes_16f/attack/east/frame_011.png",
-                "res://assets/characters/ken/animacoes_16f/attack/east/frame_012.png",
-                "res://assets/characters/ken/animacoes_16f/attack/east/frame_013.png",
-                "res://assets/characters/ken/animacoes_16f/attack/east/frame_014.png",
-                "res://assets/characters/ken/animacoes_16f/attack/east/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                64
-              ],
-              "fps": 24
-            },
-            "west": {
-              "frames": [
-                "res://assets/characters/ken/animacoes_16f/attack/west/frame_000.png",
-                "res://assets/characters/ken/animacoes_16f/attack/west/frame_001.png",
-                "res://assets/characters/ken/animacoes_16f/attack/west/frame_002.png",
-                "res://assets/characters/ken/animacoes_16f/attack/west/frame_003.png",
-                "res://assets/characters/ken/animacoes_16f/attack/west/frame_004.png",
-                "res://assets/characters/ken/animacoes_16f/attack/west/frame_005.png",
-                "res://assets/characters/ken/animacoes_16f/attack/west/frame_006.png",
-                "res://assets/characters/ken/animacoes_16f/attack/west/frame_007.png",
-                "res://assets/characters/ken/animacoes_16f/attack/west/frame_008.png",
-                "res://assets/characters/ken/animacoes_16f/attack/west/frame_009.png",
-                "res://assets/characters/ken/animacoes_16f/attack/west/frame_010.png",
-                "res://assets/characters/ken/animacoes_16f/attack/west/frame_011.png",
-                "res://assets/characters/ken/animacoes_16f/attack/west/frame_012.png",
-                "res://assets/characters/ken/animacoes_16f/attack/west/frame_013.png",
-                "res://assets/characters/ken/animacoes_16f/attack/west/frame_014.png",
-                "res://assets/characters/ken/animacoes_16f/attack/west/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                64
-              ],
-              "fps": 24
-            },
             "south": {
               "frames": [
                 "res://assets/characters/ken/animacoes_16f/attack/south/frame_000.png",
@@ -7540,33 +7696,8 @@
                 "res://assets/characters/ken/animacoes_16f/attack/south/frame_015.png"
               ],
               "anchor": [
-                34,
-                63
-              ],
-              "fps": 24
-            },
-            "north": {
-              "frames": [
-                "res://assets/characters/ken/animacoes_16f/attack/north/frame_000.png",
-                "res://assets/characters/ken/animacoes_16f/attack/north/frame_001.png",
-                "res://assets/characters/ken/animacoes_16f/attack/north/frame_002.png",
-                "res://assets/characters/ken/animacoes_16f/attack/north/frame_003.png",
-                "res://assets/characters/ken/animacoes_16f/attack/north/frame_004.png",
-                "res://assets/characters/ken/animacoes_16f/attack/north/frame_005.png",
-                "res://assets/characters/ken/animacoes_16f/attack/north/frame_006.png",
-                "res://assets/characters/ken/animacoes_16f/attack/north/frame_007.png",
-                "res://assets/characters/ken/animacoes_16f/attack/north/frame_008.png",
-                "res://assets/characters/ken/animacoes_16f/attack/north/frame_009.png",
-                "res://assets/characters/ken/animacoes_16f/attack/north/frame_010.png",
-                "res://assets/characters/ken/animacoes_16f/attack/north/frame_011.png",
-                "res://assets/characters/ken/animacoes_16f/attack/north/frame_012.png",
-                "res://assets/characters/ken/animacoes_16f/attack/north/frame_013.png",
-                "res://assets/characters/ken/animacoes_16f/attack/north/frame_014.png",
-                "res://assets/characters/ken/animacoes_16f/attack/north/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                63
+                64,
+                120
               ],
               "fps": 24
             },
@@ -7590,33 +7721,33 @@
                 "res://assets/characters/ken/animacoes_16f/attack/south-east/frame_015.png"
               ],
               "anchor": [
-                34,
-                65
+                64,
+                120
               ],
               "fps": 24
             },
-            "south-west": {
+            "east": {
               "frames": [
-                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_000.png",
-                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_001.png",
-                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_002.png",
-                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_003.png",
-                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_004.png",
-                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_005.png",
-                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_006.png",
-                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_007.png",
-                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_008.png",
-                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_009.png",
-                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_010.png",
-                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_011.png",
-                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_012.png",
-                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_013.png",
-                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_014.png",
-                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_015.png"
+                "res://assets/characters/ken/animacoes_16f/attack/east/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/attack/east/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/attack/east/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/attack/east/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/attack/east/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/attack/east/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/attack/east/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/attack/east/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/attack/east/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/attack/east/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/attack/east/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/attack/east/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/attack/east/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/attack/east/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/attack/east/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/attack/east/frame_015.png"
               ],
               "anchor": [
-                34,
-                65
+                64,
+                120
               ],
               "fps": 24
             },
@@ -7640,8 +7771,33 @@
                 "res://assets/characters/ken/animacoes_16f/attack/north-east/frame_015.png"
               ],
               "anchor": [
-                34,
-                64
+                64,
+                120
+              ],
+              "fps": 24
+            },
+            "north": {
+              "frames": [
+                "res://assets/characters/ken/animacoes_16f/attack/north/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/attack/north/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/attack/north/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/attack/north/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/attack/north/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/attack/north/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/attack/north/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/attack/north/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/attack/north/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/attack/north/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/attack/north/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/attack/north/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/attack/north/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/attack/north/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/attack/north/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/attack/north/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                120
               ],
               "fps": 24
             },
@@ -7665,8 +7821,58 @@
                 "res://assets/characters/ken/animacoes_16f/attack/north-west/frame_015.png"
               ],
               "anchor": [
-                34,
-                64
+                64,
+                120
+              ],
+              "fps": 24
+            },
+            "west": {
+              "frames": [
+                "res://assets/characters/ken/animacoes_16f/attack/west/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/attack/west/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/attack/west/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/attack/west/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/attack/west/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/attack/west/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/attack/west/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/attack/west/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/attack/west/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/attack/west/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/attack/west/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/attack/west/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/attack/west/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/attack/west/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/attack/west/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/attack/west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                120
+              ],
+              "fps": 24
+            },
+            "south-west": {
+              "frames": [
+                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/attack/south-west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                120
               ],
               "fps": 24
             }
@@ -7676,56 +7882,6 @@
           "loop": true,
           "fps": 24,
           "directions": {
-            "east": {
-              "frames": [
-                "res://assets/characters/ken/animacoes_16f/stance/east/frame_000.png",
-                "res://assets/characters/ken/animacoes_16f/stance/east/frame_001.png",
-                "res://assets/characters/ken/animacoes_16f/stance/east/frame_002.png",
-                "res://assets/characters/ken/animacoes_16f/stance/east/frame_003.png",
-                "res://assets/characters/ken/animacoes_16f/stance/east/frame_004.png",
-                "res://assets/characters/ken/animacoes_16f/stance/east/frame_005.png",
-                "res://assets/characters/ken/animacoes_16f/stance/east/frame_006.png",
-                "res://assets/characters/ken/animacoes_16f/stance/east/frame_007.png",
-                "res://assets/characters/ken/animacoes_16f/stance/east/frame_008.png",
-                "res://assets/characters/ken/animacoes_16f/stance/east/frame_009.png",
-                "res://assets/characters/ken/animacoes_16f/stance/east/frame_010.png",
-                "res://assets/characters/ken/animacoes_16f/stance/east/frame_011.png",
-                "res://assets/characters/ken/animacoes_16f/stance/east/frame_012.png",
-                "res://assets/characters/ken/animacoes_16f/stance/east/frame_013.png",
-                "res://assets/characters/ken/animacoes_16f/stance/east/frame_014.png",
-                "res://assets/characters/ken/animacoes_16f/stance/east/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                64
-              ],
-              "fps": 24
-            },
-            "west": {
-              "frames": [
-                "res://assets/characters/ken/animacoes_16f/stance/west/frame_000.png",
-                "res://assets/characters/ken/animacoes_16f/stance/west/frame_001.png",
-                "res://assets/characters/ken/animacoes_16f/stance/west/frame_002.png",
-                "res://assets/characters/ken/animacoes_16f/stance/west/frame_003.png",
-                "res://assets/characters/ken/animacoes_16f/stance/west/frame_004.png",
-                "res://assets/characters/ken/animacoes_16f/stance/west/frame_005.png",
-                "res://assets/characters/ken/animacoes_16f/stance/west/frame_006.png",
-                "res://assets/characters/ken/animacoes_16f/stance/west/frame_007.png",
-                "res://assets/characters/ken/animacoes_16f/stance/west/frame_008.png",
-                "res://assets/characters/ken/animacoes_16f/stance/west/frame_009.png",
-                "res://assets/characters/ken/animacoes_16f/stance/west/frame_010.png",
-                "res://assets/characters/ken/animacoes_16f/stance/west/frame_011.png",
-                "res://assets/characters/ken/animacoes_16f/stance/west/frame_012.png",
-                "res://assets/characters/ken/animacoes_16f/stance/west/frame_013.png",
-                "res://assets/characters/ken/animacoes_16f/stance/west/frame_014.png",
-                "res://assets/characters/ken/animacoes_16f/stance/west/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                64
-              ],
-              "fps": 24
-            },
             "south": {
               "frames": [
                 "res://assets/characters/ken/animacoes_16f/stance/south/frame_000.png",
@@ -7746,33 +7902,8 @@
                 "res://assets/characters/ken/animacoes_16f/stance/south/frame_015.png"
               ],
               "anchor": [
-                34,
-                63
-              ],
-              "fps": 24
-            },
-            "north": {
-              "frames": [
-                "res://assets/characters/ken/animacoes_16f/stance/north/frame_000.png",
-                "res://assets/characters/ken/animacoes_16f/stance/north/frame_001.png",
-                "res://assets/characters/ken/animacoes_16f/stance/north/frame_002.png",
-                "res://assets/characters/ken/animacoes_16f/stance/north/frame_003.png",
-                "res://assets/characters/ken/animacoes_16f/stance/north/frame_004.png",
-                "res://assets/characters/ken/animacoes_16f/stance/north/frame_005.png",
-                "res://assets/characters/ken/animacoes_16f/stance/north/frame_006.png",
-                "res://assets/characters/ken/animacoes_16f/stance/north/frame_007.png",
-                "res://assets/characters/ken/animacoes_16f/stance/north/frame_008.png",
-                "res://assets/characters/ken/animacoes_16f/stance/north/frame_009.png",
-                "res://assets/characters/ken/animacoes_16f/stance/north/frame_010.png",
-                "res://assets/characters/ken/animacoes_16f/stance/north/frame_011.png",
-                "res://assets/characters/ken/animacoes_16f/stance/north/frame_012.png",
-                "res://assets/characters/ken/animacoes_16f/stance/north/frame_013.png",
-                "res://assets/characters/ken/animacoes_16f/stance/north/frame_014.png",
-                "res://assets/characters/ken/animacoes_16f/stance/north/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                63
+                64,
+                120
               ],
               "fps": 24
             },
@@ -7796,33 +7927,33 @@
                 "res://assets/characters/ken/animacoes_16f/stance/south-east/frame_015.png"
               ],
               "anchor": [
-                34,
-                65
+                64,
+                120
               ],
               "fps": 24
             },
-            "south-west": {
+            "east": {
               "frames": [
-                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_000.png",
-                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_001.png",
-                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_002.png",
-                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_003.png",
-                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_004.png",
-                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_005.png",
-                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_006.png",
-                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_007.png",
-                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_008.png",
-                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_009.png",
-                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_010.png",
-                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_011.png",
-                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_012.png",
-                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_013.png",
-                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_014.png",
-                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_015.png"
+                "res://assets/characters/ken/animacoes_16f/stance/east/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/stance/east/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/stance/east/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/stance/east/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/stance/east/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/stance/east/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/stance/east/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/stance/east/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/stance/east/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/stance/east/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/stance/east/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/stance/east/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/stance/east/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/stance/east/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/stance/east/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/stance/east/frame_015.png"
               ],
               "anchor": [
-                34,
-                65
+                64,
+                120
               ],
               "fps": 24
             },
@@ -7846,8 +7977,33 @@
                 "res://assets/characters/ken/animacoes_16f/stance/north-east/frame_015.png"
               ],
               "anchor": [
-                34,
-                64
+                64,
+                120
+              ],
+              "fps": 24
+            },
+            "north": {
+              "frames": [
+                "res://assets/characters/ken/animacoes_16f/stance/north/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/stance/north/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/stance/north/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/stance/north/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/stance/north/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/stance/north/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/stance/north/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/stance/north/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/stance/north/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/stance/north/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/stance/north/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/stance/north/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/stance/north/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/stance/north/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/stance/north/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/stance/north/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                120
               ],
               "fps": 24
             },
@@ -7871,8 +8027,58 @@
                 "res://assets/characters/ken/animacoes_16f/stance/north-west/frame_015.png"
               ],
               "anchor": [
-                34,
-                64
+                64,
+                120
+              ],
+              "fps": 24
+            },
+            "west": {
+              "frames": [
+                "res://assets/characters/ken/animacoes_16f/stance/west/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/stance/west/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/stance/west/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/stance/west/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/stance/west/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/stance/west/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/stance/west/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/stance/west/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/stance/west/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/stance/west/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/stance/west/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/stance/west/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/stance/west/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/stance/west/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/stance/west/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/stance/west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                120
+              ],
+              "fps": 24
+            },
+            "south-west": {
+              "frames": [
+                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/stance/south-west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                120
               ],
               "fps": 24
             }
@@ -7882,56 +8088,6 @@
           "loop": true,
           "fps": 24,
           "directions": {
-            "east": {
-              "frames": [
-                "res://assets/characters/ken/animacoes_16f/stun/east/frame_000.png",
-                "res://assets/characters/ken/animacoes_16f/stun/east/frame_001.png",
-                "res://assets/characters/ken/animacoes_16f/stun/east/frame_002.png",
-                "res://assets/characters/ken/animacoes_16f/stun/east/frame_003.png",
-                "res://assets/characters/ken/animacoes_16f/stun/east/frame_004.png",
-                "res://assets/characters/ken/animacoes_16f/stun/east/frame_005.png",
-                "res://assets/characters/ken/animacoes_16f/stun/east/frame_006.png",
-                "res://assets/characters/ken/animacoes_16f/stun/east/frame_007.png",
-                "res://assets/characters/ken/animacoes_16f/stun/east/frame_008.png",
-                "res://assets/characters/ken/animacoes_16f/stun/east/frame_009.png",
-                "res://assets/characters/ken/animacoes_16f/stun/east/frame_010.png",
-                "res://assets/characters/ken/animacoes_16f/stun/east/frame_011.png",
-                "res://assets/characters/ken/animacoes_16f/stun/east/frame_012.png",
-                "res://assets/characters/ken/animacoes_16f/stun/east/frame_013.png",
-                "res://assets/characters/ken/animacoes_16f/stun/east/frame_014.png",
-                "res://assets/characters/ken/animacoes_16f/stun/east/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                64
-              ],
-              "fps": 24
-            },
-            "west": {
-              "frames": [
-                "res://assets/characters/ken/animacoes_16f/stun/west/frame_000.png",
-                "res://assets/characters/ken/animacoes_16f/stun/west/frame_001.png",
-                "res://assets/characters/ken/animacoes_16f/stun/west/frame_002.png",
-                "res://assets/characters/ken/animacoes_16f/stun/west/frame_003.png",
-                "res://assets/characters/ken/animacoes_16f/stun/west/frame_004.png",
-                "res://assets/characters/ken/animacoes_16f/stun/west/frame_005.png",
-                "res://assets/characters/ken/animacoes_16f/stun/west/frame_006.png",
-                "res://assets/characters/ken/animacoes_16f/stun/west/frame_007.png",
-                "res://assets/characters/ken/animacoes_16f/stun/west/frame_008.png",
-                "res://assets/characters/ken/animacoes_16f/stun/west/frame_009.png",
-                "res://assets/characters/ken/animacoes_16f/stun/west/frame_010.png",
-                "res://assets/characters/ken/animacoes_16f/stun/west/frame_011.png",
-                "res://assets/characters/ken/animacoes_16f/stun/west/frame_012.png",
-                "res://assets/characters/ken/animacoes_16f/stun/west/frame_013.png",
-                "res://assets/characters/ken/animacoes_16f/stun/west/frame_014.png",
-                "res://assets/characters/ken/animacoes_16f/stun/west/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                64
-              ],
-              "fps": 24
-            },
             "south": {
               "frames": [
                 "res://assets/characters/ken/animacoes_16f/stun/south/frame_000.png",
@@ -7952,33 +8108,8 @@
                 "res://assets/characters/ken/animacoes_16f/stun/south/frame_015.png"
               ],
               "anchor": [
-                34,
-                63
-              ],
-              "fps": 24
-            },
-            "north": {
-              "frames": [
-                "res://assets/characters/ken/animacoes_16f/stun/north/frame_000.png",
-                "res://assets/characters/ken/animacoes_16f/stun/north/frame_001.png",
-                "res://assets/characters/ken/animacoes_16f/stun/north/frame_002.png",
-                "res://assets/characters/ken/animacoes_16f/stun/north/frame_003.png",
-                "res://assets/characters/ken/animacoes_16f/stun/north/frame_004.png",
-                "res://assets/characters/ken/animacoes_16f/stun/north/frame_005.png",
-                "res://assets/characters/ken/animacoes_16f/stun/north/frame_006.png",
-                "res://assets/characters/ken/animacoes_16f/stun/north/frame_007.png",
-                "res://assets/characters/ken/animacoes_16f/stun/north/frame_008.png",
-                "res://assets/characters/ken/animacoes_16f/stun/north/frame_009.png",
-                "res://assets/characters/ken/animacoes_16f/stun/north/frame_010.png",
-                "res://assets/characters/ken/animacoes_16f/stun/north/frame_011.png",
-                "res://assets/characters/ken/animacoes_16f/stun/north/frame_012.png",
-                "res://assets/characters/ken/animacoes_16f/stun/north/frame_013.png",
-                "res://assets/characters/ken/animacoes_16f/stun/north/frame_014.png",
-                "res://assets/characters/ken/animacoes_16f/stun/north/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                63
+                64,
+                120
               ],
               "fps": 24
             },
@@ -8002,33 +8133,33 @@
                 "res://assets/characters/ken/animacoes_16f/stun/south-east/frame_015.png"
               ],
               "anchor": [
-                34,
-                65
+                64,
+                120
               ],
               "fps": 24
             },
-            "south-west": {
+            "east": {
               "frames": [
-                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_000.png",
-                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_001.png",
-                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_002.png",
-                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_003.png",
-                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_004.png",
-                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_005.png",
-                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_006.png",
-                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_007.png",
-                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_008.png",
-                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_009.png",
-                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_010.png",
-                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_011.png",
-                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_012.png",
-                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_013.png",
-                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_014.png",
-                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_015.png"
+                "res://assets/characters/ken/animacoes_16f/stun/east/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/stun/east/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/stun/east/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/stun/east/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/stun/east/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/stun/east/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/stun/east/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/stun/east/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/stun/east/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/stun/east/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/stun/east/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/stun/east/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/stun/east/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/stun/east/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/stun/east/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/stun/east/frame_015.png"
               ],
               "anchor": [
-                34,
-                65
+                64,
+                120
               ],
               "fps": 24
             },
@@ -8052,8 +8183,33 @@
                 "res://assets/characters/ken/animacoes_16f/stun/north-east/frame_015.png"
               ],
               "anchor": [
-                34,
-                64
+                64,
+                120
+              ],
+              "fps": 24
+            },
+            "north": {
+              "frames": [
+                "res://assets/characters/ken/animacoes_16f/stun/north/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/stun/north/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/stun/north/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/stun/north/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/stun/north/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/stun/north/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/stun/north/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/stun/north/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/stun/north/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/stun/north/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/stun/north/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/stun/north/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/stun/north/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/stun/north/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/stun/north/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/stun/north/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                120
               ],
               "fps": 24
             },
@@ -8077,8 +8233,58 @@
                 "res://assets/characters/ken/animacoes_16f/stun/north-west/frame_015.png"
               ],
               "anchor": [
-                34,
-                64
+                64,
+                120
+              ],
+              "fps": 24
+            },
+            "west": {
+              "frames": [
+                "res://assets/characters/ken/animacoes_16f/stun/west/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/stun/west/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/stun/west/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/stun/west/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/stun/west/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/stun/west/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/stun/west/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/stun/west/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/stun/west/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/stun/west/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/stun/west/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/stun/west/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/stun/west/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/stun/west/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/stun/west/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/stun/west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                120
+              ],
+              "fps": 24
+            },
+            "south-west": {
+              "frames": [
+                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/stun/south-west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                120
               ],
               "fps": 24
             }
@@ -8088,56 +8294,6 @@
           "loop": false,
           "fps": 24,
           "directions": {
-            "east": {
-              "frames": [
-                "res://assets/characters/ken/animacoes_16f/death/east/frame_000.png",
-                "res://assets/characters/ken/animacoes_16f/death/east/frame_001.png",
-                "res://assets/characters/ken/animacoes_16f/death/east/frame_002.png",
-                "res://assets/characters/ken/animacoes_16f/death/east/frame_003.png",
-                "res://assets/characters/ken/animacoes_16f/death/east/frame_004.png",
-                "res://assets/characters/ken/animacoes_16f/death/east/frame_005.png",
-                "res://assets/characters/ken/animacoes_16f/death/east/frame_006.png",
-                "res://assets/characters/ken/animacoes_16f/death/east/frame_007.png",
-                "res://assets/characters/ken/animacoes_16f/death/east/frame_008.png",
-                "res://assets/characters/ken/animacoes_16f/death/east/frame_009.png",
-                "res://assets/characters/ken/animacoes_16f/death/east/frame_010.png",
-                "res://assets/characters/ken/animacoes_16f/death/east/frame_011.png",
-                "res://assets/characters/ken/animacoes_16f/death/east/frame_012.png",
-                "res://assets/characters/ken/animacoes_16f/death/east/frame_013.png",
-                "res://assets/characters/ken/animacoes_16f/death/east/frame_014.png",
-                "res://assets/characters/ken/animacoes_16f/death/east/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                64
-              ],
-              "fps": 24
-            },
-            "west": {
-              "frames": [
-                "res://assets/characters/ken/animacoes_16f/death/west/frame_000.png",
-                "res://assets/characters/ken/animacoes_16f/death/west/frame_001.png",
-                "res://assets/characters/ken/animacoes_16f/death/west/frame_002.png",
-                "res://assets/characters/ken/animacoes_16f/death/west/frame_003.png",
-                "res://assets/characters/ken/animacoes_16f/death/west/frame_004.png",
-                "res://assets/characters/ken/animacoes_16f/death/west/frame_005.png",
-                "res://assets/characters/ken/animacoes_16f/death/west/frame_006.png",
-                "res://assets/characters/ken/animacoes_16f/death/west/frame_007.png",
-                "res://assets/characters/ken/animacoes_16f/death/west/frame_008.png",
-                "res://assets/characters/ken/animacoes_16f/death/west/frame_009.png",
-                "res://assets/characters/ken/animacoes_16f/death/west/frame_010.png",
-                "res://assets/characters/ken/animacoes_16f/death/west/frame_011.png",
-                "res://assets/characters/ken/animacoes_16f/death/west/frame_012.png",
-                "res://assets/characters/ken/animacoes_16f/death/west/frame_013.png",
-                "res://assets/characters/ken/animacoes_16f/death/west/frame_014.png",
-                "res://assets/characters/ken/animacoes_16f/death/west/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                64
-              ],
-              "fps": 24
-            },
             "south": {
               "frames": [
                 "res://assets/characters/ken/animacoes_16f/death/south/frame_000.png",
@@ -8158,33 +8314,8 @@
                 "res://assets/characters/ken/animacoes_16f/death/south/frame_015.png"
               ],
               "anchor": [
-                34,
-                63
-              ],
-              "fps": 24
-            },
-            "north": {
-              "frames": [
-                "res://assets/characters/ken/animacoes_16f/death/north/frame_000.png",
-                "res://assets/characters/ken/animacoes_16f/death/north/frame_001.png",
-                "res://assets/characters/ken/animacoes_16f/death/north/frame_002.png",
-                "res://assets/characters/ken/animacoes_16f/death/north/frame_003.png",
-                "res://assets/characters/ken/animacoes_16f/death/north/frame_004.png",
-                "res://assets/characters/ken/animacoes_16f/death/north/frame_005.png",
-                "res://assets/characters/ken/animacoes_16f/death/north/frame_006.png",
-                "res://assets/characters/ken/animacoes_16f/death/north/frame_007.png",
-                "res://assets/characters/ken/animacoes_16f/death/north/frame_008.png",
-                "res://assets/characters/ken/animacoes_16f/death/north/frame_009.png",
-                "res://assets/characters/ken/animacoes_16f/death/north/frame_010.png",
-                "res://assets/characters/ken/animacoes_16f/death/north/frame_011.png",
-                "res://assets/characters/ken/animacoes_16f/death/north/frame_012.png",
-                "res://assets/characters/ken/animacoes_16f/death/north/frame_013.png",
-                "res://assets/characters/ken/animacoes_16f/death/north/frame_014.png",
-                "res://assets/characters/ken/animacoes_16f/death/north/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                63
+                64,
+                120
               ],
               "fps": 24
             },
@@ -8208,33 +8339,33 @@
                 "res://assets/characters/ken/animacoes_16f/death/south-east/frame_015.png"
               ],
               "anchor": [
-                34,
-                65
+                64,
+                120
               ],
               "fps": 24
             },
-            "south-west": {
+            "east": {
               "frames": [
-                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_000.png",
-                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_001.png",
-                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_002.png",
-                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_003.png",
-                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_004.png",
-                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_005.png",
-                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_006.png",
-                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_007.png",
-                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_008.png",
-                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_009.png",
-                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_010.png",
-                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_011.png",
-                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_012.png",
-                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_013.png",
-                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_014.png",
-                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_015.png"
+                "res://assets/characters/ken/animacoes_16f/death/east/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/death/east/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/death/east/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/death/east/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/death/east/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/death/east/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/death/east/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/death/east/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/death/east/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/death/east/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/death/east/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/death/east/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/death/east/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/death/east/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/death/east/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/death/east/frame_015.png"
               ],
               "anchor": [
-                34,
-                65
+                64,
+                120
               ],
               "fps": 24
             },
@@ -8258,8 +8389,33 @@
                 "res://assets/characters/ken/animacoes_16f/death/north-east/frame_015.png"
               ],
               "anchor": [
-                34,
-                64
+                64,
+                120
+              ],
+              "fps": 24
+            },
+            "north": {
+              "frames": [
+                "res://assets/characters/ken/animacoes_16f/death/north/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/death/north/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/death/north/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/death/north/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/death/north/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/death/north/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/death/north/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/death/north/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/death/north/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/death/north/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/death/north/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/death/north/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/death/north/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/death/north/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/death/north/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/death/north/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                120
               ],
               "fps": 24
             },
@@ -8283,8 +8439,58 @@
                 "res://assets/characters/ken/animacoes_16f/death/north-west/frame_015.png"
               ],
               "anchor": [
-                34,
-                64
+                64,
+                120
+              ],
+              "fps": 24
+            },
+            "west": {
+              "frames": [
+                "res://assets/characters/ken/animacoes_16f/death/west/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/death/west/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/death/west/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/death/west/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/death/west/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/death/west/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/death/west/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/death/west/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/death/west/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/death/west/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/death/west/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/death/west/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/death/west/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/death/west/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/death/west/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/death/west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                120
+              ],
+              "fps": 24
+            },
+            "south-west": {
+              "frames": [
+                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/death/south-west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                120
               ],
               "fps": 24
             }
@@ -8294,56 +8500,6 @@
           "loop": true,
           "fps": 24,
           "directions": {
-            "east": {
-              "frames": [
-                "res://assets/characters/ken/animacoes_16f/buff/east/frame_000.png",
-                "res://assets/characters/ken/animacoes_16f/buff/east/frame_001.png",
-                "res://assets/characters/ken/animacoes_16f/buff/east/frame_002.png",
-                "res://assets/characters/ken/animacoes_16f/buff/east/frame_003.png",
-                "res://assets/characters/ken/animacoes_16f/buff/east/frame_004.png",
-                "res://assets/characters/ken/animacoes_16f/buff/east/frame_005.png",
-                "res://assets/characters/ken/animacoes_16f/buff/east/frame_006.png",
-                "res://assets/characters/ken/animacoes_16f/buff/east/frame_007.png",
-                "res://assets/characters/ken/animacoes_16f/buff/east/frame_008.png",
-                "res://assets/characters/ken/animacoes_16f/buff/east/frame_009.png",
-                "res://assets/characters/ken/animacoes_16f/buff/east/frame_010.png",
-                "res://assets/characters/ken/animacoes_16f/buff/east/frame_011.png",
-                "res://assets/characters/ken/animacoes_16f/buff/east/frame_012.png",
-                "res://assets/characters/ken/animacoes_16f/buff/east/frame_013.png",
-                "res://assets/characters/ken/animacoes_16f/buff/east/frame_014.png",
-                "res://assets/characters/ken/animacoes_16f/buff/east/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                64
-              ],
-              "fps": 24
-            },
-            "west": {
-              "frames": [
-                "res://assets/characters/ken/animacoes_16f/buff/west/frame_000.png",
-                "res://assets/characters/ken/animacoes_16f/buff/west/frame_001.png",
-                "res://assets/characters/ken/animacoes_16f/buff/west/frame_002.png",
-                "res://assets/characters/ken/animacoes_16f/buff/west/frame_003.png",
-                "res://assets/characters/ken/animacoes_16f/buff/west/frame_004.png",
-                "res://assets/characters/ken/animacoes_16f/buff/west/frame_005.png",
-                "res://assets/characters/ken/animacoes_16f/buff/west/frame_006.png",
-                "res://assets/characters/ken/animacoes_16f/buff/west/frame_007.png",
-                "res://assets/characters/ken/animacoes_16f/buff/west/frame_008.png",
-                "res://assets/characters/ken/animacoes_16f/buff/west/frame_009.png",
-                "res://assets/characters/ken/animacoes_16f/buff/west/frame_010.png",
-                "res://assets/characters/ken/animacoes_16f/buff/west/frame_011.png",
-                "res://assets/characters/ken/animacoes_16f/buff/west/frame_012.png",
-                "res://assets/characters/ken/animacoes_16f/buff/west/frame_013.png",
-                "res://assets/characters/ken/animacoes_16f/buff/west/frame_014.png",
-                "res://assets/characters/ken/animacoes_16f/buff/west/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                64
-              ],
-              "fps": 24
-            },
             "south": {
               "frames": [
                 "res://assets/characters/ken/animacoes_16f/buff/south/frame_000.png",
@@ -8364,33 +8520,8 @@
                 "res://assets/characters/ken/animacoes_16f/buff/south/frame_015.png"
               ],
               "anchor": [
-                34,
-                63
-              ],
-              "fps": 24
-            },
-            "north": {
-              "frames": [
-                "res://assets/characters/ken/animacoes_16f/buff/north/frame_000.png",
-                "res://assets/characters/ken/animacoes_16f/buff/north/frame_001.png",
-                "res://assets/characters/ken/animacoes_16f/buff/north/frame_002.png",
-                "res://assets/characters/ken/animacoes_16f/buff/north/frame_003.png",
-                "res://assets/characters/ken/animacoes_16f/buff/north/frame_004.png",
-                "res://assets/characters/ken/animacoes_16f/buff/north/frame_005.png",
-                "res://assets/characters/ken/animacoes_16f/buff/north/frame_006.png",
-                "res://assets/characters/ken/animacoes_16f/buff/north/frame_007.png",
-                "res://assets/characters/ken/animacoes_16f/buff/north/frame_008.png",
-                "res://assets/characters/ken/animacoes_16f/buff/north/frame_009.png",
-                "res://assets/characters/ken/animacoes_16f/buff/north/frame_010.png",
-                "res://assets/characters/ken/animacoes_16f/buff/north/frame_011.png",
-                "res://assets/characters/ken/animacoes_16f/buff/north/frame_012.png",
-                "res://assets/characters/ken/animacoes_16f/buff/north/frame_013.png",
-                "res://assets/characters/ken/animacoes_16f/buff/north/frame_014.png",
-                "res://assets/characters/ken/animacoes_16f/buff/north/frame_015.png"
-              ],
-              "anchor": [
-                34,
-                63
+                64,
+                120
               ],
               "fps": 24
             },
@@ -8414,33 +8545,33 @@
                 "res://assets/characters/ken/animacoes_16f/buff/south-east/frame_015.png"
               ],
               "anchor": [
-                34,
-                65
+                64,
+                120
               ],
               "fps": 24
             },
-            "south-west": {
+            "east": {
               "frames": [
-                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_000.png",
-                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_001.png",
-                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_002.png",
-                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_003.png",
-                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_004.png",
-                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_005.png",
-                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_006.png",
-                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_007.png",
-                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_008.png",
-                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_009.png",
-                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_010.png",
-                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_011.png",
-                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_012.png",
-                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_013.png",
-                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_014.png",
-                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_015.png"
+                "res://assets/characters/ken/animacoes_16f/buff/east/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/buff/east/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/buff/east/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/buff/east/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/buff/east/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/buff/east/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/buff/east/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/buff/east/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/buff/east/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/buff/east/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/buff/east/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/buff/east/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/buff/east/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/buff/east/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/buff/east/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/buff/east/frame_015.png"
               ],
               "anchor": [
-                34,
-                65
+                64,
+                120
               ],
               "fps": 24
             },
@@ -8464,8 +8595,33 @@
                 "res://assets/characters/ken/animacoes_16f/buff/north-east/frame_015.png"
               ],
               "anchor": [
-                34,
-                64
+                64,
+                120
+              ],
+              "fps": 24
+            },
+            "north": {
+              "frames": [
+                "res://assets/characters/ken/animacoes_16f/buff/north/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/buff/north/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/buff/north/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/buff/north/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/buff/north/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/buff/north/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/buff/north/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/buff/north/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/buff/north/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/buff/north/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/buff/north/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/buff/north/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/buff/north/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/buff/north/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/buff/north/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/buff/north/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                120
               ],
               "fps": 24
             },
@@ -8489,8 +8645,264 @@
                 "res://assets/characters/ken/animacoes_16f/buff/north-west/frame_015.png"
               ],
               "anchor": [
-                34,
-                64
+                64,
+                120
+              ],
+              "fps": 24
+            },
+            "west": {
+              "frames": [
+                "res://assets/characters/ken/animacoes_16f/buff/west/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/buff/west/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/buff/west/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/buff/west/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/buff/west/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/buff/west/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/buff/west/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/buff/west/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/buff/west/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/buff/west/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/buff/west/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/buff/west/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/buff/west/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/buff/west/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/buff/west/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/buff/west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                120
+              ],
+              "fps": 24
+            },
+            "south-west": {
+              "frames": [
+                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/buff/south-west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                120
+              ],
+              "fps": 24
+            }
+          }
+        },
+        "skill": {
+          "loop": true,
+          "fps": 24,
+          "directions": {
+            "south": {
+              "frames": [
+                "res://assets/characters/ken/animacoes_16f/skill/south/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                120
+              ],
+              "fps": 24
+            },
+            "south-east": {
+              "frames": [
+                "res://assets/characters/ken/animacoes_16f/skill/south-east/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-east/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-east/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-east/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-east/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-east/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-east/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-east/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-east/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-east/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-east/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-east/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-east/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-east/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-east/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-east/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                120
+              ],
+              "fps": 24
+            },
+            "east": {
+              "frames": [
+                "res://assets/characters/ken/animacoes_16f/skill/east/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/skill/east/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/skill/east/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/skill/east/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/skill/east/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/skill/east/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/skill/east/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/skill/east/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/skill/east/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/skill/east/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/skill/east/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/skill/east/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/skill/east/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/skill/east/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/skill/east/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/skill/east/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                120
+              ],
+              "fps": 24
+            },
+            "north-east": {
+              "frames": [
+                "res://assets/characters/ken/animacoes_16f/skill/north-east/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-east/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-east/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-east/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-east/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-east/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-east/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-east/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-east/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-east/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-east/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-east/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-east/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-east/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-east/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-east/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                120
+              ],
+              "fps": 24
+            },
+            "north": {
+              "frames": [
+                "res://assets/characters/ken/animacoes_16f/skill/north/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                120
+              ],
+              "fps": 24
+            },
+            "north-west": {
+              "frames": [
+                "res://assets/characters/ken/animacoes_16f/skill/north-west/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-west/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-west/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-west/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-west/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-west/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-west/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-west/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-west/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-west/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-west/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-west/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-west/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-west/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-west/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/skill/north-west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                120
+              ],
+              "fps": 24
+            },
+            "west": {
+              "frames": [
+                "res://assets/characters/ken/animacoes_16f/skill/west/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/skill/west/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/skill/west/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/skill/west/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/skill/west/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/skill/west/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/skill/west/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/skill/west/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/skill/west/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/skill/west/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/skill/west/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/skill/west/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/skill/west/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/skill/west/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/skill/west/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/skill/west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                120
+              ],
+              "fps": 24
+            },
+            "south-west": {
+              "frames": [
+                "res://assets/characters/ken/animacoes_16f/skill/south-west/frame_000.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-west/frame_001.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-west/frame_002.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-west/frame_003.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-west/frame_004.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-west/frame_005.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-west/frame_006.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-west/frame_007.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-west/frame_008.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-west/frame_009.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-west/frame_010.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-west/frame_011.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-west/frame_012.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-west/frame_013.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-west/frame_014.png",
+                "res://assets/characters/ken/animacoes_16f/skill/south-west/frame_015.png"
+              ],
+              "anchor": [
+                64,
+                120
               ],
               "fps": 24
             }

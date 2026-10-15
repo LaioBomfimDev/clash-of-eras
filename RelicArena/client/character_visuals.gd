@@ -7,7 +7,7 @@ const DIRECTIONS: Array[String] = ["east", "south-east", "south", "south-west", 
 ## e níveis, preservando o crescimento da lâmina e os multiplicadores 1/1.2/1.44.
 const BOARD_HEIGHT_TARGETS: Dictionary = {
 	"neymar": 68.0, "caramelo": 56.0, "obama": 70.0, "zumbi": 76.0,
-	"michael": 68.0, "barbie": 68.0, "ken": 68.0, "elon": 68.0,
+	"michael": 68.0, "barbie": 72.0, "ken": 74.0, "elon": 68.0,
 	"snoop": 68.0, "lula": 70.0, "bob_marley": 68.0, "rapunzel": 68.0,
 	"boss_dev": 160.0, "monstro_olho_tentaculos": 118.0, "slime_lodo_olho": 108.0
 }
@@ -16,8 +16,8 @@ const STATIC_PATHS: Dictionary = {
 	"obama": "res://assets/characters/obama/realista_03/original/Idle/rotations/south.png",
 	"caramelo": "res://assets/characters/provisorio/caramelo.png",
 	"zumbi": "res://assets/characters/provisorio/zumbi.png",
-	"barbie": "res://assets/characters/barbie/realista_03/original/Idle/rotations/south.png",
-	"ken": "res://assets/characters/provisorio/ken.png",
+	"barbie": "res://assets/characters/barbie/grande_04/original/Idle/rotations/south.png",
+	"ken": "res://assets/characters/ken/grande_04/original/Idle/rotations/south.png",
 	"elon": "res://assets/characters/elon/grande_04/original/Idle/rotations/south.png",
 	"snoop": "res://assets/characters/provisorio/snoop.png",
 	"lula": "res://assets/characters/provisorio/lula.png",
@@ -247,7 +247,7 @@ func height_for(texture: Texture2D) -> float:
 
 
 ## Cache de recorte de PNG original; a âncora vem do clip, nunca de cada pose.
-func register_animation_frame(texture: Texture2D, anchor: Vector2) -> void:
+func register_animation_frame(texture: Texture2D, anchor: Vector2, reference_height: float = 0.0) -> void:
 	if texture == null:
 		return
 	var instance_id: int = texture.get_instance_id()
@@ -255,6 +255,8 @@ func register_animation_frame(texture: Texture2D, anchor: Vector2) -> void:
 		var used: Rect2i = texture.get_image().get_used_rect()
 		metrics[instance_id] = {"height": float(used.size.y), "used_rect": Rect2(used)}
 	metrics[instance_id]["anchor"] = anchor
+	if reference_height > 0.0:
+		metrics[instance_id]["height"] = reference_height
 
 
 ## Barras/aura mantêm a referência idle do nível, sem oscilar com braços ou lança.

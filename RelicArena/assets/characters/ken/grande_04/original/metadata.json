@@ -1,0 +1,19 @@
+{
+  "character_id": "ken_hd_lote04",
+  "name": "Ken",
+  "art_batch": "grande_04",
+  "canvas_size": [
+    128,
+    128
+  ],
+  "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ]
+}
